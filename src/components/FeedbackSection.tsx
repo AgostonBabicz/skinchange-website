@@ -43,7 +43,7 @@ export default function FeedbackSection({ lang }: FeedbackSectionProps) {
             
             <div className="relative z-10 text-center">
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic">
-                "{feedbackItems[currentSlide].text}"
+                &ldquo;{feedbackItems[currentSlide].text}&rdquo;
               </p>
               
               <div className="flex flex-col items-center">
