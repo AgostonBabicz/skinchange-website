@@ -1,6 +1,6 @@
 'use client';
 
-import { Language, getTranslation } from '@/lib/i18n';
+import { Language } from '@/lib/i18n';
 import { Users, Clock, Award } from 'lucide-react';
 
 interface StatsProps {
@@ -8,7 +8,6 @@ interface StatsProps {
 }
 
 export default function Stats({ lang }: StatsProps) {
-  const t = getTranslation(lang);
 
   const stats = [
     { 
