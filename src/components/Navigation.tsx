@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
+import Image from 'next/image';
 
 interface NavigationProps {
   lang: Language;
@@ -27,12 +28,13 @@ export default function Navigation({ lang }: NavigationProps) {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
-                <path d="M8 15a6 6 0 0 0 12 0v-3" />
-                <circle cx="20" cy="10" r="2" />
-              </svg>
+            <div className="w-10 h-10 relative">
+              <Image
+                src="/skinchange-website/Logo_without_background.svg"
+                alt="SkinChange"
+                fill
+                className="object-contain"
+              />
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">SKIND</span>
           </Link>
@@ -64,7 +66,7 @@ export default function Navigation({ lang }: NavigationProps) {
                 <Link href="/da" className={`block px-4 py-2 text-sm ${isDa ? 'text-[#304ffe] font-medium bg-[#304ffe]/5' : 'text-gray-700 hover:bg-gray-50'}`}>
                   Dansk
                 </Link>
-                <Link href="/" className={`block px-4 py-2 text-sm ${!isDa ? 'text-[#304ffe] font-medium bg-[#304ffe]/5' : 'text-gray-700 hover:bg-gray-50'}`}>
+                <Link href="/en" className={`block px-4 py-2 text-sm ${!isDa ? 'text-[#304ffe] font-medium bg-[#304ffe]/5' : 'text-gray-700 hover:bg-gray-50'}`}>
                   English
                 </Link>
               </div>
@@ -103,7 +105,7 @@ export default function Navigation({ lang }: NavigationProps) {
                 </Link>
               ))}
               <Link
-                href={isDa ? '/' : '/da'}
+                href={isDa ? '/en' : '/da'}
                 className="text-white/80 hover:text-white transition-colors text-base font-medium pt-4 border-t border-white/10"
               >
                 {isDa ? 'English' : 'Dansk'}

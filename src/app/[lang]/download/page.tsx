@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
-import { Apple, Play } from 'lucide-react';
+import Image from 'next/image';
 
 interface PageProps {
   params: { lang: Language };
@@ -43,25 +43,27 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
                 {/* App Store */}
                 <a 
                   href="#" 
-                  className="flex items-center bg-white text-[#1a237e] px-6 py-4 rounded-xl hover:bg-white/90 transition-all"
+                  className="relative h-14 w-44 hover:scale-105 transition-transform"
                 >
-                  <Apple className="w-8 h-8 mr-3" />
-                  <div>
-                    <div className="text-xs text-gray-500">Download on the</div>
-                    <div className="font-bold text-lg">App Store</div>
-                  </div>
+                  <Image
+                    src="/skinchange-website/App_store_download.svg"
+                    alt="Download on App Store"
+                    fill
+                    className="object-contain"
+                  />
                 </a>
 
                 {/* Google Play */}
                 <a 
                   href="#"
-                  className="flex items-center bg-white text-[#1a237e] px-6 py-4 rounded-xl hover:bg-white/90 transition-all"
+                  className="relative h-14 w-44 hover:scale-105 transition-transform"
                 >
-                  <Play className="w-8 h-8 mr-3" fill="currentColor" />
-                  <div>
-                    <div className="text-xs text-gray-500">Get it on</div>
-                    <div className="font-bold text-lg">Google Play</div>
-                  </div>
+                  <Image
+                    src="/skinchange-website/Play_store_download.png"
+                    alt="Get it on Google Play"
+                    fill
+                    className="object-contain"
+                  />
                 </a>
               </div>
 
@@ -83,27 +85,16 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
               </div>
             </div>
 
-            {/* Phone mockup */}
+            {/* Phone mockup image */}
             <div className="hidden lg:block">
-              <div className="relative mx-auto w-72">
-                <div className="relative">
-                  <div className="bg-white rounded-[2.5rem] p-2 shadow-2xl">
-                    <div className="bg-[#304ffe] rounded-[2rem] p-5 aspect-[9/19]">
-                      <div className="text-white font-bold text-lg mb-8">SKIND</div>
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        {isDa ? 'Velkommen' : 'Welcome'}
-                      </h3>
-                      <p className="text-white/70 text-sm mb-6">
-                        {isDa 
-                          ? 'Din personlige hudklinik'
-                          : 'Your personal skin clinic'}
-                      </p>
-                      <button className="w-full bg-white text-[#304ffe] font-bold py-3 rounded-xl">
-                        {isDa ? 'Kom i gang' : 'Get started'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative mx-auto w-96">
+                <Image
+                  src="/skinchange-website/Download_page_mockup.png"
+                  alt="SKIND App"
+                  width={400}
+                  height={600}
+                  className="object-contain drop-shadow-2xl"
+                />
               </div>
             </div>
           </div>
