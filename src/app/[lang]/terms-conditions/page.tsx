@@ -153,3 +153,45 @@ export default function TermsPage({ params: { lang } }: PageProps) {
     </main>
   );
 }
+
+            <h2 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">Begrænsning af ansvar (Dansk)</h2>
+            <p className="mb-6">
+              I alle tilfælde, der opstår som følge af brugen af eller manglende evne til at bruge SkinChange.AI ApS tjenester, herunder men ikke begrænset til dens funktionaliteter eller sikkerhedsfunktioner, er appsene eller andre services fra SkinChange.AI ikke ansvarlig for indirekte, tilfældige eller følgeskader. Brugere rådes til at overholde minimumssystemkravene som anbefalet af os for at sikre optimal applikationsydelse.
+            </p>
+
+            <p className="mb-6">
+              Du accepterer, at dit eneste og eksklusive middel til eventuelle problemer eller utilfredshed med tjenesten SkinChange.AI ApS er at afinstallere enhver SkinChange.AI software og stoppe brugen af SkinChange.AI ApS tjenesten. Du accepterer, at SkinChange.AI ApS ikke har nogen forpligtelse eller ansvar som følge af eller relateret til tredjepartsapplikationer.
+            </p>
+
+            <p className="mb-6">
+              Dit eneste og eksklusive middel, som med hensyn til SkinChange.AI ApS, for eventuelle problemer eller utilfredshed med tredjepartsapplikationer eller indholdet deraf, er at afinstallere og/eller stoppe med at bruge sådanne tredjepartsapplikationer. Du accepterer, at SkinChange.AI ApS ikke har nogen forpligtelse eller ansvar, der opstår som følge af eller relateret til tredjepartsapplikationer.
+            </p>
+
+            <p className="mb-6">
+              Dit eneste middel, som med hensyn til SkinChange.AI ApS, for eventuelle problemer eller utilfredshed med tredjepartsapplikationer eller indholdet deraf, er at afinstallere og/eller stoppe med at bruge sådanne tredjepartsapplikationer. Under ingen omstændigheder vil SkinChange.AI ApS, dets ledere, aktionærer, medarbejdere, agenter, direktører, datterselskaber, tilknyttede virksomheder, efterfølgere, overdragere, leverandører eller licensgivere være ansvarlige for: (1) tab eller skade, herunder indirekte, særlige, tilfældige, strafbare eller eksemplariske skader (2) enhver: (a) tab af brug; (b) tab af data; (c) tab af forretning; (d) tab af fortjeneste; eller (e) beskadigelse af enheder.
+            </p>
+
+            <h2 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">GDPR</h2>
+            <p className="mb-6">
+              SkinChange.AI ApS er forpligtet til at beskytte dine personlige data og respektere dit privatliv. Vi overholder GDPR-reglerne. For detaljerede oplysninger om, hvordan vi indsamler, bruger og beskytter dine data, og for at lære om dine rettigheder under GDPR, henvises vi til vores Privatlivspolitik.
+            </p>
+
+            <h2 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">Kontakt os</h2>
+            <p className="mb-6">
+              For spørgsmål eller bekymringer vedrørende disse servicevilkår, er du velkommen til at kontakte os på info@skinchange.ai. Husk at du ikke bør sende emails med helbredsoplysninger eller andre personlige data.
+            </p>
+
+            <p className="mb-6">
+              Ved at bruge tjenesterne fra SkinChange.AI ApS accepterer du de vilkår og betingelser, der er beskrevet ovenfor.
+            </p>
+
+            <div className="bg-gray-50 p-6 rounded-xl mt-8">
+              <p className="font-semibold text-[#1a237e] mb-2">SkinChange.AI ApS</p>
+              <p>Hindbærhaven 48</p>
+              <p>7120 Vejle Ø</p>
+              <p>Danmark</p>
+              <p className="mt-2">info@skinchange.ai</p>
+              <p className="mt-4 text-sm text-gray-500">
+                Hvis du har en klage kan du kontakte os på: info@skinchange.ai. Du kan også rette din klage direkte til Styrelsen for Patientklager via stpk@stpk.dk.
+              </p>
+            </div>
