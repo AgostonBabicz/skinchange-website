@@ -4,6 +4,8 @@
 const nextConfig = {
   output: 'export',
   distDir: 'dist',
+  basePath: '/skinchange-website',
+  assetPrefix: '/skinchange-website',
   images: {
     unoptimized: true,
   },
