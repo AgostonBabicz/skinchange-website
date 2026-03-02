@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslation, Language } from '@/lib/i18n';
+import { Language } from '@/lib/i18n';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
