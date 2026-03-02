@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
 import { getTranslation, Language } from '@/lib/i18n';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -20,7 +18,6 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
 }
 
 export default function AboutPage({ params: { lang } }: PageProps) {
-  const t = getTranslation(lang);
   const isDa = lang === 'da';
 
   return (

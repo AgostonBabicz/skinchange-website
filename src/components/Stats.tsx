@@ -9,7 +9,6 @@ interface StatsProps {
 
 export default function Stats({ lang }: StatsProps) {
   const t = getTranslation(lang);
-  const isDa = lang === 'da';
 
   const stats = [
     { 
