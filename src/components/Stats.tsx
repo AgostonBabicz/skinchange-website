@@ -1,6 +1,5 @@
 'use client';
 
-
 import { Language } from '@/lib/i18n';
 
 interface StatsProps {
