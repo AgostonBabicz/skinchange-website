@@ -42,7 +42,9 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* App Store */}
                 <a 
-                  href="#" 
+                  href="https://apps.apple.com/us/app/skind/id6479356965"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative h-14 w-44 hover:scale-105 transition-transform"
                 >
                   <Image
@@ -55,7 +57,9 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
 
                 {/* Google Play */}
                 <a 
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.skinchange.ai.patientapp&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative h-14 w-44 hover:scale-105 transition-transform"
                 >
                   <Image
@@ -85,15 +89,15 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
               </div>
             </div>
 
-            {/* Phone mockup image */}
-            <div className="hidden lg:block">
-              <div className="relative mx-auto w-96">
+            {/* Phone mockup - no black background */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden">
                 <Image
                   src="/skinchange-website/Download_page_mockup.png"
                   alt="SKIND App"
-                  width={400}
-                  height={600}
-                  className="object-contain drop-shadow-2xl"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto"
                 />
               </div>
             </div>
