@@ -12,26 +12,26 @@ export default function Stats({ lang }: StatsProps) {
 
   const stats = [
     { 
-      number: '15.000+', 
-      label: t.stats.cases,
+      number: '100+', 
+      label: lang === 'da' ? 'Cases handled' : 'Cases handled',
       icon: Users,
       color: 'from-white to-white/80'
     },
     { 
       number: '48', 
-      label: t.stats.time,
+      label: lang === 'da' ? 'Hour diagnosis' : 'Hour diagnosis',
       icon: Clock,
       color: 'from-[#00e5ff] to-[#00b8d4]'
     },
     { 
-      number: '50+', 
-      label: t.stats.doctors,
+      number: '2', 
+      label: lang === 'da' ? 'Certified doctors' : 'Certified doctors',
       icon: Users,
       color: 'from-white to-white/80'
     },
     { 
-      number: '4.8/5', 
-      label: t.stats.rating,
+      number: '5/5', 
+      label: lang === 'da' ? 'Reviews' : 'Reviews',
       icon: Award,
       color: 'from-[#00e5ff] to-[#00b8d4]'
     },
