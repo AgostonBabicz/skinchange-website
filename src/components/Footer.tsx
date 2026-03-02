@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Language, getTranslation } from '@/lib/i18n';
+import Image from 'next/image';
 
 interface FooterProps {
   lang: Language;
@@ -11,17 +12,9 @@ export default function Footer({ lang }: FooterProps) {
   const t = getTranslation(lang);
 
   const footerLinks = {
-    platform: [
-      { href: `/${lang}/for-patients`, label: lang === 'da' ? 'For patienter' : 'For patients' },
-      { href: `/${lang}/for-doctors`, label: lang === 'da' ? 'For læger' : 'For doctors' },
-      { href: `/${lang}/pricing`, label: lang === 'da' ? 'Priser' : 'Pricing' },
-      { href: `/${lang}/download`, label: lang === 'da' ? 'Download' : 'Download' },
-    ],
     company: [
       { href: `/${lang}/about`, label: t.nav.about },
-      { href: `/${lang}/contact`, label: t.footer.contact },
-      { href: `/${lang}/press`, label: lang === 'da' ? 'Presse' : 'Press' },
-      { href: `/${lang}/career`, label: lang === 'da' ? 'Karriere' : 'Careers' },
+      { href: `mailto:info@skinchange.ai`, label: t.footer.contact },
     ],
     support: [
       { href: `/${lang}/faq`, label: t.nav.faq },
@@ -37,12 +30,13 @@ export default function Footer({ lang }: FooterProps) {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
-                  <path d="M8 15a6 6 0 0 0 12 0v-3" />
-                  <circle cx="20" cy="10" r="2" />
-                </svg>
+              <div className="w-10 h-10 relative">
+                <Image
+                  src="/skinchange-website/Logo_without_background.svg"
+                  alt="SkinChange"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="text-2xl font-bold">SKIND</span>
             </Link>
@@ -53,19 +47,8 @@ export default function Footer({ lang }: FooterProps) {
             </p>
           </div>
 
-          {/* Platform */}
-          <div>
-            <h4 className="font-bold mb-4 text-white">{lang === 'da' ? 'Platform' : 'Platform'}</h4>
-            <ul className="space-y-3">
-              {footerLinks.platform.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Empty column for spacing */}
+          <div className="hidden md:block"></div>
 
           {/* Company */}
           <div>
@@ -103,7 +86,9 @@ export default function Footer({ lang }: FooterProps) {
               © 2024 {t.footer.company} - {t.footer.cvr}
             </p>
             <div className="flex items-center gap-4 md:justify-end text-white/40 text-sm">
-              <span>{t.footer.email}</span>
+              <a href="mailto:info@skinchange.ai" className="hover:text-white transition-colors">
+                {t.footer.email}
+              </a>
             </div>
           </div>
         </div>

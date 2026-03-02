@@ -38,9 +38,15 @@ export default function Hero({ lang }: HeroProps) {
             <h2 className="text-2xl lg:text-4xl font-semibold text-white/90 mb-6 animate-fade-up delay-100">
               {t.hero.subtitle}
             </h2>
-            <p className="text-lg lg:text-xl text-white/70 mb-10 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-200 leading-relaxed">
+            <p className="text-lg lg:text-xl text-white/70 mb-6 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-200 leading-relaxed">
               {t.hero.description}
             </p>
+            
+            {/* Price */}
+            <div className="mb-10 animate-fade-up delay-250">
+              <span className="text-4xl lg:text-5xl font-bold text-[#00e5ff]">{t.hero.price}</span>
+              <span className="text-white/60 ml-2">{t.hero.priceNote}</span>
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-300">
@@ -54,7 +60,7 @@ export default function Hero({ lang }: HeroProps) {
                 href={`/${lang}/guide`}
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all"
               >
-                {t.nav.guide}
+                {isDa ? 'Se brugervejledning' : 'See user guide'}
               </Link>
             </div>
 
