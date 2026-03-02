@@ -65,7 +65,6 @@ const faqs = {
 };
 
 export default function FAQPage({ params: { lang } }: PageProps) {
-  const t = getTranslation(lang);
   const isDa = lang === 'da';
   const questions = isDa ? faqs.da : faqs.en;
 

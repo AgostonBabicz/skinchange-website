@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { getTranslation, Language } from '@/lib/i18n';
+import { Language } from '@/lib/i18n';
 import { Apple, Play } from 'lucide-react';
 
 interface PageProps {
