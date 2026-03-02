@@ -10,6 +10,7 @@ export const translations = {
       guide: 'Sådan bruger du appen',
       download: 'Download appen',
       faq: 'FAQ',
+      contact: 'Kontakt',
       cta: 'Hent appen',
     },
     hero: {
@@ -123,6 +124,7 @@ Peter er medlem af Dansk Dermatologisk Selskab og har publiseret adskillige vide
       guide: 'How to use the app',
       download: 'Download the app',
       faq: 'FAQ',
+      contact: 'Contact',
       cta: 'Get the app',
     },
     hero: {
