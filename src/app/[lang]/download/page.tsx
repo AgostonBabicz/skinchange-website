@@ -89,15 +89,19 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
               </div>
             </div>
 
-            {/* Phone mockup - no black background */}
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden">
+            {/* Phone mockup */}
+            <div className="relative flex justify-center">
+              <div className="relative rounded-3xl overflow-hidden bg-[#1a237e]">
                 <Image
                   src="/skinchange-website/Download_page_mockup.png"
                   alt="SKIND App"
                   width={600}
                   height={700}
-                  className="w-full h-auto"
+                  className="w-full h-auto mix-blend-normal"
+                  style={{ 
+                    filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.3))',
+                    backgroundColor: 'transparent'
+                  }}
                 />
               </div>
             </div>
