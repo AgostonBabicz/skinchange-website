@@ -32,7 +32,7 @@ export default function Features({ lang }: FeaturesProps) {
   ];
 
   return (
-    <section className="py-32 lg:py-40 bg-gray-50">
+    <section className="pt-32 lg:pt-40 pb-16 lg:pb-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -72,10 +72,6 @@ export default function Features({ lang }: FeaturesProps) {
           ))}
         </div>
 
-        {/* Connection line (desktop) */}
-        <div className="hidden md:block relative mt-[-16rem]">
-          <div className="absolute top-24 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#304ffe]/20 via-[#304ffe]/40 to-[#304ffe]/20" />
-        </div>
       </div>
     </section>
   );

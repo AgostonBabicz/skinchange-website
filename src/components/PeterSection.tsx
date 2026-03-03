@@ -13,9 +13,54 @@ export default function PeterSection({ lang }: PeterSectionProps) {
   const isDa = lang === 'da';
   const [showFullBio, setShowFullBio] = useState(false);
 
-  const shortText = 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.';
+  const shortText = isDa 
+    ? 'Ekspert i dermatologi, laserbehandlinger og hudkræft. Adjunkt professor, Aalborg Universitet. 300+ publikationer, 500+ internationale foredrag.'
+    : 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.';
 
-  const fullBio = `Peter Bjerring, Specialist in skin diseases, professor, Dr.med.
+  const fullBioDa = `Peter Bjerring, Speciallæge i hudsygdomme, professor, Dr.med.
+
+Uddannelse
+1980: Master of Science (Med.), Aarhus Universitet
+1988: Speciallæge i dermatovenerologi, Danmark
+2001: Speciallæge i dermatovenerologi, Norge
+2004: Speciallæge i dermato-venereologi, Holland
+
+Erfaring
+1993–2018: Klinikchef, Dermatologisk Afdeling (HudCenter Mølholm), Privathospital Mølholm, Vejle, København og Aarhus
+2001–2007: Administrerende direktør, Mølholm Privathospital, Vejle og Aarhus
+2004–2018: Overlæge og Medicinsk direktør, Mølholm Privathospital, Vejle og Aarhus
+2018–nu: Klinisk professor, Senior konsulent og Speciallæge, Dermatologisk Afdeling, Aalborg Universitetshospital
+2018–2022: Professor i Dermato-Venereologi, Aalborg Universitet
+2022–nu: Adjunkt professor, Aalborg Universitet
+
+Specialisering
+Klassisk dermatologi (Almindelige hudsygdomme)
+Dermatologisk laserkirurgi
+Hudkræftbehandling (medicinsk, kirurgisk og fototerapi)
+Kosmetisk laserbehandling
+Kosmetisk medicinsk dermatologi
+Fotodermatologi
+
+Forskning og undervisning
+Har publiceret mere end 300 videnskabelige artikler inden for hudsygdomme, laserbehandling og hudkræftbehandling
+Har holdt mere end 500 foredrag ved internationale videnskabelige møder og kongresser verden over
+
+Faglige medlemskaber
+Dansk Dermatologisk Selskab (DDS)
+European Academy for Dermato-Venereology (EADV)
+Dansk Dermatologisk Organisation (DDO)
+European Society for Lasers and Energy-based Devices (ESLD - past president)
+American Academy of Dermatology (AAD)
+American Society for Lasers in Surgery and Medicine (ASLMS)
+The International Peeling Society
+
+Hædersbevisninger
+Ridder af Dannebrog
+Dansk Dermatologisk Selskabs Hæderspris
+Caroline and William Mark Memorial Award (Hæderspris fra American Society for Lasers In Medicine and Surgery)
+William Nielsen Prisen`;
+
+  const fullBioEn = `Peter Bjerring, Specialist in skin diseases, professor, Dr.med.
 
 Training
 1980: Master of Science (Med.), Aarhus University
@@ -58,6 +103,12 @@ Danish Dermatological Society's Honorary Award
 Caroline and William Mark Memorial Award (Honorary award from the American Society for Lasers In Medicine and Surgery)
 William Nielsen Prize`;
 
+  const fullBio = isDa ? fullBioDa : fullBioEn;
+
+  const brianDescription = isDa
+    ? 'Motiveret af at have haft hudkræft 3 gange, hvor jeg har oplevet et udfordrende behandlingsforløb samt at hudkræften blev overset og fejldiagnosticeret af ellers dygtige læger, valgte jeg at kaste mig ind i at blive en del af løsningen, der vil hjælpe alle med hudproblemer – store som små.'
+    : 'Motivated by having had skin cancer 3 times, where I experienced a challenging treatment course and where the skin cancer was overlooked and misdiagnosed by otherwise skilled doctors, I chose to throw myself into becoming part of the solution that will help everyone with skin problems - big or small.';
+
   return (
     <section className="py-24 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +133,7 @@ William Nielsen Prize`;
             <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">Brian Vangsgaard</h2>
             <p className="text-[#304ffe] font-semibold mb-4">CEO</p>
             <p className="text-lg text-gray-600">
-              Motiveret af at have haft hudkræft 3 gange, hvor jeg har oplevet et udfordrende behandlingsforløb samt at hudkræften blev overset og fejldiagnosticeret af ellers dygtige læger, valgte jeg at kaste mig ind i at blive en del af løsningen, der vil hjælpe alle med hudproblemer – store som små.
+              {brianDescription}
             </p>
           </div>
           <div className="order-1 lg:order-2 relative">

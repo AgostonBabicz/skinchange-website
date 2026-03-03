@@ -39,7 +39,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
     email: 'info@skinchange.ai',
     company: 'SkinChange.AI ApS',
     cvr: '43156179',
-    address: isDa ? 'Danmark' : 'Denmark',
+    address: isDa ? 'Hindbærhaven 48, 7120 Vejle Ø' : 'Hindbærhaven 48, 7120 Vejle Ø, Denmark',
   };
 
   const faqItems = isDa ? [
@@ -152,14 +152,14 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl">
             <div className="aspect-[21/9] w-full relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1081860.5461230754!2d11.0!3d56.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464b27b6ee945ffb%3A0x728a8754df7c4c!2sDenmark!5e0!3m2!1sen!2sdk!4v1700000000000!5m2!1sen!2sdk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2263.0!2d9.58!3d55.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c0c8f0e4c6b5f%3A0x5c3e2d9f3c1a8e9d!2sHindb%C3%A6rhaven%2048%2C%207120%20Vejle%20%C3%98%2C%20Denmark!5e0!3m2!1sen!2sdk!4v1700000000000!5m2!1sen!2sdk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={isDa ? "Kort over Danmark" : "Map of Denmark"}
+                title={isDa ? "Kort over Vejle" : "Map of Vejle"}
                 className="absolute inset-0"
               />
             </div>
