@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
+import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -10,10 +11,16 @@ interface PageProps {
 export async function generateMetadata({ params }: { params: { lang: Language } }): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
-    title: isDa ? 'FAQ | SKIND' : 'FAQ | SKIND',
+    title: isDa ? 'FAQ: Ofte Stillede Spørgsmål om Online Hudlæge | SkinChange' : 'FAQ: Frequently Asked Questions About Online Dermatology | SkinChange',
     description: isDa 
-      ? 'Find svar på ofte stillede spørgsmål om SkinChange og vores online dermatologiske tjenester.' 
-      : 'Find answers to frequently asked questions about SkinChange and our online dermatology services.',
+      ? 'Få svar på alt om online hudlæge konsultation hos SkinChange. Pris, sikkerhed, behandling af akne, eksem, psoriasis og meget mere. Diagnose inden for 48 timer.' 
+      : 'Get answers about online dermatologist consultations at SkinChange. Pricing, security, treatment for acne, eczema, psoriasis and more. Diagnosis within 48 hours.',
+    keywords: isDa 
+      ? 'online hudlæge, teledermatologi, hudlæge online, akne behandling, eksem behandling, psoriasis behandling, hudkræft tjek, modermærker, recept online'
+      : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
+    alternates: {
+      canonical: `https://www.skinchange.dk/${params.lang}/faq`,
+    },
   };
 }
 
@@ -108,8 +115,28 @@ export default function FAQPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
   const questions = isDa ? faqs.da : faqs.en;
 
+  // Generate FAQ Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': questions.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer
+      }
+    }))
+  };
+
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen bg-white">
       <Navigation lang={lang} />
       
       <section className="pt-32 pb-20 lg:pt-40 lg:pb-32">
@@ -157,5 +184,6 @@ export default function FAQPage({ params: { lang } }: PageProps) {
 
       <Footer lang={lang} />
     </main>
+    </>
   );
 }
