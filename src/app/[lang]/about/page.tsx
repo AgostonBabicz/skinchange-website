@@ -55,47 +55,16 @@ export default function AboutPage({ params: { lang } }: PageProps) {
             </div>
             <div>
               <p className="text-[#304ffe] font-semibold mb-4 uppercase tracking-wider text-sm">
-                {isDa ? 'Førende hudlæge' : 'Leading Dermatologist'}
+                {isDa ? 'Ansvarlig Læge' : 'Ansvarlig Læge'}
               </p>
               <h2 className="text-4xl font-bold text-[#1a237e] mb-4 font-display">
                 Peter Bjerring
               </h2>
               <p className="text-xl text-[#304ffe] font-medium mb-6">
-                {isDa ? 'Speciallæge i hudsygdomme' : 'Specialist in skin diseases'}
+                {isDa 
+                  ? 'Ekspert i dermatologi, laserbehandlinger og hudkræft. Adjungeret professor, Aalborg Universitet. 300+ publikationer, 500+ internationale foredrag.' 
+                  : 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.'}
               </p>
-              <div className="prose prose-lg text-gray-600">
-                {isDa ? (
-                  <>
-                    <p className="mb-4">
-                      Peter Bjerring er speciallæge i hudsygdomme og har praktiseret dermatologi i mere end 30 år. Han har arbejdet på flere af Danmarks førende hospitaler og har specialiseret sig i både medicinsk og kosmetisk dermatologi.
-                    </p>
-                    <p className="mb-4">
-                      Som grundlægger af SkinChange har Peter visionen om at gøre specialistbehandling af hudsygdomme tilgængelig for alle danskere, uanset hvor de bor. Han tror på, at teknologi kan hjælpe med at overvinde barrierer i sundhedsvæsenet og give patienter hurtigere adgang til kvalificeret hjælp.
-                    </p>
-                    <p className="mb-4">
-                      Peter er medlem af Dansk Dermatologisk Selskab og har publiseret adskillige videnskabelige artikler om hudsygdomme. Han er kendt for sin empatiske tilgang og evne til at forklare komplekse medicinske problemstillinger på en forståelig måde.
-                    </p>
-                    <p>
-                      Med over 15.000 behandlede patienter gennem SkinChange har Peter bevist, at digital dermatologi ikke blot er mulig, men ofte også foretrukken af patienterne for dens bekvemmelighed og hurtighed.
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <p className="mb-4">
-                      Peter Bjerring is a specialist in skin diseases and has practiced dermatology for more than 30 years. He has worked at several of Denmark&apos;s leading hospitals and has specialized in both medical and cosmetic dermatology.
-                    </p>
-                    <p className="mb-4">
-                      As the founder of SkinChange, Peter&apos;s vision is to make specialist treatment of skin diseases accessible to all Danes, regardless of where they live. He believes that technology can help overcome barriers in the healthcare system and give patients faster access to qualified help.
-                    </p>
-                    <p className="mb-4">
-                      Peter is a member of the Danish Dermatological Society and has published numerous scientific articles on skin diseases. He is known for his empathetic approach and ability to explain complex medical issues in an understandable way.
-                    </p>
-                    <p>
-                      With over 15,000 patients treated through SkinChange, Peter has proven that digital dermatology is not only possible but often preferred by patients for its convenience and speed.
-                    </p>
-                  </>
-                )}
-              </div>
             </div>
           </div>
         </div>
@@ -107,33 +76,20 @@ export default function AboutPage({ params: { lang } }: PageProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <p className="text-[#304ffe] font-semibold mb-4 uppercase tracking-wider text-sm">
-                {isDa ? 'CTO & Medstifter' : 'CTO & Co-founder'}
+                {isDa ? 'Chief Technology Officer' : 'Chief Technology Officer'}
               </p>
               <h2 className="text-4xl font-bold text-[#1a237e] mb-4 font-display">
                 Brian
               </h2>
-              <p className="text-xl text-[#304ffe] font-medium mb-6">
-                {isDa ? 'Teknisk Direktør' : 'Chief Technology Officer'}
-              </p>
               <div className="prose prose-lg text-gray-600">
                 {isDa ? (
-                  <>
-                    <p className="mb-4">
-                      Brian er medstifter og teknisk direktør hos SkinChange. Med en baggrund inden for softwareudvikling og sundhedsteknologi har Brian været afgørende for at bygge den sikre og brugervenlige platform, som tusindvis af danskere bruger i dag.
-                    </p>
-                    <p>
-                      Hans fokus på datasikkerhed og compliance har sikret, at SkinChange lever op til alle gældende regler omkring databeskyttelse i sundhedssektoren, herunder GDPR og kravene til sundhedsapplikationer.
-                    </p>
-                  </>
+                  <p>
+                    Motiveret af at have haft hudkræft 3 gange, hvor jeg har oplevet et udfordrende behandlingsforløb samt at hudkræften blev overset og fejldiagnosticeret af ellers dygtige læger, valgte jeg at kaste mig ind i at blive en del af løsningen, der vil hjælpe alle med hudproblemer – store som små.
+                  </p>
                 ) : (
-                  <>
-                    <p className="mb-4">
-                      Brian is co-founder and CTO at SkinChange. With a background in software development and health technology, Brian has been instrumental in building the secure and user-friendly platform that thousands of Danes use today.
-                    </p>
-                    <p>
-                      His focus on data security and compliance has ensured that SkinChange meets all applicable regulations regarding data protection in the healthcare sector, including GDPR and the requirements for health applications.
-                    </p>
-                  </>
+                  <p>
+                    Motivated by having had skin cancer 3 times, where I experienced a challenging treatment course and where the skin cancer was overlooked and misdiagnosed by otherwise skilled doctors, I chose to throw myself into becoming part of the solution that will help everyone with skin problems - big or small.
+                  </p>
                 )}
               </div>
             </div>

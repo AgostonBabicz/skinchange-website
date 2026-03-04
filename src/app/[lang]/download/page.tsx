@@ -76,8 +76,6 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
                 {[
                   isDa ? 'Sikker MitID login' : 'Secure MitID login',
                   isDa ? '48 timers diagnose' : '48 hour diagnosis',
-                  isDa ? 'Recept til apoteket' : 'Prescription to pharmacy',
-                  isDa ? 'Opfølgning inkluderet' : 'Follow-up included',
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center text-white/80">
                     <svg className="w-5 h-5 text-[#00e5ff] mr-2" fill="currentColor" viewBox="0 0 20 20">

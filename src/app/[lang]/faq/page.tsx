@@ -28,27 +28,23 @@ const faqs = {
   da: [
     {
       question: 'Hvordan fungerer SkinChange?',
-      answer: 'Du downloader vores app, opretter en profil med MitID, tager billeder af dit hudproblem og besvarer nogle spørgsmål om dine symptomer. En certificeret hudlæge gennemgår din sag og sender dig en diagnose og behandlingsplan inden for 48 timer. Du modtager svar direkte i appen, og hvis nødvendigt, kan du få en recept sendt til dit apotek.'
+      answer: 'Download vores app, opret en profil med MitID, tag billeder af dit hudproblem og besvar nogle spørgsmål om dine symptomer. En certificeret hudlæge gennemgår din sag og sender dig en diagnose og behandlingsplan inden for 48 timer. Du modtager svaret direkte i appen.'
     },
     {
       question: 'Hvad koster det?',
-      answer: 'En konsultation koster 298 kr. Prisen dækker én hudlidelse og inkluderer diagnose, behandlingsplan og opfølgning. Eventuelt receptgebyr (39 kr.) tillægges ved behov. Betalingen sker sikkert gennem appen inden lægen begynder vurderingen.'
+      answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer diagnose og behandlingsplan.'
     },
     {
       question: 'Er det sikkert at bruge SkinChange?',
-      answer: 'Ja, absolut. Vi bruger MitID til sikker login og verificering af din identitet. Alle billeder og data sendes krypteret og gemmes sikkert på danske servere. Vores platform overholder alle gældende regler om databeskyttelse i sundhedssektoren, herunder GDPR og patientsikkerhedsloven. Vi deler aldrig dine data med tredjeparter uden dit samtykke.'
+      answer: 'Ja, absolut. Vi bruger MitID til sikker login og verificering af din identitet. Alle billeder og data gemmes sikkert på servere i EU. Vores platform overholder alle gældende regler om databeskyttelse i sundhedssektoren i EU, herunder GDPR. Vi deler aldrig dine data med tredjeparter uden dit samtykke.'
     },
     {
       question: 'Hvilke hudproblemer kan I hjælpe med?',
       answer: 'Vi kan diagnosticere og behandle de fleste almindelige hudsygdomme, herunder akne, eksem, psoriasis, rosacea, skæl, seboroisk dermatitis, fotsvamp, neglesvamp, herpes simplex (forkølelsessår), kønsvorter, soleksem, og mange andre tilstande. Vi kan også vurdere mistænkelige modermærker og hudforandringer og henvise videre ved behov.'
     },
     {
-      question: 'Hvad hvis I ikke kan stille en diagnose via appen?',
-      answer: 'I sjældne tilfælde hvor vi ikke kan stille en sikker diagnose via telemedicin, henviser vi dig til fysisk fremmøde hos en hudlæge. I sådanne tilfælde tilbyder vi enten en delvis refusion af konsultationsgebyret eller en prioriteret henvisning, afhængigt af situationen.'
-    },
-    {
-      question: 'Kan jeg få recept gennem SkinChange?',
-      answer: 'Ja, hvis din behandling kræver receptpligtig medicin, kan vores læger udskrive recepter direkte i appen. Recepten sendes elektronisk til dit foretrukne apotek, hvor du kan afhente medicinen. Der tilkommer et receptgebyr på 39 kr. pr. recept.'
+      question: 'Hvad hvis jeres læger ikke kan vurdere sagen og stille en diagnose?',
+      answer: 'Hvis de informationer du giver, er utilstrækkelige for at vores læger kan lave en ordentlig vurdering, bliver du ikke opkrævet.'
     },
     {
       question: 'Hvor hurtigt får jeg svar?',
@@ -56,7 +52,7 @@ const faqs = {
     },
     {
       question: 'Er SkinChange dækket af sygesikringen?',
-      answer: 'Nej, SkinChange er en privat sundhedstjeneste og dækkes ikke af den offentlige sygesikring. Prisen er 298 kr. pr. konsultation, og du betaler direkte i appen.'
+      answer: 'Nej, SkinChange er en privat sundhedstjeneste og dækkes ikke af den offentlige sygesikring. Prisen er 298 DKK (€40) pr. konsultation, og du betaler direkte i appen.'
     },
     {
       question: 'Hvilke enheder understøtter appen?',
@@ -64,41 +60,41 @@ const faqs = {
     },
     {
       question: 'Kan jeg bruge SkinChange til mine børn?',
-      answer: 'Ja, du kan oprette sager for dine børn under 18 år gennem din egen profil. Børn under 15 år skal have en forælder eller værges accept.'
+      answer: 'Ja, du kan oprette sager for dine børn under 18 år gennem din egen profil.'
+    },
+    {
+      question: 'Hvor hurtigt får jeg svar på henvendelser?',
+      answer: 'Vi besvarer alle henvendelser uden ugrundet ophold. I tider med travlhed og uden for normal arbejdstid må der forventes længere svartid.'
+    },
+    {
+      question: 'Kan jeg ringe til jer?',
+      answer: 'Vi foretrækker email kontakt for at sikre dokumentation og kvalitetssikring.'
     }
   ],
   en: [
     {
       question: 'How does SkinChange work?',
-      answer: 'Download our app, create a profile with MitID, take photos of your skin problem and answer some questions about your symptoms. A certified dermatologist reviews your case and sends you a diagnosis and treatment plan within 48 hours. You receive the response directly in the app, and if necessary, you can have a prescription sent to your pharmacy.'
+      answer: 'Download our app, create a profile with MitID, take photos of your skin problem and answer some questions about your symptoms. A certified dermatologist reviews your case and sends you a diagnosis and treatment plan within 48 hours. You receive the response directly in the app.'
     },
     {
       question: 'What does it cost?',
-      answer: 'A consultation costs €40. The price covers one skin condition and includes diagnosis, treatment plan and follow-up. Prescription fee (€5) may be added if needed. Payment is made securely through the app before the doctor begins the assessment.'
+      answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes diagnosis and treatment plan.'
     },
     {
       question: 'Is it safe to use SkinChange?',
-      answer: 'Yes, absolutely. We use MitID for secure login and verification of your identity. All photos and data are sent encrypted and stored securely on Danish servers. Our platform complies with all applicable regulations regarding data protection in the healthcare sector, including GDPR. We never share your data with third parties without your consent.'
+      answer: 'Yes, absolutely. We use MitID for secure login and verification of your identity. All photos and data are stored securely on servers in the EU. Our platform complies with all applicable regulations regarding data protection in the healthcare sector in the EU, including GDPR. We never share your data with third parties without your consent.'
     },
     {
       question: 'What skin problems can you help with?',
       answer: 'We can diagnose and treat most common skin conditions, including acne, eczema, psoriasis, rosacea, dandruff, seborrheic dermatitis, athlete\'s foot, nail fungus, herpes simplex (cold sores), genital warts, sun eczema, and many other conditions. We can also assess suspicious moles and skin changes and refer you further if needed.'
     },
     {
-      question: 'What if you cannot make a diagnosis via the app?',
-      answer: 'In rare cases where we cannot make a definitive diagnosis via telemedicine, we will refer you to a physical appointment with a dermatologist. In such cases, we offer either a partial refund of the consultation fee or a prioritized referral, depending on the situation.'
-    },
-    {
-      question: 'Can I get prescriptions through SkinChange?',
-      answer: 'Yes, if your treatment requires prescription medication, our doctors can issue prescriptions directly in the app. The prescription is sent electronically to your preferred pharmacy where you can pick up the medication. A prescription fee of €5 per prescription applies.'
-    },
-    {
-      question: 'How quickly do I get a response?',
-      answer: 'We guarantee a response within 48 hours, but most patients receive their diagnosis within 24 hours. You will be notified in the app as soon as the doctor has reviewed your case.'
+      question: 'What if your doctors cannot assess the case and make a diagnosis?',
+      answer: 'If the information you provide is insufficient for our doctors to make a proper assessment, you will not be charged.'
     },
     {
       question: 'Is SkinChange covered by health insurance?',
-      answer: 'No, SkinChange is a private healthcare service and is not covered by public health insurance. The price is €40 per consultation, and you pay directly in the app.'
+      answer: 'No, SkinChange is a private healthcare service and is not covered by public health insurance. The price is 298 DKK (€40) per consultation, and you pay directly in the app.'
     },
     {
       question: 'Which devices does the app support?',
@@ -106,7 +102,15 @@ const faqs = {
     },
     {
       question: 'Can I use SkinChange for my children?',
-      answer: 'Yes, you can create cases for your children under 18 through your own profile. Children under 15 require a parent or guardian\'s consent.'
+      answer: 'Yes, you can create cases for your children under 18 through your own profile.'
+    },
+    {
+      question: 'How quickly will I get a response?',
+      answer: 'We respond to all inquiries without delay. At times of hurry and outside normal business hours more time should be expected.'
+    },
+    {
+      question: 'Can I call you?',
+      answer: 'We prefer email contact to ensure documentation and quality assurance.'
     }
   ]
 };
