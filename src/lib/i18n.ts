@@ -15,12 +15,12 @@ export const translations = {
     },
     hero: {
       title: 'SKIND',
-      subtitle: 'Få en diagnose indenfor 48 timer',
+      subtitle: 'Danmarks hurtigste dermatologiske klinik',
       description: 'Dine fotos analyseres af speciallæger i hudsygdomme',
       cta: 'Hent Appen',
       mitid: 'MitID Verificeret',
-      price: '298 kr.',
-      priceNote: 'Prisen dækker én hudlidelse',
+      price: '298 DKK',
+      priceNote: '(€40) pr. konsultation',
     },
     stats: {
       cases: 'Behandlede sager',
@@ -41,20 +41,57 @@ export const translations = {
       },
       step3: {
         title: 'Få behandling',
-        desc: 'Modtag din personlige behandlingsplan med ICD-10 kode og recept direkte i appen.',
+        desc: 'Modtag din diagnose og personlige behandlingsplan direkte i appen.',
       },
     },
     peter: {
       title: 'Mød vores førende hudlæge',
       name: 'Peter Bjerring',
-      role: 'Speciallæge i hudsygdomme',
-      description: 'Peter Bjerring er en af Danmarks mest erfarne hudlæger og grundlægger af SkinChange. Med over 30 års erfaring i dermatologi har han hjulpet tusindvis af patienter med hudproblemer.',
+      role: 'Ansvarlig Læge',
+      description: 'Ekspert i dermatologi, laserbehandlinger og hudkræft. Adjungeret professor, Aalborg Universitet. 300+ publikationer, 500+ internationale foredrag.',
       readMore: 'Læs mere om Peter',
-      fullDescription: `Peter Bjerring er speciallæge i hudsygdomme og har praktiseret dermatologi i mere end 30 år. Han har arbejdet på flere af Danmarks førende hospitaler og har specialiseret sig i både medicinsk og kosmetisk dermatologi.
+      fullDescription: `Peter Bjerring, Speciallæge i hudsygdomme, professor, Dr.med.
 
-Som grundlægger af SkinChange har Peter visionen om at gøre specialistbehandling af hudsygdomme tilgængelig for alle danskere, uanset hvor de bor. Han tror på, at teknologi kan hjælpe med at overvinde barrierer i sundhedsvæsenet og give patienter hurtigere adgang til kvalificeret hjælp.
+Uddannelse
+1980: Master of Science (Med.), Aarhus Universitet
+1988: Speciallæge i dermatovenerologi, Danmark
+2001: Speciallæge i dermatovenerologi, Norge
+2004: Speciallæge i dermato-venereologi, Holland
 
-Peter er medlem af Dansk Dermatologisk Selskab og har publiseret adskillige videnskabelige artikler om hudsygdomme. Han er kendt for sin empatiske tilgang og evne til at forklare komplekse medicinske problemstillinger på en forståelig måde.`,
+Erfaring
+1993–2018: Klinikchef, Dermatologisk Afdeling (HudCenter Mølholm), Privathospital Mølholm, Vejle, København og Aarhus
+2001–2007: Administrerende direktør, Mølholm Privathospital, Vejle og Aarhus
+2004–2018: Overlæge og Medicinsk direktør, Mølholm Privathospital, Vejle og Aarhus
+2018–nu: Klinisk professor, Senior konsulent og Speciallæge, Dermatologisk Afdeling, Aalborg Universitetshospital
+2018–2022: Professor i Dermato-Venereologi, Aalborg Universitet
+2022–nu: Adjunkt professor, Aalborg Universitet
+
+Specialisering
+Klassisk dermatologi (Almindelige hudsygdomme)
+Dermatologisk laserkirurgi
+Hudkræftbehandling (medicinsk, kirurgisk og fototerapi)
+Kosmetisk laserbehandling
+Kosmetisk medicinsk dermatologi
+Fotodermatologi
+
+Forskning og undervisning
+Har publiceret mere end 300 videnskabelige artikler inden for hudsygdomme, laserbehandling og hudkræftbehandling
+Har holdt mere end 500 foredrag ved internationale videnskabelige møder og kongresser verden over
+
+Faglige medlemskaber
+Dansk Dermatologisk Selskab (DDS)
+European Academy for Dermato-Venereology (EADV)
+Dansk Dermatologisk Organisation (DDO)
+European Society for Lasers and Energy-based Devices (ESLD - past president)
+American Academy of Dermatology (AAD)
+American Society for Lasers in Surgery and Medicine (ASLMS)
+The International Peeling Society
+
+Hædersbevisninger
+Ridder af Dannebrog
+Dansk Dermatologisk Selskabs Hæderspris
+Caroline and William Mark Memorial Award (Hæderspris fra American Society for Lasers In Medicine and Surgery)
+William Nielsen Prisen`,
     },
     partners: {
       title: 'Vi samarbejder med',
@@ -63,10 +100,10 @@ Peter er medlem af Dansk Dermatologisk Selskab og har publiseret adskillige vide
       title: 'Typiske hudproblemer vi behandler',
       subtitle: 'Vores specialister kan hjælpe med en bred vifte af hudsygdomme',
       items: [
+        { name: 'Hudkræft', desc: 'Mistanke om forandringer' },
         { name: 'Akne', desc: 'Uren hud og bumser' },
         { name: 'Eksem', desc: 'Irriteret og kløende hud' },
         { name: 'Psoriasis', desc: 'Skællende hudpletter' },
-        { name: 'Hudkræft', desc: 'Mistanke om forandringer' },
         { name: 'Rosacea', desc: 'Rødme og blodkar' },
         { name: 'Skæl', desc: 'Flassende hovedbund' },
         { name: 'Kønsvorter', desc: 'HPV-relaterede forandringer' },
@@ -129,12 +166,12 @@ Peter er medlem af Dansk Dermatologisk Selskab og har publiseret adskillige vide
     },
     hero: {
       title: 'SKIND',
-      subtitle: 'Get a diagnosis within 48 hours',
+      subtitle: 'Denmark\'s fastest dermatological clinic',
       description: 'Your photos are analyzed by specialist dermatologists',
       cta: 'Get the App',
       mitid: 'MitID Verified',
-      price: '€40',
-      priceNote: 'Price covers one skin condition',
+      price: '298 DKK',
+      priceNote: '(€40) per consultation',
     },
     stats: {
       cases: 'Cases handled',
@@ -155,20 +192,57 @@ Peter er medlem af Dansk Dermatologisk Selskab og har publiseret adskillige vide
       },
       step3: {
         title: 'Get treatment',
-        desc: 'Receive your personalized treatment plan with ICD-10 code and prescription directly in the app.',
+        desc: 'Receive your diagnose and personalized treatment plan directly in the app.',
       },
     },
     peter: {
       title: 'Meet our leading dermatologist',
       name: 'Peter Bjerring',
-      role: 'Specialist in skin diseases',
-      description: 'Peter Bjerring is one of Denmark\'s most experienced dermatologists and founder of SkinChange. With over 30 years of experience in dermatology, he has helped thousands of patients with skin problems.',
+      role: 'Ansvarlig Læge',
+      description: 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.',
       readMore: 'Read more about Peter',
-      fullDescription: `Peter Bjerring is a specialist in skin diseases and has practiced dermatology for more than 30 years. He has worked at several of Denmark\'s leading hospitals and has specialized in both medical and cosmetic dermatology.
+      fullDescription: `Peter Bjerring, Specialist in skin diseases, professor, Dr.med.
 
-As the founder of SkinChange, Peter\'s vision is to make specialist treatment of skin diseases accessible to all Danes, regardless of where they live. He believes that technology can help overcome barriers in the healthcare system and give patients faster access to qualified help.
+Training
+1980: Master of Science (Med.), Aarhus University
+1988: Specialist in dermatovenerology, Denmark
+2001: Specialist in dermatovenerology, Norway
+2004: Specialist in dermato-venereology, Netherlands
 
-Peter is a member of the Danish Dermatological Society and has published numerous scientific articles on skin diseases. He is known for his empathetic approach and ability to explain complex medical issues in an understandable way.`,
+Experience
+1993–2018: Head of Clinic, Dermatology Department (HudCenter Mølholm), Private Hospital Mølholm, Vejle, Copenhagen and Aarhus
+2001–2007: Managing Director, Mølholm Private Hospital, Vejle and Aarhus
+2004–2018: Chief Physician and Chief Medical Officer, Mølholm Private Hospital, Vejle and Aarhus
+2018–Present: Clinical Professor, Senior Consultant and Specialist, Department of Dermatology, Aalborg University Hospital
+2018–2022: Chair Professor in Dermato-Venereology, Aalborg University
+2022–Present: Adjunct professor, Aalborg University
+
+Specialization
+Classical dermatology (Common skin diseases)
+Dermatological laser surgery
+Skin cancer treatment (medical, surgical and phototherapy)
+Cosmetic laser treatment
+Cosmetic medical dermatology
+Photodermatology
+
+Research and teaching
+Has published more than 300 scientific articles within skin diseases, laser treatment and skin cancer treatment
+Has given more than 500 lectures at international scientific meetings and congresses worldwide
+
+Professional memberships
+Danish Dermatological Society (DDS)
+European Academy for Dermato-Venereology (EADV)
+Danish Dermatologists' Organization (DDO)
+European Society for Lasers and Energy-based Devices (ESLD - past president)
+American Academy of Dermatology (AAD)
+American Society for Lasers in Surgery and Medicine (ASLMS)
+The International Peeling Society
+
+Recognitions
+Knight of the Dannebrog
+Danish Dermatological Society's Honorary Award
+Caroline and William Mark Memorial Award (Honorary award from the American Society for Lasers In Medicine and Surgery)
+William Nielsen Prize`,
     },
     partners: {
       title: 'We collaborate with',
@@ -177,10 +251,10 @@ Peter is a member of the Danish Dermatological Society and has published numerou
       title: 'Typical skin problems we treat',
       subtitle: 'Our specialists can help with a wide range of skin conditions',
       items: [
+        { name: 'Skin Cancer', desc: 'Suspicious changes' },
         { name: 'Acne', desc: 'Blemishes and pimples' },
         { name: 'Eczema', desc: 'Irritated and itchy skin' },
         { name: 'Psoriasis', desc: 'Scaly skin patches' },
-        { name: 'Skin Cancer', desc: 'Suspicious changes' },
         { name: 'Rosacea', desc: 'Redness and visible blood vessels' },
         { name: 'Dandruff', desc: 'Flaky scalp' },
         { name: 'Genital Warts', desc: 'HPV-related changes' },
