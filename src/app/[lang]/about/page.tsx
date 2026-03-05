@@ -44,7 +44,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
                 <Image
                   src="/skinchange-website/Peter.jpeg"
                   alt="Peter Bjerring"
@@ -54,17 +54,20 @@ export default function AboutPage({ params: { lang } }: PageProps) {
               </div>
             </div>
             <div>
-              <p className="text-[#304ffe] font-semibold mb-4 uppercase tracking-wider text-sm">
-                {isDa ? 'Ansvarlig Læge' : 'Ansvarlig Læge'}
+              <p className="text-[#304ffe] font-semibold mb-2">
+                {isDa ? 'Mød vores førende hudlæge' : 'Meet our leading dermatologist'}
               </p>
-              <h2 className="text-4xl font-bold text-[#1a237e] mb-4 font-display">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
                 Peter Bjerring
               </h2>
-              <p className="text-xl text-[#304ffe] font-medium mb-6">
+              <p className="text-lg text-gray-600 mb-6">
                 {isDa 
                   ? 'Ekspert i dermatologi, laserbehandlinger og hudkræft. Adjungeret professor, Aalborg Universitet. 300+ publikationer, 500+ internationale foredrag.' 
                   : 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.'}
               </p>
+              <button className="text-[#304ffe] font-semibold hover:underline">
+                {isDa ? 'Læs mere' : 'Read more'}
+              </button>
             </div>
           </div>
         </div>
@@ -75,29 +78,23 @@ export default function AboutPage({ params: { lang } }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <p className="text-[#304ffe] font-semibold mb-4 uppercase tracking-wider text-sm">
-                {isDa ? 'Chief Technology Officer' : 'Chief Technology Officer'}
-              </p>
-              <h2 className="text-4xl font-bold text-[#1a237e] mb-4 font-display">
-                Brian
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
+                Brian Vangsgaard
               </h2>
-              <div className="prose prose-lg text-gray-600">
-                {isDa ? (
-                  <p>
-                    Motiveret af at have haft hudkræft 3 gange, hvor jeg har oplevet et udfordrende behandlingsforløb samt at hudkræften blev overset og fejldiagnosticeret af ellers dygtige læger, valgte jeg at kaste mig ind i at blive en del af løsningen, der vil hjælpe alle med hudproblemer – store som små.
-                  </p>
-                ) : (
-                  <p>
-                    Motivated by having had skin cancer 3 times, where I experienced a challenging treatment course and where the skin cancer was overlooked and misdiagnosed by otherwise skilled doctors, I chose to throw myself into becoming part of the solution that will help everyone with skin problems - big or small.
-                  </p>
-                )}
-              </div>
+              <p className="text-[#304ffe] font-semibold mb-4">
+                CEO
+              </p>
+              <p className="text-lg text-gray-600">
+                {isDa 
+                  ? 'Motiveret af at have haft hudkræft 3 gange, hvor jeg har oplevet et udfordrende behandlingsforløb samt at hudkræften blev overset og fejldiagnosticeret af ellers dygtige læger, valgte jeg at kaste mig ind i at blive en del af løsningen, der vil hjælpe alle med hudproblemer – store som små.'
+                  : 'Motivated by having had skin cancer 3 times, where I experienced a challenging treatment course and where the skin cancer was overlooked and misdiagnosed by otherwise skilled doctors, I chose to throw myself into becoming part of the solution that will help everyone with skin problems - big or small.'}
+              </p>
             </div>
             <div className="relative order-1 lg:order-2">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
                 <Image
                   src="/skinchange-website/About_us_Brian.png"
-                  alt="Brian"
+                  alt="Brian Vangsgaard"
                   fill
                   className="object-cover"
                 />
