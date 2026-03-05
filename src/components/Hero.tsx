@@ -82,7 +82,7 @@ export default function Hero({ lang }: HeroProps) {
           <div className="relative hidden lg:block animate-float">
             <div className="relative mx-auto w-80">
               <Image
-                src={isDa ? '/skinchange-website/hero-phone-da.jpg' : '/skinchange-website/hero-phone-en.jpg'}
+                src={isDa ? '/hero-phone-da.svg' : '/hero-phone-en.svg'}
                 alt="SKIND App"
                 width={320}
                 height={640}
