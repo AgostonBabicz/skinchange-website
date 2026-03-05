@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Clock } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
 
@@ -80,43 +81,14 @@ export default function Hero({ lang }: HeroProps) {
           {/* Phone mockup */}
           <div className="relative hidden lg:block animate-float">
             <div className="relative mx-auto w-80">
-              <div className="bg-white rounded-[3rem] p-3 shadow-2xl shadow-black/30">
-                <div className="bg-[#304ffe] rounded-[2.5rem] p-6 aspect-[9/19] relative overflow-hidden">
-                  {/* App content */}
-                  <div className="flex items-center justify-between text-white mb-8">
-                    <span className="font-bold text-lg">SKIND</span>
-                    <div className="flex gap-1">
-                      <div className="w-2 h-2 bg-[#00e5ff] rounded-full animate-pulse" />
-                      <div className="w-2 h-2 bg-[#00e5ff]/50 rounded-full" />
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-2">{isDa ? 'Velkommen til SKIND' : 'Welcome to SKIND'}</h3>
-                  <p className="text-white/70 text-sm mb-8">{isDa ? 'Din personlige hudklinik i lommen' : 'Your personal skin clinic in your pocket'}</p>
-                  
-                  <button className="w-full bg-white text-[#304ffe] font-bold py-3 rounded-xl mb-6">
-                    {isDa ? 'Ny sag' : 'New case'}
-                  </button>
-                  
-                  <div className="bg-[#1a237e]/50 rounded-xl p-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-xs text-white/60">{isDa ? 'Sag fra 26/1/2026' : 'Case from 26/1/2026'}</p>
-                        <p className="text-sm text-white">{isDa ? 'Status: Vurderet ✓' : 'Status: Reviewed ✓'}</p>
-                      </div>
-                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Decorative elements */}
-                  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#00e5ff]/20 rounded-full blur-2xl" />
-                  <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/10 rounded-full blur-xl" />
-                </div>
-              </div>
+              <Image
+                src={isDa ? '/hero-phone-da.jpg' : '/hero-phone-en.jpg'}
+                alt="SKIND App"
+                width={320}
+                height={640}
+                className="w-full h-auto rounded-[2.5rem] shadow-2xl shadow-black/30"
+                priority
+              />
               
               {/* Badge */}
               <div className="absolute -bottom-4 -right-4 bg-[#00e5ff] text-[#1a237e] font-bold py-2 px-4 rounded-full shadow-lg text-sm">
