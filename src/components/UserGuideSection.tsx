@@ -15,7 +15,7 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
 
   const guideImages = isDa 
     ? [
-        '/skinchange-website/User_guide_DA_1.png',
+        '/skinchange-website/User_guide_DA_1.svg',
         '/skinchange-website/User_guide_DA_2.svg',
         '/skinchange-website/User_guide_DA_3.svg',
         '/skinchange-website/User_guide_DA_4.svg',
@@ -23,11 +23,11 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
         '/skinchange-website/User_guide_DA_6.svg',
       ]
     : [
-        '/skinchange-website/User_guide_EN_1.png',
-        '/skinchange-website/User_guide_EN_2.png',
-        '/skinchange-website/User_guide_EN_3.png',
-        '/skinchange-website/User_guide_EN_4.png',
-        '/skinchange-website/User_guide_EN_5.png',
+        '/skinchange-website/User_guide_EN_1.svg',
+        '/skinchange-website/User_guide_EN_2.svg',
+        '/skinchange-website/User_guide_EN_3.svg',
+        '/skinchange-website/User_guide_EN_4.svg',
+        '/skinchange-website/User_guide_EN_5.svg',
         '/skinchange-website/User_guide_EN_6.svg',
       ];
 

@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "SkinChange | Danmarks førende online dermatologiske klinik",
+  title: "SKIND | Danmarks førende online dermatologiske klinik",
   description: "Få en professionel huddiagnose inden for 48 timer. Direkte fra certificerede hudlæger til din telefon. Sikker MitID login. Danmarks største digitale dermatologiske platform.",
   keywords: [
     "online hudlæge danmark",
@@ -27,21 +27,21 @@ export const metadata: Metadata = {
     "online hudklinik",
     "digital dermatologisk klinik"
   ],
-  authors: [{ name: "SkinChange" }],
-  creator: "SkinChange",
-  publisher: "SkinChange",
+  authors: [{ name: "SKIND" }],
+  creator: "SKIND",
+  publisher: "SKIND",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "da_DK",
     url: "https://www.skinchange.dk",
-    siteName: "SkinChange",
-    title: "SkinChange | Online Dermatologisk Klinik",
+    siteName: "SKIND",
+    title: "SKIND | Online Dermatologisk Klinik",
     description: "Danmarks førende online dermatologiske klinik. Diagnose inden for 48 timer.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SkinChange | Online Dermatologisk Klinik",
+    title: "SKIND | Online Dermatologisk Klinik",
     description: "Danmarks førende online dermatologiske klinik",
   },
   alternates: {
