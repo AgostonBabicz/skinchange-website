@@ -16,10 +16,10 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
   const guideImages = isDa 
     ? [
         '/skinchange-website/User_guide_DA_1.png',
-        '/skinchange-website/User_guide_DA_2.png',
-        '/skinchange-website/User_guide_DA_3.png',
-        '/skinchange-website/User_guide_DA_4.png',
-        '/skinchange-website/User_guide_DA_5.png',
+        '/skinchange-website/User_guide_DA_2.svg',
+        '/skinchange-website/User_guide_DA_3.svg',
+        '/skinchange-website/User_guide_DA_4.svg',
+        '/skinchange-website/User_guide_DA_5.svg',
         '/skinchange-website/User_guide_DA_6.svg',
       ]
     : [
