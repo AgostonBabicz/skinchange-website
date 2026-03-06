@@ -40,8 +40,8 @@ export const translations = {
         desc: 'Svar på spørgsmål om dit hudproblem for at hjælpe vores hudlæger med at stille den rigtige diagnose.',
       },
       step3: {
-        title: 'Få diagnose og behandlingsplan',
-        desc: 'Efter betaling gennemgår vores hudlæger din sag. Du modtager diagnose samt behandlingsplan med indbygget second opinion indenfor 48 timer.',
+        title: 'Efter betaling gennemgår vores hudlæger din sag',
+        desc: 'Du modtager diagnose samt behandlingsplan med indbygget second opinion indenfor 48 timer.',
       },
     },
     peter: {
@@ -116,7 +116,7 @@ William Nielsen Prisen`,
     },
     feedback: {
       title: 'Hvad vores patienter siger',
-      subtitle: 'Læs om oplevelser fra virkelige brugere af SkinChange',
+      subtitle: 'Læs om oplevelser fra virkelige brugere af SKIND',
       items: [
         {
           text: 'Jeg var overrasket over hvor nemt og hurtigt det var. Jeg fik svar inden for 24 timer og behandlingen hjalp mit eksem på få dage.',
@@ -134,7 +134,7 @@ William Nielsen Prisen`,
           condition: 'Akne',
         },
         {
-          text: 'Som studerende er det svært at finde tid til lægebesøg. Med SkinChange kunne jeg få hjælp på en aften efter forelæsninger.',
+          text: 'Som studerende er det svært at finde tid til lægebesøg. Med SKIND kunne jeg få hjælp på en aften efter forelæsninger.',
           author: 'Jakob R.',
           condition: 'Rosacea',
         },
@@ -142,7 +142,7 @@ William Nielsen Prisen`,
     },
     availability: {
       title: 'Tilgængelig i hele Europa',
-      subtitle: 'Vi arbejder på at gøre SkinChange tilgængelig i hele EU',
+      subtitle: 'Vi arbejder på at gøre SKIND tilgængelig i hele EU',
     },
     footer: {
       privacy: 'Privatlivspolitik',
@@ -167,7 +167,7 @@ William Nielsen Prisen`,
     hero: {
       title: 'SKIND',
       subtitle: 'Denmark\'s fastest dermatological clinic',
-      description: 'Your photos are analyzed by specialist dermatologists',
+      description: 'Your photos are analyzed by certified dermatologists',
       cta: 'Get the App',
       mitid: 'MitID Verified',
       price: '298 DKK',
@@ -191,8 +191,8 @@ William Nielsen Prisen`,
         desc: 'Answer questions about your skin problem to help our dermatologists make the right diagnosis.',
       },
       step3: {
-        title: 'Get diagnosis and treatment plan',
-        desc: 'After payment, our dermatologists review your case. You receive diagnosis and treatment plan with built-in second opinion within 48 hours.',
+        title: 'After payment our dermatologists review your case',
+        desc: 'You receive diagnosis and treatment plan with built-in second opinion within 48 hours.',
       },
     },
     peter: {
@@ -267,7 +267,7 @@ William Nielsen Prize`,
     },
     feedback: {
       title: 'What our patients say',
-      subtitle: 'Read about experiences from real users of SkinChange',
+      subtitle: 'Read about experiences from real users of SKIND',
       items: [
         {
           text: 'I was surprised at how easy and quick it was. I got a response within 24 hours and the treatment helped my eczema within days.',
@@ -285,7 +285,7 @@ William Nielsen Prize`,
           condition: 'Acne',
         },
         {
-          text: 'As a student, it\'s hard to find time for doctor visits. With SkinChange, I could get help in the evening after lectures.',
+          text: 'As a student, it\'s hard to find time for doctor visits. With SKIND, I could get help in the evening after lectures.',
           author: 'Jakob R.',
           condition: 'Rosacea',
         },
@@ -293,7 +293,7 @@ William Nielsen Prize`,
     },
     availability: {
       title: 'Available throughout Europe',
-      subtitle: 'We are working to make SkinChange available throughout the EU',
+      subtitle: 'We are working to make SKIND available throughout the EU',
     },
     footer: {
       privacy: 'Privacy Policy',

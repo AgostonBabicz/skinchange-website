@@ -13,65 +13,15 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   return {
     title: isDa ? 'Sådan bruger du appen | SKIND' : 'How to use the app | SKIND',
     description: isDa 
-      ? 'En simpel guide til, hvordan du bruger SkinChange appen til at få hjælp til dit hudproblem.' 
-      : 'A simple guide on how to use the SkinChange app to get help with your skin problem.',
+      ? 'En simpel guide til, hvordan du bruger SKIND appen til at få hjælp til dit hudproblem.' 
+      : 'A simple guide on how to use the SKIND app to get help with your skin problem.',
   };
 }
 
 export default function GuidePage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
-  const steps = isDa ? [
-    {
-      title: '1. Download appen',
-      description: 'Hent SkinChange fra App Store eller Google Play. Appen er gratis at downloade.'
-    },
-    {
-      title: '2. Opret profil',
-      description: 'Registrer dig med dit telefonnummer og verificer din identitet med MitID.'
-    },
-    {
-      title: '3. Tag billeder',
-      description: 'Tag klare, velbelyste billeder af dit hudproblem fra flere vinkler.'
-    },
-    {
-      title: '4. Besvar spørgsmål',
-      description: 'Besvar nogle simple spørgsmål om dine symptomer og medicinske historie.'
-    },
-    {
-      title: '5. Betal',
-      description: 'Betal sikkert i appen. Prisen er 298 kr. for én hudlidelse.'
-    },
-    {
-      title: '6. Modtag diagnose',
-      description: 'En hudlæge gennemgår din sag og sender dig svar inden for 48 timer.'
-    }
-  ] : [
-    {
-      title: '1. Download the app',
-      description: 'Get SkinChange from the App Store or Google Play. The app is free to download.'
-    },
-    {
-      title: '2. Create profile',
-      description: 'Register with your phone number and verify your identity with MitID.'
-    },
-    {
-      title: '3. Take photos',
-      description: 'Take clear, well-lit photos of your skin problem from multiple angles.'
-    },
-    {
-      title: '4. Answer questions',
-      description: 'Answer some simple questions about your symptoms and medical history.'
-    },
-    {
-      title: '5. Pay',
-      description: 'Pay securely in the app. The price is €40 for one skin condition.'
-    },
-    {
-      title: '6. Receive diagnosis',
-      description: 'A dermatologist reviews your case and sends you a response within 48 hours.'
-    }
-  ];
+  
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -91,26 +41,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
         </div>
       </section>
 
-      {/* Steps */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {steps.map((step, index) => (
-              <div 
-                key={index}
-                className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-xl font-bold text-[#1a237e] mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* User Guide Carousel */}
       <UserGuideSection lang={lang} />
