@@ -29,19 +29,19 @@ export const translations = {
       rating: 'Patienttilfredshed',
     },
     features: {
-      title: 'Så nemt er det',
-      subtitle: 'Tre simple trin fra dit første symptom til din behandlingsplan',
+      title: 'PEG - KLIK - SEND',
+      subtitle: 'Opret din undersøgelse i appen og følg patientflowets trin. Sikkert, nemt og hurtigt.',
       step1: {
-        title: 'Upload billeder',
+        title: 'Upload dine billeder',
         desc: 'Tag klare billeder af dit hudproblem og besvar nogle simple spørgsmål om dine symptomer.',
       },
       step2: {
-        title: 'Lægen vurderer',
-        desc: 'En certificeret hudlæge gennemgår din sag og stiller en diagnose inden for 48 timer.',
+        title: 'Besvar spørgsmål',
+        desc: 'Svar på spørgsmål om dit hudproblem for at hjælpe vores hudlæger med at stille den rigtige diagnose.',
       },
       step3: {
-        title: 'Få behandling',
-        desc: 'Modtag din diagnose og personlige behandlingsplan direkte i appen.',
+        title: 'Få diagnose og behandlingsplan',
+        desc: 'Efter betaling gennemgår vores hudlæger din sag. Du modtager diagnose samt behandlingsplan med indbygget second opinion indenfor 48 timer.',
       },
     },
     peter: {
@@ -180,19 +180,19 @@ William Nielsen Prisen`,
       rating: 'Patient satisfaction',
     },
     features: {
-      title: 'How it works',
-      subtitle: 'Three simple steps from your first symptom to your treatment plan',
+      title: 'GRAB - CLICK - SEND',
+      subtitle: 'Create your examination in the app and follow the patient flow steps. Safe, easy and fast.',
       step1: {
-        title: 'Upload photos',
+        title: 'Upload your images',
         desc: 'Take clear photos of your skin problem and answer some simple questions about your symptoms.',
       },
       step2: {
-        title: 'Doctor reviews',
-        desc: 'A certified dermatologist reviews your case and provides a diagnosis within 48 hours.',
+        title: 'Answer questions',
+        desc: 'Answer questions about your skin problem to help our dermatologists make the right diagnosis.',
       },
       step3: {
-        title: 'Get treatment',
-        desc: 'Receive your diagnose and personalized treatment plan directly in the app.',
+        title: 'Get diagnosis and treatment plan',
+        desc: 'After payment, our dermatologists review your case. You receive diagnosis and treatment plan with built-in second opinion within 48 hours.',
       },
     },
     peter: {
