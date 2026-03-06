@@ -42,3 +42,15 @@ yarn-error.log*
 *.tmp
 *.temp
 .git-push.sh
+
+# OpenClaw configuration files
+.openclaw/
+AGENTS.md
+BOOTSTRAP.md
+HEARTBEAT.md
+IDENTITY.md
+SOUL.md
+TOOLS.md
+USER.md
+memory/
+dcp-affiliate/
