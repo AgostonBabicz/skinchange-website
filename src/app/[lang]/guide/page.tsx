@@ -58,7 +58,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
               : 'Download the app today and get help with your skin problem within 48 hours'}
           </p>
           <a 
-            href={`/${lang}/download`}
+            href={`/skinchange-website/${lang}/download`}
             className="inline-flex items-center bg-white text-[#1a237e] px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:shadow-2xl"
           >
             {isDa ? 'Download appen' : 'Download the app'}
