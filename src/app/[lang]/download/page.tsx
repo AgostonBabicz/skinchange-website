@@ -91,7 +91,7 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
             <div className="relative flex justify-end overflow-visible">
               <div className="relative w-[120%] -mr-[20%]">
                 <img
-                  src={isDa ? "/Download_page_NEW-DA.svg" : "/Download_page_NEW-EN.svg"}
+                  src={isDa ? "/skinchange-website/Download_page_NEW-DA.svg" : "/skinchange-website/Download_page_NEW-EN.svg"}
                   alt="SKIND App"
                   className="w-full h-auto"
                   style={{

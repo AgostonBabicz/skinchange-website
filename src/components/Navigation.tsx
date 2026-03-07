@@ -30,7 +30,7 @@ export default function Navigation({ lang }: NavigationProps) {
           <Link href={`/${lang}`} className="flex items-center space-x-3">
             <div className="bg-white rounded-lg px-2 py-1.5">
               <img
-                src="/SKIND LOGO.svg"
+                src="/skinchange-website/SKIND LOGO.svg"
                 alt="SKIND"
                 className="h-12 w-auto object-contain"
               />
