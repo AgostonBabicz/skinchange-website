@@ -18,8 +18,8 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
   ];
 
   const disclaimer = isDa 
-    ? "We have cooperated with Teknologisk Institut, Uptime Development and C2IT Greenhouse during the development of our AI supported solutions"
-    : "We have cooperated with Teknologisk Institut, Uptime Development and C2IT Greenhouse during the development of our AI supported solutions";
+    ? "Vi samarbejder med Teknologisk Institut, Uptime Development og C2IT Greenhouse"
+    : "We collaborate with Teknologisk Institut, Uptime Development and C2IT Greenhouse";
 
   return (
     <section className="py-20 bg-[#1a237e]">
