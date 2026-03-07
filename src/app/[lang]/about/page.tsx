@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   return {
     title: isDa ? 'Om os | SKIND' : 'About us | SKIND',
     description: isDa 
-      ? 'Lær mere om SkinChange og vores mission med at gøre dermatologisk behandling tilgængelig for alle.' 
-      : 'Learn more about SkinChange and our mission to make dermatological care accessible to everyone.',
+      ? 'Lær mere om SKIND og vores mission med at gøre dermatologisk behandling tilgængelig for alle.' 
+      : 'Learn more about SKIND and our mission to make dermatological care accessible to everyone.',
   };
 }
 
@@ -113,8 +113,8 @@ export default function AboutPage({ params: { lang } }: PageProps) {
             </h2>
             <p className="text-gray-600 mb-6">
               {isDa
-                ? 'SkinChange blev grundlagt med en klar vision: at revolutionere måden, vi får adgang til dermatologisk behandling på. Ved at kombinere teknologi og medicinsk ekspertise har vi skabt en platform, der gør det muligt at få professionel hjælp til hudproblemer uanset hvor du befinder dig.'
-                : 'SkinChange was founded with a clear vision: to revolutionize the way we access dermatological care. By combining technology and medical expertise, we have created a platform that makes it possible to get professional help for skin problems no matter where you are.'}
+                ? 'SKIND blev grundlagt med en klar vision: at revolutionere måden, vi får adgang til dermatologisk behandling på. Ved at kombinere teknologi og medicinsk ekspertise har vi skabt en platform, der gør det muligt at få professionel hjælp til hudproblemer uanset hvor du befinder dig.'
+                : 'SKIND was founded with a clear vision: to revolutionize the way we access dermatological care. By combining technology and medical expertise, we have created a platform that makes it possible to get professional help for skin problems no matter where you are.'}
             </p>
 
             <h2 className="text-3xl font-bold text-[#1a237e] mb-6 mt-12">
