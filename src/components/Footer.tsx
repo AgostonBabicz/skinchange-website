@@ -29,9 +29,9 @@ export default function Footer({ lang }: FooterProps) {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center space-x-3 mb-6">
-              <div className="bg-white rounded-lg px-3 py-2">
+              <div className="bg-white rounded-lg px-2 py-1.5">
                 <img
-                  src="/SKIND_logo_dark.svg"
+                  src="/skinchange-website/SKIND LOGO.svg"
                   alt="SKIND"
                   className="h-10 w-auto object-contain"
                 />
