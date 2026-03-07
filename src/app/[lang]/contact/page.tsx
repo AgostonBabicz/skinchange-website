@@ -102,8 +102,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
               </h3>
               <p className="text-gray-600 mb-4">
                 {isDa 
-                  ? 'Send os en email, og vi svarer inden for 24 timer.' 
-                  : 'Send us an email, and we will respond within 24 hours.'}
+                  ? 'Send os en email, og vi svarer inden for 48 timer.' 
+                  : 'Send us an email, and we will respond within 48 hours.'}
               </p>
               <a 
                 href={`mailto:${contactInfo.email}`}

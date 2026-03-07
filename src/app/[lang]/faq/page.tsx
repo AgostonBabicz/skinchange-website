@@ -150,8 +150,8 @@ export default function FAQPage({ params: { lang } }: PageProps) {
           </h1>
           <p className="text-xl text-gray-600 text-center mb-16">
             {isDa 
-              ? 'Find svar på de mest almindelige spørgsmål om SkinChange'
-              : 'Find answers to the most common questions about SkinChange'}
+              ? 'Find svar på de mest almindelige spørgsmål om SKIND'
+              : 'Find answers to the most common questions about SKIND'}
           </p>
 
           <div className="space-y-6">

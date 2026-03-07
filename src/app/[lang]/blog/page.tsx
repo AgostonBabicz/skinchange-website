@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   const isDa = params.lang === 'da';
   return {
     title: isDa 
-      ? 'Blog om Hudsygdomme & Behandling | SkinChange' 
-      : 'Skin Disease & Treatment Blog | SkinChange',
+      ? 'Blog om Hudsygdomme & Behandling | SKIND' 
+      : 'Skin Disease & Treatment Blog | SKIND',
     description: isDa 
       ? 'Få ekspertråd om hudsygdomme, behandling af akne, eksem, psoriasis og meget mere. Læs artikler skrevet af certificerede hudlæger.' 
       : 'Get expert advice on skin diseases, acne treatment, eczema, psoriasis and more. Articles written by certified dermatologists.',

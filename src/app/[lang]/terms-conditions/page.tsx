@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   return {
     title: isDa ? 'Vilkår & Betingelser | SKIND' : 'Terms & Conditions | SKIND',
     description: isDa 
-      ? 'Læs vores vilkår og betingelser for brug af SkinChange platformen.' 
-      : 'Read our terms and conditions for using the SkinChange platform.',
+      ? 'Læs vores vilkår og betingelser for brug af SKIND platformen.' 
+      : 'Read our terms and conditions for using the SKIND platform.',
   };
 }
 
