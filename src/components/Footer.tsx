@@ -30,15 +30,15 @@ export default function Footer({ lang }: FooterProps) {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 relative">
+              <div className="relative bg-white rounded-lg px-3 py-2">
                 <Image
-                  src="/skinchange-website/Logo_without_background.svg"
-                  alt="SkinChange"
-                  fill
+                  src="/SKIND_logo_dark.svg"
+                  alt="SKIND"
+                  width={120}
+                  height={40}
                   className="object-contain"
                 />
               </div>
-              <span className="text-2xl font-bold">SKIND</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
               {lang === 'da' 

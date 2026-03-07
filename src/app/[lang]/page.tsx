@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   const isDa = params.lang === 'da';
   return {
     title: isDa 
-      ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SkinChange' 
-      : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SkinChange',
+      ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SKIND' 
+      : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SKIND',
     description: isDa 
       ? 'Konsultation med certificerede hudlæger online. Behandling af akne, eksem, psoriasis, rosacea og hudkræft. Diagnose inden for 48 timer. Kun 298 kr. MitID verificeret.' 
       : 'Consultation with certified dermatologists online. Treatment for acne, eczema, psoriasis, rosacea and skin cancer. Diagnosis within 48 hours. Only €40. MitID verified.',
@@ -42,12 +42,12 @@ export default function HomePage({ params: { lang } }: PageProps) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
-    name: 'SkinChange',
+    name: 'SKIND',
     description: isDa 
       ? 'Online hudlæge konsultation med certificerede dermatologer'
       : 'Online dermatologist consultation with certified dermatologists',
     url: 'https://www.skinchange.dk',
-    logo: 'https://www.skinchange.dk/skinchange-website/Logo_without_background.svg',
+    logo: 'https://www.skinchange.dk/SKIND_logo_dark.svg',
     image: 'https://www.skinchange.dk/skinchange-website/Download_page_mockup.png',
     telephone: '+45-XXX-XXXX',
     email: 'info@skinchange.ai',
@@ -80,7 +80,7 @@ export default function HomePage({ params: { lang } }: PageProps) {
     availability: 'https://schema.org/InStock',
     offeredBy: {
       '@type': 'MedicalBusiness',
-      name: 'SkinChange'
+      name: 'SKIND'
     },
     serviceType: 'Telemedicine'
   };

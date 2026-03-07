@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
   const isDa = lang === 'da';
   
   const title = isDa 
-    ? "SkinChange | Online Dermatologisk Klinik" 
-    : "SkinChange | Online Dermatology Clinic";
+    ? "SKIND | Online Dermatologisk Klinik" 
+    : "SKIND | Online Dermatology Clinic";
     
   const description = isDa
     ? "Danmarks førende online dermatologiske klinik. Få en diagnose inden for 48 timer. Certificerede hudlæger, sikker MitID login. Online hudkonsultation for akne, eksem, psoriasis og hudkræft."
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
       type: "website",
       locale: isDa ? "da_DK" : "en_US",
       url: `https://www.skinchange.dk/${lang}`,
-      siteName: "SkinChange",
+      siteName: "SKIND",
       title,
       description,
       images: [
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: isDa ? "SkinChange - Online Dermatologisk Klinik" : "SkinChange - Online Dermatology Clinic",
+          alt: isDa ? "SKIND - Online Dermatologisk Klinik" : "SKIND - Online Dermatology Clinic",
         },
       ],
     },
@@ -100,13 +100,13 @@ const structuredData = {
       "@type": "MedicalOrganization",
       "@id": "https://www.skinchange.dk/#organization",
       "name": "SkinChange.AI ApS",
-      "alternateName": "SkinChange",
+      "alternateName": "SKIND",
       "url": "https://www.skinchange.dk",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.skinchange.dk/Logo_without_background.svg",
-        "width": 512,
-        "height": 512
+        "url": "https://www.skinchange.dk/SKIND_logo_dark.svg",
+        "width": 675,
+        "height": 225
       },
       "description": "Danmarks førende online dermatologiske klinik. Få en diagnose inden for 48 timer.",
       "medicalSpecialty": "Dermatology",
@@ -142,7 +142,7 @@ const structuredData = {
       "@type": "WebSite",
       "@id": "https://www.skinchange.dk/#website",
       "url": "https://www.skinchange.dk",
-      "name": "SkinChange",
+      "name": "SKIND",
       "publisher": {
         "@id": "https://www.skinchange.dk/#organization"
       },
@@ -152,7 +152,7 @@ const structuredData = {
       "@type": "MedicalWebPage",
       "@id": "https://www.skinchange.dk/#webpage",
       "url": "https://www.skinchange.dk",
-      "name": "SkinChange | Online Dermatologisk Klinik",
+      "name": "SKIND | Online Dermatologisk Klinik",
       "isPartOf": {
         "@id": "https://www.skinchange.dk/#website"
       },

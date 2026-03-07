@@ -11,7 +11,7 @@ interface PageProps {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Akne: Årsager, Typer og Effektiv Behandling | SkinChange',
+    title: 'Akne: Årsager, Typer og Effektiv Behandling | SKIND',
     description: 'Komplet guide til akne behandling. Lær om hormonelle udslet, bakterielle infektioner, behandlingsmuligheder og hvordan du får ren hud. Skrevet af speciallæge Peter Bjerring.',
     keywords: 'akne behandling, akne årsager, bumser behandling, uren hud, hormonelle udslet, akne medicin, akne ar, hudlæge akne',
     alternates: {
@@ -38,10 +38,10 @@ export default function AkneArticle({ params: { lang } }: PageProps) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'SkinChange',
+      name: 'SKIND',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.skinchange.dk/skinchange-website/Logo_without_background.svg'
+        url: 'https://www.skinchange.dk/SKIND_logo_dark.svg'
       }
     },
     medicalAudience: {
@@ -439,7 +439,7 @@ export default function AkneArticle({ params: { lang } }: PageProps) {
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">Få professionel hjælp online</h3>
                 <p className="mb-6">
-                  Hos SkinChange kan du få en diagnose og personlig behandlingsplan fra en certificeret hudlæge – uden at forlade hjemmet. Upload billeder af din hud, og modtag svar inden for 48 timer.
+                  Hos SKIND kan du få en diagnose og personlig behandlingsplan fra en certificeret hudlæge – uden at forlade hjemmet. Upload billeder af din hud, og modtag svar inden for 48 timer.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -502,7 +502,7 @@ export default function AkneArticle({ params: { lang } }: PageProps) {
                 <li>Søge professionel hjælp ved moderat til svær akne</li>
               </ol>
               <p>
-                Hos SkinChange står vi klar til at hjælpe dig med at få den rette diagnose og behandling. <Link href={`/${lang}/download`} className="text-[#304ffe] hover:underline font-semibold">Download appen</Link> og få kontakt til en hudlæge i dag.
+                Hos SKIND står vi klar til at hjælpe dig med at få den rette diagnose og behandling. <Link href={`/${lang}/download`} className="text-[#304ffe] hover:underline font-semibold">Download appen</Link> og få kontakt til en hudlæge i dag.
               </p>
 
               <div className="border-t border-gray-200 pt-8 mt-12">
