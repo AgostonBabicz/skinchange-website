@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
-import Image from 'next/image';
 
 interface NavigationProps {
   lang: Language;
@@ -29,13 +28,11 @@ export default function Navigation({ lang }: NavigationProps) {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center space-x-3">
-            <div className="relative bg-white rounded-lg px-3 py-2">
-              <Image
+            <div className="bg-white rounded-lg px-3 py-2">
+              <img
                 src="/SKIND_logo_dark.svg"
                 alt="SKIND"
-                width={120}
-                height={40}
-                className="object-contain"
+                className="h-10 w-auto object-contain"
               />
             </div>
           </Link>
