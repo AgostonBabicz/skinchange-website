@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   return {
     title: isDa ? 'Download appen | SKIND' : 'Download the app | SKIND',
     description: isDa 
-      ? 'Download SkinChange appen og få adgang til professionel dermatologisk hjælp på din telefon.' 
-      : 'Download the SkinChange app and access professional dermatological help on your phone.',
+      ? 'Download SKIND appen og få adgang til professionel dermatologisk hjælp på din telefon.' 
+      : 'Download the SKIND app and access professional dermatological help on your phone.',
   };
 }
 

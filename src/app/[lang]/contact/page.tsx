@@ -14,16 +14,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   return {
     title: isDa 
-      ? "Kontakt os | SkinChange" 
-      : "Contact Us | SkinChange",
+      ? "Kontakt os | SKIND" 
+      : "Contact Us | SKIND",
     description: isDa
-      ? "Kontakt SkinChange for spørgsmål om online hudkonsultation. Email: info@skinchange.ai. Vi besvarer din henvendelse inden for 24 timer."
-      : "Contact SkinChange for questions about online skin consultation. Email: info@skinchange.ai. We respond within 24 hours.",
+      ? "Kontakt SKIND for spørgsmål om online hudkonsultation. Email: info@skinchange.ai. Vi besvarer din henvendelse inden for 48 timer."
+      : "Contact SKIND for questions about online skin consultation. Email: info@skinchange.ai. We respond within 48 hours.",
     alternates: {
       canonical: `https://www.skinchange.dk/${params.lang}/contact`,
     },
     openGraph: {
-      title: isDa ? "Kontakt os | SkinChange" : "Contact Us | SkinChange",
+      title: isDa ? "Kontakt os | SKIND" : "Contact Us | SKIND",
       description: isDa 
         ? "Har du spørgsmål? Kontakt os på info@skinchange.ai"
         : "Have questions? Contact us at info@skinchange.ai",
@@ -45,11 +45,11 @@ export default function ContactPage({ params: { lang } }: PageProps) {
   const faqItems = isDa ? [
     {
       q: "Hvor hurtigt får jeg svar?",
-      a: "Vi besvarer alle henvendelser inden for 24 timer på hverdage. For teknisk support anbefaler vi at kontakte os via appen."
+      a: "Vi besvarer alle henvendelser inden for 48 timer på hverdage."
     },
     {
       q: "Kan jeg ringe til jer?",
-      a: "Vi foretrækker kontakt via email for at sikre dokumentation og kvalitetssikring. Ved akutte spørgsmål kan du også bruge chat-funktionen i appen."
+      a: "Vi foretrækker kontakt via email for at sikre dokumentation og kvalitetssikring."
     },
     {
       q: "Hvor finder jeg mere information?",
@@ -58,11 +58,11 @@ export default function ContactPage({ params: { lang } }: PageProps) {
   ] : [
     {
       q: "How quickly will I get a response?",
-      a: "We respond to all inquiries within 24 hours on business days. For technical support, we recommend contacting us through the app."
+      a: "We respond to all inquiries within 48 hours on business days."
     },
     {
       q: "Can I call you?",
-      a: "We prefer email contact to ensure documentation and quality assurance. For urgent questions, you can also use the chat function in the app."
+      a: "We prefer email contact to ensure documentation and quality assurance."
     },
     {
       q: "Where can I find more information?",
@@ -166,8 +166,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
             <div className="p-6 md:p-8 bg-gray-50">
               <p className="text-gray-600 text-center">
                 {isDa 
-                  ? 'SkinChange er tilgængelig i hele Danmark. Vores digitale platform gør det muligt at modtage hudlægekonsultation uanset hvor du bor.' 
-                  : 'SkinChange is available throughout Denmark. Our digital platform makes it possible to receive dermatologist consultation no matter where you live.'}
+                  ? 'SKIND er tilgængelig i hele Danmark. Vores digitale platform gør det muligt at modtage hudlægekonsultation uanset hvor du bor.' 
+                  : 'SKIND is available throughout Denmark. Our digital platform makes it possible to receive dermatologist consultation no matter where you live.'}
               </p>
             </div>
           </div>
