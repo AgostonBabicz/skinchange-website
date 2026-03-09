@@ -180,7 +180,7 @@ William Nielsen Prisen`,
       rating: 'Patient satisfaction',
     },
     features: {
-      title: 'GRAB - CLICK - SEND',
+      title: 'POINT - CLICK - SEND',
       subtitle: 'Create your examination in the app and follow the patient flow steps. Safe, easy and fast.',
       step1: {
         title: 'Upload your images',
