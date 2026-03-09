@@ -42,16 +42,6 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
   return (
     <section id="user-guide" className="py-24 lg:py-32 bg-[#1a237e]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
-            {isDa ? 'Sådan bruger du SKIND' : 'How to use SKIND'}
-          </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            {isDa ? 'Følg disse simple trin for at få hjælp til dit hudproblem' : 'Follow these simple steps to get help for your skin problem'}
-          </p>
-        </div>
-
         {/* Carousel - No white rectangle, clean design */}
         <div className="relative">
           {/* Main image - no background, no padding */}
