@@ -1,0 +1,475 @@
+[
+  {
+    "id": 1,
+    "slug": "acne",
+    "nameEN": "Acne",
+    "nameDA": "Akne",
+    "icd11": "ED80 Acne",
+    "medicalDescription": "Characterized by comedones, papules, and pustules, often related to hormonal changes. Treatment includes topical retinoids, antibiotics, and in severe cases, isotretinoin.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is acne?", "answer": "Acne is a prevalent skin condition affecting oil glands and hair follicles. It causes pimples, blackheads, whiteheads, and sometimes deeper bumps depending on its severity. While frustrating, it's important to remember acne is not contagious." },
+        { "question": "What does acne look like?", "answer": "Acne can manifest differently for everyone, but common signs include blackheads and whiteheads (plugged pores due to excess oil and dead skin cells), pimples (small, red bumps that may contain pus), and nodules and cysts (deeper, painful bumps forming under the skin)." },
+        { "question": "Why does acne happen?", "answer": "Several factors contribute to acne, including increased oil production (hormones, genetics, and certain medications can stimulate oil glands), plugged pores (dead skin cells and excess oil can clog pores, trapping bacteria and inflammation), and bacterial overgrowth (Cutibacterium acnes contributes to inflammation and pimple formation)." },
+        { "question": "Who gets acne?", "answer": "Acne is incredibly common, affecting most people at some point in their lives, primarily during adolescence due to hormonal changes. However, adults can also experience acne." },
+        { "question": "How is acne treated?", "answer": "Consistent treatment is key. While there's no single cure, various options like over-the-counter medications, prescription medications, and lifestyle changes can effectively manage acne. Don't pick or squeeze — this can worsen inflammation and scarring. Dermatologists can assess your specific acne type and recommend the most effective treatment plan." }
+      ],
+      "da": [
+        { "question": "Hvad er akne?", "answer": "Akne er en almindelig hudlidelse, der påvirker talgkirtler og hårsække. Det forårsager bumser, hudorme, hvide knopper og nogle gange dybere knopper afhængigt af dens sværhedsgrad. Mens det er frustrerende, er det vigtigt at huske, at akne ikke er smitsomt." },
+        { "question": "Hvordan ser akne ud?", "answer": "Akne kan manifestere sig forskelligt for alle, men almindelige tegn inkluderer hudorme og hvide knopper (tilstoppede porer på grund af overskydende olie og døde hudceller), bumser (små, røde knopper, der kan indeholde pus), og knuder og cyster (dybere, smertefulde knopper dannet under huden)." },
+        { "question": "Hvorfor opstår akne?", "answer": "Flere faktorer bidrager til akne, herunder øget olieproduktion (hormoner, genetik og visse medicin kan stimulere talgkirtlerne), tilstoppede porer (døde hudceller og overskydende olie kan tilstoppe porerne) og bakterieovervækst (Cutibacterium acnes bidrager til inflammation og dannelse af bumser)." },
+        { "question": "Hvem får akne?", "answer": "Akne er utrolig almindelig og påvirker de fleste mennesker på et tidspunkt i deres liv, primært under puberteten på grund af hormonelle ændringer. Dog kan voksne også opleve akne." },
+        { "question": "Hvordan behandles akne?", "answer": "Vedvarende behandling er nøglen. Mens der ikke er nogen enkelt kur, kan forskellige muligheder som håndkøbsmedicin, receptpligtig medicin og livsstilsændringer effektivt håndtere akne. Undgå at kradse eller klemme — dette kan forværre inflammation og give arvæv. Dermatologer kan vurdere din specifikke akne-type og anbefale den mest effektive behandlingsplan." }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "eczema-atopic-dermatitis",
+    "nameEN": "Eczema (Atopic Dermatitis)",
+    "nameDA": "Eksem (Atopisk Dermatitis)",
+    "icd11": "EA80 Atopic eczema",
+    "medicalDescription": "Chronic, inflammatory condition marked by itchy, red, and dry skin. Managed with moisturizers, topical steroids, and immunomodulators.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is eczema (atopic dermatitis)?", "answer": "Atopic dermatitis, often called eczema, is a common skin condition that makes your skin red, itchy, and sometimes swollen. It's not contagious, so you can't catch it from someone else." },
+        { "question": "What does eczema look like?", "answer": "In adults, eczema often appears as dry, scaly patches on the neck, face, and around the eyes, but it can appear anywhere on the body. The skin may look reddish and feel extremely itchy. Sometimes, scratching leads to raw, sensitive skin or even infections." },
+        { "question": "Why does eczema happen?", "answer": "The exact cause isn't known, but it's thought to be linked to an overactive response by the body's immune system to an irritant. It is common in people who have allergies or asthma and can be triggered by stress, certain foods, and weather changes." },
+        { "question": "Who gets eczema?", "answer": "Anyone can get atopic dermatitis, but it's more common in people with a family history of allergies or asthma. Adults who had it as a child often see it come back, though sometimes in a milder form." },
+        { "question": "How is eczema managed?", "answer": "Moisturizing regularly helps manage the dryness and itchiness. Avoid scratching; it can worsen the condition and lead to infection. Identify and avoid triggers, like certain soaps, foods, or fabrics. Atopic dermatitis can vary in severity, and treatment may change over time — regular check-ins with your dermatologist are important." }
+      ],
+      "da": [
+        { "question": "Hvad er eksem (atopisk dermatitis)?", "answer": "Atopisk dermatitis, ofte kaldet eksem, er en almindelig hudlidelse, der får din hud til at blive rød, kløende og undertiden hævet. Det er ikke smitsomt, så du kan ikke få det fra nogen andre." },
+        { "question": "Hvordan ser eksem ud?", "answer": "Hos voksne viser eksem sig ofte som tørre, skællende pletter på halsen, ansigtet og omkring øjnene, men det kan forekomme overalt på kroppen. Huden kan se rød ud og føles ekstremt kløende. Nogle gange fører kløe til rå, følsom hud eller endda infektioner." },
+        { "question": "Hvorfor opstår eksem?", "answer": "Den præcise årsag er ukendt, men det menes at være forbundet med en overaktiv reaktion fra kroppens immunsystem på en irriterende faktor. Det er almindeligt hos mennesker med allergier eller astma og kan udløses af stress, visse fødevarer og vejrændringer." },
+        { "question": "Hvem får eksem?", "answer": "Alle kan få atopisk dermatitis, men det er mere almindeligt hos personer med en familiehistorie af allergier eller astma. Voksne, der havde det som barn, oplever ofte, at det kommer tilbage, selvom det nogle gange er i en mildere form." },
+        { "question": "Hvordan behandles eksem?", "answer": "Hyppig fugtighedsbehandling hjælper med at håndtere tørhed og kløe. Undgå at klø; det kan forværre tilstanden og føre til infektion. Identificer og undgå udløsere som visse sæber, fødevarer eller stoffer. Regelmæssige opfølgninger hos din hudlæge er vigtige." }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "psoriasis",
+    "nameEN": "Psoriasis",
+    "nameDA": "Psoriasis",
+    "icd11": "EA90 Psoriasis",
+    "medicalDescription": "An autoimmune disorder causing thick, red, scaly plaques. Treated with topical treatments, phototherapy, and systemic medications.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is psoriasis?", "answer": "Psoriasis is a chronic skin condition that causes red, scaly patches to appear on different areas of your body. It's important to remember that it's not contagious, so you can't spread it to others." },
+        { "question": "What does psoriasis look like?", "answer": "Psoriasis typically shows up as thick, raised patches with silvery-white scales. These patches can be itchy and uncomfortable, and they often affect the elbows, knees, scalp, and lower back. However, they can appear anywhere on your body." },
+        { "question": "Why does psoriasis happen?", "answer": "The exact cause of psoriasis is unknown, but it's linked to an issue with the immune system that speeds up skin cell production. This causes cells to build up faster than they can shed, leading to the visible scaling. Genetics and certain triggers, like stress, infections, or some medications, can also play a role." },
+        { "question": "Who gets psoriasis?", "answer": "Psoriasis can affect anyone, regardless of age or gender. While it's more common in adults, it can also occur in children. You're more likely to develop it if you have a family history of the condition." },
+        { "question": "How is psoriasis treated?", "answer": "There's no cure, but various treatments can help control symptoms and improve your quality of life — including creams, ointments, light therapy, or medications. Identifying and avoiding personal triggers like stress, certain foods, or harsh soaps can help prevent flare-ups. Your dermatologist can tailor a treatment plan specific to your needs." }
+      ],
+      "da": [
+        { "question": "Hvad er psoriasis?", "answer": "Psoriasis er en kronisk hudlidelse, der forårsager røde, skællende pletter på forskellige områder af din krop. Det er vigtigt at huske, at det ikke er smitsomt, så du kan ikke sprede det til andre." },
+        { "question": "Hvordan ser psoriasis ud?", "answer": "Psoriasis viser typisk sig som tykke, hævede pletter med sølvhvide skæl. Disse pletter kan være kløende og ubehagelige og påvirker ofte albuer, knæ, hovedbund og lænd. Dog kan de optræde overalt på din krop." },
+        { "question": "Hvorfor opstår psoriasis?", "answer": "Den præcise årsag til psoriasis er ukendt, men det er forbundet med et problem med immunsystemet, der fremskynder produktionen af hudceller. Genetik og visse udløsere som stress, infektioner eller visse medicin kan også spille en rolle." },
+        { "question": "Hvem får psoriasis?", "answer": "Psoriasis kan påvirke alle, uanset alder eller køn. Mens det er mere almindeligt hos voksne, kan det også forekomme hos børn. Du er mere tilbøjelig til at udvikle det, hvis du har en familiehistorie med tilstanden." },
+        { "question": "Hvordan behandles psoriasis?", "answer": "Der er ingen kur, men forskellige behandlinger kan hjælpe med at kontrollere symptomerne og forbedre din livskvalitet — herunder cremer, salver, lysbehandling eller medicin. Identifikation og undgåelse af dine personlige udløsere kan hjælpe med at forhindre udbrud." }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "rosacea",
+    "nameEN": "Rosacea",
+    "nameDA": "Rosacea",
+    "icd11": "ED90.0 Rosacea",
+    "medicalDescription": "Chronic facial erythema and sometimes papules or pustules. Managed with topical metronidazole, azelaic acid, and oral antibiotics.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is rosacea?", "answer": "Rosacea causes redness, visible blood vessels, and sometimes bumps or pimples on the face. While it's not contagious, it can be persistent and frustrating." },
+        { "question": "What does rosacea look like?", "answer": "Common signs include flushed and reddened cheeks and central face, tiny visible blood vessels (telangiectasia), small red bumps (papules), pus-filled pimples (pustules), enlarged bumps on the nose (rhinophyma), and eye irritation (ocular rosacea)." },
+        { "question": "Why does rosacea happen?", "answer": "The exact cause is unknown, but contributing factors include overactive blood vessels in the face, inflammation triggered by sun exposure, certain foods, and mites, and possibly imbalances in gut bacteria." },
+        { "question": "Who gets rosacea?", "answer": "Rosacea is more common in people with fair skin and light hair/eyes, adults between 40 and 50 years old, and those with a family history of the condition." },
+        { "question": "How is rosacea treated?", "answer": "Various treatments like topical medications, antibiotics, and laser therapy can improve symptoms and control flare-ups. Identifying and avoiding triggers is key — common triggers include spicy foods, alcohol, hot drinks, sunlight, and certain skincare products. Gentle skincare is essential." }
+      ],
+      "da": [
+        { "question": "Hvad er rosacea?", "answer": "Rosacea forårsager rødme, synlige blodkar og nogle gange bumser eller hudorme i ansigtet. Selvom det ikke er smitsomt, kan det være vedvarende og frustrerende." },
+        { "question": "Hvordan ser rosacea ud?", "answer": "Almindelige tegn inkluderer rødme i kinder og centralt i ansigtet, små synlige blodkar (telangiectasia), små røde knopper (papler), bumser med pus (pustler), fortykkelse af næsen (rhinophyma) og øjenirritation (okulær rosacea)." },
+        { "question": "Hvorfor opstår rosacea?", "answer": "Den præcise årsag er ukendt, men medvirkende faktorer inkluderer overaktive blodkar i ansigtet, inflammation udløst af sollys, visse fødevarer og mider, og muligvis ubalance i tarmbakterier." },
+        { "question": "Hvem får rosacea?", "answer": "Rosacea er mere almindelig hos mennesker med lys hud og lyst hår/øjne, voksne mellem 40 og 50 år, og dem med en familiehistorie af tilstanden." },
+        { "question": "Hvordan behandles rosacea?", "answer": "Forskellige behandlinger som topiske medicin, antibiotika og laserterapi kan forbedre symptomerne og kontrollere udbrud. Identifikation og undgåelse af udløsere er vigtig — almindelige udløsere inkluderer krydrede fødevarer, alkohol, varme drikke, sollys og visse hudplejeprodukter." }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "slug": "urticaria-hives",
+    "nameEN": "Urticaria (Hives)",
+    "nameDA": "Nældefeber (Urticaria)",
+    "icd11": "EA90 Urticaria",
+    "medicalDescription": "Transient, itchy wheals, often allergic or idiopathic in nature. Antihistamines are the primary treatment.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is urticaria (hives)?", "answer": "Urticaria is a common skin condition causing raised, itchy red welts that appear suddenly and can disappear just as quickly. It's not contagious, so you can't spread it to others." },
+        { "question": "What does urticaria look like?", "answer": "Hives typically show up as raised, red, itchy welts that can vary in size and shape and appear anywhere on the body. They may have pale centers, and multiple hives can merge into larger raised areas (whealing)." },
+        { "question": "Why does urticaria happen?", "answer": "Hives occur when certain substances trigger the release of histamine, causing blood vessels to dilate and leak fluid. Triggers can include allergens (foods, medications, insect stings, pollen), physical factors (pressure, heat, cold, sunlight, exercise), and internal factors (infections, stress, underlying medical conditions)." },
+        { "question": "Who gets urticaria?", "answer": "Anyone can develop hives, but it's more common in adults." },
+        { "question": "How is urticaria treated?", "answer": "Identifying the trigger is key to preventing future outbreaks. Antihistamines and other medications can relieve itch and prevent recurrence. Hives usually resolve within 24 hours — if they last longer or are severe, seek medical attention." }
+      ],
+      "da": [
+        { "question": "Hvad er nældefeber?", "answer": "Nældefeber er en almindelig hudlidelse, der forårsager hævede, kløende røde knopper, der pludselig opstår og lige så hurtigt kan forsvinde. Det er ikke smitsomt." },
+        { "question": "Hvordan ser nældefeber ud?", "answer": "Nældefeber viser sig typisk som hævede, røde, kløende knopper der kan variere i størrelse og form og optræde overalt på kroppen. De kan have blege centre, og flere knopper kan smelte sammen til større, hævede områder." },
+        { "question": "Hvorfor opstår nældefeber?", "answer": "Nældefeber opstår, når visse stoffer udløser frigivelsen af histamin. Udløsere kan være allergener (fødevarer, medicin, insektbid, pollen), fysiske faktorer (tryk, varme, kulde, sollys, motion) og interne faktorer (infektioner, stress)." },
+        { "question": "Hvem får nældefeber?", "answer": "Alle kan udvikle nældefeber, men det er mere almindeligt hos voksne." },
+        { "question": "Hvordan behandles nældefeber?", "answer": "Identifikation af udløseren er afgørende for at forebygge fremtidige udbrud. Antihistaminer og andre medicin kan lindre kløe. Nældefeber forsvinder normalt inden for 24 timer — hvis det varer længere eller er alvorligt, bør du søge lægehjælp." }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "slug": "herpes-simplex-virus",
+    "nameEN": "Herpes Simplex Virus (HSV)",
+    "nameDA": "Herpes Simplex Virus (HSV)",
+    "icd11": "1F00 Herpes simplex infections",
+    "medicalDescription": "Presents as painful vesicles on oral or genital mucosa. Antiviral medications like acyclovir are used for treatment.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is herpes simplex virus (HSV)?", "answer": "HSV is a common yet lifelong viral infection causing outbreaks of small, painful blisters on the skin and mucous membranes. HSV-1 typically causes oral herpes (cold sores around the mouth), while HSV-2 primarily causes genital herpes." },
+        { "question": "What does an HSV outbreak look like?", "answer": "An HSV outbreak usually starts with tingling or itching in the affected area. Then, fluid-filled blisters appear, eventually breaking open and forming crusts. These symptoms typically clear within a few weeks, but the virus remains dormant in the body." },
+        { "question": "How does HSV spread?", "answer": "HSV spreads through direct contact with infected skin or bodily fluids. While there's no cure, antiviral medications can shorten and lessen the severity of outbreaks." },
+        { "question": "How should I manage HSV?", "answer": "HSV is manageable with proper care. Talk to your doctor about treatment options and preventing transmission. Open communication with sexual partners about your diagnosis is important. Support groups are available for people living with HSV." }
+      ],
+      "da": [
+        { "question": "Hvad er herpes simplex virus (HSV)?", "answer": "HSV er en almindelig, men livslang viral infektion, der forårsager udbrud af små, smertefulde blærer på huden og slimhinderne. HSV-1 forårsager typisk oral herpes (forkølelsessår), mens HSV-2 primært forårsager genital herpes." },
+        { "question": "Hvordan ser et HSV-udbrud ud?", "answer": "Et HSV-udbrud begynder normalt med prikken eller kløe i det berørte område. Derefter vises væskefyldte blærer, der til sidst brister og danner skorper. Disse symptomer forsvinder typisk inden for et par uger, men virus forbliver inaktiv i kroppen." },
+        { "question": "Hvordan spreder HSV sig?", "answer": "HSV spreder sig gennem direkte kontakt med inficeret hud eller kropsvæsker. Mens der ikke er nogen kur, kan antivirale lægemidler forkorte og mindske alvoren af udbrud." },
+        { "question": "Hvordan håndterer man HSV?", "answer": "HSV er håndterbart med korrekt pleje. Tal med din læge om behandlingsmuligheder og forebyggelse af transmission. Åben kommunikation med seksuelle partnere om din diagnose er vigtig." }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "slug": "herpes-zoster-shingles",
+    "nameEN": "Herpes Zoster (Shingles)",
+    "nameDA": "Helvedesild (Herpes Zoster)",
+    "icd11": "1E91 Zoster",
+    "medicalDescription": "Painful rash with a dermatomal distribution, caused by varicella-zoster virus reactivation. Treated with antivirals and pain management.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is shingles (herpes zoster)?", "answer": "Shingles is a viral infection caused by the varicella-zoster virus — the same virus that causes chickenpox. After recovery from chickenpox, the virus lies dormant in your nervous system and can reactivate years later, traveling along nerves to your skin." },
+        { "question": "What does shingles look like?", "answer": "Shingles typically presents as a painful, burning rash on one side of your body, often in a band or cluster around your torso. Small, fluid-filled blisters develop on the rash within a few days, eventually crusting over. Other symptoms can include fever, fatigue, and sensitivity to touch." },
+        { "question": "Why does shingles happen?", "answer": "The reasons for virus reactivation aren't fully understood, but contributing factors include age (more common after 50), weakened immune system (autoimmune diseases, HIV, certain medications), and severe stress." },
+        { "question": "Who gets shingles?", "answer": "Anyone who has had chickenpox can develop shingles. Risk increases significantly with age, and people with weakened immune systems are more susceptible." },
+        { "question": "How is shingles treated and prevented?", "answer": "Seek medical attention promptly — early treatment with antiviral medications can shorten the duration and severity. Vaccination is recommended for all adults over 50. Post-herpetic neuralgia (PHN), a chronic pain condition, can develop after shingles — discuss persistent pain with your doctor." }
+      ],
+      "da": [
+        { "question": "Hvad er helvedesild?", "answer": "Helvedesild er en viral infektion forårsaget af varicella-zoster-virus — den samme virus, der forårsager skoldkopper. Efter at have haft skoldkopper ligger virus inaktivt i nervesystemet og kan reaktiveres år senere." },
+        { "question": "Hvordan ser helvedesild ud?", "answer": "Helvedesild præsenterer typisk som et smertefuldt, brændende udslæt på den ene side af kroppen, ofte i et bånd rundt om torso. Væskefyldte blærer udvikler sig og danner skorper. Andre symptomer inkluderer feber, træthed og følsomhed over for berøring." },
+        { "question": "Hvorfor opstår helvedesild?", "answer": "Årsagerne til virusets reaktivering er ikke fuldt forstået, men bidragende faktorer inkluderer alder (mere almindelig efter 50), nedsat immunsystem og alvorlig stress." },
+        { "question": "Hvem får helvedesild?", "answer": "Enhver, der har haft skoldkopper, kan udvikle helvedesild. Risikoen stiger betydeligt med alderen, og mennesker med nedsat immunsystem er mere modtagelige." },
+        { "question": "Hvordan behandles og forebygges helvedesild?", "answer": "Søg lægehjælp hurtigt — tidlig behandling med antivirale medicin kan forkorte varigheden. Vaccination anbefales til alle voksne over 50. Postherpetisk neuralgi (PHN), en kronisk smertetilstand, kan udvikle sig efter helvedesild." }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "slug": "tinea-infections-ringworm",
+    "nameEN": "Tinea Infections (Ringworm)",
+    "nameDA": "Tinea-infektioner (Ringorm)",
+    "icd11": "1F28 Dermatophytosis",
+    "medicalDescription": "Fungal infections presenting as annular, scaly plaques. Treated with topical or oral antifungals.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What are tinea infections (ringworm)?", "answer": "Tinea infections are caused by fungi that grow on the skin, hair, and nails. They're not contagious from humans to other humans, but can spread through contact with infected animals, objects, or soil. Types include ringworm of the body (tinea corporis), jock itch (tinea cruris), athlete's foot (tinea pedis), scalp ringworm (tinea capitis), and nail infection (tinea unguium)." },
+        { "question": "What do tinea infections look like?", "answer": "Circular, red, itchy patches with raised borders are common. Scaling or flaking skin may occur, blisters may develop in some cases, hair loss with scalp ringworm, and thickened, discolored, crumbly nails are signs of nail infection." },
+        { "question": "Why do tinea infections happen?", "answer": "Tinea infections thrive in warm, moist environments. Factors like sweating, tight clothing, or minor skin injuries can increase your risk. Sharing personal items like towels or shoes can also spread the fungus." },
+        { "question": "Who gets tinea infections?", "answer": "Anyone can get a tinea infection, but children are more prone to scalp ringworm, people who sweat a lot (athletes), those with weakened immune systems, and people living in close quarters are at higher risk." },
+        { "question": "How are tinea infections treated?", "answer": "Topical antifungal creams, ointments, or oral medications are usually effective. Early diagnosis and treatment prevent spread and complications. Maintain good hygiene — wash regularly, dry thoroughly, and avoid sharing personal items." }
+      ],
+      "da": [
+        { "question": "Hvad er tinea-infektioner (ringorm)?", "answer": "Tinea-infektioner skyldes svampe, der vokser på huden, håret og neglene. Typer inkluderer ringorm på kroppen (tinea corporis), lyskeeksem (tinea cruris), atletfod (tinea pedis), ringorm på hovedbunden (tinea capitis) og negleinfektion (tinea unguium)." },
+        { "question": "Hvordan ser tinea-infektioner ud?", "answer": "Cirkulære, røde, kløende pletter med hævede kanter er almindelige. Afskalning af huden kan forekomme, blærer kan udvikle sig, hårtab ved ringorm på hovedbunden, og fortykkede, misfarvede, smuldrende negle er tegn på negleinfektion." },
+        { "question": "Hvorfor opstår tinea-infektioner?", "answer": "Tinea-infektioner trives i varme, fugtige miljøer. Faktorer som svedtendens, stramme tøj eller hudskader kan øge risikoen. Deling af personlige genstande som håndklæder eller sko kan sprede svampen." },
+        { "question": "Hvem får tinea-infektioner?", "answer": "Alle kan få en tinea-infektion, men børn er mere tilbøjelige til ringorm på hovedbunden, atleter er mere udsatte, og personer med svækket immunsystem er i højere risiko." },
+        { "question": "Hvordan behandles tinea-infektioner?", "answer": "Topiske svampedræbende cremer, salver eller orale medicin er normalt effektive. Oprethold god hygiejne — vask regelmæssigt, tør grundigt og undgå at dele personlige genstande." }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "slug": "vitiligo",
+    "nameEN": "Vitiligo",
+    "nameDA": "Vitiligo",
+    "icd11": "ED63.0 Vitiligo",
+    "medicalDescription": "Autoimmune destruction of melanocytes leading to depigmented patches. Treatment includes phototherapy and topical steroids.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is vitiligo?", "answer": "Vitiligo is a non-contagious skin condition that causes loss of pigment in certain areas, leading to white patches on the skin. It's not caused by anything you did and is not a threat to your overall health." },
+        { "question": "What does vitiligo look like?", "answer": "Vitiligo manifests as smooth, white patches on different areas of the skin, varying in size and shape. They can appear on any part of the body, including the face, hands, arms, legs, and genitals. In some cases, hair in the affected area can also lose its color." },
+        { "question": "Why does vitiligo happen?", "answer": "The exact cause is unknown, but it's believed to be an autoimmune disorder where the immune system mistakenly attacks pigment-producing cells (melanocytes) in the skin." },
+        { "question": "Who gets vitiligo?", "answer": "Vitiligo can affect anyone at any age, regardless of race or ethnicity. It's more common in people with a family history of vitiligo, other autoimmune conditions (like thyroid disease or alopecia areata), or certain stressful life events." },
+        { "question": "How is vitiligo managed?", "answer": "There's no known cure, but various treatment options can help control the spread of white patches and restore some pigment. A dermatologist can recommend the most suitable treatment plan. Support groups dedicated to vitiligo can also be helpful." }
+      ],
+      "da": [
+        { "question": "Hvad er vitiligo?", "answer": "Vitiligo er en ikke-smitsom hudlidelse, der forårsager tab af pigment i visse områder, hvilket resulterer i hvide pletter på huden. Det skyldes ikke noget, du har gjort, og udgør ikke en trussel mod din generelle sundhed." },
+        { "question": "Hvordan ser vitiligo ud?", "answer": "Vitiligo manifesterer sig som glatte, hvide pletter på forskellige hudområder, der varierer i størrelse og form. De kan optræde overalt på kroppen. I nogle tilfælde kan håret i berørte områder også miste sin farve." },
+        { "question": "Hvorfor opstår vitiligo?", "answer": "Den nøjagtige årsag er ukendt, men det antages at være en autoimmun lidelse, hvor immunsystemet fejlagtigt angriber pigmentproducerende celler (melanocytter) i huden." },
+        { "question": "Hvem får vitiligo?", "answer": "Vitiligo kan påvirke enhver i enhver alder. Det er mere almindeligt hos personer med familiehistorie af vitiligo, andre autoimmune tilstande (som skjoldbruskkirtelsygdom eller alopecia areata)." },
+        { "question": "Hvordan håndteres vitiligo?", "answer": "Der er ingen kendt kur, men forskellige behandlingsmuligheder kan hjælpe med at kontrollere spredningen af hvide pletter og genoprette noget pigment. En hudlæge kan anbefale den mest passende behandlingsplan." }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "slug": "seborrheic-dermatitis",
+    "nameEN": "Seborrheic Dermatitis",
+    "nameDA": "Seboroisk Dermatitis",
+    "icd11": "EA81 Seborrhoeic dermatitis and related conditions",
+    "medicalDescription": "Scaly, erythematous plaques particularly on sebum-rich areas. Managed with antifungal shampoos and topical steroids.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is seborrheic dermatitis?", "answer": "Seborrheic dermatitis causes red, flaky patches on the scalp, face, or other oily areas like the chest and back. It's not contagious and doesn't pose any serious health risks. It's thought to be linked to overproduction of oil, hormonal imbalances, or a specific type of yeast (Malassezia)." },
+        { "question": "What does seborrheic dermatitis look like?", "answer": "Common signs include scaly, red patches — often on the scalp (dandruff), eyebrows, sides of the nose, or behind the ears. Greasy or yellowish scales on the scalp are common, especially in babies (cradle cap). Mild itching or burning may occur in affected areas." },
+        { "question": "Why does seborrheic dermatitis happen?", "answer": "Contributing factors include increased oil production (hormonal changes, certain medications), Malassezia yeast overgrowth on oily skin, and genetic predisposition." },
+        { "question": "Who gets seborrheic dermatitis?", "answer": "It can affect anyone, but is more common in newborns and infants (cradle cap), adults between 30–50 years (more often men), and people with HIV/AIDS or weakened immune systems." },
+        { "question": "How is seborrheic dermatitis treated?", "answer": "It's manageable but not curable. Consistent treatment helps control symptoms. Options include medicated shampoos or creams (to reduce oil and control yeast), steroid creams or ointments (to calm inflammation), and lifestyle changes like regular gentle cleansing and managing stress." }
+      ],
+      "da": [
+        { "question": "Hvad er seboroisk dermatitis?", "answer": "Seboroisk dermatitis forårsager røde, skællende pletter på hovedbunden, ansigtet eller andre olieholdige områder som brystet og ryggen. Det er ikke smitsomt og antages at være forbundet med overproduktion af olie, hormonelle ubalancer eller Malassezia-gær." },
+        { "question": "Hvordan ser seboroisk dermatitis ud?", "answer": "Almindelige tegn inkluderer skællende, røde pletter — ofte på hovedbunden (skæl), øjenbrynene, siderne af næsen eller bag ørerne. Fedtede eller gullige skæl er almindelige, særligt hos spædbørn (vuggekant)." },
+        { "question": "Hvorfor opstår seboroisk dermatitis?", "answer": "Bidragende faktorer inkluderer øget olieproduktion (hormonelle ændringer, visse medicin), Malassezia-gær-overvækst på fedtet hud og genetisk disposition." },
+        { "question": "Hvem får seboroisk dermatitis?", "answer": "Det kan påvirke alle, men er mere almindeligt hos nyfødte og spædbørn (vuggekant), voksne mellem 30–50 år (oftest mænd), og personer med HIV/AIDS eller svækket immunsystem." },
+        { "question": "Hvordan behandles seboroisk dermatitis?", "answer": "Det er håndterbart men ikke helbredeligt. Konsistent behandling hjælper med at kontrollere symptomer — herunder medicinsk shampoo, steroid cremer og livsstilsændringer som regelmæssig blid rensning og stresshåndtering." }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "slug": "contact-dermatitis",
+    "nameEN": "Contact Dermatitis",
+    "nameDA": "Kontaktdermatitis",
+    "icd11": "EK02 Contact dermatitis",
+    "medicalDescription": "Irritant or allergic reaction causing erythema and vesicles. Treated with avoidance of the allergen and topical steroids.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is contact dermatitis?", "answer": "Contact dermatitis occurs when your skin reacts to something you touch. There are two main types: irritant contact dermatitis (caused by harsh substances that irritate the skin directly) and allergic contact dermatitis (an allergic reaction to a specific substance like nickel, fragrances, or cosmetics)." },
+        { "question": "What does contact dermatitis look like?", "answer": "Common signs include redness and inflammation (red, swollen, warm skin), itching and burning sensations, blisters or bumps in some cases, and dryness and scaling with chronic exposure." },
+        { "question": "Why does contact dermatitis happen?", "answer": "Irritant contact dermatitis happens when a substance directly damages the skin's protective barrier. Allergic contact dermatitis involves the immune system overreacting to a specific allergen after previous sensitization." },
+        { "question": "Who gets contact dermatitis?", "answer": "Anyone can develop it, but some people are more susceptible — those who frequently wash hands or work with harsh chemicals, people with underlying eczema, and those in high-exposure occupations (hairstylists, mechanics, etc.)." },
+        { "question": "How is contact dermatitis treated?", "answer": "Identifying and avoiding the trigger is crucial. Treatment may include emollients and moisturizers to soothe and restore skin barrier, corticosteroid creams to reduce inflammation, and in severe cases, oral medications. A dermatologist can help identify the specific trigger." }
+      ],
+      "da": [
+        { "question": "Hvad er kontaktdermatitis?", "answer": "Kontaktdermatitis opstår, når din hud reagerer på noget, du rører ved. De to typer er irritativ kontaktdermatitis (forårsaget af hårde stoffer) og allergisk kontaktdermatitis (allergisk reaktion på fx nikkel, parfumer eller kosmetik)." },
+        { "question": "Hvordan ser kontaktdermatitis ud?", "answer": "Almindelige tegn inkluderer rødme og betændelse, kløe og brændende fornemmelser, blærer eller knopper i nogle tilfælde, og tørhed og skæl ved kronisk eksponering." },
+        { "question": "Hvorfor opstår kontaktdermatitis?", "answer": "Irritativ kontaktdermatitis opstår, når en substans direkte skader hudens beskyttende barriere. Allergisk kontaktdermatitis involverer immunsystemet, der overreagerer på en specifik allergen." },
+        { "question": "Hvem får kontaktdermatitis?", "answer": "Alle kan udvikle det, men personer der hyppigt vasker hænder, arbejder med hårde kemikalier, har underliggende eksem, eller arbejder i udsatte erhverv er mere sårbare." },
+        { "question": "Hvordan behandles kontaktdermatitis?", "answer": "At identificere og undgå udløseren er afgørende. Behandling kan inkludere fugtighedscremer, kortikosteroidcremer til at reducere inflammation og i alvorlige tilfælde oral medicin." }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "slug": "scabies",
+    "nameEN": "Scabies",
+    "nameDA": "Skab",
+    "icd11": "1G04 Scabies",
+    "medicalDescription": "Infestation by the Sarcoptes scabiei mite causing intense itching and burrows. Treated with topical scabicides.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is scabies?", "answer": "Scabies is caused by the Sarcoptes scabiei mite, which burrows into the skin, causing intense itching and irritation. Unlike many skin conditions, scabies is very contagious and can spread easily through close skin-to-skin contact or shared personal items like bedding or clothing." },
+        { "question": "What does scabies look like?", "answer": "Common signs include intense itching (especially at night), tiny red pimple-like bumps where mites have burrowed (often on wrists, fingers, elbows, armpits, and genitals), and thin burrow lines — faint, light-colored lines indicating where mites have tunneled." },
+        { "question": "How does scabies spread?", "answer": "Scabies spreads easily through close contact with an infected person, often within families or crowded environments. Sharing contaminated towels, bedsheets, or clothing can also transmit the mites." },
+        { "question": "Who gets scabies?", "answer": "Anyone can get scabies, regardless of age, hygiene, or socioeconomic status. Those in close contact with infected individuals are at higher risk." },
+        { "question": "How is scabies treated?", "answer": "Scabies is treatable and curable with topical creams or oral medications prescribed by a doctor. Treat everyone in close contact simultaneously, even those without symptoms. Wash and disinfect clothing and bedding with hot water. Avoid close contact until treatment is complete." }
+      ],
+      "da": [
+        { "question": "Hvad er skab?", "answer": "Skab er forårsaget af Sarcoptes scabiei-miden, der graver sig ind i huden og forårsager intens kløe og irritation. I modsætning til mange hudlidelser er skab meget smitsomt og spreder sig let gennem tæt hud-til-hud kontakt eller delte personlige genstande." },
+        { "question": "Hvordan ser skab ud?", "answer": "Almindelige tegn inkluderer intens kløe (særligt om natten), små røde, bumplignende knopper (ofte på håndled, fingre, albuer, armhuler og kønsorganer), og tynde graverlinjer — svage, lyse linjer der angiver, hvor miderne har gravet sig ind." },
+        { "question": "Hvordan spreder skab sig?", "answer": "Skab spreder sig let gennem tæt kontakt med en smittet person, ofte inden for familier eller overfyldte miljøer. Deling af forurenede genstande som håndklæder eller sengetøj kan også overføre miderne." },
+        { "question": "Hvem får skab?", "answer": "Alle kan få skab, uanset alder, hygiejne eller socioøkonomisk status. Dem med tæt kontakt til smittede individer er i større risiko." },
+        { "question": "Hvordan behandles skab?", "answer": "Skab er behandeligt og helbredeligt med topiske cremer eller orale medicin. Behandl alle i tæt kontakt samtidigt. Vask og desinficér tøj og sengetøj ved høj temperatur. Undgå tæt kontakt, indtil behandlingen er afsluttet." }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "slug": "lichen-planus",
+    "nameEN": "Lichen Planus",
+    "nameDA": "Lichen Planus",
+    "icd11": "EA91 Lichen planus",
+    "medicalDescription": "Inflammatory condition presenting with pruritic, purple, polygonal papules. Managed with topical steroids and oral retinoids.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is lichen planus?", "answer": "Lichen planus causes purple, itchy patches to appear on your skin, sometimes accompanied by white lines or blisters. The exact cause remains unknown, but it's thought to be an autoimmune response where the immune system mistakenly attacks healthy skin cells. It is not contagious." },
+        { "question": "What does lichen planus look like?", "answer": "Common signs include purple, flat-topped patches (often with fine white lines on the surface), itching and burning (especially in sensitive areas), blisters in some cases, hair thinning or loss on the scalp, and nail changes (discoloration, thinning, ridges)." },
+        { "question": "Why does lichen planus happen?", "answer": "The exact cause is unknown. Some factors that may increase risk include stress, certain medications, viral infections, and underlying medical conditions." },
+        { "question": "Who gets lichen planus?", "answer": "Lichen planus can affect anyone at any age, but it's more common in women between 40–60 years old." },
+        { "question": "How is lichen planus treated?", "answer": "It's manageable but not curable. Treatments include topical corticosteroids (creams or ointments to reduce inflammation), light therapy (UV treatment for some patients), and oral medications in severe cases. Stress management and healthy habits can help reduce flares." }
+      ],
+      "da": [
+        { "question": "Hvad er lichen planus?", "answer": "Lichen planus forårsager lilla, kløende pletter på huden, som nogle gange ledsages af hvide linjer eller blærer. Den nøjagtige årsag er ukendt, men det menes at være en autoimmun reaktion. Det er ikke smitsomt." },
+        { "question": "Hvordan ser lichen planus ud?", "answer": "Almindelige tegn inkluderer lilla, fladtoppede pletter (ofte med fine hvide linjer), kløe og brændende (særligt i følsomme områder), blærer i nogle tilfælde, hårtab på hovedbunden og negleforandringer." },
+        { "question": "Hvorfor opstår lichen planus?", "answer": "Den nøjagtige årsag er ukendt. Faktorer der kan øge risikoen inkluderer stress, visse medicin, virale infektioner og underliggende medicinske tilstande." },
+        { "question": "Hvem får lichen planus?", "answer": "Lichen planus kan påvirke enhver i enhver alder, men er mere almindeligt hos kvinder mellem 40–60 år." },
+        { "question": "Hvordan behandles lichen planus?", "answer": "Det er behandeligt men ikke helbredeligt. Behandlinger inkluderer topiske kortikosteroider, lysbehandling og i alvorlige tilfælde oral medicin. Stresshåndtering og sunde vaner kan hjælpe med at reducere udbrud." }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "slug": "molluscum-contagiosum",
+    "nameEN": "Molluscum Contagiosum",
+    "nameDA": "Molluscum Contagiosum",
+    "icd11": "1E76 Molluscum contagiosum",
+    "medicalDescription": "Viral infection causing dome-shaped, umbilicated papules. Treatment includes cryotherapy and topical agents.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is molluscum contagiosum?", "answer": "Molluscum contagiosum is a highly contagious skin infection caused by a poxvirus. It mainly affects children, but anyone can get it. The virus spreads through direct skin-to-skin contact or by touching contaminated objects." },
+        { "question": "What does molluscum contagiosum look like?", "answer": "Symptoms typically involve small, pearly white bumps (usually 2–5mm in diameter) with a central dimple, appearing in clusters. They are smooth and painless, most commonly affecting the face, arms, legs, torso, or armpits." },
+        { "question": "How does molluscum contagiosum spread?", "answer": "The virus spreads through direct contact with infected skin or contaminated objects during activities like play, sports, cuddling, or sexual activity. Scratching or picking existing bumps can also spread the virus to other skin areas." },
+        { "question": "Who gets molluscum contagiosum?", "answer": "Most common in children between 1–10 years old, but it can affect people of any age. Individuals with weakened immune systems are more susceptible." },
+        { "question": "How is molluscum contagiosum treated?", "answer": "It may resolve on its own, but treatment options include cryotherapy (freezing with liquid nitrogen), topical medications, and extraction with a sterile tool. Avoid scratching or picking the bumps, and practice good hygiene especially after contact with infected individuals or objects." }
+      ],
+      "da": [
+        { "question": "Hvad er molluscum contagiosum?", "answer": "Molluscum contagiosum er en yderst smitsom hudinfektion forårsaget af et poxvirus. Det påvirker primært børn, men alle kan få det. Virussen spredes gennem direkte hud-til-hud kontakt eller ved at røre forurenede genstande." },
+        { "question": "Hvordan ser molluscum contagiosum ud?", "answer": "Symptomer involverer typisk små, perlemors hvide knopper (normalt 2–5 mm i diameter) med en central fordybning, der vises i klynger. De er glatte og smertefri og påvirker oftest ansigt, arme, ben, torso eller armhuler." },
+        { "question": "Hvordan spreder molluscum contagiosum sig?", "answer": "Virussen spredes gennem direkte kontakt med inficeret hud eller forurenede genstande under aktiviteter som leg, sport, kælen eller seksuel aktivitet. Kløe eller skrabning af eksisterende knopper kan sprede virussen til andre hudområder." },
+        { "question": "Hvem får molluscum contagiosum?", "answer": "Mest almindeligt hos børn mellem 1–10 år, men det kan påvirke alle aldre. Individer med svækket immunsystem er mere modtagelige." },
+        { "question": "Hvordan behandles molluscum contagiosum?", "answer": "Det kan forsvinde af sig selv. Behandlingsmuligheder inkluderer kryoterapi, topiske medicin og udtrækning med et sterilt værktøj. Undgå at klø eller skrabe knopperne og praktiser god hygiejne." }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "slug": "impetigo",
+    "nameEN": "Impetigo",
+    "nameDA": "Impetigo",
+    "icd11": "1B72 Impetigo",
+    "medicalDescription": "Bacterial infection presenting with honey-colored crusted lesions. Treated with topical or oral antibiotics.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is impetigo?", "answer": "Impetigo is a bacterial infection that affects the outermost layers of the skin. It's most common in young children but can occur at any age. There are two main types: non-bullous impetigo (small, red, honey-crusted sores) and bullous impetigo (larger, fluid-filled blisters that leave a thin yellowish crust)." },
+        { "question": "What does impetigo look like?", "answer": "Common signs include red, irritated patches on the skin (often around the mouth or nose), small fluid-filled blisters that burst and leave a honey-colored crust, itching and discomfort, and swollen lymph nodes near the infection." },
+        { "question": "Why does impetigo happen?", "answer": "Impetigo usually occurs when bacteria enter the skin through a break, such as a cut, insect bite, or scratch. Sharing personal items like towels or toys can also spread the bacteria." },
+        { "question": "Who gets impetigo?", "answer": "Anyone can get impetigo, but it's most common in children between 2 and 6 years old, people with weakened immune systems, and individuals living in close quarters." },
+        { "question": "How is impetigo treated?", "answer": "Impetigo is treatable with antibiotics, usually as a cream or ointment; in some cases oral antibiotics are needed. Early diagnosis prevents spread. Wash hands frequently, avoid sharing personal items, and keep the affected area clean and covered." }
+      ],
+      "da": [
+        { "question": "Hvad er impetigo?", "answer": "Impetigo er en bakteriel infektion, der påvirker hudens yderste lag. Det er mest almindeligt hos små børn. De to typer er non-bulløs impetigo (røde, honningdækkede sår) og bulløs impetigo (større væskefyldte blærer der efterlader en tynd gul skorpe)." },
+        { "question": "Hvordan ser impetigo ud?", "answer": "Almindelige tegn inkluderer røde, irriterede pletter (ofte omkring munden eller næsen), væskefyldte blærer der brister og efterlader en honningfarvet skorpe, kløe og ubehag, og hævede lymfeknuder." },
+        { "question": "Hvorfor opstår impetigo?", "answer": "Impetigo opstår normalt, når bakterier kommer ind i huden gennem et sår, insektbid eller ridse. At dele personlige genstande kan også sprede bakterierne." },
+        { "question": "Hvem får impetigo?", "answer": "Alle kan få impetigo, men det er mest almindeligt hos børn mellem 2 og 6 år, personer med svækket immunsystem, og folk der bor tæt sammen." },
+        { "question": "Hvordan behandles impetigo?", "answer": "Impetigo behandles med antibiotika, normalt som creme eller salve. Vask hænder ofte, undgå at dele personlige genstande, og hold det berørte område rent og dækket." }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "slug": "cellulitis",
+    "nameEN": "Cellulitis",
+    "nameDA": "Cellulitis",
+    "icd11": "1B70 Bacterial cellulitis, erysipelas or lymphangitis",
+    "medicalDescription": "Bacterial infection of the dermis and subcutaneous tissue, presenting with erythema and swelling. Treated with oral or intravenous antibiotics.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is cellulitis?", "answer": "Cellulitis is caused by bacteria entering through a break in your skin — like a cut, insect bite, or small crack. This triggers inflammation and infection, causing redness, swelling, and discomfort. While not contagious, it's important to address it promptly to prevent complications." },
+        { "question": "What does cellulitis look like?", "answer": "Common signs include redness and swelling (often starting small and expanding over time), pain or tenderness to the touch, shiny and tight skin in the affected area, and sometimes fever, fatigue, and chills." },
+        { "question": "Why does cellulitis happen?", "answer": "Cellulitis usually occurs when bacteria (commonly streptococcus or staphylococcus) enter through skin injuries. Risk factors include chronic skin conditions (eczema, dermatitis), lymphedema, and uncontrolled diabetes." },
+        { "question": "Who gets cellulitis?", "answer": "Anyone can get cellulitis, but children (due to minor skin injuries), adults with chronic skin conditions or diabetes, and people with weakened immune systems are more prone." },
+        { "question": "How is cellulitis treated?", "answer": "Cellulitis is treatable with antibiotics, typically taken orally. Early diagnosis prevents complications like deeper infections or bloodstream spread. Keep the area clean and covered, elevate it if possible, and monitor your temperature for worsening symptoms." }
+      ],
+      "da": [
+        { "question": "Hvad er cellulitis?", "answer": "Cellulitis opstår, når bakterier kommer ind gennem et brud i huden — som et snit, insektbid eller lille revne. Dette udløser betændelse og infektion. Selvom det ikke er smitsomt, er det vigtigt at håndtere det hurtigt." },
+        { "question": "Hvordan ser cellulitis ud?", "answer": "Almindelige tegn inkluderer rødme og hævelse (der starter småt og udvides over tid), smerter eller ømhed ved berøring, skinnende og stram hud, og nogle gange feber, træthed og kulderystelser." },
+        { "question": "Hvorfor opstår cellulitis?", "answer": "Cellulitis opstår normalt, når bakterier (typisk streptokokker eller stafylokokker) trænger ind gennem hudskader. Risikofaktorer inkluderer kroniske hudtilstande, lymfødem og ukontrolleret diabetes." },
+        { "question": "Hvem får cellulitis?", "answer": "Alle kan få cellulitis, men børn, voksne med kroniske hudtilstande eller diabetes, og mennesker med svækket immunsystem er mere sårbare." },
+        { "question": "Hvordan behandles cellulitis?", "answer": "Cellulitis behandles med antibiotika, typisk oralt. Hold det berørte område rent og dækket, hæv det om muligt for at reducere hævelse, og overvåg temperaturen for forværrede symptomer." }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "slug": "melanoma",
+    "nameEN": "Melanoma",
+    "nameDA": "Modermærkekræft (Melanom)",
+    "icd11": "2C30 Melanoma of skin",
+    "medicalDescription": "Malignant tumor of melanocytes. Early detection and surgical excision are key.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is melanoma?", "answer": "Melanoma arises from melanocytes, cells responsible for your skin's color. Unlike other skin cancers, it can spread to other parts of the body if left untreated. However, with early detection and proper treatment, the outlook is often very positive." },
+        { "question": "What does melanoma look like?", "answer": "Look for changes in existing moles or new spots using the ABCDE guide: Asymmetry (one half looks different), Border irregularity (uneven or ragged edges), Color variation (different shades of brown, black, red, pink, white, or blue), Diameter larger than 6mm, and Evolving (changes in size, shape, or color over time)." },
+        { "question": "Why does melanoma happen?", "answer": "UV radiation from the sun is the main cause. Other factors include genetics (family history of melanoma), light skin color, having many moles, and history of severe sunburns (especially in childhood)." },
+        { "question": "Who gets melanoma?", "answer": "Melanoma can affect anyone, but higher-risk groups include people with fair skin, light hair, and light eyes; those with a family history; people with many or atypical moles; and those who spend a lot of time in the sun without protection." },
+        { "question": "How is melanoma detected and treated?", "answer": "Regular skin self-exams (head-to-toe once a month) help identify changes early. Wear sunscreen with SPF 30+ daily, wear protective clothing, and seek shade during peak sun hours. Consult your doctor for any suspicious skin changes — early diagnosis is vital for successful treatment." }
+      ],
+      "da": [
+        { "question": "Hvad er melanom (modermærkekræft)?", "answer": "Melanom opstår fra melanocytter, celler ansvarlige for hudfarven. I modsætning til andre former for hudkræft kan det sprede sig til andre dele af kroppen, hvis det ikke behandles. Med tidlig påvisning og korrekt behandling er udsigten dog ofte meget positiv." },
+        { "question": "Hvordan ser melanom ud?", "answer": "Brug ABCDE-guiden: Asymmetri (den ene halvdel ser anderledes ud), uregelmæssig kant, farvevariation (nuancer af brun, sort, rød, lyserød, hvid eller blå), diameter større end 6 mm, og udvikling (ændringer i størrelse, form eller farve over tid)." },
+        { "question": "Hvorfor opstår melanom?", "answer": "UV-stråling fra solen er den primære årsag. Andre faktorer inkluderer genetik (familiehistorie), lys hudfarve, mange modermærker og alvorlige solskoldninger (særligt i barndommen)." },
+        { "question": "Hvem får melanom?", "answer": "Melanom kan påvirke alle, men højrisikogrupper inkluderer personer med lys hud, lyse hår og lyse øjne, dem med familiehistorie, mange atypiske modermærker, og dem der tilbringer meget tid i solen uden beskyttelse." },
+        { "question": "Hvordan opdages og behandles melanom?", "answer": "Regelmæssige hudselvundersøgelser (fra top til tå en gang om måneden) hjælper med at identificere ændringer tidligt. Brug solcreme med SPF 30+ dagligt og søg skygge. Konsulter din læge ved mistænkelige hudændringer — tidlig diagnose er afgørende." }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "slug": "basal-cell-carcinoma",
+    "nameEN": "Basal Cell Carcinoma (BCC)",
+    "nameDA": "Basalcellekarcinom (BCC)",
+    "icd11": "2C32 Basal cell carcinoma of skin",
+    "medicalDescription": "Most common form of skin cancer, presenting as pearly nodules. Treatment is primarily surgical.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is basal cell carcinoma (BCC)?", "answer": "BCC originates from the basal cells forming the lower layer of your skin. It's the most common form of skin cancer. It grows slowly and rarely spreads to other body parts, but if left untreated, it can grow deeper and damage surrounding tissue." },
+        { "question": "What does BCC look like?", "answer": "Common signs include a pearly or waxy bump (often with a smooth, translucent surface), a flat pink or red patch with slightly raised edges, a small brown or black scar-like area, or a broken blood vessel within the growth." },
+        { "question": "Why does BCC happen?", "answer": "The primary cause is UV radiation from the sun or tanning beds. Other risk factors include fair skin and light eyes, a history of sunburns especially in childhood, weakened immune system, and family history of skin cancer." },
+        { "question": "Who gets BCC?", "answer": "BCC can affect anyone, but it's more prone in people over 50, individuals with lighter skin, hair and eyes, and those who spend a lot of time outdoors without proper sun protection." },
+        { "question": "How is BCC treated?", "answer": "BCC is highly treatable, especially when detected early. Treatment options include surgical removal, Mohs surgery, radiation therapy, and topical medications. Regular skin self-exams and sun protection (SPF 30+ daily) are key preventive measures." }
+      ],
+      "da": [
+        { "question": "Hvad er basalcellekarcinom (BCC)?", "answer": "BCC stammer fra basale celler i hudens nedre lag. Det er den mest almindelige form for hudkræft. Det vokser langsomt og spreder sig sjældent, men kan vokse dybere og beskadige omkringliggende væv, hvis det ikke behandles." },
+        { "question": "Hvordan ser BCC ud?", "answer": "Almindelige tegn inkluderer en perleagtig eller voksagtig knude (med glat, gennemsigtig overflade), en flad lyserød eller rød plet med let forhøjede kanter, et lille brunt eller sort ar-lignende område, eller et brudt blodkar i væksten." },
+        { "question": "Hvorfor opstår BCC?", "answer": "Den primære årsag er UV-stråling fra solen eller solarier. Andre risikofaktorer inkluderer lys hudfarve og lyse øjne, solskoldningshistorie, nedsat immunforsvar og familiehistorie med hudkræft." },
+        { "question": "Hvem får BCC?", "answer": "BCC kan påvirke alle, men er mere almindeligt hos personer over 50, dem med lysere hud, hår og øjne, og dem der tilbringer meget tid udendørs uden solbeskyttelse." },
+        { "question": "Hvordan behandles BCC?", "answer": "BCC er meget behandleligt, særligt ved tidlig opdagelse. Behandlingsmuligheder inkluderer kirurgisk fjernelse, Mohs-kirurgi, strålebehandling og topiske medicin. Regelmæssige hudselvundersøgelser og solbeskyttelse (SPF 30+) er vigtige forebyggende foranstaltninger." }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "slug": "squamous-cell-carcinoma",
+    "nameEN": "Squamous Cell Carcinoma (SCC)",
+    "nameDA": "Pladecellekarcinom (SCC)",
+    "icd11": "2C32.0 Squamous cell carcinoma of skin",
+    "medicalDescription": "Skin cancer arising from squamous cells, often presenting as scaly, red patches. Surgical removal is the primary treatment.",
+    "status": "pending",
+    "faq": {
+      "en": [
+        { "question": "What is squamous cell carcinoma (SCC)?", "answer": "SCC develops from squamous cells, which make up the outermost layer of your skin. It usually grows slowly and rarely spreads to other body parts. However, if left untreated, it can deepen and damage surrounding tissue." },
+        { "question": "What does SCC look like?", "answer": "Common signs include a red, scaly patch (rough, thick, or crusted), a firm wart-like bump with a reddish color, an open sore that doesn't heal and may bleed or ooze, or a flat pink or red patch with a slightly raised edge." },
+        { "question": "Why does SCC happen?", "answer": "The primary cause is UV radiation from the sun or tanning beds. Other risk factors include fair skin and light eyes, history of severe sunburns, weakened immune system, and precancerous skin lesions (actinic keratoses)." },
+        { "question": "Who gets SCC?", "answer": "SCC can affect anyone, but is more prone in people over 50, those with lighter skin, hair and eyes, people who spend a lot of time outdoors without sun protection, and those with a history of sunburns or precancerous lesions." },
+        { "question": "How is SCC treated?", "answer": "SCC is highly treatable when detected early. Treatment options include surgical removal, Mohs surgery, radiation therapy, topical medications, and photodynamic therapy. Regular skin self-exams and daily SPF 30+ sunscreen are essential preventive measures." }
+      ],
+      "da": [
+        { "question": "Hvad er pladecellekarcinom (SCC)?", "answer": "SCC udvikler sig fra flade celler, der udgør hudens yderste lag. Det vokser normalt langsomt og spreder sig sjældent. Hvis det ikke behandles, kan det dog trænge dybere ned og beskadige omkringliggende væv." },
+        { "question": "Hvordan ser SCC ud?", "answer": "Almindelige tegn inkluderer en rød, skællende plet (ru, tyk eller skorpet), en fast vorte-lignende knude med rødlig farve, et åbent sår der ikke heler og kan bløde, eller en flad lyserød eller rød plet med let forhøjet kant." },
+        { "question": "Hvorfor opstår SCC?", "answer": "Den primære årsag er UV-stråling fra solen eller solarier. Andre risikofaktorer inkluderer lys hudfarve og lyse øjne, alvorlige solskoldninger, nedsat immunforsvar og forstadier til hudkræft (aktiniske keratoser)." },
+        { "question": "Hvem får SCC?", "answer": "SCC kan påvirke alle, men er mere almindeligt hos personer over 50, dem med lysere hud, hår og øjne, folk der tilbringer meget tid udendørs uden solbeskyttelse, og dem med solskoldningshistorie eller forstadier til hudkræft." },
+        { "question": "Hvordan behandles SCC?", "answer": "SCC er meget behandleligt ved tidlig opdagelse. Behandlingsmuligheder inkluderer kirurgisk fjernelse, Mohs-kirurgi, strålebehandling, topiske medicin og fotodynamisk terapi. Regelmæssige hudselvundersøgelser og daglig SPF 30+ solcreme er vigtige forebyggende foranstaltninger." }
+      ]
+    }
+  }
+]
