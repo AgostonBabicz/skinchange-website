@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect } from 'react';
 import { Language, getTranslation } from '@/lib/i18n';
 
 interface FooterProps {
@@ -9,6 +10,15 @@ interface FooterProps {
 
 export default function Footer({ lang }: FooterProps) {
   const t = getTranslation(lang);
+
+  useEffect(() => {
+    if (document.querySelector('script[src*="activehosted.com/f/embed.php?id=1"]')) return;
+    const script = document.createElement('script');
+    script.src = 'https://skinchangeai.activehosted.com/f/embed.php?id=1';
+    script.charset = 'utf-8';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   const footerLinks = {
     company: [
@@ -74,6 +84,11 @@ export default function Footer({ lang }: FooterProps) {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* ActiveCampaign Form Embed */}
+        <div className="mb-12">
+          <div className="_form_1"></div>
         </div>
 
         {/* Bottom bar */}
