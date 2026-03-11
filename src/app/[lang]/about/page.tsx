@@ -46,7 +46,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
             <div className="relative">
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
                 <Image
-                  src="/skinchange-website/Peter.jpeg"
+                  src="/Peter.jpeg"
                   alt="Peter Bjerring"
                   fill
                   className="object-cover"
@@ -93,7 +93,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
             <div className="relative order-1 lg:order-2">
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
                 <Image
-                  src="/skinchange-website/About_us_Brian.png"
+                  src="/About_us_Brian.png"
                   alt="Brian Vangsgaard"
                   fill
                   className="object-cover"

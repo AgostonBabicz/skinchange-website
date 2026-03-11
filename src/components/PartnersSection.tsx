@@ -11,10 +11,10 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
   const isDa = lang === 'da';
 
   const partners = [
-    { src: '/skinchange-website/Partner_1.png', alt: 'Teknologisk Institut', invert: true },
-    { src: '/skinchange-website/Partner_2.svg', alt: 'Privathospitalet Mølholm', invert: true },
-    { src: '/skinchange-website/Partner_3.jpeg', alt: 'GREENHOUSE C2IT', invert: false },
-    { src: '/skinchange-website/Partner_4.svg', alt: 'C2IT Greenhouse', invert: true },
+    { src: '/Partner_1.png', alt: 'Teknologisk Institut', invert: true },
+    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', invert: true },
+    { src: '/Partner_3.jpeg', alt: 'GREENHOUSE C2IT', invert: false },
+    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', invert: true },
   ];
 
   const disclaimer = isDa 

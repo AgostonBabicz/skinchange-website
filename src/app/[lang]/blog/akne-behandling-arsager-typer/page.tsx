@@ -27,7 +27,7 @@ export default function AkneArticle({ params: { lang } }: PageProps) {
     '@type': 'Article',
     headline: 'Akne: Årsager, Typer og Effektiv Behandling',
     description: 'Komplet guide til akne behandling. Lær om hormonelle udslet, bakterielle infektioner og behandlingsmuligheder.',
-    image: 'https://www.skinchange.dk/skinchange-website/blog/akne.jpg',
+    image: 'https://www.skinchange.dk/blog/akne.jpg',
     datePublished: '2025-03-03',
     dateModified: '2025-03-03',
     author: {

@@ -116,7 +116,7 @@ William Nielsen Prize`;
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative">
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
-              <Image src="/skinchange-website/Peter.jpeg" alt="Peter Bjerring" fill className="object-cover" />
+              <Image src="/Peter.jpeg" alt="Peter Bjerring" fill className="object-cover" />
             </div>
           </div>
           <div>
@@ -138,7 +138,7 @@ William Nielsen Prize`;
           </div>
           <div className="order-1 lg:order-2 relative">
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
-              <Image src="/skinchange-website/About_us_Brian.png" alt="Brian Vangsgaard" fill className="object-cover" />
+              <Image src="/About_us_Brian.png" alt="Brian Vangsgaard" fill className="object-cover" />
             </div>
           </div>
         </div>
