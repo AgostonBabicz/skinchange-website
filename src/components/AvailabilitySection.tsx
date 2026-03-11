@@ -17,7 +17,7 @@ export default function AvailabilitySection({ lang }: AvailabilitySectionProps) 
           {/* Badge */}
           <div className="relative w-full max-w-md aspect-[3/1]">
             <Image
-              src={lang === 'da' ? '/skinchange-website/Availability_badge_DA.svg' : '/skinchange-website/Availability_badge_EN.svg'}
+              src={lang === 'da' ? '/Availability_badge_DA.svg' : '/Availability_badge_EN.svg'}
               alt={t.availability.title}
               fill
               className="object-contain"
@@ -28,7 +28,7 @@ export default function AvailabilitySection({ lang }: AvailabilitySectionProps) 
           <div className="flex items-center gap-4">
             <div className="relative w-16 h-10">
               <Image
-                src="/skinchange-website/EU stars.svg"
+                src="/EU stars.svg"
                 alt="EU"
                 fill
                 className="object-contain"

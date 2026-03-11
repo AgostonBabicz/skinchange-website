@@ -48,7 +48,7 @@ export default function HomePage({ params: { lang } }: PageProps) {
       : 'Online dermatologist consultation with certified dermatologists',
     url: 'https://www.skinchange.dk',
     logo: 'https://www.skinchange.dk/SKIND_logo_dark.svg',
-    image: 'https://www.skinchange.dk/skinchange-website/Download_page_mockup.png',
+    image: 'https://www.skinchange.dk/Download_page_mockup.png',
     telephone: '+45-XXX-XXXX',
     email: 'info@skinchange.ai',
     address: {

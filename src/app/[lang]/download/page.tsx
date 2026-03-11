@@ -45,7 +45,7 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
                   className="relative h-20 w-52 hover:scale-105 transition-transform"
                 >
                   <Image
-                    src="/skinchange-website/App_store_download.svg"
+                    src="/App_store_download.svg"
                     alt="Download on App Store"
                     fill
                     className="object-contain"
@@ -60,7 +60,7 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
                   className="relative h-20 w-52 hover:scale-105 transition-transform"
                 >
                   <Image
-                    src="/skinchange-website/Play_store_download.png"
+                    src="/Play_store_download.png"
                     alt="Get it on Google Play"
                     fill
                     className="object-contain"
