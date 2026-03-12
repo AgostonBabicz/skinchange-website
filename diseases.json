@@ -17,7 +17,8 @@
   {
     "id": 2,
     "name": "Eczema (Atopic Dermatitis)",
-    "handled": false,
+    "handled": true,
+    "handled_date": "2026-03-12",
     "slug": "eczema-atopic-dermatitis",
     "en": {
       "content": "Additional information:\nWhat is it?\nAtopic dermatitis, often called eczema, is a common skin condition that makes your skin red, itchy, and sometimes swollen. It's not contagious, so you can't catch it from someone else.\n\nWhat does it look like?\nIn adults, it often appears as dry, scaly patches on the neck, face, and around the eyes, but it can appear anywhere on the body. The skin may look reddish and feel extremely itchy. Sometimes, scratching leads to raw, sensitive skin or even infections.\n\nWhy does it happen?\nThe exact cause isn't known, but it's thought to be linked to an overactive response by the body's immune system to an irritant. It is common in people who have allergies or asthma and can be triggered by stress, certain foods, and weather changes.\n\nWho gets it?\nAnyone can get atopic dermatitis, but it's more common in people with a family history of allergies or asthma. Adults who had it as a child often see it come back, though sometimes in a milder form.\n\nRemember\nMoisturizing regularly helps manage the dryness and itchiness.\nAvoid scratching; it can worsen the condition and lead to infection.\nIdentify and avoid triggers, like certain soaps, foods, or fabrics.\nAtopic dermatitis can vary in severity, and treatment may change over time. Regular check-ins with your dermatologist are important. "

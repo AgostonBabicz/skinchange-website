@@ -32,6 +32,14 @@ const blogPosts = {
       readTime: '6 min',
       date: '12. marts 2025',
     },
+    {
+      slug: 'eczema-atopic-dermatitis',
+      title: 'Hvad er Eksem (Atopisk Dermatitis)? Årsager, Symptomer og Behandling',
+      excerpt: 'Eksem påvirker op mod 20% af børn og 3% af voksne. Lær hvad atopisk dermatitis er, hvad der udløser det, og hvilke behandlingsmuligheder der kan hjælpe.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '12. marts 2026',
+    },
   ],
   en: [
     {
@@ -41,6 +49,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 12, 2025',
+    },
+    {
+      slug: 'eczema-atopic-dermatitis',
+      title: 'What is Eczema (Atopic Dermatitis)? Causes, Symptoms and Treatment',
+      excerpt: 'Eczema affects up to 20% of children and 3% of adults worldwide. Learn what atopic dermatitis is, what triggers it, and which treatment options can help.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'March 12, 2026',
     },
   ],
 };
