@@ -174,5 +174,29 @@ export const faqCategories: FaqCategory[] = [
         }
       ]
     }
-  }
+  },
+  {
+    slug: 'diseases',
+    icon: '🔬',
+    titleDa: 'Hudsygdomme',
+    titleEn: 'Skin Conditions',
+    descriptionDa: 'Lær om de mest almindelige hudsygdomme, deres symptomer og behandlingsmuligheder.',
+    descriptionEn: 'Learn about the most common skin conditions, their symptoms and treatment options.',
+    questions: {
+      da: [
+        {
+          question: 'Hvad er Acne?',
+          answer:
+            'Acne er en almindelig hudlidelse, der påvirker talgkirtler og hårfollikkler. Det forårsager bumser, hudorme, hvide knopper og nogle gange dybere knopper afhængigt af sværhedsgraden. Acne er ikke smitsomt og skyldes faktorer som hormonelle ændringer, øget talgproduktion og bakterien Cutibacterium acnes. Det rammer oftest unge i puberteten, men voksne kan også få acne. Behandlingsmuligheder inkluderer håndkøbsprodukter (benzoylperoxid, salicylsyre), receptpligtig medicin (retinoider, antibiotika) og i svære tilfælde isotretinoin. Undgå at klemme bumser, da det forværrer betændelse og kan give arvæv.',
+        },
+      ],
+      en: [
+        {
+          question: 'What is Acne?',
+          answer:
+            'Acne is a common skin condition affecting oil glands and hair follicles. It causes pimples, blackheads, whiteheads, and sometimes deeper bumps depending on its severity. Acne is not contagious and is caused by factors such as hormonal changes, increased oil production, and the bacterium Cutibacterium acnes. It most commonly affects young people during puberty, but adults can also develop acne. Treatment options include over-the-counter products (benzoyl peroxide, salicylic acid), prescription medications (retinoids, antibiotics) and in severe cases isotretinoin. Avoid picking or squeezing as this worsens inflammation and can cause scarring.',
+        },
+      ],
+    },
+  },
 ];
