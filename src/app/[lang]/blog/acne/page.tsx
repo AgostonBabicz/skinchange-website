@@ -50,9 +50,8 @@ export default function AcnePage({ params: { lang } }: PageProps) {
     datePublished: '2025-03-12',
     dateModified: '2025-03-12',
     author: {
-      '@type': 'Person',
-      name: 'Peter Bjerring',
-      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Specialist in Dermatology',
+      '@type': 'Organization',
+      name: 'SkinChange.AI',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {
@@ -176,17 +175,26 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                 : 'What is Acne? Causes, Symptoms and Treatment'}
             </h1>
 
+            {/* Cover Image */}
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=1200&q=80"
+                alt={isDa ? 'Acne – hudlidelse behandling' : 'Acne – skin condition treatment'}
+                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
+            </div>
+
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold">
-                PB
+              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+                SC
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Peter Bjerring</p>
+                <p className="font-semibold text-gray-900">SkinChange.AI</p>
                 <p className="text-sm text-gray-600">
-                  {isDa
-                    ? 'Speciallæge i hudsygdomme • 30+ års erfaring'
-                    : 'Specialist in Dermatology • 30+ years experience'}
+                  {isDa ? 'Medicinsk redaktion' : 'Medical editorial team'}
                 </p>
               </div>
             </div>
@@ -459,12 +467,6 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                     className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
-                  </Link>
-                  <Link
-                    href={`/${lang}/faq`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
-                  >
-                    {isDa ? 'Læs mere om SKIND' : 'Learn more about SKIND'}
                   </Link>
                 </div>
               </div>
