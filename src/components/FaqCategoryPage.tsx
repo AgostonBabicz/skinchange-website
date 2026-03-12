@@ -3,29 +3,53 @@ import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
-import { FaqCategory } from '@/lib/faq-data';
+import { FaqCategory, FaqQuestion } from '@/lib/faq-data';
 
 interface Props {
   category: FaqCategory;
   lang: Language;
 }
 
+function AccordionItem({ q, i }: { q: FaqQuestion; i: number }) {
+  return (
+    <details
+      key={i}
+      className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+    >
+      <summary className="flex justify-between items-center p-8 cursor-pointer list-none">
+        <span className="text-xl font-semibold text-[#1a237e] pr-4">{q.question}</span>
+        <span className="text-[#304ffe] text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <div className="px-8 pb-8">
+        <p className="text-gray-600 leading-relaxed">{q.answer}</p>
+      </div>
+    </details>
+  );
+}
+
 export default function FaqCategoryPage({ category, lang }: Props) {
   const isDa = lang === 'da';
   const title = isDa ? category.titleDa : category.titleEn;
-  const questions = isDa ? category.questions.da : category.questions.en;
+  const topLevelQuestions = isDa ? category.questions.da : category.questions.en;
+  const hasSubGroups = category.subGroups && category.subGroups.length > 0;
+
+  // Build all questions for JSON-LD schema (top-level + all sub-group questions)
+  const allQuestions: FaqQuestion[] = [
+    ...topLevelQuestions,
+    ...(category.subGroups ?? []).flatMap(sg => isDa ? sg.questions.da : sg.questions.en),
+  ];
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: questions.map(q => ({
+    mainEntity: allQuestions.map(q => ({
       '@type': 'Question',
       name: q.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: q.answer
-      }
-    }))
+        text: q.answer,
+      },
+    })),
   };
 
   return (
@@ -60,23 +84,43 @@ export default function FaqCategoryPage({ category, lang }: Props) {
               </p>
             </div>
 
-            {/* Accordions */}
-            <div className="space-y-4">
-              {questions.map((q, i) => (
-                <details
-                  key={i}
-                  className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  <summary className="flex justify-between items-center p-8 cursor-pointer list-none">
-                    <span className="text-xl font-semibold text-[#1a237e] pr-4">{q.question}</span>
-                    <span className="text-[#304ffe] text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
-                  </summary>
-                  <div className="px-8 pb-8">
-                    <p className="text-gray-600 leading-relaxed">{q.answer}</p>
-                  </div>
-                </details>
-              ))}
-            </div>
+            {/* Top-level Q&As (non-diseases categories) */}
+            {topLevelQuestions.length > 0 && (
+              <div className="space-y-4 mb-12">
+                {topLevelQuestions.map((q, i) => (
+                  <AccordionItem key={i} q={q} i={i} />
+                ))}
+              </div>
+            )}
+
+            {/* Sub-groups (e.g. one per disease) */}
+            {hasSubGroups && (
+              <div className="space-y-10">
+                {category.subGroups!.map((sg) => {
+                  const sgName = isDa ? sg.nameDa : sg.nameEn;
+                  const sgQuestions = isDa ? sg.questions.da : sg.questions.en;
+                  return (
+                    <div key={sg.slug}>
+                      {/* Sub-group header */}
+                      <div className="flex items-center gap-3 mb-4">
+                        {sg.icon && (
+                          <span className="text-2xl">{sg.icon}</span>
+                        )}
+                        <h2 className="text-2xl font-bold text-[#1a237e]">{sgName}</h2>
+                        <div className="flex-1 h-px bg-gray-200 ml-2" />
+                      </div>
+
+                      {/* Sub-group Q&As */}
+                      <div className="space-y-4 pl-0">
+                        {sgQuestions.map((q, i) => (
+                          <AccordionItem key={i} q={q} i={i} />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
 
             {/* Back link */}
             <div className="mt-12 mb-4">
