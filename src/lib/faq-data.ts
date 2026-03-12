@@ -258,6 +258,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'psoriasis',
+        nameDa: 'Psoriasis',
+        nameEn: 'Psoriasis',
+        icon: '🔴',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er Psoriasis?',
+              answer:
+                'Psoriasis er en kronisk hudlidelse, der forårsager røde, skællende pletter på forskellige områder af din krop. Det er vigtigt at huske, at det ikke er smitsomt, så du kan ikke sprede det til andre.',
+            },
+            {
+              question: 'Hvordan ser Psoriasis ud?',
+              answer:
+                'Psoriasis viser sig typisk som tykke, hævede pletter med sølvhvide skæl. Disse pletter kan være kløende og ubehagelige, og de påvirker ofte albuer, knæ, hovedbund og lænd. Dog kan de optræde overalt på din krop.',
+            },
+            {
+              question: 'Hvorfor opstår Psoriasis?',
+              answer:
+                'Den præcise årsag til psoriasis er ukendt, men det er forbundet med et problem med immunsystemet, der fremskynder produktionen af hudceller. Dette får celler til at opbygge sig hurtigere end de kan skalle af, hvilket fører til den synlige skældannelse. Genetik og visse udløsere som stress, infektioner eller visse medicin kan også spille en rolle.',
+            },
+            {
+              question: 'Hvem får Psoriasis?',
+              answer:
+                'Psoriasis kan påvirke alle, uanset alder eller køn. Mens det er mere almindeligt hos voksne, kan det også forekomme hos børn. Du er mere tilbøjelig til at udvikle det, hvis du har en familiehistorie med tilstanden.',
+            },
+            {
+              question: 'Hvad skal jeg huske om Psoriasis behandling?',
+              answer:
+                'At håndtere psoriasis er afgørende – der er ingen kur, men forskellige behandlinger som cremer, salver, lysbehandling eller medicin kan hjælpe med at kontrollere symptomerne. Udløsere spiller ofte en rolle, så identificer og undgå personlige udløsere som stress, visse fødevarer eller skrappe sæber. Tøv ikke med at drøfte det med din hudlæge, der kan tilpasse en behandlingsplan til dine behov.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is Psoriasis?',
+              answer:
+                "Psoriasis is a chronic skin condition that causes red, scaly patches to appear on different areas of your body. It's important to remember that it's not contagious, so you can't spread it to others.",
+            },
+            {
+              question: 'What does Psoriasis look like?',
+              answer:
+                'Psoriasis typically shows up as thick, raised patches with silvery-white scales. These patches can be itchy and uncomfortable, and they often affect the elbows, knees, scalp, and lower back. However, they can appear anywhere on your body.',
+            },
+            {
+              question: 'Why does Psoriasis happen?',
+              answer:
+                "The exact cause of psoriasis is unknown, but it's linked to an issue with the immune system that speeds up skin cell production. This causes cells to build up faster than they can shed, leading to the visible scaling. Genetics and certain triggers like stress, infections, or some medications can also play a role.",
+            },
+            {
+              question: 'Who gets Psoriasis?',
+              answer:
+                "Psoriasis can affect anyone, regardless of age or gender. While it's more common in adults, it can also occur in children. You're more likely to develop it if you have a family history of the condition.",
+            },
+            {
+              question: 'What should I remember about Psoriasis treatment?',
+              answer:
+                "Managing psoriasis is key — there's no cure, but various treatments including creams, ointments, light therapy, or medications can help control symptoms and improve your quality of life. Triggers often play a role, so identify and avoid your personal triggers like stress, certain foods, or harsh soaps. Don't hesitate to discuss it with your dermatologist, who can tailor a treatment plan specific to your needs.",
+            },
+          ],
+        },
+      },
     ],
   },
 ];

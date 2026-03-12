@@ -32,7 +32,8 @@
   {
     "id": 3,
     "name": "Psoriasis",
-    "handled": false,
+    "handled": true,
+    "handled_date": "2026-03-12",
     "slug": "psoriasis",
     "en": {
       "content": "Additional information:\nWhat is it?\nPsoriasis is a chronic skin condition that causes red, scaly patches to appear on different areas of your body. It's important to remember that it's not contagious, so you can't spread it to others.\n\nWhat does it look like?\nPsoriasis typically shows up as thick, raised patches with silvery-white scales. These patches can be itchy and uncomfortable, and they often affect the elbows, knees, scalp, and lower back. However, they can appear anywhere on your body.\n\nWhy does it happen?\nThe exact cause of psoriasis is unknown, but it's linked to an issue with the immune system that speeds up skin cell production. This causes cells to build up faster than they can shed, leading to the visible scaling. Genetics and certain triggers, like stress, infections, or some medications, can also play a role.\n\nWho gets it?\nPsoriasis can affect anyone, regardless of age or gender. While it's more common in adults, it can also occur in children. You're more likely to develop it if you have a family history of the condition.\n\nRemember:\nManaging psoriasis is key. There's no cure, but various treatments can help control symptoms and improve your quality of life. These can include creams, ointments, light therapy, or medications.\nTriggers often play a role. Identifying and avoiding your personal triggers, like stress, certain foods, or harsh soaps, can help prevent flare-ups.\nDon't hesitate to discuss it with your dermatologist. They can tailor a treatment plan specific to your needs and answer any questions you may have.\nWhile psoriasis can be challenging, remember that you're not alone. With proper management and support, you can effectively manage your symptoms and live a fulfilling life."
