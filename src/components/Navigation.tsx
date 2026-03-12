@@ -19,6 +19,7 @@ export default function Navigation({ lang }: NavigationProps) {
     { href: `/${lang}/guide`, label: t.nav.guide },
     { href: `/${lang}/download`, label: t.nav.download },
     { href: `/${lang}/faq`, label: t.nav.faq },
+    { href: `/${lang}/blog`, label: t.nav.blog },
     { href: `/${lang}/contact`, label: t.nav.contact },
   ];
 
