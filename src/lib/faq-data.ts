@@ -187,14 +187,54 @@ export const faqCategories: FaqCategory[] = [
         {
           question: 'Hvad er Acne?',
           answer:
-            'Acne er en almindelig hudlidelse, der påvirker talgkirtler og hårfollikkler. Det forårsager bumser, hudorme, hvide knopper og nogle gange dybere knopper afhængigt af sværhedsgraden. Acne er ikke smitsomt og skyldes faktorer som hormonelle ændringer, øget talgproduktion og bakterien Cutibacterium acnes. Det rammer oftest unge i puberteten, men voksne kan også få acne. Behandlingsmuligheder inkluderer håndkøbsprodukter (benzoylperoxid, salicylsyre), receptpligtig medicin (retinoider, antibiotika) og i svære tilfælde isotretinoin. Undgå at klemme bumser, da det forværrer betændelse og kan give arvæv.',
+            'Acne er en almindelig hudlidelse, der påvirker talgkirtler og hårfollikkler. Det forårsager bumser, hudorme, hvide knopper og nogle gange dybere knopper afhængigt af sværhedsgraden. Acne er ikke smitsomt.',
+        },
+        {
+          question: 'Hvordan ser Acne ud?',
+          answer:
+            'Acne kan manifestere sig forskelligt for alle, men almindelige tegn inkluderer: Hudorme og hvide knopper (tilstoppede porer på grund af overskydende olie og døde hudceller), bumser (små, røde knopper der kan indeholde pus), og knuder og cyster (dybere, smertefulde knopper dannet under huden).',
+        },
+        {
+          question: 'Hvorfor opstår Acne?',
+          answer:
+            'Flere faktorer bidrager til acne: Øget olieproduktion (hormoner, genetik og visse medicin kan stimulere talgkirtlerne), tilstoppede porer (døde hudceller og overskydende olie tilstopper porerne og fanger bakterier), og bakterieovervækst (bakterien Cutibacterium acnes bidrager til inflammation og dannelse af bumser).',
+        },
+        {
+          question: 'Hvem får Acne?',
+          answer:
+            'Acne er utrolig almindelig og påvirker de fleste mennesker på et tidspunkt i deres liv, primært under puberteten på grund af hormonelle ændringer. Dog kan voksne også opleve acne.',
+        },
+        {
+          question: 'Hvad skal jeg huske om Acne behandling?',
+          answer:
+            'Vedvarende behandling er nøglen. Undgå at kradse eller klemme – det kan forværre inflammation og give arvæv. Vær forsigtig med din hud: hård skrubning eller produkter kan irritere den. Dermatologer kan vurdere din specifikke acne-type og anbefale den mest effektive behandlingsplan. Acne kan påvirke selvværdet, men du er ikke alene – søg støtte fra sundhedspersonale hvis nødvendigt.',
         },
       ],
       en: [
         {
           question: 'What is Acne?',
           answer:
-            'Acne is a common skin condition affecting oil glands and hair follicles. It causes pimples, blackheads, whiteheads, and sometimes deeper bumps depending on its severity. Acne is not contagious and is caused by factors such as hormonal changes, increased oil production, and the bacterium Cutibacterium acnes. It most commonly affects young people during puberty, but adults can also develop acne. Treatment options include over-the-counter products (benzoyl peroxide, salicylic acid), prescription medications (retinoids, antibiotics) and in severe cases isotretinoin. Avoid picking or squeezing as this worsens inflammation and can cause scarring.',
+            'Acne is a common skin condition affecting oil glands and hair follicles. It causes pimples, blackheads, whiteheads, and sometimes deeper bumps depending on its severity. Acne is not contagious.',
+        },
+        {
+          question: 'What does Acne look like?',
+          answer:
+            'Acne can manifest differently for everyone, but common signs include: blackheads and whiteheads (plugged pores due to excess oil and dead skin cells), pimples (small red bumps that may contain pus), and nodules and cysts (deeper, painful bumps forming under the skin).',
+        },
+        {
+          question: 'Why does Acne happen?',
+          answer:
+            'Several factors contribute to acne: increased oil production (hormones, genetics, and certain medications can stimulate oil glands), plugged pores (dead skin cells and excess oil can clog pores, trapping bacteria and inflammation), and bacterial overgrowth (Cutibacterium acnes contributes to inflammation and pimple formation).',
+        },
+        {
+          question: 'Who gets Acne?',
+          answer:
+            'Acne is incredibly common, affecting most people at some point in their lives, primarily during adolescence due to hormonal changes. However, adults can also experience acne.',
+        },
+        {
+          question: 'What should I remember about Acne treatment?',
+          answer:
+            'Consistent treatment is key. Don\'t pick or squeeze — this can worsen inflammation and scarring. Be gentle with your skin, as harsh scrubbing or products can irritate it. Dermatologists can assess your specific acne type and recommend the most effective treatment plan. Acne can impact self-esteem, but remember you\'re not alone — seek support from healthcare professionals if needed.',
         },
       ],
     },
