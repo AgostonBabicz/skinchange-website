@@ -25,14 +25,6 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
 const blogPosts = {
   da: [
     {
-      slug: 'akne-behandling-arsager-typer',
-      title: 'Akne: Årsager, Typer og Effektiv Behandling',
-      excerpt: 'Alt du behøver at vide om akne - fra hormonelle udslet til bakterielle infektioner. Lær hvordan du får ren hud med den rette behandling.',
-      category: 'Hudsygdomme',
-      readTime: '8 min',
-      date: '3. marts 2025',
-    },
-    {
       slug: 'acne',
       title: 'Hvad er Acne? Årsager, Symptomer og Behandling',
       excerpt: 'Acne er en af de mest udbredte hudlidelser i verden. Lær hvad acne er, hvad der forårsager det, hvem der rammes og hvilke behandlingsmuligheder der findes.',
