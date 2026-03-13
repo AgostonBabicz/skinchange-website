@@ -66,7 +66,10 @@ export default function FAQPage({ params: { lang } }: PageProps) {
               {faqCategories.map(cat => {
                 const title = isDa ? cat.titleDa : cat.titleEn;
                 const description = isDa ? cat.descriptionDa : cat.descriptionEn;
-                const count = isDa ? cat.questions.da.length : cat.questions.en.length;
+                const subGroupCount = cat.subGroups
+                  ? cat.subGroups.reduce((sum, sg) => sum + (isDa ? sg.questions.da.length : sg.questions.en.length), 0)
+                  : 0;
+                const count = (isDa ? cat.questions.da.length : cat.questions.en.length) + subGroupCount;
                 const countLabel = isDa
                   ? `${count} spørgsmål`
                   : `${count} question${count !== 1 ? 's' : ''}`;
