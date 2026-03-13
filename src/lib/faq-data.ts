@@ -259,6 +259,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'rosacea',
+        nameDa: 'Rosacea',
+        nameEn: 'Rosacea',
+        icon: '🌹',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er rosacea?',
+              answer:
+                'Rosacea er en kronisk hudlidelse, der forårsager vedvarende rødme, synlige blodkar og undertiden bumser eller pustler i ansigtet. Det er ikke smitsomt, men kan være vedvarende og frustrerende for dem, der er ramt.',
+            },
+            {
+              question: 'Hvordan ser rosacea ud?',
+              answer:
+                'Rosacea viser sig typisk som rødme og flushing i midten af ansigtet, tynde synlige blodkar (telangiektasi) på kinderne og næsen, samt røde papler der kan ligne acne. I svære tilfælde kan næsehuden fortykkes (rhinophyma), og øjnene kan blive røde og irriterede (okulær rosacea).',
+            },
+            {
+              question: 'Hvorfor opstår rosacea?',
+              answer:
+                'Den præcise årsag er ukendt, men bidragende faktorer inkluderer overaktive blodkar i ansigtet, betændelsesreaktioner udløst af sollys, visse fødevarer og mider, samt genetisk disposition. Forskning tyder også på, at ubalancer i tarmbakterierne kan spille en rolle.',
+            },
+            {
+              question: 'Hvem får rosacea?',
+              answer:
+                'Rosacea er mest almindelig hos voksne med lys hud og lyst hår eller øjne, særligt dem med keltisk eller nordeuropæisk baggrund. Tilstanden er hyppigst hos voksne mellem 40 og 50 år, og dem med familiehistorie af rosacea er i øget risiko.',
+            },
+            {
+              question: 'Hvad skal jeg huske om rosacea behandling?',
+              answer:
+                'Rosacea kan håndteres med topiske medicin som metronidazol og azelainsyre, orale antibiotika ved moderat til svær rosacea, og laserbehandling for synlige blodkar. Det er afgørende at identificere og undgå personlige udløsere som stærk mad, alkohol og sollys, og at bruge skånsom, parfumefri hudpleje med solcreme.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is rosacea?',
+              answer:
+                'Rosacea is a chronic skin condition that causes persistent redness, visible blood vessels and sometimes bumps or pustules on the face. It is not contagious, but can be persistent and frustrating for those affected.',
+            },
+            {
+              question: 'What does rosacea look like?',
+              answer:
+                'Rosacea typically presents as flushing and redness of the central face, thin visible blood vessels (telangiectasia) on the cheeks and nose, and red papules that can resemble acne. In severe cases the skin on the nose can thicken (rhinophyma), and the eyes can become red and irritated (ocular rosacea).',
+            },
+            {
+              question: 'Why does rosacea happen?',
+              answer:
+                'The exact cause is unknown, but contributing factors include overactive blood vessels in the face, inflammatory reactions triggered by sunlight, certain foods and mites, and genetic predisposition. Research also suggests that imbalances in gut bacteria may play a role.',
+            },
+            {
+              question: 'Who gets rosacea?',
+              answer:
+                'Rosacea is most common in fair-skinned adults with light hair or eyes, particularly those of Celtic or Northern European descent. The condition is most frequent in adults between 40 and 50 years old, and those with a family history of rosacea are at increased risk.',
+            },
+            {
+              question: 'What should I remember about rosacea treatment?',
+              answer:
+                'Rosacea can be managed with topical medications such as metronidazole and azelaic acid, oral antibiotics for moderate to severe rosacea, and laser therapy for visible blood vessels. It is essential to identify and avoid personal triggers such as spicy food, alcohol and sunlight, and to use gentle, fragrance-free skincare with sunscreen.',
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',

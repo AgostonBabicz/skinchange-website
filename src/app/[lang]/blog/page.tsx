@@ -40,6 +40,14 @@ const blogPosts = {
       readTime: '7 min',
       date: '12. marts 2026',
     },
+    {
+      slug: 'rosacea',
+      title: 'Hvad er Rosacea? Årsager, Symptomer og Behandling',
+      excerpt: 'Rosacea er en kronisk hudlidelse der forårsager vedvarende rødme, synlige blodkar og undertiden bumser i ansigtet. Lær hvad der udløser det, og hvad du kan gøre.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '13. marts 2026',
+    },
   ],
   en: [
     {
@@ -57,6 +65,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 12, 2026',
+    },
+    {
+      slug: 'rosacea',
+      title: 'What is Rosacea? Causes, Symptoms and Treatment',
+      excerpt: 'Rosacea is a chronic skin condition causing persistent facial redness, visible blood vessels and sometimes bumps. Learn what triggers it and what you can do.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 13, 2026',
     },
   ],
 };
