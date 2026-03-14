@@ -62,7 +62,8 @@
   {
     "id": 5,
     "name": "Urticaria (Hives)",
-    "handled": false,
+    "handled": true,
+    "handled_date": "2026-03-14",
     "slug": "urticaria-hives",
     "en": {
       "content": "Additional information\nWhat is it?\nUrticaria is a common skin condition causing raised, itchy red welts that appear suddenly and can disappear just as quickly. It's not contagious, so you can't spread it to others.\n\nWhat does it look like?\nHives typically show up as:\n\nRaised, red, itchy welts: They can vary in size and shape, appearing anywhere on the body.\nPale centers: The raised portion may have a pale center in contrast to the red border.\nWhealing: Multiple hives merging into larger, raised areas.\n\nWhy does it happen?\nHives occur when certain substances trigger the release of histamine, a chemical in the body causing blood vessels to dilate and leak fluid, forming the welts. Triggers can be:\nAllergens: Foods like nuts, shellfish, or egg; medications like penicillin; insect bites/stings; pollen.\nPhysical factors: Pressure, heat, cold, sunlight, sweat, exercise.\nInternal factors: Infections, underlying medical conditions, stress.\n\nWho gets it?\nAnyone can develop hives, but it's more common in adults.\n\nRemember:\nIdentifying the trigger is key to preventing future outbreaks. Keep a record of potential triggers and discuss them with your doctor.\nTreatment aims to relieve itch and prevent recurrence. Antihistamines and other medications can be helpful.\nAvoiding identified triggers is crucial. If the cause is unclear, allergy testing might be needed.\nHives usually resolve within 24 hours. If they last longer or are severe, seek medical attention."
