@@ -321,6 +321,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'urticaria-hives',
+        nameDa: 'Nældefeber (Urticaria)',
+        nameEn: 'Urticaria (Hives)',
+        icon: '🌡️',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er nældefeber (urticaria)?',
+              answer:
+                'Nældefeber er en almindelig hudlidelse, der forårsager hævede, kløende røde knopper (kvabler), der pludselig opstår og kan forsvinde igen inden for timer. Det er ikke smitsomt og skyldes frigivelse af histamin fra mastceller i huden.',
+            },
+            {
+              question: 'Hvordan ser nældefeber ud?',
+              answer:
+                'Nældefeber viser sig som hævede, røde kvabler med blegt center, der kan variere fra få millimeter til flere centimeter i størrelse. Knopperne er intenst kløende, kan opstå overalt på kroppen, og kan smelte sammen til større arealer. En enkelt kvabel forsvinder normalt inden for 1–24 timer uden at efterlade mærker.',
+            },
+            {
+              question: 'Hvorfor opstår nældefeber?',
+              answer:
+                'Nældefeber opstår, når mastceller frigiver histamin i huden. Udløsere inkluderer allergener (nødder, skaldyr, penicillin, insektbid), fysiske faktorer (tryk, kulde, varme, sollys, anstrengelse) og interne faktorer (infektioner, stress, autoimmune tilstande). I op mod 50% af kroniske tilfælde kan årsagen ikke identificeres (idiopatisk).',
+            },
+            {
+              question: 'Hvem får nældefeber?',
+              answer:
+                'Alle kan få nældefeber, men det er mere almindeligt hos voksne. Akut urticaria ses hyppigst hos børn og unge voksne, mens kronisk urticaria oftest rammer kvinder i alderen 20–40 år. Op mod 20% af befolkningen oplever nældefeber på et tidspunkt i livet.',
+            },
+            {
+              question: 'Hvad skal jeg huske om nældefeber behandling?',
+              answer:
+                'Ikke-sederende antihistaminer (cetirizin, loratadin) er primær behandling og virker bedst ved regelmæssig dosering. Identificer og undgå din personlige udløser – en symptom-dagbog og allergitest kan hjælpe. Søg straks hjælp ved hævelse i svælget eller vejrtrækningsbesvær, da det kan være tegn på anafylaksi. Kronisk urticaria kan behandles med biologiske lægemidler som omalizumab.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is urticaria (hives)?',
+              answer:
+                'Urticaria (hives) is a common skin condition causing raised, itchy red welts (wheals) that appear suddenly and can disappear within hours. It is not contagious and is caused by histamine release from mast cells in the skin.',
+            },
+            {
+              question: 'What does urticaria look like?',
+              answer:
+                'Urticaria appears as raised, red welts with pale centres that can range from a few millimetres to several centimetres in size. The welts are intensely itchy, can appear anywhere on the body, and may merge into larger areas. An individual weal typically resolves within 1–24 hours without leaving a mark.',
+            },
+            {
+              question: 'Why does urticaria happen?',
+              answer:
+                'Urticaria occurs when mast cells release histamine in the skin. Triggers include allergens (nuts, shellfish, penicillin, insect stings), physical factors (pressure, cold, heat, sunlight, exercise) and internal factors (infections, stress, autoimmune conditions). In up to 50% of chronic cases no cause can be identified (idiopathic).',
+            },
+            {
+              question: 'Who gets urticaria?',
+              answer:
+                'Anyone can get urticaria, but it is more common in adults. Acute urticaria is most frequent in children and young adults, while chronic urticaria most often affects women aged 20–40. Up to 20% of people experience hives at some point in their lives.',
+            },
+            {
+              question: 'What should I remember about urticaria treatment?',
+              answer:
+                'Non-sedating antihistamines (cetirizine, loratadine) are the primary treatment and work best with regular dosing. Identify and avoid your personal trigger — a symptom diary and allergy testing can help. Seek emergency help immediately for throat swelling or breathing difficulty, as this may indicate anaphylaxis. Chronic urticaria can be treated with biologics such as omalizumab.',
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',

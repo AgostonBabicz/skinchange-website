@@ -48,6 +48,14 @@ const blogPosts = {
       readTime: '6 min',
       date: '13. marts 2026',
     },
+    {
+      slug: 'urticaria-hives',
+      title: 'Hvad er Nældefeber (Urticaria)? Årsager, Symptomer og Behandling',
+      excerpt: 'Nældefeber rammer op mod 20% af befolkningen i løbet af livet. Lær hvad urticaria er, hvad der udløser de hævede kløende knopper, og hvilken behandling der virker.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '14. marts 2026',
+    },
   ],
   en: [
     {
@@ -73,6 +81,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 13, 2026',
+    },
+    {
+      slug: 'urticaria-hives',
+      title: 'What is Urticaria (Hives)? Causes, Symptoms and Treatment',
+      excerpt: 'Urticaria affects up to 20% of people at some point in their lives. Learn what hives are, what triggers the raised itchy welts, and which treatments work.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 14, 2026',
     },
   ],
 };
