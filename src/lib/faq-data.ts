@@ -383,6 +383,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'herpes-simplex-virus',
+        nameDa: 'Herpes Simplex Virus (HSV)',
+        nameEn: 'Herpes Simplex Virus (HSV)',
+        icon: '🦠',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er herpes simplex virus (HSV)?',
+              answer:
+                'HSV er en almindelig, livslang viral infektion, der forårsager udbrud af små, smertefulde blærer på huden og slimhinderne. HSV-1 forårsager typisk forkølelsessår om munden, mens HSV-2 primært er forbundet med genital herpes. Virussen forbliver inaktiv i nervesystemet og kan reaktivere og give fremtidige udbrud.',
+            },
+            {
+              question: 'Hvordan ser et HSV-udbrud ud?',
+              answer:
+                'Et udbrud begynder typisk med prikken eller kløe i det berørte område (prodromalfasen). Herefter opstår væskefyldte blærer i klynger, som er smertefulde. Blærerne brister og danner skorper, og symptomerne forsvinder normalt inden for 2–4 uger ved det første udbrud og hurtigere ved efterfølgende udbrud.',
+            },
+            {
+              question: 'Hvorfor opstår HSV-udbrud?',
+              answer:
+                'HSV smitter gennem direkte kontakt med inficeret hud eller kropsvæsker og etablerer sig latent i sensoriske nerveceller. Udbrud kan udløses af stress, svækket immunsystem, soleksponering, hormonelle ændringer eller febersygdomme. Virus kan desuden smitte asymptomatisk (uden synlige blærer).',
+            },
+            {
+              question: 'Hvem får HSV?',
+              answer:
+                'HSV er ekstremt udbredt. WHO estimerer, at ca. 67% af verdens befolkning under 50 år bærer HSV-1, mens ca. 11% bærer HSV-2. Mange smittede oplever aldrig tydelige symptomer og ved ikke, at de er inficerede.',
+            },
+            {
+              question: 'Hvad skal jeg huske om HSV behandling?',
+              answer:
+                'Der er ingen kur mod HSV, men antivirale midler som aciclovir, valaciclovir eller famciclovir kan afkorte og mildne udbrud. Ved hyppige udbrud anbefales daglig suppressionsbehandling. Åben kommunikation med seksuelle partnere og brug af kondom reducerer smitterisikoen. Søg professionel hjælp ved hyppige udbrud eller under graviditet.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is herpes simplex virus (HSV)?',
+              answer:
+                'HSV is a common, lifelong viral infection that causes outbreaks of small, painful blisters on the skin and mucous membranes. HSV-1 typically causes oral herpes (cold sores), while HSV-2 is primarily associated with genital herpes. The virus remains dormant in the nervous system and can reactivate to cause future outbreaks.',
+            },
+            {
+              question: 'What does an HSV outbreak look like?',
+              answer:
+                'An outbreak typically begins with tingling or itching in the affected area (prodromal phase), followed by clusters of fluid-filled blisters that are painful. The blisters burst and form crusts, with symptoms usually clearing within 2–4 weeks during the first outbreak and more quickly during subsequent outbreaks.',
+            },
+            {
+              question: 'Why do HSV outbreaks happen?',
+              answer:
+                'HSV spreads through direct contact with infected skin or bodily fluids and establishes itself latently in sensory nerve cells. Outbreaks can be triggered by stress, a weakened immune system, sun exposure, hormonal changes or febrile illness. The virus can also be transmitted asymptomatically (without visible blisters).',
+            },
+            {
+              question: 'Who gets HSV?',
+              answer:
+                'HSV is extremely widespread. The WHO estimates that approximately 67% of the global population under 50 carries HSV-1, while approximately 11% carry HSV-2. Many infected individuals never experience noticeable symptoms and do not know they are infected.',
+            },
+            {
+              question: 'What should I remember about HSV treatment?',
+              answer:
+                "There is no cure for HSV, but antiviral medications such as aciclovir, valaciclovir or famciclovir can shorten and reduce the severity of outbreaks. For frequent outbreaks, daily suppressive therapy is recommended. Open communication with sexual partners and condom use reduces transmission risk. Seek professional help for frequent outbreaks or during pregnancy.",
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',

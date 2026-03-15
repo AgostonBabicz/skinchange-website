@@ -56,6 +56,14 @@ const blogPosts = {
       readTime: '6 min',
       date: '14. marts 2026',
     },
+    {
+      slug: 'herpes-simplex-virus',
+      title: 'Hvad er Herpes Simplex Virus (HSV)? Årsager, Symptomer og Behandling',
+      excerpt: 'Herpes simplex virus (HSV) er en af de mest udbredte virale infektioner på verdensplan. Lær hvad der adskiller HSV-1 fra HSV-2, hvordan udbrud ser ud, og hvilken behandling der hjælper.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '15. marts 2026',
+    },
   ],
   en: [
     {
@@ -89,6 +97,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 14, 2026',
+    },
+    {
+      slug: 'herpes-simplex-virus',
+      title: 'What is Herpes Simplex Virus (HSV)? Causes, Symptoms and Treatment',
+      excerpt: 'Herpes simplex virus (HSV) is one of the most widespread viral infections in the world. Learn how HSV-1 and HSV-2 differ, what outbreaks look like, and which treatment options are available.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 15, 2026',
     },
   ],
 };
