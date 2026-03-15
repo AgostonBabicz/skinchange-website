@@ -77,7 +77,8 @@
   {
     "id": 6,
     "name": "Herpes Simplex Virus",
-    "handled": false,
+    "handled": true,
+    "handled_date": "2026-03-15",
     "slug": "herpes-simplex-virus",
     "en": {
       "content": "Additional information\nWhat is it?\nHSV is a common yet lifelong viral infection causing outbreaks of small, painful blisters on the skin and mucous membranes. There are two main types:\n\nHSV-1: Typically responsible for oral herpes, leading to cold sores around the mouth.\nHSV-2: Primarily related to genital herpes, causing outbreaks on the genitals or surrounding areas.\n\nWhat does it look like?\nAn HSV outbreak usually starts with tingling or itching in the affected area. Then, fluid-filled blisters appear, eventually breaking open and forming crusts. These symptoms typically clear within a few weeks, but the virus remains dormant in the body and can cause future outbreaks.\n\nWhy does it happen?\nHSV spreads through direct contact with infected skin or bodily fluids. While there's no cure, antiviral medications can shorten and lessen the severity of outbreaks.\n\nRemember:\nHSV is manageable, but proper management is crucial. Talk to your doctor about treatment options and preventing transmission.\nOpen communication is important. Inform sexual partners about your diagnosis and take steps to protect them.\nSupport is available. Don't hesitate to talk to your doctor or join support groups for people living with HSV."
