@@ -445,6 +445,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'herpes-zoster-shingles',
+        nameDa: 'Helvedesild (Herpes Zoster)',
+        nameEn: 'Shingles (Herpes Zoster)',
+        icon: '⚡',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er helvedesild?',
+              answer:
+                'Helvedesild er en viral infektion forårsaget af varicella-zoster-virus – den samme virus, der forårsager skoldkopper. Efter at have haft skoldkopper forbliver virussen inaktiv i nervesystemet og kan reaktivere sig år senere, rejse langs nervebaner til huden og forårsage et smertefuldt udslæt langs én side af kroppen.',
+            },
+            {
+              question: 'Hvordan ser helvedesild ud?',
+              answer:
+                'Helvedesild starter typisk med brændende smerte eller prikken på ét sted (prodromalfasen), efterfulgt af et rødt udslæt i et bånd langs nervebanen – oftest på torso, men muligvis ansigt eller øjne. Inden for dage opstår væskefyldte blærer, der brister og danner gule skorper. Heling tager normalt 2–4 uger.',
+            },
+            {
+              question: 'Hvorfor opstår helvedesild?',
+              answer:
+                'Helvedesild opstår, når immunforsvaret ikke er stærkt nok til at holde varicella-zoster-virus inaktivt. De vigtigste faktorer er alder (risikoen stiger markant efter 50 år), svækket immunforsvar (fx ved HIV, kræft eller immunsupprimerende medicin) og alvorlig stress, der midlertidigt svækker immunforsvaret.',
+            },
+            {
+              question: 'Hvem får helvedesild?',
+              answer:
+                'Alle der har haft skoldkopper kan udvikle helvedesild. Cirka én ud af tre mennesker vil rammes i løbet af livet. Risikoen stiger kraftigt efter 50 år, og ældre over 80 har 8–10 gange højere risiko end 20-årige. Immunsvækkede er særligt sårbare og kan opleve mere alvorlige udbrud.',
+            },
+            {
+              question: 'Hvad skal jeg huske om helvedesild behandling?',
+              answer:
+                'Søg lægehjælp straks – antivirale midler som valaciclovir eller aciclovir er mest effektive inden for 72 timer fra udslættets start. Vaccination (Shingrix) anbefales til alle over 50 og reducerer risikoen med op til 90%. Post-herpeticsk neuralgi (PHN) – vedvarende smerter efter heling – er den hyppigste komplikation; tidlig behandling er den bedste forebyggelse.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is shingles?',
+              answer:
+                'Shingles is a viral infection caused by the varicella-zoster virus — the same virus that causes chickenpox. After recovering from chickenpox, the virus lies dormant in the nervous system and can reactivate years later, travelling along nerve pathways to the skin and causing a painful rash on one side of the body.',
+            },
+            {
+              question: 'What does shingles look like?',
+              answer:
+                'Shingles typically begins with burning pain or tingling in a specific area (prodromal phase), followed by a red rash in a band along the nerve pathway — most often on the torso, but possibly the face or near the eyes. Within days fluid-filled blisters develop, burst and form yellow crusts. Healing usually takes 2–4 weeks.',
+            },
+            {
+              question: 'Why does shingles happen?',
+              answer:
+                'Shingles occurs when the immune system is no longer strong enough to keep the varicella-zoster virus dormant. The key factors are age (risk increases markedly after 50), a weakened immune system (e.g. from HIV, cancer or immunosuppressive medication) and severe stress that temporarily impairs immune function.',
+            },
+            {
+              question: 'Who gets shingles?',
+              answer:
+                'Anyone who has had chickenpox can develop shingles. Approximately one in three people will be affected during their lifetime. Risk increases sharply after age 50, and adults over 80 have 8–10 times the risk of those in their 20s. Immunocompromised individuals are particularly vulnerable and may experience more severe outbreaks.',
+            },
+            {
+              question: 'What should I remember about shingles treatment?',
+              answer:
+                'Seek medical attention immediately — antiviral medications such as valaciclovir or aciclovir are most effective within 72 hours of rash onset. Vaccination (Shingrix) is recommended for all adults over 50 and reduces the risk by up to 90%. Post-herpetic neuralgia (PHN) — persistent pain after healing — is the most common complication; early treatment is the best prevention.',
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',
