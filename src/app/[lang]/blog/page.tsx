@@ -64,6 +64,14 @@ const blogPosts = {
       readTime: '6 min',
       date: '15. marts 2026',
     },
+    {
+      slug: 'herpes-zoster-shingles',
+      title: 'Hvad er Helvedesild (Herpes Zoster)? Årsager, Symptomer og Behandling',
+      excerpt: 'Helvedesild rammer ca. én ud af tre mennesker i løbet af livet. Lær hvad helvedesild er, hvem der er i risiko, hvad det smertefulde udslæt ser ud, og hvilken behandling der virker bedst.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '16. marts 2026',
+    },
   ],
   en: [
     {
@@ -105,6 +113,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 15, 2026',
+    },
+    {
+      slug: 'herpes-zoster-shingles',
+      title: 'What is Shingles (Herpes Zoster)? Causes, Symptoms and Treatment',
+      excerpt: 'Shingles affects about one in three people during their lifetime. Learn what shingles is, who is at risk, what the painful rash looks like, and which treatment works best.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'March 16, 2026',
     },
   ],
 };
