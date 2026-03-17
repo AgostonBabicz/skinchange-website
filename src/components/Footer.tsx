@@ -49,7 +49,7 @@ export default function Footer({ lang }: FooterProps) {
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
               {lang === 'da' 
-                ? 'Danmarks hurtigste dermatologiske klinik'
+                ? 'Danmarks hurtigste hudklinik'
                 : 'Denmark\'s fastest dermatological clinic'}
             </p>
           </div>
