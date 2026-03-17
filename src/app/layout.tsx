@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
+const roboto = Roboto({ 
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: ["300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "SKIND | Danmarks førende online dermatologiske klinik",
+  title: "SKIND | Danmarks førende online hudklinik",
   description: "Få en professionel huddiagnose inden for 48 timer. Direkte fra certificerede hudlæger til din telefon. Sikker MitID login. Danmarks største digitale dermatologiske platform.",
   keywords: [
     "online hudlæge danmark",
@@ -25,7 +20,7 @@ export const metadata: Metadata = {
     "akne behandling online",
     "eksem hudlæge online",
     "online hudklinik",
-    "digital dermatologisk klinik"
+    "digital hudklinik"
   ],
   authors: [{ name: "SKIND" }],
   creator: "SKIND",
@@ -36,13 +31,13 @@ export const metadata: Metadata = {
     locale: "da_DK",
     url: "https://www.skinchange.dk",
     siteName: "SKIND",
-    title: "SKIND | Online Dermatologisk Klinik",
-    description: "Danmarks førende online dermatologiske klinik. Diagnose inden for 48 timer.",
+    title: "SKIND | Online Hudklinik",
+    description: "Danmarks førende online hudklinik. Diagnose inden for 48 timer.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SKIND | Online Dermatologisk Klinik",
-    description: "Danmarks førende online dermatologiske klinik",
+    title: "SKIND | Online Hudklinik",
+    description: "Danmarks førende online hudklinik",
   },
   alternates: {
     canonical: "https://www.skinchange.dk",
@@ -55,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="da" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="da" className={`${roboto.variable}`}>
       <body className="font-sans antialiased text-gray-900 bg-white">
         {children}
       </body>

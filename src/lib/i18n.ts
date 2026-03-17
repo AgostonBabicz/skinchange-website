@@ -16,7 +16,7 @@ export const translations = {
     },
     hero: {
       title: 'SKIND',
-      subtitle: 'Danmarks hurtigste dermatologiske klinik',
+      subtitle: 'Danmarks hurtigste hudklinik',
       description: 'Dine fotos analyseres af speciallæger i hudsygdomme',
       cta: 'Hent Appen',
       mitid: 'MitID Verificeret',

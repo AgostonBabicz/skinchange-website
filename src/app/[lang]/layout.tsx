@@ -27,11 +27,11 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
   const isDa = lang === 'da';
   
   const title = isDa 
-    ? "SKIND | Online Dermatologisk Klinik" 
-    : "SKIND | Online Dermatology Clinic";
+    ? "SKIND | Online Hudklinik" 
+    : "SKIND | Online Skin Clinic";
     
   const description = isDa
-    ? "Danmarks førende online dermatologiske klinik. Få en diagnose inden for 48 timer. Certificerede hudlæger, sikker MitID login. Online hudkonsultation for akne, eksem, psoriasis og hudkræft."
+    ? "Danmarks førende online hudklinik. Få en diagnose inden for 48 timer. Certificerede hudlæger, sikker MitID login. Online hudkonsultation for akne, eksem, psoriasis og hudkræft."
     : "Denmark's leading online dermatology clinic. Get a diagnosis within 48 hours. Certified dermatologists, secure MitID login. Online skin consultation for acne, eczema, psoriasis and skin cancer.";
     
   const ogImage = "https://www.skinchange.dk/og-image.jpg";
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: isDa ? "SKIND - Online Dermatologisk Klinik" : "SKIND - Online Dermatology Clinic",
+          alt: isDa ? "SKIND - Online Hudklinik" : "SKIND - Online Skin Clinic",
         },
       ],
     },
@@ -108,7 +108,7 @@ const structuredData = {
         "width": 675,
         "height": 225
       },
-      "description": "Danmarks førende online dermatologiske klinik. Få en diagnose inden for 48 timer.",
+      "description": "Danmarks førende online hudklinik. Få en diagnose inden for 48 timer.",
       "medicalSpecialty": "Dermatology",
       "address": {
         "@type": "PostalAddress",
@@ -152,7 +152,7 @@ const structuredData = {
       "@type": "MedicalWebPage",
       "@id": "https://www.skinchange.dk/#webpage",
       "url": "https://www.skinchange.dk",
-      "name": "SKIND | Online Dermatologisk Klinik",
+      "name": "SKIND | Online Hudklinik",
       "isPartOf": {
         "@id": "https://www.skinchange.dk/#website"
       },
@@ -162,7 +162,7 @@ const structuredData = {
       "primaryImageOfPage": {
         "@id": "https://www.skinchange.dk/og-image.jpg"
       },
-      "description": "Danmarks førende online dermatologiske klinik. Få en diagnose inden for 48 timer."
+      "description": "Danmarks førende online hudklinik. Få en diagnose inden for 48 timer."
     },
     {
       "@type": "Service",

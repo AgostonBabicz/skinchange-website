@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#304ffe",
-          50: "#e8eaf6",
+          DEFAULT: "#304FFE",
+          50: "#E8EAF6",
           100: "#c5cae9",
           200: "#9fa8da",
           300: "#7986cb",
@@ -20,18 +20,18 @@ const config: Config = {
           600: "#3949ab",
           700: "#303f9f",
           800: "#283593",
-          900: "#1a237e",
+          900: "#1A237E",
           950: "#0d1137",
         },
         background: {
-          DEFAULT: "#1a237f",
-          light: "#f8fafc",
+          DEFAULT: "#1A237E",
+          light: "#E8EAF6",
           dark: "#0f172a",
         },
         accent: {
-          DEFAULT: "#00e5ff",
-          light: "#80f7ff",
-          dark: "#00b8d4",
+          DEFAULT: "#DF4949",
+          light: "#f08080",
+          dark: "#b03030",
         },
         nordic: {
           white: "#ffffff",
@@ -45,8 +45,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-roboto)', 'Roboto', 'system-ui', 'sans-serif'],
+        display: ['var(--font-roboto)', 'Roboto', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display-1': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],

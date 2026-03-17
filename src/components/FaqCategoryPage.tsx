@@ -93,30 +93,33 @@ export default function FaqCategoryPage({ category, lang }: Props) {
               </div>
             )}
 
-            {/* Sub-groups (e.g. one per disease) */}
+            {/* Sub-groups (e.g. one per disease) — each disease group is collapsible */}
             {hasSubGroups && (
-              <div className="space-y-10">
+              <div className="space-y-4">
                 {category.subGroups!.map((sg) => {
                   const sgName = isDa ? sg.nameDa : sg.nameEn;
                   const sgQuestions = isDa ? sg.questions.da : sg.questions.en;
                   return (
-                    <div key={sg.slug}>
-                      {/* Sub-group header */}
-                      <div className="flex items-center gap-3 mb-4">
-                        {sg.icon && (
-                          <span className="text-2xl">{sg.icon}</span>
-                        )}
-                        <h2 className="text-2xl font-bold text-[#1a237e]">{sgName}</h2>
-                        <div className="flex-1 h-px bg-gray-200 ml-2" />
-                      </div>
+                    <details key={sg.slug} className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+                      {/* Collapsible disease header */}
+                      <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <div className="flex items-center gap-3">
+                          {sg.icon && <span className="text-2xl">{sg.icon}</span>}
+                          <h2 className="text-xl font-bold text-[#1a237e]">{sgName}</h2>
+                          <span className="text-sm text-gray-400 ml-1">
+                            ({sgQuestions.length} {isDa ? 'spørgsmål' : 'questions'})
+                          </span>
+                        </div>
+                        <span className="text-[#304ffe] text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
+                      </summary>
 
                       {/* Sub-group Q&As */}
-                      <div className="space-y-4 pl-0">
+                      <div className="px-4 pb-4 space-y-3">
                         {sgQuestions.map((q, i) => (
                           <AccordionItem key={i} q={q} i={i} />
                         ))}
                       </div>
-                    </div>
+                    </details>
                   );
                 })}
               </div>
