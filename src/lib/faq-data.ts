@@ -507,6 +507,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'tinea-infections-ringworm',
+        nameDa: 'Ringorm (Tinea)',
+        nameEn: 'Ringworm (Tinea)',
+        icon: '🍄',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er ringorm (tinea)?',
+              answer:
+                'Ringorm er ikke en orm, men en svampeinfektion forårsaget af dermatofytter — svampe der ernærer sig af keratin i hud, hår og negle. Der er flere typer: tinea corporis (kroppen), tinea cruris (lysken), tinea pedis (atletfod), tinea capitis (hovedbunden) og tinea unguium (negle). Det er smitsomt og kan spredes via direkte kontakt, dyr og forurenede genstande.',
+            },
+            {
+              question: 'Hvordan ser ringorm ud?',
+              answer:
+                'Det typiske tegn på ringorm på kroppen er en cirkulær, rød, kløende plet med hævet kant og ofte klart center — deraf navnet. Atletfod giver kløe, skæl og brændende fornemmelse mellem tæerne. Ringorm på hovedbunden forårsager skæl og hårtab. Negleinfektion giver misfarvede, tykke og smuldrende negle.',
+            },
+            {
+              question: 'Hvorfor opstår tinea-infektioner?',
+              answer:
+                'Dermatofytter trives i varme, fugtige miljøer. Svedtendens, stramtsiddende tøj, deling af personlige genstande som håndklæder og sko, kontakt med inficerede dyr og ophold i omklædningsrum og fællesbrusere øger alle risikoen. Et svækket immunforsvar gør dig mere sårbar over for svære infektioner.',
+            },
+            {
+              question: 'Hvem får tinea-infektioner?',
+              answer:
+                'Alle kan få ringorm, men børn er særligt tilbøjelige til tinea capitis. Sportsfolk og aktive mennesker er i øget risiko for atletfod og lyskeeksem. Beboere i tætte miljøer som kollegier og plejehjem, dyreejere og immunsvækkede er også mere sårbare.',
+            },
+            {
+              question: 'Hvad skal jeg huske om behandling af ringorm?',
+              answer:
+                'Topiske svampedræbende midler (clotrimazol, miconazol, terbinafin) er effektive mod mild tinea corporis, tinea cruris og atletfod — behandl mindst 2 uger efter symptomernes forsvinden. Tinea capitis og negleinfektion kræver altid receptpligtig oral behandling. Behandl inficerede kæledyr, og undgå deling af håndklæder og sko for at forebygge gensmitte.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is ringworm (tinea)?',
+              answer:
+                'Ringworm is not a worm, but a fungal infection caused by dermatophytes — fungi that feed on keratin in skin, hair and nails. There are several types: tinea corporis (body), tinea cruris (groin/jock itch), tinea pedis (athlete\'s foot), tinea capitis (scalp) and tinea unguium (nails). It is contagious and can spread through direct contact, animals and contaminated objects.',
+            },
+            {
+              question: 'What does ringworm look like?',
+              answer:
+                'The classic sign of body ringworm is a circular, red, itchy patch with a raised border and often a clear centre — hence the name. Athlete\'s foot causes itching, scaling and burning between the toes. Scalp ringworm causes scaling and hair loss. Nail infection causes discoloured, thickened and crumbly nails.',
+            },
+            {
+              question: 'Why do tinea infections happen?',
+              answer:
+                'Dermatophytes thrive in warm, moist environments. Heavy sweating, tight-fitting clothing, sharing personal items such as towels and shoes, contact with infected animals, and time spent in locker rooms and shared showers all increase the risk. A weakened immune system makes you more vulnerable to severe infections.',
+            },
+            {
+              question: 'Who gets tinea infections?',
+              answer:
+                'Anyone can get ringworm, but children are particularly prone to tinea capitis (scalp ringworm). Athletes and active people have an increased risk of athlete\'s foot and jock itch. People living in close-quarters settings such as dormitories and nursing homes, pet owners, and immunocompromised individuals are also more vulnerable.',
+            },
+            {
+              question: 'What should I remember about ringworm treatment?',
+              answer:
+                'Topical antifungals (clotrimazole, miconazole, terbinafine) are effective for mild tinea corporis, tinea cruris and athlete\'s foot — treat for at least 2 weeks after symptoms disappear. Tinea capitis and nail infection always require prescription oral treatment. Treat infected pets, and avoid sharing towels and shoes to prevent reinfection.',
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',
