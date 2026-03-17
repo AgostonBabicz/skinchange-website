@@ -72,6 +72,14 @@ const blogPosts = {
       readTime: '7 min',
       date: '16. marts 2026',
     },
+    {
+      slug: 'tinea-infections-ringworm',
+      title: 'Hvad er Ringorm (Tinea)? Årsager, Symptomer og Behandling',
+      excerpt: 'Ringorm er ikke en orm – det er en svampeinfektion. Lær om de forskellige typer tinea-infektioner (atletfod, lyskeeksem, ringorm på kroppen og negle), hvad der forårsager dem, og hvilken behandling der virker.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '17. marts 2026',
+    },
   ],
   en: [
     {
@@ -121,6 +129,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 16, 2026',
+    },
+    {
+      slug: 'tinea-infections-ringworm',
+      title: 'What is Ringworm (Tinea)? Causes, Symptoms and Treatment',
+      excerpt: 'Ringworm is not a worm — it is a fungal infection. Learn about the different types of tinea infections (athlete\'s foot, jock itch, body ringworm and nail fungus), what causes them, and which treatment works.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'March 17, 2026',
     },
   ],
 };
