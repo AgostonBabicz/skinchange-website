@@ -26,6 +26,7 @@
   body {
     @apply antialiased text-gray-900 bg-white;
     font-feature-settings: "liga" 1, "calt" 1;
+    font-size: 1.0625rem; /* 17px base — up from 16px */
   }
 }
 
@@ -142,7 +143,7 @@
   }
   
   .body-regular {
-    @apply text-base leading-relaxed text-gray-600;
+    @apply text-[1.0625rem] leading-relaxed text-gray-600;
   }
 }
 
