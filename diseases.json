@@ -122,7 +122,8 @@
   {
     "id": 9,
     "name": "Vitiligo",
-    "handled": false,
+    "handled": true,
+    "handled_date": "2026-03-18",
     "slug": "vitiligo",
     "en": {
       "content": "Additional information\nWhat is it?\nVitiligo is a non-contagious skin condition that causes loss of pigment in certain areas, leading to white patches on the skin. It's important to remember that vitiligo is not caused by anything you did and is not a threat to your overall health.\n\nWhat does it look like?\nVitiligo manifests differently for everyone, but common signs include:\nSmooth, white patches on different areas of the skin. These patches can vary in size and shape and may appear on any part of your body, including the face, hands, arms, legs, and genitals.\nLoss of pigment in hair or mucous membranes. In some cases, the hair growing on areas with vitiligo patches can also lose its color.\n\nWhy does it happen?\nThe exact cause of vitiligo is unknown, but it's believed to be an autoimmune disorder where the immune system mistakenly attacks pigment-producing cells (melanocytes) in the skin.\n\nWho gets it?\nVitiligo can affect anyone at any age, regardless of race or ethnicity. However, it's more common in people with:\nFamily history of vitiligo.\nOther autoimmune conditions like thyroid disease, alopecia areata, or lupus.\nCertain medical conditions or stressful life events that can trigger the immune system.\n\nRemember:\nVitiligo is manageable, but there's no known cure. However, various treatment options can help control the spread of white patches and restore some pigment.\nSeek professional help. A dermatologist can diagnose your specific type of vitiligo and recommend the most suitable treatment plan for you.\nSupport is available. Don't hesitate to connect with support groups or organizations dedicated to vitiligo to connect with others facing similar experiences"

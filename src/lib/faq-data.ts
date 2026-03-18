@@ -569,6 +569,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'vitiligo',
+        nameDa: 'Vitiligo',
+        nameEn: 'Vitiligo',
+        icon: '🤍',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er vitiligo?',
+              answer:
+                'Vitiligo er en ikke-smitsom autoimmun hudlidelse, hvor immunsystemet fejlagtigt angriber og ødelægger melanocytterne – de pigmentproducerende celler i huden. Resultatet er glatte, hvide pletter (afpigmenterede områder) der kan opstå overalt på kroppen. Tilstanden er ikke forårsaget af noget du har gjort forkert og udgør ikke en trussel mod din generelle sundhed.',
+            },
+            {
+              question: 'Hvordan ser vitiligo ud?',
+              answer:
+                'Vitiligo viser sig som glatte, hvide og tydeligt afgrænsede pletter på huden. Pletterne kan variere fra få millimeter til store dele af kroppen og opstår oftest i ansigtet, på hænderne, armene og benene. I visse tilfælde mister håret i de berørte områder også sin farve. Tilstanden kan optræde symmetrisk på begge sider (generaliseret vitiligo) eller begrænse sig til ét område (fokal vitiligo).',
+            },
+            {
+              question: 'Hvorfor opstår vitiligo?',
+              answer:
+                'Vitiligo skyldes en autoimmun reaktion, hvor T-lymfocytter angriber melanocytterne. Genetisk disposition spiller en vigtig rolle – 20–30% af dem med vitiligo har et familiemedlem med samme tilstand. Udløsende faktorer kan inkludere alvorlig stress, hudskader (Köbner-fænomenet) og solskoldninger. Vitiligo er desuden associeret med øget risiko for andre autoimmune sygdomme som skjoldbruskkirtelsygdom og alopecia areata.',
+            },
+            {
+              question: 'Hvem får vitiligo?',
+              answer:
+                'Vitiligo rammer ca. 1–2% af verdens befolkning uanset race, etnicitet, køn eller alder. Halvdelen af alle tilfælde debuterer før 20-årsalderen. Risikoen er forhøjet ved familiehistorie med vitiligo eller andre autoimmune sygdomme. Tilstanden er ofte mere synlig – og psykisk belastende – hos personer med mørkere hudtone.',
+            },
+            {
+              question: 'Hvad skal jeg huske om vitiligo behandling?',
+              answer:
+                'Der er ingen kur mod vitiligo, men behandlinger som topiske kortikosteroider, calcineurinhæmmere, smalspektret UVB-lysbehandling og nye JAK-hæmmere (ruxolitinib) kan bremse spredningen og hjælpe med repigmentering. Brug altid solcreme SPF 50+ på afpigmenterede områder, da de brænder let. Søg en hudlæge tidligt – jo tidligere behandling startes, jo bedre er udsigterne.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is vitiligo?',
+              answer:
+                'Vitiligo is a non-contagious autoimmune skin condition in which the immune system mistakenly attacks and destroys melanocytes — the pigment-producing cells in the skin. The result is smooth, white patches (depigmented areas) that can appear anywhere on the body. The condition is not caused by anything you have done wrong and does not pose a threat to your overall health.',
+            },
+            {
+              question: 'What does vitiligo look like?',
+              answer:
+                'Vitiligo presents as smooth, white and clearly defined patches on the skin. The patches can range from a few millimetres to large areas of the body and most commonly appear on the face, hands, arms and legs. In some cases, hair in the affected areas also loses its colour. The condition can appear symmetrically on both sides (generalised vitiligo) or be limited to one area (focal vitiligo).',
+            },
+            {
+              question: 'Why does vitiligo happen?',
+              answer:
+                'Vitiligo is caused by an autoimmune reaction in which T-lymphocytes attack melanocytes. Genetic predisposition plays an important role — 20–30% of people with vitiligo have a family member with the same condition. Triggering factors may include severe stress, skin injury (Köbner phenomenon) and sunburn. Vitiligo is also associated with an increased risk of other autoimmune diseases such as thyroid disease and alopecia areata.',
+            },
+            {
+              question: 'Who gets vitiligo?',
+              answer:
+                'Vitiligo affects approximately 1–2% of the world\'s population regardless of race, ethnicity, gender or age. Half of all cases begin before the age of 20. The risk is elevated with a family history of vitiligo or other autoimmune diseases. The condition is often more visible — and psychologically distressing — in people with darker skin tones.',
+            },
+            {
+              question: 'What should I remember about vitiligo treatment?',
+              answer:
+                'There is no cure for vitiligo, but treatments such as topical corticosteroids, calcineurin inhibitors, narrowband UVB light therapy and new JAK inhibitors (ruxolitinib) can slow the spread and help with repigmentation. Always use sunscreen SPF 50+ on depigmented areas as they burn easily. Seek a dermatologist early — the sooner treatment begins, the better the outlook.',
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',

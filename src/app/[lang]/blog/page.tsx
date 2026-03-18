@@ -80,6 +80,14 @@ const blogPosts = {
       readTime: '7 min',
       date: '17. marts 2026',
     },
+    {
+      slug: 'vitiligo',
+      title: 'Hvad er Vitiligo? Årsager, Symptomer og Behandling',
+      excerpt: 'Vitiligo er en autoimmun hudlidelse, der forårsager hvide, afpigmenterede pletter på huden. Lær hvad vitiligo er, hvorfor immunsystemet angriber pigmentcellerne, hvem der rammes, og hvilke behandlinger der kan hjælpe.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '18. marts 2026',
+    },
   ],
   en: [
     {
@@ -137,6 +145,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 17, 2026',
+    },
+    {
+      slug: 'vitiligo',
+      title: 'What is Vitiligo? Causes, Symptoms and Treatment',
+      excerpt: 'Vitiligo is an autoimmune skin condition that causes white, depigmented patches on the skin. Learn what vitiligo is, why the immune system attacks pigment cells, who gets it, and which treatments can help.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'March 18, 2026',
     },
   ],
 };
