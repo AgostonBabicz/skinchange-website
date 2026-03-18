@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er herpes simplex, HSV-1, HSV-2, forkølelsessår, genital herpes, herpes behandling, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/herpes-simplex-virus',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/herpes-simplex-virus',
+            da: 'https://www.skinchange.dk/da/blog/herpes-simplex-virus',
+            en: 'https://www.skinchange.dk/en/blog/herpes-simplex-virus',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is herpes simplex, HSV-1, HSV-2, cold sores, genital herpes, herpes treatment, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/herpes-simplex-virus',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/herpes-simplex-virus',
+            da: 'https://www.skinchange.dk/da/blog/herpes-simplex-virus',
+            en: 'https://www.skinchange.dk/en/blog/herpes-simplex-virus',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
     datePublished: '2026-03-15',
     dateModified: '2026-03-15',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {

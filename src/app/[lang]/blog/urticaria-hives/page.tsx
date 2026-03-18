@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er nældefeber, urticaria symptomer, nældefeber årsager, nældefeber behandling, hudlæge nældefeber, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/urticaria-hives',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/urticaria-hives',
+            da: 'https://www.skinchange.dk/da/blog/urticaria-hives',
+            en: 'https://www.skinchange.dk/en/blog/urticaria-hives',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is urticaria, hives symptoms, urticaria causes, hives treatment, dermatologist hives, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/urticaria-hives',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/urticaria-hives',
+            da: 'https://www.skinchange.dk/da/blog/urticaria-hives',
+            en: 'https://www.skinchange.dk/en/blog/urticaria-hives',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-14',
     dateModified: '2026-03-14',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {

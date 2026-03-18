@@ -18,7 +18,7 @@ export default function Stats({ lang }: StatsProps) {
               100+
             </p>
             <p className="text-gray-600 text-sm lg:text-base font-medium">
-              {isDa ? 'Cases handled' : 'Cases handled'}
+              {isDa ? 'Behandlede sager' : 'Cases handled'}
             </p>
           </div>
           <div className="text-center">
@@ -26,7 +26,7 @@ export default function Stats({ lang }: StatsProps) {
               48
             </p>
             <p className="text-gray-600 text-sm lg:text-base font-medium">
-              {isDa ? 'Hour diagnosis' : 'Hour diagnosis'}
+              {isDa ? 'Timers diagnose' : 'Hour diagnosis'}
             </p>
           </div>
           <div className="text-center">
@@ -34,7 +34,7 @@ export default function Stats({ lang }: StatsProps) {
               2
             </p>
             <p className="text-gray-600 text-sm lg:text-base font-medium">
-              {isDa ? 'Certified doctors' : 'Certified doctors'}
+              {isDa ? 'Certificerede læger' : 'Certified doctors'}
             </p>
           </div>
           <div className="text-center">
@@ -42,7 +42,7 @@ export default function Stats({ lang }: StatsProps) {
               5/5
             </p>
             <p className="text-gray-600 text-sm lg:text-base font-medium">
-              {isDa ? 'Reviews' : 'Reviews'}
+              {isDa ? 'Anmeldelser' : 'Reviews'}
             </p>
           </div>
         </div>

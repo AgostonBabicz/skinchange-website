@@ -17,6 +17,14 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
     description: isDa 
       ? 'Få ekspertråd om hudsygdomme, behandling af akne, eksem, psoriasis og meget mere. Læs artikler skrevet af certificerede hudlæger.' 
       : 'Get expert advice on skin diseases, acne treatment, eczema, psoriasis and more. Articles written by certified dermatologists.',
+    alternates: {
+      canonical: `https://www.skinchange.dk/${params.lang}/blog`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/blog',
+        da: 'https://www.skinchange.dk/da/blog',
+        en: 'https://www.skinchange.dk/en/blog',
+      },
+    },
   };
 }
 

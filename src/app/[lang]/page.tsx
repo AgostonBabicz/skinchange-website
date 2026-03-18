@@ -31,6 +31,11 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
     alternates: {
       canonical: `https://www.skinchange.dk/${params.lang}`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da',
+        da: 'https://www.skinchange.dk/da',
+        en: 'https://www.skinchange.dk/en',
+      },
     },
   };
 }
@@ -38,36 +43,7 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
 export default function HomePage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
-  // Service Schema for SEO
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'MedicalBusiness',
-    name: 'SKIND',
-    description: isDa 
-      ? 'Online hudlæge konsultation med certificerede dermatologer'
-      : 'Online dermatologist consultation with certified dermatologists',
-    url: 'https://www.skinchange.dk',
-    logo: 'https://www.skinchange.dk/SKIND_logo_dark.svg',
-    image: 'https://www.skinchange.dk/Download_page_mockup.png',
-    telephone: '+45-XXX-XXXX',
-    email: 'info@skinchange.ai',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Hindbærhaven 48',
-      addressLocality: 'Vejle',
-      postalCode: '7120',
-      addressCountry: 'DK'
-    },
-    medicalSpecialty: 'Dermatology',
-    priceRange: isDa ? '298 DKK' : '€40',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '15000'
-    }
-  };
-
-  // Offer Schema for pricing
+  // Offer Schema for pricing (page-level — org schema lives in layout.tsx)
   const offerSchema = {
     '@context': 'https://schema.org',
     '@type': 'Offer',
@@ -79,7 +55,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
     priceCurrency: isDa ? 'DKK' : 'EUR',
     availability: 'https://schema.org/InStock',
     offeredBy: {
-      '@type': 'MedicalBusiness',
+      '@type': 'MedicalOrganization',
+      '@id': 'https://www.skinchange.dk/#organization',
       name: 'SKIND'
     },
     serviceType: 'Telemedicine'
@@ -100,11 +77,6 @@ export default function HomePage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
       <Script
         id="offer-schema"
         type="application/ld+json"

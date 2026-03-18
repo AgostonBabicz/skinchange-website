@@ -22,6 +22,11 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
     alternates: {
       canonical: `https://www.skinchange.dk/${params.lang}/faq`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/faq',
+        da: 'https://www.skinchange.dk/da/faq',
+        en: 'https://www.skinchange.dk/en/faq',
+      },
     },
   };
 }

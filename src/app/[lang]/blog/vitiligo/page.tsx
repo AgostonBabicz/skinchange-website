@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er vitiligo, vitiligo symptomer, vitiligo årsager, vitiligo behandling, hudlæge vitiligo, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/vitiligo',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/vitiligo',
+            da: 'https://www.skinchange.dk/da/blog/vitiligo',
+            en: 'https://www.skinchange.dk/en/blog/vitiligo',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is vitiligo, vitiligo symptoms, vitiligo causes, vitiligo treatment, dermatologist vitiligo, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/vitiligo',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/vitiligo',
+            da: 'https://www.skinchange.dk/da/blog/vitiligo',
+            en: 'https://www.skinchange.dk/en/blog/vitiligo',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-18',
     dateModified: '2026-03-18',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {

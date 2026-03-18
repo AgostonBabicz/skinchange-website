@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er acne, acne symptomer, acne årsager, acne behandling, hudlæge acne, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/acne',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/acne',
+            da: 'https://www.skinchange.dk/da/blog/acne',
+            en: 'https://www.skinchange.dk/en/blog/acne',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is acne, acne symptoms, acne causes, acne treatment, dermatologist acne, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/acne',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/acne',
+            da: 'https://www.skinchange.dk/da/blog/acne',
+            en: 'https://www.skinchange.dk/en/blog/acne',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function AcnePage({ params: { lang } }: PageProps) {
     datePublished: '2025-03-12',
     dateModified: '2025-03-12',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {
