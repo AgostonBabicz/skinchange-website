@@ -44,7 +44,7 @@ export default function Navigation({ lang }: NavigationProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors text-sm font-medium"
+                className="text-white/80 hover:text-white transition-colors text-base font-medium"
               >
                 {link.label}
               </Link>
@@ -55,7 +55,7 @@ export default function Navigation({ lang }: NavigationProps) {
           <div className="hidden lg:flex items-center space-x-4">
             {/* Language switcher */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 text-white/80 hover:text-white transition-colors text-sm font-medium">
+              <button className="flex items-center space-x-1 text-white/80 hover:text-white transition-colors text-base font-medium">
                 <span className="uppercase">{lang}</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -98,14 +98,14 @@ export default function Navigation({ lang }: NavigationProps) {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-white/80 hover:text-white transition-colors text-base font-medium"
+                  className="text-white/80 hover:text-white transition-colors text-lg font-medium"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 href={isDa ? '/en' : '/da'}
-                className="text-white/80 hover:text-white transition-colors text-base font-medium pt-4 border-t border-white/10"
+                className="text-white/80 hover:text-white transition-colors text-lg font-medium pt-4 border-t border-white/10"
               >
                 {isDa ? 'English' : 'Dansk'}
               </Link>

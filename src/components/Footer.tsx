@@ -63,7 +63,7 @@ export default function Footer({ lang }: FooterProps) {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-base">
                     {link.label}
                   </Link>
                 </li>
@@ -77,7 +77,7 @@ export default function Footer({ lang }: FooterProps) {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-base">
                     {link.label}
                   </Link>
                 </li>
@@ -94,10 +94,10 @@ export default function Footer({ lang }: FooterProps) {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10">
           <div className="grid md:grid-cols-2 gap-4 items-center">
-            <p className="text-white/40 text-sm">
+            <p className="text-white/40 text-base">
               © 2024 {t.footer.company} - {t.footer.cvr}
             </p>
-            <div className="flex items-center gap-4 md:justify-end text-white/40 text-sm">
+            <div className="flex items-center gap-4 md:justify-end text-white/40 text-base">
               <a href="mailto:info@skinchange.ai" className="hover:text-white transition-colors">
                 {t.footer.email}
               </a>

@@ -104,7 +104,6 @@ export default function FaqCategoryPage({ category, lang }: Props) {
                       {/* Collapsible disease header */}
                       <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                         <div className="flex items-center gap-3">
-                          {sg.icon && <span className="text-2xl">{sg.icon}</span>}
                           <h2 className="text-xl font-bold text-[#1a237e]">{sgName}</h2>
                           <span className="text-sm text-gray-400 ml-1">
                             ({sgQuestions.length} {isDa ? 'spørgsmål' : 'questions'})
