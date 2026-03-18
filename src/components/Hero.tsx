@@ -27,18 +27,20 @@ export default function Hero({ lang }: HeroProps) {
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* MitID Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 animate-fade-in">
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20 animate-fade-in">
               <Shield className="w-4 h-4 text-[#00e5ff] mr-2" />
               <span className="text-white/90 text-sm font-medium">{t.hero.mitid}</span>
             </div>
 
-            {/* Heading */}
-            <h1 className="text-6xl lg:text-8xl font-bold text-white mb-4 tracking-tight font-display animate-fade-up">
+            {/* Brand wordmark — decorative, not the H1 */}
+            <p className="text-5xl lg:text-7xl font-black text-white tracking-tight font-display animate-fade-up mb-2" aria-hidden="true">
+              SKIND
+            </p>
+
+            {/* H1 — descriptive for SEO (10-70 chars) */}
+            <h1 className="text-xl lg:text-2xl font-semibold text-white/90 mb-6 animate-fade-up delay-100">
               {t.hero.title}
             </h1>
-            <h2 className="text-2xl lg:text-4xl font-semibold text-white/90 mb-6 animate-fade-up delay-100">
-              {t.hero.subtitle}
-            </h2>
             <p className="text-lg lg:text-xl text-white/70 mb-6 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-200 leading-relaxed">
               {t.hero.description}
             </p>
