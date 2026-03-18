@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er eksem, atopisk dermatitis, eksem symptomer, eksem behandling, kløende hud, hudlæge eksem, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/eczema-atopic-dermatitis',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/eczema-atopic-dermatitis',
+            da: 'https://www.skinchange.dk/da/blog/eczema-atopic-dermatitis',
+            en: 'https://www.skinchange.dk/en/blog/eczema-atopic-dermatitis',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is eczema, atopic dermatitis, eczema symptoms, eczema treatment, itchy skin, dermatologist eczema, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/eczema-atopic-dermatitis',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/eczema-atopic-dermatitis',
+            da: 'https://www.skinchange.dk/da/blog/eczema-atopic-dermatitis',
+            en: 'https://www.skinchange.dk/en/blog/eczema-atopic-dermatitis',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-12',
     dateModified: '2026-03-12',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {

@@ -49,6 +49,7 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
     alternates: {
       canonical: `https://www.skinchange.dk/${lang}`,
       languages: {
+        'x-default': 'https://www.skinchange.dk/da',
         'da': 'https://www.skinchange.dk/da',
         'en': 'https://www.skinchange.dk/en',
       },

@@ -15,6 +15,14 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
     description: isDa 
       ? 'Lær mere om SKIND og vores mission med at gøre dermatologisk behandling tilgængelig for alle.' 
       : 'Learn more about SKIND and our mission to make dermatological care accessible to everyone.',
+    alternates: {
+      canonical: `https://www.skinchange.dk/${params.lang}/about`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/about',
+        da: 'https://www.skinchange.dk/da/about',
+        en: 'https://www.skinchange.dk/en/about',
+      },
+    },
   };
 }
 

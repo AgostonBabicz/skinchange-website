@@ -21,6 +21,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       : "Contact SKIND for questions about online skin consultation. Email: info@skinchange.ai. We respond within 48 hours.",
     alternates: {
       canonical: `https://www.skinchange.dk/${params.lang}/contact`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/contact',
+        da: 'https://www.skinchange.dk/da/contact',
+        en: 'https://www.skinchange.dk/en/contact',
+      },
     },
     openGraph: {
       title: isDa ? "Kontakt os | SKIND" : "Contact Us | SKIND",

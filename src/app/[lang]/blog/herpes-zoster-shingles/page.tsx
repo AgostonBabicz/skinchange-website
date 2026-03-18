@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er helvedesild, helvedesild symptomer, helvedesild årsager, helvedesild behandling, herpes zoster, hudlæge helvedesild, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/herpes-zoster-shingles',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/herpes-zoster-shingles',
+            da: 'https://www.skinchange.dk/da/blog/herpes-zoster-shingles',
+            en: 'https://www.skinchange.dk/en/blog/herpes-zoster-shingles',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is shingles, shingles symptoms, shingles causes, shingles treatment, herpes zoster, dermatologist shingles, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/herpes-zoster-shingles',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/herpes-zoster-shingles',
+            da: 'https://www.skinchange.dk/da/blog/herpes-zoster-shingles',
+            en: 'https://www.skinchange.dk/en/blog/herpes-zoster-shingles',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
     datePublished: '2026-03-16',
     dateModified: '2026-03-16',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {

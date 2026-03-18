@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er rosacea, rosacea symptomer, rosacea årsager, rosacea behandling, hudlæge rosacea, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/rosacea',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/rosacea',
+            da: 'https://www.skinchange.dk/da/blog/rosacea',
+            en: 'https://www.skinchange.dk/en/blog/rosacea',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is rosacea, rosacea symptoms, rosacea causes, rosacea treatment, dermatologist rosacea, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/rosacea',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/rosacea',
+            da: 'https://www.skinchange.dk/da/blog/rosacea',
+            en: 'https://www.skinchange.dk/en/blog/rosacea',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-13',
     dateModified: '2026-03-13',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {

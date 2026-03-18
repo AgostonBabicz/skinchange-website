@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'hvad er ringorm, tinea corporis, atletfod, lyskeeksem, ringorm symptomer, svampeinfektion hud, tinea behandling, hudlæge svamp, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/tinea-infections-ringworm',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/tinea-infections-ringworm',
+            da: 'https://www.skinchange.dk/da/blog/tinea-infections-ringworm',
+            en: 'https://www.skinchange.dk/en/blog/tinea-infections-ringworm',
+          },
         },
       }
     : {
@@ -30,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           'what is ringworm, tinea corporis, athlete\'s foot, jock itch, ringworm symptoms, fungal skin infection, tinea treatment, dermatologist fungus, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/tinea-infections-ringworm',
+          languages: {
+            'x-default': 'https://www.skinchange.dk/da/blog/tinea-infections-ringworm',
+            da: 'https://www.skinchange.dk/da/blog/tinea-infections-ringworm',
+            en: 'https://www.skinchange.dk/en/blog/tinea-infections-ringworm',
+          },
         },
       };
 }
@@ -50,8 +60,10 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
     datePublished: '2026-03-17',
     dateModified: '2026-03-17',
     author: {
-      '@type': 'Organization',
-      name: 'SkinChange.AI',
+      '@type': 'Person',
+      '@id': 'https://www.skinchange.dk/#peter-bjerring',
+      name: 'Peter Bjerring',
+      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
       url: `https://www.skinchange.dk/${lang}/about`,
     },
     publisher: {
