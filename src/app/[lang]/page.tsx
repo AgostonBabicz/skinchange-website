@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
       ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SKIND' 
       : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SKIND',
     description: isDa 
-      ? 'Konsultation med certificerede hudlæger online. Behandling af akne, eksem, psoriasis, rosacea og hudkræft. Diagnose inden for 48 timer. Kun 298 kr. MitID verificeret.' 
-      : 'Consultation with certified dermatologists online. Treatment for acne, eczema, psoriasis, rosacea and skin cancer. Diagnosis within 48 hours. Only €40. MitID verified.',
+      ? 'Certificerede hudlæger online. Diagnose af akne, eksem, psoriasis og hudkræft inden for 48 timer. Kun 298 kr. MitID verificeret.' 
+      : 'Certified dermatologists online. Diagnosis for acne, eczema, psoriasis and skin cancer within 48 hours. Only €40. MitID verified.',
     keywords: isDa 
       ? 'online hudlæge, teledermatologi, hudlæge online, akne behandling, eksem behandling, psoriasis behandling, hudkræft tjek, modermærker, online recept'
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
