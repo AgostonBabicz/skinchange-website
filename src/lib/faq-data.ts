@@ -693,6 +693,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'contact-dermatitis',
+        nameDa: 'Kontaktdermatitis',
+        nameEn: 'Contact Dermatitis',
+        icon: '🖐️',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er kontaktdermatitis?',
+              answer:
+                'Kontaktdermatitis er en betændelsestilstand i huden, der opstår når huden reagerer på et stof, den har været i kontakt med. Der findes to hovedtyper: irritativ kontaktdermatitis forårsaget af direkte skade på hudens barriere, og allergisk kontaktdermatitis der skyldes en immunreaktion mod et specifikt allergen. Tilstanden er ikke smitsom.',
+            },
+            {
+              question: 'Hvordan ser kontaktdermatitis ud?',
+              answer:
+                'Typiske tegn inkluderer rødme og hævelse på de berørte områder, intens kløe og brændende fornemmelser, små blærer eller knopper, og i kroniske tilfælde tør, revnet og skællende hud. Udslættet optræder typisk på hænder, håndled, arme og ansigt.',
+            },
+            {
+              question: 'Hvorfor opstår kontaktdermatitis?',
+              answer:
+                'Irritativ kontaktdermatitis opstår når et stof direkte skader hudens barriere — eksempler inkluderer sæber, rengøringsmidler og opløsningsmidler. Allergisk kontaktdermatitis involverer en forsinket immunreaktion mod et allergen såsom nikkel, parfumer eller latex. Begge typer kan udløses af stress og underliggende hudtilstande.',
+            },
+            {
+              question: 'Hvem får kontaktdermatitis?',
+              answer:
+                'Alle kan udvikle kontaktdermatitis. Personer med atopisk eksem er mere modtagelige pga. en svækket hudbarriere. Erhverv med høj eksponering for kemikalier — frisører, laboranter, mekanikere og sundhedspersonale — har forhøjet risiko. Nikkelallergi er en af de mest udbredte kontaktallergier globalt.',
+            },
+            {
+              question: 'Hvad skal jeg huske om behandling af kontaktdermatitis?',
+              answer:
+                'Identificer og undgå udløseren — dette er det vigtigste skridt. Kortikosteroidcremer er standardbehandling mod inflammation og kløe. Brug beskyttelseshandsker, vælg parfumefrie produkter, og hold huden fugtet med milde fugtighedscremer. Ved svær allergisk dermatitis kan en hudlæge anbefale stærkere topikale steroider eller andre lægemidler.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is contact dermatitis?',
+              answer:
+                'Contact dermatitis is an inflammatory skin condition that occurs when the skin reacts to a substance it has touched. There are two main types: irritant contact dermatitis caused by direct damage to the skin barrier, and allergic contact dermatitis caused by an immune reaction to a specific allergen. The condition is not contagious.',
+            },
+            {
+              question: 'What does contact dermatitis look like?',
+              answer:
+                'Typical signs include redness and swelling on the affected areas, intense itching and burning sensations, small blisters or bumps, and in chronic cases dry, cracked and scaly skin. The rash typically appears on the hands, wrists, arms and face.',
+            },
+            {
+              question: 'Why does contact dermatitis happen?',
+              answer:
+                'Irritant contact dermatitis occurs when a substance directly damages the skin barrier — examples include soaps, detergents and solvents. Allergic contact dermatitis involves a delayed immune reaction against an allergen such as nickel, fragrances or latex. Both types can be triggered by stress and underlying skin conditions.',
+            },
+            {
+              question: 'Who gets contact dermatitis?',
+              answer:
+                'Anyone can develop contact dermatitis. People with atopic eczema are more susceptible due to a weakened skin barrier. Occupations with high exposure to chemicals — hairdressers, laboratory workers, mechanics and healthcare workers — have elevated risk. Nickel allergy is one of the most common contact allergies globally.',
+            },
+            {
+              question: 'What should I remember about contact dermatitis treatment?',
+              answer:
+                "Identify and avoid the trigger — this is the most important step. Corticosteroid creams are the standard treatment for inflammation and itching. Wear protective gloves, choose fragrance-free products, and keep the skin moisturised with gentle moisturisers. For severe allergic dermatitis, a dermatologist may recommend stronger topical steroids or other medications.",
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',

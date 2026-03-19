@@ -104,6 +104,14 @@ const blogPosts = {
       readTime: '7 min',
       date: '18. marts 2026',
     },
+    {
+      slug: 'contact-dermatitis',
+      title: 'Hvad er Kontaktdermatitis? Årsager, Symptomer og Behandling',
+      excerpt: 'Kontaktdermatitis er en af de mest almindelige hudlidelser og opstår når huden reagerer på et stof, den har været i kontakt med. Lær om de to hovedtyper — irritativ og allergisk — og hvad du kan gøre.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '19. marts 2026',
+    },
   ],
   en: [
     {
@@ -177,6 +185,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 18, 2026',
+    },
+    {
+      slug: 'contact-dermatitis',
+      title: 'What is Contact Dermatitis? Causes, Symptoms and Treatment',
+      excerpt: 'Contact dermatitis is one of the most common skin conditions, occurring when the skin reacts to a substance it has touched. Learn about the two main types — irritant and allergic — and what you can do about it.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'March 19, 2026',
     },
   ],
 };
