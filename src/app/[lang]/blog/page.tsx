@@ -220,7 +220,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 bg-white">
+      <section id="diseases" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
