@@ -197,6 +197,68 @@ export const faqCategories: FaqCategory[] = [
     questions: { da: [], en: [] },
     subGroups: [
       {
+        slug: 'seborrheic-dermatitis',
+        nameDa: 'Seborrheisk Dermatitis',
+        nameEn: 'Seborrheic Dermatitis',
+        icon: '🧴',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er seborrheisk dermatitis?',
+              answer:
+                'Seborrheisk dermatitis er en almindelig, kronisk hudlidelse, der forårsager røde, skællende og fedtede pletter på hovedbunden, i ansigtet og på andre olieholdige områder. Den er ikke smitsom og udgør ingen alvorlig sundhedsrisiko.',
+            },
+            {
+              question: 'Hvordan ser seborrheisk dermatitis ud?',
+              answer:
+                'Typiske tegn inkluderer skællende, røde pletter på hovedbunden (skæl), øjenbrynene, siderne af næsen og bag ørerne. Hos spædbørn ses karakteristiske gullige, fedtede skæl på hovedbunden (vuggekant).',
+            },
+            {
+              question: 'Hvorfor opstår seborrheisk dermatitis?',
+              answer:
+                'Flere faktorer bidrager: overproduktion af talg skaber et miljø, hvor gærsvampen Malassezia trives og udløser inflammation. Genetik, hormonelle faktorer og et svækket immunsystem øger også risikoen.',
+            },
+            {
+              question: 'Hvem får seborrheisk dermatitis?',
+              answer:
+                'Alle kan rammes. Spædbørn under tre måneder udvikler ofte vuggekant. Voksne mellem 30–50 år er hyppigst ramt, særligt mænd. Personer med HIV/AIDS eller svækket immunsystem har markant højere risiko.',
+            },
+            {
+              question: 'Hvad skal jeg huske om behandling af seborrheisk dermatitis?',
+              answer:
+                'Konsistent behandling er nøglen. Svampedræbende shampoo (ketoconazol, zinkpyrithion) er førstevalgsbehandling mod skæl. Creme med steroid eller svampedræbende creme behandler ansigts- og kropsbetændelse. Stresshåndtering og skånsom hudpleje reducerer udbrud. Der er ingen kur, men tilstanden kan holdes under kontrol.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is seborrheic dermatitis?',
+              answer:
+                'Seborrheic dermatitis is a common, chronic skin condition causing red, scaly and greasy patches on the scalp, face and other oily areas of the body. It is not contagious and poses no serious health risk.',
+            },
+            {
+              question: 'What does seborrheic dermatitis look like?',
+              answer:
+                'Typical signs include scaly, red patches on the scalp (dandruff), eyebrows, sides of the nose and behind the ears. In infants, characteristic yellowish, greasy scales appear on the scalp (cradle cap).',
+            },
+            {
+              question: 'Why does seborrheic dermatitis happen?',
+              answer:
+                'Several factors contribute: overproduction of sebum creates an environment where the yeast Malassezia thrives and triggers inflammation. Genetics, hormonal factors and a weakened immune system also increase the risk.',
+            },
+            {
+              question: 'Who gets seborrheic dermatitis?',
+              answer:
+                'Anyone can be affected. Infants under three months often develop cradle cap. Adults between 30–50 years are most commonly affected, particularly men. People with HIV/AIDS or weakened immune systems have a significantly higher risk.',
+            },
+            {
+              question: 'What should I remember about seborrheic dermatitis treatment?',
+              answer:
+                "Consistent treatment is key. Antifungal shampoos (ketoconazole, zinc pyrithione) are first-line for dandruff. Steroid or antifungal creams treat facial and body inflammation. Stress management and gentle skincare reduce flare-ups. There is no cure, but the condition can be kept under control.",
+            },
+          ],
+        },
+      },
+      {
         slug: 'acne',
         nameDa: 'Acne',
         nameEn: 'Acne',
