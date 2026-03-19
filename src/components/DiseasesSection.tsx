@@ -38,6 +38,19 @@ export default function DiseasesSection({ lang }: DiseasesSectionProps) {
             </div>
           ))}
         </div>
+
+        {/* Blog link */}
+        <div className="text-center mt-12">
+          <a
+            href={`/${lang}/blog#diseases`}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold hover:bg-white/20 transition-all"
+          >
+            {lang === 'da' ? 'Læs om sygdommene i vores blog' : 'Read about conditions in our blog'}
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
