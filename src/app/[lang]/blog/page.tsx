@@ -89,6 +89,14 @@ const blogPosts = {
       date: '17. marts 2026',
     },
     {
+      slug: 'seborrheic-dermatitis',
+      title: 'Hvad er Seborrheisk Dermatitis? Årsager, Symptomer og Behandling',
+      excerpt: 'Seborrheisk dermatitis er en af de mest almindelige hudlidelser, der rammer op mod 5% af befolkningen. Lær hvad det er, hvad der forårsager det, og hvilke behandlinger der virker.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '19. marts 2026',
+    },
+    {
       slug: 'vitiligo',
       title: 'Hvad er Vitiligo? Årsager, Symptomer og Behandling',
       excerpt: 'Vitiligo er en autoimmun hudlidelse, der forårsager hvide, afpigmenterede pletter på huden. Lær hvad vitiligo er, hvorfor immunsystemet angriber pigmentcellerne, hvem der rammes, og hvilke behandlinger der kan hjælpe.',
@@ -153,6 +161,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 17, 2026',
+    },
+    {
+      slug: 'seborrheic-dermatitis',
+      title: 'What is Seborrheic Dermatitis? Causes, Symptoms and Treatment',
+      excerpt: 'Seborrheic dermatitis is one of the most common skin conditions, affecting up to 5% of the population. Learn what it is, what causes it, and which treatments work.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 19, 2026',
     },
     {
       slug: 'vitiligo',
