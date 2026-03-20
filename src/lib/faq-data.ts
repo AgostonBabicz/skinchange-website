@@ -816,6 +816,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'scabies',
+        nameDa: 'Skab',
+        nameEn: 'Scabies',
+        icon: '🕷️',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er skab?',
+              answer:
+                'Skab er en smitsom hudinfektion forårsaget af sarcoptes scabiei-miden, der graver sig ind i hudens yderste lag og forårsager intens kløe og irritation. Det smitter via tæt hud-til-hud kontakt eller i sjældne tilfælde via delte genstande som sengetøj eller håndklæder.',
+            },
+            {
+              question: 'Hvordan ser skab ud?',
+              answer:
+                'Skab viser sig typisk som intens kløe (især om natten), små røde knopper på håndled, fingre, albuer, armhuler og kønsorganer, samt tynde, lyse graverlinjer i huden der markerer midenes tunneler.',
+            },
+            {
+              question: 'Hvorfor smitter skab?',
+              answer:
+                'Skab smitter primært gennem direkte, udvidet hud-til-hud kontakt med en smittet person. Kort håndtryk giver sjældent smitte. Miden kan også overføres via delte genstande, men overlever kun 2–3 dage uden for menneskets hud.',
+            },
+            {
+              question: 'Hvem får skab?',
+              answer:
+                'Alle kan få skab uanset alder, køn eller hygiejnestandard. Det er mere udbredt i tætte boforhold, ved seksuel kontakt, i institutionelle miljøer (plejehjem, fængsler) og hos personer med svækket immunsystem.',
+            },
+            {
+              question: 'Hvad skal jeg huske om skab behandling?',
+              answer:
+                'Skab behandles med topiske skabmidler (permethrin 5%) eller orale midler (ivermectin) ordineret af en læge. Alle i tæt kontakt skal behandles samtidig – også uden symptomer. Tøj og sengetøj vaskes ved mindst 50°C, og hjemmet støvsuges grundigt.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is scabies?',
+              answer:
+                'Scabies is a contagious skin infestation caused by the sarcoptes scabiei mite, which burrows into the outermost layer of the skin causing intense itching and irritation. It spreads through close skin-to-skin contact or in rare cases via shared objects such as bedding or towels.',
+            },
+            {
+              question: 'What does scabies look like?',
+              answer:
+                'Scabies typically presents as intense itching (especially at night), small red bumps on the wrists, fingers, elbows, armpits and genitals, and thin, light-coloured burrow lines in the skin that mark the mites\' tunnels.',
+            },
+            {
+              question: 'Why does scabies spread?',
+              answer:
+                'Scabies spreads primarily through direct, extended skin-to-skin contact with an infected person. Brief contact such as a handshake rarely transmits it. The mite can also be transferred via shared objects, but only survives 2–3 days outside human skin.',
+            },
+            {
+              question: 'Who gets scabies?',
+              answer:
+                'Anyone can get scabies regardless of age, gender or hygiene standard. It is more common in close living conditions, through sexual contact, in institutional settings (nursing homes, prisons) and in people with weakened immune systems.',
+            },
+            {
+              question: 'What should I remember about scabies treatment?',
+              answer:
+                'Scabies is treated with topical scabicides (permethrin 5%) or oral medication (ivermectin) prescribed by a doctor. All close contacts must be treated simultaneously — even without symptoms. Clothing and bedding are washed at at least 50°C, and the home is thoroughly vacuumed.',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

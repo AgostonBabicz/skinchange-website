@@ -105,6 +105,14 @@ const blogPosts = {
       date: '18. marts 2026',
     },
     {
+      slug: 'scabies',
+      title: 'Hvad er Skab? Årsager, Symptomer og Behandling',
+      excerpt: 'Skab er en af de mest smitsomme hudlidelser. Lær hvad skab er, hvorfor det smitter så let, hvordan det ser ud, og hvilke behandlinger der effektivt fjerner miden.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '20. marts 2026',
+    },
+    {
       slug: 'contact-dermatitis',
       title: 'Hvad er Kontaktdermatitis? Årsager, Symptomer og Behandling',
       excerpt: 'Kontaktdermatitis er en af de mest almindelige hudlidelser og opstår når huden reagerer på et stof, den har været i kontakt med. Lær om de to hovedtyper — irritativ og allergisk — og hvad du kan gøre.',
@@ -185,6 +193,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 18, 2026',
+    },
+    {
+      slug: 'scabies',
+      title: 'What is Scabies? Causes, Symptoms and Treatment',
+      excerpt: 'Scabies is one of the most contagious skin conditions. Learn what scabies is, why it spreads so easily, what it looks like, and which treatments effectively eliminate the mites.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'March 20, 2026',
     },
     {
       slug: 'contact-dermatitis',
