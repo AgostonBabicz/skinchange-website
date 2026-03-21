@@ -755,6 +755,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'lichen-planus',
+        nameDa: 'Lichen Planus',
+        nameEn: 'Lichen Planus',
+        icon: '🟣',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er lichen planus?',
+              answer:
+                'Lichen planus er en kronisk, inflammatorisk hudlidelse, der forårsager lilla, fladtoppede, kløende knopper på huden. Den præcise årsag er ukendt, men det menes at være en autoimmun reaktion, hvor immunsystemet fejlagtigt angriber sunde hudceller.',
+            },
+            {
+              question: 'Hvordan ser lichen planus ud?',
+              answer:
+                'Lichen planus viser sig typisk som lilla, fladtoppede knopper med fine, hvide linjer på overfladen (Wickham-striber). Knopperne kan være intense at kløe og forekomme overalt på kroppen, men ses oftest på håndled, ankler, lænd og mundslimhinden.',
+            },
+            {
+              question: 'Hvorfor opstår lichen planus?',
+              answer:
+                'Den præcise årsag er ukendt, men autoimmune reaktioner, visse lægemidler (blodtryksmedicin, NSAID), hepatitis C-infektion og stress menes alle at spille en rolle i at udløse tilstanden.',
+            },
+            {
+              question: 'Hvem får lichen planus?',
+              answer:
+                'Lichen planus kan ramme alle i alle aldre, men forekommer hyppigst hos voksne mellem 30 og 60 år og er mere almindeligt hos kvinder. Personer med autoimmune sygdomme har en øget risiko.',
+            },
+            {
+              question: 'Hvad skal jeg huske om lichen planus behandling?',
+              answer:
+                'Der findes ingen kur, men topiske kortikosteroider, calcineurinhæmmere, lysbehandling og i svære tilfælde orale retinoidere kan lindre symptomerne. Stresshåndtering er en vigtig del af behandlingen, da stress kan forværre udbrud.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is lichen planus?',
+              answer:
+                'Lichen planus is a chronic, inflammatory skin condition causing purple, flat-topped, itchy bumps on the skin. The exact cause is unknown, but it is thought to be an autoimmune reaction where the immune system mistakenly attacks healthy skin cells.',
+            },
+            {
+              question: 'What does lichen planus look like?',
+              answer:
+                'Lichen planus typically presents as purple, flat-topped bumps with fine, white lines on the surface (Wickham striae). The bumps can be intensely itchy and appear anywhere on the body, but are most common on the wrists, ankles, lower back and oral mucosa.',
+            },
+            {
+              question: 'Why does lichen planus happen?',
+              answer:
+                'The exact cause is unknown, but autoimmune reactions, certain medications (blood pressure drugs, NSAIDs), hepatitis C infection and stress are all thought to play a role in triggering the condition.',
+            },
+            {
+              question: 'Who gets lichen planus?',
+              answer:
+                'Lichen planus can affect anyone at any age, but most commonly occurs in adults between 30 and 60 years old and is more prevalent in women. People with autoimmune conditions have an elevated risk.',
+            },
+            {
+              question: 'What should I remember about lichen planus treatment?',
+              answer:
+                "There is no cure, but topical corticosteroids, calcineurin inhibitors, light therapy and in severe cases oral retinoids can relieve symptoms. Stress management is an important part of treatment, as stress can worsen flare-ups.",
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',

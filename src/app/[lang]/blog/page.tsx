@@ -120,6 +120,14 @@ const blogPosts = {
       readTime: '7 min',
       date: '19. marts 2026',
     },
+    {
+      slug: 'lichen-planus',
+      title: 'Hvad er Lichen Planus? Årsager, Symptomer og Behandling',
+      excerpt: 'Lichen planus er en kronisk, inflammatorisk hudlidelse, der forårsager lilla, fladtoppede, kløende knopper. Lær hvad det er, hvordan det ser ud, og hvilke behandlinger der kan lindre symptomerne.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '21. marts 2026',
+    },
   ],
   en: [
     {
@@ -209,6 +217,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 19, 2026',
+    },
+    {
+      slug: 'lichen-planus',
+      title: 'What is Lichen Planus? Causes, Symptoms and Treatment',
+      excerpt: 'Lichen planus is a chronic, inflammatory skin condition causing purple, flat-topped, itchy bumps. Learn what it is, how it looks, and which treatments can help relieve symptoms.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 21, 2026',
     },
   ],
 };
