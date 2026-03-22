@@ -196,8 +196,9 @@
   {
     "id": 14,
     "name": "Molluscum Contagiosum",
-    "handled": false,
+    "handled": true,
     "slug": "molluscum-contagiosum",
+    "handled_date": "2026-03-22",
     "en": {
       "content": "Additional Information\nWhat is it?\nMolluscum Contagiosum is a highly contagious skin infection caused by a poxvirus. It mainly affects children, but anyone can get it. The virus primarily spreads through direct skin-to-skin contact or by touching contaminated objects.\n\nWhat does it look like?\nSymptoms typically involve:\nSmall, pearly white bumps: Usually 2-5mm in diameter, with a central dimple.\nMultiple bumps: Often appearing in clusters, but can be scattered.\nSmooth, painless: Unlike other bumps, they shouldn't cause pain or discomfort.\nMost commonly affect: Face, arms, legs, torso, or armpits.\n\nWhy does it happen?\nThe virus that causes Molluscum Contagiosum spreads easily through direct contact with infected skin or contaminated objects. This can happen during activities like:\nSkin-to-skin contact: Play, sports, cuddling, sexual activity.\nTouching contaminated objects: Towels, washcloths, shared toys, playground equipment.\nScratching or picking existing bumps: This can spread the virus to other areas of your skin.\n\nWho gets it?\nMolluscum Contagiosum is most common in children between 1-10 years old, but it can affect people of any age. Individuals with weakened immune systems are more susceptible.\n\nRemember:\nMolluscum Contagiosum is treatable, but it may resolve on its own. Treatment depends on the severity and duration of the infection. Options include:\nCryotherapy: Freezing the bumps with liquid nitrogen.\nTopical medications: Creams or lotions to remove the bumps.\nExtraction: Removing the bumps with a sterile tool.\nPrevention is key: Avoid scratching or picking the bumps, and practice good hygiene, especially handwashing after contact with infected individuals or objects.\nSeek medical advice if: The bumps become very numerous, spread rapidly, cause discomfort, or don't improve with self-care."
     },

@@ -128,6 +128,14 @@ const blogPosts = {
       readTime: '6 min',
       date: '21. marts 2026',
     },
+    {
+      slug: 'molluscum-contagiosum',
+      title: 'Hvad er Molluscum Contagiosum? Årsager, Symptomer og Behandling',
+      excerpt: 'Molluscum contagiosum er en udbredt virusbaseret hudinfektion, der viser sig som små, perlemorsagtige knopper. Lær hvordan det smitter, hvem der rammes, og hvilke behandlinger der findes.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '22. marts 2026',
+    },
   ],
   en: [
     {
@@ -225,6 +233,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 21, 2026',
+    },
+    {
+      slug: 'molluscum-contagiosum',
+      title: 'What is Molluscum Contagiosum? Causes, Symptoms and Treatment',
+      excerpt: 'Molluscum contagiosum is a common viral skin infection that appears as small, pearly white bumps. Learn how it spreads, who gets it, and what treatment options are available.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 22, 2026',
     },
   ],
 };
