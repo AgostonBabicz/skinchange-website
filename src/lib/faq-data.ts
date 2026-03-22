@@ -940,6 +940,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'molluscum-contagiosum',
+        nameDa: 'Molluscum Contagiosum',
+        nameEn: 'Molluscum Contagiosum',
+        icon: '🔵',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er molluscum contagiosum?',
+              answer:
+                'Molluscum contagiosum er en almindelig, virusbaseret hudinfektion forårsaget af et poxvirus. Den viser sig som små, perlemorsagtige knopper med en central fordybning. Tilstanden er mest almindelig hos børn, men kan ramme alle.',
+            },
+            {
+              question: 'Hvordan smitter molluscum contagiosum?',
+              answer:
+                'Virussen spreder sig gennem direkte hud-til-hud kontakt med en inficeret person eller via forurenede genstande som håndklæder, vaskeklude, legetøj og legepladsudstyr. At skrabe eller pille ved eksisterende knopper kan også sprede virussen til andre områder af huden.',
+            },
+            {
+              question: 'Hvem får molluscum contagiosum?',
+              answer:
+                'Molluscum contagiosum er mest almindeligt hos børn mellem 1–10 år, men det kan ramme personer i alle aldre. Individer med et svækket immunsystem er mere modtagelige og kan opleve flere eller større knopper.',
+            },
+            {
+              question: 'Hvordan behandles molluscum contagiosum?',
+              answer:
+                'Behandling kan inkludere kryoterapi (frysning med flydende kvælstof), topiske lægemidler (salicylsyre, cantharidin) eller curettage (kirurgisk fjernelse med en steril curette). Da knopperne ofte forsvinder af sig selv, kan man også vælge at observere tilstanden.',
+            },
+            {
+              question: 'Hvad skal jeg huske om forebyggelse?',
+              answer:
+                'Undgå at pille eller skrabe knopperne, vask hænder regelmæssigt, undgå at dele personlige genstande som håndklæder, og rengør fælles legetøj og overflader. Dæk knopperne til ved tæt kontakt med andre for at reducere smitterisikoen.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is molluscum contagiosum?',
+              answer:
+                'Molluscum contagiosum is a common viral skin infection caused by a poxvirus. It appears as small, pearly white bumps with a central dimple. The condition is most common in children but can affect anyone.',
+            },
+            {
+              question: 'How does molluscum contagiosum spread?',
+              answer:
+                'The virus spreads through direct skin-to-skin contact with an infected person or via contaminated objects such as towels, washcloths, shared toys and playground equipment. Scratching or picking existing bumps can also spread the virus to other areas of the skin.',
+            },
+            {
+              question: 'Who gets molluscum contagiosum?',
+              answer:
+                'Molluscum contagiosum is most common in children between 1–10 years old, but it can affect people of any age. Individuals with weakened immune systems are more susceptible and may develop more or larger bumps.',
+            },
+            {
+              question: 'How is molluscum contagiosum treated?',
+              answer:
+                'Treatment may include cryotherapy (freezing with liquid nitrogen), topical medications (salicylic acid, cantharidin) or curettage (surgical removal with a sterile curette). Since bumps often resolve on their own, watchful waiting is also an option.',
+            },
+            {
+              question: 'What should I remember about prevention?',
+              answer:
+                "Avoid picking or scratching the bumps, wash your hands regularly, avoid sharing personal items such as towels, and clean shared toys and surfaces. Cover the bumps during close contact with others to reduce the risk of transmission.",
+            },
+          ],
+        },
+      },
     ],
   },
 ];
