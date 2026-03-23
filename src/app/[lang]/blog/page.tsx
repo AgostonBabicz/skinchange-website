@@ -48,7 +48,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '12. marts 2026',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+      image: '/blog-eczema.jpg',
       imageAlt: 'Eksem atopisk dermatitis behandling',
     },
     {
@@ -68,7 +68,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '14. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      image: '/blog-urticaria-hives.jpg',
       imageAlt: 'Nældefeber urticaria behandling',
     },
     {
@@ -78,7 +78,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '15. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      image: '/blog-herpes-simplex.jpg',
       imageAlt: 'Herpes simplex virus HSV behandling',
     },
     {
@@ -88,7 +88,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '16. marts 2026',
-      image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&q=80',
+      image: '/blog-herpes-zoster.jpg',
       imageAlt: 'Helvedesild herpes zoster behandling',
     },
     {
@@ -108,7 +108,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '19. marts 2026',
-      image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
+      image: '/blog-seborrheic-dermatitis.jpg',
       imageAlt: 'Seborrheisk dermatitis behandling',
     },
     {
@@ -118,7 +118,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '18. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80',
+      image: '/blog-vitiligo.jpg',
       imageAlt: 'Vitiligo depigmenterede pletter behandling',
     },
     {
@@ -128,7 +128,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '20. marts 2026',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+      image: '/blog-scabies.jpg',
       imageAlt: 'Skab mideinfektion behandling',
     },
     {
@@ -138,7 +138,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '19. marts 2026',
-      image: 'https://images.unsplash.com/photo-1629904869392-ae2a682d4d01?w=800&q=80',
+      image: '/blog-contact-dermatitis.jpg',
       imageAlt: 'Kontaktdermatitis hudreaktion behandling',
     },
     {
@@ -148,7 +148,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '21. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      image: '/blog-lichen-planus.jpg',
       imageAlt: 'Lichen planus kløende knopper behandling',
     },
     {
@@ -190,7 +190,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 12, 2026',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+      image: '/blog-eczema.jpg',
       imageAlt: 'Eksem atopisk dermatitis behandling',
     },
     {
@@ -210,7 +210,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 14, 2026',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      image: '/blog-urticaria-hives.jpg',
       imageAlt: 'Nældefeber urticaria behandling',
     },
     {
@@ -220,7 +220,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 15, 2026',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      image: '/blog-herpes-simplex.jpg',
       imageAlt: 'Herpes simplex virus HSV behandling',
     },
     {
@@ -230,7 +230,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 16, 2026',
-      image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&q=80',
+      image: '/blog-herpes-zoster.jpg',
       imageAlt: 'Helvedesild herpes zoster behandling',
     },
     {
@@ -250,7 +250,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 19, 2026',
-      image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
+      image: '/blog-seborrheic-dermatitis.jpg',
       imageAlt: 'Seborrheisk dermatitis behandling',
     },
     {
@@ -260,7 +260,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 18, 2026',
-      image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80',
+      image: '/blog-vitiligo.jpg',
       imageAlt: 'Vitiligo depigmenterede pletter behandling',
     },
     {
@@ -270,7 +270,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 20, 2026',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+      image: '/blog-scabies.jpg',
       imageAlt: 'Skab mideinfektion behandling',
     },
     {
@@ -280,7 +280,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 19, 2026',
-      image: 'https://images.unsplash.com/photo-1629904869392-ae2a682d4d01?w=800&q=80',
+      image: '/blog-contact-dermatitis.jpg',
       imageAlt: 'Kontaktdermatitis hudreaktion behandling',
     },
     {
@@ -290,7 +290,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 21, 2026',
-      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      image: '/blog-lichen-planus.jpg',
       imageAlt: 'Lichen planus kløende knopper behandling',
     },
     {

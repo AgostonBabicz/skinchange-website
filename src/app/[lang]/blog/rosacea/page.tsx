@@ -56,7 +56,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til rosacea: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to rosacea: what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/rosacea.jpg',
+    image: '/blog-rosacea.jpg',
     datePublished: '2026-03-13',
     dateModified: '2026-03-13',
     author: {

@@ -56,7 +56,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til acne: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to acne: what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/acne.jpg',
+    image: '/blog-acne.jpg',
     datePublished: '2025-03-12',
     dateModified: '2025-03-12',
     author: {

@@ -56,7 +56,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
     description: isDa
       ? 'Komplet guide til herpes simplex virus: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to herpes simplex virus: what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/herpes-simplex-virus.jpg',
+    image: '/blog-herpes-simplex.jpg',
     datePublished: '2026-03-15',
     dateModified: '2026-03-15',
     author: {

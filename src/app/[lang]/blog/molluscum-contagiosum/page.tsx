@@ -56,7 +56,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
     description: isDa
       ? 'Komplet guide til molluscum contagiosum: hvad det er, hvordan det smitter, og hvilke behandlingsmuligheder der findes.'
       : 'Complete guide to molluscum contagiosum: what it is, how it spreads, and what treatment options are available.',
-    image: 'https://www.skinchange.dk/blog/molluscum-contagiosum.jpg',
+    image: '/blog-molluscum-contagiosum.jpg',
     datePublished: '2026-03-22',
     dateModified: '2026-03-22',
     author: {

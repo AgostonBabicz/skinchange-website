@@ -56,7 +56,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
     description: isDa
       ? 'Komplet guide til seborrheisk dermatitis: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to seborrheic dermatitis: what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/seborrheic-dermatitis.jpg',
+    image: '/blog-seborrheic-dermatitis.jpg',
     datePublished: '2026-03-19',
     dateModified: '2026-03-19',
     author: {

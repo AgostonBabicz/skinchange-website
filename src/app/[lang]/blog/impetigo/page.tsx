@@ -56,7 +56,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til impetigo: hvad det er, hvordan det ser ud, hvem der rammes, og hvilke behandlingsmuligheder der findes.'
       : 'Complete guide to impetigo: what it is, what it looks like, who gets it, and what treatment options are available.',
-    image: 'https://www.skinchange.dk/blog/impetigo.jpg',
+    image: '/blog-impetigo.jpg',
     datePublished: '2026-03-23',
     dateModified: '2026-03-23',
     author: {
