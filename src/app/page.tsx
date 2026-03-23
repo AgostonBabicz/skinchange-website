@@ -6,6 +6,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.skinchange.dk/da/',
   },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
 export default function RootPage() {

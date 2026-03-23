@@ -1,0 +1,7 @@
+# 301 Redirects for old URL patterns
+# Old English slug URLs → current Danish-prefixed URLs
+
+/about-us          /da/about          301
+/contact-us         /da/contact        301
+/da/about-us       /da/about          301
+/da/contact-us     /da/contact        301

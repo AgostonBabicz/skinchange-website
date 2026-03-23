@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
     : "SKIND | Online Skin Clinic";
     
   const description = isDa
-    ? "Danmarks online hudklinik. Certificerede hudlæger diagnosticerer akne, eksem, psoriasis og hudkræft inden for 48 timer. Sikker MitID login."
-    : "Denmark's online skin clinic. Certified dermatologists diagnose acne, eczema, psoriasis and skin cancer within 48 hours. Secure MitID login.";
+    ? "Danmarks online hudklinik. Certificerede hudlæger diagnosticerer akne, eksem, psoriasis og hudkræft inden for 48 timer. MitID verificeret. Kun 298 kr."
+    : "Denmark's online skin clinic. Certified dermatologists diagnose acne, eczema, psoriasis and skin cancer within 48 hours. MitID verified. Only 298 DKK.";
     
   const ogImage = "https://www.skinchange.dk/og-image.jpg";
 
