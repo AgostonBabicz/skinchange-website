@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface PageProps {
   params: { lang: Language };
@@ -28,8 +29,6 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   };
 }
 
-// Only list articles that have actual pages.
-// The cron job appends to this list when each new disease is processed.
 const blogPosts = {
   da: [
     {
@@ -39,6 +38,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '12. marts 2025',
+      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
+      imageAlt: 'Acne hudlidelse behandling',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -47,6 +48,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '12. marts 2026',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+      imageAlt: 'Eksem atopisk dermatitis behandling',
     },
     {
       slug: 'rosacea',
@@ -55,6 +58,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '13. marts 2026',
+      image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=800&q=80',
+      imageAlt: 'Rosacea kronisk hudlidelse',
     },
     {
       slug: 'urticaria-hives',
@@ -63,6 +68,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '14. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      imageAlt: 'Nældefeber urticaria behandling',
     },
     {
       slug: 'herpes-simplex-virus',
@@ -71,6 +78,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '15. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageAlt: 'Herpes simplex virus HSV behandling',
     },
     {
       slug: 'herpes-zoster-shingles',
@@ -79,14 +88,18 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '16. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageAlt: 'Helvedesild herpes zoster behandling',
     },
     {
       slug: 'tinea-infections-ringworm',
       title: 'Hvad er Ringorm (Tinea)? Årsager, Symptomer og Behandling',
-      excerpt: 'Ringorm er ikke en orm – det er en svampeinfektion. Lær om de forskellige typer tinea-infektioner (atletfod, lyskeeksem, ringorm på kroppen og negle), hvad der forårsager dem, og hvilken behandling der virker.',
+      excerpt: 'Ringorm er ikke en orm – det er en svampeinfektion. Lær om de forskellige typer tinea-infektioner, hvad der forårsager dem, og hvilken behandling der virker.',
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '17. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      imageAlt: 'Ringorm tinea svampeinfektion behandling',
     },
     {
       slug: 'seborrheic-dermatitis',
@@ -95,14 +108,18 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '19. marts 2026',
+      image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
+      imageAlt: 'Seborrheisk dermatitis behandling',
     },
     {
       slug: 'vitiligo',
       title: 'Hvad er Vitiligo? Årsager, Symptomer og Behandling',
-      excerpt: 'Vitiligo er en autoimmun hudlidelse, der forårsager hvide, afpigmenterede pletter på huden. Lær hvad vitiligo er, hvorfor immunsystemet angriber pigmentcellerne, hvem der rammes, og hvilke behandlinger der kan hjælpe.',
+      excerpt: 'Vitiligo er en autoimmun hudlidelse, der forårsager hvide, afpigmenterede pletter på huden. Lær hvad vitiligo er, hvorfor immunsystemet angriber pigmentcellerne, og hvilke behandlinger der kan hjælpe.',
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '18. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80',
+      imageAlt: 'Vitiligo depigmenterede pletter behandling',
     },
     {
       slug: 'scabies',
@@ -111,38 +128,48 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '20. marts 2026',
+      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+      imageAlt: 'Skab mideinfektion behandling',
     },
     {
       slug: 'contact-dermatitis',
       title: 'Hvad er Kontaktdermatitis? Årsager, Symptomer og Behandling',
-      excerpt: 'Kontaktdermatitis er en af de mest almindelige hudlidelser og opstår når huden reagerer på et stof, den har været i kontakt med. Lær om de to hovedtyper — irritativ og allergisk — og hvad du kan gøre.',
+      excerpt: 'Kontaktdermatitis opstår når huden reagerer på et stof, den har været i kontakt med. Lær om de to hovedtyper — irritativ og allergisk — og hvad du kan gøre.',
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '19. marts 2026',
+      image: 'https://images.unsplash.com/photo-1629904869392-ae2a682d4d01?w=800&q=80',
+      imageAlt: 'Kontaktdermatitis hudreaktion behandling',
     },
     {
       slug: 'lichen-planus',
       title: 'Hvad er Lichen Planus? Årsager, Symptomer og Behandling',
-      excerpt: 'Lichen planus er en kronisk, inflammatorisk hudlidelse, der forårsager lilla, fladtoppede, kløende knopper. Lær hvad det er, hvordan det ser ud, og hvilke behandlinger der kan lindre symptomerne.',
+      excerpt: 'Lichen planus er en kronisk, inflammatorisk hudlidelse, der forårsager lilla, fladtoppede, kløende knopper. Lær hvad det er, og hvilke behandlinger der kan lindre symptomerne.',
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '21. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      imageAlt: 'Lichen planus kløende knopper behandling',
     },
     {
       slug: 'molluscum-contagiosum',
       title: 'Hvad er Molluscum Contagiosum? Årsager, Symptomer og Behandling',
-      excerpt: 'Molluscum contagiosum er en udbredt virusbaseret hudinfektion, der viser sig som små, perlemorsagtige knopper. Lær hvordan det smitter, hvem der rammes, og hvilke behandlinger der findes.',
+      excerpt: 'Molluscum contagiosum er en udbredt virusbaseret hudinfektion, der viser sig som små, perlemorsagtige knopper. Lær hvordan det smitter, og hvilke behandlinger der findes.',
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '22. marts 2026',
+      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
+      imageAlt: 'Molluscum contagiosum virusinfektion behandling',
     },
     {
       slug: 'impetigo',
       title: 'Hvad er Impetigo? Årsager, Symptomer og Behandling',
-      excerpt: 'Impetigo er en af de mest almindelige bakterielle hudinfektioner hos børn. Lær hvad impetigo er, hvordan honningfarvede skorper ser ud, hvem der rammes, og hvilken behandling der virker.',
+      excerpt: 'Impetigo er en af de mest almindelige bakterielle hudinfektioner hos børn. Lær hvad impetigo er, hvordan honningfarvede skorper ser ud, og hvilken behandling der virker.',
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '23. marts 2026',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageAlt: 'Impetigo bakteriel hudinfektion behandling',
     },
   ],
   en: [
@@ -153,6 +180,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 12, 2025',
+      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
+      imageAlt: 'Acne skin condition treatment',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -161,6 +190,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 12, 2026',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+      imageAlt: 'Eczema atopic dermatitis treatment',
     },
     {
       slug: 'rosacea',
@@ -169,6 +200,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 13, 2026',
+      image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=800&q=80',
+      imageAlt: 'Rosacea chronic skin condition',
     },
     {
       slug: 'urticaria-hives',
@@ -177,6 +210,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 14, 2026',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      imageAlt: 'Urticaria hives treatment',
     },
     {
       slug: 'herpes-simplex-virus',
@@ -185,6 +220,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 15, 2026',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageAlt: 'Herpes simplex virus HSV treatment',
     },
     {
       slug: 'herpes-zoster-shingles',
@@ -193,14 +230,18 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 16, 2026',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageAlt: 'Shingles herpes zoster treatment',
     },
     {
       slug: 'tinea-infections-ringworm',
       title: 'What is Ringworm (Tinea)? Causes, Symptoms and Treatment',
-      excerpt: 'Ringworm is not a worm — it is a fungal infection. Learn about the different types of tinea infections (athlete\'s foot, jock itch, body ringworm and nail fungus), what causes them, and which treatment works.',
+      excerpt: "Ringworm is not a worm — it is a fungal infection. Learn about the different types of tinea infections, what causes them, and which treatment works.",
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 17, 2026',
+      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      imageAlt: 'Ringworm tinea fungal infection treatment',
     },
     {
       slug: 'seborrheic-dermatitis',
@@ -209,14 +250,18 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 19, 2026',
+      image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
+      imageAlt: 'Seborrheic dermatitis treatment',
     },
     {
       slug: 'vitiligo',
       title: 'What is Vitiligo? Causes, Symptoms and Treatment',
-      excerpt: 'Vitiligo is an autoimmune skin condition that causes white, depigmented patches on the skin. Learn what vitiligo is, why the immune system attacks pigment cells, who gets it, and which treatments can help.',
+      excerpt: 'Vitiligo is an autoimmune skin condition that causes white, depigmented patches on the skin. Learn what vitiligo is, why the immune system attacks pigment cells, and which treatments can help.',
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 18, 2026',
+      image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80',
+      imageAlt: 'Vitiligo depigmented patches treatment',
     },
     {
       slug: 'scabies',
@@ -225,22 +270,28 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 20, 2026',
+      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+      imageAlt: 'Scabies mite infection treatment',
     },
     {
       slug: 'contact-dermatitis',
       title: 'What is Contact Dermatitis? Causes, Symptoms and Treatment',
-      excerpt: 'Contact dermatitis is one of the most common skin conditions, occurring when the skin reacts to a substance it has touched. Learn about the two main types — irritant and allergic — and what you can do about it.',
+      excerpt: 'Contact dermatitis occurs when the skin reacts to a substance it has touched. Learn about the two main types — irritant and allergic — and what you can do about it.',
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 19, 2026',
+      image: 'https://images.unsplash.com/photo-1629904869392-ae2a682d4d01?w=800&q=80',
+      imageAlt: 'Contact dermatitis skin reaction treatment',
     },
     {
       slug: 'lichen-planus',
       title: 'What is Lichen Planus? Causes, Symptoms and Treatment',
-      excerpt: 'Lichen planus is a chronic, inflammatory skin condition causing purple, flat-topped, itchy bumps. Learn what it is, how it looks, and which treatments can help relieve symptoms.',
+      excerpt: 'Lichen planus is a chronic, inflammatory skin condition causing purple, flat-topped, itchy bumps. Learn what it is and which treatments can help relieve symptoms.',
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 21, 2026',
+      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      imageAlt: 'Lichen planus itchy bumps treatment',
     },
     {
       slug: 'molluscum-contagiosum',
@@ -249,14 +300,18 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 22, 2026',
+      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
+      imageAlt: 'Molluscum contagiosum viral infection treatment',
     },
     {
       slug: 'impetigo',
       title: 'What is Impetigo? Causes, Symptoms and Treatment',
-      excerpt: 'Impetigo is one of the most common bacterial skin infections in children. Learn what impetigo is, what honey-crusted sores look like, who gets it, and which treatment works.',
+      excerpt: 'Impetigo is one of the most common bacterial skin infections in children. Learn what impetigo is, what honey-crusted sores look like, and which treatment works.',
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 23, 2026',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      imageAlt: 'Impetigo bacterial skin infection treatment',
     },
   ],
 };
@@ -294,13 +349,17 @@ export default function BlogPage({ params: { lang } }: PageProps) {
                 className="group"
               >
                 <article className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                  {/* Image Placeholder */}
-                  <div className="aspect-[16/10] bg-gradient-to-br from-[#304ffe] to-[#1a237e] relative">
-                    <div className="absolute inset-0 flex items-center justify-center text-white/30">
-                      <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
+                  {/* Cover Image */}
+                  <div className="aspect-[16/10] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    {/* Gradient overlay for text legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="bg-white/90 text-[#1a237e] text-xs font-semibold px-3 py-1 rounded-full">
                         {post.category}
