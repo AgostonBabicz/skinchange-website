@@ -56,7 +56,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
     description: isDa
       ? 'Komplet guide til ringorm og tinea-infektioner: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to ringworm and tinea infections: what it is, causes, symptoms and treatment options.',
-    image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1599292168785-f6cb8b6b9e6d?w=1200&q=80',
     datePublished: '2026-03-17',
     dateModified: '2026-03-17',
     author: {
@@ -195,7 +195,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=1200&q=80"
+                src="https://images.unsplash.com/photo-1599292168785-f6cb8b6b9e6d?w=1200&q=80"
                 alt={
                   isDa
                     ? 'Ringorm tinea svampeinfektion hud'

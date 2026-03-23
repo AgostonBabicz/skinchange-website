@@ -38,8 +38,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '12. marts 2025',
-      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
-      imageAlt: 'Acne hudlidelse behandling',
+      image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc228c?w=800&q=80',
+      imageAlt: 'Acne hudlidelse behandling af akne',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -58,8 +58,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '13. marts 2026',
-      image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=800&q=80',
-      imageAlt: 'Rosacea kronisk hudlidelse',
+      image: 'https://images.unsplash.com/photo-1573196292046-e9d6f914ec99?w=800&q=80',
+      imageAlt: 'Rosacea kronisk hudlidelse rødme i ansigtet',
     },
     {
       slug: 'urticaria-hives',
@@ -88,7 +88,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '16. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&q=80',
       imageAlt: 'Helvedesild herpes zoster behandling',
     },
     {
@@ -98,7 +98,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '17. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1599292168785-f6cb8b6b9e6d?w=800&q=80',
       imageAlt: 'Ringorm tinea svampeinfektion behandling',
     },
     {
@@ -158,7 +158,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '22. marts 2026',
-      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1555415025-d4ef7a1d6e3a?w=800&q=80',
       imageAlt: 'Molluscum contagiosum virusinfektion behandling',
     },
     {
@@ -168,7 +168,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '23. marts 2026',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1519915028121-b3a0c2e8d1fd?w=800&q=80',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
     },
   ],
@@ -180,8 +180,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 12, 2025',
-      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
-      imageAlt: 'Acne skin condition treatment',
+      image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc228c?w=800&q=80',
+      imageAlt: 'Acne hudlidelse behandling af akne',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -191,7 +191,7 @@ const blogPosts = {
       readTime: '7 min',
       date: 'March 12, 2026',
       image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
-      imageAlt: 'Eczema atopic dermatitis treatment',
+      imageAlt: 'Eksem atopisk dermatitis behandling',
     },
     {
       slug: 'rosacea',
@@ -200,8 +200,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 13, 2026',
-      image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=800&q=80',
-      imageAlt: 'Rosacea chronic skin condition',
+      image: 'https://images.unsplash.com/photo-1573196292046-e9d6f914ec99?w=800&q=80',
+      imageAlt: 'Rosacea kronisk hudlidelse rødme i ansigtet',
     },
     {
       slug: 'urticaria-hives',
@@ -211,7 +211,7 @@ const blogPosts = {
       readTime: '6 min',
       date: 'March 14, 2026',
       image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
-      imageAlt: 'Urticaria hives treatment',
+      imageAlt: 'Nældefeber urticaria behandling',
     },
     {
       slug: 'herpes-simplex-virus',
@@ -221,7 +221,7 @@ const blogPosts = {
       readTime: '6 min',
       date: 'March 15, 2026',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
-      imageAlt: 'Herpes simplex virus HSV treatment',
+      imageAlt: 'Herpes simplex virus HSV behandling',
     },
     {
       slug: 'herpes-zoster-shingles',
@@ -230,8 +230,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 16, 2026',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
-      imageAlt: 'Shingles herpes zoster treatment',
+      image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&q=80',
+      imageAlt: 'Helvedesild herpes zoster behandling',
     },
     {
       slug: 'tinea-infections-ringworm',
@@ -240,8 +240,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 17, 2026',
-      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
-      imageAlt: 'Ringworm tinea fungal infection treatment',
+      image: 'https://images.unsplash.com/photo-1599292168785-f6cb8b6b9e6d?w=800&q=80',
+      imageAlt: 'Ringorm tinea svampeinfektion behandling',
     },
     {
       slug: 'seborrheic-dermatitis',
@@ -251,7 +251,7 @@ const blogPosts = {
       readTime: '6 min',
       date: 'March 19, 2026',
       image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
-      imageAlt: 'Seborrheic dermatitis treatment',
+      imageAlt: 'Seborrheisk dermatitis behandling',
     },
     {
       slug: 'vitiligo',
@@ -261,7 +261,7 @@ const blogPosts = {
       readTime: '7 min',
       date: 'March 18, 2026',
       image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80',
-      imageAlt: 'Vitiligo depigmented patches treatment',
+      imageAlt: 'Vitiligo depigmenterede pletter behandling',
     },
     {
       slug: 'scabies',
@@ -271,7 +271,7 @@ const blogPosts = {
       readTime: '7 min',
       date: 'March 20, 2026',
       image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
-      imageAlt: 'Scabies mite infection treatment',
+      imageAlt: 'Skab mideinfektion behandling',
     },
     {
       slug: 'contact-dermatitis',
@@ -281,7 +281,7 @@ const blogPosts = {
       readTime: '7 min',
       date: 'March 19, 2026',
       image: 'https://images.unsplash.com/photo-1629904869392-ae2a682d4d01?w=800&q=80',
-      imageAlt: 'Contact dermatitis skin reaction treatment',
+      imageAlt: 'Kontaktdermatitis hudreaktion behandling',
     },
     {
       slug: 'lichen-planus',
@@ -291,7 +291,7 @@ const blogPosts = {
       readTime: '6 min',
       date: 'March 21, 2026',
       image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80',
-      imageAlt: 'Lichen planus itchy bumps treatment',
+      imageAlt: 'Lichen planus kløende knopper behandling',
     },
     {
       slug: 'molluscum-contagiosum',
@@ -300,8 +300,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 22, 2026',
-      image: 'https://images.unsplash.com/photo-1614859324669-927e70f7a474?w=800&q=80',
-      imageAlt: 'Molluscum contagiosum viral infection treatment',
+      image: 'https://images.unsplash.com/photo-1555415025-d4ef7a1d6e3a?w=800&q=80',
+      imageAlt: 'Molluscum contagiosum virusinfektion behandling',
     },
     {
       slug: 'impetigo',
@@ -310,8 +310,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 23, 2026',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
-      imageAlt: 'Impetigo bacterial skin infection treatment',
+      image: 'https://images.unsplash.com/photo-1519915028121-b3a0c2e8d1fd?w=800&q=80',
+      imageAlt: 'Impetigo bakteriel hudinfektion behandling',
     },
   ],
 };
