@@ -6,6 +6,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.skinchange.dk"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
