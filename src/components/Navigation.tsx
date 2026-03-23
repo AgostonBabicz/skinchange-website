@@ -28,14 +28,12 @@ export default function Navigation({ lang }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href={`/${lang}`} className="flex items-center space-x-3">
-            <div className="bg-white rounded-lg px-2 py-1.5">
-              <img
-                src="/SKIND LOGO.svg"
-                alt="SKIND"
-                className="h-12 w-auto object-contain"
-              />
-            </div>
+          <Link href={`/${lang}`} className="flex items-center">
+            <img
+              src="/SKIND LOGO.svg"
+              alt="SKIND"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
