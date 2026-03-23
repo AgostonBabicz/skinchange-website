@@ -56,7 +56,7 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til vitiligo: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to vitiligo: what it is, causes, symptoms and treatment options.',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&q=80',
+    image: '/blog-vitiligo.jpg',
     datePublished: '2026-03-18',
     dateModified: '2026-03-18',
     author: {

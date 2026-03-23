@@ -56,7 +56,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til nældefeber: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to urticaria (hives): what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/urticaria-hives.jpg',
+    image: '/blog-urticaria-hives.jpg',
     datePublished: '2026-03-14',
     dateModified: '2026-03-14',
     author: {

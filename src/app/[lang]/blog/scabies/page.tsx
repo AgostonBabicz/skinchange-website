@@ -56,7 +56,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til skab: hvad det er, hvorfor det smitter, symptomer og effektive behandlinger.'
       : 'Complete guide to scabies: what it is, why it spreads, symptoms and effective treatments.',
-    image: 'https://www.skinchange.dk/blog/scabies.jpg',
+    image: '/blog-scabies.jpg',
     datePublished: '2026-03-20',
     dateModified: '2026-03-20',
     author: {

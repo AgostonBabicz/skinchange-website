@@ -56,7 +56,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til kontaktdermatitis: hvad det er, de to hovedtyper, symptomer og behandlingsmuligheder.'
       : 'Complete guide to contact dermatitis: what it is, the two main types, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/contact-dermatitis.jpg',
+    image: '/blog-contact-dermatitis.jpg',
     datePublished: '2026-03-19',
     dateModified: '2026-03-19',
     author: {

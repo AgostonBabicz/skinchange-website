@@ -56,7 +56,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
     description: isDa
       ? 'Komplet guide til helvedesild: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to shingles: what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/herpes-zoster-shingles.jpg',
+    image: '/blog-herpes-zoster.jpg',
     datePublished: '2026-03-16',
     dateModified: '2026-03-16',
     author: {

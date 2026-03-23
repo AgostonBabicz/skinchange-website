@@ -56,7 +56,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til eksem og atopisk dermatitis: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to eczema and atopic dermatitis: what it is, causes, symptoms and treatment options.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80',
+    image: '/blog-eczema.jpg',
     datePublished: '2026-03-12',
     dateModified: '2026-03-12',
     author: {

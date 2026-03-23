@@ -56,7 +56,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
     description: isDa
       ? 'Komplet guide til lichen planus: hvad det er, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to lichen planus: what it is, causes, symptoms and treatment options.',
-    image: 'https://www.skinchange.dk/blog/lichen-planus.jpg',
+    image: '/blog-lichen-planus.jpg',
     datePublished: '2026-03-21',
     dateModified: '2026-03-21',
     author: {
