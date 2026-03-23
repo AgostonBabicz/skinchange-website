@@ -207,7 +207,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1519915028121-b3a0c2e8d1fd?w=1200&q=80"
+                src="/blog-impetigo.jpg"
                 alt={isDa ? 'Impetigo – bakteriel hudinfektion behandling' : 'Impetigo – bacterial skin infection treatment'}
                 className="w-full h-full object-cover mix-blend-overlay opacity-60"
               />

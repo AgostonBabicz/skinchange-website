@@ -98,7 +98,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '7 min',
       date: '17. marts 2026',
-      image: 'https://images.unsplash.com/photo-1599292168785-f6cb8b6b9e6d?w=800&q=80',
+      image: '/blog-tinea-ringworm.jpg',
       imageAlt: 'Ringorm tinea svampeinfektion behandling',
     },
     {
@@ -158,7 +158,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '22. marts 2026',
-      image: 'https://images.unsplash.com/photo-1555415025-d4ef7a1d6e3a?w=800&q=80',
+      image: '/blog-molluscum-contagiosum.jpg',
       imageAlt: 'Molluscum contagiosum virusinfektion behandling',
     },
     {
@@ -168,7 +168,7 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '23. marts 2026',
-      image: 'https://images.unsplash.com/photo-1519915028121-b3a0c2e8d1fd?w=800&q=80',
+      image: '/blog-impetigo.jpg',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
     },
   ],
@@ -240,7 +240,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '7 min',
       date: 'March 17, 2026',
-      image: 'https://images.unsplash.com/photo-1599292168785-f6cb8b6b9e6d?w=800&q=80',
+      image: '/blog-tinea-ringworm.jpg',
       imageAlt: 'Ringorm tinea svampeinfektion behandling',
     },
     {
@@ -300,7 +300,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 22, 2026',
-      image: 'https://images.unsplash.com/photo-1555415025-d4ef7a1d6e3a?w=800&q=80',
+      image: '/blog-molluscum-contagiosum.jpg',
       imageAlt: 'Molluscum contagiosum virusinfektion behandling',
     },
     {
@@ -310,7 +310,7 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 23, 2026',
-      image: 'https://images.unsplash.com/photo-1519915028121-b3a0c2e8d1fd?w=800&q=80',
+      image: '/blog-impetigo.jpg',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
     },
   ],
