@@ -4,6 +4,7 @@ import { Language } from '@/lib/i18n';
 import { Metadata } from 'next';
 import { Mail, MapPin, Building2 } from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -47,6 +48,30 @@ export default function ContactPage({ params: { lang } }: PageProps) {
     address: isDa ? 'Hindbærhaven 48, 7120 Vejle Ø' : 'Hindbærhaven 48, 7120 Vejle Ø, Denmark',
   };
 
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: isDa ? 'Kontakt SKIND' : 'Contact SKIND',
+    description: isDa
+      ? 'Kontakt SKIND for spørgsmål om online hudkonsultation'
+      : 'Contact SKIND for questions about online skin consultation',
+    url: `https://www.skinchange.dk/${lang}/contact`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'info@skinchange.ai',
+      contactType: 'customer service',
+      availableLanguage: ['Danish', 'English'],
+      areaServed: 'DK',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Hindbærhaven 48',
+      addressLocality: 'Vejle Ø',
+      postalCode: '7120',
+      addressCountry: 'DK',
+    },
+  };
+
   const faqItems = isDa ? [
     {
       q: "Hvor hurtigt får jeg svar?",
@@ -76,6 +101,12 @@ export default function ContactPage({ params: { lang } }: PageProps) {
   ];
 
   return (
+    <>
+      <Script
+        id="contact-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
     <main className="min-h-screen bg-white">
       <Navigation lang={lang} />
       
@@ -231,5 +262,6 @@ export default function ContactPage({ params: { lang } }: PageProps) {
 
       <Footer lang={lang} />
     </main>
+    </>
   );
 }
