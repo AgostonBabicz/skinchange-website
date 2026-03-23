@@ -191,7 +191,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=1200&q=80"
+                src="https://images.unsplash.com/photo-1573196292046-e9d6f914ec99?w=1200&q=80"
                 alt={isDa ? 'Rosacea – ansigtsrødme og behandling' : 'Rosacea – facial redness and treatment'}
                 className="w-full h-full object-cover mix-blend-overlay opacity-60"
               />
