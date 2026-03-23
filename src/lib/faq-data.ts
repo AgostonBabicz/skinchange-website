@@ -1002,6 +1002,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'impetigo',
+        nameDa: 'Impetigo',
+        nameEn: 'Impetigo',
+        icon: '🦠',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er impetigo?',
+              answer:
+                'Impetigo er en bakteriel hudinfektion, der påvirker hudens yderste lag. Der findes to hovedtyper: non-bulløs impetigo med honningfarvede skorper og bulløs impetigo med større væskefyldte blærer. Begge typer er smitsomme og kan spredes via direkte kontakt.',
+            },
+            {
+              question: 'Hvordan ser impetigo ud?',
+              answer:
+                'Impetigo viser sig typisk som røde, irriterede pletter omkring munden og næsen med små blærer, der brister og efterlader honningfarvede eller gule skorper. Ved bulløs impetigo er blærerne større og ses ofte på torso og arme.',
+            },
+            {
+              question: 'Hvorfor opstår impetigo?',
+              answer:
+                'Impetigo opstår, når Staphylococcus aureus eller Streptococcus pyogenes trænger ind i huden gennem snit, skrammer, insektbid eller revner. Sygdommen smitter via direkte kontakt med en inficeret person eller via forurenede genstande som håndklæder og legetøj.',
+            },
+            {
+              question: 'Hvem får impetigo?',
+              answer:
+                'Impetigo rammer hyppigst børn mellem 2 og 6 år, særligt i tætte miljøer som børnehaver. Voksne kan også rammes, især personer med eksem, dermatitis eller et svækket immunsystem.',
+            },
+            {
+              question: 'Hvad skal jeg huske om impetigo behandling?',
+              answer:
+                'Impetigo behandles normalt med topiske antibiotiske cremer (f.eks. fusidinsyre eller mupirocin) eller orale antibiotika ved mere udbredt infektion. God hygiejne, at holde sår rene og dækkede, og at undgå at dele håndklæder er afgørende for at forebygge spredning.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is impetigo?',
+              answer:
+                'Impetigo is a bacterial skin infection affecting the outermost layers of the skin. There are two main types: non-bullous impetigo with honey-crusted sores and bullous impetigo with larger fluid-filled blisters. Both types are contagious and can spread through direct contact.',
+            },
+            {
+              question: 'What does impetigo look like?',
+              answer:
+                'Impetigo typically appears as red, irritated patches around the mouth and nose with small blisters that burst leaving honey-coloured or yellow crusts. In bullous impetigo the blisters are larger and most commonly seen on the trunk and arms.',
+            },
+            {
+              question: 'Why does impetigo happen?',
+              answer:
+                'Impetigo occurs when Staphylococcus aureus or Streptococcus pyogenes enter the skin through cuts, scrapes, insect bites or cracks. The disease spreads via direct contact with an infected person or via contaminated objects such as towels and toys.',
+            },
+            {
+              question: 'Who gets impetigo?',
+              answer:
+                'Impetigo most commonly affects children between 2 and 6 years, especially in close settings such as nurseries. Adults can also be affected, particularly people with eczema, dermatitis or a weakened immune system.',
+            },
+            {
+              question: 'What should I remember about impetigo treatment?',
+              answer:
+                'Impetigo is usually treated with topical antibiotic creams (e.g. fusidic acid or mupirocin) or oral antibiotics for more widespread infection. Good hygiene, keeping wounds clean and covered, and avoiding sharing towels are essential to prevent spread.',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

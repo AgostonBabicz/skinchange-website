@@ -136,6 +136,14 @@ const blogPosts = {
       readTime: '6 min',
       date: '22. marts 2026',
     },
+    {
+      slug: 'impetigo',
+      title: 'Hvad er Impetigo? Årsager, Symptomer og Behandling',
+      excerpt: 'Impetigo er en af de mest almindelige bakterielle hudinfektioner hos børn. Lær hvad impetigo er, hvordan honningfarvede skorper ser ud, hvem der rammes, og hvilken behandling der virker.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '23. marts 2026',
+    },
   ],
   en: [
     {
@@ -241,6 +249,14 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 22, 2026',
+    },
+    {
+      slug: 'impetigo',
+      title: 'What is Impetigo? Causes, Symptoms and Treatment',
+      excerpt: 'Impetigo is one of the most common bacterial skin infections in children. Learn what impetigo is, what honey-crusted sores look like, who gets it, and which treatment works.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 23, 2026',
     },
   ],
 };
