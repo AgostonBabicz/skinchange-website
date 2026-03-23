@@ -38,8 +38,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '12. marts 2025',
-      image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc228c?w=800&q=80',
-      imageAlt: 'Acne hudlidelse behandling af akne',
+      image: '/blog-acne.jpg',
+      imageAlt: 'Acne vulgaralis hudlidelse behandling af akne',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -58,8 +58,8 @@ const blogPosts = {
       category: 'Hudsygdomme',
       readTime: '6 min',
       date: '13. marts 2026',
-      image: 'https://images.unsplash.com/photo-1573196292046-e9d6f914ec99?w=800&q=80',
-      imageAlt: 'Rosacea kronisk hudlidelse rødme i ansigtet',
+      image: '/blog-rosacea.jpg',
+      imageAlt: 'Rosacea kronisk hudlidelse rødme og synlige blodkar i ansigtet',
     },
     {
       slug: 'urticaria-hives',
@@ -180,8 +180,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 12, 2025',
-      image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc228c?w=800&q=80',
-      imageAlt: 'Acne hudlidelse behandling af akne',
+      image: '/blog-acne.jpg',
+      imageAlt: 'Acne vulgaralis hudlidelse behandling af akne',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -200,8 +200,8 @@ const blogPosts = {
       category: 'Skin Conditions',
       readTime: '6 min',
       date: 'March 13, 2026',
-      image: 'https://images.unsplash.com/photo-1573196292046-e9d6f914ec99?w=800&q=80',
-      imageAlt: 'Rosacea kronisk hudlidelse rødme i ansigtet',
+      image: '/blog-rosacea.jpg',
+      imageAlt: 'Rosacea kronisk hudlidelse rødme og synlige blodkar i ansigtet',
     },
     {
       slug: 'urticaria-hives',
