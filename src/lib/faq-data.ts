@@ -315,7 +315,7 @@ export const faqCategories: FaqCategory[] = [
             {
               question: 'What should I remember about Acne treatment?',
               answer:
-                "Consistent treatment is key. Don't pick or squeeze — this can worsen inflammation and scarring. Be gentle with your skin, as harsh scrubbing or products can irritate it. Dermatologists can assess your specific acne type and recommend the most effective treatment plan. Acne can impact self-esteem, but remember you're not alone — seek support from healthcare professionals if needed.",
+                "Consistent treatment is key. Don't pick or squeeze — this can worsen inflammation and scarring. Be gentle with your skin, as harsh scrubbing or products can irritate it. Dermatologists can assess your specific acne type and recommend the most effective treatment plan. Acne can impact self-esteem, but keep in mind that you are not alone — seek support from healthcare professionals if needed.",
             },
           ],
         },
@@ -853,27 +853,27 @@ export const faqCategories: FaqCategory[] = [
             {
               question: 'What is Psoriasis?',
               answer:
-                "Psoriasis is a chronic skin condition that causes red, scaly patches to appear on different areas of your body. It's important to remember that it's not contagious, so you can't spread it to others.",
+                "Psoriasis is a chronic skin condition causing red, scaly patches on various areas of the body. It is not contagious.",
             },
             {
               question: 'What does Psoriasis look like?',
               answer:
-                'Psoriasis typically shows up as thick, raised patches with silvery-white scales. These patches can be itchy and uncomfortable, and they often affect the elbows, knees, scalp, and lower back. However, they can appear anywhere on your body.',
+                "Psoriasis typically presents as thick, raised patches with silvery-white scales. These patches can be itchy and uncomfortable and most commonly affect the elbows, knees, scalp and lower back, though they can appear anywhere on the body.",
             },
             {
               question: 'Why does Psoriasis happen?',
               answer:
-                "The exact cause of psoriasis is unknown, but it's linked to an issue with the immune system that speeds up skin cell production. This causes cells to build up faster than they can shed, leading to the visible scaling. Genetics and certain triggers like stress, infections, or some medications can also play a role.",
+                "The exact cause of psoriasis is unknown, but it is linked to an overactive immune response that speeds up skin cell production. This causes cells to build up faster than they can shed, leading to the visible scaling. Genetics and certain triggers such as stress, infections or certain medications can also play a role.",
             },
             {
               question: 'Who gets Psoriasis?',
               answer:
-                "Psoriasis can affect anyone, regardless of age or gender. While it's more common in adults, it can also occur in children. You're more likely to develop it if you have a family history of the condition.",
+                "Psoriasis can affect anyone, regardless of age or gender. While it is more common in adults, it can also occur in children. The risk is elevated with a family history of the condition.",
             },
             {
               question: 'What should I remember about Psoriasis treatment?',
               answer:
-                "Managing psoriasis is key — there's no cure, but various treatments including creams, ointments, light therapy, or medications can help control symptoms and improve your quality of life. Triggers often play a role, so identify and avoid your personal triggers like stress, certain foods, or harsh soaps. Don't hesitate to discuss it with your dermatologist, who can tailor a treatment plan specific to your needs.",
+                "Managing psoriasis is key — there is no cure, but various treatments including creams, ointments, light therapy and medications can help control symptoms and improve quality of life. Triggers often play a role, so identify and avoid personal triggers such as stress, certain foods or harsh soaps. Discuss it with your dermatologist, who can tailor a treatment plan specific to your needs.",
             },
           ],
         },

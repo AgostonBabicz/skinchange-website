@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Cellulitis? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Lær alt om cellulitis: hvad det er, hvorfor det opstår, hvem der rammes, og hvilke behandlingsmuligheder der findes. Hurtig diagnose og behandling er afgørende.',
+          'Lær alt om cellulitis: hvad det er, hvorfor det opstår, hvem der rammes, og hvilke behandlingsmuligheder der findes. Tidlig diagnose og behandling er afgørende.',
         keywords:
           'cellulitis, cellulitis behandling, cellulitis symptomer, cellulitis årsager, hudinfektion, bakteriel infektion, SKIND',
         alternates: {
@@ -240,7 +240,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'Cellulitis er en akut bakteriel infektion i hudens dybere lag — specifikt dermis (læderhuden) og det subkutane væv (underhuden). Tilstanden adskiller sig fra overfladiske hudinfektioner ved at nå dybere ind i vævet og kræve mere aggressiv behandling.'
-                  : 'Cellulitis is an acute bacterial infection of the deeper layers of the skin — specifically the dermis (the inner layer of skin) and subcutaneous tissue (the layer beneath the skin). The condition differs from superficial skin infections by reaching deeper into the tissue and requiring more aggressive treatment.'}
+                  : 'Cellulitis is an acute bacterial infection of the deeper layers of the skin — specifically the dermis (the deeper layer of skin below the epidermis) and subcutaneous tissue (the layer beneath the skin). The condition differs from superficial skin infections by reaching deeper into the tissue and requiring more aggressive treatment.'}
               </p>
               <p>
                 {isDa
@@ -396,7 +396,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Hold det berørte område rent og dækket med et løst bandage som anvist af din læge. Undgå at trykke eller stramme omkring det inficerede område.'
-                      : 'Keep the affected area clean and covered with a loose bandage as directed by your doctor. Avoid putting pressure or tightness around the infected area.'}
+                      : 'Keep the affected area clean and covered with a loose bandage as directed by your doctor. Avoid applying pressure or constriction around the infected area.'}
                   </p>
                 </div>
                 <div>

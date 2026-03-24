@@ -284,7 +284,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               <p>
                 {isDa
                   ? 'Det er vigtigt at forstå, at HSV ikke er lig med manglende hygiejne eller promiskuøs adfærd. Virussen er overordentlig smitsom og kan overføres selv af mennesker, der ikke ved, at de er smittet.'
-                  : 'It is important to understand that HSV is not a sign of poor hygiene or promiscuous behaviour. The virus is highly contagious and can be transmitted by people who do not know they are infected.'}
+                  : 'It is important to understand that HSV is not a reflection of poor hygiene or promiscuous behaviour. The virus is highly contagious and can be transmitted by people who do not know they are infected.'}
               </p>
 
               {/* What does it look like */}
@@ -320,7 +320,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </h3>
               <p>
                 {isDa
-                  ? 'Blærerne brister og danner sår, som efterfølgende dækkes af en skorpe. Symptomerne forsvinder normalt inden for 2–4 uger ved det første udbrud og hurtigere ved efterfølgende udbrud. Huden heler oftest uden arvæv.'
+                  ? 'Blærerne brister og danner sår, som efterfølgende dækkes af skorper. Symptomerne forsvinder normalt inden for 2–4 uger ved det første udbrud og hurtigere ved efterfølgende udbrud. Huden heler oftest uden arvæv.'
                   : 'The blisters burst and form ulcers, which are subsequently covered by a crust. Symptoms usually clear within 2–4 weeks during the first outbreak and more quickly during subsequent outbreaks. The skin usually heals without scarring.'}
               </p>
 
@@ -447,7 +447,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Det er vigtigt at informere seksuelle partnere om diagnosen og tage de nødvendige forholdsregler (kondombrug, undgå kontakt under udbrud). Åben kommunikation er afgørende for at beskytte sin partner og reducere stigma.'
+                      ? 'Det er vigtigt at informere seksuelle partnere om diagnosen og tage de nødvendige forholdsregler (kondombrug, undgå kontakt under udbrud). Åben kommunikation er afgørende for at beskytte sin partner og mindske stigmaet.'
                       : 'It is important to inform sexual partners of the diagnosis and take the necessary precautions (condom use, avoid contact during outbreaks). Open communication is essential for protecting partners and reducing stigma.'}
                   </p>
                 </div>

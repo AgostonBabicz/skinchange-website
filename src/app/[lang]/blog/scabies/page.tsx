@@ -226,7 +226,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'I denne artikel forklarer vi præcist hvad skab er, hvorfor det smitter så let, hvordan det viser sig, og hvad du kan gøre for at blive fri for det.'
-                  : 'In this article we explain exactly what scabies is, why it spreads so easily, what it looks like, and what you can do to get rid of it.'}
+                  : 'In this article, we explain exactly what scabies is, why it spreads so easily, what it looks like, and what you can do to get rid of it.'}
               </p>
             </div>
 

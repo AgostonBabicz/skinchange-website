@@ -231,8 +231,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcis hvad kontaktdermatitis er, hvilke to hovedtyper der findes, hvordan det ser ud, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what contact dermatitis is, the two main types that exist, what it looks like, and what you can do about it.'}
+                  ? 'I denne artikel forklarer vi præcist hvad kontaktdermatitis er, hvilke to hovedtyper der findes, hvordan det ser ud, og hvad du kan gøre ved det.'
+                  : 'In this article, we explain exactly what contact dermatitis is, the two main types that exist, what it looks like, and what you can do about it.'}
               </p>
             </div>
 
@@ -428,7 +428,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Undgå sæber med parfume og tensider. Brug lunkent vand i stedet for varmt vand, og undgå at gnide huden tør. Vælg rensere og fugtighedscremer formuleret til sensitiv hud.'
+                      ? 'Undgå sæber med parfume og tensider. Brug lunkent i stedet for varmt vand, og undgå at gnide huden tør. Vælg rensere og fugtighedscremer formuleret til sensitiv hud.'
                       : 'Avoid soaps with fragrance and surfactants. Use lukewarm water instead of hot water, and avoid rubbing the skin dry. Choose cleansers and moisturisers formulated for sensitive skin.'}
                   </p>
                 </div>

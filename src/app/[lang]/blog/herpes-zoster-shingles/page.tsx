@@ -286,7 +286,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                     : 'A painful red rash appears in a band or cluster along the nerve path — most often around the torso, but can affect the face, eyes and mouth. Within a few days fluid-filled blisters develop, which then burst and form yellow crusts.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Helingssfase:' : 'Healing phase:'}</strong>{' '}
+                  <strong>{isDa ? 'Helingsfase:' : 'Healing phase:'}</strong>{' '}
                   {isDa
                     ? 'Skorperne falder af i løbet af 2–4 uger. Huden kan efterlade pletter eller ar, men dette er ikke altid tilfældet.'
                     : 'The crusts fall off within 2–4 weeks. The skin may leave marks or scars, but this is not always the case.'}

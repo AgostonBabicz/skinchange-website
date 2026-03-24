@@ -237,7 +237,7 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'I denne artikel forklarer vi præcist hvad vitiligo er, hvad der forårsager det, hvem der rammes, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what vitiligo is, what causes it, who gets it, and what you can do about it.'}
+                  : 'In this article, we explain exactly what vitiligo is, what causes it, who gets it, and what you can do about it.'}
               </p>
             </div>
 

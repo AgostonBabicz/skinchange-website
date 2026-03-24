@@ -239,7 +239,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               <p>
                 {isDa
                   ? 'I denne artikel forklarer vi præcist hvad tinea-infektioner er, de forskellige typer, hvad der forårsager dem, og hvad du kan gøre ved dem.'
-                  : 'In this article we explain exactly what tinea infections are, the different types, what causes them, and what you can do about them.'}
+                  : 'In this article, we explain exactly what tinea infections are, the different types, what causes them, and what you can do about them.'}
               </p>
             </div>
 
@@ -516,7 +516,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   <p>
                     {isDa
                       ? 'Meget sjældent. De fleste tinea-infektioner kræver aktiv behandling med svampedræbende midler. Uden behandling vil infektionen typisk brede sig og kan overføres til andre. Negleinfektion og ringorm på hovedbunden kræver altid receptpligtig behandling.'
-                      : 'Very rarely. Most tinea infections require active treatment with antifungal medications. Without treatment the infection will typically spread and can be transferred to others. Nail infection and scalp ringworm always require prescription treatment.'}
+                      : 'Very rarely. Most tinea infections require active treatment with antifungal medications. Without treatment the infection will typically worsen and can be transferred to others. Nail infection and scalp ringworm always require prescription treatment.'}
                   </p>
                 </div>
                 <div>
