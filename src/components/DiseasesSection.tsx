@@ -24,19 +24,21 @@ export default function DiseasesSection({ lang }: DiseasesSectionProps) {
 
         {/* Disease cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {t.diseases.items.map((disease, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group"
-            >
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors">
-                {disease.name}
-              </h3>
-              <p className="text-white/60 text-sm">
-                {disease.desc}
-              </p>
-            </div>
-          ))}
+          {t.diseases.items.map((disease, index) => {
+            const href = disease.slug ? `/${lang}/blog/${disease.slug}` : null;
+            const Wrapper = href ? 'a' : 'div';
+            const wrapperProps = href ? { href, className: 'block bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group cursor-pointer', 'aria-label': disease.slug ? `${disease.name} — read more` : undefined } : { className: 'bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group' };
+            return (
+              <Wrapper key={index} {...wrapperProps}>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors">
+                  {disease.name}
+                </h3>
+                <p className="text-white/60 text-sm">
+                  {disease.desc}
+                </p>
+              </Wrapper>
+            );
+          })}
         </div>
 
         {/* Blog link */}
