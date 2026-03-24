@@ -209,7 +209,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#6a1b9a] to-[#4a148c]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=1200&q=80"
+                src="/blog-lichen-planus.jpg"
                 alt={isDa ? 'Lichen planus – hudlidelse behandling' : 'Lichen planus – skin condition treatment'}
                 className="w-full h-full object-cover mix-blend-overlay opacity-50"
               />

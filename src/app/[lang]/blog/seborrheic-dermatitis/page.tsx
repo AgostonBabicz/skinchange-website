@@ -193,7 +193,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80"
+                src="/blog-seborrheic-dermatitis.jpg"
                 alt={isDa ? 'Seborrheisk dermatitis – skæl og hudlidelse' : 'Seborrheic dermatitis – dandruff and skin condition'}
                 className="w-full h-full object-cover mix-blend-overlay opacity-60"
               />

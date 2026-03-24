@@ -190,7 +190,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#5c6bc0] to-[#303f9f]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&q=80"
+                src="/blog-scabies.jpg"
                 alt={isDa ? 'Skab – intens kløe og hudirritation' : 'Scabies – intense itching and skin irritation'}
                 className="w-full h-full object-cover mix-blend-overlay opacity-50"
               />
