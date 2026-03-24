@@ -193,7 +193,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80"
+                src="/blog-eczema.jpg"
                 alt={
                   isDa
                     ? 'Eksem – atopisk dermatitis behandling'

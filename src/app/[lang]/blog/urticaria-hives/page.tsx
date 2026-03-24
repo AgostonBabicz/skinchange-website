@@ -193,7 +193,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80"
+                src="/blog-urticaria-hives.jpg"
                 alt={
                   isDa
                     ? 'Nældefeber – hudlidelse og allergi'
