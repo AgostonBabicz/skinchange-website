@@ -1064,6 +1064,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'cellulitis',
+        nameDa: 'Cellulitis',
+        nameEn: 'Cellulitis',
+        icon: '🔴',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er cellulitis?',
+              answer:
+                'Cellulitis er en akut bakteriel infektion i hudens dybere lag (dermis og subkutant væv), der forårsager rødme, hævelse, varme og smerter i det berørte område. Det kræver hurtig behandling med antibiotika for at forebygge alvorlige komplikationer.',
+            },
+            {
+              question: 'Hvordan ser cellulitis ud?',
+              answer:
+                'Cellulitis viser sig typisk som et afgrænset rødt, hævet og varmt område på huden — ofte på skinnebenet. Området føles smertefuldt, og huden kan se stram og skinnende ud. Ved mere alvorlig infektion kan der forekomme feber og kulderystelser.',
+            },
+            {
+              question: 'Hvorfor opstår cellulitis?',
+              answer:
+                'Cellulitis opstår, når bakterier (typisk streptokokker eller stafylokokker) trænger ind i huden gennem et brud i hudbarrieren — eksempelvis et snit, en skramme, et insektbid eller en revne. Kroniske hudtilstande, lymfødem og diabetes øger risikoen betydeligt.',
+            },
+            {
+              question: 'Hvem får cellulitis?',
+              answer:
+                'Alle kan udvikle cellulitis, men børn, ældre, personer med diabetes og immunsvækkede er mest sårbare. Personer med kroniske hudtilstande som eksem har også forhøjet risiko.',
+            },
+            {
+              question: 'Hvad skal jeg huske om cellulitis behandling?',
+              answer:
+                'Cellulitis behandles med antibiotika — typisk 5–14 dage. Mild til moderat cellulitis behandles med tabletter, mens svær cellulitis kan kræve intravenøs antibiotika på hospital. Hvile, elevation af det berørte område og god sårpleje er vigtige dele af behandlingen.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is cellulitis?',
+              answer:
+                'Cellulitis is an acute bacterial infection of the deeper layers of the skin (dermis and subcutaneous tissue), causing redness, swelling, warmth and pain in the affected area. It requires prompt antibiotic treatment to prevent serious complications.',
+            },
+            {
+              question: 'What does cellulitis look like?',
+              answer:
+                'Cellulitis typically appears as a well-defined red, swollen and warm area on the skin — most commonly on the shin. The area feels painful and the skin may appear tight and shiny. With more serious infection, fever and chills may occur.',
+            },
+            {
+              question: 'Why does cellulitis happen?',
+              answer:
+                'Cellulitis occurs when bacteria (typically streptococci or staphylococci) enter the skin through a break in the skin barrier — such as a cut, scrape, insect bite or crack. Chronic skin conditions, lymphoedema and diabetes significantly increase the risk.',
+            },
+            {
+              question: 'Who gets cellulitis?',
+              answer:
+                'Anyone can develop cellulitis, but children, older adults, people with diabetes and the immunocompromised are most vulnerable. People with chronic skin conditions such as eczema also have an elevated risk.',
+            },
+            {
+              question: 'What should I remember about cellulitis treatment?',
+              answer:
+                'Cellulitis is treated with antibiotics — typically for 5–14 days. Mild to moderate cellulitis is treated with tablets, while severe cellulitis may require intravenous antibiotics in hospital. Rest, elevation of the affected area and good wound care are important parts of treatment.',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

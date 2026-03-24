@@ -171,6 +171,16 @@ const blogPosts = {
       image: '/blog-impetigo.jpg',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
     },
+    {
+      slug: 'cellulitis',
+      title: 'Hvad er Cellulitis? Årsager, Symptomer og Behandling',
+      excerpt: 'Cellulitis er en alvorlig bakteriel hudinfektion, der kræver hurtig behandling. Lær hvad cellulitis er, hvordan det ser ud, og hvorfor tidlig diagnose er afgørende.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '24. marts 2026',
+      image: '/blog-cellulitis.jpg',
+      imageAlt: 'Cellulitis bakteriel hudinfektion behandling',
+    },
   ],
   en: [
     {
@@ -312,6 +322,16 @@ const blogPosts = {
       date: 'March 23, 2026',
       image: '/blog-impetigo.jpg',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
+    },
+    {
+      slug: 'cellulitis',
+      title: 'What is Cellulitis? Causes, Symptoms and Treatment',
+      excerpt: 'Cellulitis is a serious bacterial skin infection that requires prompt treatment. Learn what cellulitis is, what it looks like, and why early diagnosis is crucial.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'March 24, 2026',
+      image: '/blog-cellulitis.jpg',
+      imageAlt: 'Cellulitis bacterial skin infection treatment',
     },
   ],
 };
