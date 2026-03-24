@@ -265,7 +265,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'Eksem kan se meget forskelligt ud afhængigt af personens alder og hudtype:'
-                  : 'Eczema can look very different depending on the person\'s age and skin type:'}
+                  : 'Eczema can look very different depending on a person\'s age and skin type:'}
               </p>
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
@@ -364,8 +364,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 </li>
                 <li>
                   {isDa
-                    ? 'Visse fødevarer (f.eks. mælk, æg, nødder, gluten)'
-                    : 'Certain foods (e.g. milk, eggs, nuts, gluten)'}
+                    ? 'Visse fødevarer (f.eks. mælk, æg, nødder og glutenholdige produkter)'
+                    : 'Certain foods (e.g. milk, eggs, nuts and gluten-containing products)'}
                 </li>
                 <li>{isDa ? 'Syntetiske stoffer og uld' : 'Synthetic fabrics and wool'}</li>
                 <li>

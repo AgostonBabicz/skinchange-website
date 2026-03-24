@@ -231,7 +231,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'I denne artikel forklarer vi præcist hvad acne er, hvad der forårsager det, hvordan det ser ud, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what acne is, what causes it, what it looks like, and what you can do about it.'}
+                  : 'In this article, we explain exactly what acne is, what causes it, what it looks like, and what you can do about it.'}
               </p>
             </div>
 
@@ -401,7 +401,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Reducér sukker og mejeriprodukter, håndtér stress, sov nok og skyl ansigtet to gange dagligt med mild renser.'
-                      : 'Reduce sugar and dairy, manage stress, get enough sleep and wash your face twice daily with a gentle cleanser.'}
+                      : 'Reduce sugar and dairy intake, manage stress, get enough sleep and wash your face twice daily with a gentle cleanser.'}
                   </p>
                 </div>
                 <div>

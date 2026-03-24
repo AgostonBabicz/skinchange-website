@@ -231,7 +231,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'I denne artikel forklarer vi præcist hvad rosacea er, hvad der forårsager det, hvem der er i risiko, og hvad der kan gøres ved det.'
-                  : 'In this article we explain exactly what rosacea is, what causes it, who is at risk, and what can be done about it.'}
+                  : 'In this article, we explain exactly what rosacea is, what causes it, who is at risk, and what can be done about it.'}
               </p>
             </div>
 

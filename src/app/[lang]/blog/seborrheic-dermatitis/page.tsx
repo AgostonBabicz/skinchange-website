@@ -229,7 +229,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               <p>
                 {isDa
                   ? 'I denne artikel forklarer vi præcist hvad seborrheisk dermatitis er, hvad der forårsager det, hvordan det ser ud, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what seborrheic dermatitis is, what causes it, what it looks like, and what you can do about it.'}
+                  : 'In this article, we explain exactly what seborrheic dermatitis is, what causes it, what it looks like, and what you can do about it.'}
               </p>
             </div>
 
