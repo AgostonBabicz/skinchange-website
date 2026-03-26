@@ -1126,6 +1126,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'melanoma',
+        nameDa: 'Modermærkekræft (Melanoma)',
+        nameEn: 'Melanoma',
+        icon: '☀️',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er modermærkekræft (melanoma)?',
+              answer:
+                'Modermærkekræft (melanoma) er en ondartet tumorsygdom, der opstår fra melanocytterne – de pigmentproducerende celler i huden. Den adskiller sig fra andre hudkræftformer ved at kunne sprede sig til andre dele af kroppen, hvis den ikke behandles rettidigt.',
+            },
+            {
+              question: 'Hvordan genkender jeg modermærkekræft tidligt?',
+              answer:
+                'Brug ABCDE-metoden: Asymmetri (A), Border/kantens uregelmæssighed (B), Color/farvevariation (C), Diameter/størrelse over 6 mm (D), og Evolving/ændring over tid (E). Kontakt en hudlæge, hvis du observerer ét eller flere af disse tegn.',
+            },
+            {
+              question: 'Hvad er de vigtigste risikofaktorer for modermærkekræft?',
+              answer:
+                'Ultraviolet (UV) stråling fra solen er den primære årsag. Andre faktorer inkluderer lys hudfarve, familiehistorie med modermærkekræft, tilstedeværelsen af mange eller atypiske modermærker, og alvorlige solskoldninger – særligt i barndommen.',
+            },
+            {
+              question: 'Hvem får modermærkekræft?',
+              answer:
+                'Alle kan rammes, men risikogruppen omfatter personer med lys hud og lyse øjne, personer med familiehistorie, personer med mange modermærker (>50), og personer der har haft alvorlige solskoldninger i barndommen. Solarier øger også risikoen markant.',
+            },
+            {
+              question: 'Hvad skal jeg huske om behandling af modermærkekræft?',
+              answer:
+                'Kirurgisk fjernelse er standardbehandling ved tidlig diagnose med over 90% helbredelsesrate. Ved fremskreden sygdom kan immunterapi (checkpoint-hæmmere) og målrettet terapi markant forbedre overlevelsesraten. Forebyggelse – solcreme SPF 30+, undgå solarier, månedlig selvanalyse – er den bedste strategi.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is melanoma (skin cancer)?',
+              answer:
+                'Melanoma is a malignant tumour arising from melanocytes — the pigment-producing cells in the skin. It differs from other forms of skin cancer in its ability to spread to other parts of the body if left untreated.',
+            },
+            {
+              question: 'How do I recognise melanoma early?',
+              answer:
+                'Use the ABCDE method: Asymmetry (A), Border irregularity (B), Colour variation (C), Diameter greater than 6 mm (D), and Evolving — any change in size, shape or colour over time (E). Contact a dermatologist if you observe one or more of these signs.',
+            },
+            {
+              question: 'What are the main risk factors for melanoma?',
+              answer:
+                'Ultraviolet (UV) radiation from the sun is the primary cause. Other factors include fair skin tone, a family history of melanoma, the presence of many or atypical moles, and severe sunburns — especially in childhood.',
+            },
+            {
+              question: 'Who gets melanoma?',
+              answer:
+                'Anyone can be affected, but higher-risk groups include people with fair skin and light eyes, those with a family history, people with many moles (>50), and those who had severe sunburns in childhood. Tanning beds also significantly increase the risk.',
+            },
+            {
+              question: 'What should I remember about melanoma treatment?',
+              answer:
+                'Surgical removal is the standard treatment at early diagnosis with a cure rate above 90%. For advanced disease, immunotherapy (checkpoint inhibitors) and targeted therapy can significantly improve survival rates. Prevention — SPF 30+ sunscreen, avoiding tanning beds, monthly self-examination — is the best strategy.',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
