@@ -181,6 +181,16 @@ const blogPosts = {
       image: '/blog-cellulitis.jpg',
       imageAlt: 'Cellulitis bakteriel hudinfektion behandling',
     },
+    {
+      slug: 'melanoma',
+      title: 'Hvad er Modermærkekræft (Melanoma)? Årsager, Symptomer og Behandling',
+      excerpt: 'Modermærkekræft er den farligste form for hudkræft. Lær hvordan du bruger ABCDE-metoden til at genkende faresignaler tidligt, og hvorfor tidlig diagnose er afgørende for helbredelsen.',
+      category: 'Hudkræft',
+      readTime: '7 min',
+      date: '26. marts 2026',
+      image: '/blog-melanoma.jpg',
+      imageAlt: 'Modermærkekræft melanoma hudkræft',
+    },
   ],
   en: [
     {
@@ -332,6 +342,16 @@ const blogPosts = {
       date: 'March 24, 2026',
       image: '/blog-cellulitis.jpg',
       imageAlt: 'Cellulitis bacterial skin infection treatment',
+    },
+    {
+      slug: 'melanoma',
+      title: 'What is Melanoma (Skin Cancer)? Causes, Symptoms and Treatment',
+      excerpt: 'Melanoma is the most dangerous form of skin cancer. Learn how to use the ABCDE method to recognise warning signs early, and why early detection is critical for a cure.',
+      category: 'Skin Cancer',
+      readTime: '7 min',
+      date: 'March 26, 2026',
+      image: '/blog-melanoma.jpg',
+      imageAlt: 'Melanoma skin cancer',
     },
   ],
 };
