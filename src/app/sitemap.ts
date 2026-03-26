@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   languages.forEach((lang) => {
     allPages.forEach(({ path, type }) => {
-      const url = `${baseUrl}/${lang}${path}`;
+      const url = `${baseUrl}/${lang}${path}/`;
 
       let priority = 0.5;
       let changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' = 'weekly';
@@ -79,9 +79,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority,
         alternates: {
           languages: {
-            'x-default': `${baseUrl}/da${path}`,
-            da: `${baseUrl}/da${path}`,
-            en: `${baseUrl}/en${path}`,
+            'x-default': `${baseUrl}/da${path}/`,
+            da: `${baseUrl}/da${path}/`,
+            en: `${baseUrl}/en${path}/`,
           },
         },
       });
