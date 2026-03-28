@@ -256,7 +256,8 @@
   {
     "id": 18,
     "name": "Basal Cell Carcinoma",
-    "handled": false,
+    "handled": true,
+    "handled_date": "2026-03-28",
     "slug": "basal-cell-carcinoma",
     "en": {
       "content": "Additional Information\nWhat is it?\nBCC originates from the basal cells, which form the lower layer of your skin. It grows slowly and rarely spreads to other parts of the body. However, if left untreated, it can grow deeper and damage surrounding tissue.\n\nWhat does it look like?\nBCC can appear in various forms, but common signs include:\nA pearly or waxy bump: Often with a smooth, translucent surface.\nA flat, pink or red patch: May have slightly raised, rolled edges.\nA small, brown or black scar-like area.\nA broken blood vessel within the growth.\n\nWhy does it happen?\nThe primary cause of BCC is ultraviolet (UV) radiation from the sun or tanning beds. Other factors can also increase your risk, such as:\nFair skin complexion and light eyes.\nA history of sunburns, especially severe ones in childhood.\nWeakened immune system: Due to illness or medication.\nFamily history of skin cancer.\n\nWho gets it?\nBCC can affect anyone, but some individuals are more prone:\nPeople over 50 years old.\nIndividuals with lighter skin, hair, and eyes.\nThose who spend a lot of time outdoors without proper sun protection.\n\nRemember:\nBCC is highly treatable, especially when detected early. Various treatment options available include surgical removal, Mohs surgery, radiation therapy, and topical medications.\nRegular skin self-exams are crucial. Checking your skin head-to-toe once a month helps identify changes early.\nSun protection is key. Wear sunscreen with SPF 30 or higher daily, wear protective clothing, and seek shade during peak sun hours.\nConsult your dermatologist for any suspicious skin changes. Early diagnosis and treatment significantly improve outcomes."
