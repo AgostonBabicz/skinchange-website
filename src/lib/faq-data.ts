@@ -1188,6 +1188,68 @@ export const faqCategories: FaqCategory[] = [
           ],
         },
       },
+      {
+        slug: 'basal-cell-carcinoma',
+        nameDa: 'Basalcellcarcinom (BCC)',
+        nameEn: 'Basal Cell Carcinoma (BCC)',
+        icon: '☀️',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er basalcellcarcinom (BCC)?',
+              answer:
+                'Basalcellcarcinom (BCC) er den hyppigste form for hudkræft. Den udvikler sig fra basalcellerne i den nederste del af overhuden og vokser langsomt. BCC spreder sig sjældent til andre dele af kroppen, men ubehandlet kan den vokse dybt og beskadige omkringliggende væv.',
+            },
+            {
+              question: 'Hvordan ser basalcellcarcinom ud?',
+              answer:
+                'BCC viser sig oftest som en perleagtig eller voksagtig knude med en glat, gennemsigtig overflade, eller som en flad, lyserød eller rød plet med let forhøjede kanter. Det kan også ligne et lille ar eller have synlige blodkar i væksten.',
+            },
+            {
+              question: 'Hvorfor opstår basalcellcarcinom?',
+              answer:
+                'Den primære årsag er kronisk eksponering for ultraviolet (UV) stråling fra solen eller solarier. UV-stråling beskadiger DNA\'et i hudcellerne, og når skaden ophobes over tid, kan basalcellerne begynde at vokse ukontrollabelt. Risikofaktorer inkluderer lys hudfarve, høj alder, svækket immunsystem og familiehistorie med hudkræft.',
+            },
+            {
+              question: 'Hvem får basalcellcarcinom?',
+              answer:
+                'BCC rammer hyppigst personer over 50 år med lys hud og lyse øjne. Kronisk soleksponering – særligt i barndommen – er den vigtigste risikofaktor. Organtransplantationsmodtagere og personer med HIV har 10-100 gange højere risiko end den generelle befolkning.',
+            },
+            {
+              question: 'Hvad skal jeg huske om behandling af basalcellcarcinom?',
+              answer:
+                'BCC er yderst behandlelig med en helbredelsesrate på over 95% ved tidlig diagnose. Kirurgisk fjernelse er standardbehandling; Mohs-kirurgi (mikrografisk kirurgi) anvendes ofte i ansigtet for at bevare mest mulig sund hud. Forebyggelse med solcreme SPF 30+ året rundt og regelmæssige hudselvanalyser er den bedste strategi.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is basal cell carcinoma (BCC)?',
+              answer:
+                'Basal cell carcinoma (BCC) is the most common form of skin cancer. It develops from basal cells in the lower part of the epidermis and grows slowly. BCC rarely spreads to other parts of the body, but left untreated it can grow deep and damage surrounding tissue.',
+            },
+            {
+              question: 'What does basal cell carcinoma look like?',
+              answer:
+                'BCC most often appears as a pearly or waxy bump with a smooth, translucent surface, or as a flat, pink or red patch with slightly raised edges. It may also resemble a small scar or have visible blood vessels within the growth.',
+            },
+            {
+              question: 'Why does basal cell carcinoma occur?',
+              answer:
+                "The primary cause is chronic exposure to ultraviolet (UV) radiation from the sun or tanning beds. UV radiation damages the DNA in skin cells, and when this damage accumulates over time, basal cells can begin to grow uncontrollably. Risk factors include fair skin tone, older age, immune suppression and a family history of skin cancer.",
+            },
+            {
+              question: 'Who gets basal cell carcinoma?',
+              answer:
+                'BCC most commonly affects people over 50 years old with fair skin and light eyes. Chronic sun exposure — especially during childhood — is the most important risk factor. Organ transplant recipients and people with HIV have a 10–100 times higher risk than the general population.',
+            },
+            {
+              question: 'What should I remember about basal cell carcinoma treatment?',
+              answer:
+                "BCC is highly treatable with a cure rate of over 95% when diagnosed early. Surgical removal is the standard treatment; Mohs surgery (microscopically controlled surgery) is often used on the face to preserve as much healthy skin as possible. Prevention with SPF 30+ sunscreen year-round and regular skin self-examinations are the best strategy.",
+            },
+          ],
+        },
+      },
     ],
   },
 ];

@@ -191,6 +191,16 @@ const blogPosts = {
       image: '/blog-melanoma.jpg',
       imageAlt: 'Modermærkekræft melanoma hudkræft',
     },
+    {
+      slug: 'basal-cell-carcinoma',
+      title: 'Hvad er Basalcellcarcinom (BCC)? Årsager, Symptomer og Behandling',
+      excerpt: 'Basalcellcarcinom (BCC) er den hyppigste form for hudkræft. Lær hvad det er, hvordan det ser ud, hvem der er i risiko, og hvilke behandlingsmuligheder der findes.',
+      category: 'Hudkræft',
+      readTime: '7 min',
+      date: '28. marts 2026',
+      image: '/blog-basal-cell-carcinoma.jpg',
+      imageAlt: 'Basalcellcarcinom BCC hudkræft behandling',
+    },
   ],
   en: [
     {
@@ -352,6 +362,16 @@ const blogPosts = {
       date: 'March 26, 2026',
       image: '/blog-melanoma.jpg',
       imageAlt: 'Melanoma skin cancer',
+    },
+    {
+      slug: 'basal-cell-carcinoma',
+      title: 'What is Basal Cell Carcinoma (BCC)? Causes, Symptoms and Treatment',
+      excerpt: 'Basal cell carcinoma (BCC) is the most common form of skin cancer. Learn what it is, what it looks like, who is at risk, and what treatment options are available.',
+      category: 'Skin Cancer',
+      readTime: '7 min',
+      date: 'March 28, 2026',
+      image: '/blog-basal-cell-carcinoma.jpg',
+      imageAlt: 'Basal cell carcinoma BCC skin cancer',
     },
   ],
 };
