@@ -32,6 +32,16 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
 const blogPosts = {
   da: [
     {
+      slug: 'alopecia-areata',
+      title: 'Hvad er Alopecia Areata? Årsager, Symptomer og Behandling',
+      excerpt: 'Alopecia areata er en autoimmun hudlidelse, hvor immunsystemet angriber hårsækkene. Lær hvad det er, hvem der rammes, og hvilke behandlinger der kan hjælpe.',
+      category: 'Hudsygdomme',
+      readTime: '6 min',
+      date: '3. april 2026',
+      image: '/blog-alopecia-areata.jpg',
+      imageAlt: 'Alopecia areata autoimmun hårtab behandling',
+    },
+    {
       slug: 'acne',
       title: 'Hvad er Acne? Årsager, Symptomer og Behandling',
       excerpt: 'Acne er en af de mest udbredte hudlidelser i verden. Lær hvad acne er, hvad der forårsager det, hvem der rammes og hvilke behandlingsmuligheder der findes.',
@@ -201,8 +211,28 @@ const blogPosts = {
       image: '/blog-basal-cell-carcinoma.jpg',
       imageAlt: 'Basalcellcarcinom BCC hudkræft behandling',
     },
+    {
+      slug: 'squamous-cell-carcinoma',
+      title: 'Hvad er Pladecellecarcinom (SCC)? Årsager, Symptomer og Behandling',
+      excerpt: 'Pladecellecarcinom (SCC) er den næsthyppigste form for hudkræft. Lær hvad det er, hvordan det ser ud, hvem der er i risiko, og hvilke behandlinger der findes.',
+      category: 'Hudkræft',
+      readTime: '7 min',
+      date: '29. marts 2026',
+      image: '/blog-squamous-cell-carcinoma.jpg',
+      imageAlt: 'Pladecellecarcinom SCC hudkræft behandling',
+    },
   ],
   en: [
+    {
+      slug: 'alopecia-areata',
+      title: 'What is Alopecia Areata? Causes, Symptoms and Treatment',
+      excerpt: 'Alopecia areata is an autoimmune skin condition where the immune system attacks hair follicles. Learn what it is, who it affects, and which treatments can help.',
+      category: 'Skin Conditions',
+      readTime: '6 min',
+      date: 'April 3, 2026',
+      image: '/blog-alopecia-areata.jpg',
+      imageAlt: 'Alopecia areata autoimmune hair loss treatment',
+    },
     {
       slug: 'acne',
       title: 'What is Acne? Causes, Symptoms and Treatment',
@@ -372,6 +402,16 @@ const blogPosts = {
       date: 'March 28, 2026',
       image: '/blog-basal-cell-carcinoma.jpg',
       imageAlt: 'Basal cell carcinoma BCC skin cancer',
+    },
+    {
+      slug: 'squamous-cell-carcinoma',
+      title: 'What is Squamous Cell Carcinoma (SCC)? Causes, Symptoms and Treatment',
+      excerpt: 'Squamous cell carcinoma (SCC) is the second most common form of skin cancer. Learn what it is, what it looks like, who is at risk, and which treatments are available.',
+      category: 'Skin Cancer',
+      readTime: '7 min',
+      date: 'March 29, 2026',
+      image: '/blog-squamous-cell-carcinoma.jpg',
+      imageAlt: 'Squamous cell carcinoma SCC skin cancer',
     },
   ],
 };

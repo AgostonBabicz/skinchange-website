@@ -817,6 +817,68 @@ export const faqCategories: FaqCategory[] = [
         },
       },
       {
+        slug: 'alopecia-areata',
+        nameDa: 'Alopecia Areata',
+        nameEn: 'Alopecia Areata',
+        icon: '💇',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er alopecia areata?',
+              answer:
+                'Alopecia areata er en autoimmun hudlidelse, hvor immunsystemets T-celler fejlagtigt angriber hårsækkene, hvilket fører til pludseligt hårtab i veldefinerede runde eller ovale pletter. Tilstanden er ikke smitsom.',
+            },
+            {
+              question: 'Hvordan ser alopecia areata ud?',
+              answer:
+                'Alopecia areata viser sig typisk som veldefinerede, runde eller ovale pletter uden hår på hovedbunden. Pletterne er som regel glatte og skælløse. Håravfallet kan også påvirke skæg, øjenbryn, øjenvipper og andre kropsområder.',
+            },
+            {
+              question: 'Hvorfor opstår alopecia areata?',
+              answer:
+                'Alopecia areata skyldes en autoimmun reaktion, hvor T-celler fejlagtigt angriber og ødelægger hårsækkene. Genetik, stress og visse andre autoimmune sygdomme kan bidrage til at udløse tilstanden.',
+            },
+            {
+              question: 'Hvem får alopecia areata?',
+              answer:
+                'Alle kan udvikle alopecia areata, men tilstanden debuterer ofte i barndommen eller tidlig voksenalder. Ca. 2% af befolkningen rammes i løbet af livet, og der er ofte en familiehistorie med alopecia eller andre autoimmune sygdomme.',
+            },
+            {
+              question: 'Kan alopecia areata behandles?',
+              answer:
+                'Ja, selvom der ikke er en enkelt kur, findes der effektive behandlinger. Disse inkluderer topiske kortikosteroider, intralesionelle steroidinjektioner, immunterapi og nyere JAK-hæmmere som baricitinib og ritlecitinib. Behandlingen vælges ud fra sværhedsgrad og individuelle faktorer.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is alopecia areata?',
+              answer:
+                'Alopecia areata is an autoimmune skin condition in which the immune system\'s T-cells mistakenly attack the hair follicles, leading to sudden hair loss in well-defined round or oval patches. The condition is not contagious.',
+            },
+            {
+              question: 'What does alopecia areata look like?',
+              answer:
+                'Alopecia areata typically appears as well-defined, round or oval patches of hair loss on the scalp. The patches are usually smooth and without scaling. Hair loss can also affect the beard, eyebrows, eyelashes and other body areas.',
+            },
+            {
+              question: 'Why does alopecia areata happen?',
+              answer:
+                'Alopecia areata is caused by an autoimmune reaction in which T-cells mistakenly attack and destroy hair follicles. Genetics, stress and certain other autoimmune diseases can contribute to triggering the condition.',
+            },
+            {
+              question: 'Who gets alopecia areata?',
+              answer:
+                'Anyone can develop alopecia areata, but the condition often begins in childhood or early adulthood. Approximately 2% of the population is affected at some point in their lives, and there is frequently a family history of alopecia or other autoimmune diseases.',
+            },
+            {
+              question: 'Can alopecia areata be treated?',
+              answer:
+                'Yes, although there is no single cure, effective treatments exist. These include topical corticosteroids, intralesional steroid injections, immunotherapy and newer JAK inhibitors such as baricitinib and ritlecitinib. Treatment is chosen based on severity and individual factors.',
+            },
+          ],
+        },
+      },
+      {
         slug: 'psoriasis',
         nameDa: 'Psoriasis',
         nameEn: 'Psoriasis',
@@ -1246,6 +1308,68 @@ export const faqCategories: FaqCategory[] = [
               question: 'What should I remember about basal cell carcinoma treatment?',
               answer:
                 "BCC is highly treatable with a cure rate of over 95% when diagnosed early. Surgical removal is the standard treatment; Mohs surgery (microscopically controlled surgery) is often used on the face to preserve as much healthy skin as possible. Prevention with SPF 30+ sunscreen year-round and regular skin self-examinations are the best strategy.",
+            },
+          ],
+        },
+      },
+      {
+        slug: 'squamous-cell-carcinoma',
+        nameDa: 'Pladecellecarcinom (SCC)',
+        nameEn: 'Squamous Cell Carcinoma (SCC)',
+        icon: '☀️',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er pladecellecarcinom (SCC)?',
+              answer:
+                'Pladecellecarcinom (SCC) er den næsthyppigste form for hudkræft og udvikler sig fra fladecellerne i hudens yderste lag. Den vokser langsomt, men kan i sjældne tilfælde sprede sig til andre dele af kroppen, især hos immunsvækkede.',
+            },
+            {
+              question: 'Hvordan ser pladecellecarcinom ud?',
+              answer:
+                'SCC viser sig typisk som en rød, skællende plet med ru overflade, en fast vorte-lignende knude, et sår der ikke heler, eller en flad lyserød/rød plet med forhøjet kant. Den opstår oftest på soleksponerede områder som ansigt, ører, nakke og hænder.',
+            },
+            {
+              question: 'Hvorfor opstår pladecellecarcinom?',
+              answer:
+                "Den primære årsag er kronisk eksponering for ultraviolet (UV) stråling fra solen eller solarier. UV-stråling beskadiger DNA'et i pladecellerne over tid, og de kan begynde at vokse ukontrollabelt. Risikofaktorer inkluderer lys hudfarve, tidligere solskoldninger og svækket immunsystem.",
+            },
+            {
+              question: 'Hvem får pladecellecarcinom?',
+              answer:
+                'SCC rammer hyppigst personer over 50 år med lys hud. Mænd har generelt højere forekomst end kvinder. Immunsvækkede, organtransplantationsmodtagere og personer med aktiniske keratoser har markant forhøjet risiko.',
+            },
+            {
+              question: 'Hvad skal jeg huske om behandling af pladecellecarcinom?',
+              answer:
+                'Kirurgisk fjernelse er standardbehandling med over 95% helbredelsesrate ved tidlig diagnose. Mohs-kirurgi anvendes ofte i ansigtet. Forebyggelse med SPF 30+ solcreme året rundt, undgå solarier og månedlig hudselvanalyse er den bedste strategi.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is squamous cell carcinoma (SCC)?',
+              answer:
+                'Squamous cell carcinoma (SCC) is the second most common form of skin cancer, developing from the squamous cells in the outermost layer of the skin. It grows slowly but can rarely spread to other parts of the body, especially in the immunocompromised.',
+            },
+            {
+              question: 'What does squamous cell carcinoma look like?',
+              answer:
+                'SCC typically appears as a red, scaly patch with a rough surface, a firm wart-like bump, a sore that does not heal, or a flat pink/red patch with a raised edge. It most commonly occurs on sun-exposed areas such as the face, ears, neck and hands.',
+            },
+            {
+              question: 'Why does squamous cell carcinoma occur?',
+              answer:
+                "The primary cause is chronic exposure to ultraviolet (UV) radiation from the sun or tanning beds. UV radiation damages the DNA in squamous cells over time, and they can begin to grow uncontrollably. Risk factors include fair skin tone, previous sunburns and a weakened immune system.",
+            },
+            {
+              question: 'Who gets squamous cell carcinoma?',
+              answer:
+                'SCC most commonly affects people over 50 with fair skin. Men generally have a higher incidence than women. The immunocompromised, organ transplant recipients and people with actinic keratoses have a significantly elevated risk.',
+            },
+            {
+              question: 'What should I remember about squamous cell carcinoma treatment?',
+              answer:
+                "Surgical removal is the standard treatment with over 95% cure rate when diagnosed early. Mohs surgery is often used on the face. Prevention with SPF 30+ sunscreen year-round, avoiding tanning beds and monthly skin self-examination is the best strategy.",
             },
           ],
         },
