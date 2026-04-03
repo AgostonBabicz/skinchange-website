@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkinChange GEO Audit Plan — March 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
+
+  :root {
+    --primary: #1a237e;
+    --accent: #304ffe;
+    --cyan: #00e5ff;
+    --dark: #0d1259;
+    --text: #1e1e2e;
+    --muted: #64748b;
+    --bg: #f8f9fc;
+    --white: #ffffff;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --green: #22c55e;
+    --border: #e2e8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 10pt;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 60%, #0a0f6e 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(48,79,254,0.35) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,229,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.9);
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 50px;
+    margin-bottom: 36px;
+    backdrop-filter: blur(8px);
+  }
+
+  .cover-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 72pt;
+    color: var(--white);
+    letter-spacing: -3px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .cover-subtitle {
+    font-size: 14pt;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--cyan);
+    border-radius: 2px;
+    margin: 0 auto 48px;
+  }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28pt;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  .cover p {
+    font-size: 11pt;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    line-height: 1.8;
+    margin-bottom: 56px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cover-meta-item {
+    text-align: center;
+  }
+
+  .cover-meta-label {
+    font-size: 7pt;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+
+  .cover-meta-value {
+    font-size: 10pt;
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* ── PAGE CONTENT ── */
+  .page {
+    padding: 48px 56px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page-break { page-break-before: always; }
+
+  /* ── TYPOGRAPHY ── */
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22pt;
+    color: var(--primary);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 36px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+
+  h3 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 10pt;
+    line-height: 1.7;
+  }
+
+  ul, ol {
+    margin: 8px 0 12px 20px;
+    font-size: 10pt;
+  }
+
+  li { margin-bottom: 4px; line-height: 1.6; }
+
+  strong { color: var(--primary); font-weight: 600; }
+
+  /* ── SECTION INTRO ── */
+  .section-intro {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+
+  .section-intro p {
+    color: rgba(255,255,255,0.85);
+    font-size: 10pt;
+    margin: 0;
+  }
+
+  /* ── TAGS & BADGES ── */
+  .tag {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  .tag-critical { background: #fee2e2; color: #dc2626; }
+  .tag-high { background: #fef3c7; color: #d97706; }
+  .tag-medium { background: #dbeafe; color: #2563eb; }
+  .tag-done { background: #dcfce7; color: #16a34a; }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--primary);
+    color: white;
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .badge-accent { background: var(--accent); }
+  .badge-cyan { background: var(--cyan); color: var(--primary); }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin: 16px 0;
+    font-size: 10pt;
+  }
+
+  .callout-red {
+    background: #fef2f2;
+    border-left: 4px solid var(--red);
+    color: #7f1d1d;
+  }
+
+  .callout-amber {
+    background: #fffbeb;
+    border-left: 4px solid var(--amber);
+    color: #78350f;
+  }
+
+  .callout-blue {
+    background: #eff6ff;
+    border-left: 4px solid var(--accent);
+    color: #1e3a8a;
+  }
+
+  .callout-green {
+    background: #f0fdf4;
+    border-left: 4px solid var(--green);
+    color: #14532d;
+  }
+
+  .callout p { color: inherit; margin: 0; }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px;
+    font-size: 9pt;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+
+  thead tr {
+    background: var(--primary);
+    color: white;
+  }
+
+  th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  tbody tr:nth-child(even) { background: #f8f9fc; }
+  tbody tr:hover { background: #eef2ff; }
+
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  td:first-child { font-weight: 600; color: var(--primary); }
+
+  /* ── CODE / SCHEMA BLOCKS ── */
+  .code-block {
+    background: #0d1117;
+    color: #e6edf3;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 7.5pt;
+    line-height: 1.7;
+    overflow-x: auto;
+    margin: 12px 0 16px;
+    white-space: pre;
+  }
+
+  .code-label {
+    font-size: 7.5pt;
+    color: var(--cyan);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* ── CARDS ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0 20px;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .card.critical { border-top: 3px solid var(--red); }
+  .card.high { border-top: 3px solid var(--amber); }
+  .card.medium { border-top: 3px solid var(--accent); }
+  .card.low { border-top: 3px solid var(--green); }
+
+  .card-icon {
+    font-size: 20pt;
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+  }
+
+  .card-body {
+    font-size: 9pt;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── CHECKLIST ── */
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 9.5pt;
+  }
+
+  .check-box {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .check-week {
+    background: var(--primary);
+    color: white;
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .check-text { flex: 1; }
+
+  /* ── PRIORITY BAR ── */
+  .priority-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .priority-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .priority-dot.critical { background: var(--red); }
+  .priority-dot.high { background: var(--amber); }
+  .priority-dot.medium { background: var(--accent); }
+  .priority-dot.low { background: var(--green); }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--primary);
+    color: rgba(255,255,255,0.6);
+    padding: 20px 56px;
+    font-size: 8pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .footer-logo {
+    font-weight: 800;
+    color: white;
+    font-size: 12pt;
+    letter-spacing: -0.5px;
+  }
+
+  /* ── ICD TABLE ── */
+  .icd-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 10px 0 16px;
+  }
+
+  .icd-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    background: #f8f9fc;
+    border-radius: 8px;
+    font-size: 8.5pt;
+    border: 1px solid var(--border);
+  }
+
+  .icd-code {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--accent);
+    background: #e0e7ff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 8pt;
+  }
+
+  /* ── ROADMAP ── */
+  .week-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .week-header {
+    background: var(--primary);
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .week-num {
+    background: var(--cyan);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 9pt;
+    padding: 3px 10px;
+    border-radius: 50px;
+  }
+
+  .week-title {
+    font-weight: 700;
+    font-size: 11pt;
+  }
+
+  .week-sub {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.6);
+    margin-left: auto;
+  }
+
+  .week-body { padding: 14px 20px; }
+
+  .checklist { list-style: none; margin: 0; padding: 0; }
+  .checklist li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 9pt;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .check-circle {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .check-label { flex: 1; color: var(--text); }
+  .check-tag {
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 4px;
+  }
+
+  /* ── APPENDIX TABLE ── */
+  .appendix-table td:first-child {
+    font-family: monospace;
+    background: #f0f4ff;
+    color: var(--accent);
+    font-size: 8pt;
+  }
+
+  @media print {
+    .page { padding: 36px 44px; }
+    .week-block { page-break-inside: avoid; }
+    .cover { page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- COVER PAGE                            -->
+<!-- ═══════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-badge">🌐 skinchange.dk</div>
+  <div class="cover-logo">SKIND</div>
+  <div class="cover-subtitle">Online Dermatology</div>
+  <div class="cover-divider"></div>
+  <h1>Generative Engine<br>Optimization Audit</h1>
+  <p>A comprehensive 18-point GEO roadmap to maximize visibility in AI Overviews, semantic search, and traditional SEO — for skinchange.dk and skinchange-website.</p>
+
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Prepared</div>
+      <div class="cover-meta-value">March 2026</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Scope</div>
+      <div class="cover-meta-value">Full Website</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Languages</div>
+      <div class="cover-meta-value">DA + EN</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Priority</div>
+      <div class="cover-meta-value">18 Action Items</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- EXECUTIVE SUMMARY                     -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page">
+  <span class="badge">Overview</span>
+  <h1>Executive Summary</h1>
+  <p>This document is a structured Generative Engine Optimization (GEO) audit for SkinChange.AI ApS. GEO is the discipline of optimizing web content specifically for how AI systems — including ChatGPT, Google AI Overviews, Perplexity, and Bing Copilot — discover, understand, and reference your content in generated answers.</p>
+  <p>Based on a full technical audit of the Next.js website, the analysis covers all pages including the homepage, 19 disease-specific blog articles, the FAQ hub and sub-pages, the user guide, the about page, and the download/app page.</p>
+
+  <div class="callout callout-blue" style="margin-top:20px;">
+    <p><strong>🔷 Current standing:</strong> SkinChange has a strong SEO foundation — proper hreflang, JSON-LD schemas, canonical URLs, and dual-language support are all in place. The primary gap is <strong>GEO-specific</strong> — missing schema types (HowTo, SpeakableSpecification, MedicalCode/ICD-11), thin FAQ answers, content depth, and infrastructure issues (plain-text fallbacks) that block AI visibility.</p>
+  </div>
+
+  <h2>What You Already Have</h2>
+  <div class="card-grid">
+    <div class="card low">
+      <div class="card-icon">✅</div>
+      <div class="card-title">JSON-LD Structured Data</div>
+      <div class="card-body">MedicalOrganization, Physician, Service, FAQPage, and Article schemas are implemented across the site.</div>
+    </div>
+    <div class="card low">
+      <div class="card-icon">✅</div>
+      <div class="card-title">Dual-Language Support</div>
+      <div class="card-body">Full DA/EN routing via Next.js [lang] parameter with correct hreflang tags.</div>
+    </div>
+    <div class="card low">
+      <div class="card-icon">✅</div>
+      <div class="card-title">Open Graph + Twitter Cards</div>
+      <div class="card-body">Social sharing metadata with branded og:image across all pages.</div>
+    </div>
+    <div class="card low">
+      <div class="card-icon">✅</div>
+      <div class="card-title">Sitemap + Robots.txt</div>
+      <div class="card-body">Properly configured with hreflang alternates and crawl directives.</div>
+    </div>
+    <div class="card low">
+      <div class="card-icon">✅</div>
+      <div class="card-title">19 Disease Blog Articles</div>
+      <div class="card-body">Well-structured medical content with FAQPage schema for each article.</div>
+    </div>
+    <div class="card low">
+      <div class="card-icon">✅</div>
+      <div class="card-title">Fast Static Site</div>
+      <div class="card-body">Next.js static generation delivers fast Core Web Vitals performance.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PART 1: CRITICAL GAPS                 -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <span class="badge" style="background:var(--red);">Critical Issues</span>
+  <h1>Part 1 — Critical GEO Gaps</h1>
+  <p>The items below are actively blocking AI visibility. They should be fixed before anything else.</p>
+
+  <!-- Issue 1 -->
+  <div class="priority-header" style="margin-top:24px;">
+    <div class="priority-dot critical"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">1. Plain-Text Blog Fallbacks Destroying Schema</h2>
+    <span class="tag tag-critical">Critical</span>
+  </div>
+
+  <div class="callout callout-red">
+    <p><strong>Problem:</strong> Every blog article generates two output files — <code>index.html</code> (full HTML + JSON-LD) and <code>index.txt</code> (raw text, zero schema). AI crawlers hitting the <code>.txt</code> URLs see an unstyled page with no structured data, no navigation, and no markup.</p>
+  </div>
+
+  <p>Example output in <code>/dist/da/blog/acne/</code>:</p>
+  <div class="code-block">/dist/da/blog/acne/index.html   ← ✅ Full HTML with schema
+/dist/da/blog/acne/index.txt     ← ❌ Plain text, no schema, no HTML</div>
+
+  <p><strong>Action:</strong> Delete all <code>index.txt</code> files from <code>/dist/</code> and reconfigure the build pipeline to stop generating them. Run this to find all instances:</p>
+  <div class="code-block">find /dist -name "index.txt" -delete</div>
+
+  <!-- Issue 2 -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot critical"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">2. Missing HowTo Schema on Guide Page</h2>
+    <span class="tag tag-critical">Critical</span>
+  </div>
+
+  <p>The guide page (<code>/da/guide/</code>) teaches users how to use the SKIND app step-by-step. This is a prime target for <strong>HowTo rich results</strong> — a schema type that Google AI Overviews pulls from directly into featured answers.</p>
+  <p>Currently: <strong>No HowTo schema.</strong></p>
+
+  <p class="code-label">Required Addition — src/app/[lang]/guide/page.tsx</p>
+  <div class="code-block">{
+  "@type": "HowTo",
+  "name": "Sådan bruger du SKIND appen",
+  "description": "Komplet guide til at oprette din undersøgelse i SKIND appen",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Download SKIND appen",
+      "text": "Download SKIND fra App Store eller Google Play og opret en konto med MitID."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Tag billeder af dit hudproblem",
+      "text": " Brug appens kamera til at tage klare, godt oplyste billeder af det berørte område fra flere vinkler."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Besvar spørgsmål om dine symptomer",
+      "text": "Svar på simple spørgsmål om varighed, symptomer og sygehistorie for at hjælpe hudlægen."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Modtag din diagnose",
+      "text": "En certificeret Speciallæge i hudsygdomme gennemgår din sag og sender diagnose og behandlingsplan inden for 48 timer."
+    }
+  ]
+}</div>
+
+  <!-- Issue 3 -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot critical"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">3. No SpeakableSpecification for AI Overviews</h2>
+    <span class="tag tag-critical">Critical</span>
+  </div>
+
+  <p>Google's AI Overviews on medical content require <code>SpeakableSpecification</code> — this marks which parts of a page are safe for AI to quote directly in search summaries. <strong>Currently missing from all Article and FAQPage schemas.</strong></p>
+
+  <p class="code-label">Required Addition — inside Article / FAQPage schema</p>
+  <div class="code-block">"speech": {
+  "@type": "SpeakableSpecification",
+  "cssSelector": ["h1", "h2"]
+}</div>
+
+  <p>Add this to the homepage FAQPage schema and all 19 blog article schemas. For blog articles, use <code>["h1", "h2", ".prose h3"]</code> as selectors.</p>
+
+  <!-- Issue 4 -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot critical"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">4. Shallow Author Schema — E-E-A-T Gap</h2>
+    <span class="tag tag-critical">Critical</span>
+  </div>
+
+  <p>Peter Bjerring is referenced in schema as:</p>
+  <div class="code-block">{
+  "@type": "Person",
+  "@id": "https://www.skinchange.dk/#peter-bjerring",
+  "name": "Peter Bjerring"
+  // ❌ Missing: url, jobTitle, worksFor @id, alumniOf, knowsAbout, description
+}</div>
+
+  <p>AI engines use <strong>E-E-A-T</strong> (Experience, Expertise, Authoritativeness, Trustworthiness) as a core health content signal. The current Person schema has no verifiable credentials, no author page, and no way for an AI to confirm expertise.</p>
+
+  <p><strong>Required actions:</strong></p>
+  <ol style="margin-left:20px;">
+    <li style="margin-bottom:6px;"><strong>Create an author page</strong> at <code>/da/about/peter-bjerring</code> with full medical biography, credentials, and publications list</li>
+    <li style="margin-bottom:6px;"><strong>Expand the Person schema</strong> on the About page to include full credentials, @id reference, and URL</li>
+    <li style="margin-bottom:6px;"><strong>Add author links</strong> under every blog article that point to the author page</li>
+    <li><strong>Add Brian Vangsgaard</strong> as a second Person schema entry with his founder/CEO story</li>
+  </ol>
+
+  <!-- Issue 5 -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot critical"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">5. Sitemap Shows Identical lastmod for All Blog Posts</h2>
+    <span class="tag tag-critical">Critical</span>
+  </div>
+
+  <p>Every blog URL in <code>sitemap.xml</code> carries the build timestamp as its <code>&lt;lastmod&gt;</code>:</p>
+  <div class="code-block">&lt;lastmod&gt;2026-03-26T10:43:40.616Z&lt;/lastmod&gt;  ← build time, not publish time</div>
+
+  <p>AI crawlers use <code>lastmod</code> as a freshness signal. Each article needs its actual <code>datePublished</code> and <code>dateModified</code> tracked and passed to the sitemap generator.</p>
+  <p><strong>Action:</strong> Update <code>src/app/sitemap.ts</code> to pull <code>datePublished</code> and <code>dateModified</code> from each blog post's frontmatter or data file.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PART 2: HIGH-PRIORITY IMPROVEMENTS    -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <span class="badge badge-accent">High Priority</span>
+  <h1>Part 2 — High-Priority GEO Improvements</h1>
+
+  <!-- 2.1 Schemas by Page -->
+  <div class="priority-header" style="margin-top:20px;">
+    <div class="priority-dot high"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">6. Missing Schemas by Page Type</h2>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Page</th>
+        <th>Missing Schema</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Blog articles (19)</td>
+        <td>HowTo (treatment steps), ImageObject (cover), dateModified</td>
+        <td><span class="tag tag-critical" style="margin:0;">Critical</span></td>
+      </tr>
+      <tr>
+        <td>Guide</td>
+        <td>HowTo, VideoObject (if tutorial video exists)</td>
+        <td><span class="tag tag-critical" style="margin:0;">Critical</span></td>
+      </tr>
+      <tr>
+        <td>About</td>
+        <td>AboutPage, full Person schema for Peter + Brian</td>
+        <td><span class="tag tag-high" style="margin:0;">High</span></td>
+      </tr>
+      <tr>
+        <td>Download</td>
+        <td>SoftwareApplication (the app itself)</td>
+        <td><span class="tag tag-high" style="margin:0;">High</span></td>
+      </tr>
+      <tr>
+        <td>FAQ sub-pages</td>
+        <td>BreadcrumbList on all inner pages</td>
+        <td><span class="tag tag-medium" style="margin:0;">Medium</span></td>
+      </tr>
+      <tr>
+        <td>Homepage</td>
+        <td>AggregateRating + Review (patient testimonials)</td>
+        <td><span class="tag tag-medium" style="margin:0;">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 2.2 ICD-11 -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot high"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">7. No ICD-11 MedicalCode on Disease Articles</h2>
+  </div>
+
+  <p>Each of the 19 disease blog posts should include a structured medical code so AI engines can link content to authoritative medical knowledge graphs (WHO, ICD-11).</p>
+
+  <div class="icd-grid">
+    <div class="icd-item"><span class="icd-code">ED80</span> Acne vulgaris</div>
+    <div class="icd-item"><span class="icd-code">EA80</span> Atopic dermatitis (Eczema)</div>
+    <div class="icd-item"><span class="icd-code">EA90</span> Psoriasis</div>
+    <div class="icd-item"><span class="icd-code">ED56</span> Rosacea</div>
+    <div class="icd-item"><span class="icd-code">2C30</span> Melanoma</div>
+    <div class="icd-item"><span class="icd-code">2C71</span> Basal cell carcinoma</div>
+    <div class="icd-item"><span class="icd-code">2C72</span> Squamous cell carcinoma</div>
+    <div class="icd-item"><span class="icd-code">1F40</span> Impetigo</div>
+    <div class="icd-item"><span class="icd-code">1E74</span> Herpes simplex virus</div>
+    <div class="icd-item"><span class="icd-code">1E89</span> Herpes zoster (Shingles)</div>
+    <div class="icd-item"><span class="icd-code">1G04</span> Scabies</div>
+    <div class="icd-item"><span class="icd-code">EC20</span> Vitiligo</div>
+    <div class="icd-item"><span class="icd-code">EE40</span> Urticaria (Hives)</div>
+    <div class="icd-item"><span class="icd-code">EA20</span> Lichen planus</div>
+    <div class="icd-item"><span class="icd-code">1F01.1</span> Molluscum contagiosum</div>
+    <div class="icd-item"><span class="icd-code">1F28–1F2F</span> Tinea (Ringworm)</div>
+    <div class="icd-item"><span class="icd-code">1B50</span> Cellulitis</div>
+    <div class="icd-item"><span class="icd-code">EC10</span> Contact dermatitis</div>
+  </div>
+
+  <p class="code-label">Add to each disease article schema</p>
+  <div class="code-block">"diagnosis": {
+  "@type": "MedicalCode",
+  "code": "ED80",
+  "codingSystem": "ICD-11",
+  "name": "Acne vulgaris",
+  "description": "Chronic skin condition characterized by comedones, papules and pustules"
+}</div>
+
+  <!-- 2.3 App Schema -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot high"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">8. No SoftwareApplication Schema for the App</h2>
+  </div>
+
+  <p>The download page promotes the SKIND app but carries no structured data about the app itself. This prevents it from appearing in app search results and AI knowledge graphs.</p>
+
+  <div class="code-block">{
+  "@type": "SoftwareApplication",
+  "name": "SKIND",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "MedicalApp",
+  "description": "Online dermatologist consultation app for Denmark. Get a skin diagnosis within 48 hours.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "DKK",
+    "description": "Free download. Consultations from 298 DKK."
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "ratingCount": "124"
+  }
+}</div>
+
+  <!-- 2.4 Geo -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot high"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">9. Missing GeoCoordinates in Organization Schema</h2>
+  </div>
+
+  <p>The MedicalOrganization address has country/region but no lat/lng. AI and map services need precise coordinates.</p>
+  <div class="code-block">"geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 55.3845,
+  "longitude": 10.3878
+}
+"address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Hindbærhaven 48",
+  "addressLocality": "Vejle Ø",
+  "postalCode": "7120",
+  "addressCountry": "DK"
+}</div>
+  <p style="font-size:8.5pt;color:var(--muted);"><em>Note: Verify actual Vejle coordinates for Hindbærhaven 48, 7120 Vejle Ø.</em></p>
+
+  <!-- 2.5 Localized Service -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot high"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">10. Danish-Only Service Schema — Needs English Version</h2>
+  </div>
+
+  <p>Your current Service schema describes the offering only in Danish. Add a separate English entry at <code>/en/</code> with English-language description, service name, and <code>areaServed: "DK"</code>.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PART 3: CONTENT QUALITY               -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <span class="badge badge-accent">Content Quality</span>
+  <h1>Part 3 — Content &amp; Semantic Improvements</h1>
+
+  <!-- 3.1 FAQ answers -->
+  <div class="priority-header" style="margin-top:20px;">
+    <div class="priority-dot medium"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">11. FAQ Answers Too Short for AI Extraction</h2>
+    <span class="tag tag-high">High</span>
+  </div>
+
+  <p>AI Overviews need 3–5 sentences minimum in natural-language Q&amp;A format. Current FAQ answers are often 1 sentence.</p>
+
+  <div class="card-grid" style="margin:12px 0;">
+    <div class="card high">
+      <div class="card-title">❌ Current Answer</div>
+      <div class="card-body" style="font-family:monospace;font-size:8.5pt;">"Du modtager en diagnose og behandlingsplan inden for 48 timer."</div>
+    </div>
+    <div class="card low">
+      <div class="card-title">✅ Expanded Answer</div>
+      <div class="card-body" style="font-size:8.5pt;">"Når du har uploadet dine billeder af hudproblemet og betalt de 298 kr., gennemgår en af vores certificerede Speciallæger i hudsygdomme din sag. Du modtager svar — inklusiv diagnose og en personlig behandlingsplan — inden for 48 timer. Hvis vi finder tegn på noget alvorligt, får du klar besked om næste skridt. Behandlingsplanen kan inkludere recept, som du kan hente på ethvert dansk apotek."</div>
+    </div>
+  </div>
+
+  <p><strong>Action:</strong> Expand ALL FAQ acceptedAnswers across all FAQ sub-pages to 3–5 sentences each, using natural conversational Danish/English.</p>
+
+  <!-- 3.2 Internal linking -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot medium"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">12. Blog Articles Need More Internal Linking</h2>
+  </div>
+
+  <p>Currently only the acne article cross-links to eczema. Every article needs:</p>
+  <ul style="margin-left:20px;font-size:9.5pt;">
+    <li><strong>Related conditions section</strong> — link to 3–5 other relevant disease articles</li>
+    <li><strong>Author byline with link</strong> — "Skrevet af Peter Bjerring →" linking to author page</li>
+    <li><strong>CTA block</strong> — "Få en diagnose med SKIND →" linking to download</li>
+    <li><strong>"Last updated" date</strong> visible in article body</li>
+    <li><strong>Sidebar or bottom section</strong> linking to relevant FAQ sub-pages</li>
+  </ul>
+
+  <!-- 3.3 Q&A pattern -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot medium"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">13. Consistent Q&amp;A Subheading Patterns</h2>
+  </div>
+
+  <p>AI extracts answers from heading + paragraph pairs like <code>## Hvad er acne?</code> + paragraph. Audit all 19 articles — any that don't follow this pattern should be updated to include descriptive <code>&lt;h2&gt;</code> subheadings above every Q&amp;A section.</p>
+
+  <!-- 3.4 FAQ on non-FAQ pages -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot medium"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">14. FAQ Schema on Non-FAQ Pages</h2>
+  </div>
+
+  <p>Currently only the homepage has FAQPage schema. These pages should also carry FAQPage schema for relevant common questions:</p>
+
+  <table style="font-size:8.5pt;">
+    <thead><tr><th>Page</th><th>FAQ Questions to Add</th></tr></thead>
+    <tbody>
+      <tr><td>/da/download</td><td>"Which devices?", "Is the app free?", "How do I install?"</td></tr>
+      <tr><td>/da/about</td><td>"Who founded SKIND?", "Are dermatologists certified?", "Is my data safe?"</td></tr>
+      <tr><td>/da/contact</td><td>"How do I reach support?", "What languages?", "Response time?"</td></tr>
+    </tbody>
+  </table>
+
+  <!-- 3.5 Testimonials -->
+  <div class="priority-header" style="margin-top:28px;">
+    <div class="priority-dot medium"></div>
+    <h2 style="margin:0;border:none;padding:0;font-size:13pt;">15. Patient Testimonial Schema</h2>
+  </div>
+
+  <p>The homepage has a testimonial section but no Review/AggregateRating schema. Add this to the homepage JSON-LD:</p>
+  <div class="code-block">{
+  "@type": "Review",
+  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+  "author": { "@type": "Person", "name": "Jofrajen" },
+  "reviewBody": "Havde et stort modermærke på ryggen...",
+  "itemReviewed": { "@id": "https://www.skinchange.dk/#service" }
+}</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PART 4: TECHNICAL ISSUES              -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <span class="badge badge-accent">Technical Issues</span>
+  <h1>Part 4 — Technical &amp; Structural Issues</h1>
+
+  <div class="card-grid" style="margin-top:20px;">
+    <div class="card high">
+      <div class="card-icon">🖼️</div>
+      <div class="card-title">og-image.jpg Missing</div>
+      <div class="card-body">The og:image reference points to <code>/og-image.jpg</code> which appears to be missing or a placeholder. Create a branded 1200×630px image with SKIND logo + tagline for social sharing and AI chat previews.</div>
+    </div>
+    <div class="card high">
+      <div class="card-icon">🔑</div>
+      <div class="card-title">Google Verification = Placeholder</div>
+      <div class="card-body"><code>google-site-verification: your-google-verification-code</code> needs the real value from Google Search Console to enable indexing control and CWV data.</div>
+    </div>
+    <div class="card medium">
+      <div class="card-icon">🌐</div>
+      <div class="card-title">hreflang Region Codes</div>
+      <div class="card-body">Current: <code>hreflang="da"</code> and <code>hreflang="en"</code>. Should be: <code>hreflang="da-DK"</code> and <code>hreflang="en-GB"</code> for full regional specificity.</div>
+    </div>
+    <div class="card medium">
+      <div class="card-icon">🍞</div>
+      <div class="card-title">No BreadcrumbList on Inner Pages</div>
+      <div class="card-body">Blog articles, FAQ sub-pages, About, and Download pages are all missing BreadcrumbList schema. Add this to all inner pages.</div>
+    </div>
+    <div class="card medium">
+      <div class="card-icon">🖼️</div>
+      <div class="card-title">Article Images Not ImageObject</div>
+      <div class="card-body">Blog article <code>image</code> is a string URL. Should be a full <code>ImageObject</code> with width, height, and caption for rich image search.</div>
+    </div>
+    <div class="card low">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">Video Tutorial Opportunity</div>
+      <div class="card-body">If a video guide exists or can be created, add <code>VideoObject</code> schema to the guide page — high-value for AI Overviews.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PART 5: ROADMAP                       -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <span class="badge badge-cyan" style="color:var(--primary);">Action Roadmap</span>
+  <h1>Part 5 — 4-Week Prioritized Roadmap</h1>
+
+  <!-- Week 1 -->
+  <div class="week-block" style="margin-top:20px;">
+    <div class="week-header">
+      <span class="week-num">WEEK 1</span>
+      <span class="week-title">Foundation — Critical Fixes</span>
+      <span class="week-sub">Do these first</span>
+    </div>
+    <div class="week-body">
+      <ul class="checklist">
+        <li><div class="check-circle"></div><span class="check-label">Delete all <code>index.txt</code> files from <code>/dist/</code> — stop plain-text fallback generation</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add HowTo schema to <code>/guide/</code> page (step-by-step app usage)</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add SpeakableSpecification to all Article + FAQPage schemas</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Fix sitemap lastmod to use actual per-article publish dates</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Create/replace <code>/og-image.jpg</code> with branded 1200×630px image</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">WEEK 2</span>
+      <span class="week-title">Schema Depth — E-E-A-T + Medical Codes</span>
+      <span class="week-sub">Build authority signals</span>
+    </div>
+    <div class="week-body">
+      <ul class="checklist">
+        <li><div class="check-circle"></div><span class="check-label">Add MedicalCode/ICD-11 to all 19 disease articles</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add SoftwareApplication schema to download page</span><span class="check-tag tag-high" style="background:#fef3c7;color:#d97706;">High</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Create author page for Peter Bjerring at <code>/da/about/peter-bjerring</code></span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Expand Person schema on About — full credentials + @id match</span><span class="check-tag tag-critical" style="background:#fee2e2;color:#dc2626;">Critical</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add geo-coordinates to MedicalOrganization schema</span><span class="check-tag tag-high" style="background:#fef3c7;color:#d97706;">High</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add AggregateRating + Review schema to homepage</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">WEEK 3</span>
+      <span class="week-title">Content Quality — Depth &amp; Structure</span>
+      <span class="week-sub">Improve AI readability</span>
+    </div>
+    <div class="week-body">
+      <ul class="checklist">
+        <li><div class="check-circle"></div><span class="check-label">Expand ALL FAQ acceptedAnswers to 3–5 sentences each</span><span class="check-tag tag-high" style="background:#fef3c7;color:#d97706;">High</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add FAQPage schema to Download + About + Contact pages</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add related-articles section (3–5 links) to all 19 blog posts</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Audit all blog articles for h2 + paragraph Q&amp;A patterns</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add BreadcrumbList schema to all inner pages</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Week 4 -->
+  <div class="week-block">
+    <div class="week-header">
+      <span class="week-num">WEEK 4</span>
+      <span class="week-title">Refinement — Polish &amp; Monitoring</span>
+      <span class="week-sub">Final checks</span>
+    </div>
+    <div class="week-body">
+      <ul class="checklist">
+        <li><div class="check-circle"></div><span class="check-label">Fix hreflang to use region codes: <code>da-DK</code>, <code>en-GB</code></span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Replace placeholder Google verification code with real value</span><span class="check-tag tag-high" style="background:#fef3c7;color:#d97706;">High</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Audit all images for descriptive alt text</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Add VideoObject schema to guide if video exists</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Submit updated sitemap to Google Search Console</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+        <li><div class="check-circle"></div><span class="check-label">Set up Search Console monitoring and error alerts</span><span class="check-tag tag-medium" style="background:#dbeafe;color:#2563eb;">Medium</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- APPENDIX: SCHEMA REFERENCE            -->
+<!-- ═══════════════════════════════════════ -->
+<div class="page page-break">
+  <span class="badge" style="background:#334155;">Appendix</span>
+  <h1>Appendix — Schema Reference</h1>
+
+  <table class="appendix-table" style="margin-top:16px;">
+    <thead>
+      <tr>
+        <th>Schema Type</th>
+        <th>Use Case</th>
+        <th>Pages</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>HowTo</td><td>Step-by-step instructions</td><td>Guide page</td></tr>
+      <tr><td>SpeakableSpecification</td><td>AI-quotable sections</td><td>All Article + FAQ pages</td></tr>
+      <tr><td>MedicalCode / ICD-11</td><td>Disease classification</td><td>All 19 disease articles</td></tr>
+      <tr><td>SoftwareApplication</td><td>Mobile app</td><td>Download page</td></tr>
+      <tr><td>AboutPage</td><td>About the organization</td><td>About page</td></tr>
+      <tr><td>BreadcrumbList</td><td>Navigation path</td><td>All inner pages</td></tr>
+      <tr><td>Review + AggregateRating</td><td>Patient testimonials</td><td>Homepage</td></tr>
+      <tr><td>ImageObject</td><td>Proper image metadata</td><td>All pages with images</td></tr>
+      <tr><td>GeoCoordinates</td><td>Physical location</td><td>Organization schema</td></tr>
+      <tr><td>Person (expanded)</td><td>E-E-A-T for content</td><td>About + Author page</td></tr>
+      <tr><td>VideoObject</td><td>Video tutorial</td><td>Guide page (if video exists)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:32px;">Priority Summary</h2>
+  <div class="card-grid">
+    <div class="card critical">
+      <div class="card-title" style="color:#dc2626;">🔴 Critical (5)</div>
+      <div class="card-body">Delete .txt fallbacks · HowTo on guide · SpeakableSpecification · Author depth · Sitemap freshness</div>
+    </div>
+    <div class="card high">
+      <div class="card-title" style="color:#d97706;">🟡 High (5)</div>
+      <div class="card-body">ICD-11 on all disease articles · SoftwareApplication · Author page · GeoCoordinates · FAQ answer expansion</div>
+    </div>
+    <div class="card medium">
+      <div class="card-title" style="color:#2563eb;">🔵 Medium (7)</div>
+      <div class="card-body">Breadcrumbs · og-image · hreflang fix · ImageObject · FAQ on non-FAQ pages · Internal linking · Testimonial schema</div>
+    </div>
+    <div class="card low">
+      <div class="card-title" style="color:#16a34a;">🟢 Low (1)</div>
+      <div class="card-body">VideoObject on guide (if video created)</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">SKIND</div>
+  <div>🌐 skinchange.dk &nbsp;·&nbsp; 📧 info@skinchange.ai &nbsp;·&nbsp; 📅 Prepared March 2026</div>
+</div>
+
+</body>
+</html>
