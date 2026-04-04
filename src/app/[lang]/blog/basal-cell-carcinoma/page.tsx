@@ -438,8 +438,8 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'For små, overfladiske BCC'er kan topiske cremer som fluorouracil (5-FU) eller imiquimod anvendes. Disse stimulerer immunforsvaret til at angribe kræftcellerne.'
-                      : 'For small, superficial BCCs, topical creams such as fluorouracil (5-FU) or imiquimod may be used. These stimulate the immune system to attack the cancer cells.'}
+                      ? "For små, overfladiske BCC'er kan topiske cremer som fluorouracil (5-FU) eller imiquimod anvendes. Disse stimulerer immunforsvaret til at angribe kræftcellerne."
+                      : "For small, superficial BCCs, topical creams such as fluorouracil (5-FU) or imiquimod may be used. These stimulate the immune system to attack the cancer cells."}
                   </p>
                 </div>
               </div>

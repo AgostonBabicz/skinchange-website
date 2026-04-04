@@ -252,7 +252,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </>
                 ) : (
                   <>
-                    <strong>Alopecia areata is an autoimmune skin condition</strong> that affects millions of people worldwide and can occur at any age. When the body's own immune system mistakenly attacks the hair follicles, the result can be sudden, unexplained hair loss — often in well-defined round patches.
+                    <strong>Alopecia areata is an autoimmune skin condition</strong> that affects millions of people worldwide and can occur at any age. When the body&apos;s own immune system mistakenly attacks the hair follicles, the result can be sudden, unexplained hair loss — often in well-defined round patches.
                   </>
                 )}
               </p>
