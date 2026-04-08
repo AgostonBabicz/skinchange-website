@@ -221,6 +221,16 @@ const blogPosts = {
       image: '/blog-squamous-cell-carcinoma.jpg',
       imageAlt: 'Pladecellecarcinom SCC hudkræft behandling',
     },
+    {
+      slug: 'psoriasis',
+      title: 'Hvad er Psoriasis? Årsager, Symptomer og Behandling',
+      excerpt: 'Psoriasis er en kronisk, autoimmun hudsygdom, der rammer millioner. Lær hvad det er, hvad der forårsager det, og hvilke behandlinger der findes.',
+      category: 'Hudsygdomme',
+      readTime: '7 min',
+      date: '7. april 2026',
+      image: '/blog-psoriasis.jpg',
+      imageAlt: 'Psoriasis kronisk autoimmun hudsygdom',
+    },
   ],
   en: [
     {
@@ -412,6 +422,16 @@ const blogPosts = {
       date: 'March 29, 2026',
       image: '/blog-squamous-cell-carcinoma.jpg',
       imageAlt: 'Squamous cell carcinoma SCC skin cancer',
+    },
+    {
+      slug: 'psoriasis',
+      title: 'What is Psoriasis? Causes, Symptoms and Treatment',
+      excerpt: 'Psoriasis is a chronic, autoimmune skin disease affecting millions. Learn what it is, what causes it, and which treatments are available.',
+      category: 'Skin Conditions',
+      readTime: '7 min',
+      date: 'April 7, 2026',
+      image: '/blog-psoriasis.jpg',
+      imageAlt: 'Psoriasis chronic autoimmune skin disease',
     },
   ],
 };
