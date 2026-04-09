@@ -27,7 +27,9 @@ export default function DiseasesSection({ lang }: DiseasesSectionProps) {
           {t.diseases.items.map((disease, index) => {
             const href = disease.slug ? `/${lang}/blog/${disease.slug}` : null;
             const Wrapper = href ? 'a' : 'div';
-            const wrapperProps = href ? { href, className: 'block bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group cursor-pointer', 'aria-label': disease.slug ? `${disease.name} — read more` : undefined } : { className: 'bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group' };
+            const isSkinCancer = disease.slug === 'melanoma';
+            const hrefAttr = isSkinCancer ? `/${lang}/blog#skin-cancer` : href;
+            const wrapperProps = hrefAttr ? { href: hrefAttr, className: 'block bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group cursor-pointer', 'aria-label': `${disease.name} — read more` } : { className: 'bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group' };
             return (
               <Wrapper key={index} {...wrapperProps}>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors">
