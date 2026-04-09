@@ -9,6 +9,18 @@ interface PageProps {
   params: { lang: Language };
 }
 
+interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  date: string;
+  image: string;
+  imageAlt: string;
+  sectionHeader?: string;
+}
+
 export async function generateMetadata({ params }: { params: { lang: Language } }): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
@@ -29,7 +41,7 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   };
 }
 
-const blogPosts = {
+const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
   da: [
     {
       slug: 'alopecia-areata',
@@ -458,7 +470,9 @@ const blogPosts = {
 
 export default function BlogPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
-  const posts = isDa ? blogPosts.da : blogPosts.en;
+  const allPosts = isDa ? blogPosts.da : blogPosts.en;
+  const skinCancerPosts = allPosts.filter(p => p.sectionHeader);
+  const generalPosts = allPosts.filter(p => !p.sectionHeader);
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -482,7 +496,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
       <section id="diseases" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post, index) => (
+            {generalPosts.map((post, index) => (
               <Link 
                 key={index}
                 href={`/${lang}/blog/${post.slug}`}
@@ -536,6 +550,70 @@ export default function BlogPage({ params: { lang } }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Skin Cancer Section */}
+      {skinCancerPosts.length > 0 && (
+        <section id="skin-cancer" className="py-20 bg-[#1a237e]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white font-display">
+                {isDa ? 'Hudkræft' : 'Skin Cancer'}
+              </h2>
+              <p className="text-white/70 mt-2">
+                {isDa
+                  ? 'Lær om de forskellige former for hudkræft, deres symptomer og behandling'
+                  : 'Learn about the different forms of skin cancer, their symptoms and treatment'}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {skinCancerPosts.map((post, index) => (
+                <Link
+                  key={index}
+                  href={`/${lang}/blog/${post.slug}`}
+                  className="group"
+                >
+                  <article className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-white/10">
+                    <div className="aspect-[16/10] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+                      <Image
+                        src={post.image}
+                        alt={post.imageAlt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-white/90 text-[#1a237e] text-xs font-semibold px-3 py-1 rounded-full">
+                          {post.category}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-center text-sm text-white/60 mb-3">
+                        <span>{post.date}</span>
+                        <span className="mx-2">•</span>
+                        <span>{post.readTime} {isDa ? 'læsetid' : 'read'}</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00e5ff] transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-white/70 text-sm mb-4 flex-1 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="mt-4 flex items-center text-[#00e5ff] font-semibold text-sm">
+                        {isDa ? 'Læs mere' : 'Read more'}
+                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-20 bg-[#1a237e]">
