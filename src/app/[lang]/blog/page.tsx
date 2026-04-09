@@ -231,6 +231,16 @@ const blogPosts = {
       image: '/blog-psoriasis.jpg',
       imageAlt: 'Psoriasis kronisk autoimmun hudsygdom',
     },
+    {
+      slug: 'genital-warts',
+      title: 'Hvad er Kønsvorter (HPV)? Årsager, Symptomer og Behandling',
+      excerpt: 'Kønsvorter (kondylomer) er en af de mest almindelige seksuelt overførte infektioner. Lær hvad de er, hvordan HPV smitter, og hvilke behandlinger der findes.',
+      category: 'Seksuelt overførte infektioner',
+      readTime: '6 min',
+      date: '8. april 2026',
+      image: '/blog-hpv.jpg',
+      imageAlt: 'Humant papillomavirus HPV',
+    },
   ],
   en: [
     {
@@ -432,6 +442,16 @@ const blogPosts = {
       date: 'April 7, 2026',
       image: '/blog-psoriasis.jpg',
       imageAlt: 'Psoriasis chronic autoimmune skin disease',
+    },
+    {
+      slug: 'genital-warts',
+      title: 'What are Genital Warts (HPV)? Causes, Symptoms and Treatment',
+      excerpt: 'Genital warts (condylomata acuminata) are one of the most common sexually transmitted infections. Learn what they are, how HPV spreads, and what treatments are available.',
+      category: 'Sexually Transmitted Infections',
+      readTime: '6 min',
+      date: 'April 8, 2026',
+      image: '/blog-hpv.jpg',
+      imageAlt: 'Human papillomavirus HPV',
     },
   ],
 };
