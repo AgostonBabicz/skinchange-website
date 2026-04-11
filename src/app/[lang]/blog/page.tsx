@@ -52,6 +52,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '3. april 2026',
       image: '/blog-alopecia-areata.jpg',
       imageAlt: 'Alopecia areata autoimmun hårtab behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'acne',
@@ -62,6 +63,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '12. marts 2025',
       image: '/blog-acne.jpg',
       imageAlt: 'Acne vulgaralis hudlidelse behandling af akne',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -72,6 +74,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '12. marts 2026',
       image: '/blog-eczema.jpg',
       imageAlt: 'Eksem atopisk dermatitis behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'rosacea',
@@ -82,6 +85,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '13. marts 2026',
       image: '/blog-rosacea.jpg',
       imageAlt: 'Rosacea kronisk hudlidelse rødme og synlige blodkar i ansigtet',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'urticaria-hives',
@@ -92,6 +96,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '14. marts 2026',
       image: '/blog-urticaria-hives.jpg',
       imageAlt: 'Nældefeber urticaria behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'herpes-simplex-virus',
@@ -102,6 +107,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '15. marts 2026',
       image: '/blog-herpes-simplex.jpg',
       imageAlt: 'Herpes simplex virus HSV behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'herpes-zoster-shingles',
@@ -112,6 +118,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '16. marts 2026',
       image: '/blog-herpes-zoster.jpg',
       imageAlt: 'Helvedesild herpes zoster behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'tinea-infections-ringworm',
@@ -122,6 +129,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '17. marts 2026',
       image: '/blog-tinea-ringworm.jpg',
       imageAlt: 'Ringorm tinea svampeinfektion behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'seborrheic-dermatitis',
@@ -132,6 +140,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '19. marts 2026',
       image: '/blog-seborrheic-dermatitis.jpg',
       imageAlt: 'Seborrheisk dermatitis behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'vitiligo',
@@ -142,6 +151,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '18. marts 2026',
       image: '/blog-vitiligo.jpg',
       imageAlt: 'Vitiligo depigmenterede pletter behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'scabies',
@@ -152,6 +162,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '20. marts 2026',
       image: '/blog-scabies.jpg',
       imageAlt: 'Skab mideinfektion behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'contact-dermatitis',
@@ -162,6 +173,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '19. marts 2026',
       image: '/blog-contact-dermatitis.jpg',
       imageAlt: 'Kontaktdermatitis hudreaktion behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'lichen-planus',
@@ -172,6 +184,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '21. marts 2026',
       image: '/blog-lichen-planus.jpg',
       imageAlt: 'Lichen planus kløende knopper behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'molluscum-contagiosum',
@@ -182,6 +195,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '22. marts 2026',
       image: '/blog-molluscum-contagiosum.jpg',
       imageAlt: 'Molluscum contagiosum virusinfektion behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'impetigo',
@@ -192,6 +206,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '23. marts 2026',
       image: '/blog-impetigo.jpg',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'cellulitis',
@@ -202,6 +217,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '24. marts 2026',
       image: '/blog-cellulitis.jpg',
       imageAlt: 'Cellulitis bakteriel hudinfektion behandling',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'melanoma',
@@ -212,6 +228,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '26. marts 2026',
       image: '/blog-melanoma.jpg',
       imageAlt: 'Modermærkekræft melanoma hudkræft',
+      sectionHeader: 'Hudkræft',
     },
     {
       slug: 'basal-cell-carcinoma',
@@ -222,6 +239,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '28. marts 2026',
       image: '/blog-basal-cell-carcinoma.jpg',
       imageAlt: 'Basalcellcarcinom BCC hudkræft behandling',
+      sectionHeader: 'Hudkræft',
     },
     {
       slug: 'squamous-cell-carcinoma',
@@ -232,6 +250,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '29. marts 2026',
       image: '/blog-squamous-cell-carcinoma.jpg',
       imageAlt: 'Pladecellecarcinom SCC hudkræft behandling',
+      sectionHeader: 'Hudkræft',
     },
     {
       slug: 'psoriasis',
@@ -242,6 +261,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '7. april 2026',
       image: '/blog-psoriasis.jpg',
       imageAlt: 'Psoriasis kronisk autoimmun hudsygdom',
+      sectionHeader: 'Hudsygdomme',
     },
     {
       slug: 'genital-warts',
@@ -252,6 +272,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: '8. april 2026',
       image: '/blog-hpv.jpg',
       imageAlt: 'Humant papillomavirus HPV',
+      sectionHeader: 'Hudsygdomme',
     },
   ],
   en: [
@@ -264,6 +285,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'April 3, 2026',
       image: '/blog-alopecia-areata.jpg',
       imageAlt: 'Alopecia areata autoimmune hair loss treatment',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'acne',
@@ -274,6 +296,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 12, 2025',
       image: '/blog-acne.jpg',
       imageAlt: 'Acne vulgaralis hudlidelse behandling af akne',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'eczema-atopic-dermatitis',
@@ -284,6 +307,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 12, 2026',
       image: '/blog-eczema.jpg',
       imageAlt: 'Eksem atopisk dermatitis behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'rosacea',
@@ -294,6 +318,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 13, 2026',
       image: '/blog-rosacea.jpg',
       imageAlt: 'Rosacea kronisk hudlidelse rødme og synlige blodkar i ansigtet',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'urticaria-hives',
@@ -304,6 +329,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 14, 2026',
       image: '/blog-urticaria-hives.jpg',
       imageAlt: 'Nældefeber urticaria behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'herpes-simplex-virus',
@@ -314,6 +340,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 15, 2026',
       image: '/blog-herpes-simplex.jpg',
       imageAlt: 'Herpes simplex virus HSV behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'herpes-zoster-shingles',
@@ -324,6 +351,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 16, 2026',
       image: '/blog-herpes-zoster.jpg',
       imageAlt: 'Helvedesild herpes zoster behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'tinea-infections-ringworm',
@@ -334,6 +362,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 17, 2026',
       image: '/blog-tinea-ringworm.jpg',
       imageAlt: 'Ringorm tinea svampeinfektion behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'seborrheic-dermatitis',
@@ -344,6 +373,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 19, 2026',
       image: '/blog-seborrheic-dermatitis.jpg',
       imageAlt: 'Seborrheisk dermatitis behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'vitiligo',
@@ -354,6 +384,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 18, 2026',
       image: '/blog-vitiligo.jpg',
       imageAlt: 'Vitiligo depigmenterede pletter behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'scabies',
@@ -364,6 +395,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 20, 2026',
       image: '/blog-scabies.jpg',
       imageAlt: 'Skab mideinfektion behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'contact-dermatitis',
@@ -374,6 +406,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 19, 2026',
       image: '/blog-contact-dermatitis.jpg',
       imageAlt: 'Kontaktdermatitis hudreaktion behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'lichen-planus',
@@ -384,6 +417,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 21, 2026',
       image: '/blog-lichen-planus.jpg',
       imageAlt: 'Lichen planus kløende knopper behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'molluscum-contagiosum',
@@ -394,6 +428,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 22, 2026',
       image: '/blog-molluscum-contagiosum.jpg',
       imageAlt: 'Molluscum contagiosum virusinfektion behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'impetigo',
@@ -404,6 +439,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 23, 2026',
       image: '/blog-impetigo.jpg',
       imageAlt: 'Impetigo bakteriel hudinfektion behandling',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'cellulitis',
@@ -414,6 +450,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 24, 2026',
       image: '/blog-cellulitis.jpg',
       imageAlt: 'Cellulitis bacterial skin infection treatment',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'melanoma',
@@ -424,6 +461,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 26, 2026',
       image: '/blog-melanoma.jpg',
       imageAlt: 'Melanoma skin cancer',
+      sectionHeader: 'Skin Cancer',
     },
     {
       slug: 'basal-cell-carcinoma',
@@ -434,6 +472,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 28, 2026',
       image: '/blog-basal-cell-carcinoma.jpg',
       imageAlt: 'Basal cell carcinoma BCC skin cancer',
+      sectionHeader: 'Skin Cancer',
     },
     {
       slug: 'squamous-cell-carcinoma',
@@ -444,6 +483,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'March 29, 2026',
       image: '/blog-squamous-cell-carcinoma.jpg',
       imageAlt: 'Squamous cell carcinoma SCC skin cancer',
+      sectionHeader: 'Skin Cancer',
     },
     {
       slug: 'psoriasis',
@@ -454,6 +494,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'April 7, 2026',
       image: '/blog-psoriasis.jpg',
       imageAlt: 'Psoriasis chronic autoimmune skin disease',
+      sectionHeader: 'Skin Diseases',
     },
     {
       slug: 'genital-warts',
@@ -464,6 +505,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       date: 'April 8, 2026',
       image: '/blog-hpv.jpg',
       imageAlt: 'Human papillomavirus HPV',
+      sectionHeader: 'Skin Diseases',
     },
   ],
 };
@@ -471,8 +513,8 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
 export default function BlogPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
   const allPosts = isDa ? blogPosts.da : blogPosts.en;
-  const skinCancerPosts = allPosts.filter(p => p.sectionHeader);
-  const generalPosts = allPosts.filter(p => !p.sectionHeader);
+  const skinCancerPosts = allPosts.filter(p => p.sectionHeader === 'Hudkræft' || p.sectionHeader === 'Skin Cancer');
+  const generalPosts = allPosts.filter(p => p.sectionHeader === 'Hudsygdomme' || p.sectionHeader === 'Skin Diseases');
 
   return (
     <main className="min-h-screen bg-gray-50">
