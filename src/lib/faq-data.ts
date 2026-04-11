@@ -1373,7 +1373,179 @@ export const faqCategories: FaqCategory[] = [
             },
           ],
         },
+      },    {
+      slug: 'regular-mole',
+      nameDa: 'Almindeligt Modermærke',
+      nameEn: 'Regular Mole',
+      questions: {
+        da: [
+          {
+            question: 'Hvad er et almindeligt modermærke?',
+            answer: 'Almindelige modermærker, også kaldet nevi, er almindelige hudvækster der opstår når pigmentproducerende celler (melanocytter) i huden vokser i klynger eller klumper. De er normalt ufarlige og forårsager ikke fysisk ubehag.',
+          },
+          {
+            question: 'Hvordan ser et modermærke ud?',
+            answer: 'Modermærker er typisk små, runde eller ovale pletter på huden. De kan være flade eller hævede, og deres farve varierer fra lyserød til brun eller sort. De fleste modermærker er mindre end 6 millimeter i diameter.',
+          },
+          {
+            question: 'Hvem får modermærker?',
+            answer: 'Næsten alle har modermærker. De fleste mennesker udvikler dem i løbet af barndommen og den tidlige voksenalder. Gennemsnitligt har en person mellem 10 og 40 modermærker i voksenalderen.',
+          },
+          {
+            question: 'Hvornår skal jeg være bekymret for et modermærke?',
+            answer: 'De fleste modermærker er harmløse, men det er vigtigt at holde øje med dem for ændringer der kan indikere hudkræft, især melanom. Brug ABCDE-reglen: Asymmetri, Kant (uregelmæssighed), Farve, Diameter (>6mm), og Evolution (ændring).',
+          },
+        ],
+        en: [
+          {
+            question: 'What is a regular mole?',
+            answer: 'Regular moles, also called nevi, are common skin growths that occur when pigment-producing cells (melanocytes) in your skin grow in clusters or clumps. They are usually harmless and do not cause physical discomfort.',
+          },
+          {
+            question: 'What does a regular mole look like?',
+            answer: 'Regular moles are typically small, round or oval-shaped spots on the skin. They can be flat or raised, and their color ranges from pink to brown or black. Most moles are less than 6 millimeters in diameter.',
+          },
+          {
+            question: 'Who gets moles?',
+            answer: 'Almost everyone has moles. Most people develop them during childhood and early adulthood. On average, a person has between 10 and 40 moles in adulthood.',
+          },
+          {
+            question: 'When should I be concerned about a mole?',
+            answer: 'Most moles are harmless, but it is important to watch them for changes that may indicate skin cancer, especially melanoma. Use the ABCDE rule: Asymmetry, Border (irregularity), Color, Diameter (>6mm), and Evolution (change).',
+          },
+        ],
       },
+    },
+    {
+      slug: 'actinic-keratosis',
+      nameDa: 'Aktinisk Keratose',
+      nameEn: 'Actinic Keratosis',
+      questions: {
+        da: [
+          {
+            question: 'Hvad er aktinisk keratose?',
+            answer: 'Aktinisk keratose (AK), også kaldet solkeratose, er en præcancerøs hudtilstand karakteriseret ved ru, skællende pletter på huden. Disse læsioner udvikles på grund af langvarig eksponering for ultraviolet (UV) stråling, typisk fra solen eller solarier.',
+          },
+          {
+            question: 'Hvordan ser aktinisk keratose ud?',
+            answer: 'AK fremstår typisk som små, ru eller skællende pletter på huden der kan være lyserøde, røde eller brune. De kan føles som sandpapir ved berøring og ses ofte i områder der ofte udsættes for sol, såsom ansigt, ører, læber, skaldet hovedbund, nakke og hænder.',
+          },
+          {
+            question: 'Hvem får aktinisk keratose?',
+            answer: 'AK er mest almindelig hos lyshuede personer over 40 år, men det kan påvirke alle med en historie af betydelig soleksponering. Personer med svækket immunforsvar og dem der har brugt solarier har højere risiko.',
+          },
+          {
+            question: 'Hvad skal jeg huske om behandling af aktinisk keratose?',
+            answer: 'Tidlig opdagelse og behandling er afgørende, da AK kan udvikle sig til pladecellecarcinom (hudkræft) hvis det ikke behandles. Behandlingsmuligheder inkluderer topiske lægemidler, kryoterapi (frysning), fotodynamisk terapi og kirurgisk fjernelse.',
+          },
+        ],
+        en: [
+          {
+            question: 'What is actinic keratosis?',
+            answer: 'Actinic keratosis (AK), also known as solar keratosis, is a precancerous skin condition characterized by rough, scaly patches on the skin. These lesions develop due to long-term exposure to ultraviolet (UV) radiation, typically from the sun or tanning beds.',
+          },
+          {
+            question: 'What does actinic keratosis look like?',
+            answer: 'AK typically appears as small, rough, or scaly patches on the skin that may be pink, red, or brown. They can feel like sandpaper to the touch and are often found on sun-exposed areas such as the face, ears, lips, bald scalp, neck and hands.',
+          },
+          {
+            question: 'Who gets actinic keratosis?',
+            answer: 'AK is most common in fair-skinned individuals over 40, but it can affect anyone with a history of significant sun exposure. People with weakened immune systems and those who have used tanning beds are at higher risk.',
+          },
+          {
+            question: 'What should I remember about actinic keratosis treatment?',
+            answer: 'Early detection and treatment is crucial, as AK can progress to squamous cell carcinoma (skin cancer) if left untreated. Treatment options include topical medications, cryotherapy (freezing), photodynamic therapy and surgical removal.',
+          },
+        ],
+      },
+    },
+    {
+      slug: 'insect-sting',
+      nameDa: 'Insektbid og Stik',
+      nameEn: 'Insect Bites and Stings',
+      questions: {
+        da: [
+          {
+            question: 'Hvad er insektbid og stik?',
+            answer: 'Insektbid og stik refererer til skader forårsaget af munddele eller stikkeapparat fra væsener som myg, fluer, myrer, sengetæger eller ikke-giftige edderkopper. Selvom disse ikke involverer gift, kan de stadig forårsage ubehag og i nogle tilfælde allergiske reaktioner.',
+          },
+          {
+            question: 'Hvordan ser insektbid ud?',
+            answer: 'Insektbid viser sig typisk som små, røde, hævede knopper på huden. De kan være kløende, smertefulde eller begge dele. Myggestik viser sig typisk som små, runde, kløende røde knopper. Sengetægebid viser sig ofte i linjer eller klynger.',
+          },
+          {
+            question: 'Hvem rammes af insektbid?',
+            answer: 'Alle kan blive bidt eller stukket af ikke-giftige insekter. Faktorer der øger risikoen inkluderer tid udendørs i skovområder eller græsarealer, at bo i eller rejse til områder med store insektpopulationer, og at have ubeskyttet hud i insektfyldte miljøer.',
+          },
+          {
+            question: 'Hvad skal jeg huske om insektbid?',
+            answer: 'De fleste bid og stik fra ikke-giftige insekter er harmløse og forsvinder af sig selv inden for et par dage. Rens det berørte område med sæbe og vand, anvend en kold kompres for at reducere hævelse, og brug håndkøbs antihistaminer for kløe. Ved alvorlige reaktioner, vejrtrækningsbesvær eller udbredt nældefeber skal du søge øjeblikkelig lægehjælp.',
+          },
+        ],
+        en: [
+          {
+            question: 'What are insect bites and stings?',
+            answer: 'Insect bites and stings refer to injuries caused by the mouthparts or stinging apparatus of creatures such as mosquitoes, flies, ants, bedbugs or non-venomous spiders. Although these do not involve venom, they can still cause discomfort and in some cases allergic reactions.',
+          },
+          {
+            question: 'What do insect bites look like?',
+            answer: 'Insect bites typically appear as small, red, swollen bumps on the skin. They can be itchy, painful, or both. Mosquito bites typically appear as small, round, itchy red bumps. Bedbug bites often appear in lines or clusters.',
+          },
+          {
+            question: 'Who is affected by insect bites?',
+            answer: 'Anyone can be bitten or stung by non-venomous insects. Factors that increase risk include time outdoors in forested or grassy areas, living in or traveling to areas with large insect populations, and having unprotected skin in insect-prone environments.',
+          },
+          {
+            question: 'What should I remember about insect bites?',
+            answer: 'Most bites and stings from non-venomous insects are harmless and resolve on their own within a few days. Clean the affected area with soap and water, apply a cold compress to reduce swelling, and use over-the-counter antihistamines for itching. For severe reactions, difficulty breathing or widespread hives, seek immediate medical attention.',
+          },
+        ],
+      },
+    },
+    {
+      slug: 'hemangioma',
+      nameDa: 'Hæmangiom',
+      nameEn: 'Hemangioma',
+      questions: {
+        da: [
+          {
+            question: 'Hvad er et hæmangiom?',
+            answer: 'Et hæmangiom er en godartet (ikke-kræftfremkaldende) tumor der består af en unormal ophobning af blodkar. Disse vækster kan forekomme overalt på kroppen men findes oftest på huden eller indre organer som leveren.',
+          },
+          {
+            question: 'Hvordan ser et hæmangiom ud?',
+            answer: 'Hæmangiomer fremstår typisk som røde eller lilla knuder på lys hud eller brune på mørkere hud. De kan være flade eller hævede og kan ligne et modermærke. Almindelige typer inkluderer infantile hæmangiomer (jordbærhæmangiomer) og kirsebærhæmangiomer.',
+          },
+          {
+            question: 'Hvem får hæmangiomer?',
+            answer: 'Hæmangiomer er mest almindelige hos spædbørn, hvor omkring 1 ud af 10 babyer har dem ved fødslen. De er mere udbredte hos piger, for tidligt fødte spædbørn og dem med lav fødselsvægt. Voksne, især dem over 75 år, kan udvikle kirsebærhæmangiomer.',
+          },
+          {
+            question: 'Hvad skal jeg huske om hæmangiomer?',
+            answer: 'Hæmangiomer er normalt harmløse og forsvinder ofte af sig selv, især hos spædbørn. Regelmæssig overvågning af en sundhedsudbyder anbefales for at sikre at de ikke forårsager komplikationer. Behandlingsmuligheder inkluderer topiske eller orale lægemidler, laserterapi eller kirurgisk fjernelse hvis nødvendigt.',
+          },
+        ],
+        en: [
+          {
+            question: 'What is a hemangioma?',
+            answer: 'A hemangioma is a benign (non-cancerous) tumor consisting of an abnormal buildup of blood vessels. These growths can appear anywhere on the body but are most commonly found on the skin or internal organs such as the liver.',
+          },
+          {
+            question: 'What does a hemangioma look like?',
+            answer: 'Hemangiomas typically appear as red or purple bumps on light skin or brown on darker skin. They can be flat or raised and may resemble a mole. Common types include infantile hemangiomas (strawberry hemangiomas) and cherry hemangiomas.',
+          },
+          {
+            question: 'Who gets hemangiomas?',
+            answer: 'Hemangiomas are most common in infants, with about 1 in 10 babies having them at birth. They are more prevalent in females, premature infants and those with low birth weight. Adults, especially those over 75, can develop cherry hemangiomas.',
+          },
+          {
+            question: 'What should I remember about hemangiomas?',
+            answer: 'Hemangiomas are usually harmless and often resolve on their own, especially in infants. Regular monitoring by a healthcare provider is recommended to ensure they do not cause complications. Treatment options include topical or oral medications, laser therapy or surgical removal if necessary.',
+          },
+        ],
+      },
+    },
+
     ],
   },
 ];
