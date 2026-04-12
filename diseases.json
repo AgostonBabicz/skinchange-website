@@ -300,10 +300,17 @@
   },
   {
     "id": 24,
-    "name": "Hæmangioma",
-    "handled": false,
-    "slug": "h-mangioma",
-    "en": {},
-    "da": {}
+    "name": "Hemangioma",
+    "handled": true,
+    "handled_date": "2026-04-12",
+    "slug": "hemangioma",
+    "en": {
+      "content": "Additional information\nWhat is it?\nHemangioma is a benign (non-cancerous) birthmark caused by an overgrowth of blood vessels in the skin. It typically appears in early infancy or in adults. While most hemangiomas are harmless and often resolve on their own, some may require medical attention.\n\nWhat does it look like?\nHemangiomas can vary in appearance:\nStrawberry hemangioma: Bright red, strawberry-shaped marks that often appear on the face, scalp, or back.\nCherry angioma: Small, bright red dots or bumps, commonly appearing on the torso in adults.\nCavernous hemangioma: Deeper, bluish-purple masses that may involve deeper tissues.\n\nWhy does it happen?\nThe exact cause is unknown, but factors may include:\nGenetic predisposition: Family history can play a role.\nHormonal factors: Hemangiomas may be influenced by hormonal changes during pregnancy or puberty.\nAbnormal blood vessel development: Issues during fetal development can lead to hemangioma formation.\n\nWho gets it?\nInfantile hemangiomas: Appear within the first few weeks of life, more common in girls, premature infants, and low birth weight babies.\nAdult hemangiomas: Become more common with age, especially cherry angiomas after age 30.\n\nRemember:\nMost hemangiomas are harmless and may fade over time without treatment.\nMonitor for changes: If a hemangioma grows rapidly, bleeds, or shows signs of infection, consult a doctor.\nTreatment options include laser therapy, corticosteroids, or surgery in select cases.\nSeek professional evaluation for any concerning skin growths."
+    },
+    "da": {
+      "content": "Yderligere information\nHvad er det?\nHæmangiom er en godartet (ikke-cancerøs) fødselsmærke forårsaget af en overvækst af blodkar i huden. Det viser sig typisk i den tidlige spædbørnsalder eller hos voksne. Mens de fleste hæmangiomer er ufarlige og ofte forsvinder af sig selv, kan nogle kræve medicinsk opmærksomhed.\n\nHvordan ser det ud?\nHæmangiomer kan variere i udseende:\nJordbærhæmangiom: Lyse røde, jordbærformede mærker, der ofte vises i ansigtet, på hovedbunden eller på ryggen.\nKirsebærangiom: Små, lyse røde prikker eller knopper, der ofte vises på overkroppen hos voksne.\nKavernøst hæmangiom: Ddybere, blålig-lilla masser, der kan involvere dybere væv.\n\nHvorfor sker det?\nDen nøjagtige årsag er ukendt, men faktorer kan omfatte:\nGenetisk disponering: Familiehistorik kan spille en rolle.\nHormonelle faktorer: Hæmangiomer kan påvirkes af hormonelle ændringer under graviditet eller pubertet.\nAbnorm blodkarudvikling: Problemer under fosterudviklingen kan føre til dannelse af hæmangiom.\n\nHvem får det?\nSpædbørns hæmangiomer: Vises inden for de første par uger af livet, mere almindelige hos piger, for tidligt fødte spædbørn og spædbørn med lav fødselsvægt.\nVoksne hæmangiomer: Bliver mere almindelige med alderen, især kirsebærangiomer efter 30-årsalderen.\n\nHusk:\nDe fleste hæmangiomer er ufarlige og kan falme over tid uden behandling.\nOvervåg for ændringer: Hvis et hæmangiom vokser hurtigt, bløder eller viser tegn på infektion, skal du kontakte en læge.\nBehandlingsmuligheder omfatter laserterapi, kortikosteroider eller kirurgi i udvalgte tilfælde.\nSøg professionel vurdering af eventuelle bekymrende hudvækster."
+    },
+    "medical_description": "Benign vascular tumor composed of blood vessels. Most resolve spontaneously; treatment considered for complications.",
+    "icd11": "Da88 Hemangioma"
   }
 ]
