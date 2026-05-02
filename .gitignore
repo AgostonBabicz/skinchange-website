@@ -5,8 +5,12 @@ node_modules
 
 # Build outputs
 .next
+_next
 out
 dist
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
 
 # Testing
 coverage
