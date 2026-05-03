@@ -13,7 +13,7 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
   const partners = [
     { src: '/Partner_1.png', alt: 'Teknologisk Institut', invert: true },
     { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', invert: true },
-    { src: '/Partner_3.jpeg', alt: 'GREENHOUSE C2IT', invert: false },
+    { src: '/Partner_Kollab.png', alt: 'KOLLAB', invert: false },
     { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', invert: true },
   ];
 
