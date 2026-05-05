@@ -10,12 +10,13 @@ interface PartnersSectionProps {
 export default function PartnersSection({ lang }: PartnersSectionProps) {
   const isDa = lang === 'da';
 
+  // Aspect ratios: Partner_1=4.3:1, Partner_2=3.85:1, KOLLAB=5.6:1, NEW&=3:1, Partner_4=3.87:1
   const partners = [
-    { src: '/Partner_1.png', alt: 'Teknologisk Institut', invert: false },
-    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', invert: true },
-    { src: '/Partner_Kollab.svg', alt: 'KOLLAB', invert: true },
-    { src: '/Partner_New.png', alt: 'NEW&', invert: false },
-    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', invert: true },
+    { src: '/Partner_1.png', alt: 'Teknologisk Institut', invert: false, width: 180, height: 42 },
+    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', invert: true, width: 160, height: 42 },
+    { src: '/Partner_Kollab.svg', alt: 'KOLLAB', invert: true, width: 140, height: 25 },
+    { src: '/Partner_New.png', alt: 'NEW&', invert: false, width: 120, height: 40 },
+    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', invert: true, width: 160, height: 41 },
   ];
 
   const disclaimer = isDa 
@@ -30,17 +31,18 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
           {isDa ? 'Vi samarbejder med' : 'We collaborate with'}
         </p>
         
-        {/* Partner logos - with proper visibility */}
+        {/* Partner logos - consistent sizing */}
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mb-12">
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="relative h-16 w-40 opacity-90 hover:opacity-100 transition-all duration-300"
+              className="opacity-90 hover:opacity-100 transition-all duration-300 flex items-center justify-center"
             >
               <Image
                 src={partner.src}
                 alt={partner.alt}
-                fill
+                width={partner.width}
+                height={partner.height}
                 className={`object-contain ${partner.invert ? 'filter brightness-0 invert' : ''}`}
               />
             </div>
