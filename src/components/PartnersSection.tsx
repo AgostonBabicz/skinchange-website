@@ -76,7 +76,7 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
             100% { transform: translateX(-33.333%); }
           }
           .animate-scroll-left {
-            animation: scroll-left 12s linear infinite;
+            animation: scroll-left 6s linear infinite;
           }
         }
       `}</style>
