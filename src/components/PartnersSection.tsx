@@ -70,6 +70,15 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
         .animate-scroll-left {
           animation: scroll-left 30s linear infinite;
         }
+        @media (max-width: 768px) {
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.333%); }
+          }
+          .animate-scroll-left {
+            animation: scroll-left 12s linear infinite;
+          }
+        }
       `}</style>
     </section>
   );
