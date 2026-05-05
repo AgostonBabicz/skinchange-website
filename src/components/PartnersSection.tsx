@@ -10,11 +10,11 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
   const isDa = lang === 'da';
 
   const partners = [
-    { src: '/Partner_1.png', alt: 'Teknologisk Institut', width: 180, height: 42 },
-    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', width: 160, height: 42 },
-    { src: '/Partner_Kollab.svg', alt: 'KOLLAB', width: 140, height: 25 },
-    { src: '/Partner_New.png', alt: 'NEW&', width: 120, height: 40 },
-    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', width: 160, height: 41 },
+    { src: '/Partner_1.png', alt: 'Teknologisk Institut', width: 180, height: 42, brightness: '110' },
+    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', width: 160, height: 42, brightness: '110' },
+    { src: '/Partner_Kollab.svg', alt: 'KOLLAB', width: 140, height: 25, brightness: '300' },
+    { src: '/Partner_New.png', alt: 'NEW&', width: 120, height: 40, brightness: '110' },
+    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', width: 160, height: 41, brightness: '300' },
   ];
 
   const disclaimer = isDa 
@@ -48,7 +48,7 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
                 alt={partner.alt}
                 width={partner.width}
                 height={partner.height}
-                className="object-contain flex-shrink-0 grayscale brightness-125"
+                style={{ filter: `grayscale(1) brightness(${partner.brightness})` }}
               />
             ))}
           </div>
