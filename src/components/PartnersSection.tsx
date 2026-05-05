@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { Language } from '@/lib/i18n';
 
 interface PartnersSectionProps {
@@ -10,13 +9,12 @@ interface PartnersSectionProps {
 export default function PartnersSection({ lang }: PartnersSectionProps) {
   const isDa = lang === 'da';
 
-  // Aspect ratios: Partner_1=4.3:1, Partner_2=3.85:1, KOLLAB=5.6:1, NEW&=3:1, Partner_4=3.87:1
   const partners = [
-    { src: '/Partner_1.png', alt: 'Teknologisk Institut', invert: false, width: 180, height: 42 },
-    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', invert: true, width: 160, height: 42 },
-    { src: '/Partner_Kollab.svg', alt: 'KOLLAB', invert: true, width: 140, height: 25 },
-    { src: '/Partner_New.png', alt: 'NEW&', invert: false, width: 120, height: 40 },
-    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', invert: true, width: 160, height: 41 },
+    { src: '/Partner_1.png', alt: 'Teknologisk Institut', width: 180, height: 42 },
+    { src: '/Partner_2.svg', alt: 'Privathospitalet Mølholm', width: 160, height: 42 },
+    { src: '/Partner_Kollab.svg', alt: 'KOLLAB', width: 140, height: 25 },
+    { src: '/Partner_New.png', alt: 'NEW&', width: 120, height: 40 },
+    { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', width: 160, height: 41 },
   ];
 
   const disclaimer = isDa 
@@ -24,36 +22,55 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
     : "We collaborate with Teknologisk Institut, Uptime Development and C2IT Greenhouse";
 
   return (
-    <section className="py-20 bg-[#1a237e]">
+    <section className="py-20 bg-[#1a237e] overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <p className="text-center text-white/60 text-sm font-medium uppercase tracking-wider mb-10">
           {isDa ? 'Vi samarbejder med' : 'We collaborate with'}
         </p>
+      </div>
+
+      {/* Scrolling strip with fade edges */}
+      <div className="relative">
+        {/* Left fade */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#1a237e] to-transparent z-10 pointer-events-none" />
         
-        {/* Partner logos - consistent sizing */}
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mb-12">
-          {partners.map((partner, index) => (
-            <div 
-              key={index} 
-              className="opacity-90 hover:opacity-100 transition-all duration-300 flex items-center justify-center"
-            >
-              <Image
+        {/* Right fade */}
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#1a237e] to-transparent z-10 pointer-events-none" />
+        
+        {/* Scrolling container */}
+        <div className="flex overflow-hidden">
+          <div className="flex gap-20 animate-scroll-left py-4">
+            {[...partners, ...partners, ...partners].map((partner, index) => (
+              <img
+                key={index}
                 src={partner.src}
                 alt={partner.alt}
                 width={partner.width}
                 height={partner.height}
-                className={`object-contain ${partner.invert ? 'filter brightness-0 invert' : ''}`}
+                className="object-contain grayscale opacity-70 flex-shrink-0"
               />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </div>
 
-        {/* Disclaimer */}
+      {/* Disclaimer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <p className="text-center text-white/50 text-sm max-w-3xl mx-auto">
           {disclaimer}
         </p>
       </div>
+
+      <style>{`
+        @keyframes scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .animate-scroll-left {
+          animation: scroll-left 30s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }
