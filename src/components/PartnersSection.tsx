@@ -17,9 +17,9 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
     { src: '/Partner_4.svg', alt: 'C2IT Greenhouse', width: 160, height: 41, invert: true },
   ];
 
-  const disclaimer = isDa 
-    ? "Vi samarbejder med Teknologisk Institut, Uptime Development og C2IT Greenhouse"
-    : "We collaborate with Teknologisk Institut, Uptime Development and C2IT Greenhouse";
+  const disclaimer = isDa
+    ? "Vi samarbejder med Teknologisk Institut, Uptime Development, C2IT Greenhouse, New& og Privathospitalet Mølholm"
+    : "We collaborate with Teknologisk Institut, Uptime Development, C2IT Greenhouse, New& and Privathospitalet Mølholm";
 
   return (
     <section className="py-20 bg-[#1a237e] overflow-hidden relative">
