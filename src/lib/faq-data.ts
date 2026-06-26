@@ -1546,6 +1546,68 @@ export const faqCategories: FaqCategory[] = [
       },
     },
 
+      {
+        slug: 'seborrheic-keratosis',
+        nameDa: 'Seboroisk Keratose',
+        nameEn: 'Seborrheic Keratosis',
+        icon: '🟤',
+        questions: {
+          da: [
+            {
+              question: 'Hvad er seboroisk keratose?',
+              answer:
+                'Seboroisk keratose – også kaldet senilvorter eller gammelmandsvorter – er en almindelig, ikke-kræftfremkaldende hudvækst, der opstår, når folk bliver ældre. De optræder ofte som brune, sorte eller lysebrune pletter på huden med en ru eller voksagtig tekstur. Selvom de kan se bekymrende ud, er de fuldstændig harmløse.',
+            },
+            {
+              question: 'Hvad forårsager seboroisk keratose?',
+              answer:
+                'Den præcise årsag til seboroisk keratose er stadig ukendt, og tilstanden er ikke smitsom. Det kan være arveligt, hvilket antyder en genetisk faktor. Udsættelse for sollys og stigende alder kan øge risikoen for at udvikle disse vækster, da de er mest almindelige hos midaldrende og ældre voksne.',
+            },
+            {
+              question: 'Er seboroisk keratose farligt?',
+              answer:
+                'Nej, seboroisk keratose er godartet – det forårsager ikke kræft og er ikke forbundet med hudkræft. Nogle mennesker bekymrer sig dog, fordi væksterne kan ligne andre hudtilstande. Hvis du er i tvivl om en hudforandring, bør du altid få den vurderet af en hudlæge.',
+            },
+            {
+              question: 'Hvad er behandlingsmulighederne for seboroisk keratose?',
+              answer:
+                'Seboroisk keratose kræver normalt ikke behandling, medmindre det medfører ubehag eller påvirker din selvtillid. Almindelige behandlingsmuligheder er kryoterapi (frysning), curettage (afskrabning) og laserterapi. Disse udføres af en læge og er effektive til at fjerne væksterne.',
+            },
+            {
+              question: 'Hvad skal jeg huske om seboroisk keratose?',
+              answer:
+                'Undgå at pille eller kradse i væksterne – det kan forårsage blødning eller øge risikoen for infektion. Brug solbeskyttelse for at forebygge andre solrelaterede hudproblemer. Fugtighedscreme kan reducere tørhed og mild irritation, selvom seboroisk keratose normalt ikke er smertefuld.',
+            },
+          ],
+          en: [
+            {
+              question: 'What is seborrheic keratosis?',
+              answer:
+                'Seborrheic keratosis — also known as senile warts or age spots — is a common, non-cancerous skin growth that appears as people age. They often appear as brown, black or light tan patches on the skin with a rough or waxy texture. Although they can look worrisome, they are completely harmless.',
+            },
+            {
+              question: 'What causes seborrheic keratosis?',
+              answer:
+                'The exact cause of seborrheic keratosis is still unknown, and the condition is not contagious. It may run in families, suggesting a genetic factor. Exposure to sunlight and increasing age can raise the chances of developing these growths, as they are most common in middle-aged and older adults.',
+            },
+            {
+              question: 'Is seborrheic keratosis dangerous?',
+              answer:
+                'No, seborrheic keratosis is benign — it does not cause cancer and is not linked to skin cancer. However, some people worry because the growths can look similar to other skin conditions. If you are uncertain about a skin change, you should always have it assessed by a dermatologist.',
+            },
+            {
+              question: 'What are the treatment options for seborrheic keratosis?',
+              answer:
+                'Seborrheic keratosis does not typically require treatment unless it is causing discomfort or affecting your confidence. Common treatment options include cryotherapy (freezing), curettage (scraping) and laser therapy. These are performed by a doctor and are effective at removing the growths.',
+            },
+            {
+              question: 'What should I remember about seborrheic keratosis?',
+              answer:
+                'Avoid picking or scratching the growths — this can cause bleeding or increase the risk of infection. Use sun protection to prevent other sun-related skin problems. Moisturisers can help reduce dryness and mild irritation, although seborrheic keratosis is usually not painful.',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
