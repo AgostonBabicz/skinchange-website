@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SKIND appen – Få din hud vurderet af en hudlæge inden for 48 timer</title>
+  <title>SKIND appen – Hudlæge inden for 48 timer</title>
   <meta name="description" content="Danmark er europamestre i hudkræft. Få din hudforandring vurderet af en hudlæge inden for 48 timer — uden venteliste." />
   <link href="https://fonts.bunny.net/css?family=ibm-plex-sans:400,500,700" rel="stylesheet" />
   <style>
@@ -131,6 +131,7 @@
       gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
+      margin-top: 16px;
     }
 
     .btn-primary {
@@ -432,6 +433,57 @@
       line-height: 1.6;
     }
 
+    /* ─── CONDITIONS STRIP ─── */
+    .conditions-strip {
+      background: var(--blue-dark);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .conditions-strip p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.3px;
+      line-height: 1.7;
+    }
+    .conditions-strip span {
+      color: rgba(255,255,255,0.95);
+      font-weight: 600;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .how-section { background: var(--white); }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin-top: 44px;
+    }
+
+    @media (max-width: 600px) {
+      .how-steps { grid-template-columns: 1fr; }
+    }
+
+    .how-step {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--off-white);
+      border-radius: 16px;
+    }
+
+    .how-step-num {
+      width: 40px; height: 40px;
+      background: var(--blue);
+      border-radius: 50%;
+      color: white;
+      font-size: 18px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .how-step h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .how-step p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--text);
@@ -458,9 +510,9 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">Danmark er europamestre i hudkræft</div>
+    <div class="hero-badge">Autoriserede hudlæger · Godkendt lægepraksis</div>
     <h1>Har du et hudproblem, du er i tvivl om?</h1>
-    <p>De fleste hudkræfttilfælde kan behandles — især når de opdages tidligt. Få svar fra en hudlæge inden for 48 timer, direkte fra din telefon. Ingen venteliste.</p>
+    <p>Uanset om det er bumser, en hudforandring du holder øje med, eller noget der klør og irriterer, kan en autoriseret hudlæge give dig og din familie svar inden for 48 timer.</p>
     <div class="hero-btns">
       <a href="https://apps.apple.com/dk/app/skind/id6479356965" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -481,6 +533,11 @@
 
 
 
+
+  <!-- CONDITIONS STRIP -->
+  <div class="conditions-strip">
+    <p>Vi diagnosticerer og behandler: <span>hudkræft · akne · eksem · rosacea · modermærker · hudforandringer · og meget mere</span></p>
+  </div>
 
   <!-- INCLUDED -->
   <section class="included-section">
@@ -544,11 +601,36 @@
 
 
 
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="inner">
+      <p class="section-label">Sådan gør du</p>
+      <h2 class="section-title">Tre trin til svar</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <h4>Tag billeder</h4>
+          <p>Fotografér dit hudproblem og besvar et par enkle spørgsmål om dine symptomer</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <h4>Send til hudlægen</h4>
+          <p>En autoriseret hudlæge gennemgår din sag — uden venteliste</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <h4>Få dit svar</h4>
+          <p>Du modtager diagnose og behandlingsplan inden for 48 timer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- BOTTOM CTA -->
   <section class="cta-section">
     <div class="inner">
-      <h2>Klar til at få ro i maven?</h2>
-      <p>Download SKIND appen og få din hudforandring vurderet af en hudlæge inden for 48 timer.</p>
+      <h2>Klar til at få svar?</h2>
+      <p>Download SKIND appen og få din hud vurderet af en autoriseret hudlæge inden for 48 timer.</p>
       <div class="hero-btns">
         <a href="https://apps.apple.com/dk/app/skind/id6479356965" class="btn-primary">
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
