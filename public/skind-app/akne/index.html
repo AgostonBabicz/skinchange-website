@@ -33,7 +33,18 @@
  display: flex; align-items: center; justify-content: space-between;
  padding: 0 24px;
  }
- .nav-logo img { height: 26px; filter: brightness(0) invert(1); }
+ .nav-logo {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ background: white;
+ border-radius: 12px;
+ padding: 6px 14px;
+ text-decoration: none;
+ transition: opacity .15s;
+ }
+ .nav-logo:hover { opacity: .88; }
+ .nav-logo img { height: 32px; width: auto; display: block; }
  .nav-btn {
  background: var(--red); color: white;
  font-family: inherit; font-weight: 700; font-size: 13px;
@@ -271,7 +282,7 @@
  <!-- NAV -->
  <nav>
  <a href="https://skinchange.dk" class="nav-logo">
- <img src="https://skinchange.dk/SKIND%20LOGO.svg" alt="SKIND" />
+ <img src="../SKIND LOGO.svg" alt="SKIND" />
  </a>
  <a href="#" onclick="downloadApp(event)" class="nav-btn">Download appen</a>
  </nav>
