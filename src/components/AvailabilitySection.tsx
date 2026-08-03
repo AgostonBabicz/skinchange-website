@@ -35,7 +35,7 @@ export default function AvailabilitySection({ lang }: AvailabilitySectionProps) 
               />
             </div>
             <div>
-              <p className="text-[#1a237e] font-semibold">
+              <p className="text-primary-900 font-semibold">
                 {t.availability.title}
               </p>
               <p className="text-gray-500 text-sm">

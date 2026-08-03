@@ -22,7 +22,7 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
     : "We collaborate with Teknologisk Institut, Uptime Development, C2IT Greenhouse, New& and Privathospitalet Mølholm";
 
   return (
-    <section className="py-20 bg-[#1a237e] overflow-hidden relative">
+    <section className="py-20 bg-primary-900 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <p className="text-center text-white/60 text-sm font-medium uppercase tracking-wider mb-10">
@@ -33,10 +33,10 @@ export default function PartnersSection({ lang }: PartnersSectionProps) {
       {/* Scrolling strip with fade edges */}
       <div className="relative">
         {/* Left fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#1a237e] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-primary-900 to-transparent z-10 pointer-events-none" />
         
         {/* Right fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#1a237e] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-primary-900 to-transparent z-10 pointer-events-none" />
         
         {/* Scrolling container */}
         <div className="flex overflow-hidden">

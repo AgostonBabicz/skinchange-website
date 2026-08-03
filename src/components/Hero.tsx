@@ -14,11 +14,11 @@ export default function Hero({ lang }: HeroProps) {
   const isDa = lang === 'da';
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-[#1a237e]">
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-primary-900">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#304ffe]/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#304ffe]/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#00e5ff]/10 rounded-full blur-3xl" />
       </div>
 
@@ -55,7 +55,7 @@ export default function Hero({ lang }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-300">
               <Link
                 href={`/${lang}/download`}
-                className="bg-white text-[#1a237e] px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1"
+                className="bg-white text-primary-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1"
               >
                 {t.hero.cta}
               </Link>
@@ -93,7 +93,7 @@ export default function Hero({ lang }: HeroProps) {
               />
               
               {/* Badge */}
-              <div className="absolute -bottom-4 -right-4 bg-[#00e5ff] text-[#1a237e] font-bold py-2 px-4 rounded-full shadow-lg text-sm">
+              <div className="absolute -bottom-4 -right-4 bg-[#00e5ff] text-primary-900 font-bold py-2 px-4 rounded-full shadow-lg text-sm">
                 1.000+ {isDa ? 'downloads' : 'downloads'}
               </div>
             </div>

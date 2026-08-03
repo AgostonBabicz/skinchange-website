@@ -148,11 +148,11 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -161,7 +161,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Seksuelt overførte infektioner' : 'Sexually Transmitted Infections'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '8. april 2026' : 'April 8, 2026'}</span>
@@ -172,7 +172,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -195,7 +195,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -228,7 +228,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What are genital warts */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er kønsvorter?' : 'What are genital warts?'}
               </h2>
               <p>
@@ -243,7 +243,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets them */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får kønsvorter?' : 'Who gets genital warts?'}
               </h2>
               <p>
@@ -258,7 +258,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Transmission */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan smitter HPV?' : 'How does HPV spread?'}
               </h2>
               <p>
@@ -283,7 +283,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Symptoms */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser kønsvorter ud?' : 'What do genital warts look like?'}
               </h2>
               <p>
@@ -318,7 +318,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Cancer */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Kan kønsvorter udvikle sig til kræft?' : 'Do genital warts cause cancer?'}
               </h2>
               <p>
@@ -333,7 +333,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Diagnosis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan stilles diagnosen?' : 'How are genital warts diagnosed?'}
               </h2>
               <p>
@@ -345,11 +345,11 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Et billede kan ikke klare den opgave. Det kan ikke udelukke condyloma lata – de flade, fugtige forandringer ved sekundær syfilis, som ligner kønsvorter, men betyder en helt anden diagnose og behandling. Det kan heller ikke sikkert skelne kønsvorter fra{' '}
-                    <Link href={`/${lang}/blog/molluscum-contagiosum`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/molluscum-contagiosum`} className="text-primary underline hover:text-primary-900">
                       molluscum contagiosum
                     </Link>
                     , fra{' '}
-                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-primary underline hover:text-primary-900">
                       herpes simplex
                     </Link>
                     , fra normale anatomiske varianter som perlekrans på penis (pearly penile papules) og vestibulær papillomatose, fra forstadier til kræft (VIN, PIN og AIN) eller fra det sjældne verrukøse karcinom. Derfor bør enhver ny forandring i kønsområdet og omkring endetarmsåbningen undersøges ved fysisk fremmøde, og der bør samtidig tilbydes en fuld undersøgelse for kønssygdomme.
@@ -357,11 +357,11 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     A photograph cannot do that job. It cannot rule out condyloma lata — the flat, moist lesions of secondary syphilis, which look similar but mean an entirely different diagnosis and treatment. Nor can it reliably separate genital warts from{' '}
-                    <Link href={`/${lang}/blog/molluscum-contagiosum`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/molluscum-contagiosum`} className="text-primary underline hover:text-primary-900">
                       molluscum contagiosum
                     </Link>
                     , from{' '}
-                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-primary underline hover:text-primary-900">
                       herpes simplex
                     </Link>
                     , from normal anatomical variants such as pearly penile papules and vestibular papillomatosis, from the pre-cancerous changes known as VIN, PIN and AIN, or from the rare verrucous carcinoma. Any new lesion in the anogenital area should therefore be examined in person, with a full sexual health screen offered at the same time.
@@ -380,7 +380,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles kønsvorter?' : 'How are genital warts treated?'}
               </h2>
               <p>
@@ -389,7 +389,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                   : 'Genital warts often clear on their own within one to two years as the immune system gains control of the virus. Many people still choose treatment, to be rid of the visible warts and the discomfort. No treatment removes HPV itself, which is why warts can return afterwards.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Behandling du selv påfører' : 'Treatments you apply yourself'}
               </h3>
               <ul className="list-disc pl-6 space-y-2 my-4">
@@ -413,7 +413,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Behandling i klinikken' : 'Treatments done in the clinic'}
               </h3>
               <ul className="list-disc pl-6 space-y-2 my-4">
@@ -455,11 +455,11 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* Prevention */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan forebygger du kønsvorter?' : 'How can you prevent genital warts?'}
               </h2>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'HPV-vaccination' : 'HPV vaccination'}
               </h3>
               <p>
@@ -468,7 +468,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                   : 'In Denmark, HPV vaccination is part of the childhood vaccination programme and is offered to all children at the age of 12 — to girls since 2009 and to boys since September 2019. Free catch-up vaccination is also available for defined groups. The vaccine used protects against nine HPV types, including 6 and 11, which cause genital warts, and 16 and 18, which are behind most HPV-related cancers. The vaccine works best when given before first sexual contact, but it can also be given later.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Screening for livmoderhalskræft' : 'Cervical screening'}
               </h3>
               <p>
@@ -477,7 +477,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                   : 'Screening in Denmark starts at the age of 23 with a cell sample (cytology). From 30 to 59 the sample is analysed with a primary HPV test, and women aged 60–64 are offered an exit test. Screening looks for changes caused by high-risk HPV — it does not look for genital warts.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kondom' : 'Condoms'}
               </h3>
               <p>
@@ -487,7 +487,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -497,20 +497,20 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.q}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.q}</h3>
                     <p>{faq.a}</p>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -527,7 +527,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

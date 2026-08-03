@@ -204,7 +204,7 @@ export default function LangLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
-      <body className="font-sans antialiased text-gray-900 bg-[#1a237e]">
+      <body className="font-sans antialiased text-gray-900 bg-primary-900">
         {children}
       </body>
     </html>

@@ -148,11 +148,11 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -161,7 +161,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '23. marts 2026' : 'March 23, 2026'}</span>
@@ -172,7 +172,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -195,7 +195,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -232,7 +232,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is impetigo */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er impetigo?' : 'What is impetigo?'}
               </h2>
               <p>
@@ -247,7 +247,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Red flags */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvornår er impetigo en akut situation?' : 'When is impetigo an emergency?'}
               </h2>
               <p>
@@ -270,7 +270,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Hurtigt tiltagende rødme, hævelse og varme omkring sårene kan også betyde, at infektionen har bredt sig til de dybere hudlag som{' '}
-                    <Link href={`/${lang}/blog/cellulitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/cellulitis`} className="text-primary underline hover:text-primary-900">
                       cellulitis
                     </Link>
                     , som kræver behandling med antibiotika i tabletform eller i drop.
@@ -278,7 +278,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Rapidly increasing redness, swelling and warmth around the sores can also mean the infection has reached the deeper layers of the skin as{' '}
-                    <Link href={`/${lang}/blog/cellulitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/cellulitis`} className="text-primary underline hover:text-primary-900">
                       cellulitis
                     </Link>
                     , which needs treatment with oral or intravenous antibiotics.
@@ -287,12 +287,12 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Types */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvilke typer af impetigo findes der?' : 'What are the two types of impetigo?'}
               </h2>
               <p>{isDa ? 'Der findes to hovedtyper af impetigo:' : 'There are two main types of impetigo:'}</p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Non-bulløs impetigo (den hyppigste)' : 'Non-bullous impetigo (the most common)'}
               </h3>
               <p>
@@ -301,7 +301,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                   : 'This is the most common form, accounting for about 70% of all cases. It typically starts as small red spots around the mouth and nose, which quickly turn into small blisters. When the blisters burst, they leave the characteristic honey-coloured or yellow crusts, which can look like dried honey or wax.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Bulløs impetigo' : 'Bullous impetigo'}
               </h3>
               <p>
@@ -311,7 +311,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser impetigo ud?' : 'What does impetigo look like?'}
               </h2>
               <p>{isDa ? 'Almindelige tegn på impetigo er:' : 'Common signs of impetigo include:'}</p>
@@ -343,7 +343,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår impetigo?' : 'Why does impetigo happen?'}
               </h2>
               <p>
@@ -352,14 +352,14 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                   : 'Impetigo occurs when bacteria enter through a break in the skin barrier. Even very small injuries are enough:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan kommer bakterierne ind?' : 'How do the bacteria get in?'}
               </h3>
               <p>
                 {isDa ? (
                   <>
                     Snit, skrammer, insektbid og selv små revner i huden giver bakterierne adgang.{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       Eksem
                     </Link>{' '}
                     og andre kroniske hudlidelser svækker hudbarrieren og øger risikoen mærkbart. Hos børn udvikler impetigo sig særligt ofte efter kraftig kradsen i kløende hud.
@@ -367,7 +367,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Cuts, grazes, insect bites and even small cracks in the skin give bacteria a way in.{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       Eczema
                     </Link>{' '}
                     and other chronic skin conditions weaken the skin barrier and raise the risk noticeably. In children, impetigo particularly often develops after vigorous scratching of itchy skin.
@@ -375,7 +375,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan smitter impetigo?' : 'How does impetigo spread?'}
               </h3>
               <p>
@@ -385,7 +385,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får impetigo?' : 'Who gets impetigo?'}
               </h2>
               <p>
@@ -421,7 +421,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles impetigo?' : 'How is impetigo treated?'}
               </h2>
               <p>
@@ -432,7 +432,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧼 Sårpleje ved få og små sår' : '🧼 Wound care for a few small sores'}
                   </p>
                   <p className="text-sm mt-1">
@@ -442,7 +442,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Antibiotisk creme (receptpligtig)' : '💊 Topical antibiotics (prescription)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -452,7 +452,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Antibiotika i tabletform' : '🩺 Oral antibiotics'}
                   </p>
                   <p className="text-sm mt-1">
@@ -462,7 +462,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧴 Hygiejne og hjemme fra institution' : '🧴 Hygiene and staying home'}
                   </p>
                   <p className="text-sm mt-1">
@@ -474,7 +474,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -484,20 +484,20 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.q}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.q}</h3>
                     <p>{faq.a}</p>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -514,7 +514,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

@@ -631,7 +631,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
       <Navigation lang={lang} />
       
       {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#1a237e]">
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-primary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 font-display">
             {isDa ? 'Vores Blog' : 'Our Blog'}
@@ -656,7 +656,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
               >
                 <article className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                   {/* Cover Image */}
-                  <div className="aspect-[16/10] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+                  <div className="aspect-[16/10] relative bg-gradient-to-br from-primary to-primary-900">
                     <Image
                       src={post.image}
                       alt={post.imageAlt}
@@ -667,7 +667,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
                     {/* Gradient overlay for text legibility */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-white/90 text-[#1a237e] text-xs font-semibold px-3 py-1 rounded-full">
+                      <span className="bg-white/90 text-primary-900 text-xs font-semibold px-3 py-1 rounded-full">
                         {post.category}
                       </span>
                     </div>
@@ -681,7 +681,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
                       <span>{post.readTime} {isDa ? 'læsetid' : 'read'}</span>
                     </div>
                     
-                    <h2 className="text-xl font-bold text-[#1a237e] mb-3 group-hover:text-[#304ffe] transition-colors line-clamp-2">
+                    <h2 className="text-xl font-bold text-primary-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
                       {post.title}
                     </h2>
                     
@@ -689,7 +689,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
                       {post.excerpt}
                     </p>
                     
-                    <div className="mt-4 flex items-center text-[#304ffe] font-semibold text-sm">
+                    <div className="mt-4 flex items-center text-primary font-semibold text-sm">
                       {isDa ? 'Læs mere' : 'Read more'}
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -705,7 +705,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
 
       {/* Skin Cancer Section */}
       {skinCancerPosts.length > 0 && (
-        <section id="skin-cancer" className="py-20 bg-[#1a237e]">
+        <section id="skin-cancer" className="py-20 bg-primary-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-white font-display">
@@ -725,7 +725,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
                   className="group"
                 >
                   <article className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-white/10">
-                    <div className="aspect-[16/10] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+                    <div className="aspect-[16/10] relative bg-gradient-to-br from-primary to-primary-900">
                       <Image
                         src={post.image}
                         alt={post.imageAlt}
@@ -735,7 +735,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                       <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 text-[#1a237e] text-xs font-semibold px-3 py-1 rounded-full">
+                        <span className="bg-white/90 text-primary-900 text-xs font-semibold px-3 py-1 rounded-full">
                           {post.category}
                         </span>
                       </div>
@@ -768,7 +768,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#1a237e]">
+      <section className="py-20 bg-primary-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             {isDa ? 'Har du et hudproblem?' : 'Do you have a skin problem?'}
@@ -780,7 +780,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
           </p>
           <Link
             href={`/${lang}/download`}
-            className="inline-flex items-center px-8 py-4 bg-white text-[#1a237e] rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-900 rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
           >
             {isDa ? 'Download appen' : 'Download the app'}
           </Link>

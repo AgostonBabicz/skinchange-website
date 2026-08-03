@@ -24,7 +24,7 @@ export default function Navigation({ lang }: NavigationProps) {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#1a237e]/95 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 w-full z-50 bg-primary-900/95 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -62,10 +62,10 @@ export default function Navigation({ lang }: NavigationProps) {
                 </svg>
               </button>
               <div className="absolute top-full right-0 mt-2 py-2 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all min-w-[120px]">
-                <Link href="/da" className={`block px-4 py-2 text-sm ${isDa ? 'text-[#304ffe] font-medium bg-[#304ffe]/5' : 'text-gray-700 hover:bg-gray-50'}`}>
+                <Link href="/da" className={`block px-4 py-2 text-sm ${isDa ? 'text-primary font-medium bg-primary/5' : 'text-gray-700 hover:bg-gray-50'}`}>
                   Dansk
                 </Link>
-                <Link href="/en" className={`block px-4 py-2 text-sm ${!isDa ? 'text-[#304ffe] font-medium bg-[#304ffe]/5' : 'text-gray-700 hover:bg-gray-50'}`}>
+                <Link href="/en" className={`block px-4 py-2 text-sm ${!isDa ? 'text-primary font-medium bg-primary/5' : 'text-gray-700 hover:bg-gray-50'}`}>
                   English
                 </Link>
               </div>
@@ -74,7 +74,7 @@ export default function Navigation({ lang }: NavigationProps) {
             {/* CTA */}
             <Link
               href={`/${lang}/download`}
-              className="bg-white text-[#1a237e] px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-white/90 transition-all"
+              className="bg-white text-primary-900 px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-white/90 transition-all"
             >
               {t.nav.cta}
             </Link>
@@ -111,7 +111,7 @@ export default function Navigation({ lang }: NavigationProps) {
               </Link>
               <Link
                 href={`/${lang}/download`}
-                className="bg-white text-[#1a237e] px-6 py-3 rounded-full font-semibold text-center"
+                className="bg-white text-primary-900 px-6 py-3 rounded-full font-semibold text-center"
               >
                 {t.nav.cta}
               </Link>

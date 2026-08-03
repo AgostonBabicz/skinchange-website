@@ -169,11 +169,11 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -182,7 +182,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '3. april 2026' : 'April 3, 2026'}</span>
@@ -193,7 +193,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Alopecia Areata? Årsager, Symptomer og Behandling'
                 : 'What is Alopecia Areata? Causes, Symptoms and Treatment'}
@@ -218,7 +218,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -251,7 +251,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is alopecia areata */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er alopecia areata?' : 'What is alopecia areata?'}
               </h2>
               <p>
@@ -266,7 +266,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser alopecia areata ud?' : 'What does alopecia areata look like?'}
               </h2>
               <p>{isDa ? 'Alopecia areata viser sig typisk på følgende måder:' : 'Alopecia areata typically presents in the following ways:'}</p>
@@ -276,11 +276,11 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   {isDa ? (
                     <>
                       Det mest karakteristiske tegn er veldefinerede, runde eller ovale områder med fuldstændigt hårtab. Disse pletter er som regel glatte og skælløse — i modsætning til fx{' '}
-                      <Link href={`/${lang}/blog/tinea-infections-ringworm`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/tinea-infections-ringworm`} className="text-primary underline hover:text-primary-900">
                         ringorm
                       </Link>{' '}
                       eller{' '}
-                      <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                         psoriasis
                       </Link>{' '}
                       i hovedbunden, hvor huden er skællende.
@@ -288,11 +288,11 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   ) : (
                     <>
                       The most characteristic sign is well-defined, round or oval areas of complete hair loss. These patches are usually smooth and without scaling — unlike{' '}
-                      <Link href={`/${lang}/blog/tinea-infections-ringworm`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/tinea-infections-ringworm`} className="text-primary underline hover:text-primary-900">
                         ringworm
                       </Link>{' '}
                       or scalp{' '}
-                      <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                         psoriasis
                       </Link>
                       , where the skin is scaly.
@@ -332,7 +332,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår alopecia areata?' : 'Why does alopecia areata happen?'}
               </h2>
               <p>
@@ -341,7 +341,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   : 'Alopecia areata is caused by an autoimmune reaction in which the immune system\'s T-cells mistakenly identify hair follicles as foreign and attack them. The hair follicles enter a resting phase and temporarily stop producing hair.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvor stor en rolle spiller generne?' : 'How much of a role do genes play?'}
               </h3>
               <p>
@@ -350,7 +350,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   : 'An important one. Up to 20% of people with alopecia areata have one or more family members with the same condition or another autoimmune disease.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kan stress udløse alopecia areata?' : 'Can stress trigger alopecia areata?'}
               </h3>
               <p>
@@ -359,14 +359,14 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   : 'Yes, it can contribute. Severe physical or psychological stress can trigger or worsen alopecia areata. Stress affects the immune system and can contribute to the autoimmune reaction against hair follicles.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilke andre sygdomme hænger det sammen med?' : 'Which other conditions is it linked to?'}
               </h3>
               <p>
                 {isDa ? (
                   <>
                     Andre autoimmune tilstande. Alopecia areata er associeret med skjoldbruskkirtelsygdomme (Hashimotos, Graves), type 1-diabetes,{' '}
-                    <Link href={`/${lang}/blog/vitiligo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/vitiligo`} className="text-primary underline hover:text-primary-900">
                       vitiligo
                     </Link>{' '}
                     og reumatoid artritis (leddegigt). Personer med disse tilstande har en højere risiko.
@@ -374,7 +374,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Other autoimmune conditions. Alopecia areata is associated with thyroid diseases (Hashimoto&apos;s, Graves&apos;), type 1 diabetes,{' '}
-                    <Link href={`/${lang}/blog/vitiligo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/vitiligo`} className="text-primary underline hover:text-primary-900">
                       vitiligo
                     </Link>{' '}
                     and rheumatoid arthritis. People with these conditions have a higher risk.
@@ -388,7 +388,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får alopecia areata?' : 'Who gets alopecia areata?'}
               </h2>
               <p>
@@ -418,7 +418,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved alopecia areata?' : 'What can you do about alopecia areata?'}
               </h2>
               <p>
@@ -429,7 +429,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topiske kortikosteroider' : '💊 Topical corticosteroids'}
                   </p>
                   <p className="text-sm mt-1">
@@ -439,7 +439,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💉 Intralesionelle steroidinjektioner' : '💉 Intralesional steroid injections'}
                   </p>
                   <p className="text-sm mt-1">
@@ -449,7 +449,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧪 Immunterapi' : '🧪 Immunotherapy'}
                   </p>
                   <p className="text-sm mt-1">
@@ -459,7 +459,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 JAK-hæmmere (orale lægemidler)' : '💊 JAK inhibitors (oral medications)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -477,7 +477,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -487,12 +487,12 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er alopecia areata smitsomt?' : 'Is alopecia areata contagious?'}
                   </h3>
                   <p>
@@ -502,7 +502,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Vokser håret tilbage?' : 'Does hair grow back?'}
                   </h3>
                   <p>
@@ -512,7 +512,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -522,7 +522,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Påvirker alopecia areata neglene?' : 'Does alopecia areata affect the nails?'}
                   </h3>
                   <p>
@@ -534,7 +534,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -546,7 +546,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

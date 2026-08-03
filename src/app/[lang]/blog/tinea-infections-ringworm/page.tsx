@@ -153,11 +153,11 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">
@@ -181,7 +181,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Ringorm (Tinea)? Årsager, Symptomer og Behandling'
                 : 'What is Ringworm (Tinea)? Causes, Symptoms and Treatment'}
@@ -206,7 +206,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -243,7 +243,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er ringorm (tinea)?' : 'What is ringworm (tinea)?'}
               </h2>
               <p>
@@ -258,7 +258,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </p>
 
               {/* Types */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvilke typer tinea-infektioner findes der?' : 'Which types of tinea infection are there?'}
               </h2>
               <p>
@@ -311,7 +311,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </ul>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser ringorm ud?' : 'What does ringworm look like?'}
               </h2>
               <p>
@@ -353,11 +353,11 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår tinea-infektioner?' : 'Why do tinea infections happen?'}
               </h2>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor trives svampen i varme og fugtige miljøer?' : 'Why does the fungus thrive in warm, moist environments?'}
               </h3>
               <p>
@@ -366,7 +366,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   : 'Dermatophytes thrive optimally in warm, moist environments. Heavy sweating, tight-fitting clothing and activities involving prolonged moisture (e.g. swimming, intensive sport) significantly increase the risk. Locker rooms, shared showers and swimming pools are classic transmission sites.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kan man få ringorm fra dyr?' : 'Can you catch ringworm from animals?'}
               </h3>
               <p>
@@ -375,7 +375,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   : 'Yes. Cats, dogs, cattle and rodents can all carry dermatophytes and transmit them to humans through direct contact. Infected animals do not necessarily show visible symptoms — an apparently healthy cat can still transmit ringworm.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Smitter ringorm via håndklæder og sko?' : 'Does ringworm spread via towels and shoes?'}
               </h3>
               <p>
@@ -384,7 +384,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   : 'Yes. Towels, sports equipment, combs and brushes, shoes and socks can all transfer the fungus. This is a common route of transmission, particularly in families with school-aged children.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan påvirker nedsat immunforsvar risikoen?' : 'How does a weakened immune system affect the risk?'}
               </h3>
               <p>
@@ -394,7 +394,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får tinea-infektioner?' : 'Who gets tinea infections?'}
               </h2>
               <p>
@@ -436,7 +436,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </ul>
 
               {/* Diagnosis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan bekræftes diagnosen?' : 'How is the diagnosis confirmed?'}
               </h2>
               <p>
@@ -453,15 +453,15 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 {isDa ? (
                   <>
                     Ringorm på kroppen forveksles jævnligt med{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopisk eksem
                     </Link>
                     , med{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seboroisk eksem
                     </Link>{' '}
                     i hovedbund og ansigt, og med{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       kontakteksem
                     </Link>
                     , hvor udslættet følger noget, huden har været i berøring med. Fælles for de tre er, at de ikke har ringormens
@@ -470,15 +470,15 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 ) : (
                   <>
                     Ringworm on the body is regularly mistaken for{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopic eczema
                     </Link>
                     , for{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic dermatitis
                     </Link>{' '}
                     on the scalp and face, and for{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       contact dermatitis
                     </Link>
                     , where the rash follows something the skin has touched. None of the three has the sharp, scaly leading edge of
@@ -488,7 +488,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved ringorm?' : 'What can you do about ringworm?'}
               </h2>
               <p>
@@ -499,7 +499,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧴 Topiske svampedræbende midler (mild til moderat infektion)' : '🧴 Topical antifungals (mild to moderate infection)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -509,7 +509,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Oral svampedræbende behandling (svær eller hårdnakket infektion)' : '💊 Oral antifungal treatment (severe or stubborn infection)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -519,7 +519,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '⏳ Neglen skal vokse ud bagefter' : '⏳ The nail still has to grow out'}
                   </p>
                   <p className="text-sm mt-1">
@@ -529,7 +529,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧼 Hygiejne og forebyggelse' : '🧼 Hygiene and prevention'}
                   </p>
                   <p className="text-sm mt-1">
@@ -539,7 +539,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🐾 Behandl inficerede kæledyr' : '🐾 Treat infected pets'}
                   </p>
                   <p className="text-sm mt-1">
@@ -551,7 +551,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -561,12 +561,12 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er ringorm smitsomt?' : 'Is ringworm contagious?'}
                   </h3>
                   <p>
@@ -576,7 +576,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan ringorm forsvinde af sig selv?' : 'Can ringworm go away on its own?'}
                   </h3>
                   <p>
@@ -586,7 +586,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -598,7 +598,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -610,7 +610,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

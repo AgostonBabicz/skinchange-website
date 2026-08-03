@@ -169,11 +169,11 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -184,7 +184,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '24. marts 2026' : 'March 24, 2026'}</span>
@@ -195,7 +195,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Cellulitis? Årsager, Symptomer og Behandling'
                 : 'What is Cellulitis? Causes, Symptoms and Treatment'}
@@ -220,7 +220,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -265,7 +265,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* What is cellulitis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er cellulitis?' : 'What is cellulitis?'}
               </h2>
               <p>
@@ -287,7 +287,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Cellulitis er ikke smitsomt fra person til person. Det opstår, når bakterier — typisk streptokokker eller stafylokokker — trænger ind i huden gennem et brud eller en revne i hudbarrieren. Det er de samme to bakteriegrupper, der står bag{' '}
-                    <Link href={`/${lang}/blog/impetigo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/impetigo`} className="text-primary underline hover:text-primary-900">
                       børnesår (impetigo)
                     </Link>
                     , men impetigo bliver i hudens øverste lag og smitter ved berøring.
@@ -295,7 +295,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Cellulitis is not contagious from person to person. It develops when bacteria — typically streptococci or staphylococci — enter the skin through a break or crack in the skin barrier. The same two groups of bacteria cause{' '}
-                    <Link href={`/${lang}/blog/impetigo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/impetigo`} className="text-primary underline hover:text-primary-900">
                       impetigo
                     </Link>
                     , but impetigo stays in the top layer of the skin and does spread by touch.
@@ -304,7 +304,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser cellulitis ud?' : 'What does cellulitis look like?'}
               </h2>
               <p>{isDa ? 'Cellulitis viser sig typisk med følgende symptomer:' : 'Cellulitis typically presents with the following symptoms:'}</p>
@@ -343,7 +343,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     <strong>Cellulitis er næsten altid ensidig.</strong> Rødme og hævelse i begge underben skyldes langt oftere staseeksem end infektion. Staseeksem opstår, når blodet har svært ved at komme retur fra benene, og det behandles med kompression og fugtighedscreme — ikke antibiotika. Det ligner på mange måder{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       eksem
                     </Link>{' '}
                     andre steder på kroppen.
@@ -351,7 +351,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     <strong>Cellulitis is almost always one-sided.</strong> Redness and swelling in both lower legs is much more often venous eczema or stasis dermatitis than infection. Venous eczema develops when blood struggles to return from the legs, and it is treated with compression and emollients — not antibiotics. In many ways it behaves like{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       eczema
                     </Link>{' '}
                     elsewhere on the body.
@@ -360,7 +360,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår cellulitis?' : 'Why does cellulitis happen?'}
               </h2>
               <p>
@@ -369,14 +369,14 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   : 'Cellulitis develops when bacteria find their way beneath the skin. Even small breaks in the skin barrier can be enough:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan kommer bakterierne ind i huden?' : 'How do bacteria get into the skin?'}
               </h3>
               <p>
                 {isDa ? (
                   <>
                     Gennem et brud i hudbarrieren. Snit, skrammer,{' '}
-                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-primary underline hover:text-primary-900">
                       insektbid og -stik
                     </Link>
                     , kirurgiske sår, fodsvamp mellem tæerne og selv små revner eller sprækker i huden kan alle fungere som indgangspunkter for bakterier. Derfor er personer med svækket immunforsvar eller underliggende hudtilstande i højere risiko.
@@ -384,7 +384,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Through a break in the skin barrier. Cuts, scrapes,{' '}
-                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-primary underline hover:text-primary-900">
                       insect bites and stings
                     </Link>
                     , surgical wounds, athlete&apos;s foot between the toes and even small cracks or fissures in the skin can all serve as entry points for bacteria. This is why people with poor immune function or underlying skin conditions are at higher risk.
@@ -392,7 +392,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor øger kroniske hudtilstande risikoen?' : 'Why do chronic skin conditions increase the risk?'}
               </h3>
               <p>
@@ -401,7 +401,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   : 'Because they weaken the skin’s natural barrier function. Eczema, dermatitis and other chronic skin conditions make it easier for bacteria to penetrate. People with foot ulcers — particularly those with diabetes — are also at significantly increased risk.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilken rolle spiller lymfødem og diabetes?' : 'What role do lymphoedema and diabetes play?'}
               </h3>
               <p>
@@ -411,7 +411,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får cellulitis?' : 'Who gets cellulitis?'}
               </h2>
               <p>
@@ -447,7 +447,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved cellulitis?' : 'What can you do about cellulitis?'}
               </h2>
               <p>
@@ -458,7 +458,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Antibiotisk behandling' : '💊 Antibiotic treatment'}
                   </p>
                   <p className="text-sm mt-1">
@@ -468,7 +468,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🛏️ Hvile og elevation' : '🛏️ Rest and elevation'}
                   </p>
                   <p className="text-sm mt-1">
@@ -478,7 +478,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩹 God sårpleje' : '🩹 Good wound care'}
                   </p>
                   <p className="text-sm mt-1">
@@ -488,7 +488,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🖊️ Markér kanten af rødmen' : '🖊️ Mark the edge of the redness'}
                   </p>
                   <p className="text-sm mt-1">
@@ -498,7 +498,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🌡️ Overvåg symptomer' : '🌡️ Monitor symptoms'}
                   </p>
                   <p className="text-sm mt-1">
@@ -510,7 +510,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -520,12 +520,12 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er cellulitis farligt?' : 'Is cellulitis dangerous?'}
                   </h3>
                   <p>
@@ -535,7 +535,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er rødme i begge underben cellulitis?' : 'Is redness in both lower legs cellulitis?'}
                   </h3>
                   <p>
@@ -545,7 +545,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvordan forebygger jeg cellulitis?' : 'How do I prevent cellulitis?'}
                   </h3>
                   <p>
@@ -555,7 +555,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan cellulitis komme igen?' : 'Can cellulitis come back?'}
                   </h3>
                   <p>
@@ -567,7 +567,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Har du mistanke om cellulitis? Bliv set i dag' : 'Think you have cellulitis? Get seen today'}
                 </h3>
@@ -579,7 +579,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

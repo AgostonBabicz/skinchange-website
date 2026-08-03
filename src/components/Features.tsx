@@ -36,7 +36,7 @@ export default function Features({ lang }: FeaturesProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">
             {t.features.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -52,12 +52,12 @@ export default function Features({ lang }: FeaturesProps) {
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-[#304ffe] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#1a237e] transition-colors">
+              <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-900 transition-colors">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
               
               {/* Step number */}
-              <div className="w-8 h-8 bg-[#00e5ff] rounded-full flex items-center justify-center -mt-14 mb-4 ml-20 text-[#1a237e] font-bold text-sm">
+              <div className="w-8 h-8 bg-[#00e5ff] rounded-full flex items-center justify-center -mt-14 mb-4 ml-20 text-primary-900 font-bold text-sm">
                 {feature.step}
               </div>
               

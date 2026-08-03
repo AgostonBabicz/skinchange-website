@@ -153,11 +153,11 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '19. marts 2026' : 'March 19, 2026'}</span>
@@ -179,7 +179,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Kontaktdermatitis? Årsager, Symptomer og Behandling'
                 : 'What is Contact Dermatitis? Causes, Symptoms and Treatment'}
@@ -204,7 +204,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -241,14 +241,14 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is contact dermatitis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er kontaktdermatitis?' : 'What is contact dermatitis?'}
               </h2>
               <p>
                 {isDa ? (
                   <>
                     Kontaktdermatitis — på dansk også kaldet kontakteksem — er en betændelsestilstand i huden, der opstår som en direkte reaktion på et stof, huden har været i kontakt med. Til forskel fra{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopisk eksem
                     </Link>{' '}
                     kræver kontaktdermatitis altid en ydre udløser. Arvelige forhold spiller dog stadig en rolle: har du fra naturens hånd en svagere hudbarriere, skal der mindre til, før huden reagerer. Det betyder også, at hvis du kan identificere og fjerne udløseren, forsvinder symptomerne ofte.
@@ -256,7 +256,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Contact dermatitis — also known as contact eczema — is an inflammatory skin condition that arises as a direct reaction to a substance the skin has touched. Unlike{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopic eczema
                     </Link>
                     , contact dermatitis always requires an external trigger. Inherited factors still matter, though: if your skin barrier is naturally weaker, less exposure is needed before the skin reacts. It also means that if you can identify and remove the trigger, symptoms often disappear.
@@ -284,7 +284,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser kontaktdermatitis ud?' : 'What does contact dermatitis look like?'}
               </h2>
               <p>
@@ -325,7 +325,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår kontaktdermatitis?' : 'Why does contact dermatitis happen?'}
               </h2>
               <p>
@@ -334,7 +334,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   : 'The cause depends on the type:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad udløser irritativ kontaktdermatitis?' : 'What causes irritant contact dermatitis?'}
               </h3>
               <p>
@@ -348,7 +348,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   : 'Common irritants include soaps, detergents, solvents, oils, acids, alkalis and plants such as nettles. Even repeated water exposure — for example frequent hand washing — can dry out the skin and lead to irritant dermatitis.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad udløser allergisk kontaktdermatitis?' : 'What causes allergic contact dermatitis?'}
               </h3>
               <p>
@@ -362,14 +362,14 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   : 'Common allergens include nickel (in jewellery and metal parts), fragrances, cosmetics, preservatives, balsam of Peru, certain medications and resins from plants. Even products you have used for years can suddenly trigger an allergic reaction, because sensitisation can develop over time.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor er latex en anden slags allergi?' : 'Why is latex a different kind of allergy?'}
               </h3>
               <p>
                 {isDa ? (
                   <>
                     Fordi naturgummilatex er det klassiske type I-allergen. Reaktionen er IgE-medieret og indtræder inden for minutter — ikke timer. Latexallergi giver{' '}
-                    <Link href={`/${lang}/blog/urticaria-hives`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/urticaria-hives`} className="text-primary underline hover:text-primary-900">
                       kontakturticaria (nældefeber)
                     </Link>{' '}
                     på kontaktstedet, hævelse af slimhinder (angioødem) og i værste fald anafylaksi. Bemærk, at gummihandsker desuden kan give en klassisk, forsinket type IV-allergi over for de kemikalier, gummiet er fremstillet med — to helt forskellige reaktioner på det samme produkt.
@@ -377,7 +377,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Because natural rubber latex is the classic type I allergen. The reaction is IgE-mediated and begins within minutes — not hours. Latex allergy causes{' '}
-                    <Link href={`/${lang}/blog/urticaria-hives`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/urticaria-hives`} className="text-primary underline hover:text-primary-900">
                       contact urticaria (hives)
                     </Link>{' '}
                     at the site of contact, swelling of mucous membranes (angio-oedema) and, at worst, anaphylaxis. Note that rubber gloves can also cause a classic delayed type IV allergy to the chemicals used to make the rubber — two entirely different reactions to the same product.
@@ -398,7 +398,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får kontaktdermatitis?' : 'Who gets contact dermatitis?'}
               </h2>
               <p>
@@ -434,7 +434,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Patch testing */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan foregår en lappeprøve?' : 'How does patch testing work?'}
               </h2>
               <p>
@@ -449,7 +449,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved kontaktdermatitis?' : 'What can you do about contact dermatitis?'}
               </h2>
               <p>
@@ -460,7 +460,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🔍 Identificer og undgå udløseren' : '🔍 Identify and avoid the trigger'}
                   </p>
                   <p className="text-sm mt-1">
@@ -470,7 +470,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧴 Beskyt huden' : '🧴 Protect the skin'}
                   </p>
                   <p className="text-sm mt-1">
@@ -480,7 +480,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Medicinsk behandling' : '💊 Medical treatment'}
                   </p>
                   <p className="text-sm mt-1">
@@ -490,7 +490,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚿 Skånsom hudpleje' : '🚿 Gentle skincare'}
                   </p>
                   <p className="text-sm mt-1">
@@ -502,7 +502,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -512,12 +512,12 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er kontaktdermatitis smitsomt?' : 'Is contact dermatitis contagious?'}
                   </h3>
                   <p>
@@ -527,7 +527,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -537,7 +537,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvordan forebygger jeg kontaktdermatitis?' : 'How do I prevent contact dermatitis?'}
                   </h3>
                   <p>
@@ -549,7 +549,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -561,7 +561,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

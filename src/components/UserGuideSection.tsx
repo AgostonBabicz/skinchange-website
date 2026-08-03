@@ -40,7 +40,7 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
   };
 
   return (
-    <section id="user-guide" className="py-24 lg:py-32 bg-[#1a237e]">
+    <section id="user-guide" className="py-24 lg:py-32 bg-primary-900">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Carousel - No white rectangle, clean design */}
         <div className="relative">
@@ -65,14 +65,14 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
             className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-lg"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-6 h-6 text-[#1a237e]" />
+            <ChevronLeft className="w-6 h-6 text-primary-900" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-lg"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6 text-[#1a237e]" />
+            <ChevronRight className="w-6 h-6 text-primary-900" />
           </button>
         </div>
 

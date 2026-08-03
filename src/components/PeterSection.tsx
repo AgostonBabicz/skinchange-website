@@ -120,18 +120,18 @@ William Nielsen Prize`;
             </div>
           </div>
           <div>
-            <p className="text-[#304ffe] font-semibold mb-2">{isDa ? 'Mød vores førende hudlæge' : 'Meet our leading dermatologist'}</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">Peter Bjerring</h2>
+            <p className="text-primary font-semibold mb-2">{isDa ? 'Mød vores førende hudlæge' : 'Meet our leading dermatologist'}</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">Peter Bjerring</h2>
             <p className="text-lg text-gray-600 mb-6">{shortText}</p>
-            <button onClick={() => setShowFullBio(true)} className="text-[#304ffe] font-semibold hover:underline">{isDa ? 'Læs mere' : 'Read more'}</button>
+            <button onClick={() => setShowFullBio(true)} className="text-primary font-semibold hover:underline">{isDa ? 'Læs mere' : 'Read more'}</button>
           </div>
         </div>
 
         {/* Brian */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">Brian Vangsgaard</h2>
-            <p className="text-[#304ffe] font-semibold mb-4">CEO</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">Brian Vangsgaard</h2>
+            <p className="text-primary font-semibold mb-4">CEO</p>
             <p className="text-lg text-gray-600">
               {brianDescription}
             </p>
@@ -148,7 +148,7 @@ William Nielsen Prize`;
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-3xl max-h-[80vh] overflow-y-auto p-8 relative">
             <button onClick={() => setShowFullBio(false)} className="absolute top-4 right-4 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200"><X className="w-5 h-5" /></button>
-            <h3 className="text-2xl font-bold text-[#1a237e] mb-4">Peter Bjerring</h3>
+            <h3 className="text-2xl font-bold text-primary-900 mb-4">Peter Bjerring</h3>
             <pre className="text-gray-600 whitespace-pre-wrap font-sans text-sm leading-relaxed">{fullBio}</pre>
           </div>
         </div>

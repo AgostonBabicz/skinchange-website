@@ -156,11 +156,11 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -171,7 +171,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '21. marts 2026' : 'March 21, 2026'}</span>
@@ -182,7 +182,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -205,7 +205,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -244,7 +244,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is lichen planus */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er lichen planus?' : 'What is lichen planus?'}
               </h2>
               <p>
@@ -259,7 +259,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Contagious */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Er lichen planus smitsomt?' : 'Is lichen planus contagious?'}
               </h2>
               <p>
@@ -269,7 +269,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser lichen planus ud?' : 'What does lichen planus look like?'}
               </h2>
               <p>
@@ -327,11 +327,11 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Other sites */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvilke andre steder kan lichen planus ramme?' : 'Which other parts of the body can lichen planus affect?'}
               </h2>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Munden (oral lichen planus)' : 'The mouth (oral lichen planus)'}
               </h3>
               <p>
@@ -340,7 +340,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'In the mouth, lichen planus most often appears as white, lace-like patterns on the inside of the cheeks, which rarely hurt. In the erosive and atrophic forms, however, there are red, sore areas and open ulcers that can make it difficult to eat spicy or acidic food.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hårbunden (lichen planopilaris)' : 'The scalp (lichen planopilaris)'}
               </h3>
               <p>
@@ -349,7 +349,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'When lichen planus affects the scalp it is called lichen planopilaris. The inflammation destroys the hair follicles, and hair lost to that scarring does not grow back. Treatment can halt further loss but cannot restore what has already gone. That is why patchy hair loss with redness, itching or scaling around the hair openings needs prompt assessment.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kønsorganerne (erosiv lichen planus)' : 'The genitals (erosive lichen planus)'}
               </h3>
               <p>
@@ -358,7 +358,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'In the genital area, lichen planus can take an erosive form. Erosive vulvovaginal lichen planus causes raw, painful areas that scar as they heal, and over time that scarring can fuse the labia and narrow or close the vagina. As on the scalp, the damage is permanent once it has happened, so persistent soreness, pain during sex or unexplained discharge should be examined rather than treated as thrush. Men can develop the equivalent erosive form on the glans.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Neglene' : 'The nails'}
               </h3>
               <p>
@@ -368,7 +368,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår lichen planus?' : 'Why does lichen planus happen?'}
               </h2>
               <p>
@@ -377,7 +377,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'The exact cause is unknown, but several factors are thought to be able to trigger the autoimmune reaction:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'En autoimmun reaktion' : 'An autoimmune reaction'}
               </h3>
               <p>
@@ -386,7 +386,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'Research suggests that T-lymphocytes (a type of white blood cell) attack skin cells in an attempt to remove something they perceive as foreign — even though there is no actual foreign substance present.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Lægemidler (lichenoidt lægemiddeludslæt)' : 'Medicines (lichenoid drug eruption)'}
               </h3>
               <p>
@@ -395,7 +395,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'A lichenoid drug eruption looks almost identical to lichen planus but is caused by a medicine. The drugs most often involved are ACE inhibitors, thiazide diuretics, beta-blockers, antimalarials such as hydroxychloroquine, gold, penicillamine, NSAIDs and the anti-PD-1 checkpoint inhibitors used in cancer treatment. The rash can start months after the drug is begun and can take months to settle after it is stopped. Dental amalgam can trigger oral lichen planus where the filling touches the mucosa.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hepatitis C' : 'Hepatitis C'}
               </h3>
               <p>
@@ -404,7 +404,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   : 'There is a documented association between hepatitis C infection and lichen planus, but its strength depends on where you live. In countries with a high prevalence of hepatitis C — parts of southern Europe, the Middle East and Japan — testing patients with lichen planus is standard. In Denmark, where prevalence is around 0.2–0.4%, routine screening is not usual practice; it is reserved for people with risk factors or with widespread or oral disease.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Stress' : 'Stress'}
               </h3>
               <p>
@@ -414,7 +414,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får lichen planus?' : 'Who gets lichen planus?'}
               </h2>
               <p>
@@ -450,18 +450,18 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Diagnosis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan stilles diagnosen?' : 'How is lichen planus diagnosed?'}
               </h2>
               <p>
                 {isDa ? (
                   <>
                     Diagnosen bekræftes normalt med en hudbiopsi, hvor et lille stykke hud undersøges i mikroskop. Det er nødvendigt, fordi flere andre tilstande ligner lichen planus: lichenoidt lægemiddeludslæt,{' '}
-                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                       psoriasis
                     </Link>
                     ,{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       eksem
                     </Link>
                     , diskoid lupus, sekundær syfilis og graft-versus-host-sygdom. De kan ikke adskilles fra hinanden på et billede alene.
@@ -469,11 +469,11 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     The diagnosis is usually confirmed with a skin biopsy, in which a small piece of skin is examined under the microscope. This is necessary because several other conditions look like lichen planus: lichenoid drug eruption,{' '}
-                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                       psoriasis
                     </Link>
                     ,{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       eczema
                     </Link>
                     , discoid lupus, secondary syphilis and graft-versus-host disease. They cannot be told apart from a photograph alone.
@@ -487,7 +487,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles lichen planus?' : 'How is lichen planus treated?'}
               </h2>
               <p>
@@ -498,7 +498,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topikale kortikosteroider' : '💊 Topical corticosteroids'}
                   </p>
                   <p className="text-sm mt-1">
@@ -508,7 +508,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Calcineurinhæmmere' : '🩺 Calcineurin inhibitors'}
                   </p>
                   <p className="text-sm mt-1">
@@ -518,7 +518,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💡 Lysbehandling (fototerapi)' : '💡 Light therapy (phototherapy)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -528,7 +528,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Systemiske kortikosteroider' : '💊 Systemic corticosteroids'}
                   </p>
                   <p className="text-sm mt-1">
@@ -538,7 +538,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Orale retinoider (acitretin)' : '💊 Oral retinoids (acitretin)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -548,7 +548,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🥗 Stresshåndtering og livsstil' : '🥗 Stress management and lifestyle'}
                   </p>
                   <p className="text-sm mt-1">
@@ -560,7 +560,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -570,20 +570,20 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.q}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.q}</h3>
                     <p>{faq.a}</p>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -595,7 +595,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

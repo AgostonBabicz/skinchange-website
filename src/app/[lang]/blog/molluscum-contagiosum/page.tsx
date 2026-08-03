@@ -153,11 +153,11 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -166,7 +166,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '22. marts 2026' : 'March 22, 2026'}</span>
@@ -177,7 +177,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Molluscum Contagiosum? Årsager, Symptomer og Behandling'
                 : 'What is Molluscum Contagiosum? Causes, Symptoms and Treatment'}
@@ -202,7 +202,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -235,7 +235,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er molluscum contagiosum?' : 'What is molluscum contagiosum?'}
               </h2>
               <p>
@@ -250,7 +250,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser molluscum contagiosum ud?' : 'What does molluscum contagiosum look like?'}
               </h2>
               <p>{isDa ? 'De klassiske tegn på molluscum contagiosum inkluderer:' : 'The classic signs of molluscum contagiosum include:'}</p>
@@ -282,7 +282,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </ul>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår molluscum contagiosum?' : 'Why does molluscum contagiosum happen?'}
               </h2>
               <p>
@@ -291,7 +291,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   : 'The molluscum contagiosum virus spreads easily through direct contact with infected skin or contaminated objects. Transmission can occur in several ways:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan smitter direkte hudkontakt?' : 'How does direct skin contact spread it?'}
               </h3>
               <p>
@@ -300,7 +300,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   : 'Direct contact with an infected person is the most common route of transmission. This can occur through play, sports, cuddling and sexual activity.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kan genstande overføre smitten?' : 'Can objects transmit the virus?'}
               </h3>
               <p>
@@ -309,7 +309,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   : 'The virus can be transferred via towels, washcloths, shared toys and playground equipment. Swimming pool water itself does not spread it, but shared towels, kickboards and close skin contact at the poolside do. This is particularly relevant in environments with many children.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan spreder knopperne sig på egen hud?' : 'How do the bumps spread on your own skin?'}
               </h3>
               <p>
@@ -319,7 +319,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får molluscum contagiosum?' : 'Who gets molluscum contagiosum?'}
               </h2>
               <p>
@@ -339,7 +339,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   {isDa ? (
                     <>
                       Børn med{' '}
-                      <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                         atopisk eksem
                       </Link>{' '}
                       får ofte flere og mere udbredte mollusker, fordi hudbarrieren er svækket, og fordi kløe fører til kradsen.
@@ -347,7 +347,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   ) : (
                     <>
                       Children with{' '}
-                      <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                         atopic dermatitis
                       </Link>{' '}
                       often develop more numerous and more widespread mollusca, because the skin barrier is impaired and itching leads to scratching.
@@ -369,7 +369,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved molluscum contagiosum?' : 'What can you do about molluscum contagiosum?'}
               </h2>
               <p>
@@ -380,7 +380,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '⏳ Afventende observation (særligt for børn)' : '⏳ Watchful waiting (especially in children)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -390,7 +390,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topiske lægemidler' : '💊 Topical medications'}
                   </p>
                   <p className="text-sm mt-1">
@@ -400,7 +400,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧊 Kryoterapi' : '🧊 Cryotherapy'}
                   </p>
                   <p className="text-sm mt-1">
@@ -410,7 +410,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🏥 Curettage / ekstraktion' : '🏥 Curettage / extraction'}
                   </p>
                   <p className="text-sm mt-1">
@@ -422,7 +422,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </div>
 
               {/* Prevention */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan forebygger du smitte?' : 'How can you prevent it from spreading?'}
               </h2>
               <p>
@@ -459,7 +459,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </ul>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -469,12 +469,12 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er molluscum contagiosum farligt?' : 'Is molluscum contagiosum dangerous?'}
                   </h3>
                   <p>
@@ -484,7 +484,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg søge læge?' : 'When should I see a doctor?'}
                   </h3>
                   <p>
@@ -494,14 +494,14 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan voksne få molluscum contagiosum?' : 'Can adults get molluscum contagiosum?'}
                   </h3>
                   <p>
                     {isDa ? (
                       <>
                         Ja, voksne kan blive smittet. Hos voksne sker det ofte ved seksuel kontakt og kan ramme kønsdelene; i så fald bør man tilbydes undersøgelse for andre seksuelt overførte infektioner, og knopperne kan forveksles med{' '}
-                        <Link href={`/${lang}/blog/genital-warts`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/genital-warts`} className="text-primary underline hover:text-primary-900">
                           kønsvorter
                         </Link>
                         . Mollusker i kønsområdet hos et lille barn bør altid vurderes af en læge. Tilstanden er generelt mildere hos raske voksne.
@@ -509,7 +509,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                     ) : (
                       <>
                         Yes, adults can become infected. In adults it often occurs through sexual contact and can affect the genital area; when it does, screening for other sexually transmitted infections should be offered, and the bumps can be confused with{' '}
-                        <Link href={`/${lang}/blog/genital-warts`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/genital-warts`} className="text-primary underline hover:text-primary-900">
                           genital warts
                         </Link>
                         . Molluscum in the genital area of a young child should always be assessed by a doctor. The condition is generally milder in healthy adults.
@@ -520,7 +520,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -532,7 +532,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

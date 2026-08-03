@@ -153,11 +153,11 @@ export default function AcnePage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -166,7 +166,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '12. marts 2026' : 'March 12, 2026'}</span>
@@ -177,7 +177,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Acne? Årsager, Symptomer og Behandling'
                 : 'What is Acne? Causes, Symptoms and Treatment'}
@@ -202,7 +202,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -239,7 +239,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is acne */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er acne?' : 'What is acne?'}
               </h2>
               <p>
@@ -254,7 +254,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser acne ud?' : 'What does acne look like?'}
               </h2>
               <p>{isDa ? 'Acne kan vise sig på mange måder:' : 'Acne can appear in many forms:'}</p>
@@ -287,11 +287,11 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Ikke alt udslæt i ansigtet er acne. Vedvarende rødme midt i ansigtet med synlige blodkar og tendens til blussen — som regel uden hudorme — peger snarere på{' '}
-                    <Link href={`/${lang}/blog/rosacea`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/rosacea`} className="text-primary underline hover:text-primary-900">
                       rosacea
                     </Link>
                     , mens fedtet, gullig skældannelse omkring næse, øjenbryn og hårgrænse tyder på{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seboroisk eksem
                     </Link>
                     . Forskellen er vigtig, fordi behandlingen ikke er den samme.
@@ -299,11 +299,11 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Not every facial rash is acne. Persistent central redness with visible blood vessels and a tendency to flush — usually without blackheads — points more towards{' '}
-                    <Link href={`/${lang}/blog/rosacea`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/rosacea`} className="text-primary underline hover:text-primary-900">
                       rosacea
                     </Link>
                     , while greasy, yellowish scaling around the nose, eyebrows and hairline suggests{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic dermatitis
                     </Link>
                     . The distinction matters, because the treatments are not the same.
@@ -324,7 +324,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </div>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår acne?' : 'Why does acne happen?'}
               </h2>
               <p>
@@ -333,7 +333,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   : 'Acne develops when several factors combine:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilken rolle spiller hormoner?' : 'What role do hormones play?'}
               </h3>
               <p>
@@ -342,7 +342,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   : 'They drive oil production. Hormones — particularly androgens like testosterone — stimulate the oil glands to produce more oil. This is why acne typically starts during puberty, and why women often experience breakouts around menstruation, pregnancy or hormonal changes.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan bliver porerne tilstoppede?' : 'How do pores become clogged?'}
               </h3>
               <p>
@@ -351,7 +351,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   : 'Dead skin cells mix with excess sebum and block the hair follicles. This creates comedones — the characteristic blackheads and whiteheads that are the precursor to inflamed acne.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad gør bakterierne?' : 'What do the bacteria do?'}
               </h3>
               <p>
@@ -360,7 +360,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   : 'The bacterium Cutibacterium acnes lives naturally on the skin, but in clogged pores it thrives and triggers an immune response, causing the characteristic redness and inflammation.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvor meget betyder genetik og livsstil?' : 'How much do genetics and lifestyle matter?'}
               </h3>
               <p>
@@ -370,7 +370,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får acne?' : 'Who gets acne?'}
               </h2>
               <p>
@@ -405,7 +405,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved acne?' : 'What can you do about acne?'}
               </h2>
               <p>
@@ -416,7 +416,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Håndkøbsprodukter (mild acne)' : '💊 Over-the-counter products (mild acne)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -426,7 +426,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Receptpligtig behandling (moderat/svær acne)' : '🩺 Prescription treatment (moderate/severe acne)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -436,7 +436,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '⚕️ Isotretinoin (svær eller arrende acne)' : '⚕️ Isotretinoin (severe or scarring acne)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -446,7 +446,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🥗 Livsstil' : '🥗 Lifestyle'}
                   </p>
                   <p className="text-sm mt-1">
@@ -456,7 +456,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚫 Undgå' : '🚫 Avoid'}
                   </p>
                   <p className="text-sm mt-1">
@@ -468,7 +468,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </div>
 
               {/* Timelines */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvor lang tid går der, før acnebehandling virker?' : 'How long does acne treatment take to work?'}
               </h2>
               <p>
@@ -483,7 +483,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Scarring */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan undgår du ar efter acne?' : 'How can you prevent acne scarring?'}
               </h2>
               <p>
@@ -498,7 +498,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </p>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -508,12 +508,12 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er acne farligt?' : 'Is acne dangerous?'}
                   </h3>
                   <p>
@@ -523,7 +523,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan acne forsvinde af sig selv?' : 'Can acne go away on its own?'}
                   </h3>
                   <p>
@@ -533,7 +533,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -545,7 +545,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -557,7 +557,7 @@ export default function AcnePage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

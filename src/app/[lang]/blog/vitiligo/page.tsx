@@ -153,11 +153,11 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '18. marts 2026' : 'March 18, 2026'}</span>
@@ -179,7 +179,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Vitiligo? Årsager, Symptomer og Behandling'
                 : 'What is Vitiligo? Causes, Symptoms and Treatment'}
@@ -204,7 +204,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -241,7 +241,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is vitiligo */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er vitiligo?' : 'What is vitiligo?'}
               </h2>
               <p>
@@ -256,7 +256,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser vitiligo ud?' : 'What does vitiligo look like?'}
               </h2>
               <p>
@@ -296,7 +296,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår vitiligo?' : 'Why does vitiligo happen?'}
               </h2>
               <p>
@@ -305,7 +305,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   : 'The exact cause is not yet fully understood, but research points to a combination of factors:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor angriber immunsystemet pigmentcellerne?' : 'Why does the immune system attack the pigment cells?'}
               </h3>
               <p>
@@ -314,7 +314,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   : 'The primary mechanism is autoimmune: T-lymphocytes (white blood cells) mistakenly identify melanocytes as foreign and attack them. This leads to progressive destruction of the pigment cells and the emergence of the characteristic white patches.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Er vitiligo arveligt?' : 'Is vitiligo hereditary?'}
               </h3>
               <p>
@@ -323,7 +323,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   : 'Partly. Vitiligo occurs more frequently in certain families, suggesting a genetic component. Around 20% of people with vitiligo have at least one close relative — a parent, sibling or child — with the same condition. Specific gene variants linked to immune regulation have been identified in research, but heredity alone does not determine whether someone develops vitiligo.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad kan udløse vitiligo?' : 'What can trigger vitiligo?'}
               </h3>
               <p>
@@ -332,7 +332,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   : 'Certain factors can trigger or worsen vitiligo in genetically predisposed individuals: severe stress or emotional trauma, skin injury (Köbner phenomenon — new patches appear at the site of injury), sunburn, and exposure to certain chemicals.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa
                   ? 'Hænger vitiligo sammen med andre autoimmune sygdomme?'
                   : 'Is vitiligo linked to other autoimmune conditions?'}
@@ -342,7 +342,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   <>
                     Ja. Vitiligo er forbundet med øget risiko for andre autoimmune sygdomme, herunder sygdom i skjoldbruskkirtlen
                     (Hashimotos thyreoiditis, Graves&apos; sygdom),{' '}
-                    <Link href={`/${lang}/blog/alopecia-areata`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/alopecia-areata`} className="text-primary underline hover:text-primary-900">
                       alopecia areata
                     </Link>{' '}
                     (pletvis hårtab), type 1-diabetes og perniciøs anæmi. Skjoldbruskkirtelsygdom er langt den hyppigste, og derfor
@@ -353,7 +353,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   <>
                     Yes. Vitiligo is associated with an increased risk of other autoimmune diseases, including thyroid disease
                     (Hashimoto&apos;s thyroiditis, Graves&apos; disease),{' '}
-                    <Link href={`/${lang}/blog/alopecia-areata`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/alopecia-areata`} className="text-primary underline hover:text-primary-900">
                       alopecia areata
                     </Link>{' '}
                     (patchy hair loss), type 1 diabetes and pernicious anaemia. Thyroid disease is by far the most common, which is
@@ -364,7 +364,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får vitiligo?' : 'Who gets vitiligo?'}
               </h2>
               <p>
@@ -394,7 +394,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved vitiligo?' : 'What can you do about vitiligo?'}
               </h2>
               <p>
@@ -405,7 +405,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topiske kortikosteroider og immunmodulatorer' : '💊 Topical corticosteroids and immunomodulators'}
                   </p>
                   <p className="text-sm mt-1">
@@ -415,7 +415,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '☀️ Lysbehandling (fototerapi)' : '☀️ Light therapy (phototherapy)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -425,7 +425,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧬 Nye biologiske behandlinger' : '🧬 New biological treatments'}
                   </p>
                   <p className="text-sm mt-1">
@@ -435,7 +435,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩹 Kirurgiske muligheder' : '🩹 Surgical options'}
                   </p>
                   <p className="text-sm mt-1">
@@ -445,7 +445,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧴 Solbeskyttelse og camouflage' : '🧴 Sun protection and camouflage'}
                   </p>
                   <p className="text-sm mt-1">
@@ -457,7 +457,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -467,12 +467,12 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er vitiligo farligt?' : 'Is vitiligo dangerous?'}
                   </h3>
                   <p>
@@ -482,7 +482,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan vitiligo helbredes?' : 'Can vitiligo be cured?'}
                   </h3>
                   <p>
@@ -492,7 +492,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -501,7 +501,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                         Kontakt en hudlæge, så snart du bemærker hvide pletter eller afpigmenterede områder. Tidlig behandling giver
                         den bedste chance for at bremse spredningen og opnå repigmentering. En hudlæge kan også udelukke andre
                         årsager til hvide pletter, fx pityriasis versicolor eller hypopigmentering efter eksem eller{' '}
-                        <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                           psoriasis
                         </Link>
                         .
@@ -511,7 +511,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                         Contact a dermatologist as soon as you notice white patches or depigmented areas. Early treatment gives the
                         best chance of slowing the spread and achieving repigmentation. A dermatologist can also rule out other
                         causes of white patches, such as pityriasis versicolor or hypopigmentation following eczema or{' '}
-                        <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                           psoriasis
                         </Link>
                         .
@@ -522,7 +522,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -534,7 +534,7 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

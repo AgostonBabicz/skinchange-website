@@ -10,7 +10,7 @@ export default function DiseasesSection({ lang }: DiseasesSectionProps) {
   const t = getTranslation(lang);
 
   return (
-    <section className="py-24 lg:py-32 bg-[#1a237e]">
+    <section className="py-24 lg:py-32 bg-primary-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

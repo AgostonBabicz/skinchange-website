@@ -127,19 +127,19 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
         <article className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">{isDa ? 'Forside' : 'Home'}</Link>
+              <Link href={`/${lang}`} className="hover:text-primary">{isDa ? 'Forside' : 'Home'}</Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">Blog</Link>
+              <Link href={`/${lang}/blog`} className="hover:text-primary">Blog</Link>
               <span className="mx-2">/</span>
               <span className="text-gray-900">{isDa ? 'Modermærker' : 'Moles'}</span>
             </nav>
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">{isDa ? 'Godartede Hudvækster' : 'Benign Skin Growths'}</span>
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">{isDa ? 'Godartede Hudvækster' : 'Benign Skin Growths'}</span>
               <span className="text-gray-500 text-sm">{isDa ? '11. april 2026' : 'April 11, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">{isDa ? '8 min læsetid' : '8 min read'}</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -162,7 +162,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -191,38 +191,38 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700">
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvad er et modermærke?' : 'What is a mole?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvad er et modermærke?' : 'What is a mole?'}</h2>
               <p>
                 {isDa
                   ? 'Modermærker, også kaldet nævi, er godartede hudvækster, der opstår, når pigmentproducerende celler (melanocytter) samler sig i klynger i stedet for at ligge jævnt fordelt i huden. Ligger klyngen højt i huden, er modermærket typisk fladt og mørkt; ligger den dybere, er det ofte hævet og lysere. De er normalt harmløse og giver hverken kløe eller smerte.'
                   : 'Moles, also called naevi, are benign skin growths that form when pigment-producing cells (melanocytes) gather in clusters instead of lying evenly spread through the skin. When the cluster sits high in the skin the mole is typically flat and dark; when it sits deeper it is often raised and paler. They are usually harmless and cause neither itching nor pain.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvornår opstår modermærker?' : 'When do moles appear?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvornår opstår modermærker?' : 'When do moles appear?'}</h3>
               <p>
                 {isDa
                   ? 'Nogle få er medfødte, men langt de fleste dukker op i barndommen og teenageårene og bliver færdigdannede i 20- og 30-årsalderen. Hormoner påvirker dem: modermærker kan blive mørkere under graviditet og i puberteten. Efter 30–40-årsalderen holder huden normalt op med at danne nye nævi — og derfor er et helt nyt, pigmenteret modermærke hos en voksen noget, der bør vurderes.'
                   : 'A few are congenital, but the great majority appear during childhood and the teenage years and finish forming in the twenties and thirties. Hormones affect them: moles can darken during pregnancy and puberty. After roughly age 30–40 the skin normally stops producing new naevi — which is why a genuinely new pigmented mole in an adult is something that should be assessed.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvordan ser et normalt modermærke ud?' : 'What does a normal mole look like?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvordan ser et normalt modermærke ud?' : 'What does a normal mole look like?'}</h2>
               <p>
                 {isDa
                   ? 'Et almindeligt modermærke er en lille, rund eller oval plet med en glat, regelmæssig kant. Det kan være fladt eller hævet, og farven går fra lyserød over lysebrun til mørkebrun eller sort — men den er ensartet inden for det enkelte modermærke. De fleste er mindre end 6 millimeter i diameter, og de ændrer sig kun langsomt, hvis overhovedet.'
                   : 'A regular mole is a small, round or oval spot with a smooth, regular border. It can be flat or raised, and the colour ranges from pink through light brown to dark brown or black — but it is even within the individual mole. Most are less than 6 millimetres across, and they change only slowly, if at all.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvad kan forveksles med et modermærke?' : 'What can be mistaken for a mole?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvad kan forveksles med et modermærke?' : 'What can be mistaken for a mole?'}</h3>
               <p>
                 {isDa ? (
                   <>
                     Den hyppigste forveksling er{' '}
-                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-primary underline hover:text-primary-900">
                       seboroisk keratose
                     </Link>{' '}
                     — en godartet, voksagtig vækst, der ser ud, som om den er klistret ovenpå huden, og som bliver almindelig med alderen.
                     Et{' '}
-                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       basalcellekarcinom
                     </Link>{' '}
                     kan også ligne et modermærke, især når det er pigmenteret, men det har typisk en perleagtig, gennemskinnelig kant og
@@ -231,11 +231,11 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     The most frequent confusion is with a{' '}
-                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic keratosis
                     </Link>{' '}
                     — a benign, waxy growth that looks stuck on top of the skin and becomes common with age. A{' '}
-                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       basal cell carcinoma
                     </Link>{' '}
                     can also resemble a mole, particularly when it is pigmented, but it typically has a pearly, translucent edge and
@@ -244,7 +244,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'ABCDE-reglen: hvornår skal du være bekymret?' : 'The ABCDE rule: when should you be concerned?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'ABCDE-reglen: hvornår skal du være bekymret?' : 'The ABCDE rule: when should you be concerned?'}</h2>
               <p>
                 {isDa
                   ? 'ABCDE-reglen er et enkelt værktøj til at vurdere, om et pigmenteret modermærke bør undersøges nærmere:'
@@ -279,14 +279,14 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'ABCDE fanger ikke det hele' : 'ABCDE does not catch everything'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'ABCDE fanger ikke det hele' : 'ABCDE does not catch everything'}</h3>
               <p>
                 {isDa ? (
                   <>
                     To ting mere er vigtige. <strong>Den grimme ælling</strong>: de fleste af en persons modermærker ligner hinanden, så et
                     modermærke, der skiller sig ud fra dine øvrige, fortjener opmærksomhed — også selvom det opfylder alle
                     ABCDE-kriterier. Og <strong>EFG-reglen</strong> for nodulært{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       melanom
                     </Link>
                     , som ofte er symmetrisk, ensfarvet og under 6 mm: en knude, der er <strong>E</strong>leveret (hævet),{' '}
@@ -298,7 +298,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                     Two additions matter. The <strong>ugly duckling sign</strong>: most of a person&rsquo;s moles resemble each other, so a
                     mole that stands out as different from your others deserves attention even if it passes every ABCDE test. And the{' '}
                     <strong>EFG rule</strong> for nodular{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       melanoma
                     </Link>
                     , which is often symmetric, evenly coloured and smaller than 6 mm: a lump that is <strong>E</strong>levated,{' '}
@@ -308,7 +308,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvem er i risiko for melanom?' : 'Who is at risk of melanoma?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvem er i risiko for melanom?' : 'Who is at risk of melanoma?'}</h2>
               <p>
                 {isDa
                   ? 'Alle kan få melanom, men risikoen er ikke ens. Hører du til en eller flere af disse grupper, bør du kende din hud særligt godt:'
@@ -353,14 +353,14 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvad er et atypisk (dysplastisk) modermærke?' : 'What is an atypical (dysplastic) mole?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvad er et atypisk (dysplastisk) modermærke?' : 'What is an atypical (dysplastic) mole?'}</h3>
               <p>
                 {isDa
                   ? 'Et atypisk modermærke er større end de fleste, ofte over 5–6 mm, med udflydende kant og flere farvenuancer. Det er ikke kræft, og det bliver sjældent til kræft i sig selv — men har du mange af dem, er det et tegn på, at din samlede risiko for melanom er øget, og at du bør følges. Din hudlæge afgør, om et enkelt atypisk modermærke skal fjernes eller blot fotograferes og kontrolleres.'
                   : 'An atypical mole is larger than most, often over 5–6 mm, with a blurred border and several shades of colour. It is not cancer, and it rarely turns into cancer itself — but having many of them signals that your overall melanoma risk is raised and that you should be followed up. Your dermatologist decides whether an individual atypical mole is removed or simply photographed and monitored.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvornår skal du søge læge?' : 'When should you see a doctor?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvornår skal du søge læge?' : 'When should you see a doctor?'}</h2>
 
               <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
                 <h3 className="text-xl font-bold text-red-900 mb-3">
@@ -390,7 +390,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                   <>
                     En billedvurdering kan sige, om en hudforandring ser bekymrende nok ud til at skulle ses ved fysisk fremmøde, og hvor
                     hurtigt. Den kan ikke udelukke{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       hudkræft
                     </Link>
                     . En mistænkelig plet skal undersøges med dermatoskop, og er der tvivl, skal den fjernes og undersøges i mikroskop.
@@ -399,7 +399,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                   <>
                     A photo assessment can tell you whether a lesion looks concerning enough to be seen in person, and how quickly. It
                     cannot rule out{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       skin cancer
                     </Link>
                     . A suspicious spot needs examination with a dermatoscope and, if there is any doubt, removal of the lesion for
@@ -408,11 +408,11 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvad kan du selv gøre?' : 'What can you do yourself?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvad kan du selv gøre?' : 'What can you do yourself?'}</h2>
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '🔍 Månedlig selvundersøgelse' : '🔍 Monthly self-examination'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '🔍 Månedlig selvundersøgelse' : '🔍 Monthly self-examination'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Gå huden igennem en gang om måneden i godt lys, gerne med et håndspejl til ryggen. Husk hovedbund, ører, fodsåler, mellem tæerne og under neglene — steder, hvor melanom ofte opdages sent.'
@@ -420,7 +420,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '📷 Tag billeder' : '📷 Take photographs'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '📷 Tag billeder' : '📷 Take photographs'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Fotografér de modermærker, du holder øje med, i samme lys og med en lineal ved siden af. Hukommelsen er upålidelig — et billede fra for et halvt år siden er det bedste værktøj til at afgøre, om noget har ændret sig.'
@@ -428,7 +428,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '🩺 Dermatoskopi hos hudlægen' : '🩺 Dermoscopy with a dermatologist'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '🩺 Dermatoskopi hos hudlægen' : '🩺 Dermoscopy with a dermatologist'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Et dermatoskop forstørrer og gennemlyser huden, så hudlægen ser strukturer, det blotte øje ikke opfanger. Har du mange eller atypiske modermærker, kan billederne gemmes og sammenlignes fra gang til gang.'
@@ -436,7 +436,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '☀️ Beskyt dig mod solen' : '☀️ Protect yourself from the sun'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '☀️ Beskyt dig mod solen' : '☀️ Protect yourself from the sun'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Undgå solskoldning, brug bredspektret solcreme med SPF 30 eller højere, søg skygge midt på dagen (kl. 12–15), og brug aldrig solarium. Beskyttelse i barndommen betyder mest for risikoen senere i livet.'
@@ -445,14 +445,14 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Skal alle modermærker fjernes?' : 'Should all moles be removed?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Skal alle modermærker fjernes?' : 'Should all moles be removed?'}</h3>
               <p>
                 {isDa
                   ? 'Nej. Et normalt modermærke skal ikke fjernes forebyggende, og antallet af modermærker falder ikke risikoen ved at fjerne nogle af dem. Bliver et modermærke fjernet på grund af mistanke, skæres det ud i sin helhed og sendes til mikroskopisk undersøgelse. Brænd eller skrab aldrig et modermærke væk selv, og brug ikke såkaldte fjernelsespenne eller syrer fra nettet: du ødelægger vævet, så det ikke kan undersøges, og du fjerner ikke det, der eventuelt sidder i dybden.'
                   : 'No. A normal mole does not need preventive removal, and taking moles off does not lower your risk. When a mole is removed because of suspicion, it is excised whole and sent for microscopic examination. Never burn or scrape a mole off yourself, and do not use so-called mole removal pens or acids bought online: they destroy the tissue so it cannot be examined, and they do not remove whatever may sit deeper down.'}
               </p>
 
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -461,24 +461,24 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}</h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.question}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.question}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.question}</h3>
                     <p>{faq.answer}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">{isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}</h3>
                 <p className="mb-6">
                   {isDa
                     ? 'Er du bekymret for et modermærke, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge. Vurderingen afgør, hvor hurtigt du skal ses ved fysisk fremmøde: ser modermærket mistænkeligt ud, bliver du henvist til undersøgelse med dermatoskop og eventuel fjernelse. En beroligende vurdering erstatter ikke en fysisk undersøgelse, hvis modermærket bliver ved med at ændre sig.'
                     : 'If you are worried about a mole, you can upload photos via the SKIND app and get an assessment from a certified dermatologist. The assessment tells you how quickly you need to be seen in person: if the mole looks suspicious you will be referred for examination with a dermatoscope and possible excision. A reassuring assessment is not a substitute for in-person review if the mole keeps changing.'}
                 </p>
-                <Link href={`/${lang}/download`} className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors">
+                <Link href={`/${lang}/download`} className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors">
                   {isDa ? 'Download appen' : 'Download the app'}
                 </Link>
               </div>

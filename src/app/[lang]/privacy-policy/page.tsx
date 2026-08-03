@@ -31,14 +31,14 @@ export default function PrivacyPage({ params: { lang } }: PageProps) {
 
       <section className="pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display text-center">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display text-center">
             {isDa ? 'Privatlivspolitik' : 'Privacy Policy'}
           </h1>
           <p className="text-gray-500 text-center mb-16">
             {isDa ? 'Sidst opdateret: 14. maj 2026' : 'Last updated: 14 May 2026'}
           </p>
 
-          <div className="prose prose-lg max-w-none text-gray-600 prose-headings:text-[#1a237e] prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:mb-4 prose-p:text-gray-600 prose-a:text-[#304FFE] prose-a:underline hover:prose-a:text-[#1a237e] prose-strong:text-gray-700 prose-ul:list-disc prose-ul:pl-6 prose-li:mb-1 prose-ol:list-decimal prose-ol:pl-6 prose-li:mb-1 prose-blockquote:border-l-4 prose-blockquote:border-[#304FFE] prose-blockquote:pl-4 prose-blockquote:text-gray-500 prose-hr:border-gray-300 prose-hr:my-8 prose-code:text-[#1a237e] prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded">
+          <div className="prose prose-lg max-w-none text-gray-600 prose-headings:text-primary-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:mb-4 prose-p:text-gray-600 prose-a:text-primary prose-a:underline hover:prose-a:text-primary-900 prose-strong:text-gray-700 prose-ul:list-disc prose-ul:pl-6 prose-li:mb-1 prose-ol:list-decimal prose-ol:pl-6 prose-li:mb-1 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:text-gray-500 prose-hr:border-gray-300 prose-hr:my-8 prose-code:text-primary-900 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {isDa ? ppDanish : ppEnglish}
             </ReactMarkdown>

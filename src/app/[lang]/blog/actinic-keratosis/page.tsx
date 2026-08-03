@@ -127,19 +127,19 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
         <article className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">{isDa ? 'Forside' : 'Home'}</Link>
+              <Link href={`/${lang}`} className="hover:text-primary">{isDa ? 'Forside' : 'Home'}</Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">Blog</Link>
+              <Link href={`/${lang}/blog`} className="hover:text-primary">Blog</Link>
               <span className="mx-2">/</span>
               <span className="text-gray-900">{isDa ? 'Aktinisk keratose' : 'Actinic keratosis'}</span>
             </nav>
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">{isDa ? 'Præcancerøs Tilstand' : 'Precancerous Condition'}</span>
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">{isDa ? 'Præcancerøs Tilstand' : 'Precancerous Condition'}</span>
               <span className="text-gray-500 text-sm">{isDa ? '11. april 2026' : 'April 11, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">{isDa ? '8 min læsetid' : '8 min read'}</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -162,7 +162,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -191,20 +191,20 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700">
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvad er aktinisk keratose?' : 'What is actinic keratosis?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvad er aktinisk keratose?' : 'What is actinic keratosis?'}</h2>
               <p>
                 {isDa
                   ? 'Aktinisk keratose opstår, når hudceller kaldet keratinocytter beskadiges af kumulativ UV-eksponering gennem livet. Skaden ændrer cellernes DNA, så de vokser unormalt og danner et fortykket, skællende lag på overfladen. Pletterne sidder næsten altid i hud, der har fået meget sol gennem årtier, og de kommer sjældent alene.'
                   : 'Actinic keratosis develops when skin cells called keratinocytes are damaged by cumulative UV exposure over a lifetime. The damage alters the DNA of the cells so that they grow abnormally and build up a thickened, scaly layer on the surface. The patches almost always sit in skin that has had a lot of sun over decades, and they rarely come alone.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Er aktinisk keratose kræft?' : 'Is actinic keratosis cancer?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Er aktinisk keratose kræft?' : 'Is actinic keratosis cancer?'}</h3>
               <p>
                 {isDa ? (
                   <>
                     Nej — en aktinisk keratose er ikke i sig selv kræft. Men den er heller ikke bare en tør plet. Moderne hudpatologi
                     betragter AK som det tidligste, overfladiske trin i den samme sygdomsproces, der ender i{' '}
-                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       pladecellekarcinom
                     </Link>
                     . De unormale celler ligger endnu kun i overhuden og har ikke brudt igennem til vævet nedenunder. Derfor kaldes
@@ -214,7 +214,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                   <>
                     No — an actinic keratosis is not cancer in itself. But it is not simply a dry patch either. Contemporary skin
                     pathology regards AK as the earliest, most superficial step in the same disease process that ends in{' '}
-                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       squamous cell carcinoma
                     </Link>
                     . The abnormal cells are still confined to the epidermis and have not broken through into the tissue below. That is
@@ -223,30 +223,30 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvordan ser aktinisk keratose ud?' : 'What does actinic keratosis look like?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvordan ser aktinisk keratose ud?' : 'What does actinic keratosis look like?'}</h2>
               <p>
                 {isDa
                   ? 'AK fremstår typisk som små, ru eller skællende pletter, der kan være lyserøde, røde, hudfarvede eller brunlige. De er ofte nemmere at mærke end at se: overfladen føles som fint sandpapir, og pletten kan komme og gå gennem året. Nogle er ømme, kløende eller stikkende, og en tyk, hornagtig udvækst (kutant horn) kan udgå fra en aktinisk keratose.'
                   : 'AK typically appears as small, rough or scaly patches that may be pink, red, skin-coloured or brownish. They are often easier to feel than to see: the surface feels like fine sandpaper, and a patch may come and go through the year. Some are tender, itchy or prickly, and a thick, horn-like growth (a cutaneous horn) can arise from an actinic keratosis.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvor på kroppen sidder aktiniske keratoser?' : 'Where on the body do actinic keratoses appear?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvor på kroppen sidder aktiniske keratoser?' : 'Where on the body do actinic keratoses appear?'}</h3>
               <p>
                 {isDa
                   ? 'Næsten altid på de områder, der har fået mest sol gennem livet: ansigt, næse, ører, underlæben, en skaldet eller tyndhåret hovedbund, nakken, underarmene og håndryggene. Hos mænd med hårtab er hovedbunden et meget almindeligt sted, fordi håret ikke længere skygger.'
                   : 'Almost always on the areas that have received the most sun over a lifetime: the face, nose, ears, lower lip, a bald or thinning scalp, the neck, the forearms and the backs of the hands. In men with hair loss the scalp is a very common site, because the hair no longer provides shade.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvad kan forveksles med aktinisk keratose?' : 'What can be mistaken for actinic keratosis?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvad kan forveksles med aktinisk keratose?' : 'What can be mistaken for actinic keratosis?'}</h3>
               <p>
                 {isDa ? (
                   <>
                     Flere hudforandringer ligner AK.{' '}
-                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-primary underline hover:text-primary-900">
                       Seboroisk keratose
                     </Link>{' '}
                     sidder ovenpå huden som en voksagtig, påklistret brun vækst og har intet med sol at gøre.{' '}
-                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       Basalcellekarcinom
                     </Link>{' '}
                     kan være en flad, lyserød plet med en let opkastet kant, der bløder og skorper. Eksem og psoriasis giver også røde,
@@ -256,11 +256,11 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Several skin changes resemble AK. A{' '}
-                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic keratosis
                     </Link>{' '}
                     sits on top of the skin as a waxy, stuck-on brown growth and has nothing to do with sun. A{' '}
-                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       basal cell carcinoma
                     </Link>{' '}
                     can be a flat, pink patch with a slightly raised edge that bleeds and crusts. Eczema and psoriasis also produce red,
@@ -270,21 +270,21 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvorfor opstår aktinisk keratose?' : 'Why does actinic keratosis happen?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvorfor opstår aktinisk keratose?' : 'Why does actinic keratosis happen?'}</h2>
               <p>
                 {isDa
                   ? 'Årsagen er kumulativ ultraviolet stråling. Det er ikke den enkelte solskoldning, men summen af al den sol, huden har fået gennem årtier, der afgør risikoen. Derfor rammer AK typisk mennesker over 40–50 år, og derfor sidder pletterne netop der, hvor solen har ramt hårdest.'
                   : 'The cause is cumulative ultraviolet radiation. It is not any single sunburn but the sum of all the sun the skin has received over decades that determines the risk. That is why AK typically affects people over 40–50, and why the patches appear exactly where the sun has struck hardest.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvad gør UV-stråling ved huden?' : 'What does UV radiation do to the skin?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvad gør UV-stråling ved huden?' : 'What does UV radiation do to the skin?'}</h3>
               <p>
                 {isDa
                   ? 'UVB-stråling rammer direkte cellernes DNA. Huden reparerer det meste, men ikke alt, og med årene ophobes mutationer — blandt andet i tumorsuppressorgenet p53 — i stadig flere keratinocytter. Når nok fejl er samlet i den samme cellelinje, deler cellerne sig ukontrolleret, og en aktinisk keratose bliver synlig.'
                   : 'UVB radiation strikes the DNA of the cells directly. The skin repairs most of it but not all, and over the years mutations accumulate — among them in the tumour suppressor gene p53 — in more and more keratinocytes. When enough faults have gathered in the same cell line, the cells divide uncontrollably and an actinic keratosis becomes visible.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvem får aktinisk keratose?' : 'Who gets actinic keratosis?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvem får aktinisk keratose?' : 'Who gets actinic keratosis?'}</h2>
               <p>
                 {isDa
                   ? 'AK er en af de hyppigste grunde til at gå til hudlæge i Nordeuropa. Disse grupper er særligt udsatte:'
@@ -329,7 +329,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvornår skal du søge læge?' : 'When should you see a doctor?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvornår skal du søge læge?' : 'When should you see a doctor?'}</h2>
               <p>
                 {isDa
                   ? 'Få undersøgt enhver ru, skællende plet, der ikke forsvinder inden for få uger. Den enkelte aktiniske keratose har lav årlig risiko for at udvikle sig til pladecellekarcinom, men for en person med flere læsioner er risikoen reel — omkring 6–10% udvikler et pladecellekarcinom over ti år. Det er en af hovedgrundene til, at AK behandles og følges.'
@@ -353,7 +353,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                   : 'A photo assessment can tell you whether a lesion looks concerning enough to be seen in person, and how quickly. It cannot rule out skin cancer. A suspicious spot needs examination with a dermatoscope and, if there is any doubt, removal of the lesion for laboratory analysis.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvordan behandles aktinisk keratose?' : 'How is actinic keratosis treated?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvordan behandles aktinisk keratose?' : 'How is actinic keratosis treated?'}</h2>
               <p>
                 {isDa
                   ? 'Valget af behandling afhænger af, hvor mange læsioner du har, hvor tykke de er, hvor de sidder, og hvor meget hud der er solskadet:'
@@ -362,7 +362,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '❄️ Kryoterapi (frysning)' : '❄️ Cryotherapy (freezing)'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '❄️ Kryoterapi (frysning)' : '❄️ Cryotherapy (freezing)'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Den mest almindelige behandling af enkelte læsioner. Flydende kvælstof sprøjtes på pletten i få sekunder og ødelægger de unormale celler. Området bliver rødt, danner skorpe og heler over et par uger, ofte med en lys plet tilbage.'
@@ -370,7 +370,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '💊 Topisk behandling (cremer og geler)' : '💊 Topical treatment (creams and gels)'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '💊 Topisk behandling (cremer og geler)' : '💊 Topical treatment (creams and gels)'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Cremer og geler, du selv påfører over dage til uger: 5-fluorouracil (5-FU), imiquimod, tirbanibulin (Klisyri, godkendt i EU i 2021, bruges i fem dage) og diclofenacgel. De dækker et helt område og gør huden rød, øm og skorpet undervejs — det er en forventet del af effekten, ikke en grund til at stoppe.'
@@ -378,7 +378,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '💡 Fotodynamisk terapi (PDT)' : '💡 Photodynamic therapy (PDT)'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '💡 Fotodynamisk terapi (PDT)' : '💡 Photodynamic therapy (PDT)'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'En lysfølsom creme (ALA eller MAL) lægges på huden og aktiveres derefter af lys med en bestemt bølgelængde, som ødelægger de beskadigede celler. PDT giver et godt kosmetisk resultat på store felter, men kan svide undervejs. Dagslys-PDT er en mere skånsom variant.'
@@ -386,7 +386,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '🔬 Kirurgisk fjernelse eller biopsi' : '🔬 Surgical removal or biopsy'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '🔬 Kirurgisk fjernelse eller biopsi' : '🔬 Surgical removal or biopsy'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Er læsionen tyk, hård eller kommer igen efter behandling, skrabes eller skæres den væk, så vævet kan undersøges i mikroskop. Det er den eneste måde at afgøre, om der allerede er tale om pladecellekarcinom.'
@@ -395,14 +395,14 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvorfor behandles hele hudområder?' : 'Why is a whole area treated rather than one spot?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvorfor behandles hele hudområder?' : 'Why is a whole area treated rather than one spot?'}</h3>
               <p>
                 {isDa
                   ? 'Hudlæger taler om feltkancerisering (field cancerisation). Den plet, du kan se, er sjældent den eneste: hele det soleksponerede felt — for eksempel en skaldet isse eller en underarm — indeholder celler med den samme UV-skade, og nye pletter dukker op i månederne efter. Derfor behandles et helt felt ofte med creme eller lys frem for én læsion ad gangen, og derfor kan din læge foreslå at behandle hud, der endnu ser normal ud.'
                   : 'Dermatologists talk about field cancerisation. The patch you can see is rarely the only one: the whole sun-exposed field — a bald scalp or a forearm, for example — contains cells carrying the same UV damage, and new patches appear in the months that follow. That is why a whole field is often treated with cream or light rather than one lesion at a time, and why your doctor may suggest treating skin that still looks normal.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvordan forebygger du aktinisk keratose?' : 'How can you prevent actinic keratosis?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvordan forebygger du aktinisk keratose?' : 'How can you prevent actinic keratosis?'}</h2>
               <p>
                 {isDa
                   ? 'Solbeskyttelse virker også, efter at de første pletter er kommet: den bremser nye læsioner og reducerer risikoen for hudkræft.'
@@ -447,7 +447,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -456,24 +456,24 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}</h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.question}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.question}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.question}</h3>
                     <p>{faq.answer}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">{isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}</h3>
                 <p className="mb-6">
                   {isDa
                     ? 'Har du ru, skællende pletter, der ikke forsvinder? Upload billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge — så du ved, om pletten kan behandles, eller om den skal ses ved fysisk fremmøde.'
                     : 'Do you have rough, scaly patches that will not go away? Upload photos via the SKIND app and get an assessment from a certified dermatologist — so you know whether the patch can be treated, or whether it needs to be seen in person.'}
                 </p>
-                <Link href={`/${lang}/download`} className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors">
+                <Link href={`/${lang}/download`} className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors">
                   {isDa ? 'Download appen' : 'Download the app'}
                 </Link>
               </div>
