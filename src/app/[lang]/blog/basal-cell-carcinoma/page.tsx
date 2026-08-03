@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Basalcellcarcinom (BCC)? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Basalcellekarcinom (BCC): behandling | SKIND',
         description:
-          'Lær alt om basalcellcarcinom (BCC): hvad det er, hvordan det ser ud, hvem der er i risiko, og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.',
+          'Basalcellekarcinom er den hyppigste form for hudkræft. Læs om symptomer, risikofaktorer, diagnose med biopsi, behandling og hvordan du forebygger det.',
         keywords:
-          'basalcellcarcinom, BCC, hudkræft, basalcellekræft, hudkræft symptomer, hudkræft behandling, hudlæge, SKIND',
+          'basalcellekarcinom, BCC, hudkræft, basalcellekræft, hudkræft symptomer, hudkræft behandling, hudlæge, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/basal-cell-carcinoma',
           languages: {
@@ -28,9 +27,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Basal Cell Carcinoma (BCC)? Causes, Symptoms and Treatment | SKIND',
+        title: 'Basal cell carcinoma (BCC): treatment | SKIND',
         description:
-          'Learn everything about basal cell carcinoma (BCC): what it is, what it looks like, who is at risk, and what treatment options are available. Get help from a dermatologist via SKIND.',
+          'Basal cell carcinoma is the most common form of skin cancer. Learn the symptoms, the risk factors, how it is diagnosed by biopsy, treatment and prevention.',
         keywords:
           'basal cell carcinoma, BCC, skin cancer, basal cell skin cancer, skin cancer symptoms, skin cancer treatment, dermatologist, SKIND',
         alternates: {
@@ -51,19 +50,19 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: isDa
-      ? 'Hvad er Basalcellcarcinom (BCC)? Årsager, Symptomer og Behandling'
+      ? 'Hvad er Basalcellekarcinom (BCC)? Årsager, Symptomer og Behandling'
       : 'What is Basal Cell Carcinoma (BCC)? Causes, Symptoms and Treatment',
     description: isDa
-      ? 'Komplet guide til basalcellcarcinom (BCC): hvad det er, symptomer, risikofaktorer og behandlingsmuligheder.'
+      ? 'Komplet guide til basalcellekarcinom (BCC): hvad det er, symptomer, risikofaktorer og behandlingsmuligheder.'
       : 'Complete guide to basal cell carcinoma (BCC): what it is, symptoms, risk factors and treatment options.',
     image: '/blog-basal-cell-carcinoma.jpg',
     datePublished: '2026-03-28',
     dateModified: '2026-03-28',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,52 +85,68 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er basalcellcarcinom (BCC)?',
+            name: 'Er basalcellekarcinom farligt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Basalcellcarcinom (BCC) er den hyppigste form for hudkræft. Den udvikler sig fra basalcellerne i den nederste del af overhuden og vokser langsomt. BCC spreder sig sjældent til andre dele af kroppen, men ubehandlet kan den vokse dybt og beskadige omkringliggende væv.',
+              text: 'BCC er den mindst aggressive form for hudkræft og spreder sig sjældent til andre dele af kroppen. Den er dog ikke ufarlig – ubehandlet kan den vokse dybt og beskadige omkringliggende væv, især i ansigtet. Tidlig behandling giver en helbredelsesrate på over 95%.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvordan ser basalcellcarcinom ud?',
+            name: 'Hvordan adskiller BCC sig fra modermærkekræft (melanom)?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'BCC viser sig oftest som en perleagtig eller voksagtig knude med en glat, gennemsigtig overflade, eller som en flad, lyserød eller rød plet med let forhøjede kanter. Det kan også ligne et lille ar eller have synlige blodkar i væksten.',
+              text: 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom kan derimod sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødelig. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvem er i risiko for basalcellcarcinom?',
+            name: 'Kan BCC komme igen efter behandling?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'BCC rammer hyppigst personer over 50 år med lys hud, lyse øjne og lyst hår. Kronisk soleksponering – særligt i barndommen – er den vigtigste risikofaktor. Andre faktorer inkluderer svækket immunsystem, familiehistorie med hudkræft og strålebehandling.',
+              text: 'Ja, BCC kan komme igen (recidivere), selv efter vellykket behandling. Risikoen for tilbagefald afhænger af, om hele tumoren blev fjernet, og af din individuelle risikoprofil. Personer, der har haft BCC, har også forhøjet risiko for at udvikle nye tilfælde andre steder på huden. Regelmæssige opfølgningskontroller hos hudlægen er derfor vigtige.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Kontakt en hudlæge, hvis du bemærker en ny knude, et sår, der ikke heler inden for 4–6 uger, eller ændringer i et eksisterende modermærke eller en hudplet. Særligt hvis du er i risikogruppen (lys hud, historik med soleksponering, tidligere hudkræft), er regelmæssige kontroller vigtige.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is basal cell carcinoma (BCC)?',
+            name: 'Is basal cell carcinoma dangerous?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Basal cell carcinoma (BCC) is the most common form of skin cancer. It develops from basal cells in the lower part of the epidermis and grows slowly. BCC rarely spreads to other parts of the body, but if left untreated it can grow deep and damage surrounding tissue.',
+              text: 'BCC is the least aggressive form of skin cancer and rarely spreads to other parts of the body. However, it is not harmless — left untreated it can grow deep and damage surrounding tissue, especially on the face. Early treatment gives a cure rate of over 95%.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What does basal cell carcinoma look like?',
+            name: 'How does BCC differ from melanoma?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'BCC most often appears as a pearly or waxy bump with a smooth, translucent surface, or as a flat, pink or red patch with slightly raised edges. It may also resemble a small scar or have visible blood vessels within the growth.',
+              text: 'BCC and melanoma are both forms of skin cancer, but they differ markedly. BCC grows slowly, very rarely spreads and has a very high cure rate. Melanoma, on the other hand, can spread quickly to lymph nodes and internal organs and is far more deadly. Melanoma arises from melanocytes (pigment cells) and often appears as a dark mole with irregular borders.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Who is at risk for basal cell carcinoma?',
+            name: 'Can BCC return after treatment?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'BCC most commonly affects people over 50 years old with fair skin, light eyes and light hair. Chronic sun exposure — especially during childhood — is the most important risk factor. Other factors include a weakened immune system, family history of skin cancer and radiation therapy.',
+              text: 'Yes, BCC can recur even after successful treatment. The risk of recurrence depends on whether the entire tumour was removed and on your individual risk profile. People who have had BCC also have an elevated risk of developing new BCCs elsewhere on the skin. Regular follow-up appointments with the dermatologist are therefore important.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I contact a dermatologist?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Contact a dermatologist if you notice a new bump, a sore that does not heal within 4–6 weeks, or changes in an existing mole or skin spot. Especially if you are in a high-risk group (fair skin, history of sun exposure, previous skin cancer), regular check-ups are important.',
             },
           },
         ],
@@ -139,13 +154,11 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -165,7 +178,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </Link>
               <span className="mx-2">/</span>
               <span className="text-gray-900">
-                {isDa ? 'Hvad er Basalcellcarcinom?' : 'What is Basal Cell Carcinoma?'}
+                {isDa ? 'Hvad er Basalcellekarcinom?' : 'What is Basal Cell Carcinoma?'}
               </span>
             </nav>
 
@@ -174,29 +187,35 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudkræft' : 'Skin Cancer'}
               </span>
-              <span className="text-gray-500 text-sm">28. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '28. marts 2026' : 'March 28, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '7 min læsetid' : '7 min read'}
+                {isDa ? '8 min læsetid' : '8 min read'}
               </span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
               {isDa
-                ? 'Hvad er Basalcellcarcinom (BCC)? Årsager, Symptomer og Behandling'
+                ? 'Hvad er Basalcellekarcinom (BCC)? Årsager, Symptomer og Behandling'
                 : 'What is Basal Cell Carcinoma (BCC)? Causes, Symptoms and Treatment'}
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-basal-cell-carcinoma.jpg"
-                alt={isDa ? 'Basalcellcarcinom BCC hudkræft behandling' : 'Basal cell carcinoma BCC skin cancer treatment'}
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                alt={
+                  isDa
+                    ? 'Perleagtig, let hævet knude med synlige små blodkar på næsen — et typisk basalcellekarcinom.'
+                    : 'A pearly, slightly raised nodule with visible tiny blood vessels on the nose — a typical basal cell carcinoma.'
+                }
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -217,7 +236,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               <p className="text-xl leading-relaxed text-gray-600 mb-6">
                 {isDa ? (
                   <>
-                    <strong>Basalcellcarcinom (BCC) er den hyppigste form for hudkræft i verden</strong>, og antallet af
+                    <strong>Basalcellekarcinom (BCC) er den hyppigste form for hudkræft i verden</strong>, og antallet af
                     tilfælde stiger år for år. Heldigvis er BCC også den mindst aggressive form for hudkræft – og den
                     har en meget høj helbredelsesrate, særligt når den opdages tidligt.
                   </>
@@ -231,25 +250,47 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist hvad BCC er, hvordan det ser ud, hvem der er i risiko, og hvilke behandlingsmuligheder der findes.'
-                  : 'In this article, we explain exactly what BCC is, what it looks like, who is at risk, and what treatment options are available.'}
+                  ? 'I denne artikel forklarer vi præcist hvad BCC er, hvordan det ser ud, hvem der er i risiko, hvordan diagnosen stilles, og hvilke behandlingsmuligheder der findes.'
+                  : 'In this article, we explain exactly what BCC is, what it looks like, who is at risk, how it is diagnosed, and what treatment options are available.'}
               </p>
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is BCC */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvad er basalcellcarcinom (BCC)?' : 'What is basal cell carcinoma (BCC)?'}
+                {isDa ? 'Hvad er basalcellekarcinom (BCC)?' : 'What is basal cell carcinoma (BCC)?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Basalcellcarcinom (BCC) – også kaldet basalcellekræft – udvikler sig fra basalcellerne, som danner det nederste lag af overhuden (epidermis). Disse celler ligger lige over grænsen til læderhuden (dermis) og er ansvarlige for løbende at forny hudens overfladeceller.'
+                  ? 'Basalcellekarcinom (BCC) – også kaldet basalcellekræft – udvikler sig fra basalcellerne, som danner det nederste lag af overhuden (epidermis). Disse celler ligger lige over grænsen til læderhuden (dermis) og er ansvarlige for løbende at forny hudens overfladeceller.'
                   : 'Basal cell carcinoma (BCC) — also called basal cell skin cancer — develops from basal cells, which form the lowest layer of the epidermis. These cells sit just above the boundary with the dermis and are responsible for continuously renewing the skin\'s surface cells.'}
               </p>
               <p>
-                {isDa
-                  ? 'BCC vokser typisk langsomt over måneder til år. Den spreder sig sjældent til andre organer (metastaserer), hvilket adskiller den fra de mere aggressive former for hudkræft som modermærkekræft (melanom) og pladecellecarcinom (SCC). Hvis BCC ikke behandles, kan den dog vokse dybt ned i huden og beskadige underliggende strukturer som knogle og brusk – særligt i ansigtet.'
-                  : 'BCC typically grows slowly over months to years. It rarely spreads to other organs (metastasises), which distinguishes it from more aggressive forms of skin cancer such as melanoma and squamous cell carcinoma (SCC). However, if left untreated, BCC can grow deep into the skin and damage underlying structures such as bone and cartilage — especially on the face.'}
+                {isDa ? (
+                  <>
+                    BCC vokser typisk langsomt over måneder til år. Den spreder sig sjældent til andre organer (metastaserer), hvilket adskiller den fra de mere aggressive former for hudkræft som{' '}
+                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      modermærkekræft (melanom)
+                    </Link>{' '}
+                    og{' '}
+                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      pladecellekarcinom (SCC)
+                    </Link>
+                    . Hvis BCC ikke behandles, kan den dog vokse dybt ned i huden og beskadige underliggende strukturer som knogle og brusk – særligt i ansigtet.
+                  </>
+                ) : (
+                  <>
+                    BCC typically grows slowly over months to years. It rarely spreads to other organs (metastasises), which distinguishes it from more aggressive forms of skin cancer such as{' '}
+                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      melanoma
+                    </Link>{' '}
+                    and{' '}
+                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      squamous cell carcinoma (SCC)
+                    </Link>
+                    . However, if left untreated, BCC can grow deep into the skin and damage underlying structures such as bone and cartilage — especially on the face.
+                  </>
+                )}
               </p>
               <p>
                 {isDa
@@ -259,7 +300,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
               {/* What does it look like */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvordan ser basalcellcarcinom ud?' : 'What does basal cell carcinoma look like?'}
+                {isDa ? 'Hvordan ser basalcellekarcinom ud?' : 'What does basal cell carcinoma look like?'}
               </h2>
               <p>
                 {isDa
@@ -294,22 +335,41 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </ul>
               <p>
                 {isDa
-                  ? 'BCC opstår oftest på soleksponerede områder: ansigtet (særligt næsen), ørerne, halsen, nakken, skuldrene og overarmene.'
+                  ? 'BCC opstår oftest på soleksponerede områder: ansigtet (særligt næsen), ørerne, halsen, skuldrene og overarmene.'
                   : 'BCC most commonly appears on sun-exposed areas: the face (especially the nose), ears, neck, shoulders and upper arms.'}
               </p>
 
               {/* Why does it happen */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvorfor opstår basalcellcarcinom?' : 'Why does basal cell carcinoma occur?'}
+                {isDa ? 'Hvorfor opstår basalcellekarcinom?' : 'Why does basal cell carcinoma occur?'}
               </h2>
               <p>
                 {isDa
                   ? 'Den primære årsag til BCC er kronisk eksponering for ultraviolet (UV) stråling fra solen eller solarier. UV-stråling beskadiger DNA\'et i hudcellerne, og når skaden ophobes over tid i basalcellerne, kan de begynde at vokse ukontrollabelt og danne en tumor.'
                   : 'The primary cause of BCC is chronic exposure to ultraviolet (UV) radiation from the sun or tanning beds. UV radiation damages the DNA in skin cells, and when this damage accumulates over time in basal cells, they can begin to grow uncontrollably and form a tumour.'}
               </p>
+              <p>
+                {isDa ? (
+                  <>
+                    Den samme ophobede UV-skade giver{' '}
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      aktiniske keratoser
+                    </Link>{' '}
+                    – ru, skællende pletter på soleksponeret hud. De er et synligt tegn på, at huden har fået så meget UV-stråling, at risikoen for hudkræft er øget.
+                  </>
+                ) : (
+                  <>
+                    The same accumulated UV damage produces{' '}
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      actinic keratoses
+                    </Link>{' '}
+                    — rough, scaly patches on sun-exposed skin. They are a visible marker that the skin has taken enough UV radiation to raise the risk of skin cancer.
+                  </>
+                )}
+              </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'De vigtigste risikofaktorer' : 'The main risk factors'}
+                {isDa ? 'Hvad er de vigtigste risikofaktorer?' : 'What are the main risk factors?'}
               </h3>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
@@ -333,14 +393,14 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 <li>
                   <strong>{isDa ? 'Immunsvækkelse:' : 'Immune suppression:'}</strong>{' '}
                   {isDa
-                    ? 'Personer med organtransplantater, HIV/AIDS eller dem, der tager immunsvækkende medicin har markant forhøjet risiko.'
-                    : 'People with organ transplants, HIV/AIDS or those taking immunosuppressant medications have a significantly elevated risk.'}
+                    ? 'Personer med organtransplantater, hiv eller dem, der tager immunsvækkende medicin, har forhøjet risiko.'
+                    : 'People with organ transplants, HIV or those taking immunosuppressant medications have an elevated risk.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Familiehistorie:' : 'Family history:'}</strong>{' '}
+                  <strong>{isDa ? 'Tidligere BCC eller familiehistorie:' : 'Previous BCC or family history:'}</strong>{' '}
                   {isDa
-                    ? 'Hvis du har haft BCC én gang, er risikoen for at udvikle endnu et tilfælde markant forhøjet.'
-                    : 'If you have had BCC once, your risk of developing another case is significantly elevated.'}
+                    ? 'Har du haft et basalcellekarcinom én gang, er risikoen for at udvikle endnu et markant forhøjet – omkring 40–50% udvikler et nyt inden for fem år. En førstegradsslægtning med hudkræft øger også risikoen, dels gennem fælles arveanlæg, dels gennem fælles solvaner.'
+                    : 'If you have had a BCC once, your risk of developing another is significantly elevated — around 40–50% of people develop a new one within five years. A first-degree relative with skin cancer also raises your risk, partly through shared genetics and partly through shared sun habits.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Tidligere skader:' : 'Previous injuries:'}</strong>{' '}
@@ -352,7 +412,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
               {/* Who gets it */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvem får basalcellcarcinom?' : 'Who gets basal cell carcinoma?'}
+                {isDa ? 'Hvem får basalcellekarcinom?' : 'Who gets basal cell carcinoma?'}
               </h2>
               <p>
                 {isDa
@@ -381,19 +441,39 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 <li>
                   <strong>{isDa ? 'Immunsvækkede:' : 'The immunocompromised:'}</strong>{' '}
                   {isDa
-                    ? 'Organtransplantationsmodtagere og personer med HIV har 10-100 gange højere risiko end den generelle befolkning.'
-                    : 'Organ transplant recipients and people with HIV have a 10–100 times higher risk than the general population.'}
+                    ? 'Organtransplanterede har omkring 10 gange højere risiko for BCC end den generelle befolkning – den langt større stigning på 65–100 gange gælder pladecellekarcinom, ikke BCC. Personer, der lever med hiv, har en mindre forhøjelse på omkring det dobbelte.'
+                    : 'Organ transplant recipients have roughly a 10-fold higher risk of BCC than the general population — the far larger 65–100-fold increase applies to squamous cell carcinoma, not BCC. People living with HIV have a smaller increase, around twofold.'}
                 </li>
               </ul>
               <p>
                 {isDa
-                  ? 'Interessant nok er BCC langt mere almindelig hos mænd end hos kvinder – en forskel der delvist tilskrives forskelle i soleksponeringsmønstre og arbejdsmiljø.'
-                  : 'Interestingly, BCC is far more common in men than in women — a difference partly attributed to differences in sun exposure patterns and occupational environments.'}
+                  ? 'I Danmark rammer BCC omtrent lige så mange kvinder som mænd. Danske registerdata viser et forhold mellem mænd og kvinder på omkring 1:1,1 – altså med kvinder lidt hyppigere ramt. Mønstret ændrer sig med alderen: kvinder dominerer blandt de under 45 år, mens mænd dominerer i de ældre aldersgrupper. Forskellen tilskrives delvist forskelle i soleksponeringsmønstre og arbejdsmiljø.'
+                  : 'In Denmark, BCC affects roughly as many women as men. Danish register data give a male-to-female ratio of about 1:1.1 — that is, slightly more women than men. The pattern shifts with age: women predominate below 45, while men predominate in the older age groups. The difference is partly attributed to differences in sun exposure patterns and occupational environments.'}
+              </p>
+
+              {/* Diagnosis */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvordan stilles diagnosen basalcellekarcinom?' : 'How is basal cell carcinoma diagnosed?'}
+              </h2>
+              <p>
+                {isDa
+                  ? 'Ved en fysisk undersøgelse og i praksis altid en hudbiopsi. Hudlægen undersøger først forandringen med et dermatoskop – et forstørrelsesinstrument med polariseret lys, der viser strukturer som fine, forgrenede blodkar og blågrå pigmentreder, som ikke kan ses med det blotte øje.'
+                  : 'With an in-person examination and, in practice, always a skin biopsy. The dermatologist first examines the lesion with a dermatoscope — a magnifying device with polarised light that reveals structures such as fine branching blood vessels and blue-grey nests of pigment that are invisible to the naked eye.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Den endelige diagnose kræver dog mikroskopi. En lille prøve af forandringen – eller hele forandringen – fjernes i lokalbedøvelse og undersøges under mikroskop. Denne undersøgelse (histologi) bekræfter, at der er tale om et basalcellekarcinom, fastlægger undertypen og viser, hvor dybt det vokser. Alt sammen afgørende for valget af behandling.'
+                  : 'The definitive diagnosis, however, requires microscopy. A small sample of the lesion — or the whole lesion — is removed under local anaesthetic and examined under a microscope. This examination (histology) confirms that it is a BCC, establishes the subtype and shows how deeply it is growing. All of this determines which treatment is appropriate.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'En billedvurdering kan sige, om en hudforandring ser bekymrende nok ud til at skulle ses ved fysisk fremmøde, og hvor hurtigt. Den kan ikke udelukke hudkræft. En mistænkelig plet skal undersøges med dermatoskop, og er der tvivl, skal den fjernes og undersøges i mikroskop.'
+                  : 'A photo assessment can tell you whether a lesion looks concerning enough to be seen in person, and how quickly. It cannot rule out skin cancer. A suspicious spot needs examination with a dermatoscope and, if there is any doubt, removal of the lesion for laboratory analysis.'}
               </p>
 
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvad kan du gøre ved basalcellcarcinom?' : 'What can you do about basal cell carcinoma?'}
+                {isDa ? 'Hvad kan du gøre ved basalcellekarcinom?' : 'What can you do about basal cell carcinoma?'}
               </h2>
               <p>
                 {isDa
@@ -418,7 +498,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved Mohs-kirurgi fjernes tumoren lag for lag, og hvert lag undersøges under mikroskop mens patienten venter. Dette gør det muligt at bevare så meget sund hud som muligt – særligt vigtigt i ansigtet. Anbefales ved BCC omkring øjne, næse, læber eller ører.'
+                      ? 'Ved Mohs-kirurgi fjernes tumoren lag for lag, og hvert lag undersøges under mikroskop, mens patienten venter. Dette gør det muligt at bevare så meget sund hud som muligt – særligt vigtigt i ansigtet. Anbefales ved BCC omkring øjne, næse, læber eller ører.'
                       : 'With Mohs surgery the tumour is removed layer by layer, with each layer examined under a microscope while the patient waits. This makes it possible to preserve as much healthy skin as possible — especially important on the face. Recommended for BCC around the eyes, nose, lips or ears.'}
                   </p>
                 </div>
@@ -446,18 +526,18 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
               {/* Prevention */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Forebyggelse: din bedste beskyttelse' : 'Prevention: your best protection'}
+                {isDa ? 'Hvordan forebygger du basalcellekarcinom?' : 'How can you prevent basal cell carcinoma?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Forebyggelse er altafgørende. Da BCC primært skyldes ophobning af UV-skade over årtier, starter den bedste beskyttelse tidligt i livet:'
-                  : 'Prevention is paramount. Since BCC is primarily caused by the accumulation of UV damage over decades, the best protection starts early in life:'}
+                  ? 'Ved at begrænse UV-skaden. Da BCC primært skyldes ophobning af UV-skade over årtier, starter den bedste beskyttelse tidligt i livet:'
+                  : 'By limiting UV damage. Since BCC is primarily caused by the accumulation of UV damage over decades, the best protection starts early in life:'}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
                   <strong>{isDa ? 'Solcreme året rundt:' : 'Sunscreen year-round:'}</strong>{' '}
                   {isDa
-                    ? 'Brug bredspektret solcreme med SPF 30 eller højere hver dag – også på overskyet dage og om vinteren. Påfør 15-30 minutter før soleksponering og gentag hver anden time.'
+                    ? 'Brug bredspektret solcreme med SPF 30 eller højere hver dag – også på overskyede dage og om vinteren. Påfør 15–30 minutter før soleksponering, og gentag hver anden time.'
                     : 'Use broad-spectrum sunscreen with SPF 30 or higher every day — even on cloudy days and in winter. Apply 15–30 minutes before sun exposure and reapply every two hours.'}
                 </li>
                 <li>
@@ -473,9 +553,9 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                     : 'Wear a wide-brimmed hat, sunglasses and tightly woven clothing. Seek shade during midday hours (12–3 pm), when UV radiation is strongest.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Månedlig selvanalyse:' : 'Monthly self-examination:'}</strong>{' '}
+                  <strong>{isDa ? 'Månedlig selvundersøgelse:' : 'Monthly self-examination:'}</strong>{' '}
                   {isDa
-                    ? 'Tjek din hud fra top til tå en gang om måneden. Hold øje med nye knuder, pletter eller sår der ikke heler inden for 4–6 uger.'
+                    ? 'Tjek din hud fra top til tå en gang om måneden. Hold øje med nye knuder, pletter eller sår, der ikke heler inden for 4–6 uger.'
                     : 'Check your skin from head to toe once a month. Watch for new bumps, spots or sores that do not heal within 4–6 weeks.'}
                 </li>
                 <li>
@@ -491,8 +571,8 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
-                    ? 'Basalcellcarcinom er klassificeret som ED80 i WHO\'s ICD-11 (kode 2C32). Det er karakteriseret ved perleagtige eller voksagtige knuder, ofte med synlige telangiektasier. Behandlingen er primært kirurgisk.'
-                    : "Basal cell carcinoma is classified as 2C32 in the WHO's ICD-11. It is characterised by pearly or waxy nodules, often with visible telangiectasias. Treatment is primarily surgical."}
+                    ? 'Basalcellekarcinom er klassificeret som 2C32 i WHO\'s internationale sygdomsklassifikation (ICD-11). Det er karakteriseret ved perleagtige eller voksagtige knuder, ofte med synlige telangiektasier. Behandlingen er primært kirurgisk.'
+                    : "Basal cell carcinoma is classified as 2C32 in the WHO's International Classification of Diseases (ICD-11). It is characterised by pearly or waxy nodules, often with visible telangiectasias. Treatment is primarily surgical."}
                 </p>
               </div>
 
@@ -503,7 +583,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               <div className="space-y-6">
                 <div>
                   <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Er basalcellcarcinom farligt?' : 'Is basal cell carcinoma dangerous?'}
+                    {isDa ? 'Er basalcellekarcinom farligt?' : 'Is basal cell carcinoma dangerous?'}
                   </h3>
                   <p>
                     {isDa
@@ -517,7 +597,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </h3>
                   <p>
                     {isDa
-                      ? 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom derimod kan sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødelig. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.'
+                      ? 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom kan derimod sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødelig. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.'
                       : 'BCC and melanoma are both forms of skin cancer, but they differ markedly. BCC grows slowly, very rarely spreads and has a very high cure rate. Melanoma, on the other hand, can spread quickly to lymph nodes and internal organs and is far more deadly. Melanoma arises from melanocytes (pigment cells) and often appears as a dark mole with irregular borders.'}
                   </p>
                 </div>
@@ -527,7 +607,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </h3>
                   <p>
                     {isDa
-                      ? 'Ja, BCC kan komme igen (residivere), selv efter vellykket behandling. Risikoen for tilbagefald afhænger af, om hele tumoren blev fjernet, og af din individuelle risikoprofil. Personer, der har haft BCC, har også forhøjet risiko for at udvikle nye BCC\'er andre steder på huden. Regelmæssige opfølgningskontroller hos hudlægen er derfor vigtige.'
+                      ? 'Ja, BCC kan komme igen (recidivere), selv efter vellykket behandling. Risikoen for tilbagefald afhænger af, om hele tumoren blev fjernet, og af din individuelle risikoprofil. Personer, der har haft BCC, har også forhøjet risiko for at udvikle nye tilfælde andre steder på huden. Regelmæssige opfølgningskontroller hos hudlægen er derfor vigtige.'
                       : 'Yes, BCC can recur even after successful treatment. The risk of recurrence depends on whether the entire tumour was removed and on your individual risk profile. People who have had BCC also have an elevated risk of developing new BCCs elsewhere on the skin. Regular follow-up appointments with the dermatologist are therefore important.'}
                   </p>
                 </div>
@@ -546,12 +626,12 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en vurdering af din hud inden for 48 timer' : 'Get a skin assessment within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Er du i tvivl om en knude, et sår eller en plet på din hud? Upload billeder via SKIND-appen og få en professionel vurdering fra en certificeret hudlæge – uden lange ventetider.'
-                    : 'Are you unsure about a bump, sore or patch on your skin? Upload photos via the SKIND app and get a professional assessment from a certified dermatologist — without long waiting times.'}
+                    ? 'Er du i tvivl om en knude, et sår eller en plet på din hud? Upload billeder via SKIND-appen og få en professionel vurdering fra en certificeret hudlæge – uden lange ventetider. Ser forandringen mistænkelig ud, henvises du videre til undersøgelse ved fysisk fremmøde.'
+                    : 'Are you unsure about a bump, sore or patch on your skin? Upload photos via the SKIND app and get a professional assessment from a certified dermatologist — without long waiting times. If the lesion looks suspicious, you will be directed on to an in-person examination.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -567,8 +647,8 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning og vurdering af hudforandringer.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance and assessment of skin changes.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -15,9 +14,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Vitiligo? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Lær alt om vitiligo: hvad de hvide pletter er, hvorfor immunsystemet angriber pigmentceller, hvem der rammes og hvilke behandlingsmuligheder der findes. Få hjælp via SKIND.',
+          'Vitiligo: hvorfor immunsystemet angriber pigmentcellerne, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering fra en hudlæge via SKIND.',
         keywords:
-          'hvad er vitiligo, vitiligo symptomer, vitiligo årsager, vitiligo behandling, hudlæge vitiligo, SKIND',
+          'hvad er vitiligo, vitiligo symptomer, vitiligo årsager, vitiligo behandling, segmental vitiligo, hudlæge vitiligo, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/vitiligo',
           languages: {
@@ -30,9 +29,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'What is Vitiligo? Causes, Symptoms and Treatment | SKIND',
         description:
-          'Learn everything about vitiligo: what the white patches are, why the immune system attacks pigment cells, who gets it and what treatment options are available. Get help via SKIND.',
+          'Vitiligo: why the immune system attacks pigment cells, who gets it, and which treatments actually work. Get an assessment from a dermatologist via SKIND.',
         keywords:
-          'what is vitiligo, vitiligo symptoms, vitiligo causes, vitiligo treatment, dermatologist vitiligo, SKIND',
+          'what is vitiligo, vitiligo symptoms, vitiligo causes, vitiligo treatment, segmental vitiligo, dermatologist vitiligo, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/vitiligo',
           languages: {
@@ -44,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       };
 }
 
-export default function VilitigoPage({ params: { lang } }: PageProps) {
+export default function VitiligoPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
   const articleSchema = {
@@ -60,11 +59,10 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-18',
     dateModified: '2026-03-18',
     author: {
-      '@type': 'Person',
-      '@id': 'https://www.skinchange.dk/#peter-bjerring',
-      name: 'Peter Bjerring',
-      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      '@type': 'Organization',
+      '@id': 'https://www.skinchange.dk/#skinchange-ai',
+      name: 'SkinChange.AI',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -87,52 +85,52 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er vitiligo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Vitiligo er en ikke-smitsom autoimmun hudlidelse, hvor immunsystemet fejlagtigt angriber pigmentproducerende celler (melanocytter), hvilket resulterer i hvide, afpigmenterede pletter på huden.',
-            },
-          },
-          {
-            '@type': 'Question',
             name: 'Er vitiligo farligt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Vitiligo udgør ikke en trussel mod den generelle sundhed, men de afpigmenterede områder er mere følsomme over for solskoldning. Tilstanden er desuden forbundet med øget risiko for andre autoimmune sygdomme som skjoldbruskkirtelsygdom.',
+              text: 'Vitiligo er ikke farligt i medicinsk forstand og påvirker ikke den generelle helbredstilstand. De hvide pletter øger dog risikoen for solskoldninger, og tilstanden er forbundet med en let øget risiko for andre autoimmune sygdomme som skjoldbruskkirtelsygdom.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvornår skal jeg søge hjælp for vitiligo?',
+            name: 'Kan vitiligo helbredes?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Søg en hudlæge hvis du bemærker nye hvide pletter eller eksisterende pletter vokser. Tidlig behandling kan bremse spredningen. Via SKIND kan du få en vurdering inden for 48 timer.',
+              text: 'Der er ingen kendt kur mod vitiligo. Mange behandlinger kan dog bremse spredningen og hjælpe med at genskabe noget pigment, særligt smalspektret UVB-lysbehandling og nye JAK-hæmmere. Resultater varierer fra person til person, og ansigtet reagerer generelt bedre end hænder og fødder.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Kontakt en hudlæge så snart du bemærker hvide pletter eller afpigmenterede områder. Tidlig behandling giver den bedste chance for at bremse spredningen og opnå repigmentering. En hudlæge kan også udelukke andre årsager til hvide pletter, fx pityriasis versicolor eller hypopigmentering efter eksem eller psoriasis.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is vitiligo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Vitiligo is a non-contagious autoimmune skin condition where the immune system mistakenly attacks pigment-producing cells (melanocytes), resulting in white, depigmented patches on the skin.',
-            },
-          },
-          {
-            '@type': 'Question',
             name: 'Is vitiligo dangerous?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Vitiligo does not pose a threat to overall health, but the depigmented areas are more susceptible to sunburn. The condition is also associated with an increased risk of other autoimmune diseases such as thyroid disease.',
+              text: 'Vitiligo is not medically dangerous and does not affect overall health. However, the white patches increase the risk of sunburn, and the condition is associated with a slightly increased risk of other autoimmune diseases such as thyroid disease.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I seek help for vitiligo?',
+            name: 'Can vitiligo be cured?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'See a dermatologist if you notice new white patches or existing patches are growing. Early treatment can slow the spread. Via SKIND you can get an assessment within 48 hours.',
+              text: 'There is no known cure for vitiligo. However, many treatments can slow the spread and help restore some pigmentation, particularly narrowband UVB phototherapy and new JAK inhibitors. Results vary from person to person, and the face generally responds better than the hands and feet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I contact a dermatologist?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Contact a dermatologist as soon as you notice white patches or depigmented areas. Early treatment gives the best chance of slowing the spread and achieving repigmentation. A dermatologist can also rule out other causes of white patches, such as pityriasis versicolor or hypopigmentation following eczema or psoriasis.',
             },
           },
         ],
@@ -140,13 +138,11 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -175,10 +171,10 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">18. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '18. marts 2026' : 'March 18, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '7 min læsetid' : '7 min read'}
+                {isDa ? '6 min læsetid' : '6 min read'}
               </span>
             </div>
 
@@ -190,18 +186,20 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-vitiligo.jpg"
                 alt={
                   isDa
-                    ? 'Vitiligo – hvide pigmentpletter på huden'
-                    : 'Vitiligo – white depigmented patches on skin'
+                    ? 'Nærbillede af hud med skarpt afgrænsede hvide, afpigmenterede pletter ved vitiligo.'
+                    : 'Close-up of skin with sharply defined white, depigmented patches of vitiligo.'
                 }
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -248,12 +246,12 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Vitiligo er en ikke-smitsom hudlidelse, der opstår når immunsystemet fejlagtigt angriber og ødelægger melanocytterne – de pigmentproducerende celler i huden. Resultatet er glatte, hvide pletter (afpigmenterede områder) der kan opstå overalt på kroppen.'
+                  ? 'Vitiligo er en ikke-smitsom hudlidelse, der opstår, når immunsystemet fejlagtigt angriber og ødelægger melanocytterne – de pigmentproducerende celler i huden. Resultatet er glatte, hvide pletter (afpigmenterede områder), der kan opstå overalt på kroppen.'
                   : 'Vitiligo is a non-contagious skin condition that occurs when the immune system mistakenly attacks and destroys melanocytes — the pigment-producing cells in the skin. The result is smooth, white patches (depigmented areas) that can appear anywhere on the body.'}
               </p>
               <p>
                 {isDa
-                  ? 'Det er vigtigt at understrege: vitiligo er ikke forårsaget af noget du har gjort forkert, og det udgør ikke en trussel mod din generelle sundhed. Det er klassificeret som ED63.0 i WHO\'s ICD-11.'
+                  ? 'Det er vigtigt at understrege: vitiligo er ikke forårsaget af noget, du har gjort forkert, og det udgør ikke en trussel mod din generelle sundhed. Det er klassificeret som ED63.0 i WHO\'s ICD-11.'
                   : "It is important to emphasise: vitiligo is not caused by anything you have done wrong, and it does not pose a threat to your overall health. It is classified as ED63.0 in the WHO's ICD-11."}
               </p>
 
@@ -274,9 +272,9 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                     : 'The depigmented areas are usually clearly defined and can range from a few millimetres to large parts of the body. They can appear on the face, hands, arms, legs and genitals.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Hårtab i pigmentløse områder:' : 'Hair loss in depigmented areas:'}</strong>{' '}
+                  <strong>{isDa ? 'Hårtab af farve i pigmentløse områder:' : 'Loss of hair colour in depigmented areas:'}</strong>{' '}
                   {isDa
-                    ? 'I visse tilfælde mister håret, der vokser i vitiligo-områderne, også sin farve og bliver hvidt eller grå.'
+                    ? 'I visse tilfælde mister håret, der vokser i vitiligo-områderne, også sin farve og bliver hvidt eller gråt.'
                     : 'In some cases, hair growing in the vitiligo-affected areas also loses its colour and becomes white or grey.'}
                 </li>
                 <li>
@@ -288,8 +286,13 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               </ul>
               <p>
                 {isDa
-                  ? 'Tilstanden kan begrænse sig til ét område (fokal vitiligo), optræde symmetrisk på begge sider af kroppen (bilateral/generaliseret vitiligo), eller følge nervebaner (segmental vitiligo).'
-                  : 'The condition may be limited to one area (focal vitiligo), appear symmetrically on both sides of the body (bilateral/generalised vitiligo), or follow nerve pathways (segmental vitiligo).'}
+                  ? 'Vitiligo inddeles i to hovedformer. Ikke-segmental vitiligo er langt den hyppigste: pletterne optræder typisk symmetrisk på begge sider af kroppen, og hertil hører undertyperne generaliseret, akrofacial (hænder og ansigt), fokal (én enkelt eller ganske få pletter), mukosal (slimhinder) og universel (næsten al hud).'
+                  : 'Vitiligo is divided into two main forms. Non-segmental vitiligo is by far the more common: the patches typically appear symmetrically on both sides of the body, and its subtypes include generalised, acrofacial (hands and face), focal (a single patch or very few), mucosal (mucous membranes) and universal (almost all of the skin).'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Segmental vitiligo er den anden hovedform. Den sidder ensidigt inden for et afgrænset område, ofte svarende til et nervesegment, debuterer typisk tidligt i livet og holder som regel op med at brede sig efter det første år. Skellet mellem de to former har praktisk betydning, fordi de reagerer forskelligt på behandling.'
+                  : 'Segmental vitiligo is the other main form. It is one-sided and confined to a limited area, often corresponding to a nerve segment, usually begins early in life and normally stops spreading after the first year. The distinction between the two forms matters in practice, because they respond differently to treatment.'}
               </p>
 
               {/* Why does it happen */}
@@ -303,7 +306,7 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Autoimmun reaktion' : 'Autoimmune reaction'}
+                {isDa ? 'Hvorfor angriber immunsystemet pigmentcellerne?' : 'Why does the immune system attack the pigment cells?'}
               </h3>
               <p>
                 {isDa
@@ -312,30 +315,52 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Genetisk disposition' : 'Genetic predisposition'}
+                {isDa ? 'Er vitiligo arveligt?' : 'Is vitiligo hereditary?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Vitiligo forekommer hyppigere i visse familier, hvilket tyder på en genetisk komponent. Omkring 20–30% af dem med vitiligo har mindst ét familiemedlem med samme tilstand. Specifikke genvarianter knyttet til immunregulering er identificeret i forskning.'
-                  : 'Vitiligo occurs more frequently in certain families, suggesting a genetic component. Around 20–30% of people with vitiligo have at least one family member with the same condition. Specific gene variants linked to immune regulation have been identified in research.'}
+                  ? 'Delvist. Vitiligo forekommer hyppigere i visse familier, hvilket tyder på en genetisk komponent. Omkring 20% af dem med vitiligo har mindst én nær slægtning – en forælder, søskende eller et barn – med samme tilstand. Specifikke genvarianter knyttet til immunregulering er identificeret i forskning, men arv alene afgør ikke, om man udvikler vitiligo.'
+                  : 'Partly. Vitiligo occurs more frequently in certain families, suggesting a genetic component. Around 20% of people with vitiligo have at least one close relative — a parent, sibling or child — with the same condition. Specific gene variants linked to immune regulation have been identified in research, but heredity alone does not determine whether someone develops vitiligo.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Udløsende faktorer' : 'Triggering factors'}
+                {isDa ? 'Hvad kan udløse vitiligo?' : 'What can trigger vitiligo?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Visse faktorer kan udløse eller forværre vitiligo hos genetisk disponerede personer: alvorlig stress eller følelsesmæssige traumer, hudskader (Köbner-fænomenet – nye pletter opstår ved skadested), solskoldninger og eksponering for visse kemikalier.'
+                  ? 'Visse faktorer kan udløse eller forværre vitiligo hos genetisk disponerede personer: alvorlig stress eller følelsesmæssige traumer, hudskader (Köbner-fænomenet – nye pletter opstår ved skadestedet), solskoldninger og eksponering for visse kemikalier.'
                   : 'Certain factors can trigger or worsen vitiligo in genetically predisposed individuals: severe stress or emotional trauma, skin injury (Köbner phenomenon — new patches appear at the site of injury), sunburn, and exposure to certain chemicals.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Forbundet med andre autoimmune tilstande' : 'Associated with other autoimmune conditions'}
+                {isDa
+                  ? 'Hænger vitiligo sammen med andre autoimmune sygdomme?'
+                  : 'Is vitiligo linked to other autoimmune conditions?'}
               </h3>
               <p>
-                {isDa
-                  ? 'Vitiligo er associeret med øget risiko for andre autoimmune sygdomme, herunder skjoldbruskkirtelsygdom (Hashimotos thyroiditis, Graves sygdom), alopecia areata (plettvis hårtab) og lupus. Regelmæssig kontrol for disse tilstande anbefales.'
-                  : 'Vitiligo is associated with an increased risk of other autoimmune diseases, including thyroid disease (Hashimoto\'s thyroiditis, Graves\' disease), alopecia areata (patchy hair loss) and lupus. Regular monitoring for these conditions is recommended.'}
+                {isDa ? (
+                  <>
+                    Ja. Vitiligo er forbundet med øget risiko for andre autoimmune sygdomme, herunder sygdom i skjoldbruskkirtlen
+                    (Hashimotos thyreoiditis, Graves&apos; sygdom),{' '}
+                    <Link href={`/${lang}/blog/alopecia-areata`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      alopecia areata
+                    </Link>{' '}
+                    (pletvis hårtab), type 1-diabetes og perniciøs anæmi. Skjoldbruskkirtelsygdom er langt den hyppigste, og derfor
+                    anbefales det at måle stofskiftetal (TSH) og thyreoidea-autoantistoffer, når diagnosen stilles, og derefter med
+                    jævne mellemrum – også hvis du ikke har symptomer.
+                  </>
+                ) : (
+                  <>
+                    Yes. Vitiligo is associated with an increased risk of other autoimmune diseases, including thyroid disease
+                    (Hashimoto&apos;s thyroiditis, Graves&apos; disease),{' '}
+                    <Link href={`/${lang}/blog/alopecia-areata`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      alopecia areata
+                    </Link>{' '}
+                    (patchy hair loss), type 1 diabetes and pernicious anaemia. Thyroid disease is by far the most common, which is
+                    why thyroid function (TSH) and thyroid autoantibodies should be checked when the diagnosis is made and
+                    periodically thereafter — even if you have no symptoms.
+                  </>
+                )}
               </p>
 
               {/* Who gets it */}
@@ -344,12 +369,12 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Vitiligo rammer ca. 1–2% af verdens befolkning – uanset race, etnicitet, køn eller alder. Dog er der mønstre:'
-                  : 'Vitiligo affects approximately 1–2% of the world\'s population — regardless of race, ethnicity, gender or age. However, certain patterns emerge:'}
+                  ? 'Vitiligo rammer omkring 0,5–2% af verdens befolkning, og de fleste opgørelser lander i den lave ende af intervallet, 0,5–1% – uanset etnicitet, køn eller alder. Dog er der mønstre:'
+                  : 'Vitiligo affects around 0.5–2% of the world\'s population, with most estimates towards the lower end of that range, 0.5–1% — regardless of ethnicity, sex or age. However, certain patterns emerge:'}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
-                  <strong>{isDa ? 'Debut i ung alder:' : 'Onset in young adulthood:'}</strong>{' '}
+                  <strong>{isDa ? 'Debut i ung alder:' : 'Early onset:'}</strong>{' '}
                   {isDa
                     ? 'Halvdelen af alle tilfælde debuterer før 20-årsalderen, og mange opdager de første pletter i teenageårene.'
                     : 'Half of all cases begin before the age of 20, and many people notice their first patches during their teenage years.'}
@@ -357,7 +382,7 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Familiehistorie:' : 'Family history:'}</strong>{' '}
                   {isDa
-                    ? 'Risikoen er forhøjet hvis nære familiemedlemmer har vitiligo eller andre autoimmune sygdomme.'
+                    ? 'Risikoen er forhøjet, hvis nære familiemedlemmer har vitiligo eller andre autoimmune sygdomme.'
                     : 'The risk is elevated if close family members have vitiligo or other autoimmune diseases.'}
                 </li>
                 <li>
@@ -391,12 +416,12 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                 </div>
                 <div>
                   <p className="font-semibold text-[#1a237e]">
-                    {isDa ? '☀️ Lysbehandling (fotokemoterapi)' : '☀️ Light therapy (photochemotherapy)'}
+                    {isDa ? '☀️ Lysbehandling (fototerapi)' : '☀️ Light therapy (phototherapy)'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Smalspektret UVB-lysbehandling (nbUVB) er i dag standardbehandling for udbredt vitiligo. Den stimulerer de tilbageværende melanocytter til at producere pigment igen. PUVA-behandling (UVA + psoralen) bruges i særlige tilfælde.'
-                      : 'Narrowband UVB (nbUVB) light therapy is currently the standard treatment for widespread vitiligo. It stimulates the remaining melanocytes to produce pigment again. PUVA treatment (UVA + psoralen) is used in specific cases.'}
+                      ? 'Smalspektret UVB-lysbehandling (nbUVB) er i dag standardbehandling for udbredt vitiligo. Den stimulerer de tilbageværende melanocytter til at producere pigment igen. PUVA (UVA kombineret med psoralen) er egentlig fotokemoterapi og bruges kun i særlige tilfælde.'
+                      : 'Narrowband UVB (nbUVB) phototherapy is currently the standard treatment for widespread vitiligo. It stimulates the remaining melanocytes to produce pigment again. PUVA (UVA combined with psoralen) is photochemotherapy proper and is now used only in specific cases.'}
                   </p>
                 </div>
                 <div>
@@ -405,8 +430,8 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ruxolitinib (JAK-hæmmer) er en ny godkendt topisk behandling, der blokerer den immunvej der ødelægger melanocytterne. Behandlingen har vist lovende resultater for repigmentering og er tilgængelig i Europa.'
-                      : 'Ruxolitinib (JAK inhibitor) is a newly approved topical treatment that blocks the immune pathway destroying melanocytes. The treatment has shown promising results for repigmentation and is available in Europe.'}
+                      ? 'Ruxolitinib-creme (Opzelura, en JAK-hæmmer) blokerer den immunvej, der ødelægger melanocytterne, og har vist lovende resultater for repigmentering. EU-godkendelsen fra 2023 er dog afgrænset: den gælder ikke-segmental vitiligo med involvering af ansigtet hos personer fra 12 år og opefter. Har du segmental vitiligo eller kun pletter på kroppen, er du ikke omfattet af indikationen. Tilskud er desuden ikke generelt i Danmark, så tal med din hudlæge om pris og enkelttilskud.'
+                      : 'Ruxolitinib cream (Opzelura, a JAK inhibitor) blocks the immune pathway that destroys melanocytes and has shown promising repigmentation results. Its EU approval from 2023 is narrow, however: it covers non-segmental vitiligo with facial involvement in people aged 12 and over. If you have segmental vitiligo, or patches only on the body, you fall outside that indication. Reimbursement in Denmark is not general either, so discuss cost and individual reimbursement with your dermatologist.'}
                   </p>
                 </div>
                 <div>
@@ -415,7 +440,7 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved stabil vitiligo kan hauttransplantation eller melanocyttransplantation overvejes. Disse metoder er egnede til afgrænset, inaktiv vitiligo og kræver specialisthenvisning.'
+                      ? 'Ved stabil vitiligo kan hudtransplantation eller melanocyttransplantation overvejes. Disse metoder er egnede til afgrænset, inaktiv vitiligo og kræver specialisthenvisning.'
                       : 'For stable vitiligo, skin grafting or melanocyte transplantation may be considered. These methods are suitable for limited, inactive vitiligo and require specialist referral.'}
                   </p>
                 </div>
@@ -458,12 +483,12 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Kan vitiligo heles?' : 'Can vitiligo be cured?'}
+                    {isDa ? 'Kan vitiligo helbredes?' : 'Can vitiligo be cured?'}
                   </h3>
                   <p>
                     {isDa
-                      ? 'Der er ingen kendt kur mod vitiligo. Mange behandlinger kan dog bremse spredningen og hjælpe med at genskabe noget pigment, særligt med lysbehandling og nye JAK-hæmmere. Resultater varierer fra person til person.'
-                      : 'There is no known cure for vitiligo. However, many treatments can slow the spread and help restore some pigmentation, particularly with light therapy and new JAK inhibitors. Results vary from person to person.'}
+                      ? 'Der er ingen kendt kur mod vitiligo. Mange behandlinger kan dog bremse spredningen og hjælpe med at genskabe noget pigment, særligt smalspektret UVB-lysbehandling og nye JAK-hæmmere. Resultater varierer fra person til person, og ansigtet reagerer generelt bedre end hænder og fødder.'
+                      : 'There is no known cure for vitiligo. However, many treatments can slow the spread and help restore some pigmentation, particularly narrowband UVB phototherapy and new JAK inhibitors. Results vary from person to person, and the face generally responds better than the hands and feet.'}
                   </p>
                 </div>
                 <div>
@@ -471,9 +496,27 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
-                    {isDa
-                      ? 'Kontakt en hudlæge så snart du bemærker hvide pletter eller afpigmenterede områder. Tidlig behandling giver den bedste chance for at bremse spredningen og opnå repigmentering. En hudlæge kan også udelukke andre årsager til afpigmentering.'
-                      : 'Contact a dermatologist as soon as you notice white patches or depigmented areas. Early treatment gives the best chance of slowing the spread and achieving repigmentation. A dermatologist can also rule out other causes of depigmentation.'}
+                    {isDa ? (
+                      <>
+                        Kontakt en hudlæge, så snart du bemærker hvide pletter eller afpigmenterede områder. Tidlig behandling giver
+                        den bedste chance for at bremse spredningen og opnå repigmentering. En hudlæge kan også udelukke andre
+                        årsager til hvide pletter, fx pityriasis versicolor eller hypopigmentering efter eksem eller{' '}
+                        <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                          psoriasis
+                        </Link>
+                        .
+                      </>
+                    ) : (
+                      <>
+                        Contact a dermatologist as soon as you notice white patches or depigmented areas. Early treatment gives the
+                        best chance of slowing the spread and achieving repigmentation. A dermatologist can also rule out other
+                        causes of white patches, such as pityriasis versicolor or hypopigmentation following eczema or{' '}
+                        <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                          psoriasis
+                        </Link>
+                        .
+                      </>
+                    )}
                   </p>
                 </div>
               </div>
@@ -481,12 +524,12 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig diagnose og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
-                    : 'Upload photos of your skin via the SKIND app and receive a personal diagnosis and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
+                    : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -502,8 +545,8 @@ export default function VilitigoPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

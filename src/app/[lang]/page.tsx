@@ -11,7 +11,6 @@ import DiseasesSection from '@/components/DiseasesSection';
 import AvailabilitySection from '@/components/AvailabilitySection';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -85,18 +84,18 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'SKIND hjælper med en bred vifte af hudproblemer, herunder akne, eksem, psoriasis, rosacea, forkølelsessår, kønsvorter og mistanke om hudkræft eller modermærkeforandringer.'
-            : 'SKIND helps with a wide range of skin problems, including acne, eczema, psoriasis, rosacea, cold sores, genital warts, and suspected skin cancer or mole changes.',
+            ? 'SKIND hjælper med en bred vifte af hudproblemer, herunder akne, eksem, psoriasis, rosacea, forkølelsessår og kønsvorter. Vi vurderer også mistænkelige modermærker og hudforandringer og henviser videre ved behov.'
+            : 'SKIND helps with a wide range of skin problems, including acne, eczema, psoriasis, rosacea, cold sores and genital warts. We also assess suspicious moles and skin changes and refer you onward when needed.',
         }
       },
       {
         '@type': 'Question',
-        name: isDa ? 'Hvor lang tid tager det at få en diagnose?' : 'How long does it take to get a diagnosis?',
+        name: isDa ? 'Hvor lang tid tager det at få svar?' : 'How long does it take to get a response?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'Du modtager en diagnose og behandlingsplan inden for 48 timer efter at have uploadet dine billeder og betalt konsultationen.'
-            : 'You receive a diagnosis and treatment plan within 48 hours of uploading your photos and paying for the consultation.',
+            ? 'Du modtager normalt en vurdering og behandlingsplan inden for 48 timer, efter du har indsendt og betalt din sag. De fleste sager besvares inden for 24 timer.'
+            : 'You normally receive an assessment and treatment plan within 48 hours of submitting and paying for your case. Most cases are answered within 24 hours.',
         }
       },
       {
@@ -105,8 +104,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'Ja. SKIND er MitID-verificeret, og alle hudlæger er certificerede Speciallæger i hudsygdomme. Dine billeder er krypteret og behandles fortroligt.'
-            : 'Yes. SKIND is MitID verified, and all dermatologists are certified Specialists in Skin Diseases. Your photos are encrypted and treated confidentially.',
+            ? 'Ja. SKIND er MitID-verificeret, og alle vores læger er speciallæger i hud- og kønssygdomme. Dine billeder er krypterede og behandles fortroligt.'
+            : 'Yes. SKIND is MitID verified, and all our doctors are authorised specialists in dermatology and venereology. Your photos are encrypted and treated confidentially.',
         }
       },
       {
@@ -115,8 +114,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'En konsultation koster 298 kr. Dette inkluderer diagnose, behandlingsplan og opfølgning.'
-            : 'A consultation costs 298 DKK. This includes diagnosis, treatment plan and follow-up.',
+            ? 'En konsultation koster 298 kr. og dækker én hudlidelse. Prisen inkluderer vurdering, behandlingsplan og opfølgende spørgsmål om den pågældende sag.'
+            : 'A consultation costs 298 DKK and covers one skin condition. The price includes the assessment, a treatment plan and follow-up questions about that case.',
         }
       }
     ]
@@ -124,21 +123,9 @@ export default function HomePage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="offer-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="min-h-screen">
         <Navigation lang={lang} />
         <Hero lang={lang} />

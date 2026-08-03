@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,9 +12,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Seboroisk Keratose? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Seboroisk Keratose: Symptomer og Behandling | SKIND',
         description:
-          'Lær alt om seboroisk keratose (senilvorter): hvad det er, hvorfor det opstår, om det er farligt, og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.',
+          'Seboroisk keratose (senilvorter): hvordan de ser ud, hvorfor de opstår, hvornår de skal tjekkes af en hudlæge, og hvordan de fjernes sikkert.',
         keywords:
           'hvad er seboroisk keratose, senilvorter, gammelmandsvorter, seboroisk keratose behandling, hudlæge, SKIND',
         alternates: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Seborrheic Keratosis? Causes, Symptoms and Treatment | SKIND',
+        title: 'Seborrhoeic Keratosis: Symptoms and Treatment | SKIND',
         description:
-          'Learn everything about seborrheic keratosis (age warts): what it is, why it appears, whether it is dangerous, and what treatment options exist. Get help from a dermatologist via SKIND.',
+          'Seborrhoeic keratosis (age warts): what these growths look like, why they appear, when a dermatologist should check them, and how they are removed.',
         keywords:
-          'what is seborrheic keratosis, age warts, senile warts, seborrheic keratosis treatment, dermatologist, SKIND',
+          'what is seborrhoeic keratosis, age warts, senile warts, seborrhoeic keratosis treatment, dermatologist, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/seborrheic-keratosis',
           languages: {
@@ -48,7 +47,7 @@ export async function generateStaticParams() {
   return [{ lang: 'da' }, { lang: 'en' }];
 }
 
-export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps) {
+export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
   const articleSchema = {
@@ -56,18 +55,18 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
     '@type': 'Article',
     headline: isDa
       ? 'Hvad er Seboroisk Keratose? Årsager, Symptomer og Behandling'
-      : 'What is Seborrheic Keratosis? Causes, Symptoms and Treatment',
+      : 'What is Seborrhoeic Keratosis? Causes, Symptoms and Treatment',
     description: isDa
       ? 'Komplet guide til seboroisk keratose: hvad det er, årsager, om det er farligt og behandlingsmuligheder.'
-      : 'Complete guide to seborrheic keratosis: what it is, causes, whether it is dangerous and treatment options.',
+      : 'Complete guide to seborrhoeic keratosis: what it is, causes, whether it is dangerous and treatment options.',
     image: '/blog-seborrheic-keratosis.jpg',
     datePublished: '2026-06-26',
     dateModified: '2026-06-26',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -90,52 +89,52 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er seboroisk keratose?',
+            name: 'Kan seboroisk keratose forsvinde af sig selv?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seboroisk keratose er en almindelig, ikke-kræftfremkaldende hudvækst, der opstår med alderen. De optræder som brune, sorte eller lysebrune pletter med en ru eller voksagtig tekstur og er fuldstændig harmløse.',
+              text: 'Sjældent. Seboroiske keratoser forsvinder normalt ikke uden behandling, men de er stabile og udgør ingen sundhedsrisiko i sig selv. Mange vælger at leve med dem.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Er seboroisk keratose farligt?',
+            name: 'Kan jeg forveksle seboroisk keratose med hudkræft?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nej, seboroisk keratose er godartet og er ikke forbundet med hudkræft. Hvis du er i tvivl om en hudforandring, bør du altid få den vurderet af en hudlæge.',
+              text: 'Ja. Seboroisk keratose er en af de hyppigste efterligninger af modermærkekræft (melanom), og både pigmenteret basalcellekarcinom og pladecellekarcinom kan ligne den. Er du i tvivl, er det altid bedre at få en professionel vurdering end at vente.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvornår skal jeg søge hjælp for seboroisk keratose?',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Søg hjælp hvis en vækst pludselig ændrer sig i størrelse, form eller farve, begynder at bløde, eller hvis du er usikker på om det er seboroisk keratose. SKIND giver dig adgang til en hudlæge inden for 48 timer.',
+              text: 'Kontakt en hudlæge, hvis en vækst ændrer sig hurtigt, bløder, er asymmetrisk, har uregelmæssige kanter eller flere farver — eller hvis du pludselig får mange nye vækster. Disse kan være tegn på noget andet end seboroisk keratose.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is seborrheic keratosis?',
+            name: 'Can seborrhoeic keratosis go away on its own?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seborrheic keratosis is a common, non-cancerous skin growth that appears with age. They appear as brown, black or light tan patches with a rough or waxy texture and are completely harmless.',
+              text: 'Rarely. Seborrhoeic keratoses do not usually disappear without treatment, but they are stable and pose no health risk in themselves. Many people choose to live with them.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Is seborrheic keratosis dangerous?',
+            name: 'Can I confuse seborrhoeic keratosis with skin cancer?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No, seborrheic keratosis is benign and is not linked to skin cancer. If you are uncertain about a skin change, you should always have it assessed by a dermatologist.',
+              text: 'Yes. Seborrhoeic keratosis is one of the most common mimics of melanoma, and both pigmented basal cell carcinoma and squamous cell carcinoma can look like it. If you are in doubt, it is always better to get a professional assessment than to wait.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I seek help for seborrheic keratosis?',
+            name: 'When should I contact a dermatologist?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seek help if a growth suddenly changes in size, shape or colour, starts to bleed, or if you are unsure whether it is seborrheic keratosis. SKIND gives you access to a dermatologist within 48 hours.',
+              text: 'Contact a dermatologist if a growth changes rapidly, bleeds, is asymmetric, has irregular borders or more than one colour — or if you suddenly develop many new growths. These may be signs of something other than seborrhoeic keratosis.',
             },
           },
         ],
@@ -143,13 +142,11 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -169,19 +166,19 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
               </Link>
               <span className="mx-2">/</span>
               <span className="text-gray-900">
-                {isDa ? 'Hvad er Seboroisk Keratose?' : 'What is Seborrheic Keratosis?'}
+                {isDa ? 'Hvad er Seboroisk Keratose?' : 'What is Seborrhoeic Keratosis?'}
               </span>
             </nav>
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
-                {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
+                {isDa ? 'Godartede Hudvækster' : 'Benign Skin Growths'}
               </span>
-              <span className="text-gray-500 text-sm">26. {isDa ? 'juni' : 'June'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '26. juni 2026' : 'June 26, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '5 min læsetid' : '5 min read'}
+                {isDa ? '6 min læsetid' : '6 min read'}
               </span>
             </div>
 
@@ -189,22 +186,24 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
             <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
               {isDa
                 ? 'Hvad er Seboroisk Keratose? Årsager, Symptomer og Behandling'
-                : 'What is Seborrheic Keratosis? Causes, Symptoms and Treatment'}
+                : 'What is Seborrhoeic Keratosis? Causes, Symptoms and Treatment'}
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#5d4037] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-seborrheic-keratosis.jpg"
                 alt={
                   isDa
-                    ? 'Seboroisk keratose senilvorter hudvækst'
-                    : 'Seborrheic keratosis age warts skin growth'
+                    ? 'Nærbillede af en brun, ru hudvækst med skarp afgrænsning, som ser ud til at være klistret på huden'
+                    : 'Close-up of a brown, rough skin growth with a sharp border that looks stuck onto the skin'
                 }
-                className="w-full h-full object-cover mix-blend-overlay opacity-50"
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -225,18 +224,18 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
               <p className="text-xl leading-relaxed text-gray-600 mb-6">
                 {isDa ? (
                   <>
-                    <strong>Seboroisk keratose er en af de mest almindelige hudvækster hos voksne over 50</strong> — og en af de mest misforståede. Mange bliver bekymrede, når de opdager de brune, ru pletter på huden, men de er fuldstændig harmløse.
+                    <strong>Seboroisk keratose er en af de mest almindelige hudvækster hos voksne over 50</strong> — og en af de mest misforståede. Seboroisk keratose er i sig selv godartet og udvikler sig ikke til kræft. Den kan dog ligne modermærkekræft og anden hudkræft til forveksling, så enhver pigmenteret hudforandring, du er i tvivl om, bør vurderes af en hudlæge.
                   </>
                 ) : (
                   <>
-                    <strong>Seborrheic keratosis is one of the most common skin growths in adults over 50</strong> — and one of the most misunderstood. Many people worry when they discover the brown, rough patches on their skin, but they are completely harmless.
+                    <strong>Seborrhoeic keratosis is one of the most common skin growths in adults over 50</strong> — and one of the most misunderstood. Seborrhoeic keratosis itself is benign and does not turn into cancer. However, it can look very similar to melanoma and other skin cancers, so any pigmented growth you are unsure about should be assessed by a dermatologist.
                   </>
                 )}
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist hvad seboroisk keratose er, hvad der forårsager det, om det er farligt, og hvad du kan gøre ved det.'
-                  : 'In this article, we explain exactly what seborrheic keratosis is, what causes it, whether it is dangerous, and what you can do about it.'}
+                  ? 'I denne artikel forklarer vi præcist, hvad seboroisk keratose er, hvad der forårsager det, hvordan du skelner det fra noget alvorligere, og hvad du kan gøre ved det.'
+                  : 'In this article, we explain exactly what seborrhoeic keratosis is, what causes it, how to tell it apart from something more serious, and what you can do about it.'}
               </p>
             </div>
 
@@ -244,12 +243,12 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
 
               {/* What is it */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvad er seboroisk keratose?' : 'What is seborrheic keratosis?'}
+                {isDa ? 'Hvad er seboroisk keratose?' : 'What is seborrhoeic keratosis?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Seboroisk keratose — også kaldet senilvorter eller gammelmandsvorter — er en godartet hudvækst, der opstår i overhuden (epidermis). De er ikke smitsomme og har ingen forbindelse til kræft. Væksternes udseende varierer, men de er typisk lette at genkende: runde eller ovale, med en tydelig afgrænsning fra den omgivende hud, som om de er "klistret på".'
-                  : 'Seborrheic keratosis — also called senile warts or age warts — is a benign skin growth that develops in the epidermis (outer layer of skin). They are not contagious and have no connection to cancer. Their appearance varies, but they are typically easy to recognise: round or oval, with a clear border from the surrounding skin, as if they have been "stuck on".'}
+                  ? 'Seboroisk keratose — også kaldet senilvorter eller gammelmandsvorter — er en godartet hudvækst, der opstår i overhuden (epidermis). De er ikke smitsomme, og selve væksten udvikler sig ikke til kræft. Udseendet varierer, men de er typisk lette at genkende: runde eller ovale, med en tydelig afgrænsning fra den omgivende hud, som om de er "klistret på".'
+                  : 'Seborrhoeic keratosis — also called senile warts or age warts — is a benign skin growth that develops in the epidermis (outer layer of skin). These growths are not contagious, and the growth itself does not turn into cancer. Their appearance varies, but they are typically easy to recognise: round or oval, with a clear border from the surrounding skin, as if they have been "stuck on".'}
               </p>
               <p>
                 {isDa
@@ -259,10 +258,10 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
 
               {/* What does it look like */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvordan ser seboroisk keratose ud?' : 'What does seborrheic keratosis look like?'}
+                {isDa ? 'Hvordan ser seboroisk keratose ud?' : 'What does seborrhoeic keratosis look like?'}
               </h2>
               <p>
-                {isDa ? 'Seboroisk keratose kan variere meget i udseende:' : 'Seborrheic keratosis can vary considerably in appearance:'}
+                {isDa ? 'Seboroisk keratose kan variere meget i udseende:' : 'Seborrhoeic keratosis can vary considerably in appearance:'}
               </p>
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
@@ -291,14 +290,28 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                 </li>
               </ul>
               <p>
-                {isDa
-                  ? 'Den "klistret på"-fornemmelse er karakteristisk og adskiller seboroisk keratose fra fx modermærker, der sidder dybere i huden.'
-                  : 'The "stuck on" appearance is characteristic and distinguishes seborrheic keratosis from, for example, moles, which sit deeper in the skin.'}
+                {isDa ? (
+                  <>
+                    Den &quot;klistret på&quot;-fornemmelse er karakteristisk og adskiller seboroisk keratose fra fx{' '}
+                    <Link href={`/${lang}/blog/regular-mole`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      almindelige modermærker
+                    </Link>
+                    , der sidder dybere i huden. Karakteristikken er dog ikke sikker nok til at stille diagnosen alene.
+                  </>
+                ) : (
+                  <>
+                    The &quot;stuck on&quot; appearance is characteristic and distinguishes seborrhoeic keratosis from, for example,{' '}
+                    <Link href={`/${lang}/blog/regular-mole`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      ordinary moles
+                    </Link>
+                    , which sit deeper in the skin. That feature alone is not reliable enough to make the diagnosis.
+                  </>
+                )}
               </p>
 
               {/* Why does it happen */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvad forårsager seboroisk keratose?' : 'What causes seborrheic keratosis?'}
+                {isDa ? 'Hvad forårsager seboroisk keratose?' : 'What causes seborrhoeic keratosis?'}
               </h2>
               <p>
                 {isDa
@@ -307,46 +320,46 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Alder' : 'Age'}
+                {isDa ? 'Hvilken rolle spiller alderen?' : 'What role does age play?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Seboroisk keratose er næsten udelukkende et fænomen hos voksne over 40–50 år. Jo ældre man bliver, desto flere vækster kan man udvikle. Det er ekstremt sjældent hos unge.'
-                  : 'Seborrheic keratosis is almost exclusively a phenomenon in adults over 40–50 years of age. The older one gets, the more growths one may develop. It is extremely rare in young people.'}
+                  ? 'Seboroisk keratose er først og fremmest en tilstand i den anden halvdel af livet: de første vækster kommer ofte fra 30-årsalderen og bliver gradvist mere almindelige efter 50. En variant, dermatosis papulosa nigra, viser sig som små, mørke papler i ansigtet og på halsen og er almindelig fra teenageårene hos personer med mørk hud.'
+                  : 'Seborrhoeic keratosis is mainly a condition of the second half of life: the first growths often appear from the 30s onwards and become steadily more common after 50. One variant, dermatosis papulosa nigra, appears as small, dark papules on the face and neck and is common from adolescence in people with darker skin.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Genetik' : 'Genetics'}
+                {isDa ? 'Er seboroisk keratose arveligt?' : 'Is seborrhoeic keratosis hereditary?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Der er en tydelig arvelig tendens. Hvis dine forældre havde mange seboroiske keratoser, er sandsynligheden for at du selv udvikler dem markant højere.'
-                  : 'There is a clear hereditary tendency. If your parents had many seborrheic keratoses, the likelihood of you developing them yourself is significantly higher.'}
+                  ? 'Der er en tydelig arvelig tendens. Hvis dine forældre havde mange seboroiske keratoser, er sandsynligheden for, at du selv udvikler dem, markant højere.'
+                  : 'There is a clear hereditary tendency. If your parents had many seborrhoeic keratoses, the likelihood of you developing them yourself is significantly higher.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Sollys' : 'Sun exposure'}
+                {isDa ? 'Har sollys nogen betydning?' : 'Does sun exposure matter?'}
               </h3>
               <p>
                 {isDa
                   ? 'Selvom sollys ikke er den direkte årsag, ses seboroisk keratose hyppigere på soleksponerede hudområder. UV-stråling kan bidrage til at udløse eller forværre væksten hos disponerede personer.'
-                  : 'Although sun exposure is not the direct cause, seborrheic keratosis is seen more frequently on sun-exposed areas of skin. UV radiation may contribute to triggering or worsening growth in predisposed individuals.'}
+                  : 'Although sun exposure is not the direct cause, seborrhoeic keratosis is seen more frequently on sun-exposed areas of skin. UV radiation may contribute to triggering or worsening growth in predisposed individuals.'}
               </p>
 
               {/* Who gets it */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvem får seboroisk keratose?' : 'Who gets seborrheic keratosis?'}
+                {isDa ? 'Hvem får seboroisk keratose?' : 'Who gets seborrhoeic keratosis?'}
               </h2>
               <p>
                 {isDa
                   ? 'Næsten alle vil udvikle seboroisk keratose på et tidspunkt i livet:'
-                  : 'Almost everyone will develop seborrheic keratosis at some point in their lives:'}
+                  : 'Almost everyone will develop seborrhoeic keratosis at some point in their lives:'}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
                   {isDa
-                    ? 'Over 80% af voksne over 60 år har mindst én seboroisk keratose.'
-                    : 'Over 80% of adults over 60 have at least one seborrheic keratosis.'}
+                    ? 'Over 90% af voksne over 60 år har mindst én seboroisk keratose.'
+                    : 'Over 90% of adults over 60 have at least one seborrhoeic keratosis.'}
                 </li>
                 <li>
                   {isDa
@@ -362,12 +375,42 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
 
               {/* Is it dangerous */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Er seboroisk keratose farligt?' : 'Is seborrheic keratosis dangerous?'}
+                {isDa ? 'Er seboroisk keratose farligt?' : 'Is seborrhoeic keratosis dangerous?'}
               </h2>
               <p>
-                {isDa
-                  ? 'Nej. Seboroisk keratose er godartet og er hverken forbundet med hudkræft eller andre alvorlige sygdomme. Dog er det vigtigt at skelne seboroisk keratose fra andre hudforandringer, der kan kræve behandling. Opsøg en hudlæge hvis:'
-                  : 'No. Seborrheic keratosis is benign and is not associated with skin cancer or other serious diseases. However, it is important to distinguish seborrheic keratosis from other skin changes that may require treatment. See a dermatologist if:'}
+                {isDa ? (
+                  <>
+                    Seboroisk keratose er i sig selv godartet og udvikler sig ikke til kræft. Problemet er ikke væksten, men forvekslingen: seboroisk keratose er en af de hyppigste efterligninger af{' '}
+                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      modermærkekræft (melanom)
+                    </Link>
+                    , og pigmenteret{' '}
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      basalcellekarcinom
+                    </Link>
+                    , pladecellekarcinom og{' '}
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      aktinisk keratose
+                    </Link>{' '}
+                    kan alle ligne den. Opsøg en hudlæge, hvis:
+                  </>
+                ) : (
+                  <>
+                    Seborrhoeic keratosis itself is benign and does not turn into cancer. The problem is not the growth but the resemblance: seborrhoeic keratosis is one of the most common mimics of{' '}
+                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      melanoma
+                    </Link>
+                    , and pigmented{' '}
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      basal cell carcinoma
+                    </Link>
+                    , squamous cell carcinoma and{' '}
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      actinic keratosis
+                    </Link>{' '}
+                    can all look similar. See a dermatologist if:
+                  </>
+                )}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
@@ -382,19 +425,34 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                 </li>
                 <li>
                   {isDa
-                    ? 'Du er usikker på om det er seboroisk keratose eller noget andet.'
-                    : 'You are unsure whether it is seborrheic keratosis or something else.'}
+                    ? 'Du er usikker på, om det er seboroisk keratose eller noget andet.'
+                    : 'You are unsure whether it is seborrhoeic keratosis or something else.'}
                 </li>
               </ul>
+              <p>
+                {isDa
+                  ? 'Brug ABCDE-reglen ved enhver pigmenteret plet: Asymmetri, uregelmæssige Bræmmer, mere end én Farve, Diameter over 6 mm, og Udvikling over uger eller måneder. En plet med disse træk bør undersøges af en læge hurtigt — gå ikke ud fra, at det er en seboroisk keratose.'
+                  : 'Use the ABCDE rule for any pigmented spot: Asymmetry, irregular Borders, more than one Colour, Diameter over 6 mm, and Evolution (change over weeks or months). A spot with these features should be examined by a doctor promptly — do not assume it is a seborrhoeic keratosis.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Et pludseligt udbrud af mange seboroiske keratoser over uger til måneder kaldes Leser-Trélats tegn og er en anerkendt markør for indre kræftsygdom. Det er sjældent, men får du hurtigt mange nye vækster, skal du altid have det undersøgt.'
+                  : 'A sudden eruption of many seborrhoeic keratoses over weeks to months is known as the sign of Leser-Trélat and is a recognised marker of internal malignancy. It is rare, but a rapid crop of new growths should always be examined.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'En billedvurdering kan sige, om en hudforandring ser bekymrende nok ud til at skulle ses ved fysisk fremmøde, og hvor hurtigt. Den kan ikke udelukke hudkræft. En mistænkelig plet skal undersøges med dermatoskop, og er der tvivl, skal den fjernes og undersøges i mikroskop.'
+                  : 'A photo assessment can tell you whether a lesion looks concerning enough to be seen in person, and how quickly. It cannot rule out skin cancer. A suspicious spot needs examination with a dermatoscope and, if there is any doubt, removal of the lesion for laboratory analysis.'}
+              </p>
 
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Behandlingsmuligheder' : 'Treatment options'}
+                {isDa ? 'Hvordan fjernes seboroisk keratose?' : 'How is seborrhoeic keratosis removed?'}
               </h2>
               <p>
                 {isDa
                   ? 'Seboroisk keratose kræver normalt ikke behandling. Hvis en vækst dog er til gene — klør, irriterer mod tøj, eller generer kosmetisk — kan den fjernes effektivt:'
-                  : 'Seborrheic keratosis does not typically require treatment. However, if a growth is bothersome — itches, rubs against clothing, or is cosmetically concerning — it can be effectively removed:'}
+                  : 'Seborrhoeic keratosis does not typically require treatment. However, if a growth is bothersome — itches, rubs against clothing, or is cosmetically concerning — it can be effectively removed:'}
               </p>
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
@@ -404,8 +462,8 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Flydende nitrogen bruges til at fryse væksten væk. Hurtigt og effektivt — udføres på klinikken.'
-                      : 'Liquid nitrogen is used to freeze the growth away. Quick and effective — performed in the clinic.'}
+                      ? 'Flydende nitrogen bruges til at fryse væksten væk. Hurtigt og effektivt — udføres på klinikken. Metoden ødelægger vævet, så den må ikke bruges, hvis diagnosen er usikker.'
+                      : 'Liquid nitrogen is used to freeze the growth away. Quick and effective — performed in the clinic. The method destroys the tissue, so it must not be used when the diagnosis is uncertain.'}
                   </p>
                 </div>
                 <div>
@@ -430,11 +488,21 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                 </div>
                 <div>
                   <p className="font-semibold text-[#1a237e]">
+                    {isDa ? '🔬 Mikroskopi ved tvivl' : '🔬 Microscopy when in doubt'}
+                  </p>
+                  <p className="text-sm mt-1">
+                    {isDa
+                      ? 'Er der den mindste tvivl om diagnosen, skal forandringen fjernes hel og sendes til mikroskopisk undersøgelse. Derfor vælges afskrabning eller udskæring frem for frysning, når der skal foreligge en vævsprøve.'
+                      : 'If there is any doubt about the diagnosis, the lesion must be removed whole and sent for histopathology. That is why scraping or excision is chosen over freezing whenever a tissue sample is needed.'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#1a237e]">
                     {isDa ? '🚫 Undgå selv at fjerne dem' : '🚫 Do not remove them yourself'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Pil eller krats ikke i væksternes — det kan forårsage blødning, infektion og ardannelse.'
+                      ? 'Pil eller krads ikke i væksterne — det kan forårsage blødning, infektion og ardannelse.'
                       : 'Do not pick or scratch at the growths — this can cause bleeding, infection and scarring.'}
                   </p>
                 </div>
@@ -449,7 +517,7 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                   <li>
                     {isDa
                       ? 'Brug solbeskyttelse dagligt — selvom sollys ikke direkte forårsager seboroisk keratose, beskytter det mod andre solrelaterede hudproblemer.'
-                      : 'Use sun protection daily — even though sun exposure does not directly cause seborrheic keratosis, it protects against other sun-related skin problems.'}
+                      : 'Use sun protection daily — even though sun exposure does not directly cause seborrhoeic keratosis, it protects against other sun-related skin problems.'}
                   </li>
                   <li>
                     {isDa
@@ -469,8 +537,8 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
-                    ? "Seboroisk keratose er klassificeret som L82 i WHO's internationale sygdomsklassifikation (ICD-10/ICD-11). Det er karakteriseret ved godartede, epidermale tumorer, typisk pigmenterede, med en vortelignende overflade."
-                    : "Seborrheic keratosis is classified as L82 in the WHO's International Classification of Diseases (ICD-10/ICD-11). It is characterised by benign, epidermal tumours, typically pigmented, with a wart-like surface."}
+                    ? 'Seboroisk keratose er klassificeret som 2F21 (godartede hudtumorer) i WHO\'s internationale sygdomsklassifikation ICD-11 og som L82 i den ældre ICD-10. Den er karakteriseret ved godartede, epidermale tumorer, typisk pigmenterede, med en vortelignende overflade.'
+                    : "Seborrhoeic keratosis is classified as 2F21 (benign cutaneous neoplasms) in the WHO's International Classification of Diseases ICD-11, and as L82 in the older ICD-10. It is characterised by benign, epidermal tumours, typically pigmented, with a wart-like surface."}
                 </p>
               </div>
 
@@ -481,22 +549,22 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
               <div className="space-y-6">
                 <div>
                   <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Kan seboroisk keratose forsvinde af sig selv?' : 'Can seborrheic keratosis go away on its own?'}
+                    {isDa ? 'Kan seboroisk keratose forsvinde af sig selv?' : 'Can seborrhoeic keratosis go away on its own?'}
                   </h3>
                   <p>
                     {isDa
-                      ? 'Sjældent. Seboroisk keratose forsvinder normalt ikke uden behandling, men de er stabile og udgør ingen sundhedsrisiko. Mange vælger at leve med dem.'
-                      : 'Rarely. Seborrheic keratosis does not usually disappear without treatment, but they are stable and pose no health risk. Many people choose to live with them.'}
+                      ? 'Sjældent. Seboroiske keratoser forsvinder normalt ikke uden behandling, men de er stabile og udgør ingen sundhedsrisiko i sig selv. Mange vælger at leve med dem.'
+                      : 'Rarely. Seborrhoeic keratoses do not usually disappear without treatment, but they are stable and pose no health risk in themselves. Many people choose to live with them.'}
                   </p>
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Kan jeg forveksle seboroisk keratose med hudkræft?' : 'Can I confuse seborrheic keratosis with skin cancer?'}
+                    {isDa ? 'Kan jeg forveksle seboroisk keratose med hudkræft?' : 'Can I confuse seborrhoeic keratosis with skin cancer?'}
                   </h3>
                   <p>
                     {isDa
-                      ? 'Ja, det kan være svært at skelne visuelt — særligt fra modermærkekræft (melanom). Hvis du er i tvivl, er det altid bedre at få en professionel vurdering end at vente.'
-                      : 'Yes, it can be difficult to distinguish visually — especially from melanoma. If you are in doubt, it is always better to get a professional assessment than to wait.'}
+                      ? 'Ja. Seboroisk keratose er en af de hyppigste efterligninger af modermærkekræft (melanom), og både pigmenteret basalcellekarcinom og pladecellekarcinom kan ligne den. Er du i tvivl, er det altid bedre at få en professionel vurdering end at vente.'
+                      : 'Yes. Seborrhoeic keratosis is one of the most common mimics of melanoma, and both pigmented basal cell carcinoma and squamous cell carcinoma can look like it. If you are in doubt, it is always better to get a professional assessment than to wait.'}
                   </p>
                 </div>
                 <div>
@@ -505,8 +573,8 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                   </h3>
                   <p>
                     {isDa
-                      ? 'Kontakt en hudlæge hvis en vækst ændrer sig hurtigt, bløder, er asymmetrisk, har uregelmæssige kanter eller farveforskelle — disse kan være tegn på noget andet end seboroisk keratose.'
-                      : 'Contact a dermatologist if a growth changes rapidly, bleeds, is asymmetric, has irregular borders or colour variation — these may be signs of something other than seborrheic keratosis.'}
+                      ? 'Kontakt en hudlæge, hvis en vækst ændrer sig hurtigt, bløder, er asymmetrisk, har uregelmæssige kanter eller flere farver — eller hvis du pludselig får mange nye vækster. Disse kan være tegn på noget andet end seboroisk keratose.'
+                      : 'Contact a dermatologist if a growth changes rapidly, bleeds, is asymmetric, has irregular borders or more than one colour — or if you suddenly develop many new growths. These may be signs of something other than seborrhoeic keratosis.'}
                   </p>
                 </div>
               </div>
@@ -514,7 +582,7 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Usikker på en hudforandring?' : 'Unsure about a skin change?'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
@@ -535,8 +603,8 @@ export default function SeborrheicKeratosisPage({ params: { lang } }: PageProps)
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

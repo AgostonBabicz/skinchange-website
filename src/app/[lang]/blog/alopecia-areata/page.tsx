@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Alopecia Areata? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Alopecia areata: symptomer og behandling | SKIND',
         description:
-          'Lær alt om alopecia areata: hvad det er, hvordan immunsystemet angriber hårsækkene, hvem der rammes, og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.',
+          'Alopecia areata er pletvis hårtab, hvor immunsystemet angriber hårsækkene. Læs om årsager, hvem der rammes, behandling med JAK-hæmmere og prognosen.',
         keywords:
-          'alopecia areata, hårtab, autoimmun, hårsækkene, skaldethed, alopecia totalis, SKIND',
+          'alopecia areata, hårtab, autoimmun, hårsække, skaldethed, alopecia totalis, JAK-hæmmere, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/alopecia-areata',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Alopecia Areata? Causes, Symptoms and Treatment | SKIND',
+        title: 'Alopecia areata: symptoms and treatment | SKIND',
         description:
-          'Learn everything about alopecia areata: what it is, how the immune system attacks hair follicles, who it affects, and what treatment options are available. Get help from a dermatologist via SKIND.',
+          'Alopecia areata is patchy hair loss caused by the immune system attacking hair follicles. Learn the causes, who it affects, treatments and the outlook.',
         keywords:
-          'alopecia areata, hair loss, autoimmune, hair follicles, baldness, alopecia totalis, SKIND',
+          'alopecia areata, hair loss, autoimmune, hair follicles, baldness, alopecia totalis, JAK inhibitors, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/alopecia-areata',
           languages: {
@@ -60,11 +59,10 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
     datePublished: '2026-04-03',
     dateModified: '2026-04-03',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -87,84 +85,68 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er alopecia areata?',
+            name: 'Er alopecia areata smitsomt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alopecia areata er en autoimmun hudlidelse, hvor immunsystemet fejlagtigt angriber hårsækkene, hvilket fører til pludseligt hårtab i veldefinerede, runde glatte pletter på hovedbunden eller andre hårbærende områder.',
+              text: 'Nej, alopecia areata er absolut ikke smitsomt. Det er en autoimmun tilstand — din krop angriber sine egne hårsække. Du kan ikke smitte andre, og andre kan ikke smitte dig.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvordan ser alopecia areata ud?',
+            name: 'Vokser håret tilbage?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alopecia areata viser sig typisk som veldefinerede, runde eller ovale pletter uden hår på hovedbunden. Pletterne er som regel glatte og skælløse. Håravfallet kan også påvirke skæg, øjenbryn, øjenvipper og andre kropsområder.',
+              text: 'Det afhænger af sværhedsgraden. Ved begrænset alopecia areata vokser håret ofte tilbage spontant inden for et år. Ved mere udbredt alopecia areata, alopecia totalis eller alopecia universalis er spontan hårvækst mindre sandsynlig, men behandling kan hjælpe.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvorfor opstår alopecia areata?',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alopecia areata skyldes en autoimmun reaktion, hvor immunsystemets T-celler fejlagtigt angriber og ødelægger hårsækkene. Genetik, stress og visse sygdomme kan bidrage til at udløse tilstanden.',
+              text: 'Kontakt en hudlæge, så snart du opdager uforklarligt hårtab — særligt hvis det opstår pludseligt, i runde pletter, eller hvis du har familiehistorie med alopecia eller andre autoimmune sygdomme. Er hovedbunden samtidig rød, skællende eller øm, bør du søge vurdering uden at vente.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvem får alopecia areata?',
+            name: 'Påvirker alopecia areata neglene?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alle kan udvikle alopecia areata, men tilstanden begynder ofte i barndommen eller tidlig voksenalder. Ca. 2% af befolkningen rammes i løbet af livet, og der er ofte en familiehistorie med alopecia eller andre autoimmune sygdomme.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Kan alopecia areata behandles?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Ja, selvom der ikke er en enkelt kur, findes der effektive behandlinger. Disse inkluderer topiske kortikosteroider, intralesionelle steroidinjektioner, immunterapi og i svære tilfælde JAK-hæmmere. Behandlingen vælges ud fra sværhedsgrad og individuelle faktorer.',
+              text: 'Ja, op til 50% af personer med alopecia areata oplever negleforandringer. Dette kan inkludere små buler (pitting), ru overflade, langsgående riller eller hvide pletter på neglene.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is alopecia areata?',
+            name: 'Is alopecia areata contagious?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alopecia areata is an autoimmune skin condition in which the immune system mistakenly attacks hair follicles, leading to sudden hair loss in well-defined, round smooth patches on the scalp or other hair-bearing areas.',
+              text: 'No, alopecia areata is absolutely not contagious. It is an autoimmune condition — your body attacks its own hair follicles. You cannot infect others, and others cannot infect you.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What does alopecia areata look like?',
+            name: 'Does hair grow back?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alopecia areata typically appears as well-defined, round or oval patches of hair loss on the scalp. The patches are usually smooth and without scaling. Hair loss can also affect the beard, eyebrows, eyelashes and other body areas.',
+              text: 'It depends on the severity. With limited alopecia areata, hair often grows back spontaneously within a year. With more widespread alopecia areata, alopecia totalis or alopecia universalis, spontaneous regrowth is less likely, but treatment can help.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Why does alopecia areata happen?',
+            name: 'When should I contact a dermatologist?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Alopecia areata is caused by an autoimmune reaction in which the immune system\'s T-cells mistakenly attack and destroy hair follicles. Genetics, stress and certain illnesses can contribute to triggering the condition.',
+              text: 'Contact a dermatologist as soon as you notice unexplained hair loss — especially if it occurs suddenly, in round patches, or if you have a family history of alopecia or other autoimmune diseases. If the scalp is also red, scaly or tender, seek assessment without delay.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Who gets alopecia areata?',
+            name: 'Does alopecia areata affect the nails?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Anyone can develop alopecia areata, but the condition often begins in childhood or early adulthood. Approximately 2% of the population is affected at some point in their lives, and there is frequently a family history of alopecia or other autoimmune diseases.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can alopecia areata be treated?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes, although there is no single cure, effective treatments exist. These include topical corticosteroids, intralesional steroid injections, immunotherapy and in severe cases JAK inhibitors. Treatment is chosen based on severity and individual factors.',
+              text: 'Yes, up to 50% of people with alopecia areata experience nail changes. These can include small dents (pitting), a rough surface, longitudinal ridges or white spots on the nails.',
             },
           },
         ],
@@ -172,13 +154,11 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -205,7 +185,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">3. {isDa ? 'april' : 'April'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '3. april 2026' : 'April 3, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
                 {isDa ? '6 min læsetid' : '6 min read'}
@@ -220,14 +200,20 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-alopecia-areata.jpg"
-                alt={isDa ? 'Alopecia areata – autoimmun hårtab' : 'Alopecia areata – autoimmune hair loss'}
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                alt={
+                  isDa
+                    ? 'Rund, glat plet uden hår i hovedbunden — det typiske udseende ved alopecia areata.'
+                    : 'A round, smooth bald patch on the scalp — the typical appearance of alopecia areata.'
+                }
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -287,9 +273,31 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
                   <strong>{isDa ? 'Runde, glatte hårpletter:' : 'Round, smooth patches of hair loss:'}</strong>{' '}
-                  {isDa
-                    ? 'Det mest karakteristiske tegn er veldefinerede, runde eller ovale områder med fuldstændigt hårtab. Disse pletter er som regel glatte og skælløse — i modsætning til fx ringorm.'
-                    : 'The most characteristic sign is well-defined, round or oval areas of complete hair loss. These patches are usually smooth and without scaling — unlike conditions such as ringworm.'}
+                  {isDa ? (
+                    <>
+                      Det mest karakteristiske tegn er veldefinerede, runde eller ovale områder med fuldstændigt hårtab. Disse pletter er som regel glatte og skælløse — i modsætning til fx{' '}
+                      <Link href={`/${lang}/blog/tinea-infections-ringworm`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        ringorm
+                      </Link>{' '}
+                      eller{' '}
+                      <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        psoriasis
+                      </Link>{' '}
+                      i hovedbunden, hvor huden er skællende.
+                    </>
+                  ) : (
+                    <>
+                      The most characteristic sign is well-defined, round or oval areas of complete hair loss. These patches are usually smooth and without scaling — unlike{' '}
+                      <Link href={`/${lang}/blog/tinea-infections-ringworm`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        ringworm
+                      </Link>{' '}
+                      or scalp{' '}
+                      <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        psoriasis
+                      </Link>
+                      , where the skin is scaly.
+                    </>
+                  )}
                 </li>
                 <li>
                   <strong>{isDa ? 'Pletter på hovedbunden:' : 'Patches on the scalp:'}</strong>{' '}
@@ -311,6 +319,18 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
+              {/* Red flags */}
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa
+                    ? 'Alopecia areata efterlader glat, normal hud — hårsækkene er intakte, og håret kan vokse ud igen. Er hovedbunden derimod rød, skællende, øm eller brændende, eller kan du ikke længere se de små åbninger, hvor hårene kommer ud, kan der være tale om ardannende (cikatriciel) alopeci. Her ødelægges hårsækkene permanent, og det tabte hår kommer ikke igen. Få det vurderet af en hudlæge uden at vente — behandling kan standse yderligere tab, men ikke genskabe det, der allerede er gået tabt.'
+                    : 'Alopecia areata leaves smooth, normal-looking skin — the follicles are intact and hair can regrow. If the scalp is instead red, scaly, tender or burning, or if you can no longer see the small openings where hairs emerge, it may be scarring (cicatricial) alopecia. In scarring alopecia the follicles are permanently destroyed and lost hair does not return. Have it assessed by a dermatologist without delay — treatment can stop further loss, but cannot restore what is already gone.'}
+                </p>
+              </div>
+
               {/* Why does it happen */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår alopecia areata?' : 'Why does alopecia areata happen?'}
@@ -322,30 +342,49 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Genetik' : 'Genetics'}
+                {isDa ? 'Hvor stor en rolle spiller generne?' : 'How much of a role do genes play?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Arvelige faktorer spiller en vigtig rolle. Op til 20% af personer med alopecia areata har et eller flere familiemedlemmer med samme tilstand eller en anden autoimmun sygdom.'
-                  : 'Genetic factors play an important role. Up to 20% of people with alopecia areata have one or more family members with the same condition or another autoimmune disease.'}
+                  ? 'En vigtig rolle. Op til 20% af personer med alopecia areata har et eller flere familiemedlemmer med samme tilstand eller en anden autoimmun sygdom.'
+                  : 'An important one. Up to 20% of people with alopecia areata have one or more family members with the same condition or another autoimmune disease.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Stress' : 'Stress'}
+                {isDa ? 'Kan stress udløse alopecia areata?' : 'Can stress trigger alopecia areata?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Alvorlig fysisk eller psykisk stress kan udløse eller forværre alopecia areata. Stress påvirker immunsystemet og kan bidrage til den autoimmune reaktion mod hårsækkene.'
-                  : 'Severe physical or psychological stress can trigger or worsen alopecia areata. Stress affects the immune system and can contribute to the autoimmune reaction against hair follicles.'}
+                  ? 'Ja, det kan bidrage. Alvorlig fysisk eller psykisk stress kan udløse eller forværre alopecia areata. Stress påvirker immunsystemet og kan bidrage til den autoimmune reaktion mod hårsækkene.'
+                  : 'Yes, it can contribute. Severe physical or psychological stress can trigger or worsen alopecia areata. Stress affects the immune system and can contribute to the autoimmune reaction against hair follicles.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Andre sygdomme' : 'Other illnesses'}
+                {isDa ? 'Hvilke andre sygdomme hænger det sammen med?' : 'Which other conditions is it linked to?'}
               </h3>
               <p>
+                {isDa ? (
+                  <>
+                    Andre autoimmune tilstande. Alopecia areata er associeret med skjoldbruskkirtelsygdomme (Hashimotos, Graves), type 1-diabetes,{' '}
+                    <Link href={`/${lang}/blog/vitiligo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      vitiligo
+                    </Link>{' '}
+                    og reumatoid artritis (leddegigt). Personer med disse tilstande har en højere risiko.
+                  </>
+                ) : (
+                  <>
+                    Other autoimmune conditions. Alopecia areata is associated with thyroid diseases (Hashimoto&apos;s, Graves&apos;), type 1 diabetes,{' '}
+                    <Link href={`/${lang}/blog/vitiligo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      vitiligo
+                    </Link>{' '}
+                    and rheumatoid arthritis. People with these conditions have a higher risk.
+                  </>
+                )}
+              </p>
+              <p>
                 {isDa
-                  ? 'Alopecia areata er associeret med en række andre autoimmune tilstande, herunder skjoldbruskkirtelsygdomme (Hashimotos, Graves), type 1-diabetes, vitiligo og rheumatoid artritis. Personer med disse tilstande har en højere risiko.'
-                  : 'Alopecia areata is associated with several other autoimmune conditions, including thyroid diseases (Hashimoto\'s, Graves\'), type 1 diabetes, vitiligo and rheumatoid arthritis. People with these conditions have a higher risk.'}
+                  ? 'På grund af den tætte sammenhæng med skjoldbruskkirtlen er en blodprøve for stofskiftet (TSH og om nødvendigt thyreoidea-antistoffer) standard, når diagnosen alopecia areata stilles. Yderligere prøver tages kun, hvis symptomerne peger på det.'
+                  : 'Because of the close link with the thyroid, a blood test of thyroid function (TSH, and thyroid antibodies where relevant) is standard when a diagnosis of alopecia areata is made. Further tests are only taken if symptoms point to them.'}
               </p>
 
               {/* Who gets it */}
@@ -361,14 +400,14 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Alder:' : 'Age:'}</strong>{' '}
                   {isDa
-                    ? 'Tilstanden debuterer ofte i barndommen eller tidlig voksenalder. Den gennemsnitlige debutalder er omkring 25–35 år.'
-                    : 'The condition often begins in childhood or early adulthood. The average age of onset is around 25–35 years.'}
+                    ? 'Tilstanden debuterer oftest før 30-årsalderen. Omkring halvdelen af alle tilfælde begynder før 20-årsalderen, og der ses et mindre yderligere toppunkt mellem 25 og 35 år.'
+                    : 'The condition most often begins before the age of 30. About half of all cases start before the age of 20, with a smaller additional peak between 25 and 35.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Forekomst:' : 'Prevalence:'}</strong>{' '}
                   {isDa
-                    ? 'Ca. 2% af befolkningen vil udvikle alopecia areata på et tidspunkt i livet. Det anslås, at 5–10 millioner mennesker alene i Europa og USA lever med tilstanden.'
-                    : 'Approximately 2% of the population will develop alopecia areata at some point in their lives. It is estimated that 5–10 million people in Europe and the USA alone live with the condition.'}
+                    ? 'Ca. 2% af befolkningen vil udvikle alopecia areata på et tidspunkt i livet. Alene i USA lever omkring 6,7 millioner mennesker med tilstanden, og på verdensplan anslås tallet til omkring 160 millioner.'
+                    : 'Approximately 2% of the population will develop alopecia areata at some point in their lives. In the USA alone around 6.7 million people live with the condition, and worldwide the figure is estimated at about 160 million.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Familiehistorie:' : 'Family history:'}</strong>{' '}
@@ -415,8 +454,8 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Kemisk diphencyprone (DPCP) eller squarinsyre påføres huden for at fremkalde en allergisk reaktion, der kan omdirigere immunsystemet og stimulere hårvækst. Anvendes ved sværere tilfælde.'
-                      : 'Chemical diphencyprone (DPCP) or squaric acid is applied to the skin to induce an allergic reaction that may redirect the immune system and stimulate hair growth. Used in more severe cases.'}
+                      ? 'Kemikalier som diphencyprone (DPCP) eller squarinsyre påføres huden for at fremkalde en allergisk reaktion, der kan omdirigere immunsystemet og stimulere hårvækst. Anvendes ved sværere tilfælde.'
+                      : 'Chemicals such as diphencyprone (DPCP) or squaric acid are applied to the skin to induce an allergic reaction that may redirect the immune system and stimulate hair growth. Used in more severe cases.'}
                   </p>
                 </div>
                 <div>
@@ -425,8 +464,8 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Nyere lægemidler som baricitinib og ritlecitinib (godkendt af EMA og FDA) har vist lovende resultater ved moderat til svær alopecia areata og repræsenterer et stort fremskridt i behandlingen.'
-                      : 'Newer drugs such as baricitinib and ritlecitinib (approved by the EMA and FDA) have shown promising results in moderate to severe alopecia areata and represent a major advance in treatment.'}
+                      ? 'Nyere lægemidler som baricitinib og ritlecitinib (godkendt af EMA og FDA) er et stort fremskridt i behandlingen. De er godkendt til moderat til svær alopecia areata hos voksne — ritlecitinib dog fra 12-årsalderen. Behandlingen kræver løbende kontrol for infektioner samt blodprøver for blodtal og blodfedt.'
+                      : 'Newer drugs such as baricitinib and ritlecitinib (approved by the EMA and FDA) are a major advance in treatment. They are approved for moderate-to-severe alopecia areata in adults — ritlecitinib from the age of 12. Treatment requires ongoing monitoring for infection, together with blood counts and lipid tests.'}
                   </p>
                 </div>
               </div>
@@ -478,8 +517,8 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Kontakt en hudlæge så snart du opdager uforklarligt hårtab — særligt hvis det opstår pludseligt, i runde pletter, eller hvis du har familiehistorie med alopecia eller andre autoimmune sygdomme. En tidlig vurdering giver de bedste behandlingsmuligheder.'
-                      : 'Contact a dermatologist as soon as you notice unexplained hair loss — especially if it occurs suddenly, in round patches, or if you have a family history of alopecia or other autoimmune diseases. An early assessment offers the best treatment options.'}
+                      ? 'Kontakt en hudlæge, så snart du opdager uforklarligt hårtab — særligt hvis det opstår pludseligt, i runde pletter, eller hvis du har familiehistorie med alopecia eller andre autoimmune sygdomme. Er hovedbunden samtidig rød, skællende eller øm, bør du søge vurdering uden at vente.'
+                      : 'Contact a dermatologist as soon as you notice unexplained hair loss — especially if it occurs suddenly, in round patches, or if you have a family history of alopecia or other autoimmune diseases. If the scalp is also red, scaly or tender, seek assessment without delay.'}
                   </p>
                 </div>
                 <div>
@@ -497,7 +536,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
@@ -518,8 +557,8 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Herpes Simplex Virus (HSV)? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Herpes simplex (HSV-1 og HSV-2): symptomer og behandling',
         description:
-          'Lær alt om herpes simplex virus: hvad det er, hvordan HSV-1 og HSV-2 adskiller sig, hvordan udbrud ser ud, og hvilke behandlingsmuligheder der findes. Få hjælp via SKIND.',
+          'HSV-1 giver forkølelsessår, HSV-2 genital herpes. Læs hvordan et udbrud forløber, hvad der udløser det, hvornår det haster, og hvordan det behandles.',
         keywords:
-          'hvad er herpes simplex, HSV-1, HSV-2, forkølelsessår, genital herpes, herpes behandling, SKIND',
+          'herpes simplex, HSV-1, HSV-2, forkølelsessår, genital herpes, herpes behandling, eksem herpeticum, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/herpes-simplex-virus',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Herpes Simplex Virus (HSV)? Causes, Symptoms and Treatment | SKIND',
+        title: 'Herpes simplex (HSV-1 and HSV-2): symptoms and treatment',
         description:
-          'Learn everything about herpes simplex virus: what it is, how HSV-1 and HSV-2 differ, what outbreaks look like, and what treatment options are available. Get help via SKIND.',
+          'HSV-1 causes cold sores, HSV-2 genital herpes. Learn how an outbreak unfolds, what triggers it, when it is urgent, and how antiviral treatment works.',
         keywords:
-          'what is herpes simplex, HSV-1, HSV-2, cold sores, genital herpes, herpes treatment, SKIND',
+          'herpes simplex, HSV-1, HSV-2, cold sores, genital herpes, herpes treatment, eczema herpeticum, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/herpes-simplex-virus',
           languages: {
@@ -47,24 +46,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
+  const headline = isDa
+    ? 'Hvad er herpes simplex-virus (HSV)? Årsager, symptomer og behandling'
+    : 'What is herpes simplex virus (HSV)? Causes, symptoms and treatment';
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: isDa
-      ? 'Hvad er Herpes Simplex Virus (HSV)? Årsager, Symptomer og Behandling'
-      : 'What is Herpes Simplex Virus (HSV)? Causes, Symptoms and Treatment',
+    headline,
     description: isDa
-      ? 'Komplet guide til herpes simplex virus: hvad det er, årsager, symptomer og behandlingsmuligheder.'
-      : 'Complete guide to herpes simplex virus: what it is, causes, symptoms and treatment options.',
+      ? 'Komplet guide til herpes simplex-virus: hvad det er, årsager, symptomer, faresignaler og behandlingsmuligheder.'
+      : 'Complete guide to herpes simplex virus: what it is, causes, symptoms, red flags and treatment options.',
     image: '/blog-herpes-simplex.jpg',
     datePublished: '2026-03-15',
     dateModified: '2026-03-15',
     author: {
-      '@type': 'Person',
-      '@id': 'https://www.skinchange.dk/#peter-bjerring',
-      name: 'Peter Bjerring',
-      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      '@type': 'Organization',
+      '@id': 'https://www.skinchange.dk/#skinchange-ai',
+      name: 'SkinChange.AI',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -80,89 +80,64 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
     },
   };
 
+  const faqs = isDa
+    ? [
+        {
+          q: 'Kan man leve et normalt liv med HSV?',
+          a: 'Ja. Langt de fleste med HSV lever et fuldt og aktivt liv. Udbruddene bliver typisk sjældnere og mildere med årene. Med behandling og enkle forholdsregler kan smitterisikoen mindskes betydeligt, og der er ingen grund til at fravælge hverken parforhold eller sexliv.',
+        },
+        {
+          q: 'Er HSV-1 og HSV-2 det samme?',
+          a: 'De er beslægtede, men ikke identiske. HSV-1 giver oftest forkølelsessår om munden og ligger inaktiv i trigeminusganglion, mens HSV-2 primært giver genital herpes og ligger i de sakrale rodganglier. HSV-1 kan overføres til kønsorganerne ved oralsex, og genital HSV-1 giver som regel færre udbrud end genital HSV-2. Begge typer behandles med de samme antivirale midler.',
+        },
+        {
+          q: 'Skal jeg fortælle min partner om diagnosen?',
+          a: 'Ja, det er vigtigt. Åben kommunikation om HSV-status gør det muligt for begge at træffe informerede valg og tage forholdsregler. Husk, at virussen kan smitte, selv når der ikke er synlige blærer (asymptomatisk virusudskillelse).',
+        },
+        {
+          q: 'Hvornår skal jeg kontakte en læge?',
+          a: 'Kontakt en læge ved dit første genitale udbrud, så diagnosen kan bekræftes med en PCR-podning, ved hyppige udbrud (6 eller flere om året), hvis du er gravid og har genital herpes, eller hvis du er i tvivl om diagnosen. Søg hjælp samme dag ved blærer omkring øjet, ved synsændringer, ved hurtigt spredende sår i eksemramt hud, og ved forvirring eller kraftig hovedpine sammen med et forkølelsessår.',
+        },
+      ]
+    : [
+        {
+          q: 'Can you live a normal life with HSV?',
+          a: 'Yes. The vast majority of people with HSV live full and active lives. Outbreaks typically become less frequent and milder over the years. With treatment and simple precautions the risk of transmission can be reduced substantially, and there is no reason to give up relationships or a sex life.',
+        },
+        {
+          q: 'Are HSV-1 and HSV-2 the same?',
+          a: 'They are related but not identical. HSV-1 most often causes cold sores around the mouth and lies dormant in the trigeminal ganglion, while HSV-2 primarily causes genital herpes and sits in the sacral dorsal root ganglia. HSV-1 can be passed to the genitals through oral sex, and genital HSV-1 usually recurs less often than genital HSV-2. Both types are treated with the same antiviral medicines.',
+        },
+        {
+          q: 'Do I need to tell my partner about the diagnosis?',
+          a: 'Yes, it is important. Open communication about HSV status allows both of you to make informed choices and take precautions. Remember that the virus can be transmitted even when there are no visible blisters (asymptomatic shedding).',
+        },
+        {
+          q: 'When should I contact a doctor?',
+          a: 'See a doctor for a first genital episode, so the diagnosis can be confirmed with a PCR swab, for frequent outbreaks (6 or more per year), if you are pregnant and have genital herpes, or if you are unsure of the diagnosis. Seek help the same day for blisters around the eye, for any change in vision, for rapidly spreading sores on eczema-affected skin, and for confusion or severe headache alongside a cold sore.',
+        },
+      ];
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: isDa
-      ? [
-          {
-            '@type': 'Question',
-            name: 'Hvad er herpes simplex virus (HSV)?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Herpes simplex virus (HSV) er en almindelig, livslang viral infektion. HSV-1 forårsager typisk forkølelsessår om munden, mens HSV-2 primært er knyttet til genital herpes. Virus forbliver inaktivt i nervesystemet efter den første infektion og kan reaktivere og give udbrud.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Hvordan ser et HSV-udbrud ud?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Et udbrud begynder typisk med prikken eller kløe i det berørte område, efterfulgt af væskefyldte blærer. Blærerne brister og danner skorper, og symptomerne forsvinder normalt inden for 2–4 uger. Virus forbliver i kroppen og kan forårsage fremtidige udbrud.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Hvordan smitter herpes simplex virus?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'HSV smitter gennem direkte kontakt med inficeret hud eller kropsvæsker – for eksempel ved kysse, oralsex eller samleje. Virus kan smitte selv uden synlige blærer (asymptomatisk smitte). Der er ingen kur, men antivirale lægemidler som aciclovir kan afkorte og mildne udbrud.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Hvornår skal jeg søge hjælp for HSV?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Søg lægehjælp ved hyppige eller svære udbrud, ved usikkerhed om diagnosen, eller hvis du er gravid og har genital herpes. SKIND giver dig adgang til en certificeret hudlæge inden for 48 timer.',
-            },
-          },
-        ]
-      : [
-          {
-            '@type': 'Question',
-            name: 'What is herpes simplex virus (HSV)?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Herpes simplex virus (HSV) is a common, lifelong viral infection. HSV-1 typically causes oral herpes (cold sores), while HSV-2 is primarily associated with genital herpes. After the initial infection, the virus lies dormant in the nervous system and can reactivate, causing outbreaks.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What does an HSV outbreak look like?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'An outbreak typically begins with tingling or itching in the affected area, followed by fluid-filled blisters. The blisters eventually burst and form crusts, with symptoms usually clearing within 2–4 weeks. The virus remains in the body and can cause future outbreaks.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How does herpes simplex virus spread?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'HSV spreads through direct contact with infected skin or bodily fluids — for example through kissing, oral sex or intercourse. The virus can be transmitted even without visible blisters (asymptomatic shedding). There is no cure, but antiviral medications such as aciclovir can shorten and reduce the severity of outbreaks.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'When should I seek help for HSV?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Seek medical advice for frequent or severe outbreaks, if you are unsure of your diagnosis, or if you are pregnant and have genital herpes. SKIND gives you access to a certified dermatologist within 48 hours.',
-            },
-          },
-        ],
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
   };
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -182,7 +157,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </Link>
               <span className="mx-2">/</span>
               <span className="text-gray-900">
-                {isDa ? 'Hvad er Herpes Simplex Virus?' : 'What is Herpes Simplex Virus?'}
+                {isDa ? 'Hvad er herpes simplex-virus?' : 'What is herpes simplex virus?'}
               </span>
             </nav>
 
@@ -191,33 +166,33 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">15. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '15. marts 2026' : 'March 15, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '6 min læsetid' : '6 min read'}
+                {isDa ? '8 min læsetid' : '8 min read'}
               </span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
-              {isDa
-                ? 'Hvad er Herpes Simplex Virus (HSV)? Årsager, Symptomer og Behandling'
-                : 'What is Herpes Simplex Virus (HSV)? Causes, Symptoms and Treatment'}
+              {headline}
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-herpes-simplex.jpg"
                 alt={
                   isDa
-                    ? 'Herpes simplex virus – hudlidelse behandling'
-                    : 'Herpes simplex virus – skin condition treatment'
+                    ? 'En klynge små, væskefyldte blærer på rødmet hud ved mundvigen – et forkølelsessår.'
+                    : 'A cluster of small, fluid-filled blisters on reddened skin at the corner of the mouth — a cold sore.'
                 }
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -238,53 +213,93 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               <p className="text-xl leading-relaxed text-gray-600 mb-6">
                 {isDa ? (
                   <>
-                    <strong>Herpes simplex virus (HSV) er en af de mest udbredte virale infektioner på verdensplan</strong> — det anslås,
-                    at mere end to tredjedele af jordens befolkning under 50 år bærer HSV-1-infektionen. Trods udbredelsen er der
-                    stadig megen forvirring og stigma forbundet med diagnosen.
+                    <strong>Herpes simplex-virus (HSV) er en af de mest udbredte virusinfektioner i verden</strong> — WHO
+                    anslår, at omkring to tredjedele af alle under 50 år, cirka 3,8 milliarder mennesker, bærer HSV-1.
+                    Trods udbredelsen er der stadig meget forvirring og stigma forbundet med diagnosen.
                   </>
                 ) : (
                   <>
-                    <strong>Herpes simplex virus (HSV) is one of the most widespread viral infections in the world</strong> — it is
-                    estimated that more than two-thirds of the global population under 50 carry HSV-1. Despite its prevalence, there
-                    is still considerable confusion and stigma surrounding the diagnosis.
+                    <strong>Herpes simplex virus (HSV) is one of the most widespread viral infections in the world</strong> — the
+                    WHO estimates that around two-thirds of people under 50, some 3.8 billion, carry HSV-1. Despite its
+                    prevalence, there is still considerable confusion and stigma surrounding the diagnosis.
                   </>
                 )}
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist hvad HSV er, hvad der adskiller HSV-1 fra HSV-2, hvordan et udbrud ser ud, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what HSV is, how HSV-1 differs from HSV-2, what an outbreak looks like, and what you can do about it.'}
+                  ? 'I denne artikel forklarer vi, hvad HSV er, hvad der adskiller HSV-1 fra HSV-2, hvordan et udbrud ser ud, hvornår det haster, og hvad du kan gøre ved det.'
+                  : 'In this article we explain what HSV is, how HSV-1 differs from HSV-2, what an outbreak looks like, when it is urgent, and what you can do about it.'}
               </p>
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is it */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvad er herpes simplex virus?' : 'What is herpes simplex virus?'}
+                {isDa ? 'Hvad er herpes simplex-virus?' : 'What is herpes simplex virus?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Herpes simplex virus (HSV) er en livslang viral infektion, der forårsager udbrud af små, smertefulde blærer på huden og slimhinderne. Der findes to typer:'
+                  ? 'Herpes simplex-virus (HSV) er en livslang virusinfektion, der giver udbrud af små, smertefulde blærer på huden og slimhinderne. Der findes to hovedtyper:'
                   : 'Herpes simplex virus (HSV) is a lifelong viral infection that causes outbreaks of small, painful blisters on the skin and mucous membranes. There are two main types:'}
               </p>
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
                   <strong>HSV-1:</strong>{' '}
                   {isDa
-                    ? 'Typisk ansvarlig for oral herpes, der giver forkølelsessår (herpes labialis) omkring munden og læberne. HSV-1 er ekstremt almindelig og smitter oftest i barndommen via kysses eller berøring.'
-                    : 'Typically responsible for oral herpes, causing cold sores (herpes labialis) around the mouth and lips. HSV-1 is extremely common and is most often transmitted in childhood through kissing or touching.'}
+                    ? 'Giver typisk oral herpes med forkølelsessår (herpes labialis) omkring munden og på læberne. HSV-1 er ekstremt almindelig og overføres oftest allerede i barndommen ved kys eller berøring.'
+                    : 'Typically responsible for oral herpes, causing cold sores (herpes labialis) around the mouth and on the lips. HSV-1 is extremely common and is most often transmitted in childhood through kissing or touching.'}
                 </li>
                 <li>
                   <strong>HSV-2:</strong>{' '}
                   {isDa
-                    ? 'Primært relateret til genital herpes, der forårsager udbrud på kønsorganerne eller i det omkringliggende område. HSV-2 smitter næsten udelukkende ved seksualkontakt.'
-                    : 'Primarily associated with genital herpes, causing outbreaks on the genitals or surrounding areas. HSV-2 is transmitted almost exclusively through sexual contact.'}
+                    ? 'Giver primært genital herpes med udbrud på kønsorganerne eller i området omkring. HSV-2 overføres næsten udelukkende ved seksuel kontakt – men kan også overføres fra mor til barn under fødslen, hvilket er årsagen til neonatal herpes.'
+                    : 'Primarily associated with genital herpes, causing outbreaks on the genitals or the surrounding area. HSV-2 is transmitted almost exclusively through sexual contact — but it can also pass from mother to baby during delivery, which is what causes neonatal herpes.'}
                 </li>
               </ul>
               <p>
                 {isDa
-                  ? 'Det er vigtigt at forstå, at HSV ikke er lig med manglende hygiejne eller promiskuøs adfærd. Virussen er overordentlig smitsom og kan overføres selv af mennesker, der ikke ved, at de er smittet.'
-                  : 'It is important to understand that HSV is not a reflection of poor hygiene or promiscuous behaviour. The virus is highly contagious and can be transmitted by people who do not know they are infected.'}
+                  ? 'Det er vigtigt at forstå, at HSV ikke siger noget om hygiejne eller seksuel adfærd. Virussen er meget smitsom og overføres ofte af mennesker, der ikke ved, at de bærer den.'
+                  : 'It is important to understand that HSV says nothing about hygiene or sexual behaviour. The virus is highly contagious and is often passed on by people who do not know they carry it.'}
+              </p>
+
+              {/* Red flags */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvornår er herpes en akut situation?' : 'When is herpes an emergency?'}
+              </h2>
+              <p>
+                {isDa
+                  ? 'De fleste herpesudbrud er ubehagelige, men ufarlige. Fire situationer skal dog vurderes af en læge samme dag.'
+                  : 'Most herpes outbreaks are uncomfortable rather than dangerous. Four situations, however, need to be seen by a doctor the same day.'}
+              </p>
+
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa
+                    ? 'Eksem herpeticum: HSV, der breder sig i eksemramt hud og giver hurtigt tiltagende, smertefulde, udstansede sår, ofte med feber – kræver antiviral behandling samme dag. Øjenherpes: blærer på eller nær øjet, øjensmerter eller ændret syn kan være HSV-keratitis, som kan skade synet og aldrig må behandles med binyrebarkhormon i dråber eller creme. Neonatal herpes: et førstegangsudbrud af genital herpes i tredje trimester er en obstetrisk akutsituation – fortæl det straks til jordemoder eller fødselslæge. Herpesencefalitis: forvirring, sløvhed, kraftig hovedpine eller feber sammen med et forkølelsessår kræver akut vurdering.'
+                    : 'Eczema herpeticum: HSV spreading across eczema-affected skin, producing rapidly spreading, painful, punched-out erosions, often with fever — this needs antiviral treatment the same day. Ocular herpes: blisters on or near the eye, eye pain or any change in vision may mean HSV keratitis, which can damage sight and must never be treated with a steroid drop or cream. Neonatal herpes: a first genital episode in the third trimester of pregnancy is an obstetric emergency — tell your midwife or obstetrician immediately. HSV encephalitis: confusion, drowsiness, severe headache or fever alongside a cold sore needs emergency assessment.'}
+                </p>
+              </div>
+              <p>
+                {isDa ? (
+                  <>
+                    Eksem herpeticum er grunden til, at alle med{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      atopisk eksem
+                    </Link>{' '}
+                    bør kende dette faresignal. En hudbarriere, der i forvejen er beskadiget, giver virussen fri bane, og udslættet kan brede sig over store hudområder på et døgn.
+                  </>
+                ) : (
+                  <>
+                    Eczema herpeticum is the reason everyone with{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      atopic eczema
+                    </Link>{' '}
+                    should know this warning sign. A skin barrier that is already damaged gives the virus a clear run, and the rash can cover large areas of skin within a day.
+                  </>
+                )}
               </p>
 
               {/* What does it look like */}
@@ -293,45 +308,45 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </h2>
               <p>
                 {isDa
-                  ? 'Et udbrud følger typisk et forudsigeligt mønster. Mange mennesker oplever varselsymptomer, inden blærerne opstår:'
+                  ? 'Et udbrud følger typisk et forudsigeligt mønster. Mange oplever varselssymptomer, inden blærerne opstår:'
                   : 'An outbreak typically follows a predictable pattern. Many people experience warning symptoms before the blisters appear:'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Prodromalfasen (varselsymptomer)' : 'Prodromal phase (warning symptoms)'}
+                {isDa ? 'Varselsfasen (prodromalfasen)' : 'The prodromal phase (warning symptoms)'}
               </h3>
               <p>
                 {isDa
-                  ? 'Udbruddet begynder typisk med prikken, brænden, kløe eller følelsesløshed i det berørte område – ofte 1–2 dage inden blærerne opstår. Nogle oplever også lokal ømhed eller hævede lymfeknuder.'
-                  : 'The outbreak typically begins with tingling, burning, itching or numbness in the affected area — often 1–2 days before the blisters appear. Some people also experience local tenderness or swollen lymph nodes.'}
+                  ? 'Udbruddet begynder typisk med prikken, svie, kløe eller følelsesløshed i det berørte område – ofte 1–2 dage inden blærerne kommer. Nogle oplever også lokal ømhed eller hævede lymfeknuder. Det er her, antiviral behandling har størst effekt.'
+                  : 'The outbreak typically begins with tingling, stinging, itching or numbness in the affected area — often 1–2 days before the blisters appear. Some people also notice local tenderness or swollen lymph nodes. This is the point at which antiviral treatment has the greatest effect.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Blærefasen' : 'Blister phase'}
+                {isDa ? 'Blærefasen' : 'The blister phase'}
               </h3>
               <p>
                 {isDa
-                  ? 'Herefter opstår der klynger af små, væskefyldte blærer på et rødmet underlag. Blærerne er typisk smertefulde. For HSV-1 sidder de oftest ved mundvigen eller på læberne; for HSV-2 på eller omkring kønsorganerne, sæderne eller lårene.'
+                  ? 'Herefter opstår klynger af små, væskefyldte blærer på et rødmet underlag. Blærerne er typisk smertefulde. Ved HSV-1 sidder de oftest ved mundvigen eller på læberne; ved HSV-2 på eller omkring kønsorganerne, balderne eller lårene.'
                   : 'Clusters of small, fluid-filled blisters then appear on a reddened base. The blisters are typically painful. With HSV-1 they usually form at the corner of the mouth or on the lips; with HSV-2 on or around the genitals, buttocks or thighs.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Helningsfasen' : 'Healing phase'}
+                {isDa ? 'Helingsfasen' : 'The healing phase'}
               </h3>
               <p>
                 {isDa
-                  ? 'Blærerne brister og danner sår, som efterfølgende dækkes af skorper. Symptomerne forsvinder normalt inden for 2–4 uger ved det første udbrud og hurtigere ved efterfølgende udbrud. Huden heler oftest uden arvæv.'
-                  : 'The blisters burst and form ulcers, which are subsequently covered by a crust. Symptoms usually clear within 2–4 weeks during the first outbreak and more quickly during subsequent outbreaks. The skin usually heals without scarring.'}
+                  ? 'Blærerne brister og danner sår, som derefter dækkes af skorper. Symptomerne forsvinder normalt inden for 2–4 uger ved det første udbrud og hurtigere ved senere udbrud. Huden heler oftest uden ar.'
+                  : 'The blisters burst and form ulcers, which are then covered by a crust. Symptoms usually clear within 2–4 weeks during a first outbreak and more quickly in later ones. The skin usually heals without scarring.'}
               </p>
 
-              {/* Why does it happen */}
+              {/* Triggers */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvorfor sker det – og hvad udløser udbrud?' : 'Why does it happen — and what triggers outbreaks?'}
+                {isDa ? 'Hvad udløser et HSV-udbrud?' : 'What triggers an HSV outbreak?'}
               </h2>
               <p>
                 {isDa
-                  ? 'HSV smitter gennem direkte kontakt med inficeret hud eller kropsvæsker. Virussen trænger ind i huden eller slimhinderne og etablerer sig herefter i de sensoriske nerveceller tæt ved rygmarven, hvor den forbliver inaktiv (latent) resten af livet. Visse faktorer kan reaktivere virussen og udløse et nyt udbrud:'
-                  : 'HSV spreads through direct contact with infected skin or bodily fluids. The virus penetrates the skin or mucous membranes and then establishes itself in sensory nerve cells near the spinal cord, where it remains dormant (latent) for life. Certain factors can reactivate the virus and trigger a new outbreak:'}
+                  ? 'HSV trænger ind gennem huden eller slimhinderne og rejser derfra langs en nerve ind til en samling nervecellelegemer, hvor den bliver resten af livet. HSV-1 slår sig ned i trigeminusganglion ved kraniebasis, mens HSV-2 lægger sig i de sakrale rodganglier nederst i rygsøjlen. Det er derfor, hver type vender tilbage i det samme område – HSV-1 om munden, HSV-2 omkring kønsorganer, balder og lår. Visse faktorer kan vække virussen og udløse et nyt udbrud:'
+                  : 'HSV enters through the skin or mucous membranes and travels from there along a nerve to a cluster of nerve cell bodies, where it stays for life. HSV-1 settles in the trigeminal ganglion at the base of the skull, while HSV-2 settles in the sacral dorsal root ganglia at the bottom of the spine. That is why each type returns to the same region — HSV-1 around the mouth, HSV-2 around the genitals, buttocks and thighs. Certain factors can wake the virus and trigger a new outbreak:'}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
@@ -341,10 +356,10 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                     : 'Psychological or physical stress is one of the most common triggers.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Svækket immunsystem:' : 'Weakened immune system:'}</strong>{' '}
+                  <strong>{isDa ? 'Svækket immunforsvar:' : 'A weakened immune system:'}</strong>{' '}
                   {isDa
-                    ? 'Sygdom, medicinering (f.eks. immunsuppressiva) eller HIV kan øge hyppigheden af udbrud.'
-                    : 'Illness, medication (e.g. immunosuppressants) or HIV can increase the frequency of outbreaks.'}
+                    ? 'Sygdom, immundæmpende medicin eller HIV kan øge hyppigheden af udbrud.'
+                    : 'Illness, immunosuppressive medication or HIV can increase the frequency of outbreaks.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Sollys (UV-stråling):' : 'Sunlight (UV radiation):'}</strong>{' '}
@@ -355,20 +370,20 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 <li>
                   <strong>{isDa ? 'Hormonelle ændringer:' : 'Hormonal changes:'}</strong>{' '}
                   {isDa
-                    ? 'Menstruation kan udløse HSV-2-udbrud hos kvinder.'
-                    : 'Menstruation can trigger HSV-2 outbreaks in women.'}
+                    ? 'Menstruation kan udløse udbrud – både af HSV-1 og HSV-2.'
+                    : 'Menstruation can trigger outbreaks of either type, HSV-1 as well as HSV-2.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Sygdom med feber:' : 'Febrile illness:'}</strong>{' '}
+                  <strong>{isDa ? 'Feber og infektion:' : 'Fever and infection:'}</strong>{' '}
                   {isDa
-                    ? 'Forkølelse, influenza og andre infektioner kan reaktivere virussen.'
-                    : 'Colds, influenza and other infections can reactivate the virus.'}
+                    ? 'Forkølelse, influenza og andre infektioner kan reaktivere virussen – deraf det danske navn forkølelsessår.'
+                    : 'Colds, influenza and other infections can reactivate the virus — hence the name cold sore.'}
                 </li>
               </ul>
               <p>
                 {isDa
-                  ? 'Asymptomatisk smitte er også mulig: virussen kan udskilles fra huden (viral shedding) selv uden synlige blærer, hvilket er grunden til, at HSV kan smitte videre, selvom der ikke er synlige tegn på udbrud.'
-                  : 'Asymptomatic transmission is also possible: the virus can shed from the skin (viral shedding) even without visible blisters, which is why HSV can be transmitted even when there are no visible signs of an outbreak.'}
+                  ? 'Asymptomatisk virusudskillelse er også mulig: virussen kan udskilles fra huden uden synlige blærer. Det er forklaringen på, at HSV kan smitte videre, selv når der ikke er tegn på et udbrud.'
+                  : 'Asymptomatic shedding is also possible: the virus can be shed from the skin without visible blisters. That is why HSV can be passed on even when there is no sign of an outbreak.'}
               </p>
 
               {/* Who gets it */}
@@ -384,30 +399,73 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 <li>
                   <strong>HSV-1:</strong>{' '}
                   {isDa
-                    ? 'WHO estimerer, at ca. 67% af verdens befolkning under 50 år er inficeret med HSV-1. De fleste smittes i barndommen og mærker aldrig symptomer.'
-                    : 'The WHO estimates that approximately 67% of the global population under 50 is infected with HSV-1. Most are infected in childhood and never experience symptoms.'}
+                    ? 'WHO anslår, at omkring 64% af alle mellem 0 og 49 år – cirka 3,8 milliarder mennesker – levede med HSV-1 i 2020. De fleste smittes i barndommen og mærker aldrig symptomer.'
+                    : 'The WHO estimates that around 64% of people aged 0–49 — roughly 3.8 billion people — were living with HSV-1 in 2020. Most are infected in childhood and never notice symptoms.'}
                 </li>
                 <li>
                   <strong>HSV-2:</strong>{' '}
                   {isDa
-                    ? 'Ca. 11% af verdens befolkning under 50 år bærer HSV-2. Prævalensen er højere hos kvinder end mænd.'
-                    : 'Approximately 11% of the global population under 50 carries HSV-2. Prevalence is higher in women than men.'}
+                    ? 'Omkring 13% af alle mellem 15 og 49 år – cirka 520 millioner mennesker – bærer HSV-2. Forekomsten er højere hos kvinder end hos mænd.'
+                    : 'Around 13% of people aged 15–49 — roughly 520 million — carry HSV-2. Prevalence is higher in women than in men.'}
                 </li>
               </ul>
               <p>
                 {isDa
-                  ? 'Mange smittede oplever aldrig tydelige symptomer eller bemærker kun milde tegn, som de tilskriver andre årsager. HSV kan derfor bæres og spredes uvidende.'
-                  : 'Many infected individuals never experience noticeable symptoms, or only notice mild signs that they attribute to other causes. HSV can therefore be carried and spread unknowingly.'}
+                  ? 'Mange smittede oplever aldrig tydelige symptomer eller bemærker kun milde tegn, som de tilskriver andre årsager. HSV kan derfor bæres og gives videre, uden at man ved det.'
+                  : 'Many infected people never have obvious symptoms, or notice only mild signs that they put down to something else. HSV can therefore be carried and passed on unknowingly.'}
+              </p>
+
+              {/* Diagnosis */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvordan stilles diagnosen?' : 'How is herpes diagnosed?'}
+              </h2>
+              <p>
+                {isDa ? (
+                  <>
+                    Et førstegangsudbrud af genital herpes bør bekræftes med en typespecifik PCR-podning fra en blære eller et sår. Det er vigtigt at vide, om det er HSV-1 eller HSV-2: genital HSV-1 vender langt sjældnere tilbage og udskilles i mindre grad end genital HSV-2, og det ændrer både prognosen og det, du skal fortælle en partner. Typebestemmelse kan ikke laves ud fra et billede, og et billede kan heller ikke skelne herpes fra syfilis, aftøse sår eller{' '}
+                    <Link href={`/${lang}/blog/genital-warts`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      kønsvorter
+                    </Link>
+                    . Ved et førstegangsudbrud i kønsområdet bør du derfor undersøges hos lægen og tilbydes en fuld undersøgelse for kønssygdomme.
+                  </>
+                ) : (
+                  <>
+                    A first genital episode should be confirmed with a type-specific PCR swab taken from a blister or ulcer. Knowing whether it is HSV-1 or HSV-2 matters: genital HSV-1 recurs far less often and sheds less than genital HSV-2, which changes both the outlook and what you tell a partner. Typing cannot be done from a photograph, and a photo cannot separate herpes from syphilis, aphthous ulcers or{' '}
+                    <Link href={`/${lang}/blog/genital-warts`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      genital warts
+                    </Link>
+                    . A first episode in the genital area should therefore be examined in person, with a full sexual health screen offered alongside it.
+                  </>
+                )}
+              </p>
+              <p>
+                {isDa ? (
+                  <>
+                    Herpes simplex forveksles undertiden med{' '}
+                    <Link href={`/${lang}/blog/herpes-zoster-shingles`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      helvedesild
+                    </Link>
+                    , som skyldes en anden virus i samme familie. Helvedesild sidder i ét bånd på den ene side af kroppen og stopper ved midtlinjen, mens HSV vender tilbage i det samme lille område igen og igen.
+                  </>
+                ) : (
+                  <>
+                    Herpes simplex is sometimes confused with{' '}
+                    <Link href={`/${lang}/blog/herpes-zoster-shingles`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      shingles
+                    </Link>
+                    , which is caused by a different virus in the same family. Shingles sits in a single band on one side of the body and stops at the midline, whereas HSV returns to the same small area again and again.
+                  </>
+                )}
               </p>
 
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Behandling og håndtering af HSV' : 'Treatment and management of HSV'}
+                {isDa ? 'Hvordan behandles og håndteres HSV?' : 'How is HSV treated and managed?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Der er i dag ingen kur mod HSV — virussen forbliver i kroppen livet ud. Antivirale lægemidler kan imidlertid afkorte udbrud, mindske symptomerne og reducere smitterisikoen:'
-                  : 'There is currently no cure for HSV — the virus remains in the body for life. However, antiviral medications can shorten outbreaks, reduce symptoms and lower the risk of transmission:'}
+                  ? 'Der findes ingen kur mod HSV – virussen bliver i kroppen livet ud. Antivirale lægemidler kan til gengæld afkorte udbrud, dæmpe symptomerne og nedsætte smitterisikoen:'
+                  : 'There is no cure for HSV — the virus stays in the body for life. Antiviral medicines can, however, shorten outbreaks, ease symptoms and lower the risk of transmission:'}
               </p>
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
@@ -417,8 +475,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Antivirale midler som aciclovir, valaciclovir eller famciclovir tages ved udbrudets første tegn og afkorter blærefasen markant. Jo tidligere behandlingen startes, jo bedre effekt.'
-                      : 'Antiviral agents such as aciclovir, valaciclovir or famciclovir are taken at the first signs of an outbreak and significantly shorten the blister phase. The earlier treatment is started, the better the effect.'}
+                      ? 'Antivirale midler som aciclovir, valaciclovir eller famciclovir tages ved udbruddets første tegn og afkorter blærefasen mærkbart. Jo tidligere behandlingen startes – helst allerede i varselsfasen – jo bedre virker den.'
+                      : 'Antiviral agents such as aciclovir, valaciclovir or famciclovir are taken at the first sign of an outbreak and noticeably shorten the blister phase. The earlier treatment is started — ideally during the prodromal phase — the better it works.'}
                   </p>
                 </div>
                 <div>
@@ -427,8 +485,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved hyppige udbrud (6 eller flere om året) eller af hensyn til partnerbeskyttelse kan daglig antiviral behandling reducere hyppighed, varighed og smitterisiko med op til 50%.'
-                      : 'For frequent outbreaks (6 or more per year) or to protect a partner, daily antiviral therapy can reduce frequency, duration and transmission risk by up to 50%.'}
+                      ? 'Ved hyppige udbrud (6 eller flere om året) kan daglig antiviral behandling nedsætte antallet af symptomgivende udbrud med omkring 70–80%, og mange bliver helt fri for udbrud, så længe de tager medicinen. Tages behandlingen af hensyn til en partner, er tallet et andet: den nedsætter risikoen for at overføre HSV-2 til en usmittet partner med omkring 50%.'
+                      : 'For frequent outbreaks (6 or more per year), daily antiviral therapy reduces the number of symptomatic recurrences by around 70–80%, and many people become completely free of outbreaks while they take it. Taken to protect a partner, the figure is a different one: it reduces the risk of passing HSV-2 to an uninfected partner by around 50%.'}
                   </p>
                 </div>
                 <div>
@@ -437,8 +495,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Solcreme på læberne (SPF 30+), stresshåndtering, tilstrækkelig søvn og generel immunstyrkelse kan reducere antallet af HSV-1-udbrud.'
-                      : 'Sunscreen on the lips (SPF 30+), stress management, adequate sleep and general immune support can reduce the number of HSV-1 outbreaks.'}
+                      ? 'Solcreme på læberne (SPF 30 eller derover), stresshåndtering og tilstrækkelig søvn kan reducere antallet af HSV-1-udbrud.'
+                      : 'Sunscreen on the lips (SPF 30 or above), stress management and adequate sleep can reduce the number of HSV-1 outbreaks.'}
                   </p>
                 </div>
                 <div>
@@ -447,8 +505,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Det er vigtigt at informere seksuelle partnere om diagnosen og tage de nødvendige forholdsregler (kondombrug, undgå kontakt under udbrud). Åben kommunikation er afgørende for at beskytte sin partner og mindske stigmaet.'
-                      : 'It is important to inform sexual partners of the diagnosis and take the necessary precautions (condom use, avoid contact during outbreaks). Open communication is essential for protecting partners and reducing stigma.'}
+                      ? 'Fortæl seksuelle partnere om diagnosen, og tag de nødvendige forholdsregler: kondom, og undgå kontakt under udbrud. Er du gravid, skal jordemoder og læge kende din herpesstatus, så fødslen kan planlægges.'
+                      : 'Tell sexual partners about the diagnosis and take the necessary precautions: condoms, and avoid contact during an outbreak. If you are pregnant, your midwife and doctor need to know your herpes status so that the birth can be planned.'}
                   </p>
                 </div>
               </div>
@@ -458,8 +516,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
-                    ? 'Herpes simplex-infektioner er klassificeret som 1F00 i WHO\'s internationale sygdomsklassifikation (ICD-11). Tilstanden præsenterer sig som smertefulde vesikler på oral eller genital slimhinde og behandles primært med antivirale midler som aciclovir.'
-                    : "Herpes simplex infections are classified as 1F00 in the WHO's International Classification of Diseases (ICD-11). The condition presents as painful vesicles on oral or genital mucosa and is treated primarily with antiviral medications such as aciclovir."}
+                    ? 'Herpes simplex-infektioner er klassificeret som 1F00 i WHO\'s internationale sygdomsklassifikation (ICD-11). Tilstanden viser sig som smertefulde blærer på hud eller oral og genital slimhinde og behandles primært med antivirale midler som aciclovir.'
+                    : "Herpes simplex infections are classified as 1F00 in the WHO's International Classification of Diseases (ICD-11). The condition presents as painful vesicles on the skin or on oral and genital mucosa and is treated primarily with antiviral medicines such as aciclovir."}
                 </p>
               </div>
 
@@ -468,57 +526,23 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Kan man leve et normalt liv med HSV?' : 'Can you live a normal life with HSV?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Ja. Langt de fleste med HSV lever et fuldt og aktivt liv. Udbrud bliver typisk sjældnere og mildere med tiden. Med korrekt behandling og forholdsregler kan man reducere smitterisiko og leve normalt – herunder i kærlighedsforhold og seksuelt liv.'
-                      : 'Yes. The vast majority of people with HSV live full and active lives. Outbreaks typically become less frequent and milder over time. With appropriate treatment and precautions, transmission risk can be reduced and one can live normally — including in relationships and sexual life.'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Er HSV-1 og HSV-2 det samme?' : 'Are HSV-1 and HSV-2 the same?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'De er beslægtede, men ikke identiske. HSV-1 giver oftest oral herpes, mens HSV-2 primært forårsager genital herpes. HSV-1 kan dog overføres til kønsorganerne ved oralsex, og vice versa. Begge typer håndteres med de samme antivirale midler.'
-                      : 'They are related but not identical. HSV-1 most often causes oral herpes, while HSV-2 primarily causes genital herpes. HSV-1 can however be transmitted to the genitals through oral sex, and vice versa. Both types are managed with the same antiviral medications.'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Skal jeg fortælle min partner om diagnosen?' : 'Do I need to tell my partner about the diagnosis?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Ja, det er vigtigt. Åben kommunikation om HSV-status sætter begge parter i stand til at træffe informerede beslutninger og tage forholdsregler. Husk at virus kan smitte selv uden synlige udbrud (asymptomatisk smitte).'
-                      : 'Yes, it is important. Open communication about HSV status enables both partners to make informed decisions and take precautions. Remember that the virus can be transmitted even without visible outbreaks (asymptomatic shedding).'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Kontakt en hudlæge ved hyppige udbrud (mere end 6 om året), hvis du er gravid og har genital herpes, hvis du er usikker på din diagnose, eller hvis symptomerne er alvorlige. En korrekt diagnose og behandlingsplan er vigtig.'
-                      : 'Contact a dermatologist for frequent outbreaks (more than 6 per year), if you are pregnant and have genital herpes, if you are unsure of your diagnosis, or if symptoms are severe. A correct diagnosis and treatment plan is important.'}
-                  </p>
-                </div>
+                {faqs.map((faq) => (
+                  <div key={faq.q}>
+                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <p>{faq.a}</p>
+                  </div>
+                ))}
               </div>
 
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig diagnose og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
-                    : 'Upload photos of your skin via the SKIND app and receive a personal diagnosis and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                    ? 'Upload billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge – diskret og uden ventetid. Er det dit første udbrud i kønsområdet, skal du dog undersøges hos lægen, så diagnosen kan bekræftes med en podning.'
+                    : 'Upload photos via the SKIND app and get an assessment from a certified dermatologist — discreetly and without a waiting list. If this is your first outbreak in the genital area, you should still be examined in person so the diagnosis can be confirmed with a swab.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -534,8 +558,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

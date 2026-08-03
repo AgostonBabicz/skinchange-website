@@ -9,10 +9,6 @@ interface PageProps {
 
 const category = faqCategories.find(c => c.slug === 'contact')!;
 
-export async function generateStaticParams() {
-  return [{ lang: 'da' }, { lang: 'en' }];
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
@@ -20,13 +16,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? 'Kontakt & Support – SKIND Online Hudlæge'
       : 'Contact & Support – SKIND Online Dermatologist',
     description: isDa
-      ? 'Kontakt SKIND support. Vi besvarer alle henvendelser uden ugrundet ophold på info@skinchange.ai.'
-      : 'Contact SKIND support. We respond to all inquiries without delay at info@skinchange.ai.',
+      ? 'Kontakt SKIND support. Vi besvarer alle henvendelser hurtigst muligt på info@skinchange.ai eller +45 20 60 75 88.'
+      : 'Contact SKIND support. We respond to all enquiries without undue delay at info@skinchange.ai or +45 20 60 75 88.',
     keywords: isDa
-      ? 'SKIND kontakt, hudlæge support, online hudlæge hjælp'
+      ? 'SKIND kontakt, hudlægesupport, online hudlægehjælp'
       : 'SKIND contact, dermatologist support, online dermatologist help',
     alternates: {
-      canonical: `https://www.skinchange.dk/${params.lang}/faq/contact`,
+      canonical: `https://www.skinchange.dk/${params.lang}/faq/contact/`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/faq/contact/',
+        da: 'https://www.skinchange.dk/da/faq/contact/',
+        en: 'https://www.skinchange.dk/en/faq/contact/',
+      },
     },
   };
 }

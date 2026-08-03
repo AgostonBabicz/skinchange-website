@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,9 +12,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Eksem (Atopisk Dermatitis)? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Eksem (atopisk dermatitis): behandling | SKIND',
         description:
-          'Lær alt om eksem og atopisk dermatitis: hvad det er, hvorfor det opstår, hvem der rammes og hvilke behandlingsmuligheder der findes. Få hjælp via SKIND.',
+          'Eksem (atopisk dermatitis) giver kløende, tør og rød hud. Læs om årsager, udløsere, behandling med fugtighedscreme og steroid — og hvornår du skal søge læge.',
         keywords:
           'hvad er eksem, atopisk dermatitis, eksem symptomer, eksem behandling, kløende hud, hudlæge eksem, SKIND',
         alternates: {
@@ -28,9 +27,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Eczema (Atopic Dermatitis)? Causes, Symptoms and Treatment | SKIND',
+        title: 'Eczema (atopic dermatitis): treatment | SKIND',
         description:
-          'Learn everything about eczema and atopic dermatitis: what it is, why it happens, who gets it and what treatment options are available. Get help via SKIND.',
+          'Eczema (atopic dermatitis) causes itchy, dry, red skin. Learn the causes, the triggers, treatment with emollients and steroids, and when to seek medical help.',
         keywords:
           'what is eczema, atopic dermatitis, eczema symptoms, eczema treatment, itchy skin, dermatologist eczema, SKIND',
         alternates: {
@@ -60,11 +59,10 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-12',
     dateModified: '2026-03-12',
     author: {
-      '@type': 'Person',
-      '@id': 'https://www.skinchange.dk/#peter-bjerring',
-      name: 'Peter Bjerring',
-      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      '@type': 'Organization',
+      '@id': 'https://www.skinchange.dk/#skinchange-ai',
+      name: 'SkinChange.AI',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -87,52 +85,52 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er eksem?',
+            name: 'Kan eksem forsvinde helt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Eksem (atopisk dermatitis) er en kronisk, inflammatorisk hudlidelse, der giver kløende, rød og tør hud. Det er ikke smitsomt og skyldes en kombination af genetiske faktorer og overaktivt immunsystem.',
+              text: 'Mange børn vokser fra eksem i løbet af ungdomsårene, men for andre forbliver det en kronisk tilstand, der kræver løbende håndtering. Den rette behandling kan dog give god, langvarig kontrol over eksemet.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Er eksem smitsomt?',
+            name: 'Er eksem det samme som tør hud?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nej, eksem er ikke smitsomt. Du kan ikke smitte andre med eksem eller få det fra en anden person.',
+              text: 'Nej. Tør hud kan forekomme hos alle og skyldes manglende fugt. Eksem er derimod en inflammatorisk tilstand med immunologisk baggrund, der kræver medicinsk behandling ud over blot at fugte huden.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvornår skal jeg søge lægehjælp for eksem?',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Søg hjælp hvis kløen forstyrrer din søvn, hvis huden er inficeret eller væsker, eller hvis håndkøbsmidler ikke hjælper. SKIND giver dig adgang til en hudlæge inden for 48 timer.',
+              text: 'Kontakt en hudlæge, hvis kløen forstyrrer din søvn, huden begynder at væske eller blive inficeret, håndkøbsmidler ikke hjælper, eller hvis eksem påvirker dit daglige liv markant. Ved pludselig forværring med små, smertefulde blærer og feber skal du søge læge samme dag.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is eczema?',
+            name: 'Can eczema disappear completely?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Eczema (atopic dermatitis) is a chronic, inflammatory skin condition causing itchy, red and dry skin. It is not contagious and results from a combination of genetic factors and an overactive immune system.',
+              text: 'Many children grow out of eczema during their teenage years, but for others it remains a chronic condition requiring ongoing management. With the right treatment, however, eczema can be brought under good, long-term control.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Is eczema contagious?',
+            name: 'Is eczema the same as dry skin?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No, eczema is not contagious. You cannot spread it to others or catch it from another person.',
+              text: 'No. Dry skin can occur in anyone and is caused by a lack of moisture. Eczema, however, is an inflammatory condition with an immunological basis that requires medical treatment beyond simply moisturising.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I seek medical help for eczema?',
+            name: 'When should I contact a dermatologist?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seek help if itching is disturbing your sleep, if the skin is infected or weeping, or if over-the-counter remedies are not helping. SKIND gives you access to a dermatologist within 48 hours.',
+              text: 'Contact a dermatologist if itching is disturbing your sleep, the skin starts to weep or become infected, over-the-counter remedies are not helping, or if eczema is significantly affecting your daily life. If eczema suddenly worsens with small, painful blisters and fever, seek medical care the same day.',
             },
           },
         ],
@@ -140,13 +138,11 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -175,10 +171,10 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">12. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '12. marts 2026' : 'March 12, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '7 min læsetid' : '7 min read'}
+                {isDa ? '6 min læsetid' : '6 min read'}
               </span>
             </div>
 
@@ -190,18 +186,20 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-eczema.jpg"
                 alt={
                   isDa
-                    ? 'Eksem – atopisk dermatitis behandling'
-                    : 'Eczema – atopic dermatitis treatment'
+                    ? 'Nærbillede af tør, rød og skællende hud i en albuebøjning ved atopisk eksem.'
+                    : 'Close-up of dry, red, flaking skin in the crook of an elbow affected by atopic eczema.'
                 }
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -253,6 +251,33 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   : 'Atopic dermatitis — commonly known as eczema — is a chronic, inflammatory skin condition that makes the skin red, itchy and sometimes swollen. "Atopic" refers to a hereditary tendency towards allergic reactions, and the condition is closely linked to asthma and hay fever in what is called the atopic triad.'}
               </p>
               <p>
+                {isDa ? (
+                  <>
+                    Eksem er en fællesbetegnelse for flere inflammatoriske hudlidelser. Atopisk dermatitis er den hyppigste form, men et kløende udslæt kan også skyldes{' '}
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      kontakteksem
+                    </Link>
+                    , der udløses af noget, huden har rørt ved, eller{' '}
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      seboroisk eksem
+                    </Link>
+                    , som rammer fedtede områder som hovedbund, øjenbryn og næsefløje.
+                  </>
+                ) : (
+                  <>
+                    Eczema is an umbrella term for several inflammatory skin conditions. Atopic dermatitis is the most common form, but an itchy rash can also be caused by{' '}
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      contact dermatitis
+                    </Link>
+                    , triggered by something the skin has touched, or{' '}
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      seborrhoeic dermatitis
+                    </Link>
+                    , which affects greasy areas such as the scalp, eyebrows and sides of the nose.
+                  </>
+                )}
+              </p>
+              <p>
                 {isDa
                   ? 'Eksem er ikke smitsomt. Du kan hverken smitte andre eller få det fra en anden person. Det er en indre tilstand drevet af immunsystemet og genetik.'
                   : 'Eczema is not contagious. You cannot spread it to others or catch it from another person. It is an internal condition driven by the immune system and genetics.'}
@@ -301,9 +326,54 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </ul>
               <p>
                 {isDa
-                  ? 'Hos voksne er eksem hyppigst på albuer, knæhase, håndled, nakke og ansigt. Hos spædbørn og småbørn ses det ofte i ansigtet og på kroppen.'
-                  : 'In adults, eczema most commonly affects the elbows, backs of the knees, wrists, neck and face. In infants and young children, it often appears on the face and torso.'}
+                  ? 'Hos voksne sidder eksem hyppigst på indersiden af albuerne og i knæhaserne samt på håndled, nakke og i ansigtet. Hos spædbørn og småbørn ses det ofte i ansigtet og på kroppen.'
+                  : 'In adults, eczema most commonly affects the insides of the elbows and the backs of the knees, along with the wrists, neck and face. In infants and young children, it often appears on the face and torso.'}
               </p>
+              <p>
+                {isDa ? (
+                  <>
+                    Placeringen er et vigtigt fingerpeg: atopisk eksem sidder i bøjefurerne, mens skællende plaques på ydersiden af albuer og knæ oftere peger på{' '}
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      psoriasis
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    Distribution is an important clue: atopic eczema sits in the skin creases, whereas scaly plaques on the outer points of the elbows and knees more often point to{' '}
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      psoriasis
+                    </Link>
+                    .
+                  </>
+                )}
+              </p>
+
+              {/* Red flags */}
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa ? (
+                    <>
+                      Søg læge samme dag, hvis eksem pludselig forværres med grupper af små, smertefulde, som udstansede sår eller blærer — især ved feber eller påvirket almentilstand. Det kan være eczema herpeticum, en{' '}
+                      <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        herpesinfektion
+                      </Link>{' '}
+                      i eksemhud, der kræver akut antiviral behandling.
+                    </>
+                  ) : (
+                    <>
+                      Seek same-day medical care if eczema suddenly worsens with clusters of small, painful, punched-out sores or blisters, especially with fever or feeling unwell. This can be eczema herpeticum — a{' '}
+                      <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        herpes infection
+                      </Link>{' '}
+                      of eczematous skin that needs urgent antiviral treatment.
+                    </>
+                  )}
+                </p>
+              </div>
 
               {/* Why does it happen */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
@@ -316,39 +386,39 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Svækket hudbarriere' : 'Impaired skin barrier'}
+                {isDa ? 'Hvad sker der med hudbarrieren?' : 'What happens to the skin barrier?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Hos mennesker med eksem er hudbarrieren svækket, hvilket gør det lettere for irritanter og allergener at trænge ind og for fugt at fordampe ud. En mutation i genet for filaggrin – et protein, der er essentielt for en sund hudbarriere – er en hyppig årsag.'
-                  : 'In people with eczema, the skin barrier is impaired, making it easier for irritants and allergens to penetrate and for moisture to evaporate out. A mutation in the gene for filaggrin — a protein essential for a healthy skin barrier — is a common cause.'}
+                  ? 'Den bliver utæt. Hos mennesker med eksem er hudbarrieren svækket, hvilket gør det lettere for irritanter og allergener at trænge ind og for fugt at fordampe ud. En mutation i genet for filaggrin – et protein, der er essentielt for en sund hudbarriere – er en hyppig årsag.'
+                  : 'It becomes leaky. In people with eczema, the skin barrier is impaired, making it easier for irritants and allergens to penetrate and for moisture to evaporate out. A mutation in the gene for filaggrin — a protein essential for a healthy skin barrier — is a common cause.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Overaktivt immunsystem' : 'Overactive immune system'}
+                {isDa ? 'Hvorfor overreagerer immunsystemet?' : 'Why does the immune system overreact?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Immunsystemet overreagerer på tilsyneladende harmløse stoffer som støv, dyrehår eller visse fødevarer, hvilket udløser en inflammatorisk reaktion i huden. Det er en lignende mekanisme som ved andre atopiske tilstande som astma og allergi.'
-                  : 'The immune system overreacts to seemingly harmless substances such as dust, pet hair or certain foods, triggering an inflammatory response in the skin. This is a similar mechanism to other atopic conditions such as asthma and allergies.'}
+                  ? 'Fordi det er indstillet på en allergisk type af inflammation. Immunsystemet overreagerer på tilsyneladende harmløse stoffer som husstøvmider, hudafskalning og allergener fra kæledyr eller visse fødevarer, hvilket udløser en inflammatorisk reaktion i huden. Det er en lignende mekanisme som ved andre atopiske tilstande som astma og allergi.'
+                  : 'Because it is tuned towards an allergic type of inflammation. The immune system overreacts to seemingly harmless substances such as house dust mites, pet dander or certain foods, triggering an inflammatory response in the skin. This is a similar mechanism to other atopic conditions such as asthma and allergies.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Genetik' : 'Genetics'}
+                {isDa ? 'Er eksem arveligt?' : 'Is eczema hereditary?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Eksem løber i familier. Hvis en eller begge forældre har eksem, astma eller høfeber, er risikoen for at barnet udvikler atopisk dermatitis markant forhøjet.'
-                  : 'Eczema runs in families. If one or both parents have eczema, asthma or hay fever, the risk of the child developing atopic dermatitis is significantly increased.'}
+                  ? 'I høj grad. Eksem løber i familier. Hvis en eller begge forældre har eksem, astma eller høfeber, er risikoen for, at barnet udvikler atopisk dermatitis, markant forhøjet.'
+                  : 'To a large extent. Eczema runs in families. If one or both parents have eczema, asthma or hay fever, the risk of the child developing atopic dermatitis is significantly increased.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Udløsende faktorer' : 'Triggering factors'}
+                {isDa ? 'Hvad udløser et udbrud?' : 'What triggers a flare?'}
               </h3>
               <p>
                 {isDa
                   ? 'Selv med genetisk disposition kræver eksem oftest en udløser for at blusse op. Almindelige udløsere inkluderer:'
-                  : 'Even with a genetic predisposition, eczema often requires a trigger to flare up. Common triggers include:'}
+                  : 'Even with a genetic predisposition, eczema usually requires a trigger to flare up. Common triggers include:'}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>{isDa ? 'Stress og psykisk belastning' : 'Stress and psychological strain'}</li>
@@ -364,8 +434,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 </li>
                 <li>
                   {isDa
-                    ? 'Visse fødevarer (f.eks. mælk, æg, nødder og glutenholdige produkter)'
-                    : 'Certain foods (e.g. milk, eggs, nuts and gluten-containing products)'}
+                    ? 'Visse fødevarer hos et mindretal — oftest komælk, æg, jordnødder eller hvede hos små børn med påvist allergi. Udelad aldrig fødevarer uden allergiudredning og lægelig rådgivning; unødvendig eliminationsdiæt kan give ernæringsmangel og kan øge risikoen for reel fødevareallergi.'
+                    : 'Certain foods, in a minority of patients — most often cow’s milk, egg, peanut or wheat in young children with proven allergy. Never eliminate foods without allergy testing and medical advice; unnecessary elimination can cause nutritional deficiency and may increase the risk of true food allergy.'}
                 </li>
                 <li>{isDa ? 'Syntetiske stoffer og uld' : 'Synthetic fabrics and wool'}</li>
                 <li>
@@ -394,7 +464,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Voksne med familiehistorie:' : 'Adults with family history:'}</strong>{' '}
                   {isDa
-                    ? 'Ca. 3% af voksne lever med kronisk eksem, og mange oplever, at tilstanden kommer tilbage, selvom den forbedredes i barndommen.'
+                    ? 'Ca. 3% af voksne lever med kronisk eksem, og mange oplever, at tilstanden kommer tilbage, selvom den blev bedre i barndommen.'
                     : 'Around 3% of adults live with chronic eczema, and many find the condition returns even if it improved in childhood.'}
                 </li>
                 <li>
@@ -432,8 +502,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Kortikosteroidcremer (cortison) dæmper inflammation og kløe under udbrud. De fås i forskellig styrke – mild til svær – og ordineres af en hudlæge baseret på sværhedsgrad og placering.'
-                      : 'Corticosteroid creams (cortisone) suppress inflammation and itching during flares. They come in varying strengths — mild to strong — and are prescribed by a dermatologist based on severity and location.'}
+                      ? 'Kortikosteroidcremer (binyrebarkhormon) dæmper inflammation og kløe under udbrud. De fås i forskellig styrke — fra mild til meget stærk. I Danmark kan mild hydrokortison 1% købes i håndkøb på apoteket, mens stærkere steroider kræver recept fra din egen læge eller en hudlæge.'
+                      : 'Corticosteroid creams (cortisone) suppress inflammation and itching during flares. They come in varying strengths — from mild to very potent. In Denmark, mild hydrocortisone 1% is available over the counter at the pharmacy, while stronger steroids require a prescription from your GP or a dermatologist.'}
                   </p>
                 </div>
                 <div>
@@ -442,18 +512,18 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Cremer som tacrolimus og pimecrolimus er et steroidfrit alternativ til følsomme områder som ansigt og hals. De dæmper immunreaktionen lokalt uden de bivirkninger, der kan ses ved langvarig steroidbrug.'
-                      : 'Creams such as tacrolimus and pimecrolimus are a steroid-free alternative for sensitive areas like the face and neck. They suppress the local immune reaction without the side effects that can occur with long-term steroid use.'}
+                      ? 'Cremer som tacrolimus og pimecrolimus er et steroidfrit alternativ til følsomme områder som ansigt, øjenomgivelser og hals. De giver ikke den hudfortynding, langvarig steroidbehandling kan medføre, men de svier eller brænder ofte de første dage, og de behandlede områder kræver god solbeskyttelse.'
+                      : 'Creams such as tacrolimus and pimecrolimus are a steroid-free alternative for sensitive areas like the face, around the eyes and the neck. They avoid the skin thinning that long-term steroid use can cause, but they commonly sting or burn for the first few days, and treated areas need good sun protection.'}
                   </p>
                 </div>
                 <div>
                   <p className="font-semibold text-[#1a237e]">
-                    {isDa ? '💊 Systemisk behandling (svær eksem)' : '💊 Systemic treatment (severe eczema)'}
+                    {isDa ? '💊 Systemisk behandling (svært eksem)' : '💊 Systemic treatment (severe eczema)'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved svær eller udbredt eksem kan en hudlæge ordinere biologisk behandling (f.eks. dupilumab), orale immunsuppressiva eller lysbehandling (fototerapi).'
-                      : 'For severe or widespread eczema, a dermatologist may prescribe biological treatment (e.g. dupilumab), oral immunosuppressants or phototherapy (light therapy).'}
+                      ? 'Ved svært eller udbredt eksem kan en hudlæge ordinere biologisk behandling som dupilumab, tralokinumab eller lebrikizumab, orale JAK-hæmmere som upadacitinib eller abrocitinib, ældre orale immunsuppressiva eller lysbehandling med smalspektret UVB.'
+                      : 'For severe or widespread eczema, a dermatologist may prescribe biological treatment such as dupilumab, tralokinumab or lebrikizumab, oral JAK inhibitors such as upadacitinib or abrocitinib, older oral immunosuppressants, or narrowband UVB phototherapy.'}
                   </p>
                 </div>
                 <div>
@@ -462,8 +532,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Identificér og undgå dine personlige udløsere. Brug parfumefrie produkter, blød tøj og tag hurtige, lunkne brusebade fremfor lange varme bade.'
-                      : 'Identify and avoid your personal triggers. Use fragrance-free products, soft clothing and take short, lukewarm showers rather than long hot baths.'}
+                      ? 'Identificér og undgå dine personlige udløsere. Brug parfumefrie produkter og blødt tøj, og tag hurtige, lunkne brusebade frem for lange varme bade.'
+                      : 'Identify and avoid your personal triggers. Use fragrance-free products and soft clothing, and take short, lukewarm showers rather than long hot baths.'}
                   </p>
                 </div>
               </div>
@@ -489,8 +559,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Mange børn vokser fra eksem i løbet af ungdomsårene, men for andre forbliver det en kronisk tilstand, der kræver løbende håndtering. Rigtig behandling kan dog bringe eksem under fuld kontrol.'
-                      : 'Many children grow out of eczema during their teenage years, but for others it remains a chronic condition requiring ongoing management. With the right treatment, however, eczema can be brought under full control.'}
+                      ? 'Mange børn vokser fra eksem i løbet af ungdomsårene, men for andre forbliver det en kronisk tilstand, der kræver løbende håndtering. Den rette behandling kan dog give god, langvarig kontrol over eksemet.'
+                      : 'Many children grow out of eczema during their teenage years, but for others it remains a chronic condition requiring ongoing management. With the right treatment, however, eczema can be brought under good, long-term control.'}
                   </p>
                 </div>
                 <div>
@@ -513,8 +583,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Kontakt en hudlæge, hvis kløen forstyrrer din søvn, huden begynder at væske eller inficere sig, håndkøbsmidler ikke hjælper, eller hvis eksem påvirker dit daglige liv markant.'
-                      : 'Contact a dermatologist if itching is disturbing your sleep, the skin starts to weep or become infected, over-the-counter remedies are not helping, or if eczema is significantly affecting your daily life.'}
+                      ? 'Kontakt en hudlæge, hvis kløen forstyrrer din søvn, huden begynder at væske eller blive inficeret, håndkøbsmidler ikke hjælper, eller hvis eksem påvirker dit daglige liv markant. Ved pludselig forværring med små, smertefulde blærer og feber skal du søge læge samme dag.'
+                      : 'Contact a dermatologist if itching is disturbing your sleep, the skin starts to weep or become infected, over-the-counter remedies are not helping, or if eczema is significantly affecting your daily life. If eczema suddenly worsens with small, painful blisters and fever, seek medical care the same day.'}
                   </p>
                 </div>
               </div>
@@ -522,12 +592,12 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig diagnose og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
-                    : 'Upload photos of your skin via the SKIND app and receive a personal diagnosis and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
+                    : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -543,8 +613,8 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

@@ -104,11 +104,7 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
       />
 
       {/* SoftwareApplication structured data */}
-      <Script
-        id="software-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
 
       <main className="min-h-screen bg-[#1a237e]">
         <Navigation lang={lang} />

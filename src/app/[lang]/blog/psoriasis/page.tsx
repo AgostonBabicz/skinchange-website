@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -15,9 +14,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Psoriasis? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Lær alt om psoriasis: hvad det er, hvordan det ser ud, hvem der rammes, og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.',
+          'Lær alt om psoriasis: hvad det er, hvordan det ser ud, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering af en hudlæge via SKIND.',
         keywords:
-          'psoriasis, psoriasis behandling, psoriasis symptomer, hudsygdomme, skællende hud, eksem, SKIND',
+          'psoriasis, psoriasis behandling, psoriasis symptomer, plakpsoriasis, hudsygdomme, skællende hud, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/psoriasis',
           languages: {
@@ -30,9 +29,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'What is Psoriasis? Causes, Symptoms and Treatment | SKIND',
         description:
-          'Learn everything about psoriasis: what it is, what it looks like, who it affects, and what treatment options are available. Get help from a dermatologist via SKIND.',
+          'Learn all about psoriasis: what it is, what it looks like, who it affects, and which treatments work. Get an assessment from a dermatologist via SKIND.',
         keywords:
-          'psoriasis, psoriasis treatment, psoriasis symptoms, skin disease, scaly skin, eczema, SKIND',
+          'psoriasis, psoriasis treatment, psoriasis symptoms, plaque psoriasis, skin disease, scaly skin, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/psoriasis',
           languages: {
@@ -60,10 +59,10 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
     datePublished: '2026-04-07',
     dateModified: '2026-04-07',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,68 +85,52 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er psoriasis?',
+            name: 'Er psoriasis smitsom?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Psoriasis er en kronisk, autoimmun hudsygdom, der får hudcellerne til at formere sig op til 10 gange hurtigere end normalt. Dette resulterer i røde, skællende pletter, ofte på knæ, albuer, hovedbund og lænd.',
+              text: 'Nej, psoriasis er ikke smitsom. Du kan ikke få psoriasis ved at røre ved en person med tilstanden, og den overføres ikke gennem blod eller andre kropsvæsker.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvordan ser psoriasis ud?',
+            name: 'Hvordan påvirker psoriasis livskvaliteten?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Psoriasis viser sig typisk som røde, forhøjede pletter dækket af sølvagtige, skællende hudflager. Pletterne kan være kløende eller smertende og findes ofte på knæ, albuer, hovedbund, fodsåler og lænd.',
+              text: 'Psoriasis kan have betydelig psykologisk indvirkning på grund af synlige hudforandringer. Mange oplever stigmatisering, lav selvtillid, angst og depression, og studier finder en øget forekomst af selvmordstanker, særligt ved svær psoriasis. Tidlig og effektiv behandling er vigtig.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvem får psoriasis?',
+            name: 'Hjælper kost og livsstil ved psoriasis?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Psoriasis rammer ca. 2-3% af befolkningen globalt og kan opstå i alle aldre. Det ses ofte første gang i 20-30-årsalderen eller omkring 50-60-årsalderen. Familiehændelse øger risikoen betydeligt.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Kan psoriasis helbredes?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Der findes endnu ingen kur mod psoriasis, men en række behandlinger kan kontrollere symptomerne effektivt. Disse inkluderer topiske behandlinger, lysbehandling, systemiske lægemidler og nyere biologiske terapier.',
+              text: 'Ingen diæt kan helbrede psoriasis, men nogle livsstilsændringer kan hjælpe: oprethold en sund vægt, undgå rygning og alkohol, håndter stress, og spis en antiinflammatorisk kost med omega-3-fedtsyrer.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is psoriasis?',
+            name: 'Is psoriasis contagious?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Psoriasis is a chronic, autoimmune skin disease that causes skin cells to multiply up to 10 times faster than normal. This results in red, scaly patches, often on the knees, elbows, scalp and lower back.',
+              text: 'No, psoriasis is not contagious. You cannot get psoriasis by touching someone with the condition, and it is not transmitted through blood or other body fluids.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What does psoriasis look like?',
+            name: 'How does psoriasis affect quality of life?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Psoriasis typically appears as raised, red patches covered with silvery, flaky scales. The patches can be itchy or painful and are commonly found on the knees, elbows, scalp, soles of the feet and lower back.',
+              text: 'Psoriasis can have a significant psychological impact due to visible skin changes. Many experience stigmatisation, low self-esteem, anxiety and depression, and studies find an increased rate of suicidal thoughts, particularly in severe psoriasis. Early and effective treatment is important.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Who gets psoriasis?',
+            name: 'Do diet and lifestyle help with psoriasis?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Psoriasis affects about 2-3% of the global population and can appear at any age. It is often first seen in the 20s-30s or around 50-60 years of age. Family history significantly increases the risk.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can psoriasis be cured?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'There is currently no cure for psoriasis, but a number of treatments can effectively control symptoms. These include topical treatments, phototherapy, systemic medications and newer biologic therapies.',
+              text: 'No diet can cure psoriasis, but some lifestyle changes can help: maintain a healthy weight, avoid smoking and alcohol, manage stress, and eat an anti-inflammatory diet with omega-3 fatty acids.',
             },
           },
         ],
@@ -155,13 +138,11 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -188,10 +169,10 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">7. {isDa ? 'april' : 'April'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '7. april 2026' : 'April 7, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '7 min læsetid' : '7 min read'}
+                {isDa ? '5 min læsetid' : '5 min read'}
               </span>
             </div>
 
@@ -203,14 +184,20 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-psoriasis.jpg"
-                alt={isDa ? 'Psoriasis – kronisk autoimmun hudsygdom' : 'Psoriasis – chronic autoimmune skin disease'}
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                alt={
+                  isDa
+                    ? 'Nærbillede af en albue med røde, skarpt afgrænsede plaques dækket af sølvhvide skæl'
+                    : 'Close-up of an elbow with red, sharply bordered plaques covered in silvery-white scale'
+                }
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -253,18 +240,18 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Psoriasis er en kronisk, autoimmun sygdom, der primært påvirker huden. Ved psoriasis angriber immunsystemet fejlagtigt raske hudceller, hvilket får dem til at formere sig med en hastighed der er op til 10 gange hurtigere end normalt. De ekstra hudceller ophobes på overfladen og danne de karakteristiske røde, skællende pletter.'
+                  ? 'Psoriasis er en kronisk, autoimmun sygdom, der primært påvirker huden. Ved psoriasis angriber immunsystemet fejlagtigt raske hudceller, hvilket får dem til at formere sig med en hastighed, der er op til 10 gange hurtigere end normalt. De ekstra hudceller ophobes på overfladen og danner de karakteristiske røde, skællende pletter.'
                   : 'Psoriasis is a chronic, autoimmune disease that primarily affects the skin. In psoriasis, the immune system mistakenly attacks healthy skin cells, causing them to multiply at a rate up to 10 times faster than normal. The excess skin cells build up on the surface, forming the characteristic red, scaly patches.'}
               </p>
               <p>
                 {isDa
-                  ? 'Psoriasis er en systemisk sygdom, hvilket betyder at den påvirker hele kroppen — ikke kun huden. Op til 30% af personer med psoriasis udvikler også psoriasisgigt, en inflammatorisk ledsygdom der kan påvirke led og sener.'
+                  ? 'Psoriasis er en systemisk sygdom, hvilket betyder, at den påvirker hele kroppen — ikke kun huden. Op til 30% af personer med psoriasis udvikler også psoriasisgigt, en inflammatorisk ledsygdom, der kan påvirke led og sener.'
                   : 'Psoriasis is a systemic disease, meaning it affects the entire body — not just the skin. Up to 30% of people with psoriasis also develop psoriatic arthritis, an inflammatory joint disease that can affect joints and tendons.'}
               </p>
 
               {/* Types of psoriasis */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Typer af psoriasis' : 'Types of psoriasis'}
+                {isDa ? 'Hvilke typer psoriasis findes der?' : 'What types of psoriasis are there?'}
               </h2>
               <p>
                 {isDa
@@ -273,7 +260,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </p>
               <ul>
                 <li>
-                  <strong>{isDa ? 'Plaque psoriasis' : 'Plaque psoriasis'}</strong>
+                  <strong>{isDa ? 'Plakpsoriasis' : 'Plaque psoriasis'}</strong>
                   {isDa
                     ? ': Den mest almindelige form, der viser sig som forhøjede, røde pletter dækket af sølvagtige skæl. Op til 80% af psoriasispatienter har denne type.'
                     : ': The most common form, appearing as raised, red patches covered with silvery scales. Up to 80% of psoriasis patients have this type.'}
@@ -287,30 +274,30 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Invers psoriasis' : 'Inverse psoriasis'}</strong>
                   {isDa
-                    ? ': Glat, rød hud i body folds som armhuler, lyske og under brystet.'
+                    ? ': Glat, rød hud i hudfolder som armhuler, lyske og under brysterne.'
                     : ': Smooth, red skin in body folds such as armpits, groin and under the breasts.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Pustuløs psoriasis' : 'Pustular psoriasis'}</strong>
                   {isDa
-                    ? ': Hvide blærer med pus omgivet af rød hud. Kan være lokaliseret eller generaliseret.'
-                    : ': White blisters filled with pus surrounded by red skin. Can be localized or generalized.'}
+                    ? ': Klynger af små, hvide pustler omgivet af rød hud — pustler, ikke egentlige blærer. Formen kan være lokaliseret til hænder og fødder eller generaliseret. Generaliseret pustuløs psoriasis (von Zumbusch) giver feber og påvirket almentilstand og er en akut tilstand, der kræver behandling på hospital.'
+                    : ': Crops of small, white pustules surrounded by red skin — pustules, not true blisters. It can be localised to the hands and feet or generalised. Generalised pustular psoriasis (von Zumbusch) causes fever and systemic illness and is a medical emergency requiring hospital treatment.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Erytrodermisk psoriasis' : 'Erythrodermic psoriasis'}</strong>
                   {isDa
-                    ? ': Sjælden, alvorlig form der dækker hele kroppen med rødme og skæl. Kræver øjeblikkelig lægehjælp.'
+                    ? ': Sjælden, alvorlig form, der dækker hele kroppen med rødme og skæl. Kræver øjeblikkelig lægehjælp.'
                     : ': A rare, severe form that covers the entire body with redness and scaling. Requires immediate medical attention.'}
                 </li>
               </ul>
 
               {/* Symptoms */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Symptomer på psoriasis' : 'Symptoms of psoriasis'}
+                {isDa ? 'Hvad er symptomerne på psoriasis?' : 'What are the symptoms of psoriasis?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Psoriasis symptomer varierer fra person til person, men de mest almindelige tegn inkluderer:'
+                  ? 'Symptomerne på psoriasis varierer fra person til person, men de mest almindelige tegn inkluderer:'
                   : 'Psoriasis symptoms vary from person to person, but the most common signs include:'}
               </p>
               <ul>
@@ -357,7 +344,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
-                {isDa ? 'Immunsystemet' : 'The immune system'}
+                {isDa ? 'Hvad sker der i immunsystemet?' : 'What happens in the immune system?'}
               </h3>
               <p>
                 {isDa
@@ -366,7 +353,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
-                {isDa ? 'Genetik' : 'Genetics'}
+                {isDa ? 'Er psoriasis arveligt?' : 'Is psoriasis hereditary?'}
               </h3>
               <p>
                 {isDa
@@ -375,7 +362,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
-                {isDa ? 'Udløsende faktorer' : 'Trigger factors'}
+                {isDa ? 'Hvad kan udløse et udbrud?' : 'What can trigger a flare-up?'}
               </h3>
               <p>
                 {isDa
@@ -398,8 +385,8 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Infektioner' : 'Infections'}</strong>
                   {isDa
-                    ? ': Halsbetændelse og andre infektioner kan udløse især guttat psoriasis.'
-                    : ': Strep throat and other infections can trigger especially guttate psoriasis.'}
+                    ? ': Halsbetændelse og andre infektioner kan især udløse guttat psoriasis.'
+                    : ': Strep throat and other infections can trigger guttate psoriasis in particular.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Medicin' : 'Medications'}</strong>
@@ -408,7 +395,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                     : ': Lithium, blood pressure medications (beta-blockers) and antimalarial drugs can worsen psoriasis.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Weigert' : 'Weather'}</strong>
+                  <strong>{isDa ? 'Vejr' : 'Weather'}</strong>
                   {isDa
                     ? ': Koldt, tørt vejr kan forværre symptomerne, mens sollys ofte forbedrer dem.'
                     : ': Cold, dry weather can worsen symptoms, while sunlight often improves them.'}
@@ -423,16 +410,16 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
 
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Behandling af psoriasis' : 'Treatment of psoriasis'}
+                {isDa ? 'Hvordan behandles psoriasis?' : 'How is psoriasis treated?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Selvom psoriasis ikke kan helbredes, findes der effektive behandlinger der kan kontrollere symptomerne og forbedre livskvaliteten:'
+                  ? 'Selvom psoriasis ikke kan helbredes, findes der effektive behandlinger, der kan kontrollere symptomerne og forbedre livskvaliteten:'
                   : 'Although psoriasis cannot be cured, effective treatments exist that can control symptoms and improve quality of life:'}
               </p>
 
               <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
-                {isDa ? 'Topisk behandling' : 'Topical treatment'}
+                {isDa ? 'Hvornår bruges topisk behandling?' : 'When is topical treatment used?'}
               </h3>
               <p>
                 {isDa
@@ -443,11 +430,11 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Kortikosteroider' : 'Corticosteroids'}</strong>
                   {isDa
-                    ? ': Reducerer inflammation og kløe. Findes i cremer, salver, geler og lotions i forskellige styrker.'
+                    ? ': Reducerer inflammation og kløe. Findes i cremer, salver, geler og lotioner i forskellige styrker.'
                     : ': Reduce inflammation and itching. Available in creams, ointments, gels and lotions of varying strengths.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'D-vitamin analoger' : 'Vitamin D analogues'}</strong>
+                  <strong>{isDa ? 'D-vitaminanaloger' : 'Vitamin D analogues'}</strong>
                   {isDa
                     ? ': Bremser cellevækst og skældannelse, f.eks. calcipotriol.'
                     : ': Slow cell growth and scaling, e.g. calcipotriol.'}
@@ -455,8 +442,8 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Retinoider' : 'Retinoids'}</strong>
                   {isDa
-                    ? ': Vitamin A-derivater der normaliserer cellevækst.'
-                    : ': Vitamin A derivatives that normalize cell growth.'}
+                    ? ': A-vitaminderivater, der normaliserer cellevæksten.'
+                    : ': Vitamin A derivatives that normalise cell growth.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Salicylsyre' : 'Salicylic acid'}</strong>
@@ -467,36 +454,30 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </ul>
 
               <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
-                {isDa ? 'Lysbehandling' : 'Phototherapy'}
+                {isDa ? 'Hvordan virker lysbehandling?' : 'How does phototherapy work?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Lysbehandling (fototerapi) bruger ultraviolet lys til at bremse cellevækst:'
+                  ? 'Lysbehandling (fototerapi) bruger ultraviolet lys til at bremse cellevæksten:'
                   : 'Phototherapy uses ultraviolet light to slow cell growth:'}
               </p>
               <ul>
                 <li>
-                  <strong>NB-UVB</strong>
+                  <strong>{isDa ? 'NB-UVB (smalbåndet UVB)' : 'NB-UVB (narrowband UVB)'}</strong>
                   {isDa
-                    ? ': Bredbåndet UVB-lys, ofte brugt til moderat psoriasis.'
-                    : ': Broadband UVB light, often used for moderate psoriasis.'}
-                </li>
-                <li>
-                  <strong>Smalspektret UVB</strong>
-                  {isDa
-                    ? ': Mere effektiv end bredbåndet UVB med færre bivirkninger.'
-                    : ': More effective than broadband UVB with fewer side effects.'}
+                    ? ': Smalbåndet ultraviolet B-lys, den mest anvendte lysbehandling ved moderat psoriasis — mere effektiv end bredbåndet UVB og med færre bivirkninger.'
+                    : ': Narrowband ultraviolet B light, the most widely used phototherapy for moderate psoriasis — more effective than broadband UVB and with fewer side effects.'}
                 </li>
                 <li>
                   <strong>PUVA</strong>
                   {isDa
-                    ? ': Kombination af psoralen (følsomhedsøgende medicin) og UVA-lys.'
-                    : ': Combination of psoralen (photosensitizing medication) and UVA light.'}
+                    ? ': Kombination af psoralen (lysfølsomhedsøgende medicin) og UVA-lys.'
+                    : ': Combination of psoralen (photosensitising medication) and UVA light.'}
                 </li>
               </ul>
 
               <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
-                {isDa ? 'Systemisk og biologisk behandling' : 'Systemic and biologic treatment'}
+                {isDa ? 'Hvornår er systemisk eller biologisk behandling nødvendig?' : 'When is systemic or biologic treatment needed?'}
               </h3>
               <p>
                 {isDa
@@ -507,22 +488,75 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Biologiske lægemidler' : 'Biologics'}</strong>
                   {isDa
-                    ? ': Nyere lægemidler der målrettet blokerer specifikke dele af immunsystemet (TNF-alfa, IL-17, IL-23). Ekstremt effektive med færre systemiske bivirkninger.'
-                    : ': Newer drugs that specifically target parts of the immune system (TNF-alpha, IL-17, IL-23). Extremely effective with fewer systemic side effects.'}
+                    ? ': Nyere lægemidler, der målrettet blokerer specifikke dele af immunsystemet (TNF-alfa, IL-17, IL-23). De er meget effektive, men kræver screening for infektioner som tuberkulose før opstart og løbende kontrol hos en specialist.'
+                    : ': Newer drugs that specifically target parts of the immune system (TNF-alpha, IL-17, IL-23). They are highly effective, but require screening for infections such as tuberculosis before starting, and ongoing specialist monitoring.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'DMARDs' : 'DMARDs'}</strong>
+                  <strong>{isDa ? 'Konventionel systemisk behandling' : 'Conventional systemic treatments'}</strong>
                   {isDa
-                    ? ': Sygdomsmodificerende antireumatiske lægemidler som methotrexat og ciclosporin.'
-                    : ': Disease-modifying antirheumatic drugs such as methotrexate and cyclosporine.'}
+                    ? ': Methotrexat, ciclosporin og acitretin. De virker på hele kroppen og kræver regelmæssige blodprøver. Methotrexat er fosterskadende, og det samme gælder acitretin, så ingen af dem må bruges under graviditet.'
+                    : ': Methotrexate, ciclosporin and acitretin. They act on the whole body and require regular blood tests. Methotrexate is teratogenic, as is acitretin, so neither may be used in pregnancy.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Apremilast' : 'Apremilast'}</strong>
                   {isDa
-                    ? ': Oral medicin der hæmmer et enzym involveret i inflammation.'
+                    ? ': Oral medicin, der hæmmer et enzym involveret i inflammation.'
                     : ': Oral medication that inhibits an enzyme involved in inflammation.'}
                 </li>
               </ul>
+
+              {/* When to see a doctor */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvornår skal du søge læge?' : 'When should you see a doctor?'}
+              </h2>
+              <p>
+                {isDa ? (
+                  <>
+                    Søg læge, hvis røde, skællende pletter ikke forsvinder efter et par uger med håndkøbsprodukter, hvis udslættet breder sig, hvis neglene ændrer sig, eller hvis du får hævede og stive led. Flere andre tilstande giver røde, skællende pletter — for eksempel{' '}
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      seboroisk dermatitis
+                    </Link>{' '}
+                    i hovedbund og ansigt (sebopsoriasis) og{' '}
+                    <Link href={`/${lang}/blog/lichen-planus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      lichen planus
+                    </Link>{' '}
+                    — og de behandles forskelligt, så den rigtige diagnose er vigtig.
+                  </>
+                ) : (
+                  <>
+                    See a doctor if red, scaly patches do not clear after a couple of weeks of over-the-counter care, if the rash is spreading, if your nails change, or if you develop swollen and stiff joints. Several other conditions cause red, scaly patches — for example{' '}
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      seborrhoeic dermatitis
+                    </Link>{' '}
+                    on the scalp and face (sebopsoriasis) and{' '}
+                    <Link href={`/${lang}/blog/lichen-planus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      lichen planus
+                    </Link>{' '}
+                    — and they are treated differently, so the correct diagnosis matters.
+                  </>
+                )}
+              </p>
+
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa
+                    ? 'Søg akut lægehjælp, hvis rødme og skældannelse breder sig til næsten hele kroppen (erytrodermisk psoriasis), eller hvis du får et udbrud af pusfyldte pustler sammen med feber og kulderystelser (generaliseret pustuløs psoriasis). Begge tilstande kan påvirke kredsløb og væskebalance og skal behandles på hospital.'
+                    : 'Seek urgent medical help if redness and scaling spread over almost the whole body (erythrodermic psoriasis), or if you develop a crop of pus-filled pustules together with fever and chills (generalised pustular psoriasis). Both can affect circulation and fluid balance and need hospital treatment.'}
+                </p>
+              </div>
+
+              {/* ICD-11 Note */}
+              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+                <p className="text-sm text-gray-700">
+                  <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
+                  {isDa
+                    ? 'Psoriasis vulgaris (plakpsoriasis) er klassificeret som EA90.0 i WHO\'s internationale sygdomsklassifikation (ICD-11). Det er en kronisk, immunmedieret hudsygdom med skarpt afgrænsede, skællende plaques, og den behandles med topiske midler, lysbehandling og systemiske eller biologiske lægemidler.'
+                    : "Psoriasis vulgaris (plaque psoriasis) is classified as EA90.0 in the WHO's International Classification of Diseases (ICD-11). It is a chronic, immune-mediated skin disease with sharply demarcated, scaly plaques, managed with topical agents, phototherapy and systemic or biologic drugs."}
+                </p>
+              </div>
 
               {/* FAQ Section */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
@@ -545,18 +579,18 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Psoriasis kan have betydelig psykologisk indvirkning på grund af synlige hudforandringer. Mange oplever stigmatisering, lav selvtillid, angst og depression. Op til 10% har selvmordstanker. Tidlig og effektiv behandling er vigtig.'
-                      : 'Psoriasis can have a significant psychological impact due to visible skin changes. Many experience stigmatization, low self-esteem, anxiety and depression. Up to 10% have suicidal thoughts. Early and effective treatment is important.'}
+                      ? 'Psoriasis kan have betydelig psykologisk indvirkning på grund af synlige hudforandringer. Mange oplever stigmatisering, lav selvtillid, angst og depression, og studier finder en øget forekomst af selvmordstanker, særligt ved svær psoriasis. Tidlig og effektiv behandling er vigtig.'
+                      : 'Psoriasis can have a significant psychological impact due to visible skin changes. Many experience stigmatisation, low self-esteem, anxiety and depression, and studies find an increased rate of suicidal thoughts, particularly in severe psoriasis. Early and effective treatment is important.'}
                   </p>
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Kost og livsstil ved psoriasis' : 'Diet and lifestyle with psoriasis'}
+                    {isDa ? 'Hjælper kost og livsstil ved psoriasis?' : 'Do diet and lifestyle help with psoriasis?'}
                   </h3>
                   <p>
                     {isDa
-                      ? 'Selvom ingen diæt kan helbrede psoriasis, kan nogle livsstilsændringer hjælpe: oprethold en sund vægt, undgå rygning og alkohol, håndter stress, og spis en antiinflammatorisk kost med omega-3 fedtsyrer.'
-                      : 'While no diet can cure psoriasis, some lifestyle changes can help: maintain a healthy weight, avoid smoking and alcohol, manage stress, and eat an anti-inflammatory diet with omega-3 fatty acids.'}
+                      ? 'Ingen diæt kan helbrede psoriasis, men nogle livsstilsændringer kan hjælpe: oprethold en sund vægt, undgå rygning og alkohol, håndter stress, og spis en antiinflammatorisk kost med omega-3-fedtsyrer.'
+                      : 'No diet can cure psoriasis, but some lifestyle changes can help: maintain a healthy weight, avoid smoking and alcohol, manage stress, and eat an anti-inflammatory diet with omega-3 fatty acids.'}
                   </p>
                 </div>
               </div>
@@ -564,11 +598,11 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Hvis du oplever vedvarende hudforandringer der kunne være psoriasis, kan du få en personlig vurdering fra en certificeret hudlæge via SKIND-appen — uden ventetid.'
+                    ? 'Hvis du oplever vedvarende hudforandringer, der kunne være psoriasis, kan du få en personlig vurdering fra en certificeret hudlæge via SKIND-appen — uden ventetid.'
                     : 'If you are experiencing persistent skin changes that could be psoriasis, you can get a personal assessment from a certified dermatologist via the SKIND app — no waiting list.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -585,8 +619,8 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning og vurdering af hudforandringer.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance and assessment of skin changes.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>
