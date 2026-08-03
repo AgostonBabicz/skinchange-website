@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Impetigo? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Impetigo (børnesår): symptomer og behandling',
         description:
-          'Lær alt om impetigo: hvad det er, hvordan det ser ud, hvem der rammes (særligt børn), og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.',
+          'Impetigo, også kaldet børnesår, giver honningfarvede skorper om mund og næse. Læs om smitte, behandling og hvornår barnet må komme i institution igen.',
         keywords:
-          'impetigo, impetigo behandling, børnesygdomme hud, honningfarvet skorpe, bakteriel hudinfektion, hudlæge impetigo, SKIND',
+          'impetigo, børnesår, impetigo behandling, honningfarvede skorper, bakteriel hudinfektion, fusidinsyre, institution smitte, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/impetigo',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Impetigo? Causes, Symptoms and Treatment | SKIND',
+        title: 'Impetigo: symptoms, treatment and when to stay home',
         description:
-          'Learn everything about impetigo: what it is, what it looks like, who gets it (especially children), and what treatment options are available. Get help from a dermatologist via SKIND.',
+          'Impetigo causes honey-coloured crusts around the mouth and nose. Learn how it spreads, how it is treated, and when a child can go back to nursery.',
         keywords:
-          'impetigo, impetigo treatment, childhood skin disease, honey-crusted sores, bacterial skin infection, dermatologist impetigo, SKIND',
+          'impetigo, impetigo treatment, honey-coloured crusts, bacterial skin infection, fusidic acid, school exclusion, dermatologist, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/impetigo',
           languages: {
@@ -47,24 +46,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default function ImpetigoPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
+  const headline = isDa
+    ? 'Hvad er impetigo (børnesår)? Årsager, symptomer og behandling'
+    : 'What is impetigo? Causes, symptoms and treatment';
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: isDa
-      ? 'Hvad er Impetigo? Årsager, Symptomer og Behandling'
-      : 'What is Impetigo? Causes, Symptoms and Treatment',
+    headline,
     description: isDa
-      ? 'Komplet guide til impetigo: hvad det er, hvordan det ser ud, hvem der rammes, og hvilke behandlingsmuligheder der findes.'
-      : 'Complete guide to impetigo: what it is, what it looks like, who gets it, and what treatment options are available.',
+      ? 'Komplet guide til impetigo (børnesår): hvad det er, hvordan det ser ud, hvem der rammes, og hvordan det behandles.'
+      : 'Complete guide to impetigo: what it is, what it looks like, who gets it, and how it is treated.',
     image: '/blog-impetigo.jpg',
     datePublished: '2026-03-23',
     dateModified: '2026-03-23',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -80,89 +80,64 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
     },
   };
 
+  const faqs = isDa
+    ? [
+        {
+          q: 'Er impetigo farligt?',
+          a: 'Impetigo er sjældent farligt hos ellers raske børn og voksne og går som regel væk med antibiotisk behandling. Ubehandlet kan infektionen brede sig til dybere lag af huden, og streptokok-impetigo kan i sjældne tilfælde efterfølges af nyrebetændelse (poststreptokok-glomerulonefritis). Det er dog værd at vide, at antibiotisk behandling af impetigo ikke har vist sig at kunne forebygge nyrebetændelsen – grundene til at behandle er at lindre symptomerne og stoppe smitten.',
+        },
+        {
+          q: 'Hvornår må mit barn komme i institution igen?',
+          a: 'Sundhedsstyrelsens anbefaling er, at barnet kan komme tilbage i dagtilbud eller skole 48 timer efter, at antibiotisk behandling er startet. Bliver der ikke behandlet med antibiotika, skal barnet blive hjemme, indtil alle sår er tørret ind og har dannet skorpe.',
+        },
+        {
+          q: 'Hvordan forebygger jeg impetigo?',
+          a: 'God håndhygiejne er det vigtigste. Vask hænder regelmæssigt med sæbe, undgå at dele håndklæder og vaskeklude, og hold små sår og rifter rene og dækkede. Har dit barn eksem eller anden kløende hud, hjælper det at holde neglene korte og kløen under kontrol, så huden ikke bliver kradset op.',
+        },
+        {
+          q: 'Hvornår skal jeg kontakte en læge?',
+          a: 'Kontakt en læge, hvis sårene ikke er tydeligt bedre 48–72 timer efter, at behandlingen er startet, hvis infektionen breder sig, eller hvis der kommer feber eller hævede lymfeknuder. Søg hjælp samme dag, hvis huden er rød, øm og skaller af i flager, hvis barnet er slapt eller virker sygt, eller hvis det drejer sig om en nyfødt.',
+        },
+      ]
+    : [
+        {
+          q: 'Is impetigo dangerous?',
+          a: 'Impetigo is rarely dangerous in otherwise healthy children and adults, and it usually clears with antibiotic treatment. Left untreated, the infection can spread into deeper layers of the skin, and streptococcal impetigo is in rare cases followed by kidney inflammation (post-streptococcal glomerulonephritis). It is worth knowing, though, that antibiotic treatment of impetigo has not been shown to prevent that kidney complication — the reasons to treat are to relieve symptoms and to stop the infection spreading.',
+        },
+        {
+          q: 'When can my child go back to nursery?',
+          a: 'Danish guidance from Sundhedsstyrelsen is that a child can return to nursery or school 48 hours after starting antibiotic treatment. If no antibiotic is given, the child should stay at home until all the sores have dried and crusted over.',
+        },
+        {
+          q: 'How do I prevent impetigo?',
+          a: 'Good hand hygiene matters most. Wash hands regularly with soap, avoid sharing towels and flannels, and keep small cuts and grazes clean and covered. If your child has eczema or other itchy skin, keeping the nails short and the itch under control helps stop the skin being scratched open.',
+        },
+        {
+          q: 'When should I contact a doctor?',
+          a: 'Contact a doctor if the sores are not clearly improving 48–72 hours after treatment has started, if the infection is spreading, or if a fever or swollen lymph nodes appear. Seek help the same day if the skin is red, painful and peeling away in sheets, if the child is floppy or seems unwell, or if a newborn is affected.',
+        },
+      ];
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: isDa
-      ? [
-          {
-            '@type': 'Question',
-            name: 'Hvad er impetigo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Impetigo er en bakteriel hudinfektion, der angriber de yderste lag af huden. Den findes i to hovedtyper: non-bulløs impetigo med honningfarvede skorper og bulløs impetigo med større væskefyldte blærer.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Hvordan ser impetigo ud?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Impetigo viser sig typisk som røde, irriterede pletter omkring munden og næsen med små, væskefyldte blærer der brister og efterlader en honningfarvet skorpe eller gule skorper.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Er impetigo smitsomt?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Ja, impetigo er smitsomt. Det spredes gennem direkte kontakt med en inficeret person eller via forurenede genstande som håndklæder, legetøj og sengetøj.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Hvornår skal jeg søge lægehjælp for impetigo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Søg lægehjælp hvis infektionen ikke forbedres med håndkøbsbehandling inden for en uge, spreder sig til nye områder, eller hvis dit barn udvikler feber. SKIND giver adgang til en hudlæge inden for 48 timer.',
-            },
-          },
-        ]
-      : [
-          {
-            '@type': 'Question',
-            name: 'What is impetigo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Impetigo is a bacterial skin infection affecting the outermost layers of the skin. It comes in two main types: non-bullous impetigo with honey-crusted sores and bullous impetigo with larger fluid-filled blisters.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What does impetigo look like?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Impetigo typically appears as red, irritated patches around the mouth and nose with small fluid-filled blisters that burst and leave a honey-coloured crust or yellow scabs.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is impetigo contagious?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes, impetigo is contagious. It spreads through direct contact with an infected person or via contaminated objects such as towels, toys and bedding.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'When should I seek medical help for impetigo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Seek medical help if the infection does not improve with over-the-counter treatment within a week, spreads to new areas, or if your child develops a fever. SKIND gives you access to a dermatologist within 48 hours.',
-            },
-          },
-        ],
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
   };
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -181,7 +156,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 Blog
               </Link>
               <span className="mx-2">/</span>
-              <span className="text-gray-900">{isDa ? 'Hvad er Impetigo?' : 'What is Impetigo?'}</span>
+              <span className="text-gray-900">{isDa ? 'Hvad er impetigo (børnesår)?' : 'What is impetigo?'}</span>
             </nav>
 
             {/* Category & Meta */}
@@ -189,29 +164,33 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">23. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '23. marts 2026' : 'March 23, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '6 min læsetid' : '6 min read'}
+                {isDa ? '7 min læsetid' : '7 min read'}
               </span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
-              {isDa
-                ? 'Hvad er Impetigo? Årsager, Symptomer og Behandling'
-                : 'What is Impetigo? Causes, Symptoms and Treatment'}
+              {headline}
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-impetigo.jpg"
-                alt={isDa ? 'Impetigo – bakteriel hudinfektion behandling' : 'Impetigo – bacterial skin infection treatment'}
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                alt={
+                  isDa
+                    ? 'Honningfarvede, gule skorper på rød hud omkring næse og mund hos et barn.'
+                    : "Honey-coloured yellow crusts on red skin around a child's nose and mouth."
+                }
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -232,18 +211,22 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               <p className="text-xl leading-relaxed text-gray-600 mb-6">
                 {isDa ? (
                   <>
-                    <strong>Impetigo er en af de mest almindelige bakterielle hudinfektioner hos børn</strong>, men den kan ramme alle aldersgrupper. På trods af sin udbredelse kan impetigo være ubehageligt og — i sjældne tilfælde — føre til komplikationer, hvis det ikke behandles korrekt.
+                    <strong>Impetigo – på dansk også kaldet børnesår – er en af de mest almindelige bakterielle hudinfektioner hos børn</strong>, men
+                    den kan ramme alle aldre. Den er meget smitsom, og netop derfor betyder det noget, at behandlingen kommer hurtigt i gang, og at
+                    man kender reglerne for, hvornår barnet må komme i institution igen.
                   </>
                 ) : (
                   <>
-                    <strong>Impetigo is one of the most common bacterial skin infections in children</strong>, but it can affect all age groups. Despite its prevalence, impetigo can be uncomfortable and — in rare cases — lead to complications if not treated properly.
+                    <strong>Impetigo is one of the most common bacterial skin infections in children</strong>, but it can affect
+                    any age group. It is highly contagious, which is exactly why it matters to start treatment promptly and to know
+                    when a child can return to nursery or school.
                   </>
                 )}
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist hvad impetigo er, hvordan det ser ud, hvem der rammes, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what impetigo is, what it looks like, who gets it, and what you can do about it.'}
+                  ? 'I denne artikel forklarer vi, hvad impetigo er, hvordan det ser ud, hvem der rammes, hvornår det haster, og hvordan det behandles i Danmark.'
+                  : 'In this article we explain what impetigo is, what it looks like, who gets it, when it is urgent, and how it is treated in Denmark.'}
               </p>
             </div>
 
@@ -254,18 +237,58 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Impetigo er en overfladisk bakteriel hudinfektion, der påvirker epidermis — hudens yderste lag. Infektionen forårsages primært af Staphylococcus aureus (stafylokokker) og Streptococcus pyogenes (streptokokker), som trænger ind i huden gennem små revner, splinter eller insektbid.'
-                  : 'Impetigo is a superficial bacterial skin infection affecting the epidermis — the outermost layer of the skin. The infection is primarily caused by Staphylococcus aureus (staphylococci) and Streptococcus pyogenes (streptococci), which enter the skin through small cracks, splinters or insect bites.'}
+                  ? 'Impetigo er en overfladisk bakteriel hudinfektion i epidermis – hudens yderste lag. Den skyldes Staphylococcus aureus (stafylokokker) og Streptococcus pyogenes (streptokokker), som trænger ind gennem små revner, rifter eller insektbid. I Danmark og andre højindkomstlande er S. aureus i dag langt den hyppigste årsag; streptokokker står oftere bag i varme klimaer og under trange boligforhold.'
+                  : 'Impetigo is a superficial bacterial skin infection of the epidermis — the outermost layer of the skin. It is caused by Staphylococcus aureus (staphylococci) and Streptococcus pyogenes (streptococci), which enter through small cracks, grazes or insect bites. In Denmark and other high-income countries S. aureus is now by far the most common cause; streptococci are more often responsible in warm climates and in crowded living conditions.'}
               </p>
               <p>
                 {isDa
-                  ? 'Impetigo er smitsomt og kan spredes fra person til person gennem direkte kontakt eller via forurenede genstande. Sygdommen er dog i de fleste tilfælde mild og kan behandles effektivt med antibiotika.'
-                  : 'Impetigo is contagious and can spread from person to person through direct contact or via contaminated objects. The disease is, however, mild in most cases and can be treated effectively with antibiotics.'}
+                  ? 'Impetigo er meget smitsomt og spredes fra person til person ved direkte kontakt eller via ting, bakterierne har været i kontakt med. Sygdommen er dog i langt de fleste tilfælde mild og behandles effektivt med antibiotika.'
+                  : 'Impetigo is highly contagious and spreads from person to person through direct contact or via objects the bacteria have been on. In the great majority of cases the illness is mild and is treated effectively with antibiotics.'}
+              </p>
+
+              {/* Red flags */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvornår er impetigo en akut situation?' : 'When is impetigo an emergency?'}
+              </h2>
+              <p>
+                {isDa
+                  ? 'Impetigo er næsten altid en lokal og ufarlig infektion. De toksiner, der giver bulløs impetigo, kan dog i sjældne tilfælde brede sig i kroppen og ramme huden overalt – især hos små børn og nyfødte.'
+                  : 'Impetigo is almost always a local and harmless infection. The toxins that cause bullous impetigo can, however, rarely spread through the body and affect the skin all over — particularly in small children and newborns.'}
+              </p>
+
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa
+                    ? 'Kontakt en læge samme dag – eller lægevagten uden for åbningstid – hvis et barn med impetigo har udbredt rød, øm hud, der skaller af i flager, har feber, er slapt eller usædvanligt utilpas, eller hvis rødmen breder sig hurtigt og huden bliver hævet og varm. Hud, der skaller af sammen med feber, kan være stafylokok-skoldethudssyndrom (SSSS), en toksinudløst tilstand, der skal behandles på sygehus. Impetigo hos en nyfødt skal altid ses samme dag.'
+                    : 'Contact a doctor the same day — or the out-of-hours service outside surgery hours — if a child with impetigo has widespread red, painful skin that peels away in sheets, has a fever, is floppy or unusually unwell, or if the redness is spreading quickly and the skin becomes swollen and hot. Skin peeling together with fever can be staphylococcal scalded skin syndrome (SSSS), a toxin-driven condition that needs hospital treatment. Impetigo in a newborn should always be seen the same day.'}
+                </p>
+              </div>
+              <p>
+                {isDa ? (
+                  <>
+                    Hurtigt tiltagende rødme, hævelse og varme omkring sårene kan også betyde, at infektionen har bredt sig til de dybere hudlag som{' '}
+                    <Link href={`/${lang}/blog/cellulitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      cellulitis
+                    </Link>
+                    , som kræver behandling med antibiotika i tabletform eller i drop.
+                  </>
+                ) : (
+                  <>
+                    Rapidly increasing redness, swelling and warmth around the sores can also mean the infection has reached the deeper layers of the skin as{' '}
+                    <Link href={`/${lang}/blog/cellulitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      cellulitis
+                    </Link>
+                    , which needs treatment with oral or intravenous antibiotics.
+                  </>
+                )}
               </p>
 
               {/* Types */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'De to typer af impetigo' : 'The two types of impetigo'}
+                {isDa ? 'Hvilke typer af impetigo findes der?' : 'What are the two types of impetigo?'}
               </h2>
               <p>{isDa ? 'Der findes to hovedtyper af impetigo:' : 'There are two main types of impetigo:'}</p>
 
@@ -274,8 +297,8 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </h3>
               <p>
                 {isDa
-                  ? 'Dette er den mest almindelige form, der udgør ca. 70% af alle impetigo-tilfælde. Den starter typisk med små røde pletter omkring munden og næsen, som hurtigt udvikler sig til små blærer. Når blærerne brister, efterlader de karakteristiske honningfarvede eller gule skorper — der kan ligne tør honning eller voks.'
-                  : 'This is the most common form, accounting for about 70% of all impetigo cases. It typically starts as small red spots around the mouth and nose, which quickly develop into small blisters. When the blisters burst, they leave the characteristic honey-coloured or yellow crusts — which can resemble dried honey or wax.'}
+                  ? 'Dette er den hyppigste form og udgør omkring 70% af alle tilfælde. Den starter typisk som små røde pletter omkring mund og næse, der hurtigt bliver til små blærer. Når blærerne brister, efterlader de de karakteristiske honningfarvede eller gule skorper, som kan ligne indtørret honning eller voks.'
+                  : 'This is the most common form, accounting for about 70% of all cases. It typically starts as small red spots around the mouth and nose, which quickly turn into small blisters. When the blisters burst, they leave the characteristic honey-coloured or yellow crusts, which can look like dried honey or wax.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
@@ -283,39 +306,39 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </h3>
               <p>
                 {isDa
-                  ? 'Bulløs impetigo skyldes specifikt Staphylococcus aureus, der producerer toksiner, der danner større, væskefyldte blærer — ofte på torso, arme og ben. Blærerne er typisk større end ved non-bulløs impetigo og brister langsommere, hvilket efterlader tyndere, gule skorper.'
-                  : 'Bullous impetigo is specifically caused by Staphylococcus aureus, which produces toxins that form larger, fluid-filled blisters — often on the trunk, arms and legs. The blisters are typically larger than in non-bullous impetigo and burst more slowly, leaving thinner, yellow crusts.'}
+                  ? 'Bulløs impetigo skyldes specifikt Staphylococcus aureus, der danner toksiner, som løsner det yderste hudlag og giver større, væskefyldte blærer – ofte på kroppen, armene og benene. Blærerne er større end ved non-bulløs impetigo og brister langsommere, hvilket efterlader tyndere, gule skorper. Det er de samme toksiner, der ved udbredt sygdom kan give stafylokok-skoldethudssyndrom.'
+                  : 'Bullous impetigo is caused specifically by Staphylococcus aureus, which produces toxins that loosen the outermost layer of skin and create larger, fluid-filled blisters — often on the trunk, arms and legs. The blisters are larger than in non-bullous impetigo and burst more slowly, leaving thinner, yellow crusts. These are the same toxins that, in widespread disease, can cause staphylococcal scalded skin syndrome.'}
               </p>
 
               {/* What does it look like */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
                 {isDa ? 'Hvordan ser impetigo ud?' : 'What does impetigo look like?'}
               </h2>
-              <p>{isDa ? 'Almindelige tegn på impetigo inkluderer:' : 'Common signs of impetigo include:'}</p>
+              <p>{isDa ? 'Almindelige tegn på impetigo er:' : 'Common signs of impetigo include:'}</p>
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
                   <strong>{isDa ? 'Røde, irriterede pletter:' : 'Red, irritated patches:'}</strong>{' '}
                   {isDa
-                    ? 'Særligt omkring munden, næsen og andre udsatte områder af ansigtet.'
+                    ? 'Særligt omkring munden, næsen og andre udsatte områder i ansigtet.'
                     : 'Especially around the mouth, nose and other exposed areas of the face.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Honningfarvede eller gule skorper:' : 'Honey-coloured or yellow crusts:'}</strong>{' '}
                   {isDa
-                    ? 'Det mest genkendelige tegn. Disse skorper dannes, når blærerne brister.'
-                    : "The most recognisable sign. These crusts form when the blisters burst."}
+                    ? 'Det mest genkendelige tegn. Skorperne dannes, når blærerne brister.'
+                    : 'The most recognisable sign. The crusts form when the blisters burst.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Kløe og ubehag:' : 'Itching and discomfort:'}</strong>{' '}
                   {isDa
-                    ? 'Særligt omkring de berørte områder, selvom kløen typisk er mildere end ved andre hudlidelser.'
-                    : 'Especially around the affected areas, although itching is typically milder than in other skin conditions.'}
+                    ? 'Sårene klør ofte. Når barnet kradser i dem, spredes bakterierne til nye områder af huden og til andre børn – derfor betyder korte negle noget.'
+                    : 'The sores often itch. When a child scratches them, the bacteria spread to new areas of skin and to other children — which is why short nails matter.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Hævede lymfeknuder:' : 'Swollen lymph nodes:'}</strong>{' '}
                   {isDa
-                    ? 'I nogle tilfælde kan lymfeknuderne nær infektionen blive hævede og ømme.'
-                    : 'In some cases, the lymph nodes near the infection may become swollen and tender.'}
+                    ? 'I nogle tilfælde bliver lymfeknuderne nær infektionen hævede og ømme.'
+                    : 'In some cases the lymph nodes near the infection become swollen and tender.'}
                 </li>
               </ul>
 
@@ -325,26 +348,40 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Impetigo opstår, når bakterier trænger ind i huden gennem en åbning i hudbarrieren. Selv mindre skader kan give bakterierne adgang:'
-                  : 'Impetigo occurs when bacteria enter the skin through a break in the skin barrier. Even minor injuries can give bacteria access:'}
+                  ? 'Impetigo opstår, når bakterier trænger ind gennem en åbning i hudbarrieren. Selv meget små skader er nok:'
+                  : 'Impetigo occurs when bacteria enter through a break in the skin barrier. Even very small injuries are enough:'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Indgangspunkter for bakterier' : 'Entry points for bacteria'}
+                {isDa ? 'Hvordan kommer bakterierne ind?' : 'How do the bacteria get in?'}
               </h3>
               <p>
-                {isDa
-                  ? 'Hudskader som snit, skrammer, insektbid og selv små revner i huden giver bakterier mulighed for at trænge ind. Eksem og andre kroniske hudtilstande svækker også hudbarrieren og øger risikoen. Hos børn er det særligt almindeligt, at impetigo udvikler sig efter kraftig skrabning af kløende hud.'
-                  : 'Skin injuries such as cuts, scrapes, insect bites and even small cracks in the skin give bacteria the opportunity to enter. Eczema and other chronic skin conditions also weaken the skin barrier and increase the risk. In children, it is particularly common for impetigo to develop after vigorous scratching of itchy skin.'}
+                {isDa ? (
+                  <>
+                    Snit, skrammer, insektbid og selv små revner i huden giver bakterierne adgang.{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      Eksem
+                    </Link>{' '}
+                    og andre kroniske hudlidelser svækker hudbarrieren og øger risikoen mærkbart. Hos børn udvikler impetigo sig særligt ofte efter kraftig kradsen i kløende hud.
+                  </>
+                ) : (
+                  <>
+                    Cuts, grazes, insect bites and even small cracks in the skin give bacteria a way in.{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      Eczema
+                    </Link>{' '}
+                    and other chronic skin conditions weaken the skin barrier and raise the risk noticeably. In children, impetigo particularly often develops after vigorous scratching of itchy skin.
+                  </>
+                )}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Smitteveje' : 'Routes of transmission'}
+                {isDa ? 'Hvordan smitter impetigo?' : 'How does impetigo spread?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Impetigo smitter gennem direkte kontakt med en inficeret person. Bakterierne kan også overføres via forurenede genstande såsom håndklæder, vaskeklude, sengetøj og legetøj. Dette er særligt relevant i børnehaver, skoler og tætte hjemmemiljøer.'
-                  : 'Impetigo spreads through direct contact with an infected person. The bacteria can also be transferred via contaminated objects such as towels, washcloths, bedding and toys. This is particularly relevant in nurseries, schools and close home environments.'}
+                  ? 'Impetigo smitter ved direkte kontakt med en person, der har infektionen. Bakterierne kan også overføres via håndklæder, vaskeklude, sengetøj og legetøj. Det er særligt relevant i dagtilbud, skoler og under trange boligforhold.'
+                  : 'Impetigo spreads through direct contact with someone who has the infection. The bacteria can also be transferred via towels, flannels, bedding and toys. This is particularly relevant in nurseries, schools and crowded living conditions.'}
               </p>
 
               {/* Who gets it */}
@@ -353,30 +390,30 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Impetigo kan ramme alle, men visse grupper er særligt sårbare:'
+                  ? 'Impetigo kan ramme alle, men visse grupper er særligt udsatte:'
                   : 'Impetigo can affect anyone, but certain groups are particularly vulnerable:'}
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
                   <strong>{isDa ? 'Børn mellem 2 og 6 år:' : 'Children between 2 and 6 years:'}</strong>{' '}
                   {isDa
-                    ? 'Dette er dengruppe, der hyppigst rammes af impetigo, primært på grund af hyppig fysisk kontakt i leg, mindre skader og hyppig skrabning.'
-                    : 'This is the most commonly affected group, primarily due to frequent physical contact in play, minor injuries and frequent scratching.'}
+                    ? 'Det er den gruppe, der hyppigst rammes, først og fremmest på grund af tæt fysisk kontakt i leg, små skader og hyppig kradsen.'
+                    : 'This is the most commonly affected group, mainly because of close physical contact in play, minor injuries and frequent scratching.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Børn i institutioner:' : 'Children in institutions:'}</strong>{' '}
+                  <strong>{isDa ? 'Børn i dagtilbud og skole:' : 'Children in nursery and school:'}</strong>{' '}
                   {isDa
-                    ? 'Børnehaver og skoler er klassiske miljøer for impetigoudbrud på grund af den tætte kontakt mellem børn.'
-                    : 'Nurseries and schools are classic environments for impetigo outbreaks due to the close contact between children.'}
+                    ? 'Institutioner er klassiske miljøer for impetigoudbrud på grund af den tætte kontakt mellem børnene.'
+                    : 'These settings are classic environments for impetigo outbreaks because of the close contact between children.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Personer med eksem eller dermatitis:' : 'People with eczema or dermatitis:'}</strong>{' '}
                   {isDa
-                    ? 'Den beskadigede hudbarriere giver bakterier lettere adgang til at kolonisere og inficere huden.'
-                    : 'The damaged skin barrier gives bacteria easier access to colonise and infect the skin.'}
+                    ? 'Den beskadigede hudbarriere gør det lettere for bakterier at kolonisere og inficere huden.'
+                    : 'The damaged skin barrier makes it easier for bacteria to colonise and infect the skin.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Personer med svækket immunsystem:' : 'People with weakened immune systems:'}</strong>{' '}
+                  <strong>{isDa ? 'Personer med svækket immunforsvar:' : 'People with weakened immune systems:'}</strong>{' '}
                   {isDa
                     ? 'Et nedsat immunforsvar gør det sværere for kroppen at bekæmpe bakterieinfektioner.'
                     : 'A weakened immune system makes it harder for the body to fight off bacterial infections.'}
@@ -385,43 +422,53 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
 
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'Hvad kan du gøre ved impetigo?' : 'What can you do about impetigo?'}
+                {isDa ? 'Hvordan behandles impetigo?' : 'How is impetigo treated?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Impetigo behandles typisk med antibiotika. Valget af behandling afhænger af infektionens omfang og placering:'
-                  : 'Impetigo is typically treated with antibiotics. The choice of treatment depends on the extent and location of the infection:'}
+                  ? 'Impetigo behandles med antibiotika. Valget afhænger af, hvor udbredt infektionen er, og hvor den sidder:'
+                  : 'Impetigo is treated with antibiotics. The choice depends on how widespread the infection is and where it sits:'}
               </p>
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
                   <p className="font-semibold text-[#1a237e]">
-                    {isDa ? '💊 Håndkøbsbehandling (mild impetigo)' : '💊 Over-the-counter treatment (mild impetigo)'}
+                    {isDa ? '🧼 Sårpleje ved få og små sår' : '🧼 Wound care for a few small sores'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved mild impetigo kan du vaske de berørte områder med sæbe og vand og forsigtigt fjerne skorperne. En antiseptisk creme (f.eks. med hydrogenperoxid) kan hjælpe med at reducere bakterier.'
-                      : 'For mild impetigo, wash the affected areas with soap and water and gently remove the crusts. An antiseptic cream (e.g. with hydrogen peroxide) can help reduce bacteria.'}
+                      ? 'Vask de berørte områder med sæbe og vand, og blød skorperne forsigtigt op. I Danmark findes der ikke et håndkøbsprodukt mod impetigo – hydrogenperoxid 1% creme, som bruges i nogle andre lande, sælges ikke her, og behandlingen er derfor receptpligtig. Er sårene ikke tydeligt i bedring inden for 48–72 timer, skal du kontakte lægen i stedet for at vente videre.'
+                      : 'Wash the affected areas with soap and water and gently soften the crusts. In Denmark there is no over-the-counter product for impetigo — the hydrogen peroxide 1% cream used in some other countries is not sold here, so treatment is prescription-based. If the sores are not clearly improving within 48–72 hours, contact a doctor rather than waiting any longer.'}
                   </p>
                 </div>
                 <div>
                   <p className="font-semibold text-[#1a237e]">
-                    {isDa ? '🩺 Receptpligtig behandling (udbredt impetigo)' : '🩺 Prescription treatment (widespread impetigo)'}
+                    {isDa ? '💊 Antibiotisk creme (receptpligtig)' : '💊 Topical antibiotics (prescription)'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved mere udbredt impetigo ordinerer lægen typisk en topisk antibiotisk creme (f.eks. fusidinsyre eller mupirocin). Ved bulløs impetigo eller spredning kan orale antibiotika være nødvendige.'
-                      : 'For more widespread impetigo, doctors typically prescribe a topical antibiotic cream (e.g. fusidic acid or mupirocin). For bullous impetigo or spread, oral antibiotics may be necessary.'}
+                      ? 'Fusidinsyre som creme er førstevalg i Danmark ved lokal impetigo, typisk i fem dage. Mupirocin holdes som regel i reserve for at begrænse resistensudvikling. Resistens over for fusidinsyre hos Staphylococcus aureus er et kendt problem i Danmark, og det er en af grundene til, at en behandling, der ikke virker, skal vurderes af lægen frem for at blive gentaget.'
+                      : 'Fusidic acid cream is the first choice in Denmark for localised impetigo, usually for five days. Mupirocin is generally kept in reserve to limit the development of resistance. Fusidic acid resistance in Staphylococcus aureus is a recognised problem in Denmark, which is one reason a treatment that is not working should be reviewed by a doctor rather than simply repeated.'}
                   </p>
                 </div>
                 <div>
                   <p className="font-semibold text-[#1a237e]">
-                    {isDa ? '🧴 Hygiejne og isolation' : '🧴 Hygiene and isolation'}
+                    {isDa ? '🩺 Antibiotika i tabletform' : '🩺 Oral antibiotics'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Hold det berørte område rent og dækket. Undgå at dele håndklæder, vaskeklude og sengetøj. Vask hænder hyppigt, og hold barnet hjemme fra institution indtil 24 timer efter behandlingens start.'
-                      : 'Keep the affected area clean and covered. Avoid sharing towels, washcloths and bedding. Wash hands frequently and keep the child home from nursery until 24 hours after starting treatment.'}
+                      ? 'Ved udbredt eller bulløs impetigo, eller hvis barnet er påvirket, gives antibiotika gennem munden. Dicloxacillin er sædvanligvis førstevalg i Danmark; ved penicillinallergi bruges clarithromycin eller erythromycin.'
+                      : 'For widespread or bullous impetigo, or when the child is unwell, antibiotics are given by mouth. Dicloxacillin is usually the first choice in Denmark; clarithromycin or erythromycin is used if there is a penicillin allergy.'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#1a237e]">
+                    {isDa ? '🧴 Hygiejne og hjemme fra institution' : '🧴 Hygiene and staying home'}
+                  </p>
+                  <p className="text-sm mt-1">
+                    {isDa
+                      ? 'Hold sårene rene og dækkede. Del ikke håndklæder, vaskeklude og sengetøj, og vask hænder ofte. Sundhedsstyrelsens anbefaling er, at barnet kan komme tilbage i dagtilbud eller skole 48 timer efter, at antibiotisk behandling er startet – eller, hvis der ikke behandles, når alle sår er tørret ind og har dannet skorpe.'
+                      : 'Keep the sores clean and covered. Do not share towels, flannels or bedding, and wash hands often. Danish guidance from Sundhedsstyrelsen is that a child can return to nursery or school 48 hours after starting antibiotic treatment — or, if no antibiotic is given, once all the sores have dried and crusted over.'}
                   </p>
                 </div>
               </div>
@@ -431,8 +478,8 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
-                    ? 'Impetigo er klassificeret som 1B72 i WHO\'s internationale sygdomsklassifikation (ICD-11). Det er en bakteriel hudinfektion, der presenterer sig med honningfarvede skorpeformede læsioner.'
-                    : "Impetigo is classified as 1B72 in the WHO's International Classification of Diseases (ICD-11). It is a bacterial skin infection presenting with honey-coloured crusted lesions."}
+                    ? 'Impetigo er klassificeret som 1B72 i WHO\'s internationale sygdomsklassifikation (ICD-11). Det er en bakteriel hudinfektion, der viser sig med honningfarvede skorper.'
+                    : "Impetigo is classified as 1B72 in the WHO's International Classification of Diseases (ICD-11). It is a bacterial skin infection presenting with honey-coloured crusts."}
                 </p>
               </div>
 
@@ -441,47 +488,28 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Er impetigo farligt?' : 'Is impetigo dangerous?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Impetigo er sjældent farligt hos raske børn og voksne og behandles normalt effektivt med antibiotika. Ubehandlet impetigo kan dog i sjældne tilfælde føre til dybere hudinfektioner eller nyreproblemer (post-streptokok glomerulonefrit).'
-                      : 'Impetigo is rarely dangerous in healthy children and adults and is normally treated effectively with antibiotics. Untreated impetigo can, however, in rare cases lead to deeper skin infections or kidney problems (post-streptococcal glomerulonephritis).'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Hvordan forebygger jeg impetigo?' : 'How do I prevent impetigo?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'God håndhygiejne er nøglen. Vask hænder regelmæssigt med sæbe, undgå at dele personlige genstande som håndklæder, og hold små sår og rifter rene og dækkede. Hvis dit barn har eksem eller kløende dermatitis, er det vigtigt at holde neglene korte og kløen under kontrol.'
-                      : 'Good hand hygiene is key. Wash hands regularly with soap, avoid sharing personal items such as towels, and keep small cuts and scrapes clean and covered. If your child has eczema or itchy dermatitis, keeping nails short and itch under control is important.'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
-                    {isDa ? 'Hvornår skal jeg kontakte en læge?' : 'When should I contact a doctor?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Kontakt en læge eller hudlæge hvis impetigo ikke forbedres med håndkøbsbehandling inden for en uge, hvis infektionen spreder sig hurtigt, eller hvis dit barn udvikler feber eller hævede lymfeknuder.'
-                      : 'Contact a doctor or dermatologist if impetigo does not improve with over-the-counter treatment within a week, if the infection spreads rapidly, or if your child develops a fever or swollen lymph nodes.'}
-                  </p>
-                </div>
+                {faqs.map((faq) => (
+                  <div key={faq.q}>
+                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <p>{faq.a}</p>
+                  </div>
+                ))}
               </div>
 
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
+                <p className="mb-4">
+                  {isDa
+                    ? 'Har dit barn feber, er slapt eller virker sygt, skaller huden af i flager, eller breder rødmen sig hurtigt, skal du kontakte lægen eller lægevagten samme dag i stedet for at vente på en vurdering i appen.'
+                    : 'If your child has a fever, is floppy or seems unwell, if the skin is peeling in sheets, or if the redness is spreading quickly, contact a doctor or the out-of-hours service the same day rather than waiting for an app assessment.'}
+                </p>
                 <p className="mb-6">
                   {isDa
-                    ? 'Er du i tvivl om dine eller dit barns hudproblemer? Upload billeder via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge.'
-                    : 'Unsure about your or your child\'s skin condition? Upload photos via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist.'}
+                    ? 'Ved almindelige sår i bedring, eller hvis du blot er i tvivl om, hvad udslættet er, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge.'
+                    : 'For ordinary sores that are settling, or if you are simply unsure what the rash is, you can upload photos via the SKIND app and get an assessment from a certified dermatologist.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -497,8 +525,8 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

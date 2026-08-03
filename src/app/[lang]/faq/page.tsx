@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
@@ -14,18 +13,18 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   const isDa = params.lang === 'da';
   return {
     title: isDa ? 'FAQ: Ofte Stillede Spørgsmål om Online Hudlæge | SKIND' : 'FAQ: Frequently Asked Questions About Online Dermatology | SKIND',
-    description: isDa 
-      ? 'Få svar på alt om online hudlæge konsultation hos SKIND. Pris, sikkerhed, behandling af akne, eksem, psoriasis og meget mere. Diagnose inden for 48 timer.' 
-      : 'Get answers about online dermatologist consultations at SKIND. Pricing, security, treatment for acne, eczema, psoriasis and more. Diagnosis within 48 hours.',
-    keywords: isDa 
-      ? 'online hudlæge, teledermatologi, hudlæge online, akne behandling, eksem behandling, psoriasis behandling, hudkræft tjek, modermærker, recept online'
+    description: isDa
+      ? 'Få svar på alt om online hudlægekonsultation hos SKIND. Pris, sikkerhed, behandling af akne, eksem, psoriasis og meget mere. Svar inden for 48 timer.'
+      : 'Get answers about online dermatologist consultations at SKIND. Pricing, security, treatment for acne, eczema, psoriasis and more. Response within 48 hours.',
+    keywords: isDa
+      ? 'online hudlæge, teledermatologi, hudlæge online, aknebehandling, eksembehandling, psoriasisbehandling, hudkræfttjek, modermærker, recept online'
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
     alternates: {
-      canonical: `https://www.skinchange.dk/${params.lang}/faq`,
+      canonical: `https://www.skinchange.dk/${params.lang}/faq/`,
       languages: {
-        'x-default': 'https://www.skinchange.dk/da/faq',
-        da: 'https://www.skinchange.dk/da/faq',
-        en: 'https://www.skinchange.dk/en/faq',
+        'x-default': 'https://www.skinchange.dk/da/faq/',
+        da: 'https://www.skinchange.dk/da/faq/',
+        en: 'https://www.skinchange.dk/en/faq/',
       },
     },
   };
@@ -42,14 +41,13 @@ export default function FAQPage({ params: { lang } }: PageProps) {
       '@type': 'ListItem',
       position: i + 1,
       name: isDa ? cat.titleDa : cat.titleEn,
-      url: `https://www.skinchange.dk/${lang}/faq/${cat.slug}`
+      url: `https://www.skinchange.dk/${lang}/faq/${cat.slug}/`
     }))
   };
 
   return (
     <>
-      <Script
-        id="faq-hub-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />

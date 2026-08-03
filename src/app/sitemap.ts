@@ -1,5 +1,18 @@
+import fs from 'node:fs';
+import nodePath from 'node:path';
 import { MetadataRoute } from 'next';
 import { languages } from '@/lib/i18n';
+import { faqCategories } from '@/lib/faq-data';
+
+// Read the blog routes off disk so the sitemap cannot drift when articles are added.
+function blogSlugs(): string[] {
+  const dir = nodePath.join(process.cwd(), 'src', 'app', '[lang]', 'blog');
+  return fs
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => `/blog/${e.name}`)
+    .sort();
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.skinchange.dk';
@@ -17,32 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms-conditions',
   ];
 
-  const faqCategories = [
-    '/faq/how-it-works',
-    '/faq/pricing',
-    '/faq/privacy-security',
-    '/faq/app',
-    '/faq/contact',
-    '/faq/diseases',
-  ];
-
-  const blogSlugs = [
-    '/blog/acne',
-    '/blog/eczema-atopic-dermatitis',
-    '/blog/rosacea',
-    '/blog/urticaria-hives',
-    '/blog/herpes-simplex-virus',
-    '/blog/herpes-zoster-shingles',
-    '/blog/tinea-infections-ringworm',
-    '/blog/vitiligo',
-  ];
+  const faqPaths = faqCategories.map((c) => `/faq/${c.slug}`);
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   const allPages = [
     ...pages.map(p => ({ path: p, type: 'page' })),
-    ...faqCategories.map(p => ({ path: p, type: 'faq' })),
-    ...blogSlugs.map(p => ({ path: p, type: 'blog' })),
+    ...faqPaths.map(p => ({ path: p, type: 'faq' })),
+    ...blogSlugs().map(p => ({ path: p, type: 'blog' })),
   ];
 
   languages.forEach((lang) => {

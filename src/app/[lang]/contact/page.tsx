@@ -4,7 +4,6 @@ import { Language } from '@/lib/i18n';
 import { Metadata } from 'next';
 import { Mail, MapPin, Building2 } from 'lucide-react';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -102,11 +101,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="contact-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
     <main className="min-h-screen bg-white">
       <Navigation lang={lang} />
       

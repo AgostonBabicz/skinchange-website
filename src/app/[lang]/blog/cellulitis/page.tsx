@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Cellulitis? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Cellulitis (rosen): symptomer og behandling | SKIND',
         description:
-          'Lær alt om cellulitis: hvad det er, hvorfor det opstår, hvem der rammes, og hvilke behandlingsmuligheder der findes. Tidlig diagnose og behandling er afgørende.',
+          'Cellulitis er en akut bakteriel hudinfektion, der kræver lægehjælp samme dag. Læs om symptomer, faresignaler, antibiotika og hvornår du skal ringe 112.',
         keywords:
-          'cellulitis, cellulitis behandling, cellulitis symptomer, cellulitis årsager, hudinfektion, bakteriel infektion, SKIND',
+          'cellulitis, rosen, erysipelas, cellulitis behandling, cellulitis symptomer, hudinfektion, bakteriel infektion, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/cellulitis',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Cellulitis? Causes, Symptoms and Treatment | SKIND',
+        title: 'Cellulitis: symptoms, causes and treatment | SKIND',
         description:
-          'Learn everything about cellulitis: what it is, why it happens, who gets it and what treatment options are available. Early diagnosis and treatment are crucial.',
+          'Cellulitis is an acute bacterial skin infection that needs same-day care. Learn the symptoms, the red flags, how antibiotics work and when to call 112.',
         keywords:
-          'cellulitis, cellulitis treatment, cellulitis symptoms, cellulitis causes, skin infection, bacterial infection, SKIND',
+          'cellulitis, erysipelas, cellulitis treatment, cellulitis symptoms, skin infection, bacterial infection, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/cellulitis',
           languages: {
@@ -60,10 +59,10 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-24',
     dateModified: '2026-03-24',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,52 +85,68 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er cellulitis?',
+            name: 'Er cellulitis farligt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Cellulitis er en akut bakteriel infektion i hudens dybere lag (dermis og subkutant væv), der forårsager rødme, hævelse, varme og smerter i det berørte område. Det kræver hurtig behandling med antibiotika.',
+              text: 'Ubehandlet cellulitis kan føre til alvorlige komplikationer, herunder blodforgiftning (sepsis), dybere vævsinfektioner og i sjældne tilfælde amputation. Behandling samme dag er afgørende.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Er cellulitis smitsomt?',
+            name: 'Er rødme i begge underben cellulitis?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nej, cellulitis er ikke smitsomt fra person til person. Det opstår, når bakterier trænger ind i huden gennem et brud i hudbarrieren.',
+              text: 'Som regel ikke. Cellulitis er næsten altid ensidig. Rødme, hævelse og skæl i begge underben på én gang skyldes langt oftere staseeksem, der behandles med kompression og fugtighedscreme frem for antibiotika. Få det vurderet frem for at gætte.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvornår skal jeg søge lægehjælp for cellulitis?',
+            name: 'Hvordan forebygger jeg cellulitis?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Søg lægehjælp straks ved rødme, hævelse, varme og smerter i et hudområde — især hvis det ledsages af feber. Tidlig behandling forhindrer alvorlige komplikationer. SKIND giver adgang til en hudlæge inden for 48 timer.',
+              text: 'Rens og dæk alle hudskader — også de små — med det samme. Hold huden fugtet for at undgå revner, behandl fodsvamp mellem tæerne, brug beskyttelsesudstyr ved risiko for hudskader, og hold diabetes godt reguleret.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kan cellulitis komme igen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja, nogle mennesker oplever tilbagevendende cellulitis, især hvis de har underliggende risikofaktorer som lymfødem eller diabetes. Din læge kan anbefale forebyggende antibiotika i sådanne tilfælde.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is cellulitis?',
+            name: 'Is cellulitis dangerous?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Cellulitis is an acute bacterial infection of the deeper layers of the skin (dermis and subcutaneous tissue), causing redness, swelling, warmth and pain in the affected area. It requires prompt antibiotic treatment.',
+              text: 'Untreated cellulitis can lead to serious complications including blood poisoning (sepsis), deeper tissue infections and in rare cases amputation. Same-day treatment is essential.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Is cellulitis contagious?',
+            name: 'Is redness in both lower legs cellulitis?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No, cellulitis is not contagious from person to person. It develops when bacteria enter the skin through a break in the skin barrier.',
+              text: 'Usually not. Cellulitis is almost always one-sided. Redness, swelling and scaling in both lower legs at once is far more often venous eczema, which is treated with compression and emollients rather than antibiotics. Have it assessed rather than assuming either way.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I seek medical help for cellulitis?',
+            name: 'How do I prevent cellulitis?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seek medical help immediately if you have redness, swelling, warmth and pain in a skin area — especially if accompanied by fever. Early treatment prevents serious complications. SKIND gives you access to a dermatologist within 48 hours.',
+              text: 'Clean and cover all skin injuries — even small ones — straight away. Keep skin moisturised to avoid cracks, treat athlete’s foot between the toes, use protective equipment where there is a risk of skin injury, and keep diabetes well controlled.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can cellulitis come back?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, some people experience recurrent cellulitis, especially if they have underlying risk factors such as lymphoedema or diabetes. Your doctor may recommend preventive antibiotics in such cases.',
             },
           },
         ],
@@ -139,13 +154,11 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -174,7 +187,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">24. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '24. marts 2026' : 'March 24, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
                 {isDa ? '6 min læsetid' : '6 min read'}
@@ -189,14 +202,20 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#c62828] to-[#8e0000]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-cellulitis.jpg"
-                alt={isDa ? 'Cellulitis – bakteriel hudinfektion behandling' : 'Cellulitis – bacterial skin infection treatment'}
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                alt={
+                  isDa
+                    ? 'Underben med et skarpt afgrænset, rødt og hævet område forårsaget af cellulitis.'
+                    : 'A lower leg with a sharply defined area of red, swollen skin caused by cellulitis.'
+                }
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#8e0000]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -217,35 +236,71 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               <p className="text-xl leading-relaxed text-gray-600 mb-6">
                 {isDa ? (
                   <>
-                    <strong>Cellulitis er en alvorlig, men behandlelig bakteriel hudinfektion</strong>, der påvirker tusindvis af mennesker hvert år. På trods af hvor almindelig den er, kan cellulitis — hvis den ikke behandles — føre til alvorlige komplikationer.
+                    <strong>Cellulitis er en akut bakteriel hudinfektion, der kræver lægehjælp samme dag</strong>. Den er almindelig og kan behandles, men den breder sig time for time, og ubehandlet kan den føre til alvorlige komplikationer.
                   </>
                 ) : (
                   <>
-                    <strong>Cellulitis is a serious but treatable bacterial skin infection</strong> that affects thousands of people every year. Despite how common it is, cellulitis — if left untreated — can lead to serious complications.
+                    <strong>Cellulitis is an acute bacterial skin infection that needs same-day medical care</strong>. It is common and treatable, but it spreads hour by hour, and left untreated it can lead to serious complications.
                   </>
                 )}
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist hvad cellulitis er, hvad der forårsager det, hvordan det ser ud, og hvad du kan gøre ved det.'
-                  : 'In this article we explain exactly what cellulitis is, what causes it, what it looks like, and what you can do about it.'}
+                  ? 'I denne artikel forklarer vi præcist, hvad cellulitis er, hvad der forårsager det, hvordan det ser ud, hvornår du skal ringe 112, og hvad behandlingen består af.'
+                  : 'In this article we explain exactly what cellulitis is, what causes it, what it looks like, when to call the emergency services, and what treatment involves.'}
               </p>
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700">
+              {/* Red flags */}
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa
+                    ? 'Ring 112 eller tag straks på skadestuen, hvis du har smerter, der er langt værre, end huden ser ud til, hvis rødmen breder sig i løbet af timer, hvis huden bliver blålig eller mørkfarvet, hvis der kommer blærer eller sorte områder, hvis det knitrer under huden, hvis en rød stribe løber fra området ind mod kroppen, eller hvis du får høj feber med kulderystelser, forvirring eller hurtig vejrtrækning. Det kan være tegn på nekrotiserende fasciitis eller sepsis (blodforgiftning) — begge er livstruende og kræver hospitalsbehandling inden for få timer.'
+                    : 'Call 112 or go straight to A&E if you have pain that is far worse than the skin looks, if the redness spreads within hours, if the skin turns dusky or purple, if blisters or black areas appear, if the skin crackles under your fingers, if a red streak tracks from the area towards your body, or if you develop a high fever with shivering, confusion or rapid breathing. These can be signs of necrotising fasciitis or sepsis — both are life-threatening and need hospital treatment within hours.'}
+                </p>
+              </div>
+
               {/* What is cellulitis */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
                 {isDa ? 'Hvad er cellulitis?' : 'What is cellulitis?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Cellulitis er en akut bakteriel infektion i hudens dybere lag — specifikt dermis (læderhuden) og det subkutane væv (underhuden). Tilstanden adskiller sig fra overfladiske hudinfektioner ved at nå dybere ind i vævet og kræve mere aggressiv behandling.'
-                  : 'Cellulitis is an acute bacterial infection of the deeper layers of the skin — specifically the dermis (the deeper layer of skin below the epidermis) and subcutaneous tissue (the layer beneath the skin). The condition differs from superficial skin infections by reaching deeper into the tissue and requiring more aggressive treatment.'}
+                  ? 'Cellulitis er en akut bakteriel infektion i hudens dybere lag — specifikt dermis (læderhuden) og det subkutane væv (underhuden). Tilstanden adskiller sig fra overfladiske hudinfektioner ved at nå dybere ind i vævet og kræve behandling med antibiotika.'
+                  : 'Cellulitis is an acute bacterial infection of the deeper layers of the skin — specifically the dermis (the deeper layer of skin below the epidermis) and subcutaneous tissue (the layer beneath the skin). The condition differs from superficial skin infections by reaching deeper into the tissue and requiring antibiotic treatment.'}
               </p>
               <p>
                 {isDa
-                  ? 'Cellulitis er ikke smitsomt fra person til person. Det opstår, når bakterier — typisk streptokokker eller stafylokokker — trænger ind i huden gennem et brud eller en revne i hudbarrieren.'
-                  : 'Cellulitis is not contagious from person to person. It develops when bacteria — typically streptococci or staphylococci — enter the skin through a break or crack in the skin barrier.'}
+                  ? 'På dansk kaldes tilstanden i daglig tale ofte rosen. Rosen (erysipelas) betegner strengt taget den mere overfladiske variant med en skarp, hævet kant, mens cellulitis sidder dybere og har en mere udflydende afgrænsning. De to overlapper hinanden, skyldes de samme bakterier og behandles stort set ens.'
+                  : 'A more superficial form of the same infection is called erysipelas. It has a sharply raised border, while cellulitis sits deeper and has a more diffuse edge. The two overlap, are caused by the same bacteria and are treated in much the same way.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Cellulitis må ikke forveksles med cellulite — den såkaldte appelsinhud. Cellulite er en helt harmløs kosmetisk forandring i underhudens fedtvæv og har intet med infektion at gøre. Navnene ligner hinanden, men tilstandene har intet tilfælles.'
+                  : 'Cellulitis should not be confused with cellulite, the dimpled "orange-peel" appearance of the skin. Cellulite is a harmless cosmetic change in the fatty tissue under the skin and has nothing to do with infection. The names look alike, but the conditions have nothing in common.'}
+              </p>
+              <p>
+                {isDa ? (
+                  <>
+                    Cellulitis er ikke smitsomt fra person til person. Det opstår, når bakterier — typisk streptokokker eller stafylokokker — trænger ind i huden gennem et brud eller en revne i hudbarrieren. Det er de samme to bakteriegrupper, der står bag{' '}
+                    <Link href={`/${lang}/blog/impetigo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      børnesår (impetigo)
+                    </Link>
+                    , men impetigo bliver i hudens øverste lag og smitter ved berøring.
+                  </>
+                ) : (
+                  <>
+                    Cellulitis is not contagious from person to person. It develops when bacteria — typically streptococci or staphylococci — enter the skin through a break or crack in the skin barrier. The same two groups of bacteria cause{' '}
+                    <Link href={`/${lang}/blog/impetigo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      impetigo
+                    </Link>
+                    , but impetigo stays in the top layer of the skin and does spread by touch.
+                  </>
+                )}
               </p>
 
               {/* What does it look like */}
@@ -257,8 +312,8 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Rødme og hævelse:' : 'Redness and swelling:'}</strong>{' '}
                   {isDa
-                    ? 'Det berørte område er typisk rødt, varmt og hævet. Rødmen starter ofte lokalt og breder sig over tid.'
-                    : 'The affected area is typically red, warm and swollen. The redness often starts locally and spreads over time.'}
+                    ? 'Det berørte område er typisk rødt, varmt og hævet. Rødmen starter ofte lokalt og breder sig over timer til dage.'
+                    : 'The affected area is typically red, warm and swollen. The redness often starts locally and spreads over hours to days.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Smerter og ømhed:' : 'Pain and tenderness:'}</strong>{' '}
@@ -281,8 +336,27 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </ul>
               <p>
                 {isDa
-                  ? 'Cellulitis opstår oftest på skinnebenet (det nederste ben), men kan forekomme overalt på kroppen — inklusiv ansigt, arme og fødder.'
-                  : 'Cellulitis most commonly appears on the shin (lower leg), but can occur anywhere on the body — including the face, arms and feet.'}
+                  ? 'Cellulitis opstår oftest på underbenet, men kan forekomme overalt på kroppen — inklusive ansigt, arme og fødder.'
+                  : 'Cellulitis most commonly appears on the lower leg, but can occur anywhere on the body — including the face, arms and feet.'}
+              </p>
+              <p>
+                {isDa ? (
+                  <>
+                    <strong>Cellulitis er næsten altid ensidig.</strong> Rødme og hævelse i begge underben skyldes langt oftere staseeksem end infektion. Staseeksem opstår, når blodet har svært ved at komme retur fra benene, og det behandles med kompression og fugtighedscreme — ikke antibiotika. Det ligner på mange måder{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      eksem
+                    </Link>{' '}
+                    andre steder på kroppen.
+                  </>
+                ) : (
+                  <>
+                    <strong>Cellulitis is almost always one-sided.</strong> Redness and swelling in both lower legs is much more often venous eczema or stasis dermatitis than infection. Venous eczema develops when blood struggles to return from the legs, and it is treated with compression and emollients — not antibiotics. In many ways it behaves like{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      eczema
+                    </Link>{' '}
+                    elsewhere on the body.
+                  </>
+                )}
               </p>
 
               {/* Why does it happen */}
@@ -296,30 +370,44 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Hudskader som indgangspunkt' : 'Skin injuries as entry points'}
+                {isDa ? 'Hvordan kommer bakterierne ind i huden?' : 'How do bacteria get into the skin?'}
               </h3>
               <p>
-                {isDa
-                  ? 'Snit, skrammer, insektbid, kirurgiske sår og selv små revner eller sprækker i huden kan alle fungere som indgangspunkter for bakterier. Dette er grunden til, at personer med dårligt immunforsvar eller underliggende hudtilstande er i højere risiko.'
-                  : 'Cuts, scrapes, insect bites, surgical wounds and even small cracks or fissures in the skin can all serve as entry points for bacteria. This is why people with poor immune function or underlying skin conditions are at higher risk.'}
+                {isDa ? (
+                  <>
+                    Gennem et brud i hudbarrieren. Snit, skrammer,{' '}
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      insektbid og -stik
+                    </Link>
+                    , kirurgiske sår, fodsvamp mellem tæerne og selv små revner eller sprækker i huden kan alle fungere som indgangspunkter for bakterier. Derfor er personer med svækket immunforsvar eller underliggende hudtilstande i højere risiko.
+                  </>
+                ) : (
+                  <>
+                    Through a break in the skin barrier. Cuts, scrapes,{' '}
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      insect bites and stings
+                    </Link>
+                    , surgical wounds, athlete&apos;s foot between the toes and even small cracks or fissures in the skin can all serve as entry points for bacteria. This is why people with poor immune function or underlying skin conditions are at higher risk.
+                  </>
+                )}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Kroniske hudtilstande' : 'Chronic skin conditions'}
+                {isDa ? 'Hvorfor øger kroniske hudtilstande risikoen?' : 'Why do chronic skin conditions increase the risk?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Eksem, dermatitis og andre kroniske hudlidelser svækker hudens naturlige barrierefunktion og gør det lettere for bakterier at trænge ind. Personer med fodsår (særligt diabetikere) er også i markant øget risiko.'
-                  : 'Eczema, dermatitis and other chronic skin conditions weaken the skin\'s natural barrier function and make it easier for bacteria to penetrate. People with foot ulcers (particularly diabetics) are also at significantly increased risk.'}
+                  ? 'Fordi de svækker hudens naturlige barrierefunktion. Eksem, dermatitis og andre kroniske hudlidelser gør det lettere for bakterier at trænge ind. Personer med fodsår — særligt ved diabetes — er også i markant øget risiko.'
+                  : 'Because they weaken the skin’s natural barrier function. Eczema, dermatitis and other chronic skin conditions make it easier for bacteria to penetrate. People with foot ulcers — particularly those with diabetes — are also at significantly increased risk.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Lymfødem og diabetes' : 'Lymphedema and diabetes'}
+                {isDa ? 'Hvilken rolle spiller lymfødem og diabetes?' : 'What role do lymphoedema and diabetes play?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Lymfødem — en tilstand der forårsager væskeophobning og hævelse — kan forringe lymfesystemets evne til at bekæmpe infektion. Ukontrolleret diabetes svækker immunforsvaret og øger risikoen for alvorlige bakterielle infektioner markant.'
-                  : 'Lymphoedema — a condition causing fluid retention and swelling — can impair the lymphatic system\'s ability to fight infection. Uncontrolled diabetes weakens the immune system and significantly increases the risk of serious bacterial infections.'}
+                  ? 'Begge svækker kroppens forsvar mod infektion. Lymfødem — en tilstand med væskeophobning og hævelse — forringer lymfesystemets evne til at bekæmpe bakterier. Ukontrolleret diabetes svækker immunforsvaret og øger risikoen for alvorlige bakterielle infektioner markant.'
+                  : 'Both weaken the body’s defences against infection. Lymphoedema — a condition causing fluid retention and swelling — impairs the lymphatic system’s ability to fight bacteria. Uncontrolled diabetes weakens the immune system and significantly increases the risk of serious bacterial infections.'}
               </p>
 
               {/* Who gets it */}
@@ -333,10 +421,10 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               </p>
               <ul className="list-disc pl-6 space-y-2 my-4">
                 <li>
-                  <strong>{isDa ? 'Børn:' : 'Children:'}</strong>{' '}
+                  <strong>{isDa ? 'Voksne over 45 år og ældre:' : 'Adults over 45 and older adults:'}</strong>{' '}
                   {isDa
-                    ? 'Hyppige hudskader og en aktiv livsstil gør børn mere sårbare over for mindre sår, der kan blive indgangspunkt for bakterier.'
-                    : 'Frequent skin injuries and active lifestyles make children more vulnerable to minor wounds that can become entry points for bacteria.'}
+                    ? 'Forekomsten er højest i denne gruppe og stiger med alderen. Med årene svækkes immunforsvaret, hudens barriere bliver tyndere, og hævede ben bliver mere almindelige.'
+                    : 'Incidence is highest in this group and rises with age. With age, immune function declines and the skin’s barrier weakens, while swollen legs become more common.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Voksne med kroniske hudtilstande eller diabetes:' : 'Adults with chronic skin conditions or diabetes:'}</strong>{' '}
@@ -351,10 +439,10 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                     : 'Individuals with HIV/AIDS, cancer or those on immunosuppressive treatment are particularly susceptible.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Ældre:' : 'Older adults:'}</strong>{' '}
+                  <strong>{isDa ? 'Børn:' : 'Children:'}</strong>{' '}
                   {isDa
-                    ? 'Med alderen falder immunforsvarets effektivitet, og hudens barrierefunktion forringes.'
-                    : 'As age increases, immune effectiveness decreases and the skin\'s barrier function declines.'}
+                    ? 'Cellulitis er mindre hyppigt hos børn end hos voksne, men hævelse og rødme omkring et øje (periorbital eller orbital cellulitis) er en særlig akut tilstand. Et barn med rødt, hævet øjenlåg skal vurderes på hospitalet samme dag.'
+                    : 'Cellulitis is less common in children than in adults, but swelling and redness around an eye (periorbital or orbital cellulitis) is a specific emergency. A child with a red, swollen eyelid needs same-day hospital assessment.'}
                 </li>
               </ul>
 
@@ -375,8 +463,8 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Oral antibiotika (tabletter) er standardbehandling ved mild til moderat cellulitis. I svære tilfælde kan intravenøs antibiotika (via drop) være nødvendig. Behandlingen varer typisk 5–14 dage.'
-                      : 'Oral antibiotics (tablets) are the standard treatment for mild to moderate cellulitis. In severe cases, intravenous antibiotics (via drip) may be necessary. Treatment typically lasts 5–14 days.'}
+                      ? 'Antibiotika i tabletform er standardbehandling ved mild til moderat cellulitis. I svære tilfælde kan intravenøs antibiotikabehandling (via drop) være nødvendig. Behandlingen varer typisk 5–7 dage ved ukompliceret cellulitis og forlænges kun, hvis infektionen ikke bedres.'
+                      : 'Oral antibiotics (tablets) are the standard treatment for mild to moderate cellulitis. In severe cases, intravenous antibiotics (via a drip) may be necessary. Treatment usually lasts 5–7 days for uncomplicated cellulitis, extended only if not improving.'}
                   </p>
                 </div>
                 <div>
@@ -395,8 +483,18 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Hold det berørte område rent og dækket med et løst bandage som anvist af din læge. Undgå at trykke eller stramme omkring det inficerede område.'
+                      ? 'Hold det berørte område rent og dækket med en løs bandage som anvist af din læge. Undgå at trykke eller stramme omkring det inficerede område.'
                       : 'Keep the affected area clean and covered with a loose bandage as directed by your doctor. Avoid applying pressure or constriction around the infected area.'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#1a237e]">
+                    {isDa ? '🖊️ Markér kanten af rødmen' : '🖊️ Mark the edge of the redness'}
+                  </p>
+                  <p className="text-sm mt-1">
+                    {isDa
+                      ? 'Tegn en streg langs kanten af rødmen med en kuglepen, og skriv dato og klokkeslæt ved siden af. Breder rødmen sig ud over stregen, virker behandlingen ikke som den skal.'
+                      : 'Draw a line along the edge of the redness with a pen and write the date and time beside it. If the redness spreads past that line, the treatment is not working as it should.'}
                   </p>
                 </div>
                 <div>
@@ -405,8 +503,8 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Hold øje med din temperatur og rapporter eventuelle forværrede symptomer — såsom hurtig spredning af rødme, stærk feber eller forvirring — til din læge straks.'
-                      : 'Monitor your temperature and report any worsening symptoms — such as rapid spread of redness, high fever or confusion — to your doctor immediately.'}
+                      ? 'Hold øje med din temperatur, og kontakt straks din læge ved forværring — hurtig spredning af rødme, stærk feber eller forvirring. De fleste begynder at få det bedre inden for 48 timer på antibiotika.'
+                      : 'Monitor your temperature and contact your doctor immediately if symptoms worsen — rapidly spreading redness, high fever or confusion. Most people start to improve within 48 hours of starting antibiotics.'}
                   </p>
                 </div>
               </div>
@@ -432,8 +530,18 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Ubehandlet cellulitis kan føre til alvorlige komplikationer, herunder blodforgiftning (sepsis), dybere vævsinfektioner og i sjældne tilfælde amputation. Tidlig behandling er afgørende.'
-                      : 'Untreated cellulitis can lead to serious complications including blood poisoning (sepsis), deeper tissue infections and in rare cases amputation. Early treatment is essential.'}
+                      ? 'Ubehandlet cellulitis kan føre til alvorlige komplikationer, herunder blodforgiftning (sepsis), dybere vævsinfektioner og i sjældne tilfælde amputation. Behandling samme dag er afgørende.'
+                      : 'Untreated cellulitis can lead to serious complications including blood poisoning (sepsis), deeper tissue infections and in rare cases amputation. Same-day treatment is essential.'}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                    {isDa ? 'Er rødme i begge underben cellulitis?' : 'Is redness in both lower legs cellulitis?'}
+                  </h3>
+                  <p>
+                    {isDa
+                      ? 'Som regel ikke. Cellulitis er næsten altid ensidig. Rødme, hævelse og skæl i begge underben på én gang skyldes langt oftere staseeksem, der behandles med kompression og fugtighedscreme frem for antibiotika. Få det vurderet frem for at gætte.'
+                      : 'Usually not. Cellulitis is almost always one-sided. Redness, swelling and scaling in both lower legs at once is far more often venous eczema, which is treated with compression and emollients rather than antibiotics. Have it assessed rather than assuming either way.'}
                   </p>
                 </div>
                 <div>
@@ -442,8 +550,8 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Behandl alle hudskader — selv små — med det samme. Hold huden fugtet for at undgå revner, brug beskyttelsesudstyr ved risiko for hudskader, og kontrollér diabetes omhyggeligt.'
-                      : 'Treat all skin injuries — even small ones — immediately. Keep skin moisturised to avoid cracks, use protective equipment where there is a risk of skin injuries, and manage diabetes carefully.'}
+                      ? 'Rens og dæk alle hudskader — også de små — med det samme. Hold huden fugtet for at undgå revner, behandl fodsvamp mellem tæerne, brug beskyttelsesudstyr ved risiko for hudskader, og hold diabetes godt reguleret.'
+                      : 'Clean and cover all skin injuries — even small ones — straight away. Keep skin moisturised to avoid cracks, treat athlete’s foot between the toes, use protective equipment where there is a risk of skin injury, and keep diabetes well controlled.'}
                   </p>
                 </div>
                 <div>
@@ -461,12 +569,12 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Har du mistanke om cellulitis? Bliv set i dag' : 'Think you have cellulitis? Get seen today'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig diagnose og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
-                    : 'Upload photos of your skin via the SKIND app and receive a personal diagnosis and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                    ? 'Mistanke om cellulitis kræver lægehjælp samme dag. Kontakt din egen læge eller lægevagten uden for åbningstid — og ring 112 ved feber, hurtigt spredende rødme eller påvirket almentilstand. Brug SKIND til opfølgning og til hudlidelser, der ikke er akutte.'
+                    : 'Suspected cellulitis needs same-day care. Contact your GP or, out of hours, lægevagten — and call 112 if you have a fever, rapidly spreading redness, or feel very unwell. Use SKIND for follow-up and for skin conditions that are not acute.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -482,8 +590,8 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

@@ -9,10 +9,6 @@ interface PageProps {
 
 const category = faqCategories.find(c => c.slug === 'diseases')!;
 
-export async function generateStaticParams() {
-  return [{ lang: 'da' }, { lang: 'en' }];
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
@@ -26,7 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? 'hudsygdomme, hudlidelser, acne, eksem, psoriasis, hudlæge online'
       : 'skin conditions, skin diseases, acne, eczema, psoriasis, online dermatologist',
     alternates: {
-      canonical: `https://www.skinchange.dk/${params.lang}/faq/diseases`,
+      canonical: `https://www.skinchange.dk/${params.lang}/faq/diseases/`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/faq/diseases/',
+        da: 'https://www.skinchange.dk/da/faq/diseases/',
+        en: 'https://www.skinchange.dk/en/faq/diseases/',
+      },
     },
   };
 }

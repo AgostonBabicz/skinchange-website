@@ -9,10 +9,6 @@ interface PageProps {
 
 const category = faqCategories.find(c => c.slug === 'privacy-security')!;
 
-export async function generateStaticParams() {
-  return [{ lang: 'da' }, { lang: 'en' }];
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
@@ -26,7 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? 'SKIND sikkerhed, GDPR hudlæge, datasikkerhed sundhed, MitID login'
       : 'SKIND security, GDPR dermatology, health data security, MitID',
     alternates: {
-      canonical: `https://www.skinchange.dk/${params.lang}/faq/privacy-security`,
+      canonical: `https://www.skinchange.dk/${params.lang}/faq/privacy-security/`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/faq/privacy-security/',
+        da: 'https://www.skinchange.dk/da/faq/privacy-security/',
+        en: 'https://www.skinchange.dk/en/faq/privacy-security/',
+      },
     },
   };
 }

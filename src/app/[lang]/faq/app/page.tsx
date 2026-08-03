@@ -9,10 +9,6 @@ interface PageProps {
 
 const category = faqCategories.find(c => c.slug === 'app')!;
 
-export async function generateStaticParams() {
-  return [{ lang: 'da' }, { lang: 'en' }];
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
@@ -26,7 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? 'SKIND app download, hudlæge app iPhone, hudlæge app Android'
       : 'SKIND app download, dermatologist app iPhone, dermatologist app Android',
     alternates: {
-      canonical: `https://www.skinchange.dk/${params.lang}/faq/app`,
+      canonical: `https://www.skinchange.dk/${params.lang}/faq/app/`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/faq/app/',
+        da: 'https://www.skinchange.dk/da/faq/app/',
+        en: 'https://www.skinchange.dk/en/faq/app/',
+      },
     },
   };
 }

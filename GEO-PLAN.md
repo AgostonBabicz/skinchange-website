@@ -15,12 +15,17 @@ This document is a structured GEO (Generative Engine Optimization) plan for skin
 
 ## Part 1: What You Already Have (Working Foundation)
 
+> **Correction, 2 August 2026.** Two claims in this section were wrong when written. Both are documented in `CONTENT-AUDIT-2026-08.md` and fixed on the `content-audit-fixes` branch.
+>
+> 1. The JSON-LD below was written, but **none of it reached the served HTML**. Every schema was emitted through `next/script`, which injects the tag client-side after hydration, so the static export contained zero `<script type="application/ld+json">` elements. Googlebot renders JavaScript and would usually still have seen it, but the AI crawlers this plan targets do not. The schema work was real; its delivery was not. Schemas are now emitted as plain `<script>` tags.
+> 2. The sitemap listed **8 of 26** blog articles, omitting all three skin-cancer pages. It is now generated from the filesystem.
+
 - Next.js static site generation — fast loads, clean HTML
-- JSON-LD: MedicalOrganization, Physician, Service, FAQPage, Article schemas
-- Open Graph + Twitter Cards + canonical URLs + hreflang (DA/EN)
+- JSON-LD: MedicalOrganization, Physician, Service, FAQPage, Article schemas *(now actually served — see correction above)*
+- Open Graph + Twitter Cards + canonical URLs + hreflang (DA/EN) *(hreflang was missing on the six FAQ category pages; added)*
 - Dual-language (DA/EN) support throughout
-- Sitemap.xml + robots.txt properly configured
-- 19 blog articles with FAQPage schema on each
+- Sitemap.xml + robots.txt properly configured *(sitemap was incomplete — see correction above)*
+- 26 blog articles with FAQPage schema on each *(19 when this was written; four were thin stubs carrying no FAQ schema at all)*
 - Medical disclaimers on all article pages
 
 ---
@@ -29,15 +34,15 @@ This document is a structured GEO (Generative Engine Optimization) plan for skin
 
 These are the issues most likely to prevent SkinChange from appearing in AI Overviews and semantic search results.
 
-### 2.1 Plain-text blog fallbacks (CRITICAL)
+### 2.1 Plain-text blog fallbacks — ~~CRITICAL~~ WITHDRAWN
 
 Every blog article has two output files:
 - `/dist/da/blog/acne/index.html` — full HTML with schema
 - `/dist/da/blog/acne/index.txt` — plain text, NO HTML, NO JSON-LD
 
-The `.txt` files strip all schema, navigation, and styling. AI Overview engines that hit the `.txt` URL see a raw text page with zero structured data. This is actively hurting your AI visibility.
+~~**Action:** Delete the `.txt` files from the dist output, or reconfigure the build pipeline to stop generating them.~~
 
-**Action:** Delete the `.txt` files from the dist output, or reconfigure the build pipeline to stop generating them.
+> **Do not do this.** Those `.txt` files are the React Server Component payloads the Next.js App Router fetches for client-side navigation. Deleting them breaks soft navigation across the site. They are not linked from anywhere, are not submitted in the sitemap, and are not a meaningful crawl target. The real structured-data problem was the one described in the Part 1 correction above — the schema never reached the HTML at all.
 
 ### 2.2 Missing HowTo Schema on Guide page
 

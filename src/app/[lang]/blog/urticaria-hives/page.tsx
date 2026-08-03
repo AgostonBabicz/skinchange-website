@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Nældefeber (Urticaria)? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Nældefeber (urticaria): symptomer og behandling | SKIND',
         description:
-          'Lær alt om nældefeber: hvad det er, hvorfor det opstår, hvem der rammes og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.',
+          'Nældefeber: hvorfor kvadlerne opstår, hvad der udløser dem, hvornår det er akut, og hvordan de behandles. Få en vurdering fra en hudlæge via SKIND.',
         keywords:
-          'hvad er nældefeber, urticaria symptomer, nældefeber årsager, nældefeber behandling, hudlæge nældefeber, SKIND',
+          'hvad er nældefeber, urticaria symptomer, nældefeber årsager, nældefeber behandling, kronisk urticaria, hudlæge nældefeber, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/urticaria-hives',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Urticaria (Hives)? Causes, Symptoms and Treatment | SKIND',
+        title: 'Urticaria (hives): symptoms and treatment | SKIND',
         description:
-          'Learn everything about urticaria (hives): what it is, why it happens, who gets it and what treatment options are available. Get help from a dermatologist via SKIND.',
+          'Urticaria: why the wheals appear, what triggers them, when it is an emergency, and how hives are treated. Get an assessment from a dermatologist via SKIND.',
         keywords:
-          'what is urticaria, hives symptoms, urticaria causes, hives treatment, dermatologist hives, SKIND',
+          'what is urticaria, hives symptoms, urticaria causes, hives treatment, chronic urticaria, dermatologist hives, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/urticaria-hives',
           languages: {
@@ -60,11 +59,10 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-14',
     dateModified: '2026-03-14',
     author: {
-      '@type': 'Person',
-      '@id': 'https://www.skinchange.dk/#peter-bjerring',
-      name: 'Peter Bjerring',
-      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      '@type': 'Organization',
+      '@id': 'https://www.skinchange.dk/#skinchange-ai',
+      name: 'SkinChange.AI',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -87,52 +85,52 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er nældefeber?',
+            name: 'Er nældefeber farligt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nældefeber (urticaria) er en almindelig hudlidelse, der forårsager hævede, kløende røde knopper, der pludselig opstår og lige så hurtigt kan forsvinde. Det er ikke smitsomt og skyldes frigivelse af histamin i kroppen.',
+              text: 'I de fleste tilfælde er nældefeber ufarligt og forsvinder inden for timer til dage. Farligt kan det dog blive, hvis det ledsages af angioødem i svælget eller tegn på anafylaksi – ring da 112 med det samme.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvad udløser nældefeber?',
+            name: 'Hvad er forskellen på akut og kronisk nældefeber?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Udløsere kan være allergener (nødder, skaldyr, penicillin, insektbid), fysiske faktorer (tryk, varme, kulde, sollys) og interne faktorer (infektioner, stress, underliggende sygdomme). I mange tilfælde forbliver årsagen ukendt (idiopatisk).',
+              text: 'Akut urticaria varer under 6 uger og skyldes oftest en identificerbar udløser som et allergen eller en infektion. Kronisk urticaria varer mere end 6 uger, og i mere end 80% af tilfældene findes der ingen ydre årsag (kronisk spontan urticaria). Begge former behandles primært med ikke-sederende antihistaminer.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvornår skal jeg søge lægehjælp for nældefeber?',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Søg straks lægehjælp hvis du oplever hævelse i svælg, vejrtrækningsbesvær eller svimmelhed – det kan være tegn på anafylaksi. Kontakt en hudlæge hvis nældefeber varer mere end 6 uger (kronisk urticaria) eller påvirker din hverdag. SKIND giver dig adgang til en hudlæge inden for 48 timer.',
+              text: 'Kontakt en hudlæge, hvis nældefeber varer mere end 6 uger, hvis antihistaminer ikke hjælper tilstrækkeligt i standarddosis, eller hvis udbruddene påvirker din søvn og hverdag. En hudlæge kan vurdere, om der er behov for højere dosis eller behandling ud over antihistaminer.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is urticaria (hives)?',
+            name: 'Is urticaria dangerous?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Urticaria (hives) is a common skin condition causing raised, itchy red welts that appear suddenly and can disappear just as quickly. It is not contagious and is caused by the release of histamine in the body.',
+              text: 'In most cases urticaria is harmless and resolves within hours to days. It can become dangerous if accompanied by angioedema of the throat or signs of anaphylaxis — call 112 immediately in those cases.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What triggers urticaria?',
+            name: 'What is the difference between acute and chronic urticaria?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Triggers include allergens (nuts, shellfish, penicillin, insect stings), physical factors (pressure, heat, cold, sunlight) and internal factors (infections, stress, underlying conditions). In many cases the cause remains unknown (idiopathic).',
+              text: 'Acute urticaria lasts under 6 weeks and is usually caused by an identifiable trigger such as an allergen or an infection. Chronic urticaria lasts more than 6 weeks, and in more than 80% of cases no external cause is found (chronic spontaneous urticaria). Both forms are primarily treated with non-sedating antihistamines.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I seek medical help for hives?',
+            name: 'When should I contact a dermatologist?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seek emergency help immediately if you experience throat swelling, breathing difficulty or dizziness — these may indicate anaphylaxis. See a dermatologist if hives last more than 6 weeks (chronic urticaria) or affect your daily life. SKIND gives you access to a dermatologist within 48 hours.',
+              text: 'Contact a dermatologist if urticaria lasts more than 6 weeks, if a standard dose of antihistamine is not providing adequate relief, or if the outbreaks are affecting your sleep and daily life. A dermatologist can judge whether you need a higher dose or treatment beyond antihistamines.',
             },
           },
         ],
@@ -140,13 +138,11 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -175,7 +171,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">14. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '14. marts 2026' : 'March 14, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
                 {isDa ? '6 min læsetid' : '6 min read'}
@@ -190,18 +186,20 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-urticaria-hives.jpg"
                 alt={
                   isDa
-                    ? 'Nældefeber – hudlidelse og allergi'
-                    : 'Urticaria hives – skin condition and allergy'
+                    ? 'Nærbillede af en underarm med hævede, lyserøde kvadler fra nældefeber.'
+                    : 'Close-up of a forearm covered in raised, pink urticaria wheals.'
                 }
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -223,15 +221,15 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     <strong>Nældefeber (urticaria) er en af de mest udbredte hudreaktioner</strong>, der rammer
-                    op mod 20% af befolkningen i løbet af livet. De karakteristiske hævede, kløende knopper
+                    op mod 20% af befolkningen i løbet af livet. De karakteristiske hævede, kløende kvadler
                     opstår pludseligt og kan forsvinde igen inden for timer – men bag dem ligger ofte en
                     fascinerende immunologisk reaktion.
                   </>
                 ) : (
                   <>
                     <strong>Urticaria (hives) is one of the most common skin reactions</strong>, affecting up
-                    to 20% of people at some point in their lives. The characteristic raised, itchy welts
-                    appear suddenly and can disappear within hours — yet behind them lies a fascinating
+                    to 20% of people at some point in their lives. The characteristic raised, itchy wheals
+                    (welts) appear suddenly and can disappear within hours — yet behind them lies a fascinating
                     immunological reaction.
                   </>
                 )}
@@ -250,13 +248,18 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Nældefeber, medicinsk betegnet urticaria, er en hudlidelse karakteriseret ved pludseligt opståede, hævede og kløende røde knopper kaldet kvabler (wheals). Disse kvabler opstår, når celler i huden frigiver histamin og andre kemiske stoffer i blodbanen, som får de omgivende blodkar til at udvide sig og lække væske ind i hudens væv.'
-                  : 'Urticaria, commonly known as hives, is a skin condition characterised by suddenly appearing raised, itchy red welts called wheals. These welts occur when cells in the skin release histamine and other chemical mediators into the bloodstream, causing the surrounding blood vessels to dilate and leak fluid into the skin tissue.'}
+                  ? 'Nældefeber, medicinsk betegnet urticaria, er en hudlidelse karakteriseret ved pludseligt opståede, hævede og kløende røde knopper kaldet kvadler (urticae). Kvadlerne opstår, når mastceller i huden frigiver histamin og andre signalstoffer lokalt i den omgivende læderhud (dermis), så de små blodkar dér udvider sig og lækker væske ud i vævet.'
+                  : 'Urticaria, commonly known as hives, is a skin condition characterised by suddenly appearing raised, itchy red wheals. Wheals occur when mast cells in the skin release histamine and other mediators locally into the surrounding dermis, so that the small blood vessels there dilate and leak fluid into the tissue.'}
               </p>
               <p>
                 {isDa
-                  ? 'Nældefeber er ikke smitsomt – du kan ikke give det til andre. En enkelt episode forsvinder normalt inden for 24 timer, men nye kvabler kan opstå efterhånden som de gamle forsvinder. Hvis tilstanden varer mere end 6 uger, taler man om kronisk urticaria.'
-                  : 'Urticaria is not contagious — you cannot pass it on to others. A single episode usually resolves within 24 hours, but new welts may appear as old ones fade. When the condition persists for more than 6 weeks, it is classified as chronic urticaria.'}
+                  ? 'Frigivelsen er lokal – det er netop derfor, kvadlerne er skarpt afgrænsede og forbigående. Ved anafylaksi frigives de samme signalstoffer systemisk i hele kroppen, og det er den afgørende forskel mellem et almindeligt udbrud af nældefeber og en livstruende allergisk reaktion.'
+                  : 'The release is local — which is exactly why wheals are sharply defined and transient. In anaphylaxis the same mediators are released systemically throughout the body, and that is the crucial difference between an ordinary outbreak of hives and a life-threatening allergic reaction.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Nældefeber er ikke smitsomt – du kan ikke give det til andre. En enkelt episode forsvinder normalt inden for 24 timer, men nye kvadler kan opstå, efterhånden som de gamle forsvinder. Hvis tilstanden varer mere end 6 uger, taler man om kronisk urticaria.'
+                  : 'Urticaria is not contagious — you cannot pass it on to others. A single episode usually resolves within 24 hours, but new wheals may appear as old ones fade. When the condition persists for more than 6 weeks, it is classified as chronic urticaria.'}
               </p>
 
               {/* What does it look like */}
@@ -270,10 +273,10 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </p>
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
-                  <strong>{isDa ? 'Hævede, røde kvabler:' : 'Raised, red welts:'}</strong>{' '}
+                  <strong>{isDa ? 'Hævede, røde kvadler:' : 'Raised, red wheals:'}</strong>{' '}
                   {isDa
                     ? 'Knopperne kan variere i størrelse fra et par millimeter til flere centimeter og opstår overalt på kroppen. De er typisk røde i kanten og blege i midten.'
-                    : 'The welts can vary in size from a few millimetres to several centimetres and appear anywhere on the body. They are typically red at the edges with a pale centre.'}
+                    : 'The wheals can vary in size from a few millimetres to several centimetres and appear anywhere on the body. They are typically red at the edges with a pale centre.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Intens kløe:' : 'Intense itching:'}</strong>{' '}
@@ -284,16 +287,37 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Sammensmeltning:' : 'Confluence:'}</strong>{' '}
                   {isDa
-                    ? 'Flere kvabler kan smelte sammen til større, uregelmæssige, hævede arealer, kaldet plaques.'
-                    : 'Multiple welts can merge into larger, irregular, raised areas called plaques.'}
+                    ? 'Flere kvadler kan smelte sammen til større, uregelmæssige, hævede arealer, kaldet plaques.'
+                    : 'Multiple wheals can merge into larger, irregular, raised areas called plaques.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Hurtigt skiftende billede:' : 'Rapidly changing appearance:'}</strong>{' '}
                   {isDa
-                    ? 'En enkelt kvabel forsvinder normalt inden for 1–24 timer uden at efterlade mærker. Nye kvabler kan dog opstå andre steder på kroppen.'
-                    : 'An individual weal typically resolves within 1–24 hours without leaving a mark. However, new welts may develop elsewhere on the body.'}
+                    ? 'En enkelt kvaddel forsvinder normalt inden for 1–24 timer uden at efterlade mærker. Nye kvadler kan dog opstå andre steder på kroppen.'
+                    : 'An individual wheal typically resolves within 1–24 hours without leaving a mark. However, new wheals may develop elsewhere on the body.'}
                 </li>
               </ul>
+              <p>
+                {isDa ? (
+                  <>
+                    Netop det hurtige skift adskiller nældefeber fra{' '}
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      kontakteksem
+                    </Link>
+                    , hvor udslættet bliver siddende samme sted i dage til uger og ofte skaller. Sidder den enkelte plet fast i mere
+                    end 24 timer, gør ondt frem for at klø, eller efterlader den et blåligt mærke, bør en læge se på det.
+                  </>
+                ) : (
+                  <>
+                    It is this rapid turnover that distinguishes urticaria from{' '}
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      contact dermatitis
+                    </Link>
+                    , where the rash stays in the same place for days to weeks and often scales. If an individual lesion lasts more
+                    than 24 hours, hurts rather than itches, or leaves a bruise-like mark, it should be seen by a doctor.
+                  </>
+                )}
+              </p>
               <p>
                 {isDa
                   ? 'I nogle tilfælde ledsages nældefeber af angioødem – en dybere hævelse under huden, typisk i ansigtet, læberne, tungen eller halsen. Angioødem kræver øjeblikkelig lægehjælp, særligt hvis halsen er involveret.'
@@ -311,30 +335,69 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Allergener' : 'Allergens'}
+                {isDa ? 'Hvilke allergener kan udløse nældefeber?' : 'Which allergens can trigger urticaria?'}
               </h3>
               <p>
-                {isDa
-                  ? 'Fødevareallergier – særligt nødder, skaldyr, æg og mælk – er hyppige årsager til akut nældefeber. Medicin som penicillin og aspirin, insektbid og -stik, samt pollen kan ligeledes udløse en reaktion. Kroppen genkender disse stoffer som fremmede og iværksætter en immunreaktion, der frigiver histamin.'
-                  : 'Food allergies — particularly nuts, shellfish, eggs and dairy — are common causes of acute urticaria. Medications such as penicillin and aspirin, insect bites and stings, and pollen can also trigger a reaction. The body recognises these substances as foreign and mounts an immune response that releases histamine.'}
+                {isDa ? (
+                  <>
+                    Fødevareallergier – særligt nødder, skaldyr, æg og mælk – er hyppige årsager til akut nældefeber. Medicin som
+                    penicillin og aspirin,{' '}
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      insektbid og -stik
+                    </Link>{' '}
+                    samt pollen kan ligeledes udløse en reaktion. Kroppen genkender disse stoffer som fremmede og iværksætter en
+                    immunreaktion, der frigiver histamin.
+                  </>
+                ) : (
+                  <>
+                    Food allergies — particularly nuts, shellfish, eggs and dairy — are common causes of acute urticaria. Medications
+                    such as penicillin and aspirin,{' '}
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      insect bites and stings
+                    </Link>{' '}
+                    and pollen can also trigger a reaction. The body recognises these substances as foreign and mounts an immune
+                    response that releases histamine.
+                  </>
+                )}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Fysiske faktorer' : 'Physical factors'}
+                {isDa ? 'Kan fysiske påvirkninger udløse nældefeber?' : 'Can physical triggers cause urticaria?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Fysisk urticaria opstår som reaktion på direkte fysiske stimuli: tryk mod huden (dermografisme), kulde (kuldeurticaria), varme, sollys (soluticaria) eller anstrengelse. Disse former er ikke allergiske i traditionel forstand, men skyldes en overfølsom reaktion i mastcellerne.'
-                  : 'Physical urticaria occurs in response to direct physical stimuli: pressure on the skin (dermographism), cold (cold urticaria), heat, sunlight (solar urticaria) or exercise. These forms are not allergic in the traditional sense but result from an oversensitive response in the mast cells.'}
+                  ? 'Ja. De inducerbare (fysiske) former for urticaria udløses af en bestemt fysisk påvirkning frem for af et allergen. Dermografisme er den hyppigste: strygning, kradsning eller gnid mod huden giver en stribeformet kvaddel inden for få minutter, som forsvinder igen i løbet af en time.'
+                  : 'Yes. The inducible (physical) urticarias are triggered by a specific physical stimulus rather than by an allergen. Dermographism is the most common: stroking, scratching or friction produces a linear wheal within minutes, which settles again within an hour.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Forsinket trykurticaria er en anden tilstand: vedvarende tryk fra en linning, en skulderrem eller et redskabsgreb giver en dyb, ofte øm hævelse, som først viser sig 4–8 timer efter påvirkningen og kan vare et døgn eller mere. Hertil kommer kuldeurticaria (kold luft, koldt vand eller kolde genstande), varmeurticaria (lokal opvarmning), solurticaria (sollys inden for få minutter) og anstrengelsesudløst urticaria (stigende kropstemperatur under fysisk aktivitet). Formerne er ikke allergiske i traditionel forstand, men skyldes mastceller, der reagerer overfølsomt på en fysisk påvirkning.'
+                  : 'Delayed pressure urticaria is a separate condition: sustained pressure from a waistband, a shoulder strap or a tool handle produces a deep, often tender swelling that appears only 4–8 hours after the pressure and can last a day or more. Other forms include cold urticaria (cold air, cold water or cold objects), heat urticaria (localised warming), solar urticaria (sunlight within minutes of exposure) and exercise-induced urticaria (a rise in body temperature during exertion). These forms are not allergic in the traditional sense but result from mast cells that respond over-sensitively to a physical stimulus.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Interne faktorer og idiopatisk urticaria' : 'Internal factors and idiopathic urticaria'}
+                {isDa
+                  ? 'Hvad med infektioner, stress og kronisk spontan urticaria?'
+                  : 'What about infections, stress and chronic spontaneous urticaria?'}
               </h3>
               <p>
-                {isDa
-                  ? 'Infektioner – fx forkølelse, urinvejsinfektioner eller helicobacter pylori – kan udløse nældefeber. Stress og underliggende medicinske tilstande som autoimmune sygdomme eller skjoldbruskkirtelforstyrrelser er andre kendte faktorer. I op til 50% af tilfælde med kronisk urticaria kan der ikke identificeres en klar årsag – disse tilfælde betegnes kronisk spontan (idiopatisk) urticaria.'
-                  : 'Infections — such as colds, urinary tract infections or helicobacter pylori — can trigger urticaria. Stress and underlying medical conditions such as autoimmune diseases or thyroid disorders are other known factors. In up to 50% of chronic urticaria cases no clear cause can be identified — these are termed chronic spontaneous (idiopathic) urticaria.'}
+                {isDa ? (
+                  <>
+                    Infektioner – fx forkølelse, urinvejsinfektioner eller <em>Helicobacter pylori</em> – kan udløse nældefeber.
+                    Stress og underliggende sygdomme som autoimmune lidelser eller forstyrrelser i skjoldbruskkirtlen er andre kendte
+                    faktorer. Ved mere end 80% af tilfældene med kronisk urticaria findes der ingen ydre årsag overhovedet; disse
+                    tilfælde kaldes kronisk spontan urticaria. Det er værd at vide, før man bruger tid og penge på omfattende
+                    allergiudredning: hos de fleste med kronisk nældefeber vil testene være normale.
+                  </>
+                ) : (
+                  <>
+                    Infections — such as colds, urinary tract infections or <em>Helicobacter pylori</em> — can trigger urticaria.
+                    Stress and underlying conditions such as autoimmune disease or thyroid disorders are other known factors. In more
+                    than 80% of chronic urticaria cases no external cause is found at all; these are termed chronic spontaneous
+                    urticaria. That is worth knowing before spending time and money on extensive allergy testing: in most people with
+                    chronic hives the tests come back normal.
+                  </>
+                )}
               </p>
 
               {/* Who gets it */}
@@ -343,8 +406,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Nældefeber kan ramme alle – uanset alder, køn eller hudtype. Tilstanden er dog mere almindelig hos voksne end børn. Akut urticaria er hyppigst hos børn og unge voksne og udløses oftest af en allergisk reaktion eller infektion. Kronisk urticaria forekommer oftest hos kvinder i alderen 20–40 år og kan vare måneder til år.'
-                  : 'Urticaria can affect anyone — regardless of age, sex or skin type. However, it is more common in adults than children. Acute urticaria is most frequent in children and young adults and is most often triggered by an allergic reaction or infection. Chronic urticaria occurs most often in women aged 20–40 and can last months to years.'}
+                  ? 'Nældefeber kan ramme alle – uanset alder, køn eller hudtype. Tilstanden er dog mere almindelig hos voksne end hos børn. Akut urticaria er hyppigst hos børn og unge voksne og udløses oftest af en allergisk reaktion eller infektion. Kronisk urticaria forekommer oftest hos kvinder i alderen 20–40 år og kan vare måneder til år.'
+                  : 'Urticaria can affect anyone — regardless of age, sex or skin type. However, it is more common in adults than in children. Acute urticaria is most frequent in children and young adults and is most often triggered by an allergic reaction or infection. Chronic urticaria occurs most often in women aged 20–40 and can last months to years.'}
               </p>
 
               {/* Treatment */}
@@ -353,8 +416,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </h2>
               <p>
                 {isDa
-                  ? 'Behandling af nældefeber fokuserer på to spor: lindre symptomerne og identificere/undgå udløseren.'
-                  : 'Treatment of urticaria focuses on two tracks: relieving symptoms and identifying/avoiding the trigger.'}
+                  ? 'Behandling af nældefeber fokuserer på to spor: lindre symptomerne og identificere og undgå udløseren.'
+                  : 'Treatment of urticaria focuses on two tracks: relieving symptoms and identifying and avoiding the trigger.'}
               </p>
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
@@ -374,7 +437,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Før en dagbog over kosten, aktiviteter og udbrud. Allergitest (hud-priktest eller blodprøver) kan identificere specifikke allergener. Når udløseren er fundet, er undgåelse det vigtigste forebyggende tiltag.'
+                      ? 'Før en dagbog over kosten, aktiviteter og udbrud. Allergitest (hudpriktest eller blodprøver) kan identificere specifikke allergener. Når udløseren er fundet, er undgåelse det vigtigste forebyggende tiltag.'
                       : 'Keep a diary of diet, activities and outbreaks. Allergy testing (skin prick tests or blood tests) can identify specific allergens. Once the trigger is identified, avoidance is the most important preventive measure.'}
                   </p>
                 </div>
@@ -384,8 +447,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Ved utilstrækkelig effekt af antihistaminer kan lægen ordinere højere doser, tilføje et H2-antihistamin (fx ranitidin) eller et biologisk lægemiddel som omalizumab (Xolair), der er godkendt til kronisk spontan urticaria.'
-                      : 'When antihistamines are insufficient, a doctor may prescribe higher doses, add an H2-antihistamine (e.g. ranitidine) or a biologic such as omalizumab (Xolair), which is approved for chronic spontaneous urticaria.'}
+                      ? 'Hvis standarddosis antihistamin ikke er nok, kan lægen øge dosis af et ikke-sederende antihistamin til op til fire gange standarddosis. Er det stadig utilstrækkeligt, er det biologiske lægemiddel omalizumab (Xolair) næste trin og er godkendt til kronisk spontan urticaria; ciclosporin kan komme på tale i specialistregi.'
+                      : 'When a standard dose of antihistamine is insufficient, a doctor may increase the dose of a non-sedating antihistamine to up to four times the standard dose. If that is still not enough, the biologic omalizumab (Xolair) is the next step and is approved for chronic spontaneous urticaria; ciclosporin is a further option in specialist care.'}
                   </p>
                 </div>
                 <div>
@@ -394,8 +457,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Hævelse i svælget, vejrtrækningsbesvær, svimmelhed eller blodtryksfald kan være tegn på anafylaksi – en livstruende allergisk reaktion. Ring 112 med det samme. Bær altid en adrenalinpen (EpiPen) hvis du er i risiko.'
-                      : 'Throat swelling, breathing difficulty, dizziness or a drop in blood pressure may indicate anaphylaxis — a life-threatening allergic reaction. Call emergency services immediately. Always carry an adrenaline auto-injector (EpiPen) if you are at risk.'}
+                      ? 'Hævelse i svælget, vejrtrækningsbesvær, svimmelhed eller blodtryksfald kan være tegn på anafylaksi – en livstruende allergisk reaktion. Ring 112 med det samme. Er du i risiko, skal du altid bære en adrenalinpen (EpiPen eller Jext) og bruge den i lårets yderside ved de første tegn – og derefter alligevel ringe 112, fordi reaktionen kan blusse op igen efter timer (bifasisk reaktion).'
+                      : 'Throat swelling, breathing difficulty, dizziness or a drop in blood pressure may indicate anaphylaxis — a life-threatening allergic reaction. Call 112 (emergency services) immediately. If you are at risk, always carry an adrenaline auto-injector (EpiPen or Jext) and use it in the outer thigh at the first signs — and then still call 112, because the reaction can flare again hours later (a biphasic reaction).'}
                   </p>
                 </div>
               </div>
@@ -405,8 +468,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
-                    ? 'Urticaria er klassificeret under "Urticaria, angioødem og andre urtikarielle lidelser" i WHO\'s internationale sygdomsklassifikation (ICD-11). Det er karakteriseret ved forbigående, kløende kvabler, ofte af allergisk eller idiopatisk natur, med antihistaminer som primær behandling.'
-                    : "Urticaria is classified under 'Urticaria, angioedema and other urticarial disorders' in the WHO's International Classification of Diseases (ICD-11). It is characterised by transient, itchy wheals, often allergic or idiopathic in nature, with antihistamines as the primary treatment."}
+                    ? 'Urticaria er klassificeret som EB00 i WHO\'s internationale sygdomsklassifikation (ICD-11), i kapitlet om urticaria, angioødem og beslægtede tilstande. Tilstanden er kendetegnet ved forbigående, kløende kvadler, ofte allergisk eller spontan af natur, med ikke-sederende antihistaminer som primær behandling.'
+                    : "Urticaria is classified as EB00 in the WHO's International Classification of Diseases (ICD-11), within the chapter on urticaria, angioedema and related disorders. It is characterised by transient, itchy wheals, often allergic or spontaneous in nature, with non-sedating antihistamines as the primary treatment."}
                 </p>
               </div>
 
@@ -421,8 +484,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'I de fleste tilfælde er nældefeber ufarligt og forsvinder inden for timer til dage. Farligt kan det dog blive, hvis det ledsages af angioødem i svælget eller tegn på anafylaksi – søg da øjeblikkelig lægehjælp.'
-                      : 'In most cases urticaria is harmless and resolves within hours to days. It can become dangerous if accompanied by angioedema of the throat or signs of anaphylaxis — seek immediate medical help in those cases.'}
+                      ? 'I de fleste tilfælde er nældefeber ufarligt og forsvinder inden for timer til dage. Farligt kan det dog blive, hvis det ledsages af angioødem i svælget eller tegn på anafylaksi – ring da 112 med det samme.'
+                      : 'In most cases urticaria is harmless and resolves within hours to days. It can become dangerous if accompanied by angioedema of the throat or signs of anaphylaxis — call 112 immediately in those cases.'}
                   </p>
                 </div>
                 <div>
@@ -433,8 +496,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Akut urticaria varer under 6 uger og skyldes oftest en identificerbar udløser som en allergen eller infektion. Kronisk urticaria varer mere end 6 uger og har i mange tilfælde ingen klar årsag (idiopatisk). Begge former behandles primært med antihistaminer.'
-                      : 'Acute urticaria lasts under 6 weeks and is usually caused by an identifiable trigger such as an allergen or infection. Chronic urticaria lasts more than 6 weeks and in many cases has no clear cause (idiopathic). Both forms are primarily treated with antihistamines.'}
+                      ? 'Akut urticaria varer under 6 uger og skyldes oftest en identificerbar udløser som et allergen eller en infektion. Kronisk urticaria varer mere end 6 uger, og i mere end 80% af tilfældene findes der ingen ydre årsag (kronisk spontan urticaria). Begge former behandles primært med ikke-sederende antihistaminer.'
+                      : 'Acute urticaria lasts under 6 weeks and is usually caused by an identifiable trigger such as an allergen or an infection. Chronic urticaria lasts more than 6 weeks, and in more than 80% of cases no external cause is found (chronic spontaneous urticaria). Both forms are primarily treated with non-sedating antihistamines.'}
                   </p>
                 </div>
                 <div>
@@ -445,8 +508,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Kontakt en hudlæge hvis nældefeber varer mere end 6 uger, hvis antihistaminer ikke hjælper tilstrækkeligt, eller hvis du ønsker allergiudredning. En hudlæge kan fastslå årsagen og tilpasse den bedste behandlingsplan.'
-                      : 'Contact a dermatologist if urticaria lasts more than 6 weeks, if antihistamines are not providing adequate relief, or if you want allergy testing. A dermatologist can determine the cause and tailor the best treatment plan.'}
+                      ? 'Kontakt en hudlæge, hvis nældefeber varer mere end 6 uger, hvis antihistaminer ikke hjælper tilstrækkeligt i standarddosis, eller hvis udbruddene påvirker din søvn og hverdag. En hudlæge kan vurdere, om der er behov for højere dosis eller behandling ud over antihistaminer.'
+                      : 'Contact a dermatologist if urticaria lasts more than 6 weeks, if a standard dose of antihistamine is not providing adequate relief, or if the outbreaks are affecting your sleep and daily life. A dermatologist can judge whether you need a higher dose or treatment beyond antihistamines.'}
                   </p>
                 </div>
               </div>
@@ -454,12 +517,12 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig diagnose og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
-                    : 'Upload photos of your skin via the SKIND app and receive a personal diagnosis and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                    ? 'Ved hævelse i svælget, vejrtrækningsbesvær eller svimmelhed skal du ringe 112 – det kan ikke vurderes på et billede. Ved almindelig nældefeber kan du uploade billeder af din hud via SKIND-appen og modtage en personlig vurdering og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
+                    : 'If you have throat swelling, breathing difficulty or dizziness, call 112 — that cannot be assessed from a photo. For ordinary hives, upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -475,8 +538,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Ringorm (Tinea)? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Ringorm (tinea): symptomer og behandling | SKIND',
         description:
-          'Lær alt om ringorm og tinea-infektioner: hvad det er, hvad der forårsager svampeinfektionen, hvem der rammes, og hvilke behandlingsmuligheder der findes. Få hjælp via SKIND.',
+          'Ringorm og tinea: hvordan svampeinfektionen ser ud, hvordan den smitter, og hvordan fodsvamp, lyskesvamp og neglesvamp behandles. Få en vurdering via SKIND.',
         keywords:
-          'hvad er ringorm, tinea corporis, atletfod, lyskeeksem, ringorm symptomer, svampeinfektion hud, tinea behandling, hudlæge svamp, SKIND',
+          'hvad er ringorm, tinea corporis, fodsvamp, lyskesvamp, neglesvamp, ringorm symptomer, svampeinfektion hud, tinea behandling, hudlæge svamp, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/tinea-infections-ringworm',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Ringworm (Tinea)? Causes, Symptoms and Treatment | SKIND',
+        title: 'Ringworm (tinea): symptoms and treatment | SKIND',
         description:
-          'Learn everything about ringworm and tinea infections: what it is, what causes the fungal infection, who gets it, and what treatment options are available. Get help via SKIND.',
+          'Ringworm and tinea: what the infection looks like, how it spreads, and how athlete\'s foot, jock itch and nail fungus are treated. Get an assessment via SKIND.',
         keywords:
-          'what is ringworm, tinea corporis, athlete\'s foot, jock itch, ringworm symptoms, fungal skin infection, tinea treatment, dermatologist fungus, SKIND',
+          'what is ringworm, tinea corporis, athlete\'s foot, jock itch, nail fungus, ringworm symptoms, fungal skin infection, tinea treatment, dermatologist fungus, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/tinea-infections-ringworm',
           languages: {
@@ -60,11 +59,10 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
     datePublished: '2026-03-17',
     dateModified: '2026-03-17',
     author: {
-      '@type': 'Person',
-      '@id': 'https://www.skinchange.dk/#peter-bjerring',
-      name: 'Peter Bjerring',
-      jobTitle: isDa ? 'Speciallæge i hudsygdomme' : 'Consultant Dermatologist',
-      url: `https://www.skinchange.dk/${lang}/about`,
+      '@type': 'Organization',
+      '@id': 'https://www.skinchange.dk/#skinchange-ai',
+      name: 'SkinChange.AI',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -87,52 +85,52 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er ringorm?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Ringorm er ikke en orm, men en svampeinfektion (tinea) forårsaget af dermatofytter. Den viser sig som runde, røde, kløende pletter med hævede kanter og klart center – deraf navnet ringorm.',
-            },
-          },
-          {
-            '@type': 'Question',
             name: 'Er ringorm smitsomt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja, ringorm er smitsomt. Det kan spredes fra person til person via direkte hudkontakt, fra inficerede dyr (fx katte og hunde), samt fra forurenede genstande som håndklæder, tøj og gulve i omklædningsrum.',
+              text: 'Ja. Ringorm smitter let via direkte hudkontakt med en inficeret person, via inficerede dyr eller via kontaminerede genstande som håndklæder, sko og gulvoverflader. God håndhygiejne og undgåelse af deling af personlige genstande reducerer smitterisikoen.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvornår skal jeg søge lægehjælp for ringorm?',
+            name: 'Kan ringorm forsvinde af sig selv?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Søg hjælp hvis håndkøbspræparater ikke virker efter 2-3 uger, hvis infektionen er udbredt, rammer hovedbunden eller neglene, eller hvis du er immunsvækket. SKIND giver dig adgang til en hudlæge inden for 48 timer.',
+              text: 'Meget sjældent. De fleste tinea-infektioner kræver aktiv behandling med svampedræbende midler. Uden behandling vil infektionen typisk brede sig og kan smitte andre. Neglesvamp og ringorm i hovedbunden kræver altid receptpligtig behandling.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Kontakt en hudlæge, hvis infektionen ikke bedres efter 2–3 uger med håndkøbsbehandling, hvis den er udbredt eller rammer hovedbund eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig adgang til en certificeret hudlæge inden for 48 timer.',
             },
           },
         ]
       : [
           {
             '@type': 'Question',
-            name: 'What is ringworm?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Ringworm is not actually a worm, but a fungal infection (tinea) caused by dermatophytes. It appears as circular, red, itchy patches with raised edges and a clear centre — hence the name ringworm.',
-            },
-          },
-          {
-            '@type': 'Question',
             name: 'Is ringworm contagious?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes, ringworm is contagious. It can spread from person to person through direct skin contact, from infected animals (such as cats and dogs), and from contaminated objects like towels, clothing and locker room floors.',
+              text: 'Yes. Ringworm spreads easily through direct skin contact with an infected person, via infected animals, or through contaminated objects such as towels, shoes and floor surfaces. Good hand hygiene and avoiding sharing personal items reduces the risk of transmission.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I seek medical help for ringworm?',
+            name: 'Can ringworm go away on its own?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Seek help if over-the-counter antifungals are not working after 2-3 weeks, if the infection is widespread, affects the scalp or nails, or if you are immunocompromised. SKIND gives you access to a dermatologist within 48 hours.',
+              text: 'Very rarely. Most tinea infections require active treatment with antifungal medications. Without treatment the infection will typically spread and can be passed on to others. Nail infection and scalp ringworm always require prescription treatment.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I contact a dermatologist?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Contact a dermatologist if the infection does not improve after 2–3 weeks of over-the-counter treatment, if it is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND gives you access to a certified dermatologist within 48 hours.',
             },
           },
         ],
@@ -140,13 +138,11 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -176,7 +172,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">
-                17. {isDa ? 'marts' : 'March'} 2026
+                {isDa ? '17. marts 2026' : 'March 17, 2026'}
               </span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
@@ -192,18 +188,20 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-tinea-ringworm.jpg"
                 alt={
                   isDa
-                    ? 'Ringorm tinea svampeinfektion hud'
-                    : 'Ringworm tinea fungal skin infection'
+                    ? 'Nærbillede af en rund ringorm-plet på huden med rød, hævet kant og lysere midte.'
+                    : 'Close-up of a round ringworm patch on the skin with a red, raised border and paler centre.'
                 }
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -255,18 +253,13 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </p>
               <p>
                 {isDa
-                  ? 'Betegnelsen "ringorm" stammer fra den klassiske ringformede udseende af infektionen på kroppen — ikke fra en parasitær orm. Det er rent faktisk en svampeinfektion, der behandles med svampedræbende midler.'
+                  ? 'Betegnelsen "ringorm" stammer fra det klassiske ringformede udseende af infektionen på kroppen — ikke fra en parasitær orm. Det er rent faktisk en svampeinfektion, der behandles med svampedræbende midler.'
                   : 'The term "ringworm" comes from the classic ring-shaped appearance of the infection on the body — not from any parasitic worm. It is in fact a fungal infection treated with antifungal medications.'}
-              </p>
-              <p>
-                {isDa
-                  ? 'Den medicinske klassifikation er ICD-11: 1F28 Dermatophytosis.'
-                  : 'The medical classification is ICD-11: 1F28 Dermatophytosis.'}
               </p>
 
               {/* Types */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
-                {isDa ? 'De forskellige typer tinea-infektioner' : 'The different types of tinea infections'}
+                {isDa ? 'Hvilke typer tinea-infektioner findes der?' : 'Which types of tinea infection are there?'}
               </h2>
               <p>
                 {isDa
@@ -281,15 +274,15 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                     : 'The classic circular, red, itchy patch on the skin with a raised edge and often a clear centre. The most recognisable type.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Tinea cruris (lyskeeksem):' : 'Tinea cruris (jock itch):'}</strong>{' '}
+                  <strong>{isDa ? 'Tinea cruris (lyskesvamp):' : 'Tinea cruris (jock itch):'}</strong>{' '}
                   {isDa
-                    ? 'Påvirker lyskeområdet og de indre lår. Forårsager intenst kløe, brændende fornemmelse og rødme — hyppigst hos mænd og folk der sveder meget.'
-                    : 'Affects the groin area and inner thighs. Causes intense itching, burning and redness — most frequent in men and people who sweat heavily.'}
+                    ? 'Svamp i lysken, der påvirker lyskeområdet og de indre lår. Giver intens kløe, brændende fornemmelse og rødme — hyppigst hos mænd og folk der sveder meget. Det er en svampeinfektion, ikke en form for eksem, og skal derfor behandles med svampedræbende creme.'
+                    : 'Affects the groin area and inner thighs. Causes intense itching, burning and redness — most frequent in men and people who sweat heavily. It is a fungal infection, not a form of eczema, and needs an antifungal cream rather than a steroid.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Tinea pedis (atletfod):' : 'Tinea pedis (athlete\'s foot):'}</strong>{' '}
+                  <strong>{isDa ? 'Tinea pedis (fodsvamp):' : 'Tinea pedis (athlete\'s foot):'}</strong>{' '}
                   {isDa
-                    ? 'Udvikler sig typisk mellem tæerne og på fodsålen. Giver kløe, brændende fornemmelse, skæl og undertiden blistring. Den mest udbredte tinea-type globalt.'
+                    ? 'Udvikler sig typisk mellem tæerne og på fodsålen. Giver kløe, brændende fornemmelse, skæl og undertiden blæredannelse. Den mest udbredte tinea-type globalt.'
                     : 'Typically develops between the toes and on the sole of the foot. Causes itching, burning, scaling and sometimes blistering. The most widespread type of tinea globally.'}
                 </li>
                 <li>
@@ -299,10 +292,21 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                     : 'Primarily a childhood problem. Causes scaly, itchy patches on the scalp, hair loss and broken hair shafts. Requires oral antifungal medication — creams are not sufficient.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Tinea unguium / onychomycosis (negleinfektion):' : 'Tinea unguium / onychomycosis (nail infection):'}</strong>{' '}
-                  {isDa
-                    ? 'Påvirker tå- og fingernegle, der bliver misfarvede (gule/brune), tykke, sprøde og smuldrende. Den sværeste type at behandle — kræver langvarig behandling.'
-                    : 'Affects toenails and fingernails, which become discoloured (yellow/brown), thickened, brittle and crumbly. The most difficult type to treat — requires prolonged treatment.'}
+                  {isDa ? (
+                    <>
+                      <strong>Tinea unguium (neglesvamp med dermatofytter):</strong> Rammer tå- og fingernegle, der bliver misfarvede
+                      (gule/brune), tykke, sprøde og smuldrende. Tinea unguium er den dermatofyt-udløste form for onykomykose –
+                      onykomykose er det bredere begreb, som også dækker negleinfektion med skimmelsvampe og med <em>Candida</em>.
+                      Den sværeste type at behandle.
+                    </>
+                  ) : (
+                    <>
+                      <strong>Tinea unguium (dermatophyte nail infection):</strong> Affects toenails and fingernails, which become
+                      discoloured (yellow/brown), thickened, brittle and crumbly. Tinea unguium is the dermatophyte form of
+                      onychomycosis — onychomycosis is the broader term, which also covers nail infection with non-dermatophyte
+                      moulds and with <em>Candida</em>. The most difficult type to treat.
+                    </>
+                  )}
                 </li>
               </ul>
 
@@ -323,7 +327,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 </li>
                 <li>
                   {isDa
-                    ? 'Skæl og afskalning af huden — særligt ved atletfod'
+                    ? 'Skæl og afskalning af huden — særligt ved fodsvamp'
                     : 'Scaling and flaking skin — particularly with athlete\'s foot'}
                 </li>
                 <li>
@@ -338,13 +342,13 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 </li>
                 <li>
                   {isDa
-                    ? 'Misfarvede, fortykede og smuldrende negle ved negleinfektion'
+                    ? 'Misfarvede, fortykkede og smuldrende negle ved negleinfektion'
                     : 'Discoloured, thickened and crumbly nails with nail infection'}
                 </li>
               </ul>
               <p>
                 {isDa
-                  ? 'Vigtigt: Center-delen af et ringormsplet renser sig ofte op med tiden, mens kanten fortsat breder sig — det giver den karakteristiske ring-effekt.'
+                  ? 'Vigtigt: Den centrale del af en ringormsplet heler ofte op med tiden, mens kanten fortsat breder sig — det giver den karakteristiske ring-effekt.'
                   : 'Important: the central area of a ringworm patch often clears up over time while the edge continues to spread — this creates the characteristic ring effect.'}
               </p>
 
@@ -354,7 +358,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </h2>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Varme og fugtige miljøer' : 'Warm and moist environments'}
+                {isDa ? 'Hvorfor trives svampen i varme og fugtige miljøer?' : 'Why does the fungus thrive in warm, moist environments?'}
               </h3>
               <p>
                 {isDa
@@ -363,29 +367,29 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Smitte fra dyr' : 'Transmission from animals'}
+                {isDa ? 'Kan man få ringorm fra dyr?' : 'Can you catch ringworm from animals?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Katte, hunde, kvæg og gnavere kan alle bære dermatofytter og overføre dem til mennesker via direkte kontakt. Inficerede dyr har ikke nødvendigvis synlige symptomer — en tilsyneladende rask kat kan sagtens smitte ringorm.'
-                  : 'Cats, dogs, cattle and rodents can all carry dermatophytes and transmit them to humans through direct contact. Infected animals do not necessarily show visible symptoms — an apparently healthy cat can still transmit ringworm.'}
+                  ? 'Ja. Katte, hunde, kvæg og gnavere kan alle bære dermatofytter og overføre dem til mennesker via direkte kontakt. Inficerede dyr har ikke nødvendigvis synlige symptomer — en tilsyneladende rask kat kan sagtens smitte med ringorm.'
+                  : 'Yes. Cats, dogs, cattle and rodents can all carry dermatophytes and transmit them to humans through direct contact. Infected animals do not necessarily show visible symptoms — an apparently healthy cat can still transmit ringworm.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Deling af personlige genstande' : 'Sharing personal items'}
+                {isDa ? 'Smitter ringorm via håndklæder og sko?' : 'Does ringworm spread via towels and shoes?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Håndklæder, sportsudstyr, kam og børste, sko og sokker kan alle overføre svampen. Det er en hyppig smittevej, særligt i familier med børn i skolealder.'
-                  : 'Towels, sports equipment, combs and brushes, shoes and socks can all transfer the fungus. This is a common route of transmission, particularly in families with school-aged children.'}
+                  ? 'Ja. Håndklæder, sportsudstyr, kam og børste, sko og sokker kan alle overføre svampen. Det er en hyppig smittevej, særligt i familier med børn i skolealderen.'
+                  : 'Yes. Towels, sports equipment, combs and brushes, shoes and socks can all transfer the fungus. This is a common route of transmission, particularly in families with school-aged children.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Nedsat immunforsvar' : 'Weakened immune system'}
+                {isDa ? 'Hvordan påvirker nedsat immunforsvar risikoen?' : 'How does a weakened immune system affect the risk?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Mennesker med svækket immunforsvar — fx pga. HIV/AIDS, diabetes, kemoterapi eller immunsupprimerende medicin — er mere sårbare over for tinea-infektioner og kan opleve mere udbredte eller svære udbrud.'
+                  ? 'Mennesker med svækket immunforsvar — fx pga. hiv/aids, diabetes, kemoterapi eller immundæmpende medicin — er mere sårbare over for tinea-infektioner og kan opleve mere udbredte eller svære udbrud.'
                   : 'People with a weakened immune system — e.g. due to HIV/AIDS, diabetes, chemotherapy or immunosuppressive medication — are more vulnerable to tinea infections and may experience more widespread or severe outbreaks.'}
               </p>
 
@@ -408,14 +412,14 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 <li>
                   <strong>{isDa ? 'Sportsfolk og aktive mennesker:' : 'Athletes and active people:'}</strong>{' '}
                   {isDa
-                    ? 'Kombination af sved, tæt kontakt og delte faciliteter øger risikoen for atletfod og lyskeeksem markant.'
+                    ? 'Kombinationen af sved, tæt kontakt og delte faciliteter øger risikoen for fodsvamp og lyskesvamp markant.'
                     : 'The combination of sweat, close contact and shared facilities significantly increases the risk of athlete\'s foot and jock itch.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Beboere i tætte omgivelser:' : 'People in close-quarters settings:'}</strong>{' '}
+                  <strong>{isDa ? 'Personer i tætte fællesskaber:' : 'People in close-quarters settings:'}</strong>{' '}
                   {isDa
-                    ? 'Kollegier, kaserner og plejehjem er risikofyldte miljøer pga. delte sanitetsforhold.'
-                    : 'Dormitories, military barracks and nursing homes are high-risk environments due to shared sanitary facilities.'}
+                    ? 'Kollegier, kaserner og plejehjem er risikofyldte miljøer pga. fælles bade- og toiletforhold.'
+                    : 'Dormitories, military barracks and nursing homes are high-risk environments due to shared bathing and toilet facilities.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Immunsvækkede:' : 'Immunocompromised individuals:'}</strong>{' '}
@@ -430,6 +434,58 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                     : 'Close contact with cats and dogs that carry dermatophytes.'}
                 </li>
               </ul>
+
+              {/* Diagnosis */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvordan bekræftes diagnosen?' : 'How is the diagnosis confirmed?'}
+              </h2>
+              <p>
+                {isDa
+                  ? 'Mange udslæt ligner ringorm uden at være det. Før behandlingen begynder — og altid før der udskrives tabletter — bør diagnosen bekræftes på hudskrab, negleklip eller udtrukne hår, der undersøges ved direkte mikroskopi, svampedyrkning eller PCR. Det gælder især hovedbund og negle, hvor behandlingen betyder uger til måneders receptpligtig systemisk medicin.'
+                  : 'Many rashes look like ringworm without being it. Before treatment starts — and always before tablets are prescribed — the diagnosis should be confirmed on skin scrapings, nail clippings or plucked hairs, examined by direct microscopy, fungal culture or PCR. This matters most for the scalp and the nails, where treatment means weeks to months of a prescription systemic drug.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Det er også vigtigt, fordi den hyppigste fejl er at smøre et mistænkt svampeudslæt med binyrebarkhormon. Steroidcremen dæmper rødme og kløe i nogle dage, mens svampen vokser videre, og resultatet er et udflydende, utydeligt udslæt — kaldet tinea incognito — som er sværere både at genkende og at behandle. Er udslættet ikke klart diagnosticeret, så lad være med at smøre steroidcreme på det.'
+                  : 'It also matters because the commonest mistake is to put a topical steroid on a suspected fungal rash. The steroid calms the redness and itch for a few days while the fungus keeps growing, and the result is a spread-out, poorly defined rash — known as tinea incognito — that is harder both to recognise and to treat. If a rash has not been clearly diagnosed, do not put a steroid cream on it.'}
+              </p>
+              <p>
+                {isDa ? (
+                  <>
+                    Ringorm på kroppen forveksles jævnligt med{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      atopisk eksem
+                    </Link>
+                    , med{' '}
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      seboroisk eksem
+                    </Link>{' '}
+                    i hovedbund og ansigt, og med{' '}
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      kontakteksem
+                    </Link>
+                    , hvor udslættet følger noget, huden har været i berøring med. Fælles for de tre er, at de ikke har ringormens
+                    skarpe, skællende yderkant.
+                  </>
+                ) : (
+                  <>
+                    Ringworm on the body is regularly mistaken for{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      atopic eczema
+                    </Link>
+                    , for{' '}
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      seborrhoeic dermatitis
+                    </Link>{' '}
+                    on the scalp and face, and for{' '}
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      contact dermatitis
+                    </Link>
+                    , where the rash follows something the skin has touched. None of the three has the sharp, scaly leading edge of
+                    ringworm.
+                  </>
+                )}
+              </p>
 
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
@@ -448,18 +504,28 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Cremer og salver med clotrimazol, miconazol, terbinafin eller ketoconazol er effektive ved tinea corporis, tinea cruris og mild atletfod. Behandlingen skal fortsættes i mindst 2 uger efter symptomernes forsvinden.'
-                      : 'Creams and ointments containing clotrimazole, miconazole, terbinafine or ketoconazole are effective for tinea corporis, tinea cruris and mild athlete\'s foot. Treatment should continue for at least 2 weeks after symptoms disappear.'}
+                      ? 'Cremer og salver med clotrimazol, miconazol, terbinafin eller ketoconazol er effektive ved tinea corporis, lyskesvamp og mild fodsvamp. Behandlingen skal fortsættes i mindst 2 uger efter, at symptomerne er forsvundet.'
+                      : 'Creams and ointments containing clotrimazole, miconazole, terbinafine or ketoconazole are effective for tinea corporis, jock itch and mild athlete\'s foot. Treatment should continue for at least 2 weeks after symptoms disappear.'}
                   </p>
                 </div>
                 <div>
                   <p className="font-semibold text-[#1a237e]">
-                    {isDa ? '💊 Oral svampedræbende behandling (svær eller hartnakket infektion)' : '💊 Oral antifungal treatment (severe or stubborn infection)'}
+                    {isDa ? '💊 Oral svampedræbende behandling (svær eller hårdnakket infektion)' : '💊 Oral antifungal treatment (severe or stubborn infection)'}
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Tinea capitis kræver altid oral behandling (typisk griseofulvin eller terbinafin). Negleinfektion (onychomycosis) behandles med oral terbinafin eller itraconazol over 3–6 måneder. Receptpligtig.'
-                      : 'Tinea capitis always requires oral treatment (typically griseofulvin or terbinafine). Nail infection (onychomycosis) is treated with oral terbinafine or itraconazole over 3–6 months. Prescription required.'}
+                      ? 'Tinea capitis kræver altid oral behandling. Terbinafin er førstevalg i Danmark, mens itraconazol og fluconazol er alternativer; griseofulvin, der længe var det klassiske middel, markedsføres ikke længere i Danmark og er stort set trukket tilbage i EU. Neglesvamp behandles med oral terbinafin i cirka 6 uger ved fingernegle og 12 uger ved tånegle. Receptpligtig.'
+                      : 'Tinea capitis always requires oral treatment. Terbinafine is first-line in Denmark, with itraconazole and fluconazole as alternatives; griseofulvin, long the classic choice, is no longer marketed in Denmark and has largely been withdrawn across the EU. Nail infection is treated with oral terbinafine for about 6 weeks for fingernails and 12 weeks for toenails. Prescription required.'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-[#1a237e]">
+                    {isDa ? '⏳ Neglen skal vokse ud bagefter' : '⏳ The nail still has to grow out'}
+                  </p>
+                  <p className="text-sm mt-1">
+                    {isDa
+                      ? 'Tabletkuren stopper infektionen, men den beskadigede negl ser fortsat unormal ud, indtil den er vokset helt ud. Det tager yderligere 6–12 måneder — det er altså ikke tegn på, at behandlingen har svigtet.'
+                      : 'The course of tablets stops the infection, but the damaged nail continues to look abnormal until it has fully grown out. That takes a further 6–12 months — it is not a sign that the treatment has failed.'}
                   </p>
                 </div>
                 <div>
@@ -515,8 +581,8 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </h3>
                   <p>
                     {isDa
-                      ? 'Meget sjældent. De fleste tinea-infektioner kræver aktiv behandling med svampedræbende midler. Uden behandling vil infektionen typisk brede sig og kan overføres til andre. Negleinfektion og ringorm på hovedbunden kræver altid receptpligtig behandling.'
-                      : 'Very rarely. Most tinea infections require active treatment with antifungal medications. Without treatment the infection will typically worsen and can be transferred to others. Nail infection and scalp ringworm always require prescription treatment.'}
+                      ? 'Meget sjældent. De fleste tinea-infektioner kræver aktiv behandling med svampedræbende midler. Uden behandling vil infektionen typisk brede sig og kan smitte andre. Neglesvamp og ringorm i hovedbunden kræver altid receptpligtig behandling.'
+                      : 'Very rarely. Most tinea infections require active treatment with antifungal medications. Without treatment the infection will typically spread and can be passed on to others. Nail infection and scalp ringworm always require prescription treatment.'}
                   </p>
                 </div>
                 <div>
@@ -525,8 +591,8 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                   </h3>
                   <p>
                     {isDa
-                      ? 'Kontakt en hudlæge hvis infektionen ikke bedres efter 2-3 uger med håndkøbsbehandling, hvis infektionen er udbredt eller rammer hoved eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig adgang til en certificeret hudlæge inden for 48 timer.'
-                      : 'Contact a dermatologist if the infection does not improve after 2-3 weeks of over-the-counter treatment, if the infection is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND gives you access to a certified dermatologist within 48 hours.'}
+                      ? 'Kontakt en hudlæge, hvis infektionen ikke bedres efter 2–3 uger med håndkøbsbehandling, hvis den er udbredt eller rammer hovedbund eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig adgang til en certificeret hudlæge inden for 48 timer.'
+                      : 'Contact a dermatologist if the infection does not improve after 2–3 weeks of over-the-counter treatment, if it is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND gives you access to a certified dermatologist within 48 hours.'}
                   </p>
                 </div>
               </div>
@@ -534,12 +600,12 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
-                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig diagnose og behandlingsplan fra en certificeret hudlæge — uden ventetid på sygehus.'
-                    : 'Upload photos of your skin via the SKIND app and receive a personal diagnosis and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                    ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge — uden ventetid på sygehus.'
+                    : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -555,8 +621,8 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

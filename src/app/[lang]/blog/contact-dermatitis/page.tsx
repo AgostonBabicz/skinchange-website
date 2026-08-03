@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Script from 'next/script';
 
 interface PageProps {
   params: { lang: Language };
@@ -13,11 +12,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return isDa
     ? {
-        title: 'Hvad er Kontaktdermatitis? Årsager, Symptomer og Behandling | SKIND',
+        title: 'Kontakteksem (kontaktdermatitis): behandling | SKIND',
         description:
-          'Lær alt om kontaktdermatitis: hvad det er, de to hovedtyper (irritativ og allergisk), symptomer, hvem der rammes og hvilke behandlingsmuligheder der findes.',
+          'Kontakteksem opstår, når huden reagerer på noget, den har rørt ved. Læs om irritativ og allergisk kontaktdermatitis, lappeprøver, behandling og forebyggelse.',
         keywords:
-          'kontaktdermatitis, allergisk dermatitis, irritativ dermatitis, eksem, hudallergi, kontakteksem, hudlæge, SKIND',
+          'kontaktdermatitis, kontakteksem, allergisk kontaktdermatitis, irritativ kontaktdermatitis, nikkelallergi, lappeprøve, hudlæge, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/da/blog/contact-dermatitis',
           languages: {
@@ -28,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     : {
-        title: 'What is Contact Dermatitis? Causes, Symptoms and Treatment | SKIND',
+        title: 'Contact dermatitis: symptoms and treatment | SKIND',
         description:
-          'Learn everything about contact dermatitis: what it is, the two main types (irritant and allergic), symptoms, who gets it and what treatment options are available.',
+          'Contact dermatitis occurs when the skin reacts to something it has touched. Learn about irritant and allergic types, patch testing, treatment and prevention.',
         keywords:
-          'contact dermatitis, allergic dermatitis, irritant dermatitis, eczema, skin allergy, skin rash, dermatologist, SKIND',
+          'contact dermatitis, contact eczema, allergic contact dermatitis, irritant contact dermatitis, nickel allergy, patch testing, dermatologist, SKIND',
         alternates: {
           canonical: 'https://www.skinchange.dk/en/blog/contact-dermatitis',
           languages: {
@@ -60,10 +59,10 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
     datePublished: '2026-03-19',
     dateModified: '2026-03-19',
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
       name: 'SkinChange.AI',
-      jobTitle: isDa ? 'Medicinsk redaktion' : 'Medical editorial team',
+      url: 'https://www.skinchange.dk',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,38 +85,30 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
       ? [
           {
             '@type': 'Question',
-            name: 'Hvad er kontaktdermatitis?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Kontaktdermatitis er en betændelsestilstand i huden, der opstår når huden reagerer på et stof, den har været i kontakt med. Der findes to hovedtyper: irritativ kontaktdermatitis forårsaget af direkte skade på hudens barriere, og allergisk kontaktdermatitis der skyldes en immunreaktion mod et specifikt allergen.',
-            },
-          },
-          {
-            '@type': 'Question',
             name: 'Er kontaktdermatitis smitsomt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nej, kontaktdermatitis er ikke smitsomt og kan ikke spredes fra person til person. Det er en lokal reaktion i huden på et irritérende stof eller allergen.',
+              text: 'Nej, kontaktdermatitis er ikke smitsomt og kan ikke spredes fra person til person. Det er en lokal hudreaktion på et irriterende stof eller allergen.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Hvordan ved jeg, hvad der udløser min kontaktdermatitis?',
+            name: 'Hvornår skal jeg kontakte en hudlæge?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Identifikation af udløseren er nøglen til at kontrollere kontaktdermatitis. En hudlæge kan udføre lappeprøver (patch tests), hvor små mængder af almindelige allergener påføres huden for at identificere specifikke reaktioner. Det kan også hjælpe at føre dagbog over symptomer og aktiviteter.',
+              text: 'Kontakt en hudlæge, hvis udslættet er omfattende, ikke bedres efter en uge med undgåelse, forværres kraftigt, eller hvis du har mistanke om et specifikt allergen, der skal identificeres med lappeprøver.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Hvordan forebygger jeg kontaktdermatitis?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Forebyggelse handler om at minimere kontakt med kendte irritanter og allergener. Brug beskyttelseshandsker, vælg parfumefrie produkter, og hold huden fugtet med milde fugtighedscremer for at styrke barrierefunktionen.',
             },
           },
         ]
       : [
-          {
-            '@type': 'Question',
-            name: 'What is contact dermatitis?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Contact dermatitis is an inflammatory skin condition that occurs when the skin reacts to a substance it has touched. There are two main types: irritant contact dermatitis caused by direct damage to the skin barrier, and allergic contact dermatitis caused by an immune reaction to a specific allergen.',
-            },
-          },
           {
             '@type': 'Question',
             name: 'Is contact dermatitis contagious?',
@@ -128,10 +119,18 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
           },
           {
             '@type': 'Question',
-            name: 'How do I know what is triggering my contact dermatitis?',
+            name: 'When should I contact a dermatologist?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Identifying the trigger is key to managing contact dermatitis. A dermatologist can perform patch tests, where small amounts of common allergens are applied to the skin to identify specific reactions. Keeping a symptom and activity diary can also help pinpoint triggers.',
+              text: 'Contact a dermatologist if the rash is extensive, does not improve after a week of avoidance, worsens significantly, or if you suspect a specific allergen that needs to be identified through patch testing.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I prevent contact dermatitis?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Prevention is about minimising contact with known irritants and allergens. Wear protective gloves, choose fragrance-free products, and keep the skin moisturised with gentle creams to strengthen the barrier function.',
             },
           },
         ],
@@ -139,13 +138,11 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
 
   return (
     <>
-      <Script
-        id="article-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -174,10 +171,10 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
-              <span className="text-gray-500 text-sm">19. {isDa ? 'marts' : 'March'} 2026</span>
+              <span className="text-gray-500 text-sm">{isDa ? '19. marts 2026' : 'March 19, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">
-                {isDa ? '7 min læsetid' : '7 min read'}
+                {isDa ? '6 min læsetid' : '6 min read'}
               </span>
             </div>
 
@@ -189,14 +186,20 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/7] relative bg-gradient-to-br from-[#304ffe] to-[#1a237e]">
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/blog-contact-dermatitis.jpg"
-                alt={isDa ? 'Kontaktdermatitis – allergisk hudreaktion' : 'Contact dermatitis – allergic skin reaction'}
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                alt={
+                  isDa
+                    ? 'Håndryg med skarpt afgrænset rødme, små blærer og tør, revnet hud ved kontakteksem.'
+                    : 'The back of a hand with sharply bordered redness, small blisters and dry, cracked skin from contact dermatitis.'
+                }
+                width={1600}
+                height={900}
+                fetchPriority="high"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a237e]/60 to-transparent" />
             </div>
 
             {/* Author */}
@@ -217,13 +220,13 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               <p className="text-xl leading-relaxed text-gray-600 mb-6">
                 {isDa ? (
                   <>
-                    <strong>Kontaktdermatitis er en af de mest almindelige hudlidelser</strong>, der opstår når huden
-                    reagerer på et stof, den har været i kontakt med. Det kan påvirke alle — uanset alder eller
+                    <strong>Kontaktdermatitis — i daglig tale kontakteksem — er en af de mest almindelige hudlidelser</strong>. Den opstår, når huden
+                    reagerer på et stof, den har været i kontakt med. Det kan ramme alle — uanset alder eller
                     hudtype — og viser sig som rødme, kløe, blærer eller tørhed på de berørte områder.
                   </>
                 ) : (
                   <>
-                    <strong>Contact dermatitis is one of the most common skin conditions</strong>, occurring when
+                    <strong>Contact dermatitis — also called contact eczema — is one of the most common skin conditions</strong>. It occurs when
                     the skin reacts to a substance it has touched. It can affect anyone — regardless of age or skin
                     type — and presents as redness, itching, blisters or dryness on the affected areas.
                   </>
@@ -231,8 +234,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist hvad kontaktdermatitis er, hvilke to hovedtyper der findes, hvordan det ser ud, og hvad du kan gøre ved det.'
-                  : 'In this article, we explain exactly what contact dermatitis is, the two main types that exist, what it looks like, and what you can do about it.'}
+                  ? 'I denne artikel forklarer vi præcist hvad kontaktdermatitis er, hvilke to hovedtyper der findes, hvordan det ser ud, hvordan en lappeprøve foregår, og hvad du kan gøre ved det.'
+                  : 'In this article, we explain exactly what contact dermatitis is, the two main types that exist, what it looks like, how patch testing works, and what you can do about it.'}
               </p>
             </div>
 
@@ -242,9 +245,23 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 {isDa ? 'Hvad er kontaktdermatitis?' : 'What is contact dermatitis?'}
               </h2>
               <p>
-                {isDa
-                  ? 'Kontaktdermatitis er en betændelsestilstand i huden, der opstår som en direkte reaktion på et stof, huden har været i kontakt med. I modsætning til atopisk eksem (atopisk dermatitis) er kontaktdermatitis ikke genetisk betinget, men skyldes altid en ydre påvirkning. Det betyder, at hvis du kan identificere og fjerne udløseren, kan symptomerne ofte forsvinde.'
-                  : 'Contact dermatitis is an inflammatory skin condition that arises as a direct reaction to a substance the skin has touched. Unlike atopic eczema (atopic dermatitis), contact dermatitis is not genetically determined — it is always caused by an external trigger. This means that if you can identify and remove the trigger, symptoms often disappear.'}
+                {isDa ? (
+                  <>
+                    Kontaktdermatitis — på dansk også kaldet kontakteksem — er en betændelsestilstand i huden, der opstår som en direkte reaktion på et stof, huden har været i kontakt med. Til forskel fra{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      atopisk eksem
+                    </Link>{' '}
+                    kræver kontaktdermatitis altid en ydre udløser. Arvelige forhold spiller dog stadig en rolle: har du fra naturens hånd en svagere hudbarriere, skal der mindre til, før huden reagerer. Det betyder også, at hvis du kan identificere og fjerne udløseren, forsvinder symptomerne ofte.
+                  </>
+                ) : (
+                  <>
+                    Contact dermatitis — also known as contact eczema — is an inflammatory skin condition that arises as a direct reaction to a substance the skin has touched. Unlike{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      atopic eczema
+                    </Link>
+                    , contact dermatitis always requires an external trigger. Inherited factors still matter, though: if your skin barrier is naturally weaker, less exposure is needed before the skin reacts. It also means that if you can identify and remove the trigger, symptoms often disappear.
+                  </>
+                )}
               </p>
               <p>
                 {isDa
@@ -255,14 +272,14 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 <li>
                   <strong>{isDa ? 'Irritativ kontaktdermatitis:' : 'Irritant contact dermatitis:'}</strong>{' '}
                   {isDa
-                    ? 'Den hyppigste type. Opstår når et stof direkte skader hudens beskyttende barriere — uanset om du tidligere har været udsat for stoffet eller ej. Alle kan udvikle det ved tilstrækkelig eksponering.'
+                    ? 'Den hyppigste type. Opstår, når et stof direkte skader hudens beskyttende barriere — uanset om du tidligere har været udsat for stoffet eller ej. Alle kan udvikle det ved tilstrækkelig eksponering.'
                     : 'The most common type. Occurs when a substance directly damages the skin\'s protective barrier — regardless of whether you have been exposed to it before. Anyone can develop it with sufficient exposure.'}
                 </li>
                 <li>
                   <strong>{isDa ? 'Allergisk kontaktdermatitis:' : 'Allergic contact dermatitis:'}</strong>{' '}
                   {isDa
-                    ? 'En immunreaktion, hvor kroppens immunsystem reagerer på et specifikt allergen, du tidligere er blevet sensibiliseret over for. Kun personer med denne specifikke sensitivitet udvikler symptomer.'
-                    : 'An immune reaction in which the body\'s immune system reacts to a specific allergen you have previously been sensitised to. Only people with this specific sensitivity develop symptoms.'}
+                    ? 'En immunreaktion, hvor kroppens immunsystem reagerer på et specifikt allergen, du tidligere er blevet sensibiliseret over for. Kun personer med netop denne overfølsomhed udvikler symptomer.'
+                    : 'An immune reaction in which the body\'s immune system reacts to a specific allergen you have previously been sensitised to. Only people with that specific hypersensitivity develop symptoms.'}
                 </li>
               </ul>
 
@@ -283,9 +300,9 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                     : 'Affected areas may appear red, swollen and warm to the touch.'}
                 </li>
                 <li>
-                  <strong>{isDa ? 'Kløe og brændende:' : 'Itching and burning:'}</strong>{' '}
+                  <strong>{isDa ? 'Kløe og svie:' : 'Itching and burning:'}</strong>{' '}
                   {isDa
-                    ? 'Intense kløe, brændende eller stikkende fornemmelser er typiske.'
+                    ? 'Intens kløe, svie eller stikkende fornemmelser er typiske.'
                     : 'Intense itching, burning or stinging sensations are typical.'}
                 </li>
                 <li>
@@ -303,7 +320,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </ul>
               <p>
                 {isDa
-                  ? 'Kontaktdermatitis optræder typisk på hænder, håndled, arme og ansigt — områder der oftest er i kontakt med irritérende stoffer. Reaktionen er ofte begrænset til det område, der har været i direkte kontakt med udløseren, men kan i allergiske tilfælde brede sig til andre områder.'
+                  ? 'Kontaktdermatitis optræder typisk på hænder, håndled, arme og i ansigtet — områder, der oftest er i kontakt med irriterende stoffer. Reaktionen er ofte begrænset til det område, der har været i direkte kontakt med udløseren, men kan i allergiske tilfælde brede sig til andre områder.'
                   : 'Contact dermatitis typically appears on the hands, wrists, arms and face — areas most often in contact with irritant substances. The reaction is often limited to the area that has been in direct contact with the trigger, but in allergic cases it can spread to other areas.'}
               </p>
 
@@ -318,32 +335,67 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Irritativ kontaktdermatitis' : 'Irritant contact dermatitis'}
+                {isDa ? 'Hvad udløser irritativ kontaktdermatitis?' : 'What causes irritant contact dermatitis?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Irritativ kontaktdermatitis opstår når et stof direkte skader hudens yderste beskyttende lag — epidermis. Skaden forstyrrer barrierefunktionen og udløser betændelse. Jo stærkere irritanten er, og jo længere eksponeringstiden er, jo større er risikoen.'
-                  : 'Irritant contact dermatitis occurs when a substance directly damages the outermost protective layer of the skin — the epidermis. The damage disrupts the barrier function and triggers inflammation. The stronger the irritant and the longer the exposure, the greater the risk.'}
+                  ? 'Direkte skade på huden. Irritativ kontaktdermatitis opstår, når et stof beskadiger hudens yderste beskyttende lag — epidermis. Skaden forstyrrer barrierefunktionen og udløser betændelse. Jo stærkere irritanten er, og jo længere eksponeringstiden er, jo større er risikoen.'
+                  : 'Direct damage to the skin. Irritant contact dermatitis occurs when a substance damages the outermost protective layer of the skin — the epidermis. The damage disrupts the barrier function and triggers inflammation. The stronger the irritant and the longer the exposure, the greater the risk.'}
               </p>
               <p>
                 {isDa
-                  ? 'Almindelige irritanter inkluderer sæber, rengøringsmidler, opløsningsmidler, olier, syrer, baser og planter som brændenælder. Selv gentagen vand eksponering — for eksempel hyppig håndvask — kan udtørre huden og føre til irritativ dermatitis.'
+                  ? 'Almindelige irritanter inkluderer sæber, rengøringsmidler, opløsningsmidler, olier, syrer, baser og planter som brændenælder. Selv gentagen vandeksponering — for eksempel hyppig håndvask — kan udtørre huden og føre til irritativ dermatitis.'
                   : 'Common irritants include soaps, detergents, solvents, oils, acids, alkalis and plants such as nettles. Even repeated water exposure — for example frequent hand washing — can dry out the skin and lead to irritant dermatitis.'}
               </p>
 
               <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
-                {isDa ? 'Allergisk kontaktdermatitis' : 'Allergic contact dermatitis'}
+                {isDa ? 'Hvad udløser allergisk kontaktdermatitis?' : 'What causes allergic contact dermatitis?'}
               </h3>
               <p>
                 {isDa
-                  ? 'Allergisk kontaktdermatitis involverer en forsinket immunreaktion (type IV hypersensitivitet), hvor immunsystemet aktiveres mod et specifikt allergen. Reaktionen kan tage 24–72 timer at manifestere sig efter eksponering.'
-                  : 'Allergic contact dermatitis involves a delayed immune reaction (Type IV hypersensitivity) in which the immune system is activated against a specific allergen. The reaction may take 24–72 hours to manifest after exposure.'}
+                  ? 'En forsinket immunreaktion (type IV-overfølsomhed), hvor immunsystemet aktiveres mod et specifikt allergen. Reaktionen kan tage 24–72 timer at vise sig efter eksponering.'
+                  : 'A delayed immune reaction (type IV hypersensitivity) in which the immune system is activated against a specific allergen. The reaction may take 24–72 hours to appear after exposure.'}
               </p>
               <p>
                 {isDa
-                  ? 'Almindelige allergener inkluderer nikkel (i smykker og metaldele), parfumer, kosmetik, latex, visse lægemidler, balsam og harpikser fra planter. Selv produkter du har brugt i årevis kan pludselig udløse en allergisk reaktion, fordi sensitiviseringen kan udvikle sig over tid.'
-                  : 'Common allergens include nickel (in jewellery and metal parts), fragrances, cosmetics, latex, certain medications, balsam and resins from plants. Even products you have used for years can suddenly trigger an allergic reaction, as sensitisation can develop over time.'}
+                  ? 'Almindelige allergener inkluderer nikkel (i smykker og metaldele), parfumer, kosmetik, konserveringsmidler, perubalsam, visse lægemidler og harpikser fra planter. Selv produkter, du har brugt i årevis, kan pludselig udløse en allergisk reaktion, fordi sensibiliseringen kan udvikle sig over tid.'
+                  : 'Common allergens include nickel (in jewellery and metal parts), fragrances, cosmetics, preservatives, balsam of Peru, certain medications and resins from plants. Even products you have used for years can suddenly trigger an allergic reaction, because sensitisation can develop over time.'}
               </p>
+
+              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+                {isDa ? 'Hvorfor er latex en anden slags allergi?' : 'Why is latex a different kind of allergy?'}
+              </h3>
+              <p>
+                {isDa ? (
+                  <>
+                    Fordi naturgummilatex er det klassiske type I-allergen. Reaktionen er IgE-medieret og indtræder inden for minutter — ikke timer. Latexallergi giver{' '}
+                    <Link href={`/${lang}/blog/urticaria-hives`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      kontakturticaria (nældefeber)
+                    </Link>{' '}
+                    på kontaktstedet, hævelse af slimhinder (angioødem) og i værste fald anafylaksi. Bemærk, at gummihandsker desuden kan give en klassisk, forsinket type IV-allergi over for de kemikalier, gummiet er fremstillet med — to helt forskellige reaktioner på det samme produkt.
+                  </>
+                ) : (
+                  <>
+                    Because natural rubber latex is the classic type I allergen. The reaction is IgE-mediated and begins within minutes — not hours. Latex allergy causes{' '}
+                    <Link href={`/${lang}/blog/urticaria-hives`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      contact urticaria (hives)
+                    </Link>{' '}
+                    at the site of contact, swelling of mucous membranes (angio-oedema) and, at worst, anaphylaxis. Note that rubber gloves can also cause a classic delayed type IV allergy to the chemicals used to make the rubber — two entirely different reactions to the same product.
+                  </>
+                )}
+              </p>
+
+              {/* Red flags */}
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-3">
+                  {isDa ? '⚠️ Hvornår skal du søge akut hjælp?' : '⚠️ When to seek urgent help'}
+                </h3>
+                <p className="text-red-900 mb-0">
+                  {isDa
+                    ? 'Ring 112, hvis du efter kontakt med latex eller et andet allergen får hævelse af ansigt, læber, tunge eller svælg, hvæsende vejrtrækning, åndenød, svimmelhed eller pludselig udbredt nældefeber. Det kan være anafylaksi, som udvikler sig i løbet af minutter og kræver adrenalin med det samme. Har du fået konstateret latexallergi, skal du oplyse det ved al tandlæge- og hospitalsbehandling.'
+                    : 'Call 112 if, after contact with latex or another allergen, you develop swelling of the face, lips, tongue or throat, wheezing, difficulty breathing, dizziness or sudden widespread hives. This can be anaphylaxis, which develops within minutes and needs adrenaline immediately. If you have been diagnosed with latex allergy, tell every dentist and hospital department that treats you.'}
+                </p>
+              </div>
 
               {/* Who gets it */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
@@ -381,13 +433,28 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
+              {/* Patch testing */}
+              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+                {isDa ? 'Hvordan foregår en lappeprøve?' : 'How does patch testing work?'}
+              </h2>
+              <p>
+                {isDa
+                  ? 'Små mængder af de mest almindelige allergener påføres ryggen under plastre. Undersøgelsen kræver flere besøg hen over cirka en uge: plastrene sættes på, fjernes efter 48 timer, og huden aflæses igen efter 72–96 timer, fordi en type IV-reaktion udvikler sig langsomt.'
+                  : 'Small amounts of the most common allergens are applied to the back under adhesive patches. The investigation takes several visits over about a week: the patches go on, come off after 48 hours, and the skin is read again at 72–96 hours, because a type IV reaction develops slowly.'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Forberedelsen har stor betydning for resultatet. Lokalsteroid må ikke bruges på testområdet i ugerne op til undersøgelsen, og systemisk steroid eller anden immundæmpende behandling bør så vidt muligt undgås, da begge dele kan dæmpe en ægte reaktion og give et falsk negativt svar. Ryggen skal desuden holdes tør, og du bør undgå kraftig sved og sol i testperioden.'
+                  : 'Preparation matters a great deal for the result. Topical steroids must not be used on the test site in the weeks beforehand, and systemic steroids or other immunosuppressive treatment should be avoided where possible, since both can suppress a genuine reaction and produce a false negative. The back also needs to be kept dry, and heavy sweating and sun exposure should be avoided during the test period.'}
+              </p>
+
               {/* Treatment */}
               <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved kontaktdermatitis?' : 'What can you do about contact dermatitis?'}
               </h2>
               <p>
                 {isDa
-                  ? 'Kontaktdermatitis er håndterbar, og i de fleste tilfælde forsvinder symptomerne når udløseren identificeres og fjernes. Nøglen til succes er en kombination af undgåelse, pleje og medicinsk behandling:'
+                  ? 'Kontaktdermatitis er håndterbar, og i de fleste tilfælde forsvinder symptomerne, når udløseren identificeres og fjernes. Nøglen til succes er en kombination af undgåelse, pleje og medicinsk behandling:'
                   : 'Contact dermatitis is manageable, and in most cases symptoms disappear once the trigger is identified and removed. The key to success is a combination of avoidance, skincare and medical treatment:'}
               </p>
 
@@ -418,8 +485,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Kortikosteroidcremer eller -salver er standardbehandling mod inflammation og kløe. Ved svær allergisk dermatitis kan en hudlæge anbefale kortere forløb med stærkere topisk steroid eller andre lægemidler.'
-                      : 'Corticosteroid creams or ointments are the standard treatment for inflammation and itching. For severe allergic dermatitis, a dermatologist may recommend a shorter course of a stronger topical steroid or other medications.'}
+                      ? 'Kortikosteroidcremer eller -salver er standardbehandling mod inflammation og kløe. Ved svær eller udbredt allergisk kontaktdermatitis er standardbehandlingen et kort, nedtrappende forløb med kortikosteroid i tabletform — typisk over 2–3 uger — da et stærkere lokalsteroid sjældent er nok alene.'
+                      : 'Corticosteroid creams or ointments are the standard treatment for inflammation and itching. For severe or widespread allergic contact dermatitis, the standard of care is a short, tapering course of oral corticosteroids — typically over 2–3 weeks — since a more potent topical steroid alone is rarely enough.'}
                   </p>
                 </div>
                 <div>
@@ -428,8 +495,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </p>
                   <p className="text-sm mt-1">
                     {isDa
-                      ? 'Undgå sæber med parfume og tensider. Brug lunkent i stedet for varmt vand, og undgå at gnide huden tør. Vælg rensere og fugtighedscremer formuleret til sensitiv hud.'
-                      : 'Avoid soaps with fragrance and surfactants. Use lukewarm water instead of hot water, and avoid rubbing the skin dry. Choose cleansers and moisturisers formulated for sensitive skin.'}
+                      ? 'Undgå sæber med parfume og skrappe tensider. Brug lunkent i stedet for varmt vand, og undgå at gnide huden tør. Vælg rensere og fugtighedscremer formuleret til sensitiv hud.'
+                      : 'Avoid soaps with fragrance and harsh surfactants. Use lukewarm water instead of hot water, and avoid rubbing the skin dry. Choose cleansers and moisturisers formulated for sensitive skin.'}
                   </p>
                 </div>
               </div>
@@ -439,8 +506,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
-                    ? 'Kontaktdermatitis er klassificeret som ED60 i WHO\'s internationale sygdomsklassifikation (ICD-11). Irritativ kontaktdermatitis udgør ca. 80% af alle tilfælde. Behandlingen baseres på identifikation og undgåelse af udløseren samt topiske steroider.'
-                    : "Contact dermatitis is classified as ED60 in the WHO's International Classification of Diseases (ICD-11). Irritant contact dermatitis accounts for approximately 80% of all cases. Treatment is based on identification and avoidance of the trigger plus topical steroids."}
+                    ? 'I WHO\'s internationale sygdomsklassifikation (ICD-11) er kontaktdermatitis delt op i allergisk kontaktdermatitis (EK00) og irritativ kontaktdermatitis (EK02). Irritativ kontaktdermatitis udgør ca. 80% af alle tilfælde. Behandlingen baseres på identifikation og undgåelse af udløseren samt topiske steroider.'
+                    : "In the WHO's International Classification of Diseases (ICD-11), contact dermatitis is divided into allergic contact dermatitis (EK00) and irritant contact dermatitis (EK02). Irritant contact dermatitis accounts for approximately 80% of all cases. Treatment is based on identification and avoidance of the trigger plus topical steroids."}
                 </p>
               </div>
 
@@ -455,7 +522,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Nej, kontaktdermatitis er ikke smitsomt og kan ikke spredes fra person til person. Det er en lokal hudreaktion på et irritérende stof eller allergen.'
+                      ? 'Nej, kontaktdermatitis er ikke smitsomt og kan ikke spredes fra person til person. Det er en lokal hudreaktion på et irriterende stof eller allergen.'
                       : 'No, contact dermatitis is not contagious and cannot be spread from person to person. It is a local skin reaction to an irritant substance or allergen.'}
                   </p>
                 </div>
@@ -465,7 +532,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                   </h3>
                   <p>
                     {isDa
-                      ? 'Kontakt en hudlæge hvis udslættet er omfattende, ikke forbedres efter en uge med undgåelse, forværres kraftigt, eller hvis du har mistanke om et specifikt allergen, der skal identificeres med lappeprøver.'
+                      ? 'Kontakt en hudlæge, hvis udslættet er omfattende, ikke bedres efter en uge med undgåelse, forværres kraftigt, eller hvis du har mistanke om et specifikt allergen, der skal identificeres med lappeprøver.'
                       : 'Contact a dermatologist if the rash is extensive, does not improve after a week of avoidance, worsens significantly, or if you suspect a specific allergen that needs to be identified through patch testing.'}
                   </p>
                 </div>
@@ -484,7 +551,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
               {/* CTA */}
               <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en diagnose inden for 48 timer' : 'Get a diagnosis within 48 hours'}
+                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
                 <p className="mb-6">
                   {isDa
@@ -505,8 +572,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
                 <p className="text-sm text-gray-500">
                   <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
                   {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en hudlæge for personlig rådgivning.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a dermatologist for personal guidance.'}
+                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
                 </p>
               </div>
             </div>

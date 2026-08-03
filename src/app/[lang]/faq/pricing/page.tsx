@@ -9,10 +9,6 @@ interface PageProps {
 
 const category = faqCategories.find(c => c.slug === 'pricing')!;
 
-export async function generateStaticParams() {
-  return [{ lang: 'da' }, { lang: 'en' }];
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
@@ -26,7 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? 'online hudlæge pris, teledermatologi pris, 298 DKK hudlæge'
       : 'online dermatologist price, teledermatology cost, dermatology consultation fee',
     alternates: {
-      canonical: `https://www.skinchange.dk/${params.lang}/faq/pricing`,
+      canonical: `https://www.skinchange.dk/${params.lang}/faq/pricing/`,
+      languages: {
+        'x-default': 'https://www.skinchange.dk/da/faq/pricing/',
+        da: 'https://www.skinchange.dk/da/faq/pricing/',
+        en: 'https://www.skinchange.dk/en/faq/pricing/',
+      },
     },
   };
 }

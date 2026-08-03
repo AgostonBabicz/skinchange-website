@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "../globals.css";
 import { languages, defaultLanguage } from "@/lib/i18n";
-import Script from "next/script";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -31,8 +30,8 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
     : "SKIND | Online Skin Clinic";
     
   const description = isDa
-    ? "Danmarks online hudklinik. Certificerede hudlæger diagnosticerer akne, eksem, psoriasis og hudkræft inden for 48 timer. MitID verificeret. Kun 298 kr."
-    : "Denmark's online skin clinic. Certified dermatologists diagnose acne, eczema, psoriasis and skin cancer within 48 hours. MitID verified. Only 298 DKK.";
+    ? "Danmarks online hudklinik. Speciallæger i hudsygdomme vurderer akne, eksem, psoriasis og hudforandringer inden for 48 timer. MitID verificeret. Kun 298 kr."
+    : "Denmark's online skin clinic. Dermatology specialists assess acne, eczema, psoriasis and skin changes within 48 hours. MitID verified. Only 298 DKK.";
     
   const ogImage = "https://www.skinchange.dk/og-image.jpg";
 
@@ -40,7 +39,7 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
     title,
     description,
     keywords: isDa
-      ? ["online hudlæge", "digital dermatologi", "hudlæge online", "hudproblem diagnose", "akne behandling", "eksem behandling", "online hudkonsultation", "hudkræft scanning", "Peter Bjerring"]
+      ? ["online hudlæge", "digital dermatologi", "hudlæge online", "hudproblem diagnose", "aknebehandling", "eksembehandling", "online hudkonsultation", "vurdering af modermærker", "Peter Bjerring"]
       : ["online dermatologist Denmark", "digital dermatology", "skin diagnosis online", "acne treatment online", "eczema treatment online", "online skin consultation"],
     authors: [{ name: "SkinChange.AI ApS" }],
     creator: "SkinChange.AI ApS",
@@ -203,11 +202,7 @@ export default function LangLayout({
   return (
     <html lang={params.lang} className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
       <body className="font-sans antialiased text-gray-900 bg-[#1a237e]">
         {children}

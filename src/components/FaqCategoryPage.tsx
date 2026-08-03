@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
@@ -17,7 +16,7 @@ function AccordionItem({ q, i }: { q: FaqQuestion; i: number }) {
       className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
     >
       <summary className="flex justify-between items-center p-8 cursor-pointer list-none">
-        <span className="text-xl font-semibold text-[#1a237e] pr-4">{q.question}</span>
+        <h3 className="text-xl font-semibold text-[#1a237e] pr-4 m-0">{q.question}</h3>
         <span className="text-[#304ffe] text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
       </summary>
       <div className="px-8 pb-8">
@@ -52,12 +51,34 @@ export default function FaqCategoryPage({ category, lang }: Props) {
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'FAQ',
+        item: `https://www.skinchange.dk/${lang}/faq/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: title,
+        item: `https://www.skinchange.dk/${lang}/faq/${category.slug}/`,
+      },
+    ],
+  };
+
   return (
     <>
-      <Script
-        id="faq-category-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <main className="min-h-screen bg-white">
         <Navigation lang={lang} />
@@ -104,7 +125,10 @@ export default function FaqCategoryPage({ category, lang }: Props) {
                       {/* Collapsible disease header */}
                       <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                         <div className="flex items-center gap-3">
-                          <h2 className="text-xl font-bold text-[#1a237e]">{sgName}</h2>
+                          {sg.icon && (
+                            <span className="text-2xl flex-shrink-0" aria-hidden="true">{sg.icon}</span>
+                          )}
+                          <h2 className="text-xl font-bold text-[#1a237e] m-0">{sgName}</h2>
                           <span className="text-sm text-gray-400 ml-1">
                             ({sgQuestions.length} {isDa ? 'spørgsmål' : 'questions'})
                           </span>
