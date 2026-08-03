@@ -148,11 +148,11 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -163,7 +163,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '15. marts 2026' : 'March 15, 2026'}</span>
@@ -174,7 +174,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -197,7 +197,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -234,7 +234,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er herpes simplex-virus?' : 'What is herpes simplex virus?'}
               </h2>
               <p>
@@ -263,7 +263,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Red flags */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvornår er herpes en akut situation?' : 'When is herpes an emergency?'}
               </h2>
               <p>
@@ -286,7 +286,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 {isDa ? (
                   <>
                     Eksem herpeticum er grunden til, at alle med{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopisk eksem
                     </Link>{' '}
                     bør kende dette faresignal. En hudbarriere, der i forvejen er beskadiget, giver virussen fri bane, og udslættet kan brede sig over store hudområder på et døgn.
@@ -294,7 +294,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 ) : (
                   <>
                     Eczema herpeticum is the reason everyone with{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopic eczema
                     </Link>{' '}
                     should know this warning sign. A skin barrier that is already damaged gives the virus a clear run, and the rash can cover large areas of skin within a day.
@@ -303,7 +303,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser et HSV-udbrud ud?' : 'What does an HSV outbreak look like?'}
               </h2>
               <p>
@@ -312,7 +312,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   : 'An outbreak typically follows a predictable pattern. Many people experience warning symptoms before the blisters appear:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Varselsfasen (prodromalfasen)' : 'The prodromal phase (warning symptoms)'}
               </h3>
               <p>
@@ -321,7 +321,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   : 'The outbreak typically begins with tingling, stinging, itching or numbness in the affected area — often 1–2 days before the blisters appear. Some people also notice local tenderness or swollen lymph nodes. This is the point at which antiviral treatment has the greatest effect.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Blærefasen' : 'The blister phase'}
               </h3>
               <p>
@@ -330,7 +330,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   : 'Clusters of small, fluid-filled blisters then appear on a reddened base. The blisters are typically painful. With HSV-1 they usually form at the corner of the mouth or on the lips; with HSV-2 on or around the genitals, buttocks or thighs.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Helingsfasen' : 'The healing phase'}
               </h3>
               <p>
@@ -340,7 +340,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Triggers */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad udløser et HSV-udbrud?' : 'What triggers an HSV outbreak?'}
               </h2>
               <p>
@@ -387,7 +387,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får HSV?' : 'Who gets HSV?'}
               </h2>
               <p>
@@ -416,14 +416,14 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Diagnosis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan stilles diagnosen?' : 'How is herpes diagnosed?'}
               </h2>
               <p>
                 {isDa ? (
                   <>
                     Et førstegangsudbrud af genital herpes bør bekræftes med en typespecifik PCR-podning fra en blære eller et sår. Det er vigtigt at vide, om det er HSV-1 eller HSV-2: genital HSV-1 vender langt sjældnere tilbage og udskilles i mindre grad end genital HSV-2, og det ændrer både prognosen og det, du skal fortælle en partner. Typebestemmelse kan ikke laves ud fra et billede, og et billede kan heller ikke skelne herpes fra syfilis, aftøse sår eller{' '}
-                    <Link href={`/${lang}/blog/genital-warts`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/genital-warts`} className="text-primary underline hover:text-primary-900">
                       kønsvorter
                     </Link>
                     . Ved et førstegangsudbrud i kønsområdet bør du derfor undersøges hos lægen og tilbydes en fuld undersøgelse for kønssygdomme.
@@ -431,7 +431,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 ) : (
                   <>
                     A first genital episode should be confirmed with a type-specific PCR swab taken from a blister or ulcer. Knowing whether it is HSV-1 or HSV-2 matters: genital HSV-1 recurs far less often and sheds less than genital HSV-2, which changes both the outlook and what you tell a partner. Typing cannot be done from a photograph, and a photo cannot separate herpes from syphilis, aphthous ulcers or{' '}
-                    <Link href={`/${lang}/blog/genital-warts`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/genital-warts`} className="text-primary underline hover:text-primary-900">
                       genital warts
                     </Link>
                     . A first episode in the genital area should therefore be examined in person, with a full sexual health screen offered alongside it.
@@ -442,7 +442,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 {isDa ? (
                   <>
                     Herpes simplex forveksles undertiden med{' '}
-                    <Link href={`/${lang}/blog/herpes-zoster-shingles`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/herpes-zoster-shingles`} className="text-primary underline hover:text-primary-900">
                       helvedesild
                     </Link>
                     , som skyldes en anden virus i samme familie. Helvedesild sidder i ét bånd på den ene side af kroppen og stopper ved midtlinjen, mens HSV vender tilbage i det samme lille område igen og igen.
@@ -450,7 +450,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 ) : (
                   <>
                     Herpes simplex is sometimes confused with{' '}
-                    <Link href={`/${lang}/blog/herpes-zoster-shingles`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/herpes-zoster-shingles`} className="text-primary underline hover:text-primary-900">
                       shingles
                     </Link>
                     , which is caused by a different virus in the same family. Shingles sits in a single band on one side of the body and stops at the midline, whereas HSV returns to the same small area again and again.
@@ -459,7 +459,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles og håndteres HSV?' : 'How is HSV treated and managed?'}
               </h2>
               <p>
@@ -470,7 +470,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Episodisk behandling' : '💊 Episodic treatment'}
                   </p>
                   <p className="text-sm mt-1">
@@ -480,7 +480,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🛡️ Suppressionsbehandling (daglig antiviral)' : '🛡️ Suppressive therapy (daily antiviral)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -490,7 +490,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🌞 Forebyggelse af udløsere' : '🌞 Trigger prevention'}
                   </p>
                   <p className="text-sm mt-1">
@@ -500,7 +500,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🤝 Åben kommunikation' : '🤝 Open communication'}
                   </p>
                   <p className="text-sm mt-1">
@@ -512,7 +512,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -522,20 +522,20 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.q}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.q}</h3>
                     <p>{faq.a}</p>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -547,7 +547,7 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

@@ -106,7 +106,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
       <Navigation lang={lang} />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-[#1a237e] to-[#304ffe]">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-900 to-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             {isDa ? 'Kontakt os' : 'Contact Us'}
@@ -125,8 +125,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Email */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-[#304ffe]/10 rounded-xl flex items-center justify-center mb-6">
-                <Mail className="w-7 h-7 text-[#304ffe]" />
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                <Mail className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {isDa ? 'Email' : 'Email'}
@@ -138,7 +138,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
               </p>
               <a 
                 href={`mailto:${contactInfo.email}`}
-                className="text-[#304ffe] font-semibold hover:underline"
+                className="text-primary font-semibold hover:underline"
               >
                 {contactInfo.email}
               </a>
@@ -146,8 +146,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
 
             {/* Company Info */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-[#304ffe]/10 rounded-xl flex items-center justify-center mb-6">
-                <Building2 className="w-7 h-7 text-[#304ffe]" />
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                <Building2 className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {isDa ? 'Virksomhed' : 'Company'}
@@ -160,8 +160,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
 
             {/* Location */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-[#304ffe]/10 rounded-xl flex items-center justify-center mb-6">
-                <MapPin className="w-7 h-7 text-[#304ffe]" />
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                <MapPin className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {isDa ? 'Beliggenhed' : 'Location'}
@@ -224,7 +224,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           <div className="mt-12 text-center">
             <Link
               href={`/${lang}/faq`}
-              className="inline-flex items-center text-[#304ffe] font-semibold hover:underline"
+              className="inline-flex items-center text-primary font-semibold hover:underline"
             >
               {isDa ? 'Se alle FAQ' : 'View all FAQ'}
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,7 +236,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1a237e] to-[#304ffe]">
+      <section className="py-16 bg-gradient-to-br from-primary-900 to-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {isDa ? 'Klar til at komme i gang?' : 'Ready to get started?'}
@@ -248,7 +248,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           </p>
           <Link
             href={`/${lang}/download`}
-            className="inline-flex items-center px-8 py-4 bg-white text-[#1a237e] rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-900 rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
           >
             {isDa ? 'Download appen' : 'Download the app'}
           </Link>

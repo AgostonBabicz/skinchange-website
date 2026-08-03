@@ -153,11 +153,11 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '12. marts 2026' : 'March 12, 2026'}</span>
@@ -179,7 +179,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Eksem (Atopisk Dermatitis)? Årsager, Symptomer og Behandling'
                 : 'What is Eczema (Atopic Dermatitis)? Causes, Symptoms and Treatment'}
@@ -204,7 +204,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -242,7 +242,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is eczema */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er eksem?' : 'What is eczema?'}
               </h2>
               <p>
@@ -254,11 +254,11 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Eksem er en fællesbetegnelse for flere inflammatoriske hudlidelser. Atopisk dermatitis er den hyppigste form, men et kløende udslæt kan også skyldes{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       kontakteksem
                     </Link>
                     , der udløses af noget, huden har rørt ved, eller{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seboroisk eksem
                     </Link>
                     , som rammer fedtede områder som hovedbund, øjenbryn og næsefløje.
@@ -266,11 +266,11 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Eczema is an umbrella term for several inflammatory skin conditions. Atopic dermatitis is the most common form, but an itchy rash can also be caused by{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       contact dermatitis
                     </Link>
                     , triggered by something the skin has touched, or{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic dermatitis
                     </Link>
                     , which affects greasy areas such as the scalp, eyebrows and sides of the nose.
@@ -284,7 +284,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser eksem ud?' : 'What does eczema look like?'}
               </h2>
               <p>
@@ -333,7 +333,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Placeringen er et vigtigt fingerpeg: atopisk eksem sidder i bøjefurerne, mens skællende plaques på ydersiden af albuer og knæ oftere peger på{' '}
-                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                       psoriasis
                     </Link>
                     .
@@ -341,7 +341,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Distribution is an important clue: atopic eczema sits in the skin creases, whereas scaly plaques on the outer points of the elbows and knees more often point to{' '}
-                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                       psoriasis
                     </Link>
                     .
@@ -358,7 +358,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   {isDa ? (
                     <>
                       Søg læge samme dag, hvis eksem pludselig forværres med grupper af små, smertefulde, som udstansede sår eller blærer — især ved feber eller påvirket almentilstand. Det kan være eczema herpeticum, en{' '}
-                      <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-primary underline hover:text-primary-900">
                         herpesinfektion
                       </Link>{' '}
                       i eksemhud, der kræver akut antiviral behandling.
@@ -366,7 +366,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   ) : (
                     <>
                       Seek same-day medical care if eczema suddenly worsens with clusters of small, painful, punched-out sores or blisters, especially with fever or feeling unwell. This can be eczema herpeticum — a{' '}
-                      <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-primary underline hover:text-primary-900">
                         herpes infection
                       </Link>{' '}
                       of eczematous skin that needs urgent antiviral treatment.
@@ -376,7 +376,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår eksem?' : 'Why does eczema happen?'}
               </h2>
               <p>
@@ -385,7 +385,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   : 'The exact cause of eczema is not fully understood, but research points to a combination of factors:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad sker der med hudbarrieren?' : 'What happens to the skin barrier?'}
               </h3>
               <p>
@@ -394,7 +394,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   : 'It becomes leaky. In people with eczema, the skin barrier is impaired, making it easier for irritants and allergens to penetrate and for moisture to evaporate out. A mutation in the gene for filaggrin — a protein essential for a healthy skin barrier — is a common cause.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor overreagerer immunsystemet?' : 'Why does the immune system overreact?'}
               </h3>
               <p>
@@ -403,7 +403,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   : 'Because it is tuned towards an allergic type of inflammation. The immune system overreacts to seemingly harmless substances such as house dust mites, pet dander or certain foods, triggering an inflammatory response in the skin. This is a similar mechanism to other atopic conditions such as asthma and allergies.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Er eksem arveligt?' : 'Is eczema hereditary?'}
               </h3>
               <p>
@@ -412,7 +412,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   : 'To a large extent. Eczema runs in families. If one or both parents have eczema, asthma or hay fever, the risk of the child developing atopic dermatitis is significantly increased.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad udløser et udbrud?' : 'What triggers a flare?'}
               </h3>
               <p>
@@ -446,7 +446,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får eksem?' : 'Who gets eczema?'}
               </h2>
               <p>
@@ -476,7 +476,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved eksem?' : 'What can you do about eczema?'}
               </h2>
               <p>
@@ -487,7 +487,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💧 Fugtighedscreme (vigtigste daglige behandling)' : '💧 Moisturiser (most important daily treatment)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -497,7 +497,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Topiske kortikosteroider' : '🩺 Topical corticosteroids'}
                   </p>
                   <p className="text-sm mt-1">
@@ -507,7 +507,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧪 Immunmodulatorer (calcineurin-hæmmere)' : '🧪 Immunomodulators (calcineurin inhibitors)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -517,7 +517,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Systemisk behandling (svært eksem)' : '💊 Systemic treatment (severe eczema)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -527,7 +527,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚫 Undgå udløsere' : '🚫 Avoid triggers'}
                   </p>
                   <p className="text-sm mt-1">
@@ -539,7 +539,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -549,12 +549,12 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan eksem forsvinde helt?' : 'Can eczema disappear completely?'}
                   </h3>
                   <p>
@@ -564,7 +564,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa
                       ? 'Er eksem det samme som tør hud?'
                       : 'Is eczema the same as dry skin?'}
@@ -576,7 +576,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa
                       ? 'Hvornår skal jeg kontakte en hudlæge?'
                       : 'When should I contact a dermatologist?'}
@@ -590,7 +590,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -602,7 +602,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

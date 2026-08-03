@@ -157,11 +157,11 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -172,7 +172,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Godartede Hudvækster' : 'Benign Skin Growths'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '26. juni 2026' : 'June 26, 2026'}</span>
@@ -183,7 +183,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Seboroisk Keratose? Årsager, Symptomer og Behandling'
                 : 'What is Seborrhoeic Keratosis? Causes, Symptoms and Treatment'}
@@ -208,7 +208,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -242,7 +242,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
             <div className="prose prose-lg max-w-none text-gray-700">
 
               {/* What is it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er seboroisk keratose?' : 'What is seborrhoeic keratosis?'}
               </h2>
               <p>
@@ -257,7 +257,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser seboroisk keratose ud?' : 'What does seborrhoeic keratosis look like?'}
               </h2>
               <p>
@@ -293,7 +293,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                 {isDa ? (
                   <>
                     Den &quot;klistret på&quot;-fornemmelse er karakteristisk og adskiller seboroisk keratose fra fx{' '}
-                    <Link href={`/${lang}/blog/regular-mole`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/regular-mole`} className="text-primary underline hover:text-primary-900">
                       almindelige modermærker
                     </Link>
                     , der sidder dybere i huden. Karakteristikken er dog ikke sikker nok til at stille diagnosen alene.
@@ -301,7 +301,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                 ) : (
                   <>
                     The &quot;stuck on&quot; appearance is characteristic and distinguishes seborrhoeic keratosis from, for example,{' '}
-                    <Link href={`/${lang}/blog/regular-mole`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/regular-mole`} className="text-primary underline hover:text-primary-900">
                       ordinary moles
                     </Link>
                     , which sit deeper in the skin. That feature alone is not reliable enough to make the diagnosis.
@@ -310,7 +310,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad forårsager seboroisk keratose?' : 'What causes seborrhoeic keratosis?'}
               </h2>
               <p>
@@ -319,7 +319,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   : 'The exact cause is still unknown. It is not contagious and is not caused by poor hygiene or diet. Researchers point to several contributing factors:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilken rolle spiller alderen?' : 'What role does age play?'}
               </h3>
               <p>
@@ -328,7 +328,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   : 'Seborrhoeic keratosis is mainly a condition of the second half of life: the first growths often appear from the 30s onwards and become steadily more common after 50. One variant, dermatosis papulosa nigra, appears as small, dark papules on the face and neck and is common from adolescence in people with darker skin.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Er seboroisk keratose arveligt?' : 'Is seborrhoeic keratosis hereditary?'}
               </h3>
               <p>
@@ -337,7 +337,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   : 'There is a clear hereditary tendency. If your parents had many seborrhoeic keratoses, the likelihood of you developing them yourself is significantly higher.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Har sollys nogen betydning?' : 'Does sun exposure matter?'}
               </h3>
               <p>
@@ -347,7 +347,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får seboroisk keratose?' : 'Who gets seborrhoeic keratosis?'}
               </h2>
               <p>
@@ -374,22 +374,22 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </ul>
 
               {/* Is it dangerous */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Er seboroisk keratose farligt?' : 'Is seborrhoeic keratosis dangerous?'}
               </h2>
               <p>
                 {isDa ? (
                   <>
                     Seboroisk keratose er i sig selv godartet og udvikler sig ikke til kræft. Problemet er ikke væksten, men forvekslingen: seboroisk keratose er en af de hyppigste efterligninger af{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       modermærkekræft (melanom)
                     </Link>
                     , og pigmenteret{' '}
-                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       basalcellekarcinom
                     </Link>
                     , pladecellekarcinom og{' '}
-                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                       aktinisk keratose
                     </Link>{' '}
                     kan alle ligne den. Opsøg en hudlæge, hvis:
@@ -397,15 +397,15 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                 ) : (
                   <>
                     Seborrhoeic keratosis itself is benign and does not turn into cancer. The problem is not the growth but the resemblance: seborrhoeic keratosis is one of the most common mimics of{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       melanoma
                     </Link>
                     , and pigmented{' '}
-                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       basal cell carcinoma
                     </Link>
                     , squamous cell carcinoma and{' '}
-                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                       actinic keratosis
                     </Link>{' '}
                     can all look similar. See a dermatologist if:
@@ -446,7 +446,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan fjernes seboroisk keratose?' : 'How is seborrhoeic keratosis removed?'}
               </h2>
               <p>
@@ -457,7 +457,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '❄️ Kryoterapi (frysning)' : '❄️ Cryotherapy (freezing)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -467,7 +467,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🔪 Curettage (afskrabning)' : '🔪 Curettage (scraping)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -477,7 +477,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💡 Laserterapi' : '💡 Laser therapy'}
                   </p>
                   <p className="text-sm mt-1">
@@ -487,7 +487,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🔬 Mikroskopi ved tvivl' : '🔬 Microscopy when in doubt'}
                   </p>
                   <p className="text-sm mt-1">
@@ -497,7 +497,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚫 Undgå selv at fjerne dem' : '🚫 Do not remove them yourself'}
                   </p>
                   <p className="text-sm mt-1">
@@ -509,8 +509,8 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </div>
 
               {/* Tips */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
-                <p className="font-semibold text-[#1a237e] mb-2">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
+                <p className="font-semibold text-primary-900 mb-2">
                   {isDa ? 'Gode råd til daglig hudpleje' : 'Daily skincare tips'}
                 </p>
                 <ul className="text-sm text-gray-700 space-y-1 list-disc pl-4">
@@ -533,7 +533,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </div>
 
               {/* ICD note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -543,12 +543,12 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan seboroisk keratose forsvinde af sig selv?' : 'Can seborrhoeic keratosis go away on its own?'}
                   </h3>
                   <p>
@@ -558,7 +558,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan jeg forveksle seboroisk keratose med hudkræft?' : 'Can I confuse seborrhoeic keratosis with skin cancer?'}
                   </h3>
                   <p>
@@ -568,7 +568,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -580,7 +580,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -592,7 +592,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

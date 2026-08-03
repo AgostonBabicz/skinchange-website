@@ -28,7 +28,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
       <Navigation lang={lang} />
       
       {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#1a237e]">
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-primary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 font-display">
             {isDa ? 'Sådan bruger du SKIND' : 'How to use SKIND'}
@@ -47,7 +47,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
       <UserGuideSection lang={lang} />
 
       {/* CTA */}
-      <section className="py-20 bg-[#1a237e]">
+      <section className="py-20 bg-primary-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-display">
             {isDa ? 'Klar til at komme i gang?' : 'Ready to get started?'}
@@ -59,7 +59,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
           </p>
           <a 
             href={`/${lang}/download`}
-            className="inline-flex items-center bg-white text-[#1a237e] px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:shadow-2xl"
+            className="inline-flex items-center bg-white text-primary-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:shadow-2xl"
           >
             {isDa ? 'Download appen' : 'Download the app'}
           </a>

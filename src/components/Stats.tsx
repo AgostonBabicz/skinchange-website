@@ -14,7 +14,7 @@ export default function Stats({ lang }: StatsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-[#304ffe] to-[#00e5ff] bg-clip-text text-transparent">
+            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-[#00e5ff] bg-clip-text text-transparent">
               100+
             </p>
             <p className="text-gray-600 text-sm lg:text-base font-medium">
@@ -30,7 +30,7 @@ export default function Stats({ lang }: StatsProps) {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-[#304ffe] to-[#00e5ff] bg-clip-text text-transparent">
+            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-[#00e5ff] bg-clip-text text-transparent">
               2
             </p>
             <p className="text-gray-600 text-sm lg:text-base font-medium">

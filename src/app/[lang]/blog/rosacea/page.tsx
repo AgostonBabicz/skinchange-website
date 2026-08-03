@@ -153,11 +153,11 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -166,7 +166,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '13. marts 2026' : 'March 13, 2026'}</span>
@@ -177,7 +177,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Rosacea? Årsager, Symptomer og Behandling'
                 : 'What is Rosacea? Causes, Symptoms and Treatment'}
@@ -202,7 +202,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -239,7 +239,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is rosacea */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er rosacea?' : 'What is rosacea?'}
               </h2>
               <p>
@@ -251,11 +251,11 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Rosacea forveksles ofte med{' '}
-                    <Link href={`/${lang}/blog/acne`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/acne`} className="text-primary underline hover:text-primary-900">
                       acne
                     </Link>
                     ,{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seboroisk dermatitis
                     </Link>{' '}
                     eller almindelig rødme – men det er en distinkt tilstand, der kræver specifik behandling. Ubehandlet kan den forværres over tid.
@@ -263,11 +263,11 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     Rosacea is often confused with{' '}
-                    <Link href={`/${lang}/blog/acne`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/acne`} className="text-primary underline hover:text-primary-900">
                       acne
                     </Link>
                     ,{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic dermatitis
                     </Link>{' '}
                     or general flushing — but it is a distinct condition that requires specific treatment. Left untreated, it can worsen over time.
@@ -276,7 +276,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser rosacea ud?' : 'What does rosacea look like?'}
               </h2>
               <p>
@@ -318,7 +318,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår rosacea?' : 'Why does rosacea happen?'}
               </h2>
               <p>
@@ -327,7 +327,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   : 'The exact cause of rosacea is not yet fully understood, but research points to a combination of factors:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad sker der med blodkarrene i ansigtet?' : 'What happens to the blood vessels in the face?'}
               </h3>
               <p>
@@ -336,7 +336,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   : 'The blood vessels in the face dilate easily in rosacea, causing the characteristic redness and flushing. This reaction can be triggered by heat, exercise, alcohol, spicy food and emotional stress.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilken rolle spiller betændelse og immunforsvar?' : 'What role do inflammation and the immune system play?'}
               </h3>
               <p>
@@ -345,7 +345,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   : 'Triggers such as sunlight, certain foods and skin mites (Demodex) can activate the immune system and create an inflammatory reaction in the skin. Demodex mites, which live naturally in hair follicles, are found in higher numbers in rosacea patients.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Spiller gener og tarmbakterier ind?' : 'Do genes and gut bacteria play a part?'}
               </h3>
               <p>
@@ -355,7 +355,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får rosacea?' : 'Who gets rosacea?'}
               </h2>
               <p>
@@ -385,7 +385,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved rosacea?' : 'What can you do about rosacea?'}
               </h2>
               <p>
@@ -396,7 +396,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topisk medicin' : '💊 Topical medications'}
                   </p>
                   <p className="text-sm mt-1">
@@ -406,7 +406,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '⚠️ Undgå steroidcremer' : '⚠️ Avoid steroid creams'}
                   </p>
                   <p className="text-sm mt-1">
@@ -416,7 +416,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Orale antibiotika' : '🩺 Oral antibiotics'}
                   </p>
                   <p className="text-sm mt-1">
@@ -426,7 +426,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '✨ Laserbehandling' : '✨ Laser therapy'}
                   </p>
                   <p className="text-sm mt-1">
@@ -436,7 +436,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🌿 Skånsom hudpleje' : '🌿 Gentle skincare'}
                   </p>
                   <p className="text-sm mt-1">
@@ -446,7 +446,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚫 Identificer og undgå udløsere' : '🚫 Identify and avoid triggers'}
                   </p>
                   <p className="text-sm mt-1">
@@ -458,7 +458,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -468,12 +468,12 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er rosacea farligt?' : 'Is rosacea dangerous?'}
                   </h3>
                   <p>
@@ -483,7 +483,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan rosacea forveksles med acne?' : 'Can rosacea be confused with acne?'}
                   </h3>
                   <p>
@@ -493,7 +493,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -505,7 +505,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -517,7 +517,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

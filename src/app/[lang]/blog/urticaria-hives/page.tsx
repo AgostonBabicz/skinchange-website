@@ -153,11 +153,11 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '14. marts 2026' : 'March 14, 2026'}</span>
@@ -179,7 +179,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Nældefeber (Urticaria)? Årsager, Symptomer og Behandling'
                 : 'What is Urticaria (Hives)? Causes, Symptoms and Treatment'}
@@ -204,7 +204,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -243,7 +243,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er nældefeber?' : 'What is urticaria (hives)?'}
               </h2>
               <p>
@@ -263,7 +263,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser nældefeber ud?' : 'What does urticaria look like?'}
               </h2>
               <p>
@@ -301,7 +301,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 {isDa ? (
                   <>
                     Netop det hurtige skift adskiller nældefeber fra{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       kontakteksem
                     </Link>
                     , hvor udslættet bliver siddende samme sted i dage til uger og ofte skaller. Sidder den enkelte plet fast i mere
@@ -310,7 +310,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     It is this rapid turnover that distinguishes urticaria from{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       contact dermatitis
                     </Link>
                     , where the rash stays in the same place for days to weeks and often scales. If an individual lesion lasts more
@@ -325,7 +325,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår nældefeber?' : 'Why does urticaria happen?'}
               </h2>
               <p>
@@ -334,7 +334,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   : 'Urticaria occurs when mast cells in the skin release histamine in response to a trigger. Triggers can be divided into three main categories:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilke allergener kan udløse nældefeber?' : 'Which allergens can trigger urticaria?'}
               </h3>
               <p>
@@ -342,7 +342,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   <>
                     Fødevareallergier – særligt nødder, skaldyr, æg og mælk – er hyppige årsager til akut nældefeber. Medicin som
                     penicillin og aspirin,{' '}
-                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-primary underline hover:text-primary-900">
                       insektbid og -stik
                     </Link>{' '}
                     samt pollen kan ligeledes udløse en reaktion. Kroppen genkender disse stoffer som fremmede og iværksætter en
@@ -352,7 +352,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   <>
                     Food allergies — particularly nuts, shellfish, eggs and dairy — are common causes of acute urticaria. Medications
                     such as penicillin and aspirin,{' '}
-                    <Link href={`/${lang}/blog/insect-sting`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/insect-sting`} className="text-primary underline hover:text-primary-900">
                       insect bites and stings
                     </Link>{' '}
                     and pollen can also trigger a reaction. The body recognises these substances as foreign and mounts an immune
@@ -361,7 +361,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kan fysiske påvirkninger udløse nældefeber?' : 'Can physical triggers cause urticaria?'}
               </h3>
               <p>
@@ -375,7 +375,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   : 'Delayed pressure urticaria is a separate condition: sustained pressure from a waistband, a shoulder strap or a tool handle produces a deep, often tender swelling that appears only 4–8 hours after the pressure and can last a day or more. Other forms include cold urticaria (cold air, cold water or cold objects), heat urticaria (localised warming), solar urticaria (sunlight within minutes of exposure) and exercise-induced urticaria (a rise in body temperature during exertion). These forms are not allergic in the traditional sense but result from mast cells that respond over-sensitively to a physical stimulus.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa
                   ? 'Hvad med infektioner, stress og kronisk spontan urticaria?'
                   : 'What about infections, stress and chronic spontaneous urticaria?'}
@@ -401,7 +401,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får nældefeber?' : 'Who gets urticaria?'}
               </h2>
               <p>
@@ -411,7 +411,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved nældefeber?' : 'What can you do about urticaria?'}
               </h2>
               <p>
@@ -422,7 +422,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Antihistaminer (primær behandling)' : '💊 Antihistamines (primary treatment)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -432,7 +432,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🔍 Identificér udløseren' : '🔍 Identify the trigger'}
                   </p>
                   <p className="text-sm mt-1">
@@ -442,7 +442,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Receptpligtig behandling (kronisk urticaria)' : '🩺 Prescription treatment (chronic urticaria)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -452,7 +452,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚨 Anafylaksi – søg straks hjælp' : '🚨 Anaphylaxis — seek immediate help'}
                   </p>
                   <p className="text-sm mt-1">
@@ -464,7 +464,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -474,12 +474,12 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er nældefeber farligt?' : 'Is urticaria dangerous?'}
                   </h3>
                   <p>
@@ -489,7 +489,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa
                       ? 'Hvad er forskellen på akut og kronisk nældefeber?'
                       : 'What is the difference between acute and chronic urticaria?'}
@@ -501,7 +501,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa
                       ? 'Hvornår skal jeg kontakte en hudlæge?'
                       : 'When should I contact a dermatologist?'}
@@ -515,7 +515,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -527,7 +527,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

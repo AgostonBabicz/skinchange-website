@@ -153,11 +153,11 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '19. marts 2026' : 'March 19, 2026'}</span>
@@ -179,7 +179,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Seboroisk Dermatitis? Årsager, Symptomer og Behandling'
                 : 'What is Seborrhoeic Dermatitis? Causes, Symptoms and Treatment'}
@@ -204,7 +204,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -237,7 +237,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er seboroisk dermatitis?' : 'What is seborrhoeic dermatitis?'}
               </h2>
               <p>
@@ -252,7 +252,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser seboroisk dermatitis ud?' : 'What does seborrhoeic dermatitis look like?'}
               </h2>
               <p>{isDa ? 'Seboroisk dermatitis viser sig typisk på følgende måde:' : 'Seborrhoeic dermatitis typically presents as follows:'}</p>
@@ -285,11 +285,11 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                 {isDa ? (
                   <>
                     Andre hudsygdomme kan ligne seboroisk dermatitis.{' '}
-                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                       Psoriasis
                     </Link>{' '}
                     i hovedbunden giver tykkere, sølvhvide skæl med skarpere afgrænsning — overlappet mellem de to kaldes sebopsoriasis — mens{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopisk eksem
                     </Link>{' '}
                     typisk sidder i albue- og knæbøjninger frem for i de talgrige områder.
@@ -297,11 +297,11 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                 ) : (
                   <>
                     Other skin diseases can look like seborrhoeic dermatitis. Scalp{' '}
-                    <Link href={`/${lang}/blog/psoriasis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/psoriasis`} className="text-primary underline hover:text-primary-900">
                       psoriasis
                     </Link>{' '}
                     produces thicker, silvery-white scale with a sharper border — the overlap between the two is called sebopsoriasis — while{' '}
-                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       atopic eczema
                     </Link>{' '}
                     typically affects the creases of the elbows and knees rather than the oily areas.
@@ -310,7 +310,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår seboroisk dermatitis?' : 'Why does seborrhoeic dermatitis happen?'}
               </h2>
               <p>
@@ -319,7 +319,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   : 'Several factors are believed to contribute to the development of seborrhoeic dermatitis:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad gør Malassezia-gærsvampen?' : 'What does the Malassezia yeast do?'}
               </h3>
               <p>
@@ -328,7 +328,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   : 'The yeast Malassezia lives naturally on the skin, particularly in oily areas. In some people it triggers an immune reaction that causes inflammation and the characteristic scaling. Research has shown that the number of Malassezia is elevated on affected skin in people with seborrhoeic dermatitis.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor betyder talgproduktionen noget?' : 'Why does oil production matter?'}
               </h3>
               <p>
@@ -337,7 +337,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   : 'Oil glands produce more oil under the influence of hormones, certain medications and medical conditions. Excess sebum creates an environment where Malassezia thrives and multiplies. This explains why the condition primarily affects oily areas.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvilken rolle spiller gener og immunforsvar?' : 'What role do genes and the immune system play?'}
               </h3>
               <p>
@@ -347,7 +347,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får seboroisk dermatitis?' : 'Who gets seborrhoeic dermatitis?'}
               </h2>
               <p>
@@ -377,7 +377,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved seboroisk dermatitis?' : 'What can you do about seborrhoeic dermatitis?'}
               </h2>
               <p>
@@ -388,7 +388,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧴 Medicinsk shampoo (skæl)' : '🧴 Medicated shampoo (dandruff)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -398,7 +398,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Svampedræbende cremer' : '💊 Antifungal creams'}
                   </p>
                   <p className="text-sm mt-1">
@@ -408,7 +408,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Kortikosteroider' : '🩺 Topical corticosteroids'}
                   </p>
                   <p className="text-sm mt-1">
@@ -418,7 +418,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🥗 Livsstil' : '🥗 Lifestyle'}
                   </p>
                   <p className="text-sm mt-1">
@@ -430,7 +430,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -440,12 +440,12 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er seboroisk dermatitis smitsomt?' : 'Is seborrhoeic dermatitis contagious?'}
                   </h3>
                   <p>
@@ -455,7 +455,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvad er forskellen mellem skæl og seboroisk dermatitis?' : 'What is the difference between dandruff and seborrhoeic dermatitis?'}
                   </h3>
                   <p>
@@ -465,7 +465,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -477,7 +477,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -489,7 +489,7 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

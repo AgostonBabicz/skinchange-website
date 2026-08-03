@@ -46,20 +46,20 @@ export default function FeedbackSection({ lang }: FeedbackSectionProps) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">
             {isDa ? 'Hvad vores patienter siger' : 'What our patients say'}
           </h2>
         </div>
 
         {/* Feedback Carousel */}
         <div className="relative bg-gray-50 rounded-3xl p-8 lg:p-12">
-          <Quote className="w-12 h-12 text-[#304ffe]/20 mb-6" />
+          <Quote className="w-12 h-12 text-primary/20 mb-6" />
           
           <div className="min-h-[200px] flex flex-col justify-center">
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
               &ldquo;{feedbackItems[currentSlide].text}&rdquo;
             </p>
-            <p className="text-lg font-semibold text-[#304ffe]">
+            <p className="text-lg font-semibold text-primary">
               {feedbackItems[currentSlide].name}
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function FeedbackSection({ lang }: FeedbackSectionProps) {
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all"
               aria-label="Previous"
             >
-              <ChevronLeft className="w-6 h-6 text-[#1a237e]" />
+              <ChevronLeft className="w-6 h-6 text-primary-900" />
             </button>
 
             {/* Dots */}
@@ -82,7 +82,7 @@ export default function FeedbackSection({ lang }: FeedbackSectionProps) {
                   onClick={() => setCurrentSlide(index)}
                   className={`h-2 rounded-full transition-all ${
                     index === currentSlide 
-                      ? 'bg-[#304ffe] w-8' 
+                      ? 'bg-primary w-8' 
                       : 'bg-gray-300 w-2'
                   }`}
                 />
@@ -94,7 +94,7 @@ export default function FeedbackSection({ lang }: FeedbackSectionProps) {
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all"
               aria-label="Next"
             >
-              <ChevronRight className="w-6 h-6 text-[#1a237e]" />
+              <ChevronRight className="w-6 h-6 text-primary-900" />
             </button>
           </div>
         </div>

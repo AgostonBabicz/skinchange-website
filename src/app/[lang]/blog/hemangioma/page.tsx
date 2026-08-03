@@ -127,19 +127,19 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
         <article className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">{isDa ? 'Forside' : 'Home'}</Link>
+              <Link href={`/${lang}`} className="hover:text-primary">{isDa ? 'Forside' : 'Home'}</Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">Blog</Link>
+              <Link href={`/${lang}/blog`} className="hover:text-primary">Blog</Link>
               <span className="mx-2">/</span>
               <span className="text-gray-900">{isDa ? 'Hæmangiom' : 'Haemangioma'}</span>
             </nav>
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">{isDa ? 'Godartede Hudvækster' : 'Benign Skin Growths'}</span>
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">{isDa ? 'Godartede Hudvækster' : 'Benign Skin Growths'}</span>
               <span className="text-gray-500 text-sm">{isDa ? '11. april 2026' : 'April 11, 2026'}</span>
               <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">{isDa ? '9 min læsetid' : '9 min read'}</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -162,7 +162,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -191,14 +191,14 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700">
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvad er et hæmangiom?' : 'What is a haemangioma?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvad er et hæmangiom?' : 'What is a haemangioma?'}</h2>
               <p>
                 {isDa
                   ? 'Et hæmangiom er en godartet karsvulst: cellerne i blodkarrenes vægge deler sig mere, end de skal, og danner en tæt klump af små kar. Hæmangiomer kan sidde overalt, oftest i huden, men også i indre organer som leveren. Den præcise årsag er ukendt, men tilstanden menes at hænge sammen med, hvordan de karopbyggende celler opfører sig tidligt i udviklingen.'
                   : 'A haemangioma is a benign vascular tumour: the cells that line blood vessels divide more than they should and form a dense cluster of small vessels. Haemangiomas can occur anywhere, most often in the skin but also in internal organs such as the liver. The exact cause is unknown, but the condition is thought to be linked to how vessel-forming cells behave early in development.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad er forskellen på et infantilt hæmangiom og et kirsebærangiom?' : 'What is the difference between an infantile haemangioma and a cherry angioma?'}
               </h3>
               <p>
@@ -207,7 +207,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   : 'An infantile haemangioma is a vascular tumour of infancy. It is rarely fully formed at birth, grows quickly over the first months, plateaus and then slowly shrinks away on its own through childhood. A cherry angioma is something else entirely: an acquired, benign proliferation of tiny vessels that appears in adulthood, becomes more numerous with age and never regresses on its own. Both are harmless, but they differ in cause, course and treatment.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvilke typer hæmangiomer findes der?' : 'What types of haemangioma are there?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvilke typer hæmangiomer findes der?' : 'What types of haemangioma are there?'}</h2>
               <ul className="list-disc pl-6 space-y-3 my-4">
                 <li>
                   <strong>{isDa ? 'Infantile hæmangiomer (jordbærmærker):' : 'Infantile haemangiomas (strawberry marks):'}</strong>{' '}
@@ -235,23 +235,23 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvordan ser et hæmangiom ud?' : 'What does a haemangioma look like?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvordan ser et hæmangiom ud?' : 'What does a haemangioma look like?'}</h2>
               <p>
                 {isDa
                   ? 'Et overfladisk infantilt hæmangiom er klart rødt, let hævet og har en fast, gummiagtig konsistens. Et dybt hæmangiom ligger under huden som en blålig, blød hævelse, hvor overfladen kan se næsten normal ud. Mange er en blanding af begge dele. På mørkere hud fremstår farven ofte mere mørkerød eller violet end klart rød.'
                   : 'A superficial infantile haemangioma is bright red, slightly raised and firm and rubbery to the touch. A deep haemangioma sits beneath the skin as a bluish, soft swelling where the surface can look almost normal. Many are a mixture of the two. On darker skin the colour often appears deep red or violet rather than bright red.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvad kan forveksles med et hæmangiom?' : 'What can be mistaken for a haemangioma?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvad kan forveksles med et hæmangiom?' : 'What can be mistaken for a haemangioma?'}</h3>
               <p>
                 {isDa ? (
                   <>
                     Hos voksne forveksles kirsebærangiomer oftest med et{' '}
-                    <Link href={`/${lang}/blog/regular-mole`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/regular-mole`} className="text-primary underline hover:text-primary-900">
                       modermærke
                     </Link>{' '}
                     eller en{' '}
-                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-primary underline hover:text-primary-900">
                       seboroisk keratose
                     </Link>
                     . Kirsebærangiomet er dog rent rødt eller lilla og bliver kortvarigt blegt, hvis du trykker på det. En mørk, hurtigt
@@ -260,11 +260,11 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     In adults, cherry angiomas are most often mistaken for a{' '}
-                    <Link href={`/${lang}/blog/regular-mole`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/regular-mole`} className="text-primary underline hover:text-primary-900">
                       mole
                     </Link>{' '}
                     or a{' '}
-                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-keratosis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic keratosis
                     </Link>
                     . A cherry angioma is purely red or purple and briefly blanches if you press on it. A dark, rapidly growing or
@@ -273,21 +273,21 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                 )}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvorfor opstår hæmangiomer?' : 'Why do haemangiomas happen?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvorfor opstår hæmangiomer?' : 'Why do haemangiomas happen?'}</h2>
               <p>
                 {isDa
                   ? 'Infantile hæmangiomer opstår, når en gruppe umodne karceller fortsætter med at dele sig efter fødslen. Cellerne bærer et særligt markørprotein (GLUT1), som ikke findes i andre karvækster, og som kan bruges til at stille diagnosen. Iltmangel i vævet og signaler fra moderkagen menes at spille en rolle, hvilket passer med, at for tidlig fødsel, lav fødselsvægt og flerfoldsgraviditet øger risikoen.'
                   : 'Infantile haemangiomas arise when a group of immature vessel cells keeps dividing after birth. The cells carry a distinctive marker protein (GLUT1) that is not found in other vascular growths and can be used to confirm the diagnosis. Low tissue oxygen and signals from the placenta are thought to play a part, which fits with the fact that prematurity, low birth weight and multiple pregnancy all increase the risk.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Skyldes det noget, forældrene har gjort?' : 'Is it caused by something the parents did?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Skyldes det noget, forældrene har gjort?' : 'Is it caused by something the parents did?'}</h3>
               <p>
                 {isDa
                   ? 'Nej. Et hæmangiom skyldes ikke noget, moderen har spist, gjort eller undladt under graviditeten, og det er hverken smitsomt eller arveligt i nogen praktisk forstand. Kirsebærangiomer hos voksne har ingenting med sol at gøre — de er en normal aldersforandring i hudens små blodkar.'
                   : 'No. A haemangioma is not caused by anything the mother ate, did or failed to do during pregnancy, and it is neither contagious nor hereditary in any practical sense. Cherry angiomas in adults have nothing to do with sun exposure — they are a normal age-related change in the small blood vessels of the skin.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvem får hæmangiomer?' : 'Who gets haemangiomas?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvem får hæmangiomer?' : 'Who gets haemangiomas?'}</h2>
               <p>
                 {isDa
                   ? 'Infantile hæmangiomer ses hos ca. 4–5% af spædbørn og hos op til 10% af for tidligt fødte eller børn med lav fødselsvægt. Kun omkring en tredjedel er synlige ved fødslen — de fleste viser sig inden for de første leveuger og vokser derefter hurtigt i flere måneder. De er omkring tre gange hyppigere hos piger end hos drenge.'
@@ -299,7 +299,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   : 'Cherry angiomas follow a completely different pattern: the first appear in the thirties, the number rises steadily with age, and they are found in the majority of people over 75 — equally often in men and women.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvornår skal et hæmangiom undersøges?' : 'When should a haemangioma be checked?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvornår skal et hæmangiom undersøges?' : 'When should a haemangioma be checked?'}</h2>
 
               <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
                 <h3 className="text-xl font-bold text-red-900 mb-3">
@@ -355,11 +355,11 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   : 'In adults, have a cherry angioma looked at if it suddenly changes colour, grows quickly, turns dark or irregular, or bleeds repeatedly without being knocked. The point is to rule out other diagnoses rather than to treat the angioma itself.'}
               </p>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Hvordan behandles hæmangiomer?' : 'How are haemangiomas treated?'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Hvordan behandles hæmangiomer?' : 'How are haemangiomas treated?'}</h2>
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '👀 Aktiv observation' : '👀 Active monitoring'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '👀 Aktiv observation' : '👀 Active monitoring'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Langt de fleste infantile hæmangiomer behøver ingen behandling. Lægen følger væksten, og forældre kan hjælpe ved at tage et billede ved siden af en lineal hver måned, så udviklingen kan sammenlignes.'
@@ -367,7 +367,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '💊 Propranolol (betablokker)' : '💊 Propranolol (beta blocker)'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '💊 Propranolol (betablokker)' : '💊 Propranolol (beta blocker)'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Førstevalg ved hæmangiomer, der truer syn, vejrtrækning eller giver sår. Behandlingen gives som mikstur under specialistkontrol, og effekten er størst, når den startes i vækstfasen.'
@@ -375,7 +375,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '🧴 Timolol på huden' : '🧴 Topical timolol'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '🧴 Timolol på huden' : '🧴 Topical timolol'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'En betablokker i dråbeform, der påføres direkte på små, tynde, overfladiske hæmangiomer, hvor behandling i tabletform ikke er nødvendig.'
@@ -383,7 +383,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '⚡ Laserbehandling' : '⚡ Laser treatment'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '⚡ Laserbehandling' : '⚡ Laser treatment'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Pulserende farvestoflaser bruges mod sår, der ikke vil hele, og mod de fine, røde kar, der kan blive tilbage efter et svundet hæmangiom. Hos voksne er laser også standardbehandlingen, hvis et kirsebærangiom ønskes fjernet.'
@@ -391,7 +391,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">{isDa ? '✂️ Kirurgi' : '✂️ Surgery'}</p>
+                  <p className="font-semibold text-primary-900">{isDa ? '✂️ Kirurgi' : '✂️ Surgery'}</p>
                   <p className="text-sm mt-1">
                     {isDa
                       ? 'Bruges sjældent på små børn. Den typiske rolle er senere korrektion af løs hud eller fedtvæv, der er tilbage, når hæmangiomet er svundet.'
@@ -400,21 +400,21 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Hvor lang tid går der, før et hæmangiom forsvinder?' : 'How long does it take for a haemangioma to disappear?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Hvor lang tid går der, før et hæmangiom forsvinder?' : 'How long does it take for a haemangioma to disappear?'}</h3>
               <p>
                 {isDa
                   ? 'Længere, end de fleste forældre får at vide. Omkring halvdelen af infantile hæmangiomer er helt svundet ved 5-årsalderen, ca. 70% ved 7 år og ca. 90% ved 9 år. Hos en betydelig del efterlader de en synlig forandring: fine udvidede kar, løs hud eller en pude af fedtvæv. Det er en af grundene til, at man overvejer behandling tidligt, når hæmangiomet sidder et sted, hvor et ar vil være synligt.'
                   : 'Longer than most parents are told. About half of infantile haemangiomas have fully involuted by age 5, roughly 70% by 7 and roughly 90% by 9. In a substantial minority they leave a visible change behind: fine dilated vessels, loose skin or a pad of fatty tissue. That is one reason early treatment is considered when the lesion sits where a scar would show.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">{isDa ? 'Skal kirsebærangiomer behandles?' : 'Do cherry angiomas need treatment?'}</h3>
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">{isDa ? 'Skal kirsebærangiomer behandles?' : 'Do cherry angiomas need treatment?'}</h3>
               <p>
                 {isDa
                   ? 'Nej. Kirsebærangiomer er godartede og bliver ikke til kræft. De forsvinder til gengæld heller ikke af sig selv. Ønsker du dem fjernet — for eksempel fordi de bløder, når de bliver stødt eller ramt af en barbermaskine — kan de behandles med laser eller elektrokirurgi hos en hudlæge. Fjern dem aldrig selv.'
                   : 'No. Cherry angiomas are benign and do not turn into cancer. Nor, however, do they go away on their own. If you want them removed — for example because they bleed when knocked or caught by a razor — a dermatologist can treat them with laser or electrosurgery. Never try to remove them yourself.'}
               </p>
 
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -423,24 +423,24 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">{isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}</h2>
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">{isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}</h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.question}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.question}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.question}</h3>
                     <p>{faq.answer}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">{isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}</h3>
                 <p className="mb-6">
                   {isDa
                     ? 'Er du voksen og i tvivl om en rød prik på huden, er en billedvurdering fra en certificeret hudlæge via SKIND-appen et fornuftigt første skridt. Drejer det sig om et spædbarn med et hæmangiom nær øje, næse, mund eller luftveje, med sår, eller med fem eller flere hæmangiomer, skal barnet ses ved fysisk fremmøde uden forsinkelse — kontakt egen læge eller vagtlæge i stedet.'
                     : 'If you are an adult and unsure about a red spot on your skin, a photo assessment from a certified dermatologist via the SKIND app is a sensible first step. If this is a baby with a haemangioma near the eye, nose, mouth or airway, with ulceration, or with five or more lesions, the child needs to be seen in person without delay — contact your GP or out-of-hours doctor instead.'}
                 </p>
-                <Link href={`/${lang}/download`} className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors">
+                <Link href={`/${lang}/download`} className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors">
                   {isDa ? 'Download appen' : 'Download the app'}
                 </Link>
               </div>

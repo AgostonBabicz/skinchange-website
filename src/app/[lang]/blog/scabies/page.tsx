@@ -169,11 +169,11 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -182,7 +182,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '20. marts 2026' : 'March 20, 2026'}</span>
@@ -193,7 +193,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Skab? Årsager, Symptomer og Behandling'
                 : 'What is Scabies? Causes, Symptoms and Treatment'}
@@ -218,7 +218,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -251,7 +251,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is scabies */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er skab?' : 'What is scabies?'}
               </h2>
               <p>
@@ -274,7 +274,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser skab ud?' : 'What does scabies look like?'}
               </h2>
               <p>{isDa ? 'Skab kan vise sig på flere måder:' : 'Scabies can appear in several ways:'}</p>
@@ -306,7 +306,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår skab?' : 'Why does scabies happen?'}
               </h2>
               <p>
@@ -315,7 +315,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   : 'Scabies primarily spreads through direct, prolonged skin-to-skin contact with an infected person. Since the mite cannot jump or fly, transmission requires relatively prolonged contact:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvordan smitter skab ved tæt kontakt?' : 'How does scabies spread through close contact?'}
               </h3>
               <p>
@@ -324,7 +324,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   : 'Scabies spreads easily between family members, sexual partners and people who share a bed. A brief handshake or ordinary social contact rarely results in transmission.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Kan skab smitte via delte genstande?' : 'Can scabies spread via shared objects?'}
               </h3>
               <p>
@@ -333,7 +333,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   : 'In rare cases the mite can be transmitted via shared towels, bedding or clothing. This is most relevant in heavy infestations or institutional settings. The mite typically only survives 2–3 days outside human skin.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvor lang er inkubationstiden?' : 'How long is the incubation period?'}
               </h3>
               <p>
@@ -343,7 +343,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får skab?' : 'Who gets scabies?'}
               </h2>
               <p>
@@ -379,7 +379,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles skab?' : 'How is scabies treated?'}
               </h2>
               <p>
@@ -390,7 +390,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topisk behandling (førstevalg)' : '💊 Topical treatment (first-line)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -400,7 +400,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Oral behandling' : '💊 Oral treatment'}
                   </p>
                   <p className="text-sm mt-1">
@@ -410,7 +410,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🧺 Hygiejne' : '🧺 Hygiene measures'}
                   </p>
                   <p className="text-sm mt-1">
@@ -420,7 +420,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🚫 Undgå smitte' : '🚫 Avoid transmission'}
                   </p>
                   <p className="text-sm mt-1">
@@ -432,7 +432,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa ? (
@@ -448,27 +448,27 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er skab farligt?' : 'Is scabies dangerous?'}
                   </h3>
                   <p>
                     {isDa ? (
                       <>
                         Skab er sjældent farligt for raske voksne, men den intense kløe kan ødelægge søvnen og påvirke livskvaliteten. Bakteriel superinfektion er almindelig, fordi kradseriet åbner huden — typisk{' '}
-                        <Link href={`/${lang}/blog/impetigo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/impetigo`} className="text-primary underline hover:text-primary-900">
                           børnesår (impetigo)
                         </Link>{' '}
                         eller{' '}
-                        <Link href={`/${lang}/blog/cellulitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/cellulitis`} className="text-primary underline hover:text-primary-900">
                           cellulitis
                         </Link>
                         . Superinfektion med streptokokker kan i sjældne tilfælde føre til nyrebetændelse (poststreptokok-glomerulonefritis), og langvarigt ubehandlet skab kan give{' '}
-                        <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                           eksemlignende
                         </Link>{' '}
                         hudforandringer.
@@ -476,15 +476,15 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                     ) : (
                       <>
                         Scabies is rarely dangerous for healthy adults, but the intense itching can ruin sleep and affect quality of life. Bacterial superinfection is common, because scratching breaks the skin — usually{' '}
-                        <Link href={`/${lang}/blog/impetigo`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/impetigo`} className="text-primary underline hover:text-primary-900">
                           impetigo
                         </Link>{' '}
                         or{' '}
-                        <Link href={`/${lang}/blog/cellulitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/cellulitis`} className="text-primary underline hover:text-primary-900">
                           cellulitis
                         </Link>
                         . Streptococcal superinfection can in rare cases lead to kidney inflammation (post-streptococcal glomerulonephritis), and long-standing untreated scabies can cause{' '}
-                        <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
                           eczema-like
                         </Link>{' '}
                         skin changes.
@@ -493,7 +493,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan skab forsvinde af sig selv?' : 'Can scabies go away on its own?'}
                   </h3>
                   <p>
@@ -503,7 +503,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvorfor klør jeg stadig efter behandling?' : 'Why do I still itch after treatment?'}
                   </h3>
                   <p>
@@ -513,7 +513,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en læge?' : 'When should I contact a doctor?'}
                   </h3>
                   <p>
@@ -525,7 +525,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -537,7 +537,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

@@ -16,8 +16,8 @@ function AccordionItem({ q, i }: { q: FaqQuestion; i: number }) {
       className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
     >
       <summary className="flex justify-between items-center p-8 cursor-pointer list-none">
-        <h3 className="text-xl font-semibold text-[#1a237e] pr-4 m-0">{q.question}</h3>
-        <span className="text-[#304ffe] text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
+        <h3 className="text-xl font-semibold text-primary-900 pr-4 m-0">{q.question}</h3>
+        <span className="text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
       </summary>
       <div className="px-8 pb-8">
         <p className="text-gray-600 leading-relaxed">{q.answer}</p>
@@ -87,17 +87,17 @@ export default function FaqCategoryPage({ category, lang }: Props) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="mb-8 text-sm text-gray-500" aria-label="Breadcrumb">
-              <Link href={`/${lang}/faq`} className="hover:text-[#1a237e] transition-colors">
+              <Link href={`/${lang}/faq`} className="hover:text-primary-900 transition-colors">
                 FAQ
               </Link>
               <span className="mx-2">›</span>
-              <span className="text-[#1a237e] font-medium">{title}</span>
+              <span className="text-primary-900 font-medium">{title}</span>
             </nav>
 
             {/* Header */}
             <div className="text-center mb-16">
               <div className="text-6xl mb-4">{category.icon}</div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
+              <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">
                 {title}
               </h1>
               <p className="text-xl text-gray-600">
@@ -128,12 +128,12 @@ export default function FaqCategoryPage({ category, lang }: Props) {
                           {sg.icon && (
                             <span className="text-2xl flex-shrink-0" aria-hidden="true">{sg.icon}</span>
                           )}
-                          <h2 className="text-xl font-bold text-[#1a237e] m-0">{sgName}</h2>
+                          <h2 className="text-xl font-bold text-primary-900 m-0">{sgName}</h2>
                           <span className="text-sm text-gray-400 ml-1">
                             ({sgQuestions.length} {isDa ? 'spørgsmål' : 'questions'})
                           </span>
                         </div>
-                        <span className="text-[#304ffe] text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
+                        <span className="text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">+</span>
                       </summary>
 
                       {/* Sub-group Q&As */}
@@ -152,7 +152,7 @@ export default function FaqCategoryPage({ category, lang }: Props) {
             <div className="mt-12 mb-4">
               <Link
                 href={`/${lang}/faq`}
-                className="text-[#304ffe] hover:text-[#1a237e] transition-colors font-medium"
+                className="text-primary hover:text-primary-900 transition-colors font-medium"
               >
                 ← {isDa ? 'Tilbage til FAQ' : 'Back to FAQ'}
               </Link>
@@ -165,7 +165,7 @@ export default function FaqCategoryPage({ category, lang }: Props) {
               </p>
               <a
                 href="mailto:info@skinchange.ai"
-                className="inline-flex items-center justify-center bg-[#304ffe] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a237e] transition-colors"
+                className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-900 transition-colors"
               >
                 {isDa ? 'Kontakt os' : 'Contact us'}
               </a>

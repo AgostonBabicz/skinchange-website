@@ -169,11 +169,11 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -184,7 +184,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudkræft' : 'Skin Cancer'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '28. marts 2026' : 'March 28, 2026'}</span>
@@ -195,7 +195,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Basalcellekarcinom (BCC)? Årsager, Symptomer og Behandling'
                 : 'What is Basal Cell Carcinoma (BCC)? Causes, Symptoms and Treatment'}
@@ -220,7 +220,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -257,7 +257,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is BCC */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er basalcellekarcinom (BCC)?' : 'What is basal cell carcinoma (BCC)?'}
               </h2>
               <p>
@@ -269,11 +269,11 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 {isDa ? (
                   <>
                     BCC vokser typisk langsomt over måneder til år. Den spreder sig sjældent til andre organer (metastaserer), hvilket adskiller den fra de mere aggressive former for hudkræft som{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       modermærkekræft (melanom)
                     </Link>{' '}
                     og{' '}
-                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       pladecellekarcinom (SCC)
                     </Link>
                     . Hvis BCC ikke behandles, kan den dog vokse dybt ned i huden og beskadige underliggende strukturer som knogle og brusk – særligt i ansigtet.
@@ -281,11 +281,11 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 ) : (
                   <>
                     BCC typically grows slowly over months to years. It rarely spreads to other organs (metastasises), which distinguishes it from more aggressive forms of skin cancer such as{' '}
-                    <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                       melanoma
                     </Link>{' '}
                     and{' '}
-                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/squamous-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                       squamous cell carcinoma (SCC)
                     </Link>
                     . However, if left untreated, BCC can grow deep into the skin and damage underlying structures such as bone and cartilage — especially on the face.
@@ -299,7 +299,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser basalcellekarcinom ud?' : 'What does basal cell carcinoma look like?'}
               </h2>
               <p>
@@ -340,7 +340,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår basalcellekarcinom?' : 'Why does basal cell carcinoma occur?'}
               </h2>
               <p>
@@ -352,7 +352,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 {isDa ? (
                   <>
                     Den samme ophobede UV-skade giver{' '}
-                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                       aktiniske keratoser
                     </Link>{' '}
                     – ru, skællende pletter på soleksponeret hud. De er et synligt tegn på, at huden har fået så meget UV-stråling, at risikoen for hudkræft er øget.
@@ -360,7 +360,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 ) : (
                   <>
                     The same accumulated UV damage produces{' '}
-                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                       actinic keratoses
                     </Link>{' '}
                     — rough, scaly patches on sun-exposed skin. They are a visible marker that the skin has taken enough UV radiation to raise the risk of skin cancer.
@@ -368,7 +368,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 )}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad er de vigtigste risikofaktorer?' : 'What are the main risk factors?'}
               </h3>
               <ul className="list-disc pl-6 space-y-2 my-4">
@@ -411,7 +411,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </ul>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får basalcellekarcinom?' : 'Who gets basal cell carcinoma?'}
               </h2>
               <p>
@@ -452,7 +452,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Diagnosis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan stilles diagnosen basalcellekarcinom?' : 'How is basal cell carcinoma diagnosed?'}
               </h2>
               <p>
@@ -472,7 +472,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </p>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved basalcellekarcinom?' : 'What can you do about basal cell carcinoma?'}
               </h2>
               <p>
@@ -483,7 +483,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🔬 Kirurgisk fjernelse (standardbehandling)' : '🔬 Surgical removal (standard treatment)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -493,7 +493,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Mohs-kirurgi (mikrografisk kirurgi)' : '🩺 Mohs surgery (microscopically controlled surgery)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -503,7 +503,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💡 Strålebehandling (radioterapi)' : '💡 Radiation therapy (radiotherapy)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -513,7 +513,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topisk behandling' : '💊 Topical treatment'}
                   </p>
                   <p className="text-sm mt-1">
@@ -525,7 +525,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </div>
 
               {/* Prevention */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan forebygger du basalcellekarcinom?' : 'How can you prevent basal cell carcinoma?'}
               </h2>
               <p>
@@ -567,7 +567,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </ul>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -577,12 +577,12 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er basalcellekarcinom farligt?' : 'Is basal cell carcinoma dangerous?'}
                   </h3>
                   <p>
@@ -592,7 +592,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvordan adskiller BCC sig fra modermærkekræft (melanom)?' : 'How does BCC differ from melanoma?'}
                   </h3>
                   <p>
@@ -602,7 +602,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Kan BCC komme igen efter behandling?' : 'Can BCC return after treatment?'}
                   </h3>
                   <p>
@@ -612,7 +612,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -624,7 +624,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -636,7 +636,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

@@ -56,7 +56,7 @@ export default function FAQPage({ params: { lang } }: PageProps) {
 
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-32">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display text-center">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display text-center">
               {isDa ? 'Ofte stillede spørgsmål' : 'Frequently Asked Questions'}
             </h1>
             <p className="text-xl text-gray-600 text-center mb-16">
@@ -84,11 +84,11 @@ export default function FAQPage({ params: { lang } }: PageProps) {
                     className="group bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow flex flex-col"
                   >
                     <div className="text-5xl mb-4">{cat.icon}</div>
-                    <h2 className="text-2xl font-bold text-[#1a237e] mb-2">{title}</h2>
+                    <h2 className="text-2xl font-bold text-primary-900 mb-2">{title}</h2>
                     <p className="text-gray-600 mb-4 flex-grow">{description}</p>
                     <div className="flex items-center justify-between text-sm text-gray-400">
                       <span>{countLabel}</span>
-                      <span className="text-[#304ffe] text-xl group-hover:translate-x-1 transition-transform">→</span>
+                      <span className="text-primary text-xl group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                   </Link>
                 );
@@ -101,7 +101,7 @@ export default function FAQPage({ params: { lang } }: PageProps) {
               </p>
               <a
                 href="mailto:info@skinchange.ai"
-                className="inline-flex items-center justify-center bg-[#304ffe] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a237e] transition-colors"
+                className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-900 transition-colors"
               >
                 {isDa ? 'Kontakt os' : 'Contact us'}
               </a>

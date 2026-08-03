@@ -30,7 +30,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
   const isDa = lang === 'da';
 
   return (
-    <main className="min-h-screen bg-[#1a237e]">
+    <main className="min-h-screen bg-primary-900">
       <Navigation lang={lang} />
       
       {/* Hero */}
@@ -62,10 +62,10 @@ export default function AboutPage({ params: { lang } }: PageProps) {
               </div>
             </div>
             <div>
-              <p className="text-[#304ffe] font-semibold mb-2">
+              <p className="text-primary font-semibold mb-2">
                 {isDa ? 'Mød vores førende hudlæge' : 'Meet our leading dermatologist'}
               </p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
+              <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">
                 Peter Bjerring
               </h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -73,7 +73,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
                   ? 'Ekspert i dermatologi, laserbehandlinger og hudkræft. Adjungeret professor, Aalborg Universitet. 300+ publikationer, 500+ internationale foredrag.' 
                   : 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.'}
               </p>
-              <button className="text-[#304ffe] font-semibold hover:underline">
+              <button className="text-primary font-semibold hover:underline">
                 {isDa ? 'Læs mere' : 'Read more'}
               </button>
             </div>
@@ -86,10 +86,10 @@ export default function AboutPage({ params: { lang } }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-4 font-display">
+              <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">
                 Brian Vangsgaard
               </h2>
-              <p className="text-[#304ffe] font-semibold mb-4">
+              <p className="text-primary font-semibold mb-4">
                 CEO
               </p>
               <p className="text-lg text-gray-600">
@@ -116,7 +116,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-[#1a237e] mb-6">
+            <h2 className="text-3xl font-bold text-primary-900 mb-6">
               {isDa ? 'Vores historie' : 'Our story'}
             </h2>
             <p className="text-gray-600 mb-6">
@@ -125,7 +125,7 @@ export default function AboutPage({ params: { lang } }: PageProps) {
                 : 'SKIND was founded with a clear vision: to revolutionize the way we access dermatological care. By combining technology and medical expertise, we have created a platform that makes it possible to get professional help for skin problems no matter where you are.'}
             </p>
 
-            <h2 className="text-3xl font-bold text-[#1a237e] mb-6 mt-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-6 mt-12">
               {isDa ? 'Vores mission' : 'Our mission'}
             </h2>
             <p className="text-gray-600 mb-6">
@@ -134,13 +134,13 @@ export default function AboutPage({ params: { lang } }: PageProps) {
                 : 'We believe everyone deserves access to quality treatment for skin diseases. Through our platform, we offer fast, secure, and professional help from certified dermatologists.'}
             </p>
 
-            <h2 className="text-3xl font-bold text-[#1a237e] mb-6 mt-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-6 mt-12">
               {isDa ? 'Kontakt os' : 'Contact us'}
             </h2>
             <p className="text-gray-600 mb-4">
               {isDa ? 'Har du spørgsmål eller brug for hjælp? Kontakt os på:' : 'Do you have questions or need help? Contact us at:'}
             </p>
-            <p className="text-[#304ffe] font-medium">
+            <p className="text-primary font-medium">
               <a href="mailto:info@skinchange.ai" className="hover:underline">info@skinchange.ai</a>
             </p>
           </div>

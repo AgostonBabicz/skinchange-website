@@ -148,11 +148,11 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -163,7 +163,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '16. marts 2026' : 'March 16, 2026'}</span>
@@ -174,7 +174,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {headline}
             </h1>
 
@@ -197,7 +197,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -236,7 +236,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is shingles */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er helvedesild?' : 'What is shingles?'}
               </h2>
               <p>
@@ -253,7 +253,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                 {isDa ? (
                   <>
                     Helvedesild er ikke smitsomt på samme måde som skoldkopper: man kan ikke &laquo;få helvedesild&raquo; af en person med helvedesild. Har man derimod aldrig haft skoldkopper og ikke er vaccineret, kan man blive smittet med VZV fra blærerne og dermed få skoldkopper. VZV tilhører samme virusfamilie som{' '}
-                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-primary underline hover:text-primary-900">
                       herpes simplex-virus
                     </Link>
                     , men det er to forskellige vira, og den ene giver ikke den anden.
@@ -261,7 +261,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                 ) : (
                   <>
                     Shingles is not contagious in the same way as chickenpox: you cannot &ldquo;catch shingles&rdquo; from someone who has it. If you have never had chickenpox and are not vaccinated, however, you can be infected with VZV from the blisters and go on to develop chickenpox. VZV belongs to the same family of viruses as{' '}
-                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/herpes-simplex-virus`} className="text-primary underline hover:text-primary-900">
                       herpes simplex virus
                     </Link>
                     , but they are two different viruses and one does not cause the other.
@@ -270,7 +270,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </p>
 
               {/* Emergency */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvornår er helvedesild en akut situation?' : 'When is shingles an emergency?'}
               </h2>
               <p>
@@ -291,7 +291,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </div>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser helvedesild ud?' : 'What does shingles look like?'}
               </h2>
               <p>
@@ -328,7 +328,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                 {isDa ? (
                   <>
                     Inden blærerne bryder frem, kan udslættet ligne et bånd af{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       kontakteksem
                     </Link>
                     . Forskellen viser sig som regel i løbet af et døgn eller to, når de klyngevise blærer kommer, og smerten er kraftigere, end udslættet umiddelbart forklarer.
@@ -336,7 +336,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                 ) : (
                   <>
                     Before the blisters break out, the rash can look like a band of{' '}
-                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/contact-dermatitis`} className="text-primary underline hover:text-primary-900">
                       contact dermatitis
                     </Link>
                     . The difference usually becomes clear within a day or two, when the clustered blisters appear and the pain is out of proportion to what the rash alone would explain.
@@ -345,7 +345,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår helvedesild?' : 'Why does shingles happen?'}
               </h2>
               <p>
@@ -354,7 +354,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                   : 'Reactivation of VZV happens when the immune system is no longer strong enough to keep the virus in check. The main triggering factors are:'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvorfor stiger risikoen med alderen?' : 'Why does the risk rise with age?'}
               </h3>
               <p>
@@ -363,7 +363,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                   : 'The immune response that keeps VZV in check weakens naturally with age. The risk of shingles rises markedly after the age of 50, and more than half of all cases occur in people over 60. Around one in three people develops shingles during their lifetime.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Svækket immunforsvar' : 'A weakened immune system'}
               </h3>
               <p>
@@ -372,7 +372,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                   : 'Conditions such as HIV, autoimmune disease, cancer and organ transplantation — as well as immunosuppressive treatment — increase the risk substantially. These individuals may also have more severe and prolonged episodes and are at greater risk of disseminated zoster.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Stress' : 'Stress'}
               </h3>
               <p>
@@ -382,7 +382,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </p>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får helvedesild?' : 'Who gets shingles?'}
               </h2>
               <p>
@@ -416,7 +416,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles og forebygges helvedesild?' : 'How is shingles treated and prevented?'}
               </h2>
               <p>
@@ -427,7 +427,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Antivirale lægemidler' : '💊 Antiviral medicines'}
                   </p>
                   <p className="text-sm mt-1">
@@ -437,7 +437,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🩺 Smertebehandling' : '🩺 Pain management'}
                   </p>
                   <p className="text-sm mt-1">
@@ -447,7 +447,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💉 Vaccination' : '💉 Vaccination'}
                   </p>
                   <p className="text-sm mt-1">
@@ -457,7 +457,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '⚠️ Postherpetisk neuralgi (PHN)' : '⚠️ Postherpetic neuralgia (PHN)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -469,7 +469,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -479,20 +479,20 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
               </div>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
                   <div key={faq.q}>
-                    <h3 className="font-bold text-lg text-[#1a237e] mb-2">{faq.q}</h3>
+                    <h3 className="font-bold text-lg text-primary-900 mb-2">{faq.q}</h3>
                     <p>{faq.a}</p>
                   </div>
                 ))}
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Kontakt din læge samme dag' : 'Contact your doctor the same day'}
                 </h3>
@@ -509,7 +509,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

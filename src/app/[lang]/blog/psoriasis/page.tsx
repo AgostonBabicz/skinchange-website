@@ -153,11 +153,11 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -166,7 +166,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '7. april 2026' : 'April 7, 2026'}</span>
@@ -177,7 +177,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Psoriasis? Årsager, Symptomer og Behandling'
                 : 'What is Psoriasis? Causes, Symptoms and Treatment'}
@@ -202,7 +202,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -235,7 +235,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is psoriasis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er psoriasis?' : 'What is psoriasis?'}
               </h2>
               <p>
@@ -250,7 +250,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </p>
 
               {/* Types of psoriasis */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvilke typer psoriasis findes der?' : 'What types of psoriasis are there?'}
               </h2>
               <p>
@@ -292,7 +292,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Symptoms */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er symptomerne på psoriasis?' : 'What are the symptoms of psoriasis?'}
               </h2>
               <p>
@@ -334,7 +334,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Causes */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad forårsager psoriasis?' : 'What causes psoriasis?'}
               </h2>
               <p>
@@ -343,7 +343,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   : 'The exact cause of psoriasis is not fully understood, but research points to a combination of genetic factors and immune system response:'}
               </p>
 
-              <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mt-8 mb-4">
                 {isDa ? 'Hvad sker der i immunsystemet?' : 'What happens in the immune system?'}
               </h3>
               <p>
@@ -352,7 +352,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   : 'Psoriasis is primarily an autoimmune disease. The immune system\'s T-cells (white blood cells) mistakenly attack healthy skin cells as if defending the body against infection. This triggers a cascade of immune reactions that cause skin cells to multiply faster than normal.'}
               </p>
 
-              <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mt-8 mb-4">
                 {isDa ? 'Er psoriasis arveligt?' : 'Is psoriasis hereditary?'}
               </h3>
               <p>
@@ -361,7 +361,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   : 'Heredity plays an important role. Up to 40% of people with psoriasis have at least one family member with the same condition. Scientists have identified several genes associated with psoriasis, including HLA-Cw6.'}
               </p>
 
-              <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mt-8 mb-4">
                 {isDa ? 'Hvad kan udløse et udbrud?' : 'What can trigger a flare-up?'}
               </h3>
               <p>
@@ -409,7 +409,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan behandles psoriasis?' : 'How is psoriasis treated?'}
               </h2>
               <p>
@@ -418,7 +418,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   : 'Although psoriasis cannot be cured, effective treatments exist that can control symptoms and improve quality of life:'}
               </p>
 
-              <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mt-8 mb-4">
                 {isDa ? 'Hvornår bruges topisk behandling?' : 'When is topical treatment used?'}
               </h3>
               <p>
@@ -453,7 +453,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mt-8 mb-4">
                 {isDa ? 'Hvordan virker lysbehandling?' : 'How does phototherapy work?'}
               </h3>
               <p>
@@ -476,7 +476,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 </li>
               </ul>
 
-              <h3 className="text-2xl font-bold text-[#1a237e] mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mt-8 mb-4">
                 {isDa ? 'Hvornår er systemisk eller biologisk behandling nødvendig?' : 'When is systemic or biologic treatment needed?'}
               </h3>
               <p>
@@ -506,18 +506,18 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </ul>
 
               {/* When to see a doctor */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvornår skal du søge læge?' : 'When should you see a doctor?'}
               </h2>
               <p>
                 {isDa ? (
                   <>
                     Søg læge, hvis røde, skællende pletter ikke forsvinder efter et par uger med håndkøbsprodukter, hvis udslættet breder sig, hvis neglene ændrer sig, eller hvis du får hævede og stive led. Flere andre tilstande giver røde, skællende pletter — for eksempel{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seboroisk dermatitis
                     </Link>{' '}
                     i hovedbund og ansigt (sebopsoriasis) og{' '}
-                    <Link href={`/${lang}/blog/lichen-planus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/lichen-planus`} className="text-primary underline hover:text-primary-900">
                       lichen planus
                     </Link>{' '}
                     — og de behandles forskelligt, så den rigtige diagnose er vigtig.
@@ -525,11 +525,11 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 ) : (
                   <>
                     See a doctor if red, scaly patches do not clear after a couple of weeks of over-the-counter care, if the rash is spreading, if your nails change, or if you develop swollen and stiff joints. Several other conditions cause red, scaly patches — for example{' '}
-                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/seborrheic-dermatitis`} className="text-primary underline hover:text-primary-900">
                       seborrhoeic dermatitis
                     </Link>{' '}
                     on the scalp and face (sebopsoriasis) and{' '}
-                    <Link href={`/${lang}/blog/lichen-planus`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                    <Link href={`/${lang}/blog/lichen-planus`} className="text-primary underline hover:text-primary-900">
                       lichen planus
                     </Link>{' '}
                     — and they are treated differently, so the correct diagnosis matters.
@@ -549,7 +549,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -559,12 +559,12 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* FAQ Section */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er psoriasis smitsom?' : 'Is psoriasis contagious?'}
                   </h3>
                   <p>
@@ -574,7 +574,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvordan påvirker psoriasis livskvaliteten?' : 'How does psoriasis affect quality of life?'}
                   </h3>
                   <p>
@@ -584,7 +584,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hjælper kost og livsstil ved psoriasis?' : 'Do diet and lifestyle help with psoriasis?'}
                   </h3>
                   <p>
@@ -596,7 +596,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -608,7 +608,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>

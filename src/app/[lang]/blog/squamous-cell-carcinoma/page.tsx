@@ -153,11 +153,11 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}`} className="hover:text-primary">
                 {isDa ? 'Forside' : 'Home'}
               </Link>
               <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-[#304ffe]">
+              <Link href={`/${lang}/blog`} className="hover:text-primary">
                 Blog
               </Link>
               <span className="mx-2">/</span>
@@ -168,7 +168,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
 
             {/* Category & Meta */}
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-[#304ffe]/10 text-[#304ffe] text-sm font-semibold px-3 py-1 rounded-full">
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
                 {isDa ? 'Hudkræft' : 'Skin Cancer'}
               </span>
               <span className="text-gray-500 text-sm">{isDa ? '29. marts 2026' : 'March 29, 2026'}</span>
@@ -179,7 +179,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1a237e] mb-6 font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
               {isDa
                 ? 'Hvad er Pladecellekarcinom (SCC)? Årsager, Symptomer og Behandling'
                 : 'What is Squamous Cell Carcinoma (SCC)? Causes, Symptoms and Treatment'}
@@ -204,7 +204,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#304ffe] to-[#1a237e] rounded-full flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
                 SC
               </div>
               <div>
@@ -237,7 +237,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
 
             <div className="prose prose-lg max-w-none text-gray-700">
               {/* What is SCC */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad er pladecellekarcinom (SCC)?' : 'What is squamous cell carcinoma (SCC)?'}
               </h2>
               <p>
@@ -252,7 +252,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </p>
 
               {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan ser pladecellekarcinom ud?' : 'What does squamous cell carcinoma look like?'}
               </h2>
               <p>{isDa ? 'SCC kan vise sig på flere måder:' : 'SCC can appear in several forms:'}</p>
@@ -289,7 +289,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </p>
 
               {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvorfor opstår pladecellekarcinom?' : 'Why does squamous cell carcinoma occur?'}
               </h2>
               <p>
@@ -298,7 +298,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   : 'The primary cause of SCC is chronic exposure to ultraviolet (UV) radiation from the sun or tanning beds. UV radiation damages the DNA in skin cells, and when this damage accumulates over time in the squamous cells, they can begin to grow uncontrollably.'}
               </p>
 
-              <h3 className="text-xl font-bold text-[#1a237e] mt-8 mb-3">
+              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
                 {isDa ? 'Hvad øger risikoen for pladecellekarcinom?' : 'What increases the risk of squamous cell carcinoma?'}
               </h3>
               <ul className="list-disc pl-6 space-y-2 my-4">
@@ -342,14 +342,14 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   <strong>{isDa ? 'Forstadier:' : 'Precancerous lesions:'}</strong>{' '}
                   {isDa ? (
                     <>
-                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                         Aktiniske keratoser
                       </Link>{' '}
                       (ru, skællende pletter) er forstadier til SCC og skal overvåges.
                     </>
                   ) : (
                     <>
-                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                         Actinic keratoses
                       </Link>{' '}
                       (rough, scaly patches) are precursors to SCC and should be monitored.
@@ -359,7 +359,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </ul>
 
               {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvem får pladecellekarcinom?' : 'Who gets squamous cell carcinoma?'}
               </h2>
               <p>
@@ -421,7 +421,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </div>
 
               {/* Treatment */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvad kan du gøre ved pladecellekarcinom?' : 'What can you do about squamous cell carcinoma?'}
               </h2>
               <p>
@@ -432,7 +432,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
 
               <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '🔬 Kirurgisk fjernelse' : '🔬 Surgical removal'}
                   </p>
                   <p className="text-sm mt-1">
@@ -442,7 +442,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '☀️ Strålebehandling' : '☀️ Radiation therapy'}
                   </p>
                   <p className="text-sm mt-1">
@@ -452,7 +452,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💊 Topiske lægemidler' : '💊 Topical medications'}
                   </p>
                   <p className="text-sm mt-1">
@@ -462,7 +462,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#1a237e]">
+                  <p className="font-semibold text-primary-900">
                     {isDa ? '💡 Fotodynamisk terapi (PDT)' : '💡 Photodynamic therapy (PDT)'}
                   </p>
                   <p className="text-sm mt-1">
@@ -474,7 +474,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </div>
 
               {/* ICD-11 Note */}
-              <div className="bg-[#1a237e]/5 border-l-4 border-[#304ffe] p-5 my-8 rounded-r-lg">
+              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
                 <p className="text-sm text-gray-700">
                   <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
                   {isDa
@@ -484,7 +484,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </div>
 
               {/* Prevention */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Hvordan forebygger du pladecellekarcinom?' : 'How can you prevent squamous cell carcinoma?'}
               </h2>
               <p>
@@ -528,7 +528,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   {isDa ? (
                     <>
                       Få undersøgt og behandlet{' '}
-                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                         aktiniske keratoser
                       </Link>{' '}
                       (ru, skællende pletter), før de udvikler sig til SCC.
@@ -536,7 +536,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   ) : (
                     <>
                       Have{' '}
-                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                      <Link href={`/${lang}/blog/actinic-keratosis`} className="text-primary underline hover:text-primary-900">
                         actinic keratoses
                       </Link>{' '}
                       (rough, scaly patches) examined and treated before they develop into SCC.
@@ -546,12 +546,12 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </ul>
 
               {/* FAQ */}
-              <h2 className="text-3xl font-bold text-[#1a237e] mt-12 mb-6">
+              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
                 {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Er pladecellekarcinom dødeligt?' : 'Is squamous cell carcinoma deadly?'}
                   </h3>
                   <p>
@@ -561,20 +561,20 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvad er forskellen på BCC og SCC?' : 'What is the difference between BCC and SCC?'}
                   </h3>
                   <p>
                     {isDa ? (
                       <>
                         Både BCC og SCC er hudkræft, men de udvikler sig fra forskellige celletyper.{' '}
-                        <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                           Basalcellekarcinom
                         </Link>{' '}
                         udvikler sig fra basalcellerne i den nederste del af epidermis, vokser meget langsomt og spreder sig næsten
                         aldrig. Pladecellekarcinom udvikler sig fra pladecellerne i epidermis og har en noget højere risiko for
                         spredning.{' '}
-                        <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                           Modermærkekræft (melanom)
                         </Link>{' '}
                         er den tredje hovedtype og udgår fra pigmentcellerne.
@@ -582,13 +582,13 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                     ) : (
                       <>
                         Both BCC and SCC are skin cancers, but they develop from different cell types.{' '}
-                        <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/basal-cell-carcinoma`} className="text-primary underline hover:text-primary-900">
                           Basal cell carcinoma
                         </Link>{' '}
                         develops from basal cells in the lower part of the epidermis, grows very slowly and almost never spreads.
                         Squamous cell carcinoma develops from squamous cells in the epidermis and has a somewhat higher risk of
                         spreading.{' '}
-                        <Link href={`/${lang}/blog/melanoma`} className="text-[#304ffe] underline hover:text-[#1a237e]">
+                        <Link href={`/${lang}/blog/melanoma`} className="text-primary underline hover:text-primary-900">
                           Melanoma
                         </Link>{' '}
                         is the third main type and arises from the pigment cells.
@@ -597,7 +597,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#1a237e] mb-2">
+                  <h3 className="font-bold text-lg text-primary-900 mb-2">
                     {isDa ? 'Hvornår skal jeg kontakte en hudlæge?' : 'When should I contact a dermatologist?'}
                   </h3>
                   <p>
@@ -615,7 +615,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </p>
 
               {/* CTA */}
-              <div className="bg-[#1a237e] text-white rounded-2xl p-8 my-12">
+              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
                 <h3 className="text-2xl font-bold mb-4">
                   {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
                 </h3>
@@ -627,7 +627,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-[#1a237e] rounded-full font-semibold hover:bg-white/90 transition-colors"
+                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
                   >
                     {isDa ? 'Download appen' : 'Download the app'}
                   </Link>
