@@ -13,23 +13,26 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
   const isDa = lang === 'da';
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const guideImages = isDa 
+  const captions = isDa
     ? [
-        '/User_guide_DA_1.svg',
-        '/User_guide_DA_2.svg',
-        '/User_guide_DA_3.svg',
-        '/User_guide_DA_4.svg',
-        '/User_guide_DA_5.svg',
-        '/User_guide_DA_6.svg',
+        'Startskærm: tryk på Ny Undersøgelse',
+        'Trin 1 af 14: tag oversigtsfoto og nærbilleder',
+        'Trin 2 af 14: markér placeringen på kroppen',
+        'Trin 3 af 14: besvar spørgsmål om hudlidelsen',
+        'Trin 13 af 14: udfyld kontaktoplysninger',
+        'Trin 14 af 14: opsummering og betaling, 298 DKK',
+        'Sagsoversigt: diagnose og behandlingsplan fra hudlægen',
       ]
     : [
-        '/User_guide_EN_1.svg',
-        '/User_guide_EN_2.svg',
-        '/User_guide_EN_3.svg',
-        '/User_guide_EN_4.svg',
-        '/User_guide_EN_5.svg',
-        '/User_guide_EN_6.svg',
+        'Home screen: tap New Case',
+        'Step 1 of 14: take overview and close-up photos',
+        'Step 2 of 14: mark the location on the body',
+        'Step 3 of 14: answer questions about the skin condition',
+        'Step 13 of 14: fill in contact details',
+        'Step 14 of 14: summary and payment, 298 DKK',
+        'Case overview: diagnosis and treatment plan from the dermatologist',
       ];
+  const guideImages = captions.map((_, i) => `/app/guide-${i + 1}-${isDa ? 'da' : 'en'}.svg`);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % guideImages.length);
@@ -48,7 +51,7 @@ export default function UserGuideSection({ lang }: UserGuideSectionProps) {
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
             <Image
               src={guideImages[currentSlide]}
-              alt={`User guide step ${currentSlide + 1}`}
+              alt={captions[currentSlide]}
               fill
               className="object-contain"
             />
