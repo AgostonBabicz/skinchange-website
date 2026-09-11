@@ -84,7 +84,7 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
       ? 'Professionel online hudlæge. Diagnose af akne, eksem, psoriasis og hudkræft inden for 48 timer.'
       : 'Professional online dermatologist. Diagnosis of acne, eczema, psoriasis and skin cancer within 48 hours.',
     url: `https://www.skinchange.dk/${lang}/download`,
-    screenshot: 'https://www.skinchange.dk/Download_page_mockup.png',
+    screenshot: `https://www.skinchange.dk/app/flow-${lang}.png`,
   };
 
   return (
@@ -150,6 +150,19 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
                     className="object-contain"
                   />
                 </a>
+              </div>
+
+              {/* App flow overview */}
+              <div className="mt-16 max-w-3xl mx-auto">
+                <Image
+                  src={`/app/flow-${lang}.png`}
+                  alt={isDa
+                    ? 'De syv skærme i SKIND-appen: startskærm, fotos, placering, spørgsmål, kontaktoplysninger, betaling og diagnose'
+                    : 'The seven screens of the SKIND app: home, photos, location, questions, contact details, payment and diagnosis'}
+                  width={1600}
+                  height={1600}
+                  className="w-full h-auto"
+                />
               </div>
 
               {/* Features */}

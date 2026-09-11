@@ -84,11 +84,11 @@ export default function Hero({ lang }: HeroProps) {
           <div className="relative hidden lg:block animate-float">
             <div className="relative mx-auto w-80">
               <Image
-                src={isDa ? '../hero-phone-da.svg' : '../hero-phone-en.svg'}
-                alt="SKIND App"
+                src={isDa ? '/app/guide-1-da.svg' : '/app/guide-1-en.svg'}
+                alt={isDa ? 'SKIND-appens startskærm med knappen Ny Undersøgelse' : 'The SKIND app home screen with the New Case button'}
                 width={320}
                 height={640}
-                className="w-full h-auto rounded-[2.5rem] shadow-2xl shadow-black/30"
+                className="w-full h-auto"
                 priority
               />
               
