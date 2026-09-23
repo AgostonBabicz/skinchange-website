@@ -67,6 +67,10 @@ export const faqCategories: FaqCategory[] = [
           answer: 'Ja. Du kan oprette en sag for et barn under 18 år gennem din egen profil, hvis du har del i forældremyndigheden. Ved fælles forældremyndighed kan hver af forældrene oprette sagen, men I bør være enige om den. Du afgiver en tro og love-erklæring i appen. Unge på 15–17 år kan selv samtykke til behandling efter sundhedsloven og har ret til fortrolighed — også over for forældrene.'
         },
         {
+          question: 'Hvordan opretter jeg en sag for mit barn?',
+          answer: 'Start en ny sag i appen. På det første skærmbillede, hvor du vælger, hvem sagen gælder, trykker du på "+ Tilføj barn" og indtaster barnets navn og CPR-nummer (DDMMÅÅ-XXXX — du finder det på barnets sundhedskort). Vælg derefter barnet på listen, og tryk på "Næste". Resten af sagen udfyldes som normalt med billeder og spørgsmål. Barnet gemmes på din profil, så næste gang skal du blot vælge det. Du kan rette eller fjerne barnets oplysninger under Indstillinger i appen.'
+        },
+        {
           question: 'Hvem er lægerne bag SKIND?',
           answer: 'Din sag vurderes af to speciallæger i hud- og kønssygdomme med dansk autorisation fra Styrelsen for Patientsikkerhed. De har selvstændigt sundhedsfagligt ansvar efter autorisationsloven og er underlagt tavshedspligt efter sundhedsloven. En ansvarlig læge er udpeget og gennemgår regelmæssigt sagerne. Alle vurderinger foretages af mennesker — ikke af en algoritme.'
         },
@@ -107,6 +111,10 @@ export const faqCategories: FaqCategory[] = [
         {
           question: 'Can I use SKIND for my children?',
           answer: 'Yes. You can create a case for a child under 18 through your own profile if you hold parental responsibility. Where custody is shared, either parent may create the case, but you should agree on it first. You submit a sworn declaration in the app. Under the Danish Health Act, 15–17-year-olds can consent to treatment themselves and have their own right to confidentiality — including from their parents.'
+        },
+        {
+          question: 'How do I create a case for my child?',
+          answer: 'Start a new case in the app. On the first screen, where you choose who the case is for, tap "+ Add child" and enter your child\'s name and CPR number (DDMMYY-XXXX — you can find it on your child\'s health insurance card). Then select your child in the list and tap "Next". The rest of the case is filled in as usual, with photos and questions. Your child is saved to your profile, so next time you simply select them. You can edit or remove your child\'s details under Settings in the app.'
         },
         {
           question: 'Who are the doctors behind SKIND?',
