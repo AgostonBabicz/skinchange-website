@@ -44,7 +44,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
       
 
       {/* User Guide Carousel */}
-      <UserGuideSection lang={lang} />
+      <UserGuideSection lang={lang} showHeading={false} />
 
       {/* CTA */}
       <section className="py-20 bg-primary-900">
