@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ImageCredit from '@/components/ImageCredit';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
 
@@ -186,21 +187,20 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/blog-contact-dermatitis.jpg"
-                alt={
-                  isDa
-                    ? 'Håndryg med skarpt afgrænset rødme, små blærer og tør, revnet hud ved kontakteksem.'
-                    : 'The back of a hand with sharply bordered redness, small blisters and dry, cracked skin from contact dermatitis.'
-                }
-                width={1600}
-                height={900}
-                fetchPriority="high"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <figure className="mb-10">
+              <div className="rounded-2xl overflow-hidden aspect-[16/9] relative bg-nordic-fog">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/blog-contact-dermatitis.jpg"
+                  alt={isDa ? 'Illustration af et rødt, knoppet udslæt på underarmen med et forstørret udsnit af den berørte hud.' : 'Illustration of a red, bumpy rash on the forearm, with a magnified view of the affected skin.'}
+                  width={1600}
+                  height={900}
+                  fetchPriority="high"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <ImageCredit src="/blog-contact-dermatitis.jpg" lang={lang} />
+            </figure>
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">

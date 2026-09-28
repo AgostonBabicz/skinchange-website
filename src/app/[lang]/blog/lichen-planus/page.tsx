@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ImageCredit from '@/components/ImageCredit';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
 
@@ -187,21 +188,20 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/blog-lichen-planus.jpg"
-                alt={
-                  isDa
-                    ? 'Lilla, fladtoppede knopper på indersiden af et håndled, nogle med fine hvide linjer på overfladen.'
-                    : 'Purple, flat-topped bumps on the inner wrist, some with fine white lines across the surface.'
-                }
-                width={1600}
-                height={900}
-                fetchPriority="high"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <figure className="mb-10">
+              <div className="rounded-2xl overflow-hidden aspect-[16/9] relative bg-nordic-fog">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/blog-lichen-planus.jpg"
+                  alt={isDa ? 'Rødviolette, flade pletter af lichen planus på begge skinneben.' : 'Reddish-violet, flat patches of lichen planus on both shins.'}
+                  width={1600}
+                  height={900}
+                  fetchPriority="high"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <ImageCredit src="/blog-lichen-planus.jpg" lang={lang} />
+            </figure>
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">

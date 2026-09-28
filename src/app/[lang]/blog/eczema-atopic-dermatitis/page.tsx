@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ImageCredit from '@/components/ImageCredit';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
 
@@ -186,21 +187,20 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
             </h1>
 
             {/* Cover Image */}
-            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9] relative bg-nordic-fog">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/blog-eczema.jpg"
-                alt={
-                  isDa
-                    ? 'Nærbillede af tør, rød og skællende hud i en albuebøjning ved atopisk eksem.'
-                    : 'Close-up of dry, red, flaking skin in the crook of an elbow affected by atopic eczema.'
-                }
-                width={1600}
-                height={900}
-                fetchPriority="high"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <figure className="mb-10">
+              <div className="rounded-2xl overflow-hidden aspect-[16/9] relative bg-nordic-fog">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/blog-eczema.jpg"
+                  alt={isDa ? 'Tør hud med røde pletter og kradsemærker ved albuebøjningen, typisk for atopisk eksem.' : 'Dry skin with red patches and scratch marks near the inside of the elbow, typical of atopic eczema.'}
+                  width={1600}
+                  height={900}
+                  fetchPriority="high"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <ImageCredit src="/blog-eczema.jpg" lang={lang} />
+            </figure>
 
             {/* Author */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">

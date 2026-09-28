@@ -94,7 +94,7 @@ export default function Hero({ lang }: HeroProps) {
               
               {/* Badge */}
               <div className="absolute -bottom-4 -right-4 bg-[#00e5ff] text-primary-900 font-bold py-2 px-4 rounded-full shadow-lg text-sm">
-                1.000+ {isDa ? 'downloads' : 'downloads'}
+                {isDa ? '5.000+ downloads' : '5,000+ downloads'}
               </div>
             </div>
           </div>
