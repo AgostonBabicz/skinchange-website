@@ -27,7 +27,7 @@ export default function Stats({ lang }: StatsProps) {
   return (
     <section className="bg-white py-16 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="text-center">
             <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-[#00e5ff] bg-clip-text text-transparent">
               100+
@@ -52,14 +52,6 @@ export default function Stats({ lang }: StatsProps) {
               {isDa ? 'Certificerede læger' : 'Certified doctors'}
             </p>
           </div>
-          <div className="text-center">
-            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-[#00e5ff] to-[#00b8d4] bg-clip-text text-transparent">
-              5/5
-            </p>
-            <p className="text-gray-600 text-sm lg:text-base font-medium">
-              {isDa ? 'Anmeldelser' : 'Reviews'}
-            </p>
-          </div>
           <a
             href={TRUSTPILOT.url[lang]}
             target="_blank"
@@ -69,9 +61,9 @@ export default function Stats({ lang }: StatsProps) {
                 ? `TrustScore ${trustScore} på Trustpilot, baseret på ${reviewCount}. Åbner i et nyt vindue.`
                 : `TrustScore ${trustScore} on Trustpilot, based on ${reviewCount}. Opens in a new window.`
             }
-            className="group col-span-2 lg:col-span-1 flex flex-col items-center text-center rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
+            className="group flex flex-col items-center text-center rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
           >
-            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-[#00e5ff] bg-clip-text text-transparent">
+            <p className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-[#00e5ff] to-[#00b8d4] bg-clip-text text-transparent">
               {trustScore}
             </p>
             <Image
