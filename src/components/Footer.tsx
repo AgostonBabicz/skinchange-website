@@ -29,6 +29,7 @@ export default function Footer({ lang }: FooterProps) {
       { href: `/${lang}/faq`, label: t.nav.faq },
       { href: `/${lang}/privacy-policy`, label: t.footer.privacy },
       { href: `/${lang}/terms-conditions`, label: t.footer.terms },
+      { href: `/${lang}/image-credits`, label: lang === 'da' ? 'Billedkreditering' : 'Image credits' },
     ],
   };
 

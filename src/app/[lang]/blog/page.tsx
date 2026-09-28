@@ -117,7 +117,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: '16. marts 2026',
       image: '/blog-herpes-zoster.jpg',
-      imageAlt: 'Bælte af blærer på den ene side af kroppen ved helvedesild',
+      imageAlt: 'Grupper af blærer på den ene side af halsen og brystet ved helvedesild',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -139,7 +139,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '5 min',
       date: '19. marts 2026',
       image: '/blog-seborrheic-dermatitis.jpg',
-      imageAlt: 'Fedtet gul skældannelse og rødme ved seboroisk dermatitis',
+      imageAlt: 'Rødme og skælning omkring næsen og i skægområdet ved seboroisk dermatitis',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -161,7 +161,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '5 min',
       date: '20. marts 2026',
       image: '/blog-scabies.jpg',
-      imageAlt: 'Udslæt med små røde knopper og gravegange ved skab',
+      imageAlt: 'Forstørret skabgang i huden',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -172,7 +172,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '6 min',
       date: '19. marts 2026',
       image: '/blog-contact-dermatitis.jpg',
-      imageAlt: 'Rød, betændt hudplet der hvor huden har været i kontakt med et irriterende stof',
+      imageAlt: 'Illustration af et rødt, knoppet udslæt på underarmen ved kontakteksem',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -183,7 +183,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: '21. marts 2026',
       image: '/blog-lichen-planus.jpg',
-      imageAlt: 'Lilla, fladtoppede kløende knopper ved lichen planus',
+      imageAlt: 'Rødviolette, flade pletter på skinnebenene ved lichen planus',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -205,7 +205,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '7 min',
       date: '23. marts 2026',
       image: '/blog-impetigo.jpg',
-      imageAlt: 'Honningfarvede skorper omkring munden ved impetigo',
+      imageAlt: 'Honningfarvede skorper på hagen ved impetigo',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -238,7 +238,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: '28. marts 2026',
       image: '/blog-basal-cell-carcinoma.jpg',
-      imageAlt: 'Perleagtig, hævet knude med synlige små blodkar ved basalcellekarcinom',
+      imageAlt: 'Sår med hævet, perlemorsagtig kant på næsens side ved basalcellekarcinom',
       sectionHeader: 'Hudkræft',
     },
     {
@@ -260,7 +260,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '5 min',
       date: '7. april 2026',
       image: '/blog-psoriasis.jpg',
-      imageAlt: 'Hævede røde plaques dækket af sølvfarvede skæl ved psoriasis',
+      imageAlt: 'Røde, skællende plaques på ryggen og armene ved psoriasis',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -271,7 +271,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: '8. april 2026',
       image: '/blog-hpv.jpg',
-      imageAlt: 'Illustration af humant papillomavirus, som forårsager kønsvorter',
+      imageAlt: 'Mikroskopbillede af humant papillomavirus, som forårsager kønsvorter',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -293,7 +293,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '6 min',
       date: '26. juni 2026',
       image: '/blog-seborrheic-keratosis.jpg',
-      imageAlt: 'Flere vortelignende, påklistrede brune vækster ved seboroisk keratose',
+      imageAlt: 'En vortelignende, påklistret brun vækst ved seboroisk keratose',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -315,7 +315,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '9 min',
       date: '11. april 2026',
       image: '/blog-insect-sting.jpg',
-      imageAlt: 'Nærbillede af en myg, en almindelig årsag til insektbid',
+      imageAlt: 'En flåt, der har bidt sig fast i huden',
       sectionHeader: 'Hudsygdomme',
     },
     {
@@ -405,7 +405,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: 'March 16, 2026',
       image: '/blog-herpes-zoster.jpg',
-      imageAlt: 'Band of blisters on one side of the torso caused by shingles',
+      imageAlt: 'Clusters of blisters on one side of the neck and chest caused by shingles',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -427,7 +427,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '5 min',
       date: 'March 19, 2026',
       image: '/blog-seborrheic-dermatitis.jpg',
-      imageAlt: 'Greasy yellow scaling and redness of seborrhoeic dermatitis',
+      imageAlt: 'Redness and scaling around the nose and in the beard area caused by seborrhoeic dermatitis',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -449,7 +449,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '5 min',
       date: 'March 20, 2026',
       image: '/blog-scabies.jpg',
-      imageAlt: 'Scabies rash with small red bumps and burrow tracks on the skin',
+      imageAlt: 'Magnified scabies burrow in the skin',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -460,7 +460,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '6 min',
       date: 'March 19, 2026',
       image: '/blog-contact-dermatitis.jpg',
-      imageAlt: 'Red, inflamed patch of contact dermatitis where the skin met an irritant',
+      imageAlt: 'Illustration of a red, bumpy rash on the forearm caused by contact dermatitis',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -471,7 +471,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: 'March 21, 2026',
       image: '/blog-lichen-planus.jpg',
-      imageAlt: 'Purple, flat-topped itchy bumps of lichen planus',
+      imageAlt: 'Reddish-violet, flat patches on the shins caused by lichen planus',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -493,7 +493,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '7 min',
       date: 'March 23, 2026',
       image: '/blog-impetigo.jpg',
-      imageAlt: 'Honey-coloured crusts around the mouth caused by impetigo',
+      imageAlt: 'Honey-coloured crusts on the chin caused by impetigo',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -526,7 +526,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: 'March 28, 2026',
       image: '/blog-basal-cell-carcinoma.jpg',
-      imageAlt: 'Pearly, raised nodule with visible small blood vessels, typical of basal cell carcinoma',
+      imageAlt: 'An ulcerated sore with a raised, pearly edge on the side of the nose, typical of basal cell carcinoma',
       sectionHeader: 'Skin Cancer',
     },
     {
@@ -548,7 +548,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '5 min',
       date: 'April 7, 2026',
       image: '/blog-psoriasis.jpg',
-      imageAlt: 'Raised red plaques covered with silvery scale, typical of psoriasis',
+      imageAlt: 'Red, scaly plaques across the back and arms, typical of psoriasis',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -559,7 +559,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '8 min',
       date: 'April 8, 2026',
       image: '/blog-hpv.jpg',
-      imageAlt: 'Illustration of human papillomavirus, the cause of genital warts',
+      imageAlt: 'Micrograph of human papillomavirus, the cause of genital warts',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -581,7 +581,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '6 min',
       date: 'June 26, 2026',
       image: '/blog-seborrheic-keratosis.jpg',
-      imageAlt: 'Several warty, stuck-on brown growths typical of seborrhoeic keratosis',
+      imageAlt: 'A warty, stuck-on brown growth typical of seborrhoeic keratosis',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -603,7 +603,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '9 min',
       date: 'April 11, 2026',
       image: '/blog-insect-sting.jpg',
-      imageAlt: 'Close-up of a mosquito, a common cause of insect bites',
+      imageAlt: 'A tick feeding on human skin',
       sectionHeader: 'Skin Conditions',
     },
     {
@@ -784,6 +784,13 @@ export default function BlogPage({ params: { lang } }: PageProps) {
           >
             {isDa ? 'Download appen' : 'Download the app'}
           </Link>
+          <p className="mt-12 text-sm text-white/50">
+            {isDa ? 'Billeder fra Wikimedia Commons. Se ophav og licenser under ' : 'Images from Wikimedia Commons. See authors and licences under '}
+            <Link href={`/${lang}/image-credits`} className="underline hover:text-white">
+              {isDa ? 'billedkreditering' : 'image credits'}
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
