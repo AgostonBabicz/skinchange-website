@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
@@ -13,6 +14,9 @@ export default function Navigation({ lang }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const t = getTranslation(lang);
   const isDa = lang === 'da';
+  const pathname = usePathname() ?? '';
+  // A tab is active on its own page and on any page below it, e.g. /da/blog/acne marks Blog.
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   const navLinks = [
     { href: `/${lang}/about`, label: t.nav.about },
@@ -44,7 +48,10 @@ export default function Navigation({ lang }: NavigationProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors text-base font-medium"
+                aria-current={isActive(link.href) ? 'page' : undefined}
+                className={`text-base font-medium transition-colors underline-offset-8 decoration-2 decoration-[#00e5ff] ${
+                  isActive(link.href) ? 'text-white underline' : 'text-white/80 hover:text-white'
+                }`}
               >
                 {link.label}
               </Link>
@@ -98,7 +105,10 @@ export default function Navigation({ lang }: NavigationProps) {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-white/80 hover:text-white transition-colors text-lg font-medium"
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                  className={`self-start text-lg font-medium transition-colors underline-offset-8 decoration-2 decoration-[#00e5ff] ${
+                    isActive(link.href) ? 'text-white underline' : 'text-white/80 hover:text-white'
+                  }`}
                 >
                   {link.label}
                 </Link>
