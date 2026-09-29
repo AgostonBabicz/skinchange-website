@@ -28,12 +28,12 @@ export default function GuidePage({ params: { lang } }: PageProps) {
       <Navigation lang={lang} />
       
       {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-primary-900">
+      <section className="pt-28 pb-2 lg:pt-32 lg:pb-2 bg-primary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 font-display">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 lg:mb-4 font-display">
             {isDa ? 'Sådan bruger du SKIND' : 'How to use SKIND'}
           </h1>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             {isDa 
               ? 'Følg disse simple trin for at få professionel hjælp til dit hudproblem'
               : 'Follow these simple steps to get professional help with your skin problem'}

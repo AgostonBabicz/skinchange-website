@@ -80,6 +80,11 @@ const STEPS: Record<Language, Step[]> = {
 };
 
 const SWIPE_THRESHOLD = 40;
+// The mockup's height follows the screen height, so the page title, the phone, the step text and the
+// controls fit on one screen. The budget subtracts the nav, the title, the text block and the controls.
+// Width follows from the mockup's aspect ratio (380 x 769), capped by the slide width.
+const MOCKUP_HEIGHT =
+  '[--mock-h:min(calc(min(60vw,280px)*2.02),max(250px,calc(100svh-430px)))] sm:[--mock-h:min(567px,max(300px,calc(100svh-420px)))] lg:[--mock-h:min(607px,max(300px,calc(100svh-500px)))]';
 // Mockups are large SVGs; only mount those within this many steps of the active one.
 const PRELOAD_DISTANCE = 2;
 
@@ -147,14 +152,17 @@ export default function UserGuideSection({ lang, showHeading = true }: UserGuide
     'w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg transition-all hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white/90';
 
   return (
-    <section id="user-guide" className="py-24 lg:py-32 bg-primary-900 overflow-hidden">
+    <section
+      id="user-guide"
+      className={`bg-primary-900 overflow-hidden ${showHeading ? 'py-16 lg:py-24' : 'pt-5 pb-16 lg:pt-8 lg:pb-24'}`}
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeading && (
-          <div className="text-center mb-14">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 font-display">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 font-display">
               {isDa ? 'Sådan bruger du SKIND-appen' : 'How to use the SKIND app'}
             </h2>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base lg:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               {isDa
                 ? 'Syv trin fra du opretter din sag, til du har svar fra hudlægen.'
                 : 'Seven steps from creating your case to your answer from the dermatologist.'}
@@ -162,6 +170,7 @@ export default function UserGuideSection({ lang, showHeading = true }: UserGuide
           </div>
         )}
 
+        <div className={`relative ${MOCKUP_HEIGHT}`}>
         <div
           ref={regionRef}
           role="region"
@@ -200,6 +209,7 @@ export default function UserGuideSection({ lang, showHeading = true }: UserGuide
                       : 'opacity-0 pointer-events-none'
                 }`}
               >
+                <div className="h-[var(--mock-h)]">
                 {mounted.has(index) ? (
                   <Image
                     src={`/app/guide-${index + 1}-${lang}.svg`}
@@ -208,35 +218,55 @@ export default function UserGuideSection({ lang, showHeading = true }: UserGuide
                     height={769}
                     loading={nearView ? 'eager' : 'lazy'}
                     draggable={false}
-                    className="w-full h-auto"
+                    className="h-full w-auto mx-auto"
                   />
-                ) : (
-                  <div className="w-full aspect-[380/769]" />
-                )}
+                ) : null}
+                </div>
                 <div
-                  className={`mt-6 text-center transition-opacity duration-500 motion-reduce:transition-none ${
+                  className={`mt-4 text-center transition-opacity duration-500 motion-reduce:transition-none max-sm:relative max-sm:left-1/2 max-sm:w-[calc(100vw-2rem)] max-sm:-translate-x-1/2 ${
                     isActive ? '' : 'max-sm:opacity-0'
                   }`}
                 >
                   <p className="text-sm font-semibold text-[#00e5ff] mb-1">{stepLabel(index)}</p>
-                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{step.text}</p>
+                  <h3 className="text-lg lg:text-xl font-bold text-white mb-1 lg:mb-2">{step.title}</h3>
+                  <p className="text-[15px] lg:text-base text-white/70 leading-relaxed">{step.text}</p>
                 </div>
               </div>
             );
           })}
         </div>
 
+        {/* On phones the arrows sit on the sides of the mockup, so the controls take no extra height. */}
+        <button
+          type="button"
+          onClick={() => goTo(current - 1)}
+          disabled={current === 0}
+          className={`sm:hidden absolute left-0 top-[calc(var(--mock-h)/2)] -translate-y-1/2 z-40 !w-10 !h-10 ${navButtonClass}`}
+          aria-label={isDa ? 'Forrige trin' : 'Previous step'}
+        >
+          <ChevronLeft className="w-5 h-5 text-primary-900" />
+        </button>
+        <button
+          type="button"
+          onClick={() => goTo(current + 1)}
+          disabled={current === last}
+          className={`sm:hidden absolute right-0 top-[calc(var(--mock-h)/2)] -translate-y-1/2 z-40 !w-10 !h-10 ${navButtonClass}`}
+          aria-label={isDa ? 'Næste trin' : 'Next step'}
+        >
+          <ChevronRight className="w-5 h-5 text-primary-900" />
+        </button>
+        </div>
+
         <p className="sr-only" aria-live="polite">
           {stepLabel(current)}: {steps[current].title}
         </p>
 
-        <div className="flex items-center justify-center gap-6 mt-10">
+        <div className="flex items-center justify-center gap-6 mt-4 sm:mt-6">
           <button
             type="button"
             onClick={() => goTo(current - 1)}
             disabled={current === 0}
-            className={navButtonClass}
+            className={`max-sm:hidden ${navButtonClass}`}
             aria-label={isDa ? 'Forrige trin' : 'Previous step'}
           >
             <ChevronLeft className="w-6 h-6 text-primary-900" />
@@ -261,7 +291,7 @@ export default function UserGuideSection({ lang, showHeading = true }: UserGuide
             type="button"
             onClick={() => goTo(current + 1)}
             disabled={current === last}
-            className={navButtonClass}
+            className={`max-sm:hidden ${navButtonClass}`}
             aria-label={isDa ? 'Næste trin' : 'Next step'}
           >
             <ChevronRight className="w-6 h-6 text-primary-900" />
