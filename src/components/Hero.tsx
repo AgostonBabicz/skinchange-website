@@ -68,14 +68,14 @@ export default function Hero({ lang }: HeroProps) {
             </div>
 
             {/* Trust badges */}
-            <div className="flex items-center justify-center lg:justify-start gap-8 mt-12 animate-fade-up delay-500">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-3 mt-12 animate-fade-up delay-500">
               <div className="flex items-center gap-2 text-white/60 text-sm">
                 <Shield className="w-5 h-5 text-[#00e5ff]" />
                 <span>{isDa ? 'Sikker & krypteret' : 'Secure & encrypted'}</span>
               </div>
               <div className="flex items-center gap-2 text-white/60 text-sm">
                 <Clock className="w-5 h-5 text-[#00e5ff]" />
-                <span>{isDa ? '48 timers garanti' : '48 hour guarantee'}</span>
+                <span>{isDa ? 'Svar typisk inden for 48 timer' : 'Typically answered within 48 hours'}</span>
               </div>
             </div>
           </div>
