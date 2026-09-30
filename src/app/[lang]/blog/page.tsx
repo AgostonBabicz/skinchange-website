@@ -3,7 +3,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
-import Image from 'next/image';
+import BlogIndex from '@/components/BlogIndex';
+import { ArrowRight } from '@/components/ui/Icons';
 
 interface PageProps {
   params: { lang: Language };
@@ -625,141 +626,63 @@ export default function BlogPage({ params: { lang } }: PageProps) {
   const allPosts = isDa ? blogPosts.da : blogPosts.en;
   const skinCancerPosts = allPosts.filter(p => p.sectionHeader === 'Hudkræft' || p.sectionHeader === 'Skin Cancer');
   const generalPosts = allPosts.filter(p => p.sectionHeader === 'Hudsygdomme' || p.sectionHeader === 'Skin Conditions');
+  const meta = (post: BlogPost) => `${post.date} • ${post.readTime} ${isDa ? 'læsetid' : 'read'}`;
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen overflow-x-clip bg-paper">
       <Navigation lang={lang} />
-      
-      {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-primary-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 font-display">
-            {isDa ? 'Vores Blog' : 'Our Blog'}
-          </h1>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            {isDa 
-              ? 'Ekspertråd om hudsygdomme, behandlinger og hudpleje fra certificerede hudlæger'
-              : 'Expert advice on skin diseases, treatments and skincare from certified dermatologists'}
-          </p>
-        </div>
-      </section>
 
-      {/* Blog Posts Grid */}
-      <section id="diseases" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {generalPosts.map((post, index) => (
-              <Link 
-                key={index}
-                href={`/${lang}/blog/${post.slug}`}
-                className="group"
-              >
-                <article className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                  {/* Cover Image */}
-                  <div className="aspect-[16/10] relative bg-gradient-to-br from-primary to-primary-900">
-                    <Image
-                      src={post.image}
-                      alt={post.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    {/* Gradient overlay for text legibility */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-white/90 text-primary-900 text-xs font-semibold px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <span>{post.date}</span>
-                      <span className="mx-2">•</span>
-                      <span>{post.readTime} {isDa ? 'læsetid' : 'read'}</span>
-                    </div>
-                    
-                    <h2 className="text-xl font-bold text-primary-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                      {post.title}
-                    </h2>
-                    
-                    <p className="text-gray-600 text-sm line-clamp-3 flex-1">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="mt-4 flex items-center text-primary font-semibold text-sm">
-                      {isDa ? 'Læs mere' : 'Read more'}
-                      <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <header className="mx-auto flex max-w-page flex-col gap-3 px-5 pb-6 pt-4 md:px-10 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6 lg:py-12 xl:px-20">
+        <h1 className="animate-fokus font-display text-[54px] font-extrabold leading-[0.95] tracking-[-0.055em] lg:col-span-7 lg:text-[88px] lg:leading-[0.9] xl:text-[104px]">
+          {isDa ? 'Vores Blog' : 'Our Blog'}
+        </h1>
+        <p className="animate-fokus text-[17px] leading-normal text-body [animation-delay:100ms] lg:col-span-5 lg:col-start-8 lg:text-xl">
+          {isDa
+            ? 'Ekspertråd om hudsygdomme, behandlinger og hudpleje fra certificerede hudlæger'
+            : 'Expert advice on skin diseases, treatments and skincare from certified dermatologists'}
+        </p>
+      </header>
 
-      {/* Skin Cancer Section */}
+      <BlogIndex
+        lang={lang}
+        posts={generalPosts.map(({ slug, title, excerpt, category, readTime, date, image, imageAlt }) => ({
+          slug, title, excerpt, category, readTime, date, image, imageAlt,
+        }))}
+      />
+
       {skinCancerPosts.length > 0 && (
-        <section id="skin-cancer" className="py-20 bg-primary-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white font-display">
+        <section id="skin-cancer" aria-labelledby="b-cancer" className="px-3 pt-14 lg:px-6 lg:pt-32">
+          <div data-reveal className="mx-auto flex max-w-[1392px] flex-col gap-2.5 rounded-[32px] bg-ink px-5 pb-5 pt-8 text-white lg:gap-0 lg:rounded-[48px] lg:px-20 lg:py-[88px]">
+            <div className="flex flex-col gap-2.5 px-1 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6 lg:px-0">
+              <h2 id="b-cancer" className="font-display text-[44px] font-extrabold leading-[0.95] tracking-[-0.05em] lg:col-span-6 lg:text-[72px]">
                 {isDa ? 'Hudkræft' : 'Skin Cancer'}
               </h2>
-              <p className="text-white/70 mt-2">
+              <p className="mb-2 text-base leading-[1.55] text-on-ink-muted lg:col-span-5 lg:col-start-8 lg:mb-0 lg:text-[19px]">
                 {isDa
                   ? 'Lær om de forskellige former for hudkræft, deres symptomer og behandling'
                   : 'Learn about the different forms of skin cancer, their symptoms and treatment'}
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {skinCancerPosts.map((post, index) => (
+            <div className="flex flex-col gap-2.5 lg:mt-12 lg:grid lg:grid-cols-3 lg:gap-6">
+              {skinCancerPosts.map((post) => (
                 <Link
-                  key={index}
+                  key={post.slug}
                   href={`/${lang}/blog/${post.slug}`}
-                  className="group"
+                  className="group flex items-center gap-3.5 rounded-[22px] bg-white/5 p-2.5 text-white transition-transform duration-300 ease-soft hover:-translate-y-1 lg:flex-col lg:items-stretch lg:gap-0 lg:rounded-[28px] lg:border lg:border-white/[0.08] lg:px-3 lg:pb-6 lg:pt-3"
                 >
-                  <article className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-white/10">
-                    <div className="aspect-[16/10] relative bg-gradient-to-br from-primary to-primary-900">
-                      <Image
-                        src={post.image}
-                        alt={post.imageAlt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 text-primary-900 text-xs font-semibold px-3 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-6 flex-1 flex flex-col">
-                      <div className="flex items-center text-sm text-white/60 mb-3">
-                        <span>{post.date}</span>
-                        <span className="mx-2">•</span>
-                        <span>{post.readTime} {isDa ? 'læsetid' : 'read'}</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00e5ff] transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-white/70 text-sm mb-4 flex-1 line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <div className="mt-4 flex items-center text-[#00e5ff] font-semibold text-sm">
-                        {isDa ? 'Læs mere' : 'Read more'}
-                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </article>
+                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-2xl lg:aspect-[16/10] lg:h-auto lg:w-full lg:rounded-[20px]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={post.image} alt={post.imageAlt} width={640} height={400} loading="lazy" className="block h-full w-full object-cover transition-transform duration-[600ms] ease-soft group-hover:scale-[1.04]" />
+                  </div>
+                  <div className="flex min-w-0 flex-col gap-1.5 lg:gap-2.5 lg:px-3 lg:pt-[18px]">
+                    <span className="order-last text-xs text-on-ink-muted lg:order-none lg:text-[13px]">{meta(post)}</span>
+                    <h3 className="line-clamp-2 font-display text-base font-semibold leading-[1.25] lg:line-clamp-none lg:text-[22px] lg:tracking-[-0.01em]">{post.title}</h3>
+                    <p className="hidden text-[15px] leading-[1.55] text-on-ink-soft lg:line-clamp-3">{post.excerpt}</p>
+                    <span className="hidden items-center gap-1.5 text-[15px] font-semibold text-signal lg:flex">
+                      {isDa ? 'Læs mere' : 'Read more'}
+                      <ArrowRight size={16} className="transition-transform duration-300 ease-soft group-hover:translate-x-1" />
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -767,30 +690,23 @@ export default function BlogPage({ params: { lang } }: PageProps) {
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            {isDa ? 'Har du et hudproblem?' : 'Do you have a skin problem?'}
-          </h2>
-          <p className="text-xl text-white/70 mb-8">
-            {isDa 
-              ? 'Få en professionel diagnose inden for 48 timer'
-              : 'Get a professional diagnosis within 48 hours'}
-          </p>
+      <section className="mx-auto max-w-page px-4 py-14 md:px-10 lg:py-32 xl:px-20">
+        <div data-reveal className="flex flex-col gap-3.5 rounded-[28px] bg-brand-tint px-6 py-7 lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-6 lg:rounded-[40px] lg:px-16 lg:py-14">
+          <div className="flex flex-col gap-3.5 lg:col-span-8 lg:gap-3">
+            <h2 className="font-display text-[30px] font-bold leading-[1.05] tracking-[-0.03em] lg:text-[52px] lg:leading-none lg:tracking-[-0.035em]">
+              {isDa ? 'Har du et hudproblem?' : 'Do you have a skin problem?'}
+            </h2>
+            <p className="text-[17px] leading-normal text-body lg:text-xl">
+              {isDa ? 'Få en professionel diagnose inden for 48 timer' : 'Get a professional diagnosis within 48 hours'}
+            </p>
+          </div>
           <Link
             href={`/${lang}/download`}
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-900 rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
+            className="group mt-1 flex h-[54px] items-center justify-center gap-2.5 rounded-full bg-brand px-[30px] text-[17px] font-semibold text-white shadow-cta transition hover:-translate-y-px hover:bg-brand-hover hover:shadow-cta-hover active:scale-[0.98] lg:col-span-3 lg:col-start-10 lg:mt-0 lg:h-[58px] lg:justify-self-end"
           >
             {isDa ? 'Download appen' : 'Download the app'}
+            <ArrowRight size={18} className="transition-transform duration-150 group-hover:translate-x-[3px]" />
           </Link>
-          <p className="mt-12 text-sm text-white/50">
-            {isDa ? 'Billeder fra Wikimedia Commons. Se ophav og licenser under ' : 'Images from Wikimedia Commons. See authors and licences under '}
-            <Link href={`/${lang}/image-credits`} className="underline hover:text-white">
-              {isDa ? 'billedkreditering' : 'image credits'}
-            </Link>
-            .
-          </p>
         </div>
       </section>
 

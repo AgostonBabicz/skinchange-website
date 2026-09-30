@@ -7,7 +7,7 @@ const KIND_LABEL = {
   micrograph: { da: 'Mikroskopbillede', en: 'Micrograph' },
 };
 
-const linkClass = 'underline decoration-gray-300 underline-offset-2 hover:text-primary';
+const linkClass = 'underline underline-offset-[3px] transition-colors hover:text-ink';
 
 export default function ImageCredit({ src, lang }: { src: string; lang: Language }) {
   const credit = imageCredits[src];
@@ -18,7 +18,7 @@ export default function ImageCredit({ src, lang }: { src: string; lang: Language
   const license = licenseUrl(credit.license, lang);
 
   return (
-    <figcaption className="mt-2 text-xs text-gray-500 leading-relaxed">
+    <figcaption className="mx-2 mt-2.5 text-xs leading-[1.5] text-muted lg:mx-0 lg:mt-3 lg:text-[13px]">
       {KIND_LABEL[credit.kind][lang]}: {credit.author} ·{' '}
       <a href={credit.sourceUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
         Wikimedia Commons

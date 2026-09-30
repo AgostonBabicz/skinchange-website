@@ -1,18 +1,22 @@
 import { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Albert_Sans, Schibsted_Grotesk } from "next/font/google";
 import "../globals.css";
 import { languages, defaultLanguage } from "@/lib/i18n";
+import RevealObserver from "@/components/motion/RevealObserver";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: 'swap',
+// Headlines and numbers in Schibsted Grotesk, text and interface in Albert Sans.
+// next/font self-hosts both, so no request goes to Google at runtime.
+const display = Schibsted_Grotesk({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-display",
+  display: "swap",
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: 'swap',
+const sans = Albert_Sans({
+  subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
+  variable: "--font-sans",
+  display: "swap",
 });
 
 type LangParams = { lang: string };
@@ -200,12 +204,13 @@ export default function LangLayout({
   params: LangParams;
 }) {
   return (
-    <html lang={params.lang} className={`${inter.variable} ${playfair.variable}`}>
+    <html lang={params.lang} className={`${display.variable} ${sans.variable}`}>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
-      <body className="font-sans antialiased text-gray-900 bg-primary-900">
+      <body className="bg-paper font-sans text-ink antialiased">
         {children}
+        <RevealObserver />
       </body>
     </html>
   );

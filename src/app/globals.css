@@ -2,261 +2,176 @@
 @tailwind components;
 @tailwind utilities;
 
+/* "Fokus" redesign, September 2026.
+   Tokens live in tailwind.config.ts; this file holds page basics, the scroll reveal and motion rules. */
+
 @layer base {
   :root {
-    --color-primary: #304FFE;
-    --color-primary-dark: #1A237E;
-    --color-accent: #DF4949;
-    --color-surface: #ffffff;
-    --color-background: #E8EAF6;
-    --color-text: #1A237E;
-    --color-muted: #64748b;
-    
-    --font-sans: 'Roboto', system-ui, sans-serif;
-    --font-display: 'Roboto', system-ui, sans-serif;
-    
-    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
   }
-  
+
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 112px;
+    -webkit-text-size-adjust: 100%;
   }
-  
-  body {
-    @apply antialiased text-gray-900 bg-white;
-    font-feature-settings: "liga" 1, "calt" 1;
-    font-size: 1.0625rem; /* 17px base — up from 16px */
-  }
-}
 
-@layer components {
-  /* Glass morphism card */
-  .glass-card {
-    @apply bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20;
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   }
-  
-  /* Nordic button styles */
-  .btn-primary {
-    @apply relative overflow-hidden bg-primary text-white font-medium px-8 py-4 rounded-xl 
-           transition-all duration-300 ease-out hover:shadow-2xl hover:shadow-primary/30
-           hover:-translate-y-0.5 active:translate-y-0;
+
+  ::selection {
+    background: #ecefff;
+    color: #0e1438;
   }
-  
-  .btn-primary::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full;
-    transition: transform 0.6s ease;
+
+  :focus-visible {
+    outline: 3px solid rgba(48, 79, 254, 0.35);
+    outline-offset: 3px;
   }
-  
-  .btn-primary:hover::before {
-    @apply translate-x-full;
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
   }
-  
-  .btn-secondary {
-    @apply bg-white text-primary border-2 border-primary/20 font-medium px-8 py-4 rounded-xl
-           transition-all duration-300 hover:border-primary hover:bg-primary/5
-           hover:-translate-y-0.5;
-  }
-  
-  .btn-ghost {
-    @apply text-primary font-medium px-6 py-3 rounded-lg
-           transition-all duration-200 hover:bg-primary/5;
-  }
-  
-  /* Nordic gradient backgrounds */
-  .gradient-nordic {
-    background: linear-gradient(135deg, #1a237e 0%, #304ffe 50%, #00e5ff 100%);
-  }
-  
-  .gradient-subtle {
-    background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
-  }
-  
-  /* Smooth section transitions */
-  .section-transition {
-    @apply relative;
-  }
-  
-  .section-transition::before {
-    content: '';
-    @apply absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent;
-  }
-  
-  /* Animated underline for links */
-  .link-underline {
-    @apply relative;
-  }
-  
-  .link-underline::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
-  }
-  
-  .link-underline:hover::after {
-    @apply w-full;
-  }
-  
-  /* Stats counter animation */
-  .stat-card {
-    @apply relative p-8 rounded-2xl bg-white shadow-lg border border-gray-100
-           transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-  }
-  
-  .stat-card::before {
-    content: '';
-    @apply absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-accent rounded-t-2xl opacity-0 transition-opacity duration-300;
-  }
-  
-  .stat-card:hover::before {
-    @apply opacity-100;
-  }
-  
-  /* Step card with number */
-  .step-card {
-    @apply relative p-8 rounded-2xl bg-white border-2 border-gray-100
-           transition-all duration-500 hover:border-primary/20 hover:shadow-xl;
-  }
-  
-  /* Feature list item */
-  .feature-item {
-    @apply flex items-start gap-4 p-4 rounded-xl transition-all duration-200 hover:bg-gray-50;
-  }
-  
-  /* Nordic typography scale */
-  .heading-hero {
-    @apply text-5xl md:text-7xl font-bold leading-tight tracking-tight;
-    font-family: var(--font-display);
-  }
-  
-  .heading-section {
-    @apply text-4xl md:text-5xl font-bold leading-tight;
-    font-family: var(--font-display);
-  }
-  
-  .heading-card {
-    @apply text-xl font-semibold leading-snug;
-  }
-  
-  .body-large {
-    @apply text-lg md:text-xl leading-relaxed text-gray-600;
-  }
-  
-  .body-regular {
-    @apply text-[1.0625rem] leading-relaxed text-gray-600;
+
+  p {
+    text-wrap: pretty;
   }
 }
 
 @layer utilities {
-  /* Animation utilities */
-  .animate-fade-up {
-    animation: fadeUp 0.8s var(--ease-out-expo) forwards;
+  .no-scrollbar {
+    scrollbar-width: none;
   }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.6s var(--ease-out-expo) forwards;
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-  
-  .animate-slide-in-right {
-    animation: slideInRight 0.8s var(--ease-out-expo) forwards;
+
+  .fade-edges {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
-  
-  .animate-scale-in {
-    animation: scaleIn 0.5s var(--ease-out-expo) forwards;
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-pulse-slow {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-  
-  /* Delay utilities */
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-  
-  /* Gradient text */
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
-  }
-  
-  /* Glass effect */
-  .glass {
-    @apply bg-white/80 backdrop-blur-md;
-  }
-  
-  /* Nordic spacing */
-  .section-padding {
-    @apply py-24 md:py-32 px-4 sm:px-6 lg:px-8;
-  }
-  
-  .container-nordic {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+
+  .sr-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Scroll-triggered animations */
+/* Scroll reveal: sections "come into focus" as they enter the viewport.
+   Elements stay visible until RevealObserver has mounted, so the page never depends on JavaScript. */
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  [data-reveal] {
+    transition:
+      opacity 900ms var(--ease-soft),
+      filter 900ms var(--ease-soft),
+      transform 900ms var(--ease-soft);
+    transition-delay: var(--reveal-delay, 0ms);
   }
-  
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+
+  .reveal-ready [data-reveal]:not(.is-revealed) {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(24px);
+  }
+}
+
+/* ActiveCampaign newsletter form in the footer. Its embed injects a black box with a red button
+   using ID selectors and !important, so these rules are one step more specific. */
+#site-footer form._form_1._inline-form {
+  margin: 0 !important;
+  padding: 28px !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 24px !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  font-family: var(--font-sans), sans-serif !important;
+}
+
+#site-footer form._form_1._inline-form ._form-content,
+#site-footer form._form_1._inline-form ._form-thank-you,
+#site-footer form._form_1._inline-form ._form_element * {
+  font-family: var(--font-sans), sans-serif !important;
+}
+
+#site-footer form._form_1._inline-form ._form-title {
+  margin-bottom: 14px;
+  font-family: var(--font-display), sans-serif !important;
+  font-size: 22px !important;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+#site-footer form._form_1._inline-form ._form-label {
+  margin-bottom: 8px;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #b7bdd9;
+}
+
+#site-footer form._form_1._inline-form .field-required {
+  color: #8f96bc;
+}
+
+#site-footer form._form_1._inline-form input[type="text"] {
+  height: 48px;
+  padding: 0 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #fff !important;
+  font-size: 16px !important;
+}
+
+#site-footer form._form_1._inline-form input[type="text"]::placeholder {
+  color: #8f96bc;
+}
+
+#site-footer form._form_1._inline-form input[type="text"]:focus {
+  border-color: #00e5ff !important;
+  outline: none;
+}
+
+#site-footer form._form_1._inline-form ._submit {
+  height: 48px;
+  margin-top: 8px;
+  padding: 0 24px !important;
+  border-radius: 999px !important;
+  background: #304ffe !important;
+  font-size: 15px !important;
+  font-weight: 600;
+  transition: background-color 160ms linear, transform 160ms var(--ease-soft);
+}
+
+#site-footer form._form_1._inline-form ._submit:hover {
+  background: #2a43e0 !important;
+  transform: translateY(-1px);
+}
+
+/* Reduce motion: no movement, blur or looping; content simply appears. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
   }
 }
