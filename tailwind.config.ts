@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+// Design tokens for the "Fokus" redesign (September 2026).
+// Warm paper ground, deep ink text, brand blue for actions, cyan signal only on ink.
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,6 +11,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        ink: {
+          DEFAULT: "#0E1438",
+          2: "#2A3052",
+          soft: "#454B68",
+        },
+        paper: {
+          DEFAULT: "#F6F5F1",
+          deep: "#EEECE5",
+        },
+        line: {
+          DEFAULT: "#E2DFD5",
+          soft: "#EEECE5",
+          strong: "#CFCBBE",
+          input: "#D5D2C7",
+        },
+        brand: {
+          DEFAULT: "#304FFE",
+          hover: "#2A43E0",
+          ink: "#2336C9",
+          tint: "#ECEFFF",
+          deep: "#1D2A7A",
+        },
+        signal: "#00E5FF",
+        body: "#3C4260",
+        muted: "#5A5F78",
+        "on-ink": {
+          muted: "#B7BDD9",
+          soft: "#C9CEE6",
+          faint: "#8F96BC",
+        },
+        warn: {
+          bg: "#FFF1EC",
+          line: "#F4CDBF",
+          ink: "#7C2D12",
+          icon: "#C2410C",
+        },
+        // Legacy palette, still referenced by a few pages during the migration.
         primary: {
           DEFAULT: "#304FFE",
           50: "#E8EAF6",
@@ -23,101 +62,82 @@ const config: Config = {
           900: "#1A237E",
           950: "#0d1137",
         },
-        background: {
-          DEFAULT: "#1A237E",
-          light: "#E8EAF6",
-          dark: "#0f172a",
-        },
-        accent: {
-          DEFAULT: "#DF4949",
-          light: "#f08080",
-          dark: "#b03030",
-        },
         nordic: {
-          white: "#ffffff",
-          snow: "#fafafa",
-          fog: "#f1f5f9",
-          stone: "#e2e8f0",
-          slate: "#64748b",
-          charcoal: "#334155",
-          midnight: "#1e293b",
-          ink: "#0f172a",
-        }
+          fog: "#EEECE5",
+        },
       },
       fontFamily: {
-        sans: ['var(--font-roboto)', 'Roboto', 'system-ui', 'sans-serif'],
-        display: ['var(--font-roboto)', 'Roboto', 'system-ui', 'sans-serif'],
+        sans: ["var(--font-sans)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        display: ["var(--font-display)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
       },
-      fontSize: {
-        'display-1': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-2': ['3.5rem', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
-        'heading-1': ['2.5rem', { lineHeight: '1.2' }],
-        'heading-2': ['2rem', { lineHeight: '1.25' }],
-        'heading-3': ['1.5rem', { lineHeight: '1.3' }],
-        'body-large': ['1.25rem', { lineHeight: '1.6' }],
-        'body-regular': ['1rem', { lineHeight: '1.6' }],
-        'body-small': ['0.875rem', { lineHeight: '1.5' }],
-      },
-      spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
-        '128': '32rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
+      maxWidth: {
+        page: "1440px",
       },
       boxShadow: {
-        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.08)',
-        'glow': '0 0 40px -10px rgba(48, 79, 254, 0.3)',
-        'card': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
-        'float': '0 20px 60px -15px rgba(0, 0, 0, 0.15)',
-      },
-      animation: {
-        'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'slide-in': 'slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'scale-in': 'scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
-        'shimmer': 'shimmer 2s linear infinite',
+        pill: "0 1px 2px rgba(14, 20, 56, 0.04), 0 14px 36px -20px rgba(14, 20, 56, 0.30)",
+        card: "0 1px 2px rgba(14, 20, 56, 0.04), 0 24px 48px -32px rgba(14, 20, 56, 0.25)",
+        lift: "0 24px 40px -24px rgba(14, 20, 56, 0.35)",
+        cta: "0 12px 24px -12px rgba(48, 79, 254, 0.9)",
+        "cta-hover": "0 14px 26px -12px rgba(48, 79, 254, 1)",
+        chip: "0 16px 30px -14px rgba(14, 20, 56, 0.6)",
       },
       keyframes: {
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        fokus: {
+          from: { opacity: "0", filter: "blur(12px)", transform: "translateY(24px)" },
+          to: { opacity: "1", filter: "blur(0)", transform: "none" },
         },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        rise: {
+          from: { opacity: "0", transform: "translateY(64px) rotate(-3deg)" },
+          to: { opacity: "1", transform: "none" },
         },
-        slideIn: {
-          '0%': { opacity: '0', transform: 'translateX(-20px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' },
+        "rise-flat": {
+          from: { opacity: "0", transform: "translateY(48px)" },
+          to: { opacity: "1", transform: "none" },
         },
-        scaleIn: {
-          '0%': { opacity: '0', transform: 'scale(0.95)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
+        ring: {
+          from: { opacity: "0", transform: "translate(-50%, -50%) scale(0.82)" },
+          to: { opacity: "1", transform: "translate(-50%, -50%) scale(1)" },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+        drift: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
         },
-        pulseSoft: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
+        "pulse-ring": {
+          "0%": { transform: "translate(-50%, -50%) scale(0.6)", opacity: "0.55" },
+          "100%": { transform: "translate(-50%, -50%) scale(1.6)", opacity: "0" },
+        },
+        "menu-in": {
+          from: { opacity: "0", transform: "translateY(14px)" },
+          to: { opacity: "1", transform: "none" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
       },
+      animation: {
+        fokus: "fokus 900ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        rise: "rise 1100ms cubic-bezier(0.22, 1, 0.36, 1) 220ms both",
+        "rise-flat": "rise-flat 1000ms cubic-bezier(0.22, 1, 0.36, 1) 240ms both",
+        ring: "ring 1400ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        drift: "drift 6s ease-in-out 1.4s infinite",
+        marquee: "marquee 44s linear infinite",
+        "marquee-fast": "marquee 32s linear infinite",
+        "pulse-ring": "pulse-ring 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite",
+        "menu-in": "menu-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        "fade-in": "fade-in 300ms linear both",
+      },
       transitionTimingFunction: {
-        'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
-        'in-out-smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        soft: "cubic-bezier(0.22, 1, 0.36, 1)",
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'),],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;

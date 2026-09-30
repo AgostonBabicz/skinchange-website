@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef, useState } from 'react';
 import { Language } from '@/lib/i18n';
+import { ChevronLeft, ChevronRight } from '@/components/ui/Icons';
 
 interface UserGuideSectionProps {
   lang: Language;
-  showHeading?: boolean;
+  // "home": dark panel with its own heading (home page). "page": panel only, under the guide page's H1.
+  variant?: 'home' | 'page';
 }
 
 interface Step {
@@ -15,7 +15,7 @@ interface Step {
   text: string;
 }
 
-// One entry per mockup in public/app/guide-{n}-{lang}.svg, in the order of the in-app flow.
+// One entry per screenshot in public/app/guide-{n}-{lang}.webp, in the order of the in-app flow.
 const STEPS: Record<Language, Step[]> = {
   da: [
     {
@@ -80,56 +80,17 @@ const STEPS: Record<Language, Step[]> = {
 };
 
 const SWIPE_THRESHOLD = 40;
-// The mockup's height follows the screen height, so the page title, the phone, the step text and the
-// controls fit on one screen. The budget subtracts the nav, the title, the text block and the controls.
-// Width follows from the mockup's aspect ratio (380 x 769), capped by the slide width.
-const MOCKUP_HEIGHT =
-  '[--mock-h:min(calc(min(60vw,280px)*2.02),max(250px,calc(100svh-430px)))] sm:[--mock-h:min(567px,max(300px,calc(100svh-420px)))] lg:[--mock-h:min(607px,max(300px,calc(100svh-500px)))]';
-// Mockups are large SVGs; only mount those within this many steps of the active one.
-const PRELOAD_DISTANCE = 2;
+const EASE = 'cubic-bezier(0.22, 1, 0.36, 1)';
 
-const withinReach = (center: number, count: number) =>
-  Array.from({ length: PRELOAD_DISTANCE * 2 + 1 }, (_, k) => center - PRELOAD_DISTANCE + k).filter(
-    (i) => i >= 0 && i < count,
-  );
-
-export default function UserGuideSection({ lang, showHeading = true }: UserGuideSectionProps) {
+export default function UserGuideSection({ lang, variant = 'home' }: UserGuideSectionProps) {
   const isDa = lang === 'da';
   const steps = STEPS[lang];
   const last = steps.length - 1;
   const [current, setCurrent] = useState(0);
-  const [mounted, setMounted] = useState<Set<number>>(() => new Set(withinReach(0, steps.length)));
-  // Lazy until the carousel is near the viewport, then eager so the steps on either side are ready before they slide in.
-  const [nearView, setNearView] = useState(false);
-  const regionRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
 
-  useEffect(() => {
-    const node = regionRef.current;
-    if (!node || typeof IntersectionObserver === 'undefined') {
-      setNearView(true);
-      return;
-    }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setNearView(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '600px 0px' },
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  const goTo = (index: number) => {
-    const next = Math.max(0, Math.min(last, index));
-    setCurrent(next);
-    setMounted((prev) => new Set(Array.from(prev).concat(withinReach(next, steps.length))));
-  };
-  const stepLabel = (index: number) =>
-    isDa ? `Trin ${index + 1} af ${steps.length}` : `Step ${index + 1} of ${steps.length}`;
+  const goTo = (index: number) => setCurrent(Math.max(0, Math.min(last, index)));
+  const stepLabel = (index: number) => (isDa ? `Trin ${index + 1} af ${steps.length}` : `Step ${index + 1} of ${steps.length}`);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowLeft') {
@@ -148,155 +109,251 @@ export default function UserGuideSection({ lang, showHeading = true }: UserGuide
     if (Math.abs(dx) > SWIPE_THRESHOLD) goTo(current + (dx < 0 ? 1 : -1));
   };
 
-  const navButtonClass =
-    'w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg transition-all hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white/90';
+  // Coverflow position of each screenshot: the active one centred, neighbours smaller and dimmed.
+  const slideStyle = (index: number, step: number): React.CSSProperties => {
+    const offset = index - current;
+    const distance = Math.abs(offset);
+    return {
+      transform: `translateX(${offset * step}%) scale(${distance === 0 ? 1 : distance === 1 ? 0.84 : 0.7})`,
+      opacity: distance === 0 ? 1 : distance === 1 ? 0.38 : 0,
+      filter: `saturate(${distance === 0 ? 1 : 0.4})`,
+      zIndex: 10 - distance,
+      transition: `transform 700ms ${EASE}, opacity 700ms ${EASE}, filter 700ms linear`,
+    };
+  };
 
-  return (
-    <section
-      id="user-guide"
-      className={`bg-primary-900 overflow-hidden ${showHeading ? 'py-16 lg:py-24' : 'pt-5 pb-16 lg:pt-8 lg:pb-24'}`}
+  const screenshot = (index: number) => ({
+    src: `/app/guide-${index + 1}-${lang}.webp`,
+    alt: isDa ? `Skærmbillede fra SKIND-appen: ${steps[index].title}` : `Screenshot of the SKIND app: ${steps[index].title}`,
+  });
+
+  const arrowButton =
+    'flex items-center justify-center rounded-full bg-white text-ink transition hover:bg-white/90 active:scale-[0.96] disabled:cursor-not-allowed disabled:opacity-30';
+
+  const rings = (sizes: [number, number, number?]) => (
+    <>
+      {sizes.map((size, i) =>
+        size ? (
+          <span
+            key={size}
+            aria-hidden="true"
+            style={{ width: size, height: size }}
+            className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border ${
+              i === 0 ? 'border-signal/10' : i === 1 ? 'border-signal/[0.14]' : 'border-signal/20'
+            }`}
+          />
+        ) : null,
+      )}
+    </>
+  );
+
+  const isHome = variant === 'home';
+
+  const panel = (
+    <div
+      className={`overflow-hidden bg-ink text-white ${
+        isHome
+          ? 'rounded-[32px] pb-[22px] pt-8 lg:rounded-[48px] lg:px-20 lg:pb-24 lg:pt-[104px]'
+          : 'rounded-[32px] pb-[22px] pt-[18px] lg:rounded-[40px] lg:px-14 lg:py-10'
+      }`}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {showHeading && (
-          <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 font-display">
-              {isDa ? 'Sådan bruger du SKIND-appen' : 'How to use the SKIND app'}
-            </h2>
-            <p className="text-base lg:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              {isDa
-                ? 'Syv trin fra du opretter din sag, til du har svar fra hudlægen.'
-                : 'Seven steps from creating your case to your answer from the dermatologist.'}
-            </p>
-          </div>
-        )}
+      {isHome && (
+        <div className="flex flex-col gap-2 px-6 pb-1.5 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6 lg:px-0 lg:pb-0">
+          <h2 id="h-guide" className="font-display text-[30px] font-bold leading-[1.05] tracking-[-0.03em] lg:col-span-7 lg:text-[56px] lg:leading-[1.02] lg:tracking-[-0.035em]">
+            {isDa ? 'Sådan bruger du SKIND-appen' : 'How to use the SKIND app'}
+          </h2>
+          <p className="text-[15px] leading-[1.55] text-on-ink-muted lg:col-span-4 lg:col-start-9 lg:text-[19px]">
+            {isDa
+              ? 'Syv trin fra du opretter din sag, til du har svar fra hudlægen.'
+              : 'Seven steps from creating your case to your answer from the dermatologist.'}
+          </p>
+        </div>
+      )}
 
-        <div className={`relative ${MOCKUP_HEIGHT}`}>
-        <div
-          ref={regionRef}
-          role="region"
-          aria-roledescription={isDa ? 'karrusel' : 'carousel'}
-          aria-label={isDa ? 'Brugervejledning til SKIND-appen' : 'SKIND app user guide'}
-          tabIndex={0}
-          onKeyDown={onKeyDown}
-          onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
-          onTouchEnd={onTouchEnd}
-          className="grid [--guide-step:74%] sm:[--guide-step:100%] lg:[--guide-step:108%] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00e5ff] focus-visible:ring-offset-4 focus-visible:ring-offset-primary-900 rounded-2xl"
-        >
-          {steps.map((step, index) => {
-            const offset = index - current;
-            const distance = Math.abs(offset);
-            const isActive = offset === 0;
-            const isNeighbour = distance === 1;
-            const scale = isActive ? 1 : isNeighbour ? 0.86 : 0.7;
+      <div
+        role="region"
+        aria-roledescription={isDa ? 'karrusel' : 'carousel'}
+        aria-label={isDa ? 'Brugervejledning til SKIND-appen' : 'SKIND app user guide'}
+        tabIndex={0}
+        onKeyDown={onKeyDown}
+        className={`rounded-[28px] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal ${isHome ? 'mt-3.5 lg:mt-14' : ''}`}
+      >
+        {/* Desktop: all seven steps as a list next to the coverflow. */}
+        <div className="hidden lg:grid lg:grid-cols-12 lg:gap-x-6">
+          <ol className="flex flex-col gap-1 lg:col-span-5">
+            {steps.map((step, index) => {
+              const active = index === current;
+              const done = index < current;
+              return (
+                <li key={step.title}>
+                  <button
+                    type="button"
+                    onClick={() => goTo(index)}
+                    aria-current={active ? 'step' : undefined}
+                    className={`flex min-h-14 w-full items-start gap-4 rounded-[20px] px-[18px] py-3 text-left transition-colors duration-300 ease-soft ${
+                      active ? 'bg-white/[0.07]' : 'hover:bg-white/[0.04]'
+                    }`}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-display text-[15px] font-bold transition-colors duration-300 ${
+                        active ? 'bg-signal text-ink' : done ? 'bg-signal/[0.14] text-signal' : 'bg-white/[0.08] text-on-ink-muted'
+                      }`}
+                    >
+                      {index + 1}
+                    </span>
+                    <span className="flex flex-col pt-1">
+                      <span className={`text-lg font-semibold leading-[1.3] ${active ? 'text-white' : 'text-on-ink-soft'}`}>{step.title}</span>
+                      <span
+                        className="grid transition-[grid-template-rows] duration-300 ease-soft"
+                        style={{ gridTemplateRows: active ? '1fr' : '0fr' }}
+                      >
+                        <span className="min-h-0 overflow-hidden">
+                          <span className="block pt-1.5 text-base leading-[1.6] text-on-ink-soft">{step.text}</span>
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
 
-            return (
-              <div
-                key={index}
-                role={isActive ? 'group' : undefined}
-                aria-roledescription={isActive ? (isDa ? 'trin' : 'slide') : undefined}
-                aria-label={isActive ? stepLabel(index) : undefined}
-                aria-hidden={!isActive}
-                onClick={isNeighbour ? () => goTo(index) : undefined}
-                style={{
-                  transform: `translateX(calc(${offset} * var(--guide-step))) scale(${scale})`,
-                  zIndex: 30 - distance,
-                }}
-                className={`col-start-1 row-start-1 justify-self-center w-[60vw] max-w-[280px] sm:w-[280px] lg:w-[300px] lg:max-w-[300px] origin-center select-none transition-[transform,opacity,filter] duration-500 ease-out-expo motion-reduce:transition-none ${
-                  isActive
-                    ? 'opacity-100'
-                    : isNeighbour
-                      ? 'opacity-40 saturate-50 cursor-pointer hover:opacity-60'
-                      : 'opacity-0 pointer-events-none'
-                }`}
-              >
-                <div className="h-[var(--mock-h)]">
-                {mounted.has(index) ? (
-                  <Image
-                    src={`/app/guide-${index + 1}-${lang}.svg`}
-                    alt={isDa ? `Skærmbillede fra SKIND-appen: ${step.title}` : `Screenshot of the SKIND app: ${step.title}`}
+          <div className="flex flex-col items-center gap-4 lg:col-span-7">
+            <div className="relative h-[452px] w-full overflow-hidden">
+              {rings([700, 520, 340])}
+              {steps.map((step, index) => {
+                const distance = Math.abs(index - current);
+                const { src, alt } = screenshot(index);
+                return (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={src}
+                    src={src}
+                    alt={alt}
                     width={380}
-                    height={769}
-                    loading={nearView ? 'eager' : 'lazy'}
+                    height={770}
+                    loading={distance <= 1 ? 'eager' : 'lazy'}
                     draggable={false}
-                    className="h-full w-auto mx-auto"
+                    aria-hidden={distance !== 0}
+                    onClick={distance === 1 ? () => goTo(index) : undefined}
+                    style={slideStyle(index, 104)}
+                    className={`absolute left-1/2 top-2 ml-[-108px] h-[437px] w-[216px] select-none ${distance === 1 ? 'cursor-pointer' : ''}`}
                   />
-                ) : null}
-                </div>
-                <div
-                  className={`mt-4 text-center transition-opacity duration-500 motion-reduce:transition-none max-sm:relative max-sm:left-1/2 max-sm:w-[calc(100vw-2rem)] max-sm:-translate-x-1/2 ${
-                    isActive ? '' : 'max-sm:opacity-0'
-                  }`}
-                >
-                  <p className="text-sm font-semibold text-[#00e5ff] mb-1">{stepLabel(index)}</p>
-                  <h3 className="text-lg lg:text-xl font-bold text-white mb-1 lg:mb-2">{step.title}</h3>
-                  <p className="text-[15px] lg:text-base text-white/70 leading-relaxed">{step.text}</p>
-                </div>
+                );
+              })}
+            </div>
+            <div className="flex items-center gap-[22px]">
+              <button type="button" onClick={() => goTo(current - 1)} disabled={current === 0} aria-label={isDa ? 'Forrige trin' : 'Previous step'} className={`${arrowButton} h-12 w-12`}>
+                <ChevronLeft size={20} />
+              </button>
+              <div className="flex items-center gap-2">
+                {steps.map((step, index) => (
+                  <button
+                    key={step.title}
+                    type="button"
+                    onClick={() => goTo(index)}
+                    aria-label={stepLabel(index)}
+                    aria-current={index === current ? 'step' : undefined}
+                    className={`h-2 rounded-full transition-all duration-300 ease-soft ${index === current ? 'w-7 bg-signal' : 'w-2 bg-white/[0.28] hover:bg-white/50'}`}
+                  />
+                ))}
               </div>
-            );
-          })}
+              <button type="button" onClick={() => goTo(current + 1)} disabled={current === last} aria-label={isDa ? 'Næste trin' : 'Next step'} className={`${arrowButton} h-12 w-12`}>
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* On phones the arrows sit on the sides of the mockup, so the controls take no extra height. */}
-        <button
-          type="button"
-          onClick={() => goTo(current - 1)}
-          disabled={current === 0}
-          className={`sm:hidden absolute left-0 top-[calc(var(--mock-h)/2)] -translate-y-1/2 z-40 !w-10 !h-10 ${navButtonClass}`}
-          aria-label={isDa ? 'Forrige trin' : 'Previous step'}
-        >
-          <ChevronLeft className="w-5 h-5 text-primary-900" />
-        </button>
-        <button
-          type="button"
-          onClick={() => goTo(current + 1)}
-          disabled={current === last}
-          className={`sm:hidden absolute right-0 top-[calc(var(--mock-h)/2)] -translate-y-1/2 z-40 !w-10 !h-10 ${navButtonClass}`}
-          aria-label={isDa ? 'Næste trin' : 'Next step'}
-        >
-          <ChevronRight className="w-5 h-5 text-primary-900" />
-        </button>
-        </div>
-
-        <p className="sr-only" aria-live="polite">
-          {stepLabel(current)}: {steps[current].title}
-        </p>
-
-        <div className="flex items-center justify-center gap-6 mt-4 sm:mt-6">
-          <button
-            type="button"
-            onClick={() => goTo(current - 1)}
-            disabled={current === 0}
-            className={`max-sm:hidden ${navButtonClass}`}
-            aria-label={isDa ? 'Forrige trin' : 'Previous step'}
+        {/* Phones: coverflow with arrows on the sides, the step text and dots below. */}
+        <div className="flex flex-col items-center gap-3.5 lg:hidden">
+          <div
+            className="relative h-[392px] w-full"
+            onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
+            onTouchEnd={onTouchEnd}
           >
-            <ChevronLeft className="w-6 h-6 text-primary-900" />
-          </button>
-
-          <div className="flex gap-2">
-            {steps.map((_, index) => (
+            {rings([460, 300])}
+            {steps.map((step, index) => {
+              const distance = Math.abs(index - current);
+              const { src, alt } = screenshot(index);
+              return (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={src}
+                  src={src}
+                  alt={alt}
+                  width={380}
+                  height={770}
+                  loading={distance <= 1 ? 'eager' : 'lazy'}
+                  draggable={false}
+                  aria-hidden={distance !== 0}
+                  style={slideStyle(index, 76)}
+                  className="absolute left-1/2 top-0.5 ml-[-96px] h-[388px] w-48 select-none"
+                />
+              );
+            })}
+            <button
+              type="button"
+              onClick={() => goTo(current - 1)}
+              disabled={current === 0}
+              aria-label={isDa ? 'Forrige trin' : 'Previous step'}
+              className={`${arrowButton} absolute left-2.5 top-1/2 z-20 -mt-[22px] h-11 w-11 shadow-[0_8px_20px_-8px_rgba(0,0,0,0.5)]`}
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              type="button"
+              onClick={() => goTo(current + 1)}
+              disabled={current === last}
+              aria-label={isDa ? 'Næste trin' : 'Next step'}
+              className={`${arrowButton} absolute right-2.5 top-1/2 z-20 -mt-[22px] h-11 w-11 shadow-[0_8px_20px_-8px_rgba(0,0,0,0.5)]`}
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+          <div className="flex min-h-[116px] flex-col items-center gap-1 px-[22px] text-center">
+            <span className="text-sm font-semibold text-signal">{stepLabel(current)}</span>
+            <h3 className="font-display text-[22px] font-bold leading-[1.2] tracking-[-0.015em]">{steps[current].title}</h3>
+            <p className="mt-1 text-[15px] leading-[1.55] text-on-ink-soft">{steps[current].text}</p>
+          </div>
+          <div className="flex items-center gap-0.5">
+            {steps.map((step, index) => (
               <button
-                key={index}
+                key={step.title}
                 type="button"
                 onClick={() => goTo(index)}
-                aria-current={index === current ? 'step' : undefined}
-                className={`h-2 rounded-full transition-all ${
-                  index === current ? 'bg-[#00e5ff] w-8' : 'bg-white/30 w-2 hover:bg-white/50'
-                }`}
                 aria-label={stepLabel(index)}
-              />
+                aria-current={index === current ? 'step' : undefined}
+                className={`flex h-8 items-center justify-center ${index === current ? 'w-[38px]' : 'w-[22px]'}`}
+              >
+                <span className={`block h-2 rounded-full transition-all duration-300 ease-soft ${index === current ? 'w-[26px] bg-signal' : 'w-2 bg-white/[0.28]'}`} />
+              </button>
             ))}
           </div>
-
-          <button
-            type="button"
-            onClick={() => goTo(current + 1)}
-            disabled={current === last}
-            className={`max-sm:hidden ${navButtonClass}`}
-            aria-label={isDa ? 'Næste trin' : 'Next step'}
-          >
-            <ChevronRight className="w-6 h-6 text-primary-900" />
-          </button>
         </div>
+      </div>
+
+      <p className="sr-live" aria-live="polite">
+        {stepLabel(current)}: {steps[current].title}
+      </p>
+    </div>
+  );
+
+  if (isHome) {
+    return (
+      <section id="user-guide" aria-labelledby="h-guide" className="px-3 lg:px-6">
+        <div data-reveal className="mx-auto max-w-[1392px]">
+          {panel}
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section id="user-guide" className="mx-auto max-w-page px-3 lg:px-10 xl:px-20">
+      <div data-reveal style={{ ['--reveal-delay' as string]: '200ms' }}>
+        {panel}
       </div>
     </section>
   );

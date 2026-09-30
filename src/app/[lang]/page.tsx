@@ -10,6 +10,7 @@ import FeedbackSection from '@/components/FeedbackSection';
 import DiseasesSection from '@/components/DiseasesSection';
 import AvailabilitySection from '@/components/AvailabilitySection';
 import Footer from '@/components/Footer';
+import MobileCtaBar from '@/components/MobileCtaBar';
 import { Language } from '@/lib/i18n';
 
 interface PageProps {
@@ -126,7 +127,7 @@ export default function HomePage({ params: { lang } }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <main className="min-h-screen">
+      <main className="min-h-screen overflow-x-clip bg-paper">
         <Navigation lang={lang} />
         <Hero lang={lang} />
         <Stats lang={lang} />
@@ -138,6 +139,7 @@ export default function HomePage({ params: { lang } }: PageProps) {
         <FeedbackSection lang={lang} />
         <AvailabilitySection lang={lang} />
         <Footer lang={lang} />
+        <MobileCtaBar lang={lang} />
       </main>
     </>
   );

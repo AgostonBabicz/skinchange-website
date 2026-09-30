@@ -1,158 +1,75 @@
-'use client';
-
-import { useState } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import { Language } from '@/lib/i18n';
-import { X } from 'lucide-react';
+import { ArrowRight, QuoteMark } from '@/components/ui/Icons';
 
 interface PeterSectionProps {
   lang: Language;
 }
 
+// The doctor and the founder behind SKIND. "Læs mere" opens the About page, which carries Peter's full CV.
 export default function PeterSection({ lang }: PeterSectionProps) {
   const isDa = lang === 'da';
-  const [showFullBio, setShowFullBio] = useState(false);
 
-  const shortText = isDa 
+  const shortText = isDa
     ? 'Ekspert i dermatologi, laserbehandlinger og hudkræft. Adjunkt professor, Aalborg Universitet. 300+ publikationer, 500+ internationale foredrag.'
     : 'Expert in dermatology, laser treatments and skin cancer. Adjunct professor, Aalborg University. 300+ publications, 500+ international lectures.';
-
-  const fullBioDa = `Peter Bjerring, Speciallæge i hudsygdomme, professor, Dr.med.
-
-Uddannelse
-1980: Master of Science (Med.), Aarhus Universitet
-1988: Speciallæge i dermatovenerologi, Danmark
-2001: Speciallæge i dermatovenerologi, Norge
-2004: Speciallæge i dermato-venereologi, Holland
-
-Erfaring
-1993–2018: Klinikchef, Dermatologisk Afdeling (HudCenter Mølholm), Privathospital Mølholm, Vejle, København og Aarhus
-2001–2007: Administrerende direktør, Mølholm Privathospital, Vejle og Aarhus
-2004–2018: Overlæge og Medicinsk direktør, Mølholm Privathospital, Vejle og Aarhus
-2018–nu: Klinisk professor, Senior konsulent og Speciallæge, Dermatologisk Afdeling, Aalborg Universitetshospital
-2018–2022: Professor i Dermato-Venereologi, Aalborg Universitet
-2022–nu: Adjunkt professor, Aalborg Universitet
-
-Specialisering
-Klassisk dermatologi (Almindelige hudsygdomme)
-Dermatologisk laserkirurgi
-Hudkræftbehandling (medicinsk, kirurgisk og fototerapi)
-Kosmetisk laserbehandling
-Kosmetisk medicinsk dermatologi
-Fotodermatologi
-
-Forskning og undervisning
-Har publiceret mere end 300 videnskabelige artikler inden for hudsygdomme, laserbehandling og hudkræftbehandling
-Har holdt mere end 500 foredrag ved internationale videnskabelige møder og kongresser verden over
-
-Faglige medlemskaber
-Dansk Dermatologisk Selskab (DDS)
-European Academy for Dermato-Venereology (EADV)
-Dansk Dermatologisk Organisation (DDO)
-European Society for Lasers and Energy-based Devices (ESLD - past president)
-American Academy of Dermatology (AAD)
-American Society for Lasers in Surgery and Medicine (ASLMS)
-The International Peeling Society
-
-Hædersbevisninger
-Ridder af Dannebrog
-Dansk Dermatologisk Selskabs Hæderspris
-Caroline and William Mark Memorial Award (Hæderspris fra American Society for Lasers In Medicine and Surgery)
-William Nielsen Prisen`;
-
-  const fullBioEn = `Peter Bjerring, Specialist in skin diseases, professor, Dr.med.
-
-Training
-1980: Master of Science (Med.), Aarhus University
-1988: Specialist in dermatovenerology, Denmark
-2001: Specialist in dermatovenerology, Norway
-2004: Specialist in dermato-venereology, Netherlands
-
-Experience
-1993–2018: Head of Clinic, Dermatology Department (HudCenter Mølholm), Private Hospital Mølholm, Vejle, Copenhagen and Aarhus
-2001–2007: Managing Director, Mølholm Private Hospital, Vejle and Aarhus
-2004–2018: Chief Physician and Chief Medical Officer, Mølholm Private Hospital, Vejle and Aarhus
-2018–Present: Clinical Professor, Senior Consultant and Specialist, Department of Dermatology, Aalborg University Hospital
-2018–2022: Chair Professor in Dermato-Venereology, Aalborg University
-2022–Present: Adjunct professor, Aalborg University
-
-Specialization
-Classical dermatology (Common skin diseases)
-Dermatological laser surgery
-Skin cancer treatment (medical, surgical and phototherapy)
-Cosmetic laser treatment
-Cosmetic medical dermatology
-Photodermatology
-
-Research and teaching
-Has published more than 300 scientific articles within skin diseases, laser treatment and skin cancer treatment
-Has given more than 500 lectures at international scientific meetings and congresses worldwide
-
-Professional memberships
-Danish Dermatological Society (DDS)
-European Academy for Dermato-Venereology (EADV)
-Danish Dermatologists' Organization (DDO)
-European Society for Lasers and Energy-based Devices (ESLD - past president)
-American Academy of Dermatology (AAD)
-American Society for Lasers in Surgery and Medicine (ASLMS)
-The International Peeling Society
-
-Recognitions
-Knight of the Dannebrog
-Danish Dermatological Society's Honorary Award
-Caroline and William Mark Memorial Award (Honorary award from the American Society for Lasers In Medicine and Surgery)
-William Nielsen Prize`;
-
-  const fullBio = isDa ? fullBioDa : fullBioEn;
 
   const brianDescription = isDa
     ? 'Motiveret af at have haft hudkræft 3 gange, hvor jeg har oplevet et udfordrende behandlingsforløb samt at hudkræften blev overset og fejldiagnosticeret af ellers dygtige læger, valgte jeg at kaste mig ind i at blive en del af løsningen, der vil hjælpe alle med hudproblemer – store som små.'
     : 'Motivated by having had skin cancer 3 times, where I experienced a challenging treatment course and where the skin cancer was overlooked and misdiagnosed by otherwise skilled doctors, I chose to throw myself into becoming part of the solution that will help everyone with skin problems - big or small.';
 
   return (
-    <section className="py-24 lg:py-32 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Peter */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
-          <div className="relative">
-            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
-              <Image src="/Peter.jpeg" alt="Peter Bjerring" fill className="object-cover" />
-            </div>
+    <section
+      aria-label={isDa ? 'Lægen og stifteren bag SKIND' : 'The doctor and the founder behind SKIND'}
+      className="mx-auto max-w-page px-5 py-[72px] md:px-10 lg:py-32 xl:px-20"
+    >
+      <div className="flex flex-col gap-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-6">
+        <article data-reveal className="flex flex-col items-start gap-3.5 lg:gap-7">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/Peter.jpeg"
+            alt="Peter Bjerring"
+            width={856}
+            height={1131}
+            loading="lazy"
+            className="mb-2 block h-[360px] w-full rounded-[28px] object-cover object-[50%_16%] lg:mb-0 lg:h-[540px] lg:rounded-[32px] lg:object-[50%_18%]"
+          />
+          <div className="flex flex-col items-start gap-3.5 lg:px-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-brand lg:text-[13px]">
+              {isDa ? 'Mød vores førende hudlæge' : 'Meet our leading dermatologist'}
+            </span>
+            <h2 className="font-display text-[34px] font-bold leading-[1.02] tracking-[-0.035em] lg:text-5xl">Peter Bjerring</h2>
+            <p className="text-base leading-[1.6] text-body lg:max-w-[560px] lg:text-lg">{shortText}</p>
+            <Link
+              href={`/${lang}/about`}
+              className="group mt-1 flex h-12 items-center gap-2.5 rounded-full border border-line-strong px-5 text-base font-semibold text-ink transition hover:-translate-y-px hover:bg-white active:scale-[0.98] lg:mt-1.5 lg:h-[50px] lg:px-[22px]"
+            >
+              {isDa ? 'Læs mere' : 'Read more'}
+              <ArrowRight size={18} className="transition-transform duration-150 group-hover:translate-x-[3px]" />
+            </Link>
           </div>
-          <div>
-            <p className="text-primary font-semibold mb-2">{isDa ? 'Mød vores førende hudlæge' : 'Meet our leading dermatologist'}</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">Peter Bjerring</h2>
-            <p className="text-lg text-gray-600 mb-6">{shortText}</p>
-            <button onClick={() => setShowFullBio(true)} className="text-primary font-semibold hover:underline">{isDa ? 'Læs mere' : 'Read more'}</button>
-          </div>
-        </div>
+        </article>
 
-        {/* Brian */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-4 font-display">Brian Vangsgaard</h2>
-            <p className="text-primary font-semibold mb-4">CEO</p>
-            <p className="text-lg text-gray-600">
+        <article data-reveal style={{ ['--reveal-delay' as string]: '120ms' }} className="flex flex-col items-start gap-3.5 lg:mt-24 lg:gap-7">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/About_us_Brian.png"
+            alt="Brian Vangsgaard"
+            width={854}
+            height={1280}
+            loading="lazy"
+            className="mb-2 block h-[360px] w-full rounded-[28px] object-cover object-[50%_18%] lg:mb-0 lg:h-[540px] lg:rounded-[32px] lg:object-[50%_20%]"
+          />
+          <div className="flex flex-col items-start gap-3.5 lg:px-2">
+            <span className="flex h-7 items-center rounded-full bg-ink px-3 text-xs font-semibold tracking-[0.06em] text-white lg:h-[30px] lg:text-[13px]">CEO</span>
+            <h2 className="font-display text-[34px] font-bold leading-[1.02] tracking-[-0.035em] lg:text-5xl">Brian Vangsgaard</h2>
+            <blockquote className="text-base leading-[1.65] text-body lg:max-w-[580px] lg:text-lg">
+              <QuoteMark size={30} className="mb-2 block h-[26px] w-[26px] text-brand lg:mb-2.5 lg:h-[30px] lg:w-[30px]" />
               {brianDescription}
-            </p>
+            </blockquote>
           </div>
-          <div className="order-1 lg:order-2 relative">
-            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
-              <Image src="/About_us_Brian.png" alt="Brian Vangsgaard" fill className="object-cover" />
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
-
-      {showFullBio && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-3xl max-h-[80vh] overflow-y-auto p-8 relative">
-            <button onClick={() => setShowFullBio(false)} className="absolute top-4 right-4 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200"><X className="w-5 h-5" /></button>
-            <h3 className="text-2xl font-bold text-primary-900 mb-4">Peter Bjerring</h3>
-            <pre className="text-gray-600 whitespace-pre-wrap font-sans text-sm leading-relaxed">{fullBio}</pre>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

@@ -1,110 +1,98 @@
-'use client';
-
 import Link from 'next/link';
-import Image from 'next/image';
-import { Shield, Clock } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
+import { ArrowRight, ClockIcon, DownloadIcon, LockIcon, ShieldCheck } from '@/components/ui/Icons';
 
 interface HeroProps {
   lang: Language;
 }
 
+// Splits "Online Hudlæge — Diagnose inden for 48 Timer" into the three designed lines,
+// with the closing "48 Timer" / "48 Hours" in brand blue.
+function headlineParts(title: string) {
+  const [lead, rest = ''] = title.split(' — ');
+  const words = rest.split(' ');
+  return { lead, middle: words.slice(0, -2).join(' '), accent: words.slice(-2).join(' ') };
+}
+
 export default function Hero({ lang }: HeroProps) {
   const t = getTranslation(lang);
   const isDa = lang === 'da';
+  const { lead, middle, accent } = headlineParts(t.hero.title);
+
+  const downloads = isDa ? '5.000+ downloads' : '5,000+ downloads';
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-primary-900">
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#00e5ff]/10 rounded-full blur-3xl" />
-      </div>
+    <section className="relative overflow-x-clip">
+      <div className="mx-auto flex max-w-page flex-col px-5 pt-3 md:px-10 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:pb-[104px] lg:pt-8 xl:px-20">
+        <div className="flex flex-col items-start lg:col-span-8 lg:pt-14">
+          <span className="flex h-[34px] animate-fokus items-center gap-2 rounded-full bg-brand-tint pl-2.5 pr-3.5 text-[13px] font-semibold text-brand-ink lg:h-[38px] lg:pl-3 lg:pr-4 lg:text-sm">
+            <ShieldCheck size={16} />
+            {t.hero.mitid}
+          </span>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left">
-            {/* MitID Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20 animate-fade-in">
-              <Shield className="w-4 h-4 text-[#00e5ff] mr-2" />
-              <span className="text-white/90 text-sm font-medium">{t.hero.mitid}</span>
-            </div>
+          <h1 className="mt-5 animate-fokus font-display text-[38px] font-bold leading-none tracking-[-0.04em] [animation-delay:80ms] lg:mt-7 lg:text-[64px] lg:leading-[0.98] lg:tracking-[-0.045em] xl:text-[78px]">
+            {lead} —<br />
+            {middle}
+            <br />
+            <span className="text-brand">{accent}</span>
+          </h1>
 
-            {/* Brand wordmark — decorative, not the H1 */}
-            <p className="text-5xl lg:text-7xl font-black text-white tracking-tight font-display animate-fade-up mb-2" aria-hidden="true">
-              SKIND
-            </p>
+          <p className="mt-4 animate-fokus text-lg leading-normal text-body [animation-delay:160ms] lg:mt-7 lg:text-[22px]">
+            {t.hero.description}
+          </p>
 
-            {/* H1 — descriptive for SEO (10-70 chars) */}
-            <h1 className="text-xl lg:text-2xl font-semibold text-white/90 mb-6 animate-fade-up delay-100">
-              {t.hero.title}
-            </h1>
-            <p className="text-lg lg:text-xl text-white/70 mb-6 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-200 leading-relaxed">
-              {t.hero.description}
-            </p>
-            
-            {/* Price */}
-            <div className="mb-10 animate-fade-up delay-250">
-              <span className="text-4xl lg:text-5xl font-bold text-[#00e5ff]">{t.hero.price}</span>
-              <span className="text-white/60 ml-2">{t.hero.priceNote}</span>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-300">
-              <Link
-                href={`/${lang}/download`}
-                className="bg-white text-primary-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1"
-              >
-                {t.hero.cta}
-              </Link>
-              <Link
-                href={`/${lang}/guide`}
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all"
-              >
-                {isDa ? 'Se brugervejledning' : 'See user guide'}
-              </Link>
-            </div>
-
-            {/* Trust badges */}
-            <div className="flex items-center justify-center lg:justify-start gap-8 mt-12 animate-fade-up delay-500">
-              <div className="flex items-center gap-2 text-white/60 text-sm">
-                <Shield className="w-5 h-5 text-[#00e5ff]" />
-                <span>{isDa ? 'Sikker & krypteret' : 'Secure & encrypted'}</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/60 text-sm">
-                <Clock className="w-5 h-5 text-[#00e5ff]" />
-                <span>{isDa ? '48 timers garanti' : '48 hour guarantee'}</span>
-              </div>
-            </div>
+          <div className="mt-5 flex animate-fokus items-baseline gap-2.5 [animation-delay:220ms] lg:mt-7 lg:gap-3">
+            <span className="font-display text-4xl font-bold leading-none tracking-[-0.04em] lg:text-5xl">{t.hero.price}</span>
+            <span className="text-[15px] text-muted lg:text-[17px]">{t.hero.priceNote}</span>
           </div>
 
-          {/* Phone mockup */}
-          <div className="relative hidden lg:block animate-float">
-            <div className="relative mx-auto w-80">
-              <Image
-                src={isDa ? '/app/guide-1-da.svg' : '/app/guide-1-en.svg'}
-                alt={isDa ? 'SKIND-appens startskærm med knappen Ny Undersøgelse' : 'The SKIND app home screen with the New Case button'}
-                width={320}
-                height={640}
-                className="w-full h-auto"
-                priority
-              />
-              
-              {/* Badge */}
-              <div className="absolute -bottom-4 -right-4 bg-[#00e5ff] text-primary-900 font-bold py-2 px-4 rounded-full shadow-lg text-sm">
-                {isDa ? '5.000+ downloads' : '5,000+ downloads'}
-              </div>
-            </div>
+          <div id="hero-cta" className="mt-6 flex w-full animate-fokus flex-col gap-2.5 [animation-delay:280ms] sm:w-auto sm:flex-row lg:mt-8 lg:gap-3">
+            <Link
+              href={`/${lang}/download`}
+              className="group flex h-[54px] items-center justify-center gap-2.5 rounded-full bg-brand px-[30px] text-[17px] font-semibold text-white shadow-cta transition hover:-translate-y-px hover:bg-brand-hover hover:shadow-cta-hover active:scale-[0.98] lg:h-[58px]"
+            >
+              {t.hero.cta}
+              <ArrowRight size={18} className="transition-transform duration-150 group-hover:translate-x-[3px]" />
+            </Link>
+            <Link
+              href={`/${lang}/guide`}
+              className="flex h-[54px] items-center justify-center rounded-full border border-line-strong px-7 text-[17px] font-semibold text-ink transition hover:-translate-y-px hover:bg-white active:scale-[0.98] lg:h-[58px]"
+            >
+              {isDa ? 'Se brugervejledning' : 'See user guide'}
+            </Link>
+          </div>
+
+          <div className="mt-[22px] flex animate-fokus gap-[18px] [animation-delay:340ms] lg:mt-9 lg:gap-7">
+            <span className="flex items-center gap-1.5 text-sm font-medium text-body lg:gap-2 lg:text-[15px]">
+              <LockIcon size={18} strokeWidth={1.8} className="h-4 w-4 text-brand lg:h-[18px] lg:w-[18px]" />
+              {isDa ? 'Sikker & krypteret' : 'Secure & encrypted'}
+            </span>
+            <span className="flex items-center gap-1.5 text-sm font-medium text-body lg:gap-2 lg:text-[15px]">
+              <ClockIcon size={18} strokeWidth={1.8} className="h-4 w-4 text-brand lg:h-[18px] lg:w-[18px]" />
+              {isDa ? '48 timers garanti' : '48 hour guarantee'}
+            </span>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-white/50 rounded-full" />
+        {/* Phone with focus rings. On phones it rises from the bottom edge of the first screen. */}
+        <div className="relative -mx-5 mt-7 h-[380px] overflow-hidden md:-mx-10 lg:col-span-4 lg:mx-0 lg:mt-0 lg:h-[700px] lg:overflow-visible">
+          <div aria-hidden="true" className="absolute left-1/2 top-[62%] h-[600px] w-[600px] animate-ring rounded-full border border-brand/10 [animation-delay:300ms] lg:top-1/2 lg:h-[880px] lg:w-[880px] lg:border-brand/[0.08]" />
+          <div aria-hidden="true" className="absolute left-1/2 top-[62%] h-[440px] w-[440px] animate-ring rounded-full border border-brand/[0.14] [animation-delay:200ms] lg:top-1/2 lg:h-[680px] lg:w-[680px] lg:border-brand/[0.12]" />
+          <div aria-hidden="true" className="absolute left-1/2 top-1/2 hidden h-[480px] w-[480px] animate-ring rounded-full border border-brand/[0.18] [animation-delay:100ms] lg:block" />
+          <div aria-hidden="true" className="absolute left-1/2 top-[62%] h-[300px] w-[300px] animate-ring rounded-full bg-[radial-gradient(closest-side,rgba(48,79,254,0.16),rgba(48,79,254,0))] lg:top-1/2 lg:h-[360px] lg:w-[360px]" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/app/guide-1-${lang}.webp`}
+            alt={isDa ? 'SKIND-appens startskærm med knappen Ny Undersøgelse' : 'The SKIND app home screen with the New Case button'}
+            width={380}
+            height={770}
+            fetchPriority="high"
+            className="absolute left-1/2 top-[30px] ml-[-125px] h-[506px] w-[250px] animate-rise drop-shadow-[0_30px_40px_rgba(14,20,56,0.22)] lg:ml-[-158px] lg:h-[640px] lg:w-[316px] lg:drop-shadow-[0_40px_50px_rgba(14,20,56,0.22)]"
+          />
+          <span className="absolute left-3.5 top-[236px] flex h-10 animate-drift items-center gap-1.5 rounded-full bg-ink px-4 text-sm font-semibold text-white shadow-chip lg:-left-2 lg:bottom-[132px] lg:top-auto lg:h-[46px] lg:gap-2 lg:px-5 lg:text-[15px]">
+            <DownloadIcon size={18} className="h-4 w-4 text-signal lg:h-[18px] lg:w-[18px]" />
+            {downloads}
+          </span>
         </div>
       </div>
     </section>

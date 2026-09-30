@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import ImageCredit from '@/components/ImageCredit';
+import ArticleShell from '@/components/ArticleShell';
+import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
 import Link from 'next/link';
 
@@ -163,401 +162,343 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="min-h-screen bg-white">
-        <Navigation lang={lang} />
+      <ArticleShell
+        lang={lang}
+        crumb={<>{isDa ? 'Hvad er Skab?' : 'What is Scabies?'}</>}
+        category={<>{isDa ? 'Hudsygdomme' : 'Skin Conditions'}</>}
+        date={<>{isDa ? '20. marts 2026' : 'March 20, 2026'}</>}
+        readTime={<>{isDa ? '5 min læsetid' : '5 min read'}</>}
+        title={<>{isDa ? 'Hvad er Skab? Årsager, Symptomer og Behandling' : 'What is Scabies? Causes, Symptoms and Treatment'}</>}
+        image={{
+          src: '/blog-scabies.jpg',
+          alt: isDa ? 'Forstørret billede af en skabgang, det tynde, bugtede spor, som miden graver i huden.' : 'Magnified view of a scabies burrow, the thin, winding track the mite digs in the skin.',
+        }}
+      >
+        {/* Intro */}
+        <div className="article-intro">
+          <p className="article-lead">
+            {isDa ? (
+              <>
+                <strong>Skab er en af de mest smitsomme hudlidelser, du kan få</strong>, og det rammer millioner af mennesker verden over hvert år. Modsat mange andre hudproblemer er skab ikke forårsaget af bakterier eller virus – det er en mide, der graver sig ind i hudens yderste lag.
+              </>
+            ) : (
+              <>
+                <strong>Scabies is one of the most contagious skin conditions you can get</strong>, affecting millions of people worldwide every year. Unlike many other skin problems, scabies is not caused by bacteria or a virus — it is a mite that burrows into the outermost layer of your skin.
+              </>
+            )}
+          </p>
+          <p>
+            {isDa
+              ? 'I denne artikel forklarer vi præcist, hvad skab er, hvorfor det smitter så let, hvordan det viser sig, og hvad du kan gøre for at blive fri for det.'
+              : 'In this article, we explain exactly what scabies is, why it spreads so easily, what it looks like, and what you can do to get rid of it.'}
+          </p>
+        </div>
 
-        <article className="pt-32 pb-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb */}
-            <nav className="text-sm text-gray-500 mb-8">
-              <Link href={`/${lang}`} className="hover:text-primary">
-                {isDa ? 'Forside' : 'Home'}
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href={`/${lang}/blog`} className="hover:text-primary">
-                Blog
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-gray-900">{isDa ? 'Hvad er Skab?' : 'What is Scabies?'}</span>
-            </nav>
+        <div className="article-body">
+          {/* What is scabies */}
+          <h2>
+            {isDa ? 'Hvad er skab?' : 'What is scabies?'}
+          </h2>
+          <p>
+            {isDa ? (
+              <>
+                Skab – på dansk også kaldet fnat – er en hudinfestation forårsaget af miden{' '}
+                <em>Sarcoptes scabiei</em> var. <em>hominis</em>. Hunnen graver små tunneler (gange) i hudens yderste lag — epidermis — hvor hun lægger sine æg. Kroppens immunreaktion på miden, dens æg og afføringsprodukter er det, der udløser den intense kløe og betændelse.
+              </>
+            ) : (
+              <>
+                Scabies is a skin infestation caused by the mite <em>Sarcoptes scabiei</em> var.{' '}
+                <em>hominis</em>. The female mite burrows small tunnels (burrows) into the outermost layer of skin — the epidermis — where she lays her eggs. The body&apos;s immune reaction to the mite, its eggs and faecal matter is what triggers the intense itching and inflammation.
+              </>
+            )}
+          </p>
+          <p>
+            {isDa
+              ? 'Modsat hvad mange tror, har skab intet at gøre med dårlig hygiejne. Enhver kan få skab — uanset alder, livsstil eller socioøkonomisk status. Det er dog mere udbredt i overfyldte miljøer og steder med tæt fysisk kontakt.'
+              : 'Contrary to what many believe, scabies has nothing to do with poor hygiene. Anyone can get scabies — regardless of age, lifestyle or socioeconomic status. It is, however, more common in crowded environments and places with close physical contact.'}
+          </p>
 
-            {/* Category & Meta */}
-            <div className="flex items-center gap-4 mb-6">
-              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
-                {isDa ? 'Hudsygdomme' : 'Skin Conditions'}
-              </span>
-              <span className="text-gray-500 text-sm">{isDa ? '20. marts 2026' : 'March 20, 2026'}</span>
-              <span className="text-gray-500 text-sm">•</span>
-              <span className="text-gray-500 text-sm">
-                {isDa ? '5 min læsetid' : '5 min read'}
-              </span>
-            </div>
-
-            {/* Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6 font-display">
+          {/* What does it look like */}
+          <h2>
+            {isDa ? 'Hvordan ser skab ud?' : 'What does scabies look like?'}
+          </h2>
+          <p>{isDa ? 'Skab kan vise sig på flere måder:' : 'Scabies can appear in several ways:'}</p>
+          <ul role="list">
+            <li>
+              <strong>{isDa ? 'Intens kløe – især om natten:' : 'Intense itching — especially at night:'}</strong>{' '}
               {isDa
-                ? 'Hvad er Skab? Årsager, Symptomer og Behandling'
-                : 'What is Scabies? Causes, Symptoms and Treatment'}
-            </h1>
+                ? 'Det mest fremtrædende symptom er kløe, der ofte forværres markant i varme omgivelser og om natten, når man ligger under dynen. Dette kan gøre det svært at sove.'
+                : 'The most prominent symptom is itching, which often worsens significantly in warm environments and at night when lying under the covers. This can make it difficult to sleep.'}
+            </li>
+            <li>
+              <strong>{isDa ? 'Små, røde knopper:' : 'Small, red bumps:'}</strong>{' '}
+              {isDa
+                ? 'Disse ligner små bumser eller nældefeberknopper og sidder typisk på håndled, fingre, albuer, armhuler, brystvorter, kønsorganer og lyske. Hos spædbørn kan hele kroppen være påvirket, inklusive hovedbund, ansigt, håndflader og fodsåler.'
+                : 'These resemble small pimples or hives and are typically found on the wrists, fingers, elbows, armpits, nipples, genitals and groin. In infants, the entire body may be affected, including the scalp, face, palms and soles.'}
+            </li>
+            <li>
+              <strong>{isDa ? 'Tynde, uregelmæssige graverlinjer:' : 'Thin, irregular burrow lines:'}</strong>{' '}
+              {isDa
+                ? 'De karakteristiske tynde, grålig-hvide eller lyse linjer på huden, der markerer midernes tunneler. De er ofte korte (nogle få millimeter) og let bugtede.'
+                : 'The characteristic thin, greyish-white or light lines on the skin that mark the mites’ tunnels. They are often short (a few millimetres) and slightly serpentine.'}
+            </li>
+            <li>
+              <strong>{isDa ? 'Tykt, skællende hud (i kroniske tilfælde):' : 'Thick, scaly skin (in chronic cases):'}</strong>{' '}
+              {isDa
+                ? 'Ved ubehandlet skab over længere tid kan huden blive tyk, ru og skællende, særligt på hænder og fødder.'
+                : 'In untreated scabies over a longer period, the skin can become thick, rough and scaly, especially on the hands and feet.'}
+            </li>
+          </ul>
 
-            {/* Cover Image */}
-            <figure className="mb-10">
-              <div className="rounded-2xl overflow-hidden aspect-[16/9] relative bg-nordic-fog">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/blog-scabies.jpg"
-                  alt={isDa ? 'Forstørret billede af en skabgang, det tynde, bugtede spor, som miden graver i huden.' : 'Magnified view of a scabies burrow, the thin, winding track the mite digs in the skin.'}
-                  width={1600}
-                  height={900}
-                  fetchPriority="high"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <ImageCredit src="/blog-scabies.jpg" lang={lang} />
-            </figure>
+          {/* Why does it happen */}
+          <h2>
+            {isDa ? 'Hvorfor opstår skab?' : 'Why does scabies happen?'}
+          </h2>
+          <p>
+            {isDa
+              ? 'Skab smitter primært gennem direkte, længerevarende hud-til-hud-kontakt med en smittet person. Da miden hverken kan hoppe eller flyve, kræver smitte relativt langvarig kontakt:'
+              : 'Scabies primarily spreads through direct, prolonged skin-to-skin contact with an infected person. Since the mite cannot jump or fly, transmission requires relatively prolonged contact:'}
+          </p>
 
-            {/* Author */}
-            <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
-                SC
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">SkinChange.AI</p>
-                <p className="text-sm text-gray-600">
-                  {isDa ? 'Medicinsk redaktion' : 'Medical editorial team'}
-                </p>
-              </div>
+          <h3>
+            {isDa ? 'Hvordan smitter skab ved tæt kontakt?' : 'How does scabies spread through close contact?'}
+          </h3>
+          <p>
+            {isDa
+              ? 'Skab overføres let mellem familiemedlemmer, seksualpartnere og personer, der deler seng. Et kort håndtryk eller almindelig social kontakt giver sjældent smitte.'
+              : 'Scabies spreads easily between family members, sexual partners and people who share a bed. A brief handshake or ordinary social contact rarely results in transmission.'}
+          </p>
+
+          <h3>
+            {isDa ? 'Kan skab smitte via delte genstande?' : 'Can scabies spread via shared objects?'}
+          </h3>
+          <p>
+            {isDa
+              ? 'Miden kan i sjældne tilfælde overføres via delte håndklæder, sengetøj eller tøj. Dette er mest relevant ved kraftig infestation eller i institutionelle miljøer. Miden overlever typisk kun 2–3 dage uden for menneskets hud.'
+              : 'In rare cases the mite can be transmitted via shared towels, bedding or clothing. This is most relevant in heavy infestations or institutional settings. The mite typically only survives 2–3 days outside human skin.'}
+          </p>
+
+          <h3>
+            {isDa ? 'Hvor lang er inkubationstiden?' : 'How long is the incubation period?'}
+          </h3>
+          <p>
+            {isDa
+              ? 'Hvis det er første gang, du får skab, kan der gå op til 4–6 uger, før symptomerne viser sig. Ved geninfektion hos personer, der tidligere har haft skab, viser symptomerne sig typisk inden for 1–4 dage, fordi immunforsvaret allerede reagerer hurtigere.'
+              : 'If it is the first time you have had scabies, it can take up to 4–6 weeks before symptoms appear. In reinfection in people who have previously had scabies, symptoms typically appear within 1–4 days, as the immune system already reacts faster.'}
+          </p>
+
+          {/* Who gets it */}
+          <h2>
+            {isDa ? 'Hvem får skab?' : 'Who gets scabies?'}
+          </h2>
+          <p>
+            {isDa
+              ? 'Skab rammer alle — uanset alder, køn, etnicitet eller hygiejnestandard. Visse faktorer øger dog risikoen:'
+              : 'Scabies affects everyone — regardless of age, gender, ethnicity or hygiene standard. Certain factors, however, increase the risk:'}
+          </p>
+          <ul role="list">
+            <li>
+              <strong>{isDa ? 'Tæt boforhold:' : 'Close living conditions:'}</strong>{' '}
+              {isDa
+                ? 'Familier, kollegier, plejehjem og fængsler er typiske steder, hvor skab spreder sig.'
+                : 'Families, dormitories, nursing homes and prisons are typical places where scabies spreads.'}
+            </li>
+            <li>
+              <strong>{isDa ? 'Seksuel kontakt:' : 'Sexual contact:'}</strong>{' '}
+              {isDa
+                ? 'Voksne med skab får det ofte via tæt, fysisk kontakt med en smittet partner.'
+                : 'Adults with scabies often get it through close physical contact with an infected partner.'}
+            </li>
+            <li>
+              <strong>{isDa ? 'Nedsat immunforsvar:' : 'Weakened immune system:'}</strong>{' '}
+              {isDa
+                ? 'Personer med HIV/AIDS eller andre tilstande, der svækker immunforsvaret, kan udvikle skorpeskab (crusted scabies, tidligere kaldet norsk skab). Her sidder der tusindvis af mider i huden, tilstanden er ekstremt smitsom, den udløser udbrud på plejehjem og hospitaler, og den kræver hurtig specialistbehandling med både tabletter og creme.'
+                : 'People with HIV/AIDS or other conditions that weaken the immune system may develop crusted scabies (also called Norwegian scabies). This form carries very large numbers of mites in the skin, is extremely contagious, causes outbreaks in care homes and hospitals, and needs urgent specialist treatment with both oral and topical medication.'}
+            </li>
+            <li>
+              <strong>{isDa ? 'Institutionelle miljøer:' : 'Institutional settings:'}</strong>{' '}
+              {isDa
+                ? 'Plejehjem for ældre og institutioner med begrænset sundhedspersonale har højere forekomst.'
+                : 'Care homes for the elderly and institutions with limited healthcare staff have a higher prevalence.'}
+            </li>
+          </ul>
+
+          {/* Treatment */}
+          <h2>
+            {isDa ? 'Hvordan behandles skab?' : 'How is scabies treated?'}
+          </h2>
+          <p>
+            {isDa
+              ? 'Skab er ubehageligt, men behandles effektivt med receptpligtig medicin. Den vigtigste regel er: alle i samme husstand skal behandles samtidig — også selv om de ikke har symptomer:'
+              : 'Scabies is uncomfortable but is effectively treated with prescription medication. The most important rule is: everyone in the same household must be treated at the same time — even if they have no symptoms:'}
+          </p>
+
+          <div className="article-steps">
+            <div data-icon="pill">
+              <p>
+                {isDa ? 'Topisk behandling (førstevalg)' : 'Topical treatment (first-line)'}
+              </p>
+              <p>
+                {isDa
+                  ? 'Permethrin 5% creme påføres hele kroppen fra halsen og ned og vaskes af efter 8–14 timer. Hos spædbørn, små børn, ældre og personer med svækket immunforsvar skal hovedbund, ansigt, hals, håndflader og fodsåler også behandles. Husk mellemrum mellem fingre og tæer, under neglene, navlen og kønsdelene. Behandlingen gentages efter en uge. Creme med benzylbenzoat eller svovl er alternativer.'
+                  : 'Permethrin 5% cream is applied to the whole body from the neck down and washed off after 8–14 hours. In infants, young children, the elderly and people with weakened immune systems, the scalp, face, neck, palms and soles must also be treated. Include the webs of the fingers and toes, under the nails, the navel and the genitals. Treatment is repeated after one week. Cream with benzyl benzoate or sulphur is an alternative.'}
+              </p>
             </div>
-
-            {/* Intro */}
-            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
-              <p className="text-xl leading-relaxed text-gray-600 mb-6">
-                {isDa ? (
-                  <>
-                    <strong>Skab er en af de mest smitsomme hudlidelser, du kan få</strong>, og det rammer millioner af mennesker verden over hvert år. Modsat mange andre hudproblemer er skab ikke forårsaget af bakterier eller virus – det er en mide, der graver sig ind i hudens yderste lag.
-                  </>
-                ) : (
-                  <>
-                    <strong>Scabies is one of the most contagious skin conditions you can get</strong>, affecting millions of people worldwide every year. Unlike many other skin problems, scabies is not caused by bacteria or a virus — it is a mite that burrows into the outermost layer of your skin.
-                  </>
-                )}
+            <div data-icon="pill">
+              <p>
+                {isDa ? 'Oral behandling' : 'Oral treatment'}
               </p>
               <p>
                 {isDa
-                  ? 'I denne artikel forklarer vi præcist, hvad skab er, hvorfor det smitter så let, hvordan det viser sig, og hvad du kan gøre for at blive fri for det.'
-                  : 'In this article, we explain exactly what scabies is, why it spreads so easily, what it looks like, and what you can do to get rid of it.'}
+                  ? 'Ivermectin i tabletform er et effektivt alternativ, særligt når topisk behandling er vanskelig at gennemføre korrekt. Det gives typisk som to doser med en uges mellemrum. Ivermectin bruges ikke til børn under 15 kg og heller ikke til gravide eller ammende.'
+                  : 'Ivermectin in tablet form is an effective alternative, especially when topical treatment is difficult to carry out correctly. It is typically given as two doses one week apart. Ivermectin is not suitable for children weighing under 15 kg, or for women who are pregnant or breastfeeding.'}
               </p>
             </div>
-
-            <div className="prose prose-lg max-w-none text-gray-700">
-              {/* What is scabies */}
-              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
-                {isDa ? 'Hvad er skab?' : 'What is scabies?'}
-              </h2>
+            <div data-icon="laundry">
               <p>
-                {isDa ? (
-                  <>
-                    Skab – på dansk også kaldet fnat – er en hudinfestation forårsaget af miden{' '}
-                    <em>Sarcoptes scabiei</em> var. <em>hominis</em>. Hunnen graver små tunneler (gange) i hudens yderste lag — epidermis — hvor hun lægger sine æg. Kroppens immunreaktion på miden, dens æg og afføringsprodukter er det, der udløser den intense kløe og betændelse.
-                  </>
-                ) : (
-                  <>
-                    Scabies is a skin infestation caused by the mite <em>Sarcoptes scabiei</em> var.{' '}
-                    <em>hominis</em>. The female mite burrows small tunnels (burrows) into the outermost layer of skin — the epidermis — where she lays her eggs. The body&apos;s immune reaction to the mite, its eggs and faecal matter is what triggers the intense itching and inflammation.
-                  </>
-                )}
+                {isDa ? 'Hygiejne' : 'Hygiene measures'}
               </p>
               <p>
                 {isDa
-                  ? 'Modsat hvad mange tror, har skab intet at gøre med dårlig hygiejne. Enhver kan få skab — uanset alder, livsstil eller socioøkonomisk status. Det er dog mere udbredt i overfyldte miljøer og steder med tæt fysisk kontakt.'
-                  : 'Contrary to what many believe, scabies has nothing to do with poor hygiene. Anyone can get scabies — regardless of age, lifestyle or socioeconomic status. It is, however, more common in crowded environments and places with close physical contact.'}
+                  ? 'Alt tøj, sengetøj og håndklæder vaskes ved mindst 50°C eller lægges i en lukket pose i mindst 72 timer. Støvsug hele hjemmet grundigt.'
+                  : 'All clothing, bedding and towels are washed at 50°C or above, or placed in a sealed bag for at least 72 hours. Vacuum the entire home thoroughly.'}
               </p>
-
-              {/* What does it look like */}
-              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
-                {isDa ? 'Hvordan ser skab ud?' : 'What does scabies look like?'}
-              </h2>
-              <p>{isDa ? 'Skab kan vise sig på flere måder:' : 'Scabies can appear in several ways:'}</p>
-              <ul className="list-disc pl-6 space-y-3 my-4">
-                <li>
-                  <strong>{isDa ? 'Intens kløe – især om natten:' : 'Intense itching — especially at night:'}</strong>{' '}
-                  {isDa
-                    ? 'Det mest fremtrædende symptom er kløe, der ofte forværres markant i varme omgivelser og om natten, når man ligger under dynen. Dette kan gøre det svært at sove.'
-                    : 'The most prominent symptom is itching, which often worsens significantly in warm environments and at night when lying under the covers. This can make it difficult to sleep.'}
-                </li>
-                <li>
-                  <strong>{isDa ? 'Små, røde knopper:' : 'Small, red bumps:'}</strong>{' '}
-                  {isDa
-                    ? 'Disse ligner små bumser eller nældefeberknopper og sidder typisk på håndled, fingre, albuer, armhuler, brystvorter, kønsorganer og lyske. Hos spædbørn kan hele kroppen være påvirket, inklusive hovedbund, ansigt, håndflader og fodsåler.'
-                    : 'These resemble small pimples or hives and are typically found on the wrists, fingers, elbows, armpits, nipples, genitals and groin. In infants, the entire body may be affected, including the scalp, face, palms and soles.'}
-                </li>
-                <li>
-                  <strong>{isDa ? 'Tynde, uregelmæssige graverlinjer:' : 'Thin, irregular burrow lines:'}</strong>{' '}
-                  {isDa
-                    ? 'De karakteristiske tynde, grålig-hvide eller lyse linjer på huden, der markerer midernes tunneler. De er ofte korte (nogle få millimeter) og let bugtede.'
-                    : 'The characteristic thin, greyish-white or light lines on the skin that mark the mites’ tunnels. They are often short (a few millimetres) and slightly serpentine.'}
-                </li>
-                <li>
-                  <strong>{isDa ? 'Tykt, skællende hud (i kroniske tilfælde):' : 'Thick, scaly skin (in chronic cases):'}</strong>{' '}
-                  {isDa
-                    ? 'Ved ubehandlet skab over længere tid kan huden blive tyk, ru og skællende, særligt på hænder og fødder.'
-                    : 'In untreated scabies over a longer period, the skin can become thick, rough and scaly, especially on the hands and feet.'}
-                </li>
-              </ul>
-
-              {/* Why does it happen */}
-              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
-                {isDa ? 'Hvorfor opstår skab?' : 'Why does scabies happen?'}
-              </h2>
+            </div>
+            <div data-icon="ban">
+              <p>
+                {isDa ? 'Undgå smitte' : 'Avoid transmission'}
+              </p>
               <p>
                 {isDa
-                  ? 'Skab smitter primært gennem direkte, længerevarende hud-til-hud-kontakt med en smittet person. Da miden hverken kan hoppe eller flyve, kræver smitte relativt langvarig kontakt:'
-                  : 'Scabies primarily spreads through direct, prolonged skin-to-skin contact with an infected person. Since the mite cannot jump or fly, transmission requires relatively prolonged contact:'}
+                  ? 'Undgå tæt hud-til-hud-kontakt med andre, indtil behandlingen er gennemført. Informér alle tætte kontakter.'
+                  : 'Avoid close skin-to-skin contact with others until treatment is completed. Inform all close contacts.'}
               </p>
-
-              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
-                {isDa ? 'Hvordan smitter skab ved tæt kontakt?' : 'How does scabies spread through close contact?'}
-              </h3>
-              <p>
-                {isDa
-                  ? 'Skab overføres let mellem familiemedlemmer, seksualpartnere og personer, der deler seng. Et kort håndtryk eller almindelig social kontakt giver sjældent smitte.'
-                  : 'Scabies spreads easily between family members, sexual partners and people who share a bed. A brief handshake or ordinary social contact rarely results in transmission.'}
-              </p>
-
-              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
-                {isDa ? 'Kan skab smitte via delte genstande?' : 'Can scabies spread via shared objects?'}
-              </h3>
-              <p>
-                {isDa
-                  ? 'Miden kan i sjældne tilfælde overføres via delte håndklæder, sengetøj eller tøj. Dette er mest relevant ved kraftig infestation eller i institutionelle miljøer. Miden overlever typisk kun 2–3 dage uden for menneskets hud.'
-                  : 'In rare cases the mite can be transmitted via shared towels, bedding or clothing. This is most relevant in heavy infestations or institutional settings. The mite typically only survives 2–3 days outside human skin.'}
-              </p>
-
-              <h3 className="text-xl font-bold text-primary-900 mt-8 mb-3">
-                {isDa ? 'Hvor lang er inkubationstiden?' : 'How long is the incubation period?'}
-              </h3>
-              <p>
-                {isDa
-                  ? 'Hvis det er første gang, du får skab, kan der gå op til 4–6 uger, før symptomerne viser sig. Ved geninfektion hos personer, der tidligere har haft skab, viser symptomerne sig typisk inden for 1–4 dage, fordi immunforsvaret allerede reagerer hurtigere.'
-                  : 'If it is the first time you have had scabies, it can take up to 4–6 weeks before symptoms appear. In reinfection in people who have previously had scabies, symptoms typically appear within 1–4 days, as the immune system already reacts faster.'}
-              </p>
-
-              {/* Who gets it */}
-              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
-                {isDa ? 'Hvem får skab?' : 'Who gets scabies?'}
-              </h2>
-              <p>
-                {isDa
-                  ? 'Skab rammer alle — uanset alder, køn, etnicitet eller hygiejnestandard. Visse faktorer øger dog risikoen:'
-                  : 'Scabies affects everyone — regardless of age, gender, ethnicity or hygiene standard. Certain factors, however, increase the risk:'}
-              </p>
-              <ul className="list-disc pl-6 space-y-2 my-4">
-                <li>
-                  <strong>{isDa ? 'Tæt boforhold:' : 'Close living conditions:'}</strong>{' '}
-                  {isDa
-                    ? 'Familier, kollegier, plejehjem og fængsler er typiske steder, hvor skab spreder sig.'
-                    : 'Families, dormitories, nursing homes and prisons are typical places where scabies spreads.'}
-                </li>
-                <li>
-                  <strong>{isDa ? 'Seksuel kontakt:' : 'Sexual contact:'}</strong>{' '}
-                  {isDa
-                    ? 'Voksne med skab får det ofte via tæt, fysisk kontakt med en smittet partner.'
-                    : 'Adults with scabies often get it through close physical contact with an infected partner.'}
-                </li>
-                <li>
-                  <strong>{isDa ? 'Nedsat immunforsvar:' : 'Weakened immune system:'}</strong>{' '}
-                  {isDa
-                    ? 'Personer med HIV/AIDS eller andre tilstande, der svækker immunforsvaret, kan udvikle skorpeskab (crusted scabies, tidligere kaldet norsk skab). Her sidder der tusindvis af mider i huden, tilstanden er ekstremt smitsom, den udløser udbrud på plejehjem og hospitaler, og den kræver hurtig specialistbehandling med både tabletter og creme.'
-                    : 'People with HIV/AIDS or other conditions that weaken the immune system may develop crusted scabies (also called Norwegian scabies). This form carries very large numbers of mites in the skin, is extremely contagious, causes outbreaks in care homes and hospitals, and needs urgent specialist treatment with both oral and topical medication.'}
-                </li>
-                <li>
-                  <strong>{isDa ? 'Institutionelle miljøer:' : 'Institutional settings:'}</strong>{' '}
-                  {isDa
-                    ? 'Plejehjem for ældre og institutioner med begrænset sundhedspersonale har højere forekomst.'
-                    : 'Care homes for the elderly and institutions with limited healthcare staff have a higher prevalence.'}
-                </li>
-              </ul>
-
-              {/* Treatment */}
-              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
-                {isDa ? 'Hvordan behandles skab?' : 'How is scabies treated?'}
-              </h2>
-              <p>
-                {isDa
-                  ? 'Skab er ubehageligt, men behandles effektivt med receptpligtig medicin. Den vigtigste regel er: alle i samme husstand skal behandles samtidig — også selv om de ikke har symptomer:'
-                  : 'Scabies is uncomfortable but is effectively treated with prescription medication. The most important rule is: everyone in the same household must be treated at the same time — even if they have no symptoms:'}
-              </p>
-
-              <div className="bg-gray-50 rounded-2xl p-6 my-8 space-y-4">
-                <div>
-                  <p className="font-semibold text-primary-900">
-                    {isDa ? '💊 Topisk behandling (førstevalg)' : '💊 Topical treatment (first-line)'}
-                  </p>
-                  <p className="text-sm mt-1">
-                    {isDa
-                      ? 'Permethrin 5% creme påføres hele kroppen fra halsen og ned og vaskes af efter 8–14 timer. Hos spædbørn, små børn, ældre og personer med svækket immunforsvar skal hovedbund, ansigt, hals, håndflader og fodsåler også behandles. Husk mellemrum mellem fingre og tæer, under neglene, navlen og kønsdelene. Behandlingen gentages efter en uge. Creme med benzylbenzoat eller svovl er alternativer.'
-                      : 'Permethrin 5% cream is applied to the whole body from the neck down and washed off after 8–14 hours. In infants, young children, the elderly and people with weakened immune systems, the scalp, face, neck, palms and soles must also be treated. Include the webs of the fingers and toes, under the nails, the navel and the genitals. Treatment is repeated after one week. Cream with benzyl benzoate or sulphur is an alternative.'}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-primary-900">
-                    {isDa ? '💊 Oral behandling' : '💊 Oral treatment'}
-                  </p>
-                  <p className="text-sm mt-1">
-                    {isDa
-                      ? 'Ivermectin i tabletform er et effektivt alternativ, særligt når topisk behandling er vanskelig at gennemføre korrekt. Det gives typisk som to doser med en uges mellemrum. Ivermectin bruges ikke til børn under 15 kg og heller ikke til gravide eller ammende.'
-                      : 'Ivermectin in tablet form is an effective alternative, especially when topical treatment is difficult to carry out correctly. It is typically given as two doses one week apart. Ivermectin is not suitable for children weighing under 15 kg, or for women who are pregnant or breastfeeding.'}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-primary-900">
-                    {isDa ? '🧺 Hygiejne' : '🧺 Hygiene measures'}
-                  </p>
-                  <p className="text-sm mt-1">
-                    {isDa
-                      ? 'Alt tøj, sengetøj og håndklæder vaskes ved mindst 50°C eller lægges i en lukket pose i mindst 72 timer. Støvsug hele hjemmet grundigt.'
-                      : 'All clothing, bedding and towels are washed at 50°C or above, or placed in a sealed bag for at least 72 hours. Vacuum the entire home thoroughly.'}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-primary-900">
-                    {isDa ? '🚫 Undgå smitte' : '🚫 Avoid transmission'}
-                  </p>
-                  <p className="text-sm mt-1">
-                    {isDa
-                      ? 'Undgå tæt hud-til-hud-kontakt med andre, indtil behandlingen er gennemført. Informér alle tætte kontakter.'
-                      : 'Avoid close skin-to-skin contact with others until treatment is completed. Inform all close contacts.'}
-                  </p>
-                </div>
-              </div>
-
-              {/* ICD-11 Note */}
-              <div className="bg-primary-900/5 border-l-4 border-primary p-5 my-8 rounded-r-lg">
-                <p className="text-sm text-gray-700">
-                  <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
-                  {isDa ? (
-                    <>
-                      Skab er klassificeret som 1G04 i WHO&apos;s internationale sygdomsklassifikation (ICD-11). Det er en infestation forårsaget af miden <em>Sarcoptes scabiei</em>, der giver intens kløe og karakteristiske graverlinjer i huden.
-                    </>
-                  ) : (
-                    <>
-                      Scabies is classified as 1G04 in the WHO&apos;s International Classification of Diseases (ICD-11). It is an infestation caused by the mite <em>Sarcoptes scabiei</em>, causing intense itching and characteristic burrow lines in the skin.
-                    </>
-                  )}
-                </p>
-              </div>
-
-              {/* FAQ */}
-              <h2 className="text-3xl font-bold text-primary-900 mt-12 mb-6">
-                {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
-              </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-bold text-lg text-primary-900 mb-2">
-                    {isDa ? 'Er skab farligt?' : 'Is scabies dangerous?'}
-                  </h3>
-                  <p>
-                    {isDa ? (
-                      <>
-                        Skab er sjældent farligt for raske voksne, men den intense kløe kan ødelægge søvnen og påvirke livskvaliteten. Bakteriel superinfektion er almindelig, fordi kradseriet åbner huden — typisk{' '}
-                        <Link href={`/${lang}/blog/impetigo`} className="text-primary underline hover:text-primary-900">
-                          børnesår (impetigo)
-                        </Link>{' '}
-                        eller{' '}
-                        <Link href={`/${lang}/blog/cellulitis`} className="text-primary underline hover:text-primary-900">
-                          cellulitis
-                        </Link>
-                        . Superinfektion med streptokokker kan i sjældne tilfælde føre til nyrebetændelse (poststreptokok-glomerulonefritis), og langvarigt ubehandlet skab kan give{' '}
-                        <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
-                          eksemlignende
-                        </Link>{' '}
-                        hudforandringer.
-                      </>
-                    ) : (
-                      <>
-                        Scabies is rarely dangerous for healthy adults, but the intense itching can ruin sleep and affect quality of life. Bacterial superinfection is common, because scratching breaks the skin — usually{' '}
-                        <Link href={`/${lang}/blog/impetigo`} className="text-primary underline hover:text-primary-900">
-                          impetigo
-                        </Link>{' '}
-                        or{' '}
-                        <Link href={`/${lang}/blog/cellulitis`} className="text-primary underline hover:text-primary-900">
-                          cellulitis
-                        </Link>
-                        . Streptococcal superinfection can in rare cases lead to kidney inflammation (post-streptococcal glomerulonephritis), and long-standing untreated scabies can cause{' '}
-                        <Link href={`/${lang}/blog/eczema-atopic-dermatitis`} className="text-primary underline hover:text-primary-900">
-                          eczema-like
-                        </Link>{' '}
-                        skin changes.
-                      </>
-                    )}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-primary-900 mb-2">
-                    {isDa ? 'Kan skab forsvinde af sig selv?' : 'Can scabies go away on its own?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Nej. Uden behandling forsvinder skab ikke. Miden fortsætter med at lægge æg, og infestationen vil sandsynligvis blive værre over tid. Behandling med receptpligtig medicin er altid nødvendig.'
-                      : 'No. Without treatment, scabies does not go away. The mite continues to lay eggs and the infestation will likely worsen over time. Treatment with prescription medication is always necessary.'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-primary-900 mb-2">
-                    {isDa ? 'Hvorfor klør jeg stadig efter behandling?' : 'Why do I still itch after treatment?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Kløen kan fortsætte i 2–4 uger, efter miderne er døde, fordi immunreaktionen tager tid om at falde til ro. Det betyder ikke, at behandlingen har slået fejl. Kontakt lægen, hvis du får nye gange eller nye knopper efter fire uger.'
-                      : 'Itching can continue for 2–4 weeks after the mites are killed, because the immune reaction to the mite takes time to settle. This does not mean the treatment failed. Contact your doctor if you see new burrows or new bumps after four weeks.'}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-primary-900 mb-2">
-                    {isDa ? 'Hvornår skal jeg kontakte en læge?' : 'When should I contact a doctor?'}
-                  </h3>
-                  <p>
-                    {isDa
-                      ? 'Kontakt en læge, så snart du har mistanke om skab. Tidlig behandling forkorter sygdomsforløbet og reducerer smitterisikoen markant. Særligt børn, ældre og personer med nedsat immunforsvar bør undersøges hurtigt.'
-                      : 'Contact a doctor as soon as you suspect scabies. Early treatment shortens the course of the disease and significantly reduces the risk of transmission. Children, the elderly and people with weakened immune systems should be examined promptly.'}
-                  </p>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <div className="bg-primary-900 text-white rounded-2xl p-8 my-12">
-                <h3 className="text-2xl font-bold mb-4">
-                  {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
-                </h3>
-                <p className="mb-6">
-                  {isDa
-                    ? 'Er du i tvivl om dine symptomer? Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret hudlæge – uden ventetid.'
-                    : 'Not sure about your symptoms? Upload photos of your skin via the SKIND app and receive a personal assessment from a certified dermatologist — no waiting list.'}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href={`/${lang}/download`}
-                    className="inline-flex justify-center items-center px-6 py-3 bg-white text-primary-900 rounded-full font-semibold hover:bg-white/90 transition-colors"
-                  >
-                    {isDa ? 'Download appen' : 'Download the app'}
-                  </Link>
-                </div>
-              </div>
-
-              <div className="border-t border-gray-200 pt-8 mt-12">
-                <p className="text-sm text-gray-500">
-                  <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
-                  {isDa
-                    ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
-                    : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
-                </p>
-              </div>
             </div>
           </div>
-        </article>
 
-        <Footer lang={lang} />
-      </main>
+          {/* ICD-11 Note */}
+          <div className="article-note">
+            <p>
+              <strong>{isDa ? 'Medicinsk klassifikation:' : 'Medical classification:'}</strong>{' '}
+              {isDa ? (
+                <>
+                  Skab er klassificeret som 1G04 i WHO&apos;s internationale sygdomsklassifikation (ICD-11). Det er en infestation forårsaget af miden <em>Sarcoptes scabiei</em>, der giver intens kløe og karakteristiske graverlinjer i huden.
+                </>
+              ) : (
+                <>
+                  Scabies is classified as 1G04 in the WHO&apos;s International Classification of Diseases (ICD-11). It is an infestation caused by the mite <em>Sarcoptes scabiei</em>, causing intense itching and characteristic burrow lines in the skin.
+                </>
+              )}
+            </p>
+          </div>
+
+          {/* FAQ */}
+          <h2>
+            {isDa ? 'Ofte stillede spørgsmål' : 'Frequently asked questions'}
+          </h2>
+          <ArticleFaq>
+            <div>
+              <h3>
+                {isDa ? 'Er skab farligt?' : 'Is scabies dangerous?'}
+              </h3>
+              <p>
+                {isDa ? (
+                  <>
+                    Skab er sjældent farligt for raske voksne, men den intense kløe kan ødelægge søvnen og påvirke livskvaliteten. Bakteriel superinfektion er almindelig, fordi kradseriet åbner huden — typisk{' '}
+                    <Link href={`/${lang}/blog/impetigo`}>
+                      børnesår (impetigo)
+                    </Link>{' '}
+                    eller{' '}
+                    <Link href={`/${lang}/blog/cellulitis`}>
+                      cellulitis
+                    </Link>
+                    . Superinfektion med streptokokker kan i sjældne tilfælde føre til nyrebetændelse (poststreptokok-glomerulonefritis), og langvarigt ubehandlet skab kan give{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`}>
+                      eksemlignende
+                    </Link>{' '}
+                    hudforandringer.
+                  </>
+                ) : (
+                  <>
+                    Scabies is rarely dangerous for healthy adults, but the intense itching can ruin sleep and affect quality of life. Bacterial superinfection is common, because scratching breaks the skin — usually{' '}
+                    <Link href={`/${lang}/blog/impetigo`}>
+                      impetigo
+                    </Link>{' '}
+                    or{' '}
+                    <Link href={`/${lang}/blog/cellulitis`}>
+                      cellulitis
+                    </Link>
+                    . Streptococcal superinfection can in rare cases lead to kidney inflammation (post-streptococcal glomerulonephritis), and long-standing untreated scabies can cause{' '}
+                    <Link href={`/${lang}/blog/eczema-atopic-dermatitis`}>
+                      eczema-like
+                    </Link>{' '}
+                    skin changes.
+                  </>
+                )}
+              </p>
+            </div>
+            <div>
+              <h3>
+                {isDa ? 'Kan skab forsvinde af sig selv?' : 'Can scabies go away on its own?'}
+              </h3>
+              <p>
+                {isDa
+                  ? 'Nej. Uden behandling forsvinder skab ikke. Miden fortsætter med at lægge æg, og infestationen vil sandsynligvis blive værre over tid. Behandling med receptpligtig medicin er altid nødvendig.'
+                  : 'No. Without treatment, scabies does not go away. The mite continues to lay eggs and the infestation will likely worsen over time. Treatment with prescription medication is always necessary.'}
+              </p>
+            </div>
+            <div>
+              <h3>
+                {isDa ? 'Hvorfor klør jeg stadig efter behandling?' : 'Why do I still itch after treatment?'}
+              </h3>
+              <p>
+                {isDa
+                  ? 'Kløen kan fortsætte i 2–4 uger, efter miderne er døde, fordi immunreaktionen tager tid om at falde til ro. Det betyder ikke, at behandlingen har slået fejl. Kontakt lægen, hvis du får nye gange eller nye knopper efter fire uger.'
+                  : 'Itching can continue for 2–4 weeks after the mites are killed, because the immune reaction to the mite takes time to settle. This does not mean the treatment failed. Contact your doctor if you see new burrows or new bumps after four weeks.'}
+              </p>
+            </div>
+            <div>
+              <h3>
+                {isDa ? 'Hvornår skal jeg kontakte en læge?' : 'When should I contact a doctor?'}
+              </h3>
+              <p>
+                {isDa
+                  ? 'Kontakt en læge, så snart du har mistanke om skab. Tidlig behandling forkorter sygdomsforløbet og reducerer smitterisikoen markant. Særligt børn, ældre og personer med nedsat immunforsvar bør undersøges hurtigt.'
+                  : 'Contact a doctor as soon as you suspect scabies. Early treatment shortens the course of the disease and significantly reduces the risk of transmission. Children, the elderly and people with weakened immune systems should be examined promptly.'}
+              </p>
+            </div>
+          </ArticleFaq>
+
+          {/* CTA */}
+          <div className="article-cta">
+            <h3>
+              {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
+            </h3>
+            <p>
+              {isDa
+                ? 'Er du i tvivl om dine symptomer? Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret hudlæge – uden ventetid.'
+                : 'Not sure about your symptoms? Upload photos of your skin via the SKIND app and receive a personal assessment from a certified dermatologist — no waiting list.'}
+            </p>
+            <div className="article-cta-actions">
+              <Link
+                href={`/${lang}/download`}
+                className="article-cta-button"
+              >
+                {isDa ? 'Download appen' : 'Download the app'}
+              </Link>
+            </div>
+          </div>
+
+          <div className="article-disclaimer">
+            <p>
+              <strong>{isDa ? 'Ansvarsfraskrivelse:' : 'Disclaimer:'}</strong>{' '}
+              {isDa
+                ? 'Denne artikel er udelukkende til informationsformål og erstatter ikke professionel lægehjælp. Kontakt altid en læge eller hudlæge for personlig rådgivning og vurdering af hudforandringer.'
+                : 'This article is for informational purposes only and does not replace professional medical advice. Always consult a doctor or dermatologist for personal guidance and assessment of skin changes.'}
+            </p>
+          </div>
+        </div>
+      </ArticleShell>
     </>
   );
 }
