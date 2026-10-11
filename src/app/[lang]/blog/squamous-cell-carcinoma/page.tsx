@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
       : 'Complete guide to squamous cell carcinoma: what it is, causes, symptoms and treatment options.',
     image: '/blog-squamous-cell-carcinoma.jpg',
     datePublished: '2026-03-29',
-    dateModified: '2026-03-29',
+    dateModified: lastContentChange('/blog/squamous-cell-carcinoma'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

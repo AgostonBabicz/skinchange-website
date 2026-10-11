@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -97,7 +98,7 @@ export default function InsectStingPage({ params: { lang } }: PageProps) {
       : 'Everything about insect bites and stings: home treatment, the difference between a large local reaction and anaphylaxis, tick bites and Lyme disease, and prevention.',
     image: '/blog-insect-sting.jpg',
     datePublished: '2026-04-11',
-    dateModified: '2026-04-11',
+    dateModified: lastContentChange('/blog/insect-sting'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

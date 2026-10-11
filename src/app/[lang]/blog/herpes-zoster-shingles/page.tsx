@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -59,7 +60,7 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
       : 'Complete guide to shingles: what it is, causes, symptoms, red flags and treatment options.',
     image: '/blog-herpes-zoster.jpg',
     datePublished: '2026-03-16',
-    dateModified: '2026-03-16',
+    dateModified: lastContentChange('/blog/herpes-zoster-shingles'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

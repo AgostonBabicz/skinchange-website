@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
       : 'Complete guide to eczema and atopic dermatitis: what it is, causes, symptoms and treatment options.',
     image: '/blog-eczema.jpg',
     datePublished: '2026-03-12',
-    dateModified: '2026-03-12',
+    dateModified: lastContentChange('/blog/eczema-atopic-dermatitis'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

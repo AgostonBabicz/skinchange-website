@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -97,7 +98,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
       : 'Everything about moles: what they are, the ABCDE rule and its limits, the ugly duckling sign, the EFG rule, melanoma risk factors and when to see a doctor.',
     image: '/blog-mole.jpg',
     datePublished: '2026-04-11',
-    dateModified: '2026-04-11',
+    dateModified: lastContentChange('/blog/regular-mole'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

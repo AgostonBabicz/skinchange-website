@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -97,7 +98,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
       : 'Everything about haemangiomas: infantile haemangiomas and cherry angiomas, why they happen, when they need treatment, and the warning signs parents should know.',
     image: '/blog-hemangioma.jpg',
     datePublished: '2026-04-11',
-    dateModified: '2026-04-11',
+    dateModified: lastContentChange('/blog/hemangioma'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

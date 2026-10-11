@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
       : 'Complete guide to alopecia areata: autoimmune hair loss, causes, symptoms and treatment options.',
     image: '/blog-alopecia-areata.jpg',
     datePublished: '2026-04-03',
-    dateModified: '2026-04-03',
+    dateModified: lastContentChange('/blog/alopecia-areata'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

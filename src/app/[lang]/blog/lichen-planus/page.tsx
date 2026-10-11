@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -59,7 +60,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
       : 'Complete guide to lichen planus: what it is, causes, symptoms and treatment options.',
     image: '/blog-lichen-planus.jpg',
     datePublished: '2026-03-21',
-    dateModified: '2026-03-21',
+    dateModified: lastContentChange('/blog/lichen-planus'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
