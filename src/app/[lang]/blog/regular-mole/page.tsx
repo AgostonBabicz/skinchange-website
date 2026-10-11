@@ -184,7 +184,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
                 <Link href={`/${lang}/blog/seborrheic-keratosis`}>
                   seboroisk keratose
                 </Link>{' '}
-                — en godartet, voksagtig vækst, der ser ud, som om den er klistret ovenpå huden, og som bliver almindelig med alderen.
+                — en godartet, voksagtig vækst, der ser ud, som om den er klistret oven på huden, og som bliver almindelig med alderen.
                 Et{' '}
                 <Link href={`/${lang}/blog/basal-cell-carcinoma`}>
                   basalcellekarcinom
@@ -412,7 +412,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
           <h3>{isDa ? 'Skal alle modermærker fjernes?' : 'Should all moles be removed?'}</h3>
           <p>
             {isDa
-              ? 'Nej. Et normalt modermærke skal ikke fjernes forebyggende, og antallet af modermærker falder ikke risikoen ved at fjerne nogle af dem. Bliver et modermærke fjernet på grund af mistanke, skæres det ud i sin helhed og sendes til mikroskopisk undersøgelse. Brænd eller skrab aldrig et modermærke væk selv, og brug ikke såkaldte fjernelsespenne eller syrer fra nettet: du ødelægger vævet, så det ikke kan undersøges, og du fjerner ikke det, der eventuelt sidder i dybden.'
+              ? 'Nej. Et normalt modermærke skal ikke fjernes forebyggende, og man sænker ikke risikoen ved at fjerne nogle af dem. Bliver et modermærke fjernet på grund af mistanke, skæres det ud i sin helhed og sendes til mikroskopisk undersøgelse. Brænd eller skrab aldrig et modermærke væk selv, og brug ikke såkaldte fjernelsespenne eller syrer fra nettet: du ødelægger vævet, så det ikke kan undersøges, og du fjerner ikke det, der eventuelt sidder i dybden.'
               : 'No. A normal mole does not need preventive removal, and taking moles off does not lower your risk. When a mole is removed because of suspicion, it is excised whole and sent for microscopic examination. Never burn or scrape a mole off yourself, and do not use so-called mole removal pens or acids bought online: they destroy the tissue so it cannot be examined, and they do not remove whatever may sit deeper down.'}
           </p>
 

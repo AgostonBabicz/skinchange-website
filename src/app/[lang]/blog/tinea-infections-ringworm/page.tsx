@@ -115,7 +115,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
             name: 'Is ringworm contagious?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. Ringworm spreads easily through direct skin contact with an infected person, via infected animals, or through contaminated objects such as towels, shoes and floor surfaces. Good hand hygiene and avoiding sharing personal items reduces the risk of transmission.',
+              text: 'Yes. Ringworm spreads easily through direct skin contact with an infected person, via infected animals, or through contaminated objects such as towels, shoes and floor surfaces. Good hand hygiene and avoiding sharing personal items reduce the risk of transmission.',
             },
           },
           {
@@ -514,7 +514,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               <p>
                 {isDa
                   ? 'Ja. Ringorm smitter let via direkte hudkontakt med en inficeret person, via inficerede dyr eller via kontaminerede genstande som håndklæder, sko og gulvoverflader. God håndhygiejne og undgåelse af deling af personlige genstande reducerer smitterisikoen.'
-                  : 'Yes. Ringworm spreads easily through direct skin contact with an infected person, via infected animals, or through contaminated objects such as towels, shoes and floor surfaces. Good hand hygiene and avoiding sharing personal items reduces the risk of transmission.'}
+                  : 'Yes. Ringworm spreads easily through direct skin contact with an infected person, via infected animals, or through contaminated objects such as towels, shoes and floor surfaces. Good hand hygiene and avoiding sharing personal items reduce the risk of transmission.'}
               </p>
             </div>
             <div>

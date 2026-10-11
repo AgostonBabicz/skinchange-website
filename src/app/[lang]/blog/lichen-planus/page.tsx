@@ -268,7 +268,7 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
           </p>
           <p>
             {isDa
-              ? 'Udslættet sidder typisk symmetrisk på håndled, underarme, ankler og lænd. Nye knopper kan opstå i en ridse eller et rift – det kaldes Köbners fænomen – og når knopperne forsvinder, efterlader de ofte mørkebrune pletter, der kan være måneder om at falme.'
+              ? 'Udslættet sidder typisk symmetrisk på håndled, underarme, ankler og lænd. Nye knopper kan opstå i en ridse eller en rift – det kaldes Köbners fænomen – og når knopperne forsvinder, efterlader de ofte mørkebrune pletter, der kan være måneder om at falme.'
               : 'The rash typically sits symmetrically on the wrists, forearms, ankles and lower back. New bumps can appear along a scratch or a scar — this is called the Köbner phenomenon — and when the bumps clear they often leave dark brown marks that can take months to fade.'}
           </p>
 

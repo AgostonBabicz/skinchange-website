@@ -378,7 +378,7 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
               <p>
                 {isDa
                   ? 'Intenst pulserende lys (IPL) og laser kan reducere synlige blodkar og vedvarende rødme. Det er et effektivt supplement til medicinsk behandling.'
-                  : 'Intense pulsed light (IPL) and laser treatments can reduce visible blood vessels and persistent redness. It is an effective complement to medical treatment.'}
+                  : 'Intense pulsed light (IPL) and laser treatments can reduce visible blood vessels and persistent redness. They are an effective complement to medical treatment.'}
               </p>
             </div>
             <div data-icon="sprout">

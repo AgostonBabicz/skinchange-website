@@ -244,7 +244,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
                 : 'The characteristic thin, greyish-white or light lines on the skin that mark the mites’ tunnels. They are often short (a few millimetres) and slightly serpentine.'}
             </li>
             <li>
-              <strong>{isDa ? 'Tykt, skællende hud (i kroniske tilfælde):' : 'Thick, scaly skin (in chronic cases):'}</strong>{' '}
+              <strong>{isDa ? 'Tyk, skællende hud (i kroniske tilfælde):' : 'Thick, scaly skin (in chronic cases):'}</strong>{' '}
               {isDa
                 ? 'Ved ubehandlet skab over længere tid kan huden blive tyk, ru og skællende, særligt på hænder og fødder.'
                 : 'In untreated scabies over a longer period, the skin can become thick, rough and scaly, especially on the hands and feet.'}

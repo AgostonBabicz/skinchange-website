@@ -390,7 +390,7 @@ export default function MelanomaPage({ params: { lang } }: PageProps) {
           </h3>
           <p>
             {isDa
-              ? 'De fleste melanomer opstår ikke i et modermærke. Men personer med mange modermærker (flere end 50) eller med atypiske modermærker – store, uregelmæssige modermærker med uklare grænser, også kaldet dysplastiske nævi – har en højere personlig risiko for melanom hvor som helst på huden. Et højt antal modermærker er altså et risikomarkør for personen, ikke en række enkeltmodermærker, der står i kø for at blive ondartede.'
+              ? 'De fleste melanomer opstår ikke i et modermærke. Men personer med mange modermærker (flere end 50) eller med atypiske modermærker – store, uregelmæssige modermærker med uklare grænser, også kaldet dysplastiske nævi – har en højere personlig risiko for melanom hvor som helst på huden. Et højt antal modermærker er altså en risikomarkør for personen, ikke en række enkeltmodermærker, der står i kø for at blive ondartede.'
               : 'Most melanomas do not begin in a mole. But people with many moles (more than 50) or with atypical moles — large, irregular moles with unclear borders, also called dysplastic naevi — carry a higher personal risk of melanoma anywhere on the skin. A high mole count is a risk marker for the person, not a queue of individual moles waiting to turn malignant.'}
           </p>
 

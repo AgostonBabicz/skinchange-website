@@ -149,7 +149,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
           </p>
           <p>
             {isDa
-              ? 'I denne artikel forklarer vi, hvad aktinisk keratose er, hvordan den ser og føles, hvorfor den opstår, hvem der er i risiko, hvornår du skal søge læge, og hvilke behandlinger hudlæger bruger i dag.'
+              ? 'I denne artikel forklarer vi, hvad aktinisk keratose er, hvordan den ser ud og føles, hvorfor den opstår, hvem der er i risiko, hvornår du skal søge læge, og hvilke behandlinger hudlæger bruger i dag.'
               : 'In this article we explain what actinic keratosis is, what it looks and feels like, why it happens, who is at risk, when you should see a doctor, and which treatments dermatologists use today.'}
           </p>
         </div>
@@ -209,7 +209,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
                 <Link href={`/${lang}/blog/seborrheic-keratosis`}>
                   Seboroisk keratose
                 </Link>{' '}
-                sidder ovenpå huden som en voksagtig, påklistret brun vækst og har intet med sol at gøre.{' '}
+                sidder oven på huden som en voksagtig, påklistret brun vækst og har intet med sol at gøre.{' '}
                 <Link href={`/${lang}/blog/basal-cell-carcinoma`}>
                   Basalcellekarcinom
                 </Link>{' '}

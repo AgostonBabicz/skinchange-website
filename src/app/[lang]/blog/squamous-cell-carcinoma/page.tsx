@@ -204,11 +204,11 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
             <li>
               <strong>{isDa ? 'Rød, skællende plet:' : 'Red, scaly patch:'}</strong>{' '}
               {isDa
-                ? 'Et ru, tykt eller skorpet område på huden – ofte på soleksponerede områder som ansigt, ører, nakke eller hænder.'
+                ? 'Et rut, tykt eller skorpet område på huden – ofte på soleksponerede områder som ansigt, ører, nakke eller hænder.'
                 : 'A rough, thick or crusted area on the skin — often on sun-exposed areas such as the face, ears, neck or hands.'}
             </li>
             <li>
-              <strong>{isDa ? 'Fast, vorte-lignende knude:' : 'Firm, wart-like bump:'}</strong>{' '}
+              <strong>{isDa ? 'Fast, vortelignende knude:' : 'Firm, wart-like bump:'}</strong>{' '}
               {isDa
                 ? 'En fast knude med rødlig farve og ru, skællende overflade.'
                 : 'A firm bump with a reddish colour and rough, scaly surface.'}
@@ -391,7 +391,7 @@ export default function SquamousCellCarcinomaPage({ params: { lang } }: PageProp
               </p>
               <p>
                 {isDa
-                  ? 'Anvendes i tilfælde hvor kirurgi ikke er mulig, eller ved højrisiko SCC der ikke kan fjernes tilstrækkeligt med kirurgi alene.'
+                  ? 'Anvendes i tilfælde hvor kirurgi ikke er mulig, eller ved højrisiko-SCC der ikke kan fjernes tilstrækkeligt med kirurgi alene.'
                   : 'Used when surgery is not possible, or for high-risk SCC that cannot be adequately removed with surgery alone.'}
               </p>
             </div>

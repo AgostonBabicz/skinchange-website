@@ -113,7 +113,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
     {
       slug: 'herpes-zoster-shingles',
       title: 'Hvad er Helvedesild (Herpes Zoster)? Årsager, Symptomer og Behandling',
-      excerpt: 'Helvedesild rammer ca. én ud af tre mennesker i løbet af livet. Lær hvad helvedesild er, hvem der er i risiko, hvad det smertefulde udslæt ser ud, og hvilken behandling der virker bedst.',
+      excerpt: 'Helvedesild rammer ca. én ud af tre mennesker i løbet af livet. Lær hvad helvedesild er, hvem der er i risiko, hvordan det smertefulde udslæt ser ud, og hvilken behandling der virker bedst.',
       category: 'Hudsygdomme',
       readTime: '8 min',
       date: '16. marts 2026',
@@ -327,7 +327,7 @@ const blogPosts: { da: BlogPost[]; en: BlogPost[] } = {
       readTime: '9 min',
       date: '11. april 2026',
       image: '/blog-hemangioma.jpg',
-      imageAlt: 'Lille, klarrød kirsebærhæmangiom på huden',
+      imageAlt: 'Lille, klarrødt kirsebærhæmangiom på huden',
       sectionHeader: 'Hudsygdomme',
     },
   ],
