@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { isValidElement, type ReactNode } from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -23,14 +23,34 @@ interface ArticleShellProps {
 // ArticleToc builds the table of contents from the h2 headings inside this element.
 const CONTENT_ID = 'article-content';
 
+// Plain text of a ReactNode (the crumb is passed as a fragment around a string).
+function textOf(node: ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(textOf).join('');
+  if (isValidElement<{ children?: ReactNode }>(node)) return textOf(node.props.children);
+  return '';
+}
+
 // Page chrome for every blog article: header with breadcrumb, meta, title, author and hero image,
 // then the article with its table of contents (a left rail on desktop, a collapsible card on phones).
 export default function ArticleShell({ lang, crumb, category, date, readTime, title, image, children }: ArticleShellProps) {
   const isDa = lang === 'da';
   const crumbLink = 'flex min-h-11 items-center text-body underline underline-offset-4 transition-colors hover:text-ink lg:min-h-0';
 
+  // Mirrors the visible breadcrumb below. The last item is the current page, which may omit its URL.
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isDa ? 'Forside' : 'Home', item: `https://www.skinchange.dk/${lang}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `https://www.skinchange.dk/${lang}/blog/` },
+      { '@type': 'ListItem', position: 3, name: textOf(crumb) },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-paper">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navigation lang={lang} />
 
       <header className="mx-auto flex max-w-page flex-col gap-3.5 px-5 pt-2 md:px-10 lg:gap-[22px] lg:pt-8 xl:px-20">
