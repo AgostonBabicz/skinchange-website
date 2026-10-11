@@ -73,13 +73,6 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
       priceCurrency: isDa ? 'DKK' : 'EUR',
       availability: 'https://schema.org/InStock',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.7',
-      ratingCount: '312',
-      bestRating: '5',
-      worstRating: '1',
-    },
     description: isDa
       ? 'Professionel online hudlæge. Diagnose af akne, eksem, psoriasis og hudkræft inden for 48 timer.'
       : 'Professional online dermatologist. Diagnosis of acne, eczema, psoriasis and skin cancer within 48 hours.',
