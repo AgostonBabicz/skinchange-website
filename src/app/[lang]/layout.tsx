@@ -91,9 +91,6 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
       images: [ogImage],
       creator: "@skinchangeai",
     },
-    verification: {
-      google: "your-google-verification-code",
-    },
   };
 }
 
