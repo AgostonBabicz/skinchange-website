@@ -350,7 +350,7 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
               <strong>{isDa ? 'Alkohol og rygning' : 'Alcohol and smoking'}</strong>
               {isDa
                 ? ': Øger risikoen for psoriasis og kan gøre behandlingen mindre effektiv.'
-                : ': Increases the risk of psoriasis and can make treatment less effective.'}
+                : ': Increase the risk of psoriasis and can make treatment less effective.'}
             </li>
           </ul>
 

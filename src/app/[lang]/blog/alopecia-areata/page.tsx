@@ -54,7 +54,7 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
       ? 'Hvad er Alopecia Areata? Årsager, Symptomer og Behandling'
       : 'What is Alopecia Areata? Causes, Symptoms and Treatment',
     description: isDa
-      ? 'Komplet guide til alopecia areata: autoimmun hårtab, årsager, symptomer og behandlingsmuligheder.'
+      ? 'Komplet guide til alopecia areata: autoimmunt hårtab, årsager, symptomer og behandlingsmuligheder.'
       : 'Complete guide to alopecia areata: autoimmune hair loss, causes, symptoms and treatment options.',
     image: '/blog-alopecia-areata.jpg',
     datePublished: '2026-04-03',

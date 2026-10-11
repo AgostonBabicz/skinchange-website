@@ -224,7 +224,7 @@ export default function CellulitisPage({ params: { lang } }: PageProps) {
           </p>
           <p>
             {isDa
-              ? 'Cellulitis må ikke forveksles med cellulite — den såkaldte appelsinhud. Cellulite er en helt harmløs kosmetisk forandring i underhudens fedtvæv og har intet med infektion at gøre. Navnene ligner hinanden, men tilstandene har intet tilfælles.'
+              ? 'Cellulitis må ikke forveksles med cellulite — den såkaldte appelsinhud. Cellulite er en helt harmløs kosmetisk forandring i underhudens fedtvæv og har intet med infektion at gøre. Navnene ligner hinanden, men tilstandene har intet til fælles.'
               : 'Cellulitis should not be confused with cellulite, the dimpled "orange-peel" appearance of the skin. Cellulite is a harmless cosmetic change in the fatty tissue under the skin and has nothing to do with infection. The names look alike, but the conditions have nothing in common.'}
           </p>
           <p>

@@ -635,7 +635,7 @@ export const faqCategories: FaqCategory[] = [
             {
               question: 'How is HSV treated?',
               answer:
-                "There is no cure for HSV, but antiviral medications such as aciclovir, valaciclovir or famciclovir can shorten and reduce the severity of outbreaks. For frequent outbreaks, daily suppressive therapy is recommended. Open communication with sexual partners and condom use reduces transmission risk. Seek professional help for frequent outbreaks or during pregnancy.",
+                "There is no cure for HSV, but antiviral medications such as aciclovir, valaciclovir or famciclovir can shorten and reduce the severity of outbreaks. For frequent outbreaks, daily suppressive therapy is recommended. Open communication with sexual partners and condom use reduce transmission risk. Seek professional help for frequent outbreaks or during pregnancy.",
             },
           ],
         },
@@ -717,7 +717,7 @@ export const faqCategories: FaqCategory[] = [
             {
               question: 'Hvordan ser helvedesild ud?',
               answer:
-                'Helvedesild starter typisk med brændende smerte eller prikken på ét sted (prodromalfasen), efterfulgt af et rødt udslæt i et bånd langs nervebanen – oftest på kroppen, men muligvis ansigt eller øjne. Inden for dage opstår væskefyldte blærer, der brister og danner gule skorper. Heling tager normalt 2–4 uger.',
+                'Helvedesild starter typisk med brændende smerte eller prikken på ét sted (prodromalfasen), efterfulgt af et rødt udslæt i et bånd langs nervebanen – oftest på kroppen, men muligvis i ansigtet eller øjnene. Inden for dage opstår væskefyldte blærer, der brister og danner gule skorper. Heling tager normalt 2–4 uger.',
             },
             {
               question: 'Hvad forårsager helvedesild?',
@@ -1307,7 +1307,7 @@ export const faqCategories: FaqCategory[] = [
             {
               question: 'What causes impetigo?',
               answer:
-                'Impetigo occurs when Staphylococcus aureus or Streptococcus pyogenes enter the skin through cuts, scrapes, insect bites or cracks. The disease spreads via direct contact with an infected person or via contaminated objects such as towels and toys.',
+                'Impetigo occurs when Staphylococcus aureus or Streptococcus pyogenes enters the skin through cuts, scrapes, insect bites or cracks. The disease spreads via direct contact with an infected person or via contaminated objects such as towels and toys.',
             },
             {
               question: 'Who gets impetigo?',
@@ -1414,7 +1414,7 @@ export const faqCategories: FaqCategory[] = [
             {
               question: 'Hvordan behandles modermærkekræft?',
               answer:
-                'Kirurgisk fjernelse er standardbehandling, og ved tidlig, tynd melanom er helbredelsesraten over 90%. Ved fremskreden sygdom kan immunterapi (checkpoint-hæmmere) og målrettet terapi markant forbedre overlevelsesraten. Forebyggelse – solcreme SPF 30+, undgå solarier, månedlig selvundersøgelse af huden – er den bedste strategi.',
+                'Kirurgisk fjernelse er standardbehandling, og ved tidligt, tyndt melanom er helbredelsesraten over 90%. Ved fremskreden sygdom kan immunterapi (checkpoint-hæmmere) og målrettet terapi markant forbedre overlevelsesraten. Forebyggelse – solcreme SPF 30+, undgå solarier, månedlig selvundersøgelse af huden – er den bedste strategi.',
             },
           ],
           en: [

@@ -310,7 +310,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
           </h3>
           <p>
             {isDa
-              ? 'Ja. De inducerbare (fysiske) former for urticaria udløses af en bestemt fysisk påvirkning frem for af et allergen. Dermografisme er den hyppigste: strygning, kradsning eller gnid mod huden giver en stribeformet kvaddel inden for få minutter, som forsvinder igen i løbet af en time.'
+              ? 'Ja. De inducerbare (fysiske) former for urticaria udløses af en bestemt fysisk påvirkning frem for af et allergen. Dermografisme er den hyppigste: strygning, kradsning eller gnidning mod huden giver en stribeformet kvaddel inden for få minutter, som forsvinder igen i løbet af en time.'
               : 'Yes. The inducible (physical) urticarias are triggered by a specific physical stimulus rather than by an allergen. Dermographism is the most common: stroking, scratching or friction produces a linear wheal within minutes, which settles again within an hour.'}
           </p>
           <p>

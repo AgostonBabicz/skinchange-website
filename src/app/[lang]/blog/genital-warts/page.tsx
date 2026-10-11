@@ -220,7 +220,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
             <li>{isDa ? 'Orale seksuelle aktiviteter' : 'Oral sexual activities'}</li>
             <li>
               {isDa
-                ? 'Tæt hud-mod-hud kontakt i kønsområdet (ikke nødvendigvis samleje)'
+                ? 'Tæt hud-mod-hud-kontakt i kønsområdet (ikke nødvendigvis samleje)'
                 : 'Close skin-to-skin contact in the genital area (not necessarily intercourse)'}
             </li>
           </ul>

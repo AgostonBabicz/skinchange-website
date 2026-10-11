@@ -97,7 +97,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
             name: 'Hvordan adskiller BCC sig fra modermærkekræft (melanom)?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom kan derimod sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødelig. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.',
+              text: 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom kan derimod sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødeligt. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.',
             },
           },
           {
@@ -541,7 +541,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
               </h3>
               <p>
                 {isDa
-                  ? 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom kan derimod sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødelig. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.'
+                  ? 'BCC og melanom er begge hudkræftformer, men de adskiller sig markant. BCC vokser langsomt, spreder sig yderst sjældent og har en meget høj helbredelsesrate. Melanom kan derimod sprede sig hurtigt til lymfeknuder og indre organer og er langt mere dødeligt. Melanom opstår fra melanocytter (pigmentceller) og viser sig ofte som et mørkt modermærke med uregelmæssige kanter.'
                   : 'BCC and melanoma are both forms of skin cancer, but they differ markedly. BCC grows slowly, very rarely spreads and has a very high cure rate. Melanoma, on the other hand, can spread quickly to lymph nodes and internal organs and is far more deadly. Melanoma arises from melanocytes (pigment cells) and often appears as a dark mole with irregular borders.'}
               </p>
             </div>
