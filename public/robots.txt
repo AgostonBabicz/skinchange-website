@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
+
+# Search and AI-answer crawlers, allowed by name so the policy is explicit.
+# AI training crawlers (GPTBot, Google-Extended, CCBot, ClaudeBot) are not named here
+# and fall under "User-agent: *" above (allowed) until the owner decides otherwise.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+Allow: /
+
 Host: www.skinchange.dk
 
 Sitemap: https://www.skinchange.dk/sitemap.xml
