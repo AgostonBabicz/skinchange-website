@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -59,7 +60,7 @@ export default function GenitalWartsPage({ params: { lang } }: PageProps) {
       : 'Complete guide to genital warts: what they are, HPV transmission, symptoms, treatment and vaccination.',
     image: '/blog-hpv.jpg',
     datePublished: '2026-04-08',
-    dateModified: '2026-04-08',
+    dateModified: lastContentChange('/blog/genital-warts'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

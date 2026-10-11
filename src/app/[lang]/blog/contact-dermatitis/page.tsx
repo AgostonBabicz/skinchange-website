@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
       : 'Complete guide to contact dermatitis: what it is, the two main types, symptoms and treatment options.',
     image: '/blog-contact-dermatitis.jpg',
     datePublished: '2026-03-19',
-    dateModified: '2026-03-19',
+    dateModified: lastContentChange('/blog/contact-dermatitis'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

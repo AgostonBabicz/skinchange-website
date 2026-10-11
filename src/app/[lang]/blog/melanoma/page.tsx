@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -59,7 +60,7 @@ export default function MelanomaPage({ params: { lang } }: PageProps) {
       : 'Complete guide to melanoma: what it is, the ABCDE method for self-examination, causes and treatment options.',
     image: '/blog-melanoma.jpg',
     datePublished: '2026-03-26',
-    dateModified: '2026-03-26',
+    dateModified: lastContentChange('/blog/melanoma'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

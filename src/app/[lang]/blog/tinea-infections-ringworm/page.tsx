@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
       : 'Complete guide to ringworm and tinea infections: what it is, causes, symptoms and treatment options.',
     image: '/blog-tinea-ringworm.jpg',
     datePublished: '2026-03-17',
-    dateModified: '2026-03-17',
+    dateModified: lastContentChange('/blog/tinea-infections-ringworm'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

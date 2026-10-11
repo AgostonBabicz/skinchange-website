@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -59,7 +60,7 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
       : 'Complete guide to impetigo: what it is, what it looks like, who gets it, and how it is treated.',
     image: '/blog-impetigo.jpg',
     datePublished: '2026-03-23',
-    dateModified: '2026-03-23',
+    dateModified: lastContentChange('/blog/impetigo'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

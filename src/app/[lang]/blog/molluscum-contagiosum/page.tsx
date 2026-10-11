@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
       : 'Complete guide to molluscum contagiosum: what it is, how it spreads, and what treatment options are available.',
     image: '/blog-molluscum-contagiosum.jpg',
     datePublished: '2026-03-22',
-    dateModified: '2026-03-22',
+    dateModified: lastContentChange('/blog/molluscum-contagiosum'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

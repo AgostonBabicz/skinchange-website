@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
       : 'Complete guide to scabies: what it is, why it spreads, symptoms and effective treatments.',
     image: '/blog-scabies.jpg',
     datePublished: '2026-03-20',
-    dateModified: '2026-03-20',
+    dateModified: lastContentChange('/blog/scabies'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

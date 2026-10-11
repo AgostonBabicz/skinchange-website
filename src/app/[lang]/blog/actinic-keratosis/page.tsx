@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -97,7 +98,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
       : 'Everything about actinic keratosis: what it is, why it happens, when to see a doctor, treatment options and prevention.',
     image: '/blog-actinic-keratosis.jpg',
     datePublished: '2026-04-11',
-    dateModified: '2026-04-11',
+    dateModified: lastContentChange('/blog/actinic-keratosis'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

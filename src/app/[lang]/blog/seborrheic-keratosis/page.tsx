@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -61,7 +62,7 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
       : 'Complete guide to seborrhoeic keratosis: what it is, causes, whether it is dangerous and treatment options.',
     image: '/blog-seborrheic-keratosis.jpg',
     datePublished: '2026-06-26',
-    dateModified: '2026-06-26',
+    dateModified: lastContentChange('/blog/seborrheic-keratosis'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',

@@ -3,6 +3,7 @@ import nodePath from 'node:path';
 import { MetadataRoute } from 'next';
 import { languages } from '@/lib/i18n';
 import { faqCategories } from '@/lib/faq-data';
+import { lastContentChange } from '@/lib/content-dates';
 
 // Read the blog routes off disk so the sitemap cannot drift when articles are added.
 function blogSlugs(): string[] {
@@ -16,8 +17,6 @@ function blogSlugs(): string[] {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.skinchange.dk';
-  const lastModified = new Date();
-
   const pages = [
     '',                    // Home
     '/about',
@@ -69,7 +68,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       sitemapEntries.push({
         url,
-        lastModified,
+        // Last real content change, not the build time (see src/lib/content-dates.ts)
+        lastModified: lastContentChange(path),
         changeFrequency,
         priority,
         alternates: {

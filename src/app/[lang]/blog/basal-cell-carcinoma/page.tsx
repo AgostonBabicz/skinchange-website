@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ArticleShell from '@/components/ArticleShell';
 import ArticleFaq from '@/components/ArticleFaq';
 import { Language } from '@/lib/i18n';
+import { lastContentChange } from '@/lib/content-dates';
 import Link from 'next/link';
 
 interface PageProps {
@@ -57,7 +58,7 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
       : 'Complete guide to basal cell carcinoma (BCC): what it is, symptoms, risk factors and treatment options.',
     image: '/blog-basal-cell-carcinoma.jpg',
     datePublished: '2026-03-28',
-    dateModified: '2026-03-28',
+    dateModified: lastContentChange('/blog/basal-cell-carcinoma'),
     author: {
       '@type': 'Organization',
       '@id': 'https://www.skinchange.dk/#skinchange-ai',
