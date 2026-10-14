@@ -128,7 +128,7 @@ export const imageCredits: Record<string, ImageCreditEntry> = {
   },
   '/blog-urticaria-hives.jpg': {
     slug: 'urticaria-hives', labelDa: 'Nældefeber', labelEn: 'Hives', kind: 'photo',
-    author: 'James Heilman, MD', sourceUrl: commons('EMminor2010.JPG'), license: 'CC BY-SA 3.0',
+    author: 'john (Dispolt)', sourceUrl: commons('Have_Urticaria_3.jpg'), license: 'CC BY-SA 3.0',
   },
   '/blog-vitiligo.jpg': {
     slug: 'vitiligo', labelDa: 'Vitiligo', labelEn: 'Vitiligo', kind: 'photo',
