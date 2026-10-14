@@ -156,7 +156,7 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
         title={<>{isDa ? 'Hvad er Nældefeber (Urticaria)? Årsager, Symptomer og Behandling' : 'What is Urticaria (Hives)? Causes, Symptoms and Treatment'}</>}
         image={{
           src: '/blog-urticaria-hives.jpg',
-          alt: isDa ? 'Nærbillede af en underarm med hævede, lyserøde kvadler fra nældefeber.' : 'Close-up of a forearm covered in raised, pink urticaria wheals.',
+          alt: isDa ? 'Nærbillede af hævede, lyse kvadler med rød kant og rødme omkring – nældefeber.' : 'Close-up of raised, pale wheals with red edges and surrounding redness – hives.',
         }}
       >
         {/* Intro */}

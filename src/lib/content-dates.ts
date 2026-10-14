@@ -13,8 +13,9 @@
 //   2026-09-28  177c979  user guide: step instructions added to the carousel
 //   2026-09-30  5705af4  redesign: new stats strip on home, Peter Bjerring's CV on about,
 //                        App Store link moved to the Danish store on download
+//   2026-10-14           home hero headline (diagnosis and treatment plan); hives article image replaced
 export const contentDates: Record<string, string> = {
-  '': '2026-09-30',
+  '': '2026-10-14',
   '/about': '2026-09-30',
   '/download': '2026-09-30',
   '/faq': '2026-08-02',
@@ -54,7 +55,7 @@ export const contentDates: Record<string, string> = {
   '/blog/seborrheic-keratosis': '2026-09-28',
   '/blog/squamous-cell-carcinoma': '2026-08-02',
   '/blog/tinea-infections-ringworm': '2026-08-02',
-  '/blog/urticaria-hives': '2026-08-02',
+  '/blog/urticaria-hives': '2026-10-14',
   '/blog/vitiligo': '2026-08-02',
 };
 
