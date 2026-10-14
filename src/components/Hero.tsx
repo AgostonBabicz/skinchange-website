@@ -6,18 +6,21 @@ interface HeroProps {
   lang: Language;
 }
 
-// Splits "Online Hudlæge — Diagnose inden for 48 Timer" into the three designed lines,
-// with the closing "48 Timer" / "48 Hours" in brand blue.
+// Splits "Online Hudlæge — Diagnose og Behandlingsplan inden for 48 Timer" into the designed lines:
+// the lead, what you get, and the time promise ("inden for 48 Timer" / "Within 48 Hours") on its own
+// line with the closing "48 Timer" / "48 Hours" in brand blue.
 function headlineParts(title: string) {
   const [lead, rest = ''] = title.split(' — ');
-  const words = rest.split(' ');
-  return { lead, middle: words.slice(0, -2).join(' '), accent: words.slice(-2).join(' ') };
+  const timeAt = rest.search(/ (inden for|within) /i);
+  const middle = timeAt >= 0 ? rest.slice(0, timeAt) : '';
+  const words = (timeAt >= 0 ? rest.slice(timeAt + 1) : rest).split(' ');
+  return { lead, middle, timePrefix: words.slice(0, -2).join(' '), accent: words.slice(-2).join(' ') };
 }
 
 export default function Hero({ lang }: HeroProps) {
   const t = getTranslation(lang);
   const isDa = lang === 'da';
-  const { lead, middle, accent } = headlineParts(t.hero.title);
+  const { lead, middle, timePrefix, accent } = headlineParts(t.hero.title);
 
   const downloads = isDa ? '5.000+ downloads' : '5,000+ downloads';
 
@@ -32,8 +35,13 @@ export default function Hero({ lang }: HeroProps) {
 
           <h1 className="mt-5 animate-fokus font-display text-[38px] font-bold leading-none tracking-[-0.04em] [animation-delay:80ms] lg:mt-7 lg:text-[64px] lg:leading-[0.98] lg:tracking-[-0.045em] xl:text-[78px]">
             {lead} —<br />
-            {middle}
-            <br />
+            {middle && (
+              <>
+                {middle}
+                <br />
+              </>
+            )}
+            {timePrefix && <>{timePrefix} </>}
             <span className="text-brand">{accent}</span>
           </h1>
 
