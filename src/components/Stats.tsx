@@ -12,7 +12,7 @@ interface StatsProps {
 const TRUSTPILOT = {
   score: 4.0,
   reviews: 3,
-  checked: '2026-10-11',
+  checked: '2026-10-14',
   url: { da: 'https://dk.trustpilot.com/review/skinchange.ai', en: 'https://www.trustpilot.com/review/skinchange.ai' },
 };
 
