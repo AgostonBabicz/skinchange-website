@@ -6,21 +6,24 @@ interface HeroProps {
   lang: Language;
 }
 
-// Splits "Online Hudlæge — Diagnose og Behandlingsplan inden for 48 Timer" into the designed lines:
-// the lead, what you get, and the time promise ("inden for 48 Timer" / "Within 48 Hours") on its own
-// line with the closing "48 Timer" / "48 Hours" in brand blue.
+// Splits "Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 Timer" into the designed
+// lines: the lead (before the line break), what you get, and the time promise ("inden for 48 Timer" /
+// "within 48 Hours") on its own line with the closing "48 Timer" / "48 Hours" in brand blue.
 function headlineParts(title: string) {
-  const [lead, rest = ''] = title.split(' — ');
+  const [lead, rest = ''] = title.split('\n');
   const timeAt = rest.search(/ (inden for|within) /i);
   const middle = timeAt >= 0 ? rest.slice(0, timeAt) : '';
+  // "Diagnose, behandlingsplan og recept" breaks before the last "og" / "and", so no word is left alone.
+  const andAt = middle.search(/ (og|and) [^ ]+$/i);
+  const middleLines = andAt > 0 ? [middle.slice(0, andAt), middle.slice(andAt + 1)] : middle ? [middle] : [];
   const words = (timeAt >= 0 ? rest.slice(timeAt + 1) : rest).split(' ');
-  return { lead, middle, timePrefix: words.slice(0, -2).join(' '), accent: words.slice(-2).join(' ') };
+  return { lead, middleLines, timePrefix: words.slice(0, -2).join(' '), accent: words.slice(-2).join(' ') };
 }
 
 export default function Hero({ lang }: HeroProps) {
   const t = getTranslation(lang);
   const isDa = lang === 'da';
-  const { lead, middle, timePrefix, accent } = headlineParts(t.hero.title);
+  const { lead, middleLines, timePrefix, accent } = headlineParts(t.hero.title);
 
   const downloads = isDa ? '5.000+ downloads' : '5,000+ downloads';
 
@@ -33,14 +36,15 @@ export default function Hero({ lang }: HeroProps) {
             {t.hero.mitid}
           </span>
 
-          <h1 className="mt-5 animate-fokus font-display text-[38px] font-bold leading-none tracking-[-0.04em] [animation-delay:80ms] lg:mt-7 lg:text-[64px] lg:leading-[0.98] lg:tracking-[-0.045em] xl:text-[78px]">
-            {lead} —<br />
-            {middle && (
-              <>
-                {middle}
+          <h1 className="mt-5 animate-fokus font-display text-[38px] font-bold leading-none tracking-[-0.04em] [animation-delay:80ms] lg:mt-7 lg:text-[48px] lg:leading-[0.98] lg:tracking-[-0.045em] xl:text-[64px]">
+            {lead}{' '}
+            <br />
+            {middleLines.map((line) => (
+              <span key={line}>
+                {line}{' '}
                 <br />
-              </>
-            )}
+              </span>
+            ))}
             {timePrefix && <>{timePrefix} </>}
             <span className="text-brand">{accent}</span>
           </h1>
