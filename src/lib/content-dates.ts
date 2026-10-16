@@ -14,8 +14,9 @@
 //   2026-09-30  5705af4  redesign: new stats strip on home, Peter Bjerring's CV on about,
 //                        App Store link moved to the Danish store on download
 //   2026-10-14           home hero headline (diagnosis and treatment plan); hives article image replaced
+//   2026-10-15           home hero headline: diagnose, behandlingsplan og recept
 export const contentDates: Record<string, string> = {
-  '': '2026-10-14',
+  '': '2026-10-15',
   '/about': '2026-09-30',
   '/download': '2026-09-30',
   '/faq': '2026-08-02',
