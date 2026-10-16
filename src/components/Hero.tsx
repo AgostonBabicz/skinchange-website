@@ -38,7 +38,7 @@ export default function Hero({ lang }: HeroProps) {
 
           <h1 className="mt-5 animate-fokus font-display text-[38px] font-bold leading-none tracking-[-0.04em] [animation-delay:80ms] lg:mt-7 lg:text-[48px] lg:leading-[0.98] lg:tracking-[-0.045em] xl:text-[64px]">
             {/* The lead is a small label above the offer (still part of the h1 for search engines). */}
-            <span className="mb-3 block font-sans text-[13px] font-semibold uppercase leading-none tracking-[0.12em] text-brand lg:mb-5 lg:text-[15px]">
+            <span className="mb-2 block text-[24px] leading-none tracking-[-0.03em] text-brand lg:mb-3 lg:text-[32px] xl:text-[40px]">
               {lead}
             </span>{' '}
             {middleLines.map((line) => (
