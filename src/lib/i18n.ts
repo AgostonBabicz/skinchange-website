@@ -15,7 +15,7 @@ export const translations = {
       cta: 'Hent appen',
     },
     hero: {
-      title: 'Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 Timer',
+      title: 'Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 timer',
       subtitle: 'Danmarks hurtigste hudklinik',
       description: 'Dine fotos analyseres af speciallæger i hudsygdomme',
       cta: 'Hent Appen',
@@ -167,7 +167,7 @@ William Nielsen Prisen`,
       cta: 'Get the app',
     },
     hero: {
-      title: 'Online Dermatologist\nDiagnosis, treatment plan and prescription within 48 Hours',
+      title: 'Online Dermatologist\nDiagnosis, treatment plan and prescription within 48 hours',
       subtitle: 'Denmark\'s fastest dermatological clinic',
       description: 'Your photos are analyzed by certified dermatologists',
       cta: 'Get the App',
