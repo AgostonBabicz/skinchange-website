@@ -6,9 +6,9 @@ interface HeroProps {
   lang: Language;
 }
 
-// Splits "Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 Timer" into the designed
-// lines: the lead (before the line break), what you get, and the time promise ("inden for 48 Timer" /
-// "within 48 Hours") on its own line with the closing "48 Timer" / "48 Hours" in brand blue.
+// Splits "Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 timer" into the designed
+// lines: the lead (a small label), what you get, and the time promise ("inden for 48 timer" /
+// "within 48 hours") on its own line with the closing "48 timer" / "48 hours" in brand blue.
 function headlineParts(title: string) {
   const [lead, rest = ''] = title.split('\n');
   const timeAt = rest.search(/ (inden for|within) /i);
@@ -37,8 +37,10 @@ export default function Hero({ lang }: HeroProps) {
           </span>
 
           <h1 className="mt-5 animate-fokus font-display text-[38px] font-bold leading-none tracking-[-0.04em] [animation-delay:80ms] lg:mt-7 lg:text-[48px] lg:leading-[0.98] lg:tracking-[-0.045em] xl:text-[64px]">
-            {lead}{' '}
-            <br />
+            {/* The lead is a small label above the offer (still part of the h1 for search engines). */}
+            <span className="mb-3 block font-sans text-[13px] font-semibold uppercase leading-none tracking-[0.12em] text-brand lg:mb-5 lg:text-[15px]">
+              {lead}
+            </span>{' '}
             {middleLines.map((line) => (
               <span key={line}>
                 {line}{' '}
