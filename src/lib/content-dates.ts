@@ -15,12 +15,13 @@
 //                        App Store link moved to the Danish store on download
 //   2026-10-14           home hero headline (diagnosis and treatment plan); hives article image replaced
 //   2026-10-15           home hero headline: diagnose, behandlingsplan og recept
+//   2026-10-25           FAQ "without MitID": MitID is required, EU/EEA contact option removed (how-it-works)
 export const contentDates: Record<string, string> = {
   '': '2026-10-15',
   '/about': '2026-09-30',
   '/download': '2026-09-30',
   '/faq': '2026-08-02',
-  '/faq/how-it-works': '2026-09-22',
+  '/faq/how-it-works': '2026-10-25',
   '/faq/pricing': '2026-08-02',
   '/faq/privacy-security': '2026-08-02',
   '/faq/app': '2026-08-02',

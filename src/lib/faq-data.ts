@@ -80,7 +80,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Kan jeg bruge SKIND, hvis jeg ikke har MitID eller CPR-nummer?',
-          answer: 'SKIND er tilgængelig for kunder bosat i EU og EØS (EU samt Norge, Island og Liechtenstein). Opretter du en sag fra et land uden for EU/EØS, får du besked om, at tjenesten ikke er tilgængelig for dig. Login og identitetsverifikation sker med MitID, som kræver et dansk CPR-nummer. Bor du i EU/EØS uden MitID, så kontakt os på info@skinchange.ai, før du opretter en sag, så vi kan vejlede dig.'
+          answer: 'Nej. For at oprette en sag i SKIND skal du logge ind med MitID, som kræver et dansk CPR-nummer. Har du ikke MitID, kan du desværre ikke oprette en sag i SKIND.'
         }
       ],
       en: [
@@ -126,7 +126,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Can I use SKIND without MitID or a Danish CPR number?',
-          answer: 'SKIND is available to customers residing in the EU and the EEA (the EU plus Norway, Iceland and Liechtenstein). If you try to create a case from a country outside the EU/EEA, you are told the service is not available to you. Login and identity verification use MitID, which requires a Danish CPR number. If you live in the EU/EEA without MitID, contact us at info@skinchange.ai before submitting a case and we will advise you.'
+          answer: 'No. To create a case in SKIND you need to log in with MitID, which requires a Danish CPR number. If you don\'t have MitID, you unfortunately can\'t create a case in SKIND.'
         }
       ]
     }
