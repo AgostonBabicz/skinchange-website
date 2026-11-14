@@ -64,7 +64,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Kan jeg bruge SKIND til mine børn?',
-          answer: 'Ja. Du kan oprette en sag for et barn under 18 år gennem din egen profil, hvis du har del i forældremyndigheden. Ved fælles forældremyndighed kan hver af forældrene oprette sagen, men I bør være enige om den. Du afgiver en tro og love-erklæring i appen. Unge på 15–17 år kan selv samtykke til behandling efter sundhedsloven og har ret til fortrolighed — også over for forældrene.'
+          answer: 'Ja. Du kan oprette en sag for et barn under 18 år gennem din egen profil, hvis du har del i forældremyndigheden. Ved fælles forældremyndighed kan hver af forældrene oprette sagen, men I bør være enige om den. Du afgiver en tro og love-erklæring i appen. Børn under 18 år kan ikke oprette en sag på egen profil. Sagen skal altid oprettes af en forælder med del i forældremyndigheden via forælderens profil.'
         },
         {
           question: 'Hvordan opretter jeg en sag for mit barn?',
@@ -80,7 +80,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Kan jeg bruge SKIND, hvis jeg ikke har MitID eller CPR-nummer?',
-          answer: 'Nej. For at oprette en sag i SKIND skal du logge ind med MitID, som kræver et dansk CPR-nummer. Har du ikke MitID, kan du desværre ikke oprette en sag i SKIND.'
+          answer: 'Nej. SKIND kan kun benyttes af personer med dansk CPR-nummer og MitID. For at oprette en sag i SKIND skal du logge ind med MitID, som kræver et dansk CPR-nummer. Har du ikke MitID, kan du desværre ikke oprette en sag i SKIND.'
         }
       ],
       en: [
@@ -110,7 +110,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Can I use SKIND for my children?',
-          answer: 'Yes. You can create a case for a child under 18 through your own profile if you hold parental responsibility. Where custody is shared, either parent may create the case, but you should agree on it first. You submit a sworn declaration in the app. Under the Danish Health Act, 15–17-year-olds can consent to treatment themselves and have their own right to confidentiality — including from their parents.'
+          answer: 'Yes. You can create a case for a child under 18 through your own profile if you hold parental responsibility. Where custody is shared, either parent may create the case, but you should agree on it first. You submit a sworn declaration in the app. Children under 18 cannot create a case on their own profile. The case must always be created by a parent who holds parental responsibility, via the parent\'s profile.'
         },
         {
           question: 'How do I create a case for my child?',
@@ -126,7 +126,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Can I use SKIND without MitID or a Danish CPR number?',
-          answer: 'No. To create a case in SKIND you need to log in with MitID, which requires a Danish CPR number. If you don\'t have MitID, you unfortunately can\'t create a case in SKIND.'
+          answer: 'No. SKIND can only be used by people with a Danish CPR number and MitID. To create a case in SKIND you need to log in with MitID, which requires a Danish CPR number. If you don\'t have MitID, you unfortunately can\'t create a case in SKIND.'
         }
       ]
     }
@@ -142,7 +142,7 @@ export const faqCategories: FaqCategory[] = [
       da: [
         {
           question: 'Hvad koster en online hudlægekonsultation?',
-          answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og opfølgende spørgsmål om netop den sag. Du betaler med betalingskort i appen, når du indsender sagen — der er intet abonnement og ingen automatisk fornyelse. Et nyt, andet hudproblem koster en ny konsultation. Kan sagen ikke vurderes, refunderer vi betalingen.'
+          answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose og behandlingsplan. Du betaler med betalingskort i appen, når du indsender sagen — der er intet abonnement og ingen automatisk fornyelse. Et nyt, andet hudproblem koster en ny konsultation. Kan sagen ikke vurderes, refunderer vi betalingen.'
         },
         {
           question: 'Er SKIND dækket af sygesikringen?',
@@ -156,7 +156,7 @@ export const faqCategories: FaqCategory[] = [
       en: [
         {
           question: 'How much does an online dermatologist consultation cost?',
-          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the dermatologist\'s assessment, diagnosis, treatment plan and follow-up questions about that case. You pay by card in the app when you submit the case — there is no subscription and no automatic renewal. A new, separate skin problem costs a new consultation. If the case cannot be assessed, we refund the payment.'
+          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the dermatologist\'s assessment, diagnosis and treatment plan. You pay by card in the app when you submit the case — there is no subscription and no automatic renewal. A new, separate skin problem costs a new consultation. If the case cannot be assessed, we refund the payment.'
         },
         {
           question: 'Is SKIND covered by health insurance?',

@@ -18,13 +18,15 @@
 //   2026-10-25           FAQ "without MitID": MitID is required, EU/EEA contact option removed (how-it-works)
 //   2026-11-14           wording: "læger med dansk autorisation" and "normalt … inden 48 timer" (home, download, guide,
 //                        faq, faq/how-it-works, blog index, and every article: CTA "Få en vurdering, normalt inden 48 timer")
+//   2026-11-14           FAQ corrections: price no longer lists follow-up questions (pricing, home FAQ schema); only
+//                        with Danish CPR number and MitID; a child's case is always created by a parent (how-it-works)
 export const contentDates: Record<string, string> = {
   '': '2026-11-14',
   '/about': '2026-09-30',
   '/download': '2026-11-14',
   '/faq': '2026-11-14',
   '/faq/how-it-works': '2026-11-14',
-  '/faq/pricing': '2026-08-02',
+  '/faq/pricing': '2026-11-14',
   '/faq/privacy-security': '2026-08-02',
   '/faq/app': '2026-08-02',
   '/faq/contact': '2026-08-02',

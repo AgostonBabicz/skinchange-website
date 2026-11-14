@@ -115,8 +115,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'En konsultation koster 298 kr. og dækker én hudlidelse. Prisen inkluderer vurdering, behandlingsplan og opfølgende spørgsmål om den pågældende sag.'
-            : 'A consultation costs 298 DKK and covers one skin condition. The price includes the assessment, a treatment plan and follow-up questions about that case.',
+            ? 'En konsultation koster 298 kr. og dækker én hudlidelse. Prisen inkluderer vurdering og behandlingsplan.'
+            : 'A consultation costs 298 DKK and covers one skin condition. The price includes the assessment and a treatment plan.',
         }
       }
     ]
