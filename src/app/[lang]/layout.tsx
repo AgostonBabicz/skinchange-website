@@ -34,8 +34,8 @@ export async function generateMetadata({ params }: { params: LangParams }): Prom
     : "SKIND | Online Skin Clinic";
     
   const description = isDa
-    ? "Danmarks online hudklinik. Speciallæger i hudsygdomme vurderer akne, eksem, psoriasis og hudforandringer inden for 48 timer. MitID verificeret. Kun 298 kr."
-    : "Denmark's online skin clinic. Dermatology specialists assess acne, eczema, psoriasis and skin changes within 48 hours. MitID verified. Only 298 DKK.";
+    ? "Danmarks online hudklinik. Læger med dansk autorisation vurderer normalt akne, eksem, psoriasis og hudforandringer inden 48 timer. MitID verificeret. Kun 298 kr."
+    : "Denmark's online skin clinic. Doctors with Danish authorisation usually assess acne, eczema, psoriasis and skin changes within 48 hours. MitID verified. Only 298 DKK.";
     
   const ogImage = "https://www.skinchange.dk/og-image.jpg";
 
@@ -109,7 +109,7 @@ const structuredData = {
         "width": 675,
         "height": 225
       },
-      "description": "Danmarks førende online hudklinik. Få en diagnose inden for 48 timer.",
+      "description": "Danmarks førende online hudklinik. Få en diagnose, normalt inden 48 timer.",
       "medicalSpecialty": "Dermatology",
       "address": {
         "@type": "PostalAddress",
@@ -164,7 +164,7 @@ const structuredData = {
       "primaryImageOfPage": {
         "@id": "https://www.skinchange.dk/og-image.jpg"
       },
-      "description": "Danmarks førende online hudklinik. Få en diagnose inden for 48 timer."
+      "description": "Danmarks førende online hudklinik. Få en diagnose, normalt inden 48 timer."
     },
     {
       "@type": "Service",

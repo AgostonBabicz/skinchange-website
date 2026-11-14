@@ -436,7 +436,7 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
           </ArticleFaq>
 
           <div className="article-cta">
-            <h3>{isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}</h3>
+            <h3>{isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}</h3>
             <p>
               {isDa
                 ? 'Er du bekymret for et modermærke, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge. Vurderingen afgør, hvor hurtigt du skal ses ved fysisk fremmøde: ser modermærket mistænkeligt ud, bliver du henvist til undersøgelse med dermatoskop og eventuel fjernelse. En beroligende vurdering erstatter ikke en fysisk undersøgelse, hvis modermærket bliver ved med at ændre sig.'

@@ -119,7 +119,7 @@ export default function ArticleShell({ lang, crumb, category, date, readTime, ti
                 className="pointer-events-none absolute -right-[70px] -top-[70px] h-[200px] w-[200px] rounded-full border border-signal/[0.22]"
               />
               <p className="relative font-display text-xl font-bold leading-[1.2]">
-                {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
+                {isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}
               </p>
               <Link
                 href={`/${lang}/download`}

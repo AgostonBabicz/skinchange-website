@@ -398,7 +398,7 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
           </ArticleFaq>
 
           <div className="article-cta">
-            <h3>{isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}</h3>
+            <h3>{isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}</h3>
             <p>
               {isDa
                 ? 'Er du voksen og i tvivl om en rød prik på huden, er en billedvurdering fra en certificeret hudlæge via SKIND-appen et fornuftigt første skridt. Drejer det sig om et spædbarn med et hæmangiom nær øje, næse, mund eller luftveje, med sår, eller med fem eller flere hæmangiomer, skal barnet ses ved fysisk fremmøde uden forsinkelse — kontakt egen læge eller vagtlæge i stedet.'

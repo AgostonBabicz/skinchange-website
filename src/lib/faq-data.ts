@@ -40,7 +40,7 @@ export const faqCategories: FaqCategory[] = [
       da: [
         {
           question: 'Hvordan fungerer SKIND?',
-          answer: 'Download vores app, opret en profil med MitID, tag billeder af dit hudproblem og besvar nogle spørgsmål om dine symptomer. En speciallæge i hud- og kønssygdomme gennemgår din sag og sender dig en vurdering, en diagnose og en behandlingsplan. Du modtager svaret direkte i appen, normalt inden for 48 timer.'
+          answer: 'Download vores app, opret en profil med MitID, tag billeder af dit hudproblem og besvar nogle spørgsmål om dine symptomer. Læger med dansk autorisation gennemgår din sag og sender dig en vurdering, en diagnose og en behandlingsplan. Du modtager svaret direkte i appen, normalt inden for 48 timer.'
         },
         {
           question: 'Hvor hurtigt får jeg svar?',
@@ -72,7 +72,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Hvem er lægerne bag SKIND?',
-          answer: 'Din sag vurderes af to speciallæger i hud- og kønssygdomme med dansk autorisation fra Styrelsen for Patientsikkerhed. De har selvstændigt sundhedsfagligt ansvar efter autorisationsloven og er underlagt tavshedspligt efter sundhedsloven. En ansvarlig læge er udpeget og gennemgår regelmæssigt sagerne. Alle vurderinger foretages af mennesker — ikke af en algoritme.'
+          answer: 'Din sag vurderes som udgangspunkt af to læger med dansk autorisation fra Styrelsen for Patientsikkerhed. De har selvstændigt sundhedsfagligt ansvar efter autorisationsloven og er underlagt tavshedspligt efter sundhedsloven. En ansvarlig læge er udpeget og gennemgår regelmæssigt sagerne. Alle vurderinger foretages af mennesker — ikke af en algoritme.'
         },
         {
           question: 'Kan I udskrive recept, og hvordan får jeg medicinen?',
@@ -86,7 +86,7 @@ export const faqCategories: FaqCategory[] = [
       en: [
         {
           question: 'How does SKIND work?',
-          answer: 'Download our app, create a profile with MitID, take photos of your skin problem and answer some questions about your symptoms. A specialist in dermatology and venereology reviews your case and sends you an assessment, a diagnosis and a treatment plan. You receive the response directly in the app, normally within 48 hours.'
+          answer: 'Download our app, create a profile with MitID, take photos of your skin problem and answer some questions about your symptoms. Doctors with Danish authorisation review your case and send you an assessment, a diagnosis and a treatment plan. You receive the response directly in the app, normally within 48 hours.'
         },
         {
           question: 'How quickly do I get a response?',
@@ -118,7 +118,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Who are the doctors behind SKIND?',
-          answer: 'Your case is assessed by two specialists in dermatology and venereology (speciallæge i hud- og kønssygdomme) holding Danish authorisation from the Danish Patient Safety Authority. They carry independent professional responsibility under the Danish Authorisation Act and are bound by medical confidentiality under the Danish Health Act. A responsible physician is appointed and reviews cases regularly. Every assessment is made by a human, not an algorithm.'
+          answer: 'Your case is assessed, as a rule, by two doctors with Danish authorisation from the Danish Patient Safety Authority. They carry independent professional responsibility under the Danish Authorisation Act and are bound by medical confidentiality under the Danish Health Act. A responsible physician is appointed and reviews cases regularly. Every assessment is made by a human, not an algorithm.'
         },
         {
           question: 'Can you issue prescriptions, and how do I collect the medicine?',

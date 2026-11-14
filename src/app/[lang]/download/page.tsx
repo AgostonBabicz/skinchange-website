@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   return {
     title: isDa ? 'Download appen | SKIND' : 'Download the app | SKIND',
     description: isDa
-      ? 'Download SKIND-appen nu og få professionel hudlægehjælp på under 48 timer. Certificerede dermatologer · MitID-verificeret · Kun 298 kr.'
-      : 'Download SKIND now and get professional dermatologist help in under 48 hours. Certified dermatologists · MitID verified · Only 298 DKK.',
+      ? 'Download SKIND-appen nu og få professionel hudlægehjælp, normalt inden 48 timer. Certificerede dermatologer · MitID-verificeret · Kun 298 kr.'
+      : 'Download SKIND now and get professional dermatologist help, usually within 48 hours. Certified dermatologists · MitID verified · Only 298 DKK.',
     keywords: isDa
       ? ['hudlæge app', 'modermærke app', 'tjek modermærke app', 'hudkræft app', 'hudlæge download']
       : ['dermatologist app', 'skin check app', 'skin cancer app', 'download dermatologist'],
@@ -74,8 +74,8 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
       availability: 'https://schema.org/InStock',
     },
     description: isDa
-      ? 'Professionel online hudlæge. Diagnose af akne, eksem, psoriasis og hudkræft inden for 48 timer.'
-      : 'Professional online dermatologist. Diagnosis of acne, eczema, psoriasis and skin cancer within 48 hours.',
+      ? 'Professionel online hudlæge. Diagnose af akne, eksem, psoriasis og hudkræft, normalt inden 48 timer.'
+      : 'Professional online dermatologist. Diagnosis of acne, eczema, psoriasis and skin cancer, usually within 48 hours.',
     url: `https://www.skinchange.dk/${lang}/download`,
     screenshot: `https://www.skinchange.dk/app/flow-${lang}.png`,
   };

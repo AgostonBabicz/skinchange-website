@@ -536,7 +536,7 @@ export default function EczemaPage({ params: { lang } }: PageProps) {
           {/* CTA */}
           <div className="article-cta">
             <h3>
-              {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
+              {isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}
             </h3>
             <p>
               {isDa

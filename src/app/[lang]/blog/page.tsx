@@ -697,7 +697,7 @@ export default function BlogPage({ params: { lang } }: PageProps) {
               {isDa ? 'Har du et hudproblem?' : 'Do you have a skin problem?'}
             </h2>
             <p className="text-[17px] leading-normal text-body lg:text-xl">
-              {isDa ? 'Få en professionel diagnose inden for 48 timer' : 'Get a professional diagnosis within 48 hours'}
+              {isDa ? 'Få en professionel diagnose, normalt inden 48 timer' : 'Get a professional diagnosis, usually within 48 hours'}
             </p>
           </div>
           <Link

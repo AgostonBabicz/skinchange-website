@@ -105,7 +105,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
             name: 'Hvornår skal jeg kontakte en hudlæge?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Kontakt en hudlæge, hvis infektionen ikke bedres efter 2–3 uger med håndkøbsbehandling, hvis den er udbredt eller rammer hovedbund eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig adgang til en certificeret hudlæge inden for 48 timer.',
+              text: 'Kontakt en hudlæge, hvis infektionen ikke bedres efter 2–3 uger med håndkøbsbehandling, hvis den er udbredt eller rammer hovedbund eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig normalt adgang til en certificeret hudlæge inden 48 timer.',
             },
           },
         ]
@@ -131,7 +131,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
             name: 'When should I contact a dermatologist?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Contact a dermatologist if the infection does not improve after 2–3 weeks of over-the-counter treatment, if it is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND gives you access to a certified dermatologist within 48 hours.',
+              text: 'Contact a dermatologist if the infection does not improve after 2–3 weeks of over-the-counter treatment, if it is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND usually gives you access to a certified dermatologist within 48 hours.',
             },
           },
         ],
@@ -533,8 +533,8 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
               </h3>
               <p>
                 {isDa
-                  ? 'Kontakt en hudlæge, hvis infektionen ikke bedres efter 2–3 uger med håndkøbsbehandling, hvis den er udbredt eller rammer hovedbund eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig adgang til en certificeret hudlæge inden for 48 timer.'
-                  : 'Contact a dermatologist if the infection does not improve after 2–3 weeks of over-the-counter treatment, if it is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND gives you access to a certified dermatologist within 48 hours.'}
+                  ? 'Kontakt en hudlæge, hvis infektionen ikke bedres efter 2–3 uger med håndkøbsbehandling, hvis den er udbredt eller rammer hovedbund eller negle, hvis du er immunsvækket, eller hvis du er usikker på diagnosen. SKIND giver dig normalt adgang til en certificeret hudlæge inden 48 timer.'
+                  : 'Contact a dermatologist if the infection does not improve after 2–3 weeks of over-the-counter treatment, if it is widespread or affects the scalp or nails, if you are immunocompromised, or if you are uncertain about the diagnosis. SKIND usually gives you access to a certified dermatologist within 48 hours.'}
               </p>
             </div>
           </ArticleFaq>
@@ -542,7 +542,7 @@ export default function TineaInfectionsRingwormPage({ params: { lang } }: PagePr
           {/* CTA */}
           <div className="article-cta">
             <h3>
-              {isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}
+              {isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}
             </h3>
             <p>
               {isDa

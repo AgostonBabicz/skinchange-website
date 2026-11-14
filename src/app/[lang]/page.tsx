@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
       ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SKIND' 
       : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SKIND',
     description: isDa 
-      ? 'Certificerede dermatologer online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft inden for 48 timer. Kun 298 kr. · MitID verificeret.'
-      : 'Certified dermatologists online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer within 48 hours. Only 298 DKK. · MitID verified.',
+      ? 'Certificerede dermatologer online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft, normalt inden 48 timer. Kun 298 kr. · MitID verificeret.'
+      : 'Certified dermatologists online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer, usually within 48 hours. Only 298 DKK. · MitID verified.',
     keywords: isDa 
       ? 'online hudlæge, teledermatologi, hudlæge online, akne behandling, eksem behandling, psoriasis behandling, hudkræft tjek, modermærker, online recept'
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
@@ -49,8 +49,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
     '@type': 'Offer',
     name: isDa ? 'Online Hudlæge Konsultation' : 'Online Dermatologist Consultation',
     description: isDa 
-      ? 'Professionel diagnose af hudsygdomme inden for 48 timer'
-      : 'Professional diagnosis of skin conditions within 48 hours',
+      ? 'Professionel diagnose af hudsygdomme, normalt inden 48 timer'
+      : 'Professional diagnosis of skin conditions, usually within 48 hours',
     price: isDa ? '298' : '40',
     priceCurrency: isDa ? 'DKK' : 'EUR',
     availability: 'https://schema.org/InStock',
@@ -105,8 +105,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'Ja. SKIND er MitID-verificeret, og alle vores læger er speciallæger i hud- og kønssygdomme. Dine billeder er krypterede og behandles fortroligt.'
-            : 'Yes. SKIND is MitID verified, and all our doctors are authorised specialists in dermatology and venereology. Your photos are encrypted and treated confidentially.',
+            ? 'Ja. SKIND er MitID-verificeret, og alle vores læger har dansk autorisation. Dine billeder er krypterede og behandles fortroligt.'
+            : 'Yes. SKIND is MitID verified, and all our doctors have Danish authorisation. Your photos are encrypted and treated confidentially.',
         }
       },
       {

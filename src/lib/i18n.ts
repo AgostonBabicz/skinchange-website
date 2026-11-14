@@ -17,7 +17,7 @@ export const translations = {
     hero: {
       title: 'Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 timer',
       subtitle: 'Danmarks hurtigste hudklinik',
-      description: 'Dine fotos analyseres af speciallæger i hudsygdomme',
+      description: 'Dine fotos analyseres af læger med dansk autorisation',
       cta: 'Hent Appen',
       mitid: 'MitID Verificeret',
       price: '298 DKK',
@@ -42,7 +42,7 @@ export const translations = {
       },
       step3: {
         title: 'Efter betaling gennemgår vores hudlæger din sag',
-        desc: 'Du modtager diagnose samt behandlingsplan med indbygget second opinion indenfor 48 timer.',
+        desc: 'Du modtager normalt diagnose samt behandlingsplan med indbygget second opinion inden 48 timer.',
       },
     },
     peter: {
@@ -194,7 +194,7 @@ William Nielsen Prisen`,
       },
       step3: {
         title: 'After payment our dermatologists review your case',
-        desc: 'You receive diagnosis and treatment plan with built-in second opinion within 48 hours.',
+        desc: 'You usually receive diagnosis and treatment plan with built-in second opinion within 48 hours.',
       },
     },
     peter: {

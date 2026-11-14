@@ -431,7 +431,7 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
           </ArticleFaq>
 
           <div className="article-cta">
-            <h3>{isDa ? 'Få en vurdering inden for 48 timer' : 'Get an assessment within 48 hours'}</h3>
+            <h3>{isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}</h3>
             <p>
               {isDa
                 ? 'Har du ru, skællende pletter, der ikke forsvinder? Upload billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge — så du ved, om pletten kan behandles, eller om den skal ses ved fysisk fremmøde.'

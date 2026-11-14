@@ -59,8 +59,8 @@ export default function GuidePage({ params: { lang } }: PageProps) {
             </h2>
             <p className="text-[17px] leading-[1.55] text-body lg:max-w-[520px] lg:text-xl lg:leading-normal">
               {isDa
-                ? 'Download appen i dag og få hjælp til dit hudproblem inden for 48 timer'
-                : 'Download the app today and get help with your skin problem within 48 hours'}
+                ? 'Download appen i dag og få hjælp til dit hudproblem, normalt inden 48 timer'
+                : 'Download the app today and get help with your skin problem, usually within 48 hours'}
             </p>
             <Link
               href={`/${lang}/download`}
