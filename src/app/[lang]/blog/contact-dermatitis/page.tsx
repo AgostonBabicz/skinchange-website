@@ -499,8 +499,8 @@ export default function ContactDermatitisPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Hvis du har et vedvarende hududslæt, du ikke kan identificere, kan du via SKIND-appen få en personlig vurdering fra en certificeret hudlæge — uden ventetid.'
-                : 'If you have a persistent skin rash you cannot identify, you can get a personal assessment from a certified dermatologist via the SKIND app — with no waiting list.'}
+                ? 'Hvis du har et vedvarende hududslæt, du ikke kan identificere, kan du via SKIND-appen få en personlig vurdering fra en certificeret læge — uden ventetid.'
+                : 'If you have a persistent skin rash you cannot identify, you can get a personal assessment from a certified doctor via the SKIND app — with no waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

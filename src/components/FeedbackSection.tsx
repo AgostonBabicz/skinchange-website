@@ -30,7 +30,7 @@ export default function FeedbackSection({ lang }: FeedbackSectionProps) {
   ];
 
   return (
-    <section aria-labelledby="h-feedback" className="mx-auto max-w-page pt-[72px] lg:px-10 lg:py-32 xl:px-20">
+    <section aria-labelledby="h-feedback" className="mx-auto max-w-page py-[72px] lg:px-10 lg:py-32 xl:px-20">
       <h2
         id="h-feedback"
         data-reveal

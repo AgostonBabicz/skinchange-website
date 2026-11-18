@@ -434,8 +434,8 @@ export default function ActinicKeratosisPage({ params: { lang } }: PageProps) {
             <h3>{isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}</h3>
             <p>
               {isDa
-                ? 'Har du ru, skællende pletter, der ikke forsvinder? Upload billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge — så du ved, om pletten kan behandles, eller om den skal ses ved fysisk fremmøde.'
-                : 'Do you have rough, scaly patches that will not go away? Upload photos via the SKIND app and get an assessment from a certified dermatologist — so you know whether the patch can be treated, or whether it needs to be seen in person.'}
+                ? 'Har du ru, skællende pletter, der ikke forsvinder? Upload billeder via SKIND-appen og få en vurdering fra en certificeret læge — så du ved, om pletten kan behandles, eller om den skal ses ved fysisk fremmøde.'
+                : 'Do you have rough, scaly patches that will not go away? Upload photos via the SKIND app and get an assessment from a certified doctor — so you know whether the patch can be treated, or whether it needs to be seen in person.'}
             </p>
             <Link href={`/${lang}/download`} className="article-cta-button">
               {isDa ? 'Download appen' : 'Download the app'}

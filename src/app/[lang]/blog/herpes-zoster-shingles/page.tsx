@@ -449,8 +449,8 @@ export default function HerpesZosterShinglesPage({ params: { lang } }: PageProps
             </p>
             <p>
               {isDa
-                ? 'Til andre hudforandringer, og til opfølgning efter et udbrud, kan du uploade billeder via SKIND-appen og normalt få en vurdering fra en certificeret hudlæge inden 48 timer.'
-                : 'For other skin changes, and for follow-up after an episode, you can upload photos via the SKIND app and usually get an assessment from a certified dermatologist within 48 hours.'}
+                ? 'Til andre hudforandringer, og til opfølgning efter et udbrud, kan du uploade billeder via SKIND-appen og normalt få en vurdering fra en certificeret læge inden 48 timer.'
+                : 'For other skin changes, and for follow-up after an episode, you can upload photos via the SKIND app and usually get an assessment from a certified doctor within 48 hours.'}
             </p>
             <div className="article-cta-actions">
               <Link

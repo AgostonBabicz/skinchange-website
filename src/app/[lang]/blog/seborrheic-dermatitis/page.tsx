@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Seboroisk Dermatitis: Symptomer og Behandling | SKIND',
         description:
-          'Seboroisk dermatitis: hvorfor skæl og røde, fedtede pletter opstår, hvem der rammes, og hvad der virker. Få en vurdering af en hudlæge via SKIND.',
+          'Seboroisk dermatitis: hvorfor skæl og røde, fedtede pletter opstår, hvem der rammes, og hvad der virker. Få en vurdering af en læge via SKIND.',
         keywords:
           'seboroisk dermatitis, skæl, vuggekant, seboroisk dermatitis behandling, hudlæge, SKIND',
         alternates: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'Seborrhoeic Dermatitis: Symptoms and Treatment | SKIND',
         description:
-          'Seborrhoeic dermatitis: why dandruff and red, greasy patches appear, who gets it, and what works. Get an assessment from a dermatologist via SKIND.',
+          'Seborrhoeic dermatitis: why dandruff and red, greasy patches appear, who gets it, and what works. Get an assessment from a doctor via SKIND.',
         keywords:
           'seborrhoeic dermatitis, dandruff, cradle cap, seborrhoeic dermatitis treatment, dermatologist, SKIND',
         alternates: {
@@ -427,8 +427,8 @@ export default function SeborrheicDermatitisPage({ params: { lang } }: PageProps
             </h3>
             <p>
               {isDa
-                ? 'Er du i tvivl om dit udslæt? Upload billeder via SKIND-appen og modtag en personlig vurdering fra en certificeret hudlæge — uden ventetid.'
-                : 'Not sure about your rash? Upload photos via the SKIND app and receive a personal assessment from a certified dermatologist — no waiting list.'}
+                ? 'Er du i tvivl om dit udslæt? Upload billeder via SKIND-appen og modtag en personlig vurdering fra en certificeret læge — uden ventetid.'
+                : 'Not sure about your rash? Upload photos via the SKIND app and receive a personal assessment from a certified doctor — no waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

@@ -472,8 +472,8 @@ export default function MolluscumContagiosumPage({ params: { lang } }: PageProps
             </h3>
             <p>
               {isDa
-                ? 'Er du i tvivl om dine hudproblemer? Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret hudlæge – uden ventetid.'
-                : 'Unsure about your skin concerns? Upload photos of your skin via the SKIND app and receive a personal assessment from a certified dermatologist — no waiting list.'}
+                ? 'Er du i tvivl om dine hudproblemer? Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret læge – uden ventetid.'
+                : 'Unsure about your skin concerns? Upload photos of your skin via the SKIND app and receive a personal assessment from a certified doctor — no waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

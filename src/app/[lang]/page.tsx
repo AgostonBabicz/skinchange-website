@@ -8,7 +8,6 @@ import PartnersSection from '@/components/PartnersSection';
 import UserGuideSection from '@/components/UserGuideSection';
 import FeedbackSection from '@/components/FeedbackSection';
 import DiseasesSection from '@/components/DiseasesSection';
-import AvailabilitySection from '@/components/AvailabilitySection';
 import Footer from '@/components/Footer';
 import MobileCtaBar from '@/components/MobileCtaBar';
 import { Language } from '@/lib/i18n';
@@ -24,8 +23,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
       ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SKIND' 
       : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SKIND',
     description: isDa 
-      ? 'Certificerede dermatologer online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft, normalt inden 48 timer. Kun 298 kr. · MitID verificeret.'
-      : 'Certified dermatologists online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer, usually within 48 hours. Only 298 DKK. · MitID verified.',
+      ? 'Certificerede læger online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft, normalt inden 48 timer. Kun 298 kr. · MitID verificeret.'
+      : 'Certified doctors online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer, usually within 48 hours. Only 298 DKK. · MitID verified.',
     keywords: isDa 
       ? 'online hudlæge, teledermatologi, hudlæge online, akne behandling, eksem behandling, psoriasis behandling, hudkræft tjek, modermærker, online recept'
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
@@ -115,8 +114,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'En konsultation koster 298 kr. og dækker én hudlidelse. Prisen inkluderer vurdering og behandlingsplan.'
-            : 'A consultation costs 298 DKK and covers one skin condition. The price includes the assessment and a treatment plan.',
+            ? 'En konsultation koster 298 kr. og dækker én hudlidelse. Prisen inkluderer vurdering, behandlingsplan og relevante recepter.'
+            : 'A consultation costs 298 DKK and covers one skin condition. The price includes the assessment, a treatment plan and relevant prescriptions.',
         }
       }
     ]
@@ -137,7 +136,6 @@ export default function HomePage({ params: { lang } }: PageProps) {
         <PeterSection lang={lang} />
         <UserGuideSection lang={lang} />
         <FeedbackSection lang={lang} />
-        <AvailabilitySection lang={lang} />
         <Footer lang={lang} />
         <MobileCtaBar lang={lang} />
       </main>

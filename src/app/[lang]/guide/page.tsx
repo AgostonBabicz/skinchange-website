@@ -44,8 +44,8 @@ export default function GuidePage({ params: { lang } }: PageProps) {
         </div>
         <p className="mb-1.5 hidden max-w-[300px] animate-fokus text-base leading-[1.55] text-body [animation-delay:120ms] lg:block">
           {isDa
-            ? 'Syv trin fra du opretter din sag, til du har svar fra hudlægen.'
-            : 'Seven steps from creating your case to your answer from the dermatologist.'}
+            ? 'Syv trin fra du opretter din sag, til du har svar fra lægen.'
+            : 'Seven steps from creating your case to your answer from the doctor.'}
         </p>
       </header>
 
@@ -76,7 +76,7 @@ export default function GuidePage({ params: { lang } }: PageProps) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`/app/guide-7-${lang}.webp`}
-              alt={isDa ? 'SKIND-appen viser hudlægens svar med diagnose og behandlingsplan' : "The SKIND app showing the dermatologist's answer with a diagnosis and a treatment plan"}
+              alt={isDa ? 'SKIND-appen viser lægens svar med diagnose og behandlingsplan' : "The SKIND app showing the doctor's answer with a diagnosis and a treatment plan"}
               width={380}
               height={770}
               loading="lazy"

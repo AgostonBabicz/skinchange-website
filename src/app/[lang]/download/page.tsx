@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   return {
     title: isDa ? 'Download appen | SKIND' : 'Download the app | SKIND',
     description: isDa
-      ? 'Download SKIND-appen nu og få professionel hudlægehjælp, normalt inden 48 timer. Certificerede dermatologer · MitID-verificeret · Kun 298 kr.'
-      : 'Download SKIND now and get professional dermatologist help, usually within 48 hours. Certified dermatologists · MitID verified · Only 298 DKK.',
+      ? 'Download SKIND-appen nu og få professionel lægehjælp, normalt inden 48 timer. Certificerede læger · MitID-verificeret · Kun 298 kr.'
+      : 'Download SKIND now and get professional help from a doctor, usually within 48 hours. Certified doctors · MitID verified · Only 298 DKK.',
     keywords: isDa
       ? ['hudlæge app', 'modermærke app', 'tjek modermærke app', 'hudkræft app', 'hudlæge download']
       : ['dermatologist app', 'skin check app', 'skin cancer app', 'download dermatologist'],
@@ -83,8 +83,8 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
   const features = [
     isDa ? 'Sikker MitID login' : 'Secure MitID login',
     isDa ? '48 timers diagnose' : '48 hour diagnosis',
-    isDa ? 'Certificerede hudlæger' : 'Certified dermatologists',
-    isDa ? 'Behandling inden for 48 timer' : 'Treatment within 48 hours',
+    isDa ? 'Certificerede læger' : 'Certified doctors',
+    isDa ? 'Behandling, normalt inden 48 timer' : 'Treatment, usually within 48 hours',
   ];
 
   return (

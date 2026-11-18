@@ -17,7 +17,7 @@ export const translations = {
     hero: {
       title: 'Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 timer',
       subtitle: 'Danmarks hurtigste hudklinik',
-      description: 'Dine fotos analyseres af læger med dansk autorisation',
+      description: 'Dine fotos analyseres af læger',
       cta: 'Hent Appen',
       mitid: 'MitID Verificeret',
       price: '298 DKK',
@@ -38,11 +38,11 @@ export const translations = {
       },
       step2: {
         title: 'Besvar spørgsmål',
-        desc: 'Svar på spørgsmål om dit hudproblem for at hjælpe vores hudlæger med at stille den rigtige diagnose.',
+        desc: 'Svar på spørgsmål om dit hudproblem for at hjælpe vores læger med at stille den rigtige diagnose.',
       },
       step3: {
-        title: 'Efter betaling gennemgår vores hudlæger din sag',
-        desc: 'Du modtager normalt diagnose samt behandlingsplan med indbygget second opinion inden 48 timer.',
+        title: 'Efter betaling gennemgår vores læger din sag',
+        desc: 'Du modtager normalt diagnose samt behandlingsplan inden 48 timer.',
       },
     },
     peter: {
@@ -99,7 +99,7 @@ William Nielsen Prisen`,
     },
     diseases: {
       title: 'Typiske hudproblemer vi behandler',
-      subtitle: 'Vores specialister kan hjælpe med en bred vifte af hudsygdomme',
+      subtitle: 'Vores læger kan hjælpe med en bred vifte af hudsygdomme',
       items: [
         { name: 'Hudkræft', desc: 'Mistanke om forandringer', slug: 'melanoma' },
         { name: 'Akne', desc: 'Uren hud og bumser', slug: 'acne' },
@@ -141,10 +141,6 @@ William Nielsen Prisen`,
         },
       ],
     },
-    availability: {
-      title: 'Tilgængelig i hele Europa',
-      subtitle: 'Vi arbejder på at gøre SKIND tilgængelig i hele EU',
-    },
     footer: {
       privacy: 'Privatlivspolitik',
       terms: 'Vilkår & Betingelser',
@@ -169,7 +165,7 @@ William Nielsen Prisen`,
     hero: {
       title: 'Online Dermatologist\nDiagnosis, treatment plan and prescription within 48 hours',
       subtitle: 'Denmark\'s fastest dermatological clinic',
-      description: 'Your photos are analyzed by certified dermatologists',
+      description: 'Your photos are analysed by doctors',
       cta: 'Get the App',
       mitid: 'MitID Verified',
       price: '298 DKK',
@@ -190,11 +186,11 @@ William Nielsen Prisen`,
       },
       step2: {
         title: 'Answer questions',
-        desc: 'Answer questions about your skin problem to help our dermatologists make the right diagnosis.',
+        desc: 'Answer questions about your skin problem to help our doctors make the right diagnosis.',
       },
       step3: {
-        title: 'After payment our dermatologists review your case',
-        desc: 'You usually receive diagnosis and treatment plan with built-in second opinion within 48 hours.',
+        title: 'After payment our doctors review your case',
+        desc: 'You usually receive diagnosis and treatment plan within 48 hours.',
       },
     },
     peter: {
@@ -251,7 +247,7 @@ William Nielsen Prize`,
     },
     diseases: {
       title: 'Typical skin problems we treat',
-      subtitle: 'Our specialists can help with a wide range of skin conditions',
+      subtitle: 'Our doctors can help with a wide range of skin conditions',
       items: [
         { name: 'Skin Cancer', desc: 'Suspicious changes', slug: 'melanoma' },
         { name: 'Acne', desc: 'Blemishes and pimples', slug: 'acne' },
@@ -292,10 +288,6 @@ William Nielsen Prize`,
           condition: 'Rosacea',
         },
       ],
-    },
-    availability: {
-      title: 'Available throughout Europe',
-      subtitle: 'We are working to make SKIND available throughout the EU',
     },
     footer: {
       privacy: 'Privacy Policy',

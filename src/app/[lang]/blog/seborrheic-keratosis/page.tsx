@@ -530,8 +530,8 @@ export default function SeborrhoeicKeratosisPage({ params: { lang } }: PageProps
             </h3>
             <p>
               {isDa
-                ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret hudlæge, normalt inden 48 timer — uden venteliste.'
-                : 'Upload photos of your skin via the SKIND app and receive a personal assessment from a certified dermatologist, usually within 48 hours — no waiting list.'}
+                ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret læge, normalt inden 48 timer — uden venteliste.'
+                : 'Upload photos of your skin via the SKIND app and receive a personal assessment from a certified doctor, usually within 48 hours — no waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

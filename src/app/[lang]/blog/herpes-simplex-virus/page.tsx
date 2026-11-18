@@ -487,8 +487,8 @@ export default function HerpesSimplexVirusPage({ params: { lang } }: PageProps) 
             </h3>
             <p>
               {isDa
-                ? 'Upload billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge – diskret og uden ventetid. Er det dit første udbrud i kønsområdet, skal du dog undersøges hos lægen, så diagnosen kan bekræftes med en podning.'
-                : 'Upload photos via the SKIND app and get an assessment from a certified dermatologist — discreetly and without a waiting list. If this is your first outbreak in the genital area, you should still be examined in person so the diagnosis can be confirmed with a swab.'}
+                ? 'Upload billeder via SKIND-appen og få en vurdering fra en certificeret læge – diskret og uden ventetid. Er det dit første udbrud i kønsområdet, skal du dog undersøges hos lægen, så diagnosen kan bekræftes med en podning.'
+                : 'Upload photos via the SKIND app and get an assessment from a certified doctor — discreetly and without a waiting list. If this is your first outbreak in the genital area, you should still be examined in person so the diagnosis can be confirmed with a swab.'}
             </p>
             <div className="article-cta-actions">
               <Link

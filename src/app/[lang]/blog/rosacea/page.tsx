@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Rosacea? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Lær alt om rosacea: hvad det er, hvorfor det opstår, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering af en hudlæge via SKIND.',
+          'Lær alt om rosacea: hvad det er, hvorfor det opstår, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering af en læge via SKIND.',
         keywords:
           'hvad er rosacea, rosacea symptomer, rosacea årsager, rosacea behandling, hudlæge rosacea, SKIND',
         alternates: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'What is Rosacea? Causes, Symptoms and Treatment | SKIND',
         description:
-          'Learn all about rosacea: what it is, why it happens, who gets it, and which treatments work. Get an assessment from a dermatologist via SKIND.',
+          'Learn all about rosacea: what it is, why it happens, who gets it, and which treatments work. Get an assessment from a doctor via SKIND.',
         keywords:
           'what is rosacea, rosacea symptoms, rosacea causes, rosacea treatment, dermatologist rosacea, SKIND',
         alternates: {
@@ -457,8 +457,8 @@ export default function RosaceaPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
-                : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret læge – uden ventetid på sygehus.'
+                : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified doctor — no hospital waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

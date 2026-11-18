@@ -454,8 +454,8 @@ export default function InsectStingPage({ params: { lang } }: PageProps) {
             <h3>{isDa ? 'Få hjælp til insektbid, der ikke falder til ro' : 'Get help for insect bites that are not settling'}</h3>
             <p>
               {isDa
-                ? 'Hvis et bid eller stik bliver ved med at være rødt, hævet eller kløende i mere end et par dage, eller hvis det ser betændt ud, kan du få en vurdering fra en certificeret hudlæge via SKIND-appen. Ved tegn på en alvorlig allergisk reaktion — vejrtrækningsbesvær, hævelse af ansigt, læber, tunge eller svælg, svimmelhed eller besvimelsesfornemmelse — ring 112 med det samme. Vent ikke på en vurdering i appen.'
-                : 'For a bite or sting that stays red, swollen or itchy for more than a few days, or that looks like it may be infected, you can get an assessment from a certified dermatologist via the SKIND app. If you have any sign of a severe allergic reaction — difficulty breathing, swelling of the face, lips, tongue or throat, dizziness or faintness — call 112 immediately. Do not wait for an app assessment.'}
+                ? 'Hvis et bid eller stik bliver ved med at være rødt, hævet eller kløende i mere end et par dage, eller hvis det ser betændt ud, kan du få en vurdering fra en certificeret læge via SKIND-appen. Ved tegn på en alvorlig allergisk reaktion — vejrtrækningsbesvær, hævelse af ansigt, læber, tunge eller svælg, svimmelhed eller besvimelsesfornemmelse — ring 112 med det samme. Vent ikke på en vurdering i appen.'
+                : 'For a bite or sting that stays red, swollen or itchy for more than a few days, or that looks like it may be infected, you can get an assessment from a certified doctor via the SKIND app. If you have any sign of a severe allergic reaction — difficulty breathing, swelling of the face, lips, tongue or throat, dizziness or faintness — call 112 immediately. Do not wait for an app assessment.'}
             </p>
             <Link href={`/${lang}/download`} className="article-cta-button">
               {isDa ? 'Download appen' : 'Download the app'}

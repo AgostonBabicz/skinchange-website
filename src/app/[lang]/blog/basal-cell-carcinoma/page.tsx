@@ -574,8 +574,8 @@ export default function BasalCellCarcinomaPage({ params: { lang } }: PageProps) 
             </h3>
             <p>
               {isDa
-                ? 'Er du i tvivl om en knude, et sår eller en plet på din hud? Upload billeder via SKIND-appen og få en professionel vurdering fra en certificeret hudlæge – uden lange ventetider. Ser forandringen mistænkelig ud, henvises du videre til undersøgelse ved fysisk fremmøde.'
-                : 'Are you unsure about a bump, sore or patch on your skin? Upload photos via the SKIND app and get a professional assessment from a certified dermatologist — without long waiting times. If the lesion looks suspicious, you will be directed on to an in-person examination.'}
+                ? 'Er du i tvivl om en knude, et sår eller en plet på din hud? Upload billeder via SKIND-appen og få en professionel vurdering fra en certificeret læge – uden lange ventetider. Ser forandringen mistænkelig ud, henvises du videre til undersøgelse ved fysisk fremmøde.'
+                : 'Are you unsure about a bump, sore or patch on your skin? Upload photos via the SKIND app and get a professional assessment from a certified doctor — without long waiting times. If the lesion looks suspicious, you will be directed on to an in-person examination.'}
             </p>
             <div className="article-cta-actions">
               <Link

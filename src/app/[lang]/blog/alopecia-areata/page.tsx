@@ -486,8 +486,8 @@ export default function AlopeciaAreataPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Upload billeder af din hovedbund via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge — uden ventetid på sygehus.'
-                : 'Upload photos of your scalp via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
+                ? 'Upload billeder af din hovedbund via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret læge — uden ventetid på sygehus.'
+                : 'Upload photos of your scalp via the SKIND app and receive a personal assessment and treatment plan from a certified doctor — no hospital waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

@@ -76,14 +76,15 @@ export default function Hero({ lang }: HeroProps) {
             </Link>
           </div>
 
-          <div className="mt-[22px] flex animate-fokus gap-[18px] [animation-delay:340ms] lg:mt-9 lg:gap-7">
-            <span className="flex items-center gap-1.5 text-sm font-medium text-body lg:gap-2 lg:text-[15px]">
+          {/* On narrow phones the two items wrap onto their own lines instead of breaking mid-phrase. */}
+          <div className="mt-[22px] flex animate-fokus flex-wrap gap-x-[18px] gap-y-2 [animation-delay:340ms] lg:mt-9 lg:gap-x-7">
+            <span className="flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-body lg:gap-2 lg:text-[15px]">
               <LockIcon size={18} strokeWidth={1.8} className="h-4 w-4 text-brand lg:h-[18px] lg:w-[18px]" />
               {isDa ? 'Sikker & krypteret' : 'Secure & encrypted'}
             </span>
-            <span className="flex items-center gap-1.5 text-sm font-medium text-body lg:gap-2 lg:text-[15px]">
+            <span className="flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-body lg:gap-2 lg:text-[15px]">
               <ClockIcon size={18} strokeWidth={1.8} className="h-4 w-4 text-brand lg:h-[18px] lg:w-[18px]" />
-              {isDa ? '48 timers garanti' : '48 hour guarantee'}
+              {isDa ? 'Normalt svar inden 48 timer' : 'Usually an answer within 48 hours'}
             </span>
           </div>
         </div>

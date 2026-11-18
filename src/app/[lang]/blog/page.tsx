@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
       ? 'Blog om Hudsygdomme & Behandling | SKIND' 
       : 'Skin Disease & Treatment Blog | SKIND',
     description: isDa 
-      ? 'Få ekspertråd om hudsygdomme, behandling af akne, eksem, psoriasis og meget mere. Læs artikler skrevet af certificerede hudlæger.' 
-      : 'Get expert advice on skin diseases, acne treatment, eczema, psoriasis and more. Articles written by certified dermatologists.',
+      ? 'Få ekspertråd om hudsygdomme, behandling af akne, eksem, psoriasis og meget mere. Læs artikler skrevet af certificerede læger.' 
+      : 'Get expert advice on skin diseases, acne treatment, eczema, psoriasis and more. Articles written by certified doctors.',
     alternates: {
       canonical: `https://www.skinchange.dk/${params.lang}/blog`,
       languages: {
@@ -638,8 +638,8 @@ export default function BlogPage({ params: { lang } }: PageProps) {
         </h1>
         <p className="animate-fokus text-[17px] leading-normal text-body [animation-delay:100ms] lg:col-span-5 lg:col-start-8 lg:text-xl">
           {isDa
-            ? 'Ekspertråd om hudsygdomme, behandlinger og hudpleje fra certificerede hudlæger'
-            : 'Expert advice on skin diseases, treatments and skincare from certified dermatologists'}
+            ? 'Ekspertråd om hudsygdomme, behandlinger og hudpleje fra certificerede læger'
+            : 'Expert advice on skin diseases, treatments and skincare from certified doctors'}
         </p>
       </header>
 

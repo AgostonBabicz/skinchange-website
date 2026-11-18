@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Skab? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Skab (fnat): hvorfor det smitter, hvordan gangene ser ud, og hvilke behandlinger der virker på miden. Få en vurdering af en hudlæge via SKIND.',
+          'Skab (fnat): hvorfor det smitter, hvordan gangene ser ud, og hvilke behandlinger der virker på miden. Få en vurdering af en læge via SKIND.',
         keywords:
           'hvad er skab, fnat, skab årsager, skab symptomer, skab behandling, skab smitte, hudlæge skab, SKIND',
         alternates: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'What is Scabies? Causes, Symptoms and Treatment | SKIND',
         description:
-          'Scabies explained: why it spreads, what the burrows look like, and which treatments clear the mite. Get an assessment from a dermatologist via SKIND.',
+          'Scabies explained: why it spreads, what the burrows look like, and which treatments clear the mite. Get an assessment from a doctor via SKIND.',
         keywords:
           'what is scabies, scabies causes, scabies symptoms, scabies treatment, scabies mites, dermatologist scabies, SKIND',
         alternates: {
@@ -477,8 +477,8 @@ export default function ScabiesPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Er du i tvivl om dine symptomer? Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret hudlæge – uden ventetid.'
-                : 'Not sure about your symptoms? Upload photos of your skin via the SKIND app and receive a personal assessment from a certified dermatologist — no waiting list.'}
+                ? 'Er du i tvivl om dine symptomer? Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering fra en certificeret læge – uden ventetid.'
+                : 'Not sure about your symptoms? Upload photos of your skin via the SKIND app and receive a personal assessment from a certified doctor — no waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

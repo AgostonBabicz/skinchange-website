@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? "Kontakt os | SKIND" 
       : "Contact Us | SKIND",
     description: isDa
-      ? "Kontakt SKIND for spørgsmål om online hudkonsultation. Email: info@skinchange.ai. Vi besvarer din henvendelse inden for 48 timer."
-      : "Contact SKIND for questions about online skin consultation. Email: info@skinchange.ai. We respond within 48 hours.",
+      ? "Kontakt SKIND for spørgsmål om online hudkonsultation. Email: info@skinchange.ai. Vi besvarer normalt din henvendelse inden 48 timer."
+      : "Contact SKIND for questions about online skin consultation. Email: info@skinchange.ai. We usually respond within 48 hours.",
     alternates: {
       canonical: `https://www.skinchange.dk/${params.lang}/contact`,
       languages: {
@@ -75,7 +75,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
   const faqItems = isDa ? [
     {
       q: "Hvor hurtigt får jeg svar?",
-      a: "Vi besvarer alle henvendelser inden for 48 timer på hverdage."
+      a: "Vi besvarer normalt alle henvendelser inden 48 timer på hverdage."
     },
     {
       q: "Kan jeg ringe til jer?",
@@ -88,7 +88,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
   ] : [
     {
       q: "How quickly will I get a response?",
-      a: "We respond to all inquiries within 48 hours on business days."
+      a: "We usually respond to all inquiries within 48 hours on business days."
     },
     {
       q: "Can I call you?",
@@ -124,7 +124,7 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           </span>
           <h2 className="mt-2 font-display text-2xl font-bold tracking-[-0.02em] lg:mt-3 lg:text-[28px]">Email</h2>
           <p className="text-base leading-[1.55] text-on-ink-soft lg:text-lg">
-            {isDa ? 'Send os en email, og vi svarer inden for 48 timer.' : 'Send us an email, and we will respond within 48 hours.'}
+            {isDa ? 'Send os en email, og vi svarer normalt inden 48 timer.' : 'Send us an email, and we will usually respond within 48 hours.'}
           </p>
           <a
             href={`mailto:${contactInfo.email}`}
@@ -176,8 +176,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           </div>
           <figcaption className="px-5 py-[18px] text-[15px] leading-[1.55] text-body lg:px-8 lg:py-[22px] lg:text-base">
             {isDa
-              ? 'SKIND er tilgængelig i hele Danmark. Vores digitale platform gør det muligt at modtage hudlægekonsultation uanset hvor du bor.'
-              : 'SKIND is available throughout Denmark. Our digital platform makes it possible to receive dermatologist consultation no matter where you live.'}
+              ? 'SKIND er tilgængelig i hele Danmark. Vores digitale platform gør det muligt at modtage lægekonsultation uanset hvor du bor.'
+              : 'SKIND is available throughout Denmark. Our digital platform makes it possible to receive a consultation with a doctor no matter where you live.'}
           </figcaption>
         </figure>
       </section>
