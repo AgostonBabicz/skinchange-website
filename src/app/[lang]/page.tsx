@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   const isDa = params.lang === 'da';
   return {
     title: isDa 
-      ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SKIND' 
-      : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SKIND',
+      ? 'Online Læge | Få Diagnose inden for 48 Timer | SKIND' 
+      : 'Online Doctor | Get Diagnosis Within 48 Hours | SKIND',
     description: isDa 
       ? 'Certificerede læger online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft, normalt inden 48 timer. Kun 298 kr. · MitID verificeret.'
       : 'Certified doctors online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer, usually within 48 hours. Only 298 DKK. · MitID verified.',
@@ -46,7 +46,7 @@ export default function HomePage({ params: { lang } }: PageProps) {
   const offerSchema = {
     '@context': 'https://schema.org',
     '@type': 'Offer',
-    name: isDa ? 'Online Hudlæge Konsultation' : 'Online Dermatologist Consultation',
+    name: isDa ? 'Online Lægekonsultation' : 'Online Doctor Consultation',
     description: isDa 
       ? 'Professionel diagnose af hudsygdomme, normalt inden 48 timer'
       : 'Professional diagnosis of skin conditions, usually within 48 hours',

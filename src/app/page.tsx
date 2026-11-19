@@ -1,7 +1,7 @@
 // Root page — serves as redirect to /da/ for static export (GitHub Pages).
 // redirect() doesn't work in output:'export', so we use a meta-refresh + JS redirect.
 export const metadata = {
-  title: 'SKIND | Online Hudlæge',
+  title: 'SKIND | Online Læge',
   robots: { index: false, follow: false },
   alternates: {
     canonical: 'https://www.skinchange.dk/da/',

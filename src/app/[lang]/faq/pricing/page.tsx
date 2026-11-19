@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return {
     title: isDa
-      ? 'Pris & Forsikring – SKIND Online Hudlæge'
-      : 'Pricing & Insurance – SKIND Online Dermatologist',
+      ? 'Pris & Forsikring – SKIND Online Læge'
+      : 'Pricing & Insurance – SKIND Online Doctor',
     description: isDa
       ? 'En SKIND konsultation koster 298 DKK (€40). Find ud af hvad der er inkluderet og om forsikringsdækning.'
       : 'A SKIND consultation costs 298 DKK (€40). Find out what is included and about insurance coverage.',

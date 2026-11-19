@@ -6,7 +6,7 @@ interface HeroProps {
   lang: Language;
 }
 
-// Splits "Online Hudlæge\nDiagnose, behandlingsplan og recept inden for 48 timer" into the designed
+// Splits "Online Læge\nDiagnose, behandlingsplan og recept inden for 48 timer" into the designed
 // lines: the lead (a small label), what you get, and the time promise ("inden for 48 timer" /
 // "within 48 hours") on its own line with the closing "48 timer" / "48 hours" in brand blue.
 function headlineParts(title: string) {

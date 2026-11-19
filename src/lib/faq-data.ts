@@ -141,7 +141,7 @@ export const faqCategories: FaqCategory[] = [
     questions: {
       da: [
         {
-          question: 'Hvad koster en online hudlægekonsultation?',
+          question: 'Hvad koster en online lægekonsultation?',
           answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og relevante recepter. Du betaler med betalingskort i appen, når du indsender sagen — der er intet abonnement og ingen automatisk fornyelse. Et nyt, andet hudproblem koster en ny konsultation. Kan sagen ikke vurderes, refunderer vi betalingen.'
         },
         {
@@ -155,7 +155,7 @@ export const faqCategories: FaqCategory[] = [
       ],
       en: [
         {
-          question: 'How much does an online dermatologist consultation cost?',
+          question: 'How much does an online doctor consultation cost?',
           answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the doctor\'s assessment, diagnosis, treatment plan and relevant prescriptions. You pay by card in the app when you submit the case — there is no subscription and no automatic renewal. A new, separate skin problem costs a new consultation. If the case cannot be assessed, we refund the payment.'
         },
         {

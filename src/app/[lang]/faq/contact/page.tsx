@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return {
     title: isDa
-      ? 'Kontakt & Support – SKIND Online Hudlæge'
-      : 'Contact & Support – SKIND Online Dermatologist',
+      ? 'Kontakt & Support – SKIND Online Læge'
+      : 'Contact & Support – SKIND Online Doctor',
     description: isDa
       ? 'Kontakt SKIND support. Vi besvarer alle henvendelser hurtigst muligt på info@skinchange.ai eller +45 20 60 75 88.'
       : 'Contact SKIND support. We respond to all enquiries without undue delay at info@skinchange.ai or +45 20 60 75 88.',

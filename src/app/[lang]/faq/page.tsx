@@ -14,10 +14,10 @@ interface PageProps {
 export async function generateMetadata({ params }: { params: { lang: Language } }): Promise<Metadata> {
   const isDa = params.lang === 'da';
   return {
-    title: isDa ? 'FAQ: Ofte Stillede Spørgsmål om Online Hudlæge | SKIND' : 'FAQ: Frequently Asked Questions About Online Dermatology | SKIND',
+    title: isDa ? 'FAQ: Ofte Stillede Spørgsmål om Online Læge | SKIND' : 'FAQ: Frequently Asked Questions About Online Dermatology | SKIND',
     description: isDa
-      ? 'Få svar på alt om online hudlægekonsultation hos SKIND. Pris, sikkerhed, behandling af akne, eksem, psoriasis og meget mere. Normalt svar inden 48 timer.'
-      : 'Get answers about online dermatologist consultations at SKIND. Pricing, security, treatment for acne, eczema, psoriasis and more. Usually an answer within 48 hours.',
+      ? 'Få svar på alt om online lægekonsultation hos SKIND. Pris, sikkerhed, behandling af akne, eksem, psoriasis og meget mere. Normalt svar inden 48 timer.'
+      : 'Get answers about online doctor consultations at SKIND. Pricing, security, treatment for acne, eczema, psoriasis and more. Usually an answer within 48 hours.',
     keywords: isDa
       ? 'online hudlæge, teledermatologi, hudlæge online, aknebehandling, eksembehandling, psoriasisbehandling, hudkræfttjek, modermærker, recept online'
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',

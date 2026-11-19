@@ -74,8 +74,8 @@ export default function DownloadPage({ params: { lang } }: PageProps) {
       availability: 'https://schema.org/InStock',
     },
     description: isDa
-      ? 'Professionel online hudlæge. Diagnose af akne, eksem, psoriasis og hudkræft, normalt inden 48 timer.'
-      : 'Professional online dermatologist. Diagnosis of acne, eczema, psoriasis and skin cancer, usually within 48 hours.',
+      ? 'Professionel online læge. Diagnose af akne, eksem, psoriasis og hudkræft, normalt inden 48 timer.'
+      : 'Professional online doctor. Diagnosis of acne, eczema, psoriasis and skin cancer, usually within 48 hours.',
     url: `https://www.skinchange.dk/${lang}/download`,
     screenshot: `https://www.skinchange.dk/app/flow-${lang}.png`,
   };

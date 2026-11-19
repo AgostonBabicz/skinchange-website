@@ -25,11 +25,12 @@
 //                        unchanged), no "med dansk autorisation" in marketing texts, hero badge "Normalt svar inden 48
 //                        timer", second opinion and "Tilgængelig i hele Europa" removed, price includes relevant
 //                        prescriptions, support answer times "normalt", terms §2 and both legal documents updated
+//   2026-11-18           service name "Online Hudlæge" -> "Online Læge" / "Online Doctor" (hero label, page titles, FAQ)
 export const contentDates: Record<string, string> = {
   '': '2026-11-18',
   '/about': '2026-11-18',
   '/download': '2026-11-18',
-  '/faq': '2026-11-14',
+  '/faq': '2026-11-18',
   '/faq/how-it-works': '2026-11-18',
   '/faq/pricing': '2026-11-18',
   '/faq/privacy-security': '2026-11-18',
