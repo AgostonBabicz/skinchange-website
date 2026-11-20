@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
   const isDa = params.lang === 'da';
   return {
     title: isDa 
-      ? 'Online Læge | Få Diagnose inden for 48 Timer | SKIND' 
-      : 'Online Doctor | Get Diagnosis Within 48 Hours | SKIND',
+      ? 'Online Hudlæge | Få Diagnose inden for 48 Timer | SKIND' 
+      : 'Online Dermatologist | Get Diagnosis Within 48 Hours | SKIND',
     description: isDa 
-      ? 'Certificerede læger online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft, normalt inden 48 timer. Kun 298 kr. · MitID verificeret.'
-      : 'Certified doctors online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer, usually within 48 hours. Only 298 DKK. · MitID verified.',
+      ? 'Certificerede dermatologer online. Få diagnose og behandlingsplan for akne, eksem, psoriasis og hudkræft, normalt inden 48 timer. Kun 298 kr. · MitID verificeret.'
+      : 'Certified dermatologists online. Get diagnosis and treatment plan for acne, eczema, psoriasis and skin cancer, usually within 48 hours. Only 298 DKK. · MitID verified.',
     keywords: isDa 
       ? 'online hudlæge, teledermatologi, hudlæge online, akne behandling, eksem behandling, psoriasis behandling, hudkræft tjek, modermærker, online recept'
       : 'online dermatologist, teledermatology, acne treatment, eczema treatment, psoriasis treatment, skin cancer check, online prescription',
@@ -46,7 +46,7 @@ export default function HomePage({ params: { lang } }: PageProps) {
   const offerSchema = {
     '@context': 'https://schema.org',
     '@type': 'Offer',
-    name: isDa ? 'Online Lægekonsultation' : 'Online Doctor Consultation',
+    name: isDa ? 'Online Hudlæge Konsultation' : 'Online Dermatologist Consultation',
     description: isDa 
       ? 'Professionel diagnose af hudsygdomme, normalt inden 48 timer'
       : 'Professional diagnosis of skin conditions, usually within 48 hours',

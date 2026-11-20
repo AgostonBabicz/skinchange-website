@@ -36,14 +36,14 @@ const STEPS: Record<Language, Step[]> = {
     },
     {
       title: 'Tjek dine oplysninger',
-      text: 'Bekræft dit navn og din e-mail, så vi kan give dig besked, når lægen har svaret.',
+      text: 'Bekræft dit navn og din e-mail, så vi kan give dig besked, når hudlægen har svaret.',
     },
     {
       title: 'Gennemse og betal',
       text: 'Se en opsummering af din sag. Konsultationen koster 298 kr., og beløbet trækkes kun, hvis lægen kan hjælpe dig videre.',
     },
     {
-      title: 'Få svar fra lægen',
+      title: 'Få svar fra hudlægen',
       text: 'Du får normalt svar inden for 48 timer med en vurdering og en behandlingsplan direkte i appen.',
     },
   ],
@@ -66,14 +66,14 @@ const STEPS: Record<Language, Step[]> = {
     },
     {
       title: 'Check your details',
-      text: 'Confirm your name and email so we can let you know when the doctor has replied.',
+      text: 'Confirm your name and email so we can let you know when the dermatologist has replied.',
     },
     {
       title: 'Review and pay',
       text: 'See a summary of your case. A consultation costs 298 DKK, and you are only charged if the doctor can help you further.',
     },
     {
-      title: "Get your doctor's answer",
+      title: "Get your dermatologist's answer",
       text: 'You normally receive an answer within 48 hours, with an assessment and a treatment plan, right in the app.',
     },
   ],
@@ -164,8 +164,8 @@ export default function UserGuideSection({ lang, variant = 'home' }: UserGuideSe
           </h2>
           <p className="text-[15px] leading-[1.55] text-on-ink-muted lg:col-span-4 lg:col-start-9 lg:text-[19px]">
             {isDa
-              ? 'Syv trin fra du opretter din sag, til du har svar fra lægen.'
-              : 'Seven steps from creating your case to your answer from the doctor.'}
+              ? 'Syv trin fra du opretter din sag, til du har svar fra hudlægen.'
+              : 'Seven steps from creating your case to your answer from the dermatologist.'}
           </p>
         </div>
       )}

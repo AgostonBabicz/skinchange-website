@@ -535,8 +535,8 @@ export default function LichenPlanusPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Upload billeder af din hud via SKIND-appen og få en vurdering og en plan fra en certificeret læge – uden ventetid på sygehus.'
-                : 'Upload photos of your skin via the SKIND app and get an assessment and a plan from a certified doctor — no hospital waiting list.'}
+                ? 'Upload billeder af din hud via SKIND-appen og få en vurdering og en plan fra en certificeret hudlæge – uden ventetid på sygehus.'
+                : 'Upload photos of your skin via the SKIND app and get an assessment and a plan from a certified dermatologist — no hospital waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isDa = params.lang === 'da';
   return {
     title: isDa
-      ? 'Sikkerhed & Privatliv – SKIND Online Læge'
-      : 'Privacy & Security – SKIND Online Doctor',
+      ? 'Sikkerhed & Privatliv – SKIND Online Hudlæge'
+      : 'Privacy & Security – SKIND Online Dermatologist',
     description: isDa
       ? 'SKIND bruger MitID og gemmer alle data på EU-servere. GDPR-kompatibel og sikker behandling af dine helbredsoplysninger.'
       : 'SKIND uses MitID and stores all data on EU servers. GDPR-compliant and secure handling of your health information.',

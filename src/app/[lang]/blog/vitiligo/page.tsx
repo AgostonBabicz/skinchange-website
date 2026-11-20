@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Vitiligo? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Vitiligo: hvorfor immunsystemet angriber pigmentcellerne, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering fra en læge via SKIND.',
+          'Vitiligo: hvorfor immunsystemet angriber pigmentcellerne, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering fra en hudlæge via SKIND.',
         keywords:
           'hvad er vitiligo, vitiligo symptomer, vitiligo årsager, vitiligo behandling, segmental vitiligo, hudlæge vitiligo, SKIND',
         alternates: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'What is Vitiligo? Causes, Symptoms and Treatment | SKIND',
         description:
-          'Vitiligo: why the immune system attacks pigment cells, who gets it, and which treatments actually work. Get an assessment from a doctor via SKIND.',
+          'Vitiligo: why the immune system attacks pigment cells, who gets it, and which treatments actually work. Get an assessment from a dermatologist via SKIND.',
         keywords:
           'what is vitiligo, vitiligo symptoms, vitiligo causes, vitiligo treatment, segmental vitiligo, dermatologist vitiligo, SKIND',
         alternates: {
@@ -472,8 +472,8 @@ export default function VitiligoPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret læge – uden ventetid på sygehus.'
-                : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified doctor — no hospital waiting list.'}
+                ? 'Upload billeder af din hud via SKIND-appen og modtag en personlig vurdering og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
+                : 'Upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

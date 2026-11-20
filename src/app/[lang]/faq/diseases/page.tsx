@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? 'Hudsygdomme – Symptomer, Årsager og Behandling | SKIND'
       : 'Skin Conditions – Symptoms, Causes and Treatment | SKIND',
     description: isDa
-      ? 'Lær om de mest almindelige hudsygdomme: hvad de er, hvordan de ser ud, og hvilke behandlingsmuligheder der findes. Få hjælp fra en læge via SKIND.'
-      : 'Learn about the most common skin conditions: what they are, what they look like, and what treatment options are available. Get help from a doctor via SKIND.',
+      ? 'Lær om de mest almindelige hudsygdomme: hvad de er, hvordan de ser ud, og hvilke behandlingsmuligheder der findes. Få hjælp fra en hudlæge via SKIND.'
+      : 'Learn about the most common skin conditions: what they are, what they look like, and what treatment options are available. Get help from a dermatologist via SKIND.',
     keywords: isDa
       ? 'hudsygdomme, hudlidelser, acne, eksem, psoriasis, hudlæge online'
       : 'skin conditions, skin diseases, acne, eczema, psoriasis, online dermatologist',

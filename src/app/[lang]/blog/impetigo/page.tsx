@@ -456,8 +456,8 @@ export default function ImpetigoPage({ params: { lang } }: PageProps) {
             </p>
             <p>
               {isDa
-                ? 'Ved almindelige sår i bedring, eller hvis du blot er i tvivl om, hvad udslættet er, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret læge.'
-                : 'For ordinary sores that are settling, or if you are simply unsure what the rash is, you can upload photos via the SKIND app and get an assessment from a certified doctor.'}
+                ? 'Ved almindelige sår i bedring, eller hvis du blot er i tvivl om, hvad udslættet er, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge.'
+                : 'For ordinary sores that are settling, or if you are simply unsure what the rash is, you can upload photos via the SKIND app and get an assessment from a certified dermatologist.'}
             </p>
             <div className="article-cta-actions">
               <Link

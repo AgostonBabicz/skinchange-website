@@ -32,7 +32,7 @@ export default function Features({ lang }: FeaturesProps) {
       title: t.features.step3.title,
       text: t.features.step3.desc,
       image: `/app/guide-7-${lang}.webp`,
-      alt: isDa ? 'SKIND-appen viser lægens diagnose og behandlingsplan' : "The SKIND app showing the doctor's diagnosis and treatment plan",
+      alt: isDa ? 'SKIND-appen viser hudlægens diagnose og behandlingsplan' : "The SKIND app showing the dermatologist's diagnosis and treatment plan",
       stage: 'bg-ink',
       ring: 'border-signal/20',
     },

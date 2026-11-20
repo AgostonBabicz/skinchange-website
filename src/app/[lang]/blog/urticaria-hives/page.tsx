@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Nældefeber (urticaria): symptomer og behandling | SKIND',
         description:
-          'Nældefeber: hvorfor kvadlerne opstår, hvad der udløser dem, hvornår det er akut, og hvordan de behandles. Få en vurdering fra en læge via SKIND.',
+          'Nældefeber: hvorfor kvadlerne opstår, hvad der udløser dem, hvornår det er akut, og hvordan de behandles. Få en vurdering fra en hudlæge via SKIND.',
         keywords:
           'hvad er nældefeber, urticaria symptomer, nældefeber årsager, nældefeber behandling, kronisk urticaria, hudlæge nældefeber, SKIND',
         alternates: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'Urticaria (hives): symptoms and treatment | SKIND',
         description:
-          'Urticaria: why the wheals appear, what triggers them, when it is an emergency, and how hives are treated. Get an assessment from a doctor via SKIND.',
+          'Urticaria: why the wheals appear, what triggers them, when it is an emergency, and how hives are treated. Get an assessment from a dermatologist via SKIND.',
         keywords:
           'what is urticaria, hives symptoms, urticaria causes, hives treatment, chronic urticaria, dermatologist hives, SKIND',
         alternates: {
@@ -465,8 +465,8 @@ export default function UrticariaHivesPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Ved hævelse i svælget, vejrtrækningsbesvær eller svimmelhed skal du ringe 112 – det kan ikke vurderes på et billede. Ved almindelig nældefeber kan du uploade billeder af din hud via SKIND-appen og modtage en personlig vurdering og behandlingsplan fra en certificeret læge – uden ventetid på sygehus.'
-                : 'If you have throat swelling, breathing difficulty or dizziness, call 112 — that cannot be assessed from a photo. For ordinary hives, upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified doctor — no hospital waiting list.'}
+                ? 'Ved hævelse i svælget, vejrtrækningsbesvær eller svimmelhed skal du ringe 112 – det kan ikke vurderes på et billede. Ved almindelig nældefeber kan du uploade billeder af din hud via SKIND-appen og modtage en personlig vurdering og behandlingsplan fra en certificeret hudlæge – uden ventetid på sygehus.'
+                : 'If you have throat swelling, breathing difficulty or dizziness, call 112 — that cannot be assessed from a photo. For ordinary hives, upload photos of your skin via the SKIND app and receive a personal assessment and treatment plan from a certified dermatologist — no hospital waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

@@ -401,8 +401,8 @@ export default function HemangiomaPage({ params: { lang } }: PageProps) {
             <h3>{isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}</h3>
             <p>
               {isDa
-                ? 'Er du voksen og i tvivl om en rød prik på huden, er en billedvurdering fra en certificeret læge via SKIND-appen et fornuftigt første skridt. Drejer det sig om et spædbarn med et hæmangiom nær øje, næse, mund eller luftveje, med sår, eller med fem eller flere hæmangiomer, skal barnet ses ved fysisk fremmøde uden forsinkelse — kontakt egen læge eller vagtlæge i stedet.'
-                : 'If you are an adult and unsure about a red spot on your skin, a photo assessment from a certified doctor via the SKIND app is a sensible first step. If this is a baby with a haemangioma near the eye, nose, mouth or airway, with ulceration, or with five or more lesions, the child needs to be seen in person without delay — contact your GP or out-of-hours doctor instead.'}
+                ? 'Er du voksen og i tvivl om en rød prik på huden, er en billedvurdering fra en certificeret hudlæge via SKIND-appen et fornuftigt første skridt. Drejer det sig om et spædbarn med et hæmangiom nær øje, næse, mund eller luftveje, med sår, eller med fem eller flere hæmangiomer, skal barnet ses ved fysisk fremmøde uden forsinkelse — kontakt egen læge eller vagtlæge i stedet.'
+                : 'If you are an adult and unsure about a red spot on your skin, a photo assessment from a certified dermatologist via the SKIND app is a sensible first step. If this is a baby with a haemangioma near the eye, nose, mouth or airway, with ulceration, or with five or more lesions, the child needs to be seen in person without delay — contact your GP or out-of-hours doctor instead.'}
             </p>
             <Link href={`/${lang}/download`} className="article-cta-button">
               {isDa ? 'Download appen' : 'Download the app'}

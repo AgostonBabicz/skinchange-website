@@ -40,7 +40,7 @@ export const faqCategories: FaqCategory[] = [
       da: [
         {
           question: 'Hvordan fungerer SKIND?',
-          answer: 'Download vores app, opret en profil med MitID, tag billeder af dit hudproblem og besvar nogle spørgsmål om dine symptomer. Vores læger gennemgår din sag og sender dig en vurdering, en diagnose og en behandlingsplan. Du modtager svaret direkte i appen, normalt inden for 48 timer.'
+          answer: 'Download vores app, opret en profil med MitID, tag billeder af dit hudproblem og besvar nogle spørgsmål om dine symptomer. Læger med dansk autorisation gennemgår din sag og sender dig en vurdering, en diagnose og en behandlingsplan. Du modtager svaret direkte i appen, normalt inden for 48 timer.'
         },
         {
           question: 'Hvor hurtigt får jeg svar?',
@@ -76,7 +76,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Kan I udskrive recept, og hvordan får jeg medicinen?',
-          answer: 'Vurderer lægen, at du har brug for receptpligtig behandling, udstedes recepten elektronisk, og din behandlingsplan ligger i appen. Du får besked i appen, når recepten er klar, og hvordan du henter medicinen. Bor du uden for Danmark, kan en dansk recept ikke altid indløses lokalt — kontakt os, før du opretter sagen.'
+          answer: 'Vurderer hudlægen, at du har brug for receptpligtig behandling, udstedes recepten elektronisk, og din behandlingsplan ligger i appen. Du får besked i appen, når recepten er klar, og hvordan du henter medicinen. Bor du uden for Danmark, kan en dansk recept ikke altid indløses lokalt — kontakt os, før du opretter sagen.'
         },
         {
           question: 'Kan jeg bruge SKIND, hvis jeg ikke har MitID eller CPR-nummer?',
@@ -86,11 +86,11 @@ export const faqCategories: FaqCategory[] = [
       en: [
         {
           question: 'How does SKIND work?',
-          answer: 'Download our app, create a profile with MitID, take photos of your skin problem and answer some questions about your symptoms. Our doctors review your case and send you an assessment, a diagnosis and a treatment plan. You receive the response directly in the app, normally within 48 hours.'
+          answer: 'Download our app, create a profile with MitID, take photos of your skin problem and answer some questions about your symptoms. Doctors with Danish authorisation review your case and send you an assessment, a diagnosis and a treatment plan. You receive the response directly in the app, normally within 48 hours.'
         },
         {
           question: 'How quickly do I get a response?',
-          answer: 'You will normally receive a response within 48 hours of submitting your case. Most cases are answered within 24 hours. If it takes longer, we will contact you. You get notified in the app as soon as the doctor has reviewed your case.'
+          answer: 'You will normally receive a response within 48 hours of submitting your case. Most cases are answered within 24 hours. If it takes longer, we will contact you. You get notified in the app as soon as the dermatologist has reviewed your case.'
         },
         {
           question: 'What skin problems can you help with?',
@@ -98,11 +98,11 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'What happens if you cannot make a diagnosis?',
-          answer: 'Payment is taken when you submit your case. If the photos or the information are not enough for our doctors to make a sound assessment, we first ask you to add more photos or details. If the case still cannot be assessed, we refund the payment to the method you used, and we tell you where to be examined in person instead.'
+          answer: 'Payment is taken when you submit your case. If the photos or the information are not enough for our dermatologists to make a sound assessment, we first ask you to add more photos or details. If the case still cannot be assessed, we refund the payment to the method you used, and we tell you where to be examined in person instead.'
         },
         {
           question: 'What can a photo assessment not do?',
-          answer: 'An assessment based on photos cannot rule out skin cancer. If the doctor sees anything that needs closer examination, you will be told to be seen in person, and we will help you get there. A suspicious spot needs examination with a dermatoscope and, if there is any doubt, removal for laboratory analysis.'
+          answer: 'An assessment based on photos cannot rule out skin cancer. If the dermatologist sees anything that needs closer examination, you will be told to be seen in person, and we will help you get there. A suspicious spot needs examination with a dermatoscope and, if there is any doubt, removal for laboratory analysis.'
         },
         {
           question: 'When should I not use SKIND?',
@@ -122,7 +122,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Can you issue prescriptions, and how do I collect the medicine?',
-          answer: 'If the doctor decides you need prescription treatment, the prescription is issued electronically and your treatment plan is available in the app. You are notified in the app when the prescription is ready and how to collect the medicine. If you live outside Denmark, a Danish prescription cannot always be dispensed locally — contact us before submitting a case.'
+          answer: 'If the dermatologist decides you need prescription treatment, the prescription is issued electronically and your treatment plan is available in the app. You are notified in the app when the prescription is ready and how to collect the medicine. If you live outside Denmark, a Danish prescription cannot always be dispensed locally — contact us before submitting a case.'
         },
         {
           question: 'Can I use SKIND without MitID or a Danish CPR number?',
@@ -141,7 +141,7 @@ export const faqCategories: FaqCategory[] = [
     questions: {
       da: [
         {
-          question: 'Hvad koster en online lægekonsultation?',
+          question: 'Hvad koster en online hudlægekonsultation?',
           answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og relevante recepter. Du betaler med betalingskort i appen, når du indsender sagen — der er intet abonnement og ingen automatisk fornyelse. Et nyt, andet hudproblem koster en ny konsultation. Kan sagen ikke vurderes, refunderer vi betalingen.'
         },
         {
@@ -155,8 +155,8 @@ export const faqCategories: FaqCategory[] = [
       ],
       en: [
         {
-          question: 'How much does an online doctor consultation cost?',
-          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the doctor\'s assessment, diagnosis, treatment plan and relevant prescriptions. You pay by card in the app when you submit the case — there is no subscription and no automatic renewal. A new, separate skin problem costs a new consultation. If the case cannot be assessed, we refund the payment.'
+          question: 'How much does an online dermatologist consultation cost?',
+          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the dermatologist\'s assessment, diagnosis, treatment plan and relevant prescriptions. You pay by card in the app when you submit the case — there is no subscription and no automatic renewal. A new, separate skin problem costs a new consultation. If the case cannot be assessed, we refund the payment.'
         },
         {
           question: 'Is SKIND covered by health insurance?',
@@ -194,7 +194,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'How long do you keep my photos and information?',
-          answer: 'Your patient record — photos, symptom descriptions and the doctor\'s assessment — is kept for at least 10 years from the most recent entry, as required by the Danish Patient Records Order. That duty applies even if you delete your account. Payment data is kept for 5 years after the end of the financial year under the Danish Bookkeeping Act, support correspondence for up to 3 years, and technical usage data for up to 12 months. See the privacy policy for details.'
+          answer: 'Your patient record — photos, symptom descriptions and the dermatologist\'s assessment — is kept for at least 10 years from the most recent entry, as required by the Danish Patient Records Order. That duty applies even if you delete your account. Payment data is kept for 5 years after the end of the financial year under the Danish Bookkeeping Act, support correspondence for up to 3 years, and technical usage data for up to 12 months. See the privacy policy for details.'
         }
       ]
     }
@@ -240,13 +240,13 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Hvordan klager jeg over en behandling eller et køb?',
-          answer: 'Skriv først til info@skinchange.ai, så forsøger vi at løse det. Er du utilfreds med det sundhedsfaglige — fx lægens vurdering — kan du klage til Styrelsen for Patientklager (stpk@stpk.dk). Mener du, at du har fået en skade, kan du søge erstatning hos Patienterstatningen. Klager over betaling eller aftalen hører under Mæglingsteamet for Forbrugerklager / Forbrugerklagenævnet, og klager over vores databehandling hører under Datatilsynet.'
+          answer: 'Skriv først til info@skinchange.ai, så forsøger vi at løse det. Er du utilfreds med det sundhedsfaglige — fx hudlægens vurdering — kan du klage til Styrelsen for Patientklager (stpk@stpk.dk). Mener du, at du har fået en skade, kan du søge erstatning hos Patienterstatningen. Klager over betaling eller aftalen hører under Mæglingsteamet for Forbrugerklager / Forbrugerklagenævnet, og klager over vores databehandling hører under Datatilsynet.'
         }
       ],
       en: [
         {
           question: 'How long does support take to reply?',
-          answer: 'We respond to all enquiries without undue delay. During busy periods and outside normal business hours, response times may be longer. Support covers the app, payment and practical questions — the answer to your actual skin case comes from the doctor in the app, normally within 48 hours. If a health problem is urgent, contact your doctor, the out-of-hours service or call 112.'
+          answer: 'We respond to all enquiries without undue delay. During busy periods and outside normal business hours, response times may be longer. Support covers the app, payment and practical questions — the answer to your actual skin case comes from the dermatologist in the app, normally within 48 hours. If a health problem is urgent, contact your doctor, the out-of-hours service or call 112.'
         },
         {
           question: 'Can I call you?',
@@ -254,7 +254,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'How do I complain about my treatment or my purchase?',
-          answer: 'Write to info@skinchange.ai first so we can try to resolve it. If you are unhappy with the medical side — for example the doctor\'s assessment — you can complain to the Danish Agency for Patient Complaints (Styrelsen for Patientklager, stpk@stpk.dk). If you believe you have been harmed, you can claim compensation from the Danish Patient Compensation Association (Patienterstatningen). Complaints about payment or the contract go to the Danish Consumer Complaints Board, and complaints about our data handling go to Datatilsynet.'
+          answer: 'Write to info@skinchange.ai first so we can try to resolve it. If you are unhappy with the medical side — for example the dermatologist\'s assessment — you can complain to the Danish Agency for Patient Complaints (Styrelsen for Patientklager, stpk@stpk.dk). If you believe you have been harmed, you can claim compensation from the Danish Patient Compensation Association (Patienterstatningen). Complaints about payment or the contract go to the Danish Consumer Complaints Board, and complaints about our data handling go to Datatilsynet.'
         }
       ]
     }

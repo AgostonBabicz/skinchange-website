@@ -540,8 +540,8 @@ export default function MelanomaPage({ params: { lang } }: PageProps) {
             </p>
             <p>
               {isDa
-                ? 'Er du i tvivl om, hvor hurtigt en plet skal ses, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret læge.'
-                : 'If you are unsure how quickly a spot needs to be seen, you can upload photos via the SKIND app and get an assessment from a certified doctor.'}
+                ? 'Er du i tvivl om, hvor hurtigt en plet skal ses, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge.'
+                : 'If you are unsure how quickly a spot needs to be seen, you can upload photos via the SKIND app and get an assessment from a certified dermatologist.'}
             </p>
             <div className="article-cta-actions">
               <Link

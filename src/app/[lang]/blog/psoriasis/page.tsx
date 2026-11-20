@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? {
         title: 'Hvad er Psoriasis? Årsager, Symptomer og Behandling | SKIND',
         description:
-          'Lær alt om psoriasis: hvad det er, hvordan det ser ud, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering af en læge via SKIND.',
+          'Lær alt om psoriasis: hvad det er, hvordan det ser ud, hvem der rammes, og hvilke behandlinger der virker. Få en vurdering af en hudlæge via SKIND.',
         keywords:
           'psoriasis, psoriasis behandling, psoriasis symptomer, plakpsoriasis, hudsygdomme, skællende hud, SKIND',
         alternates: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : {
         title: 'What is Psoriasis? Causes, Symptoms and Treatment | SKIND',
         description:
-          'Learn all about psoriasis: what it is, what it looks like, who it affects, and which treatments work. Get an assessment from a doctor via SKIND.',
+          'Learn all about psoriasis: what it is, what it looks like, who it affects, and which treatments work. Get an assessment from a dermatologist via SKIND.',
         keywords:
           'psoriasis, psoriasis treatment, psoriasis symptoms, plaque psoriasis, skin disease, scaly skin, SKIND',
         alternates: {
@@ -548,8 +548,8 @@ export default function PsoriasisPage({ params: { lang } }: PageProps) {
             </h3>
             <p>
               {isDa
-                ? 'Hvis du oplever vedvarende hudforandringer, der kunne være psoriasis, kan du få en personlig vurdering fra en certificeret læge via SKIND-appen — uden ventetid.'
-                : 'If you are experiencing persistent skin changes that could be psoriasis, you can get a personal assessment from a certified doctor via the SKIND app — no waiting list.'}
+                ? 'Hvis du oplever vedvarende hudforandringer, der kunne være psoriasis, kan du få en personlig vurdering fra en certificeret hudlæge via SKIND-appen — uden ventetid.'
+                : 'If you are experiencing persistent skin changes that could be psoriasis, you can get a personal assessment from a certified dermatologist via the SKIND app — no waiting list.'}
             </p>
             <div className="article-cta-actions">
               <Link

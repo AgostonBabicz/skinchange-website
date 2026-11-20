@@ -176,8 +176,8 @@ export default function ContactPage({ params: { lang } }: PageProps) {
           </div>
           <figcaption className="px-5 py-[18px] text-[15px] leading-[1.55] text-body lg:px-8 lg:py-[22px] lg:text-base">
             {isDa
-              ? 'SKIND er tilgængelig i hele Danmark. Vores digitale platform gør det muligt at modtage lægekonsultation uanset hvor du bor.'
-              : 'SKIND is available throughout Denmark. Our digital platform makes it possible to receive a consultation with a doctor no matter where you live.'}
+              ? 'SKIND er tilgængelig i hele Danmark. Vores digitale platform gør det muligt at modtage hudlægekonsultation uanset hvor du bor.'
+              : 'SKIND is available throughout Denmark. Our digital platform makes it possible to receive dermatologist consultation no matter where you live.'}
           </figcaption>
         </figure>
       </section>

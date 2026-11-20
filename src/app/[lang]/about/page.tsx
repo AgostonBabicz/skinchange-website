@@ -124,8 +124,8 @@ export default function AboutPage({ params: { lang } }: PageProps) {
             </h2>
             <p className="text-[17px] leading-[1.6] text-body lg:text-[19px]">
               {isDa
-                ? 'Vi tror på, at alle fortjener adgang til kvalitetsbehandling af hudsygdomme. Gennem vores platform tilbyder vi hurtig, sikker og professionel hjælp fra certificerede læger.'
-                : 'We believe everyone deserves access to quality treatment for skin diseases. Through our platform, we offer fast, secure, and professional help from certified doctors.'}
+                ? 'Vi tror på, at alle fortjener adgang til kvalitetsbehandling af hudsygdomme. Gennem vores platform tilbyder vi hurtig, sikker og professionel hjælp fra certificerede hudlæger.'
+                : 'We believe everyone deserves access to quality treatment for skin diseases. Through our platform, we offer fast, secure, and professional help from certified dermatologists.'}
             </p>
           </div>
         </div>

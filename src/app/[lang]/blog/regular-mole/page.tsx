@@ -439,8 +439,8 @@ export default function RegularMolePage({ params: { lang } }: PageProps) {
             <h3>{isDa ? 'Få en vurdering, normalt inden 48 timer' : 'Get an assessment, usually within 48 hours'}</h3>
             <p>
               {isDa
-                ? 'Er du bekymret for et modermærke, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret læge. Vurderingen afgør, hvor hurtigt du skal ses ved fysisk fremmøde: ser modermærket mistænkeligt ud, bliver du henvist til undersøgelse med dermatoskop og eventuel fjernelse. En beroligende vurdering erstatter ikke en fysisk undersøgelse, hvis modermærket bliver ved med at ændre sig.'
-                : 'If you are worried about a mole, you can upload photos via the SKIND app and get an assessment from a certified doctor. The assessment tells you how quickly you need to be seen in person: if the mole looks suspicious you will be referred for examination with a dermatoscope and possible excision. A reassuring assessment is not a substitute for in-person review if the mole keeps changing.'}
+                ? 'Er du bekymret for et modermærke, kan du uploade billeder via SKIND-appen og få en vurdering fra en certificeret hudlæge. Vurderingen afgør, hvor hurtigt du skal ses ved fysisk fremmøde: ser modermærket mistænkeligt ud, bliver du henvist til undersøgelse med dermatoskop og eventuel fjernelse. En beroligende vurdering erstatter ikke en fysisk undersøgelse, hvis modermærket bliver ved med at ændre sig.'
+                : 'If you are worried about a mole, you can upload photos via the SKIND app and get an assessment from a certified dermatologist. The assessment tells you how quickly you need to be seen in person: if the mole looks suspicious you will be referred for examination with a dermatoscope and possible excision. A reassuring assessment is not a substitute for in-person review if the mole keeps changing.'}
             </p>
             <Link href={`/${lang}/download`} className="article-cta-button">
               {isDa ? 'Download appen' : 'Download the app'}
