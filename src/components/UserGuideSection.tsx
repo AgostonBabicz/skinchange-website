@@ -40,7 +40,7 @@ const STEPS: Record<Language, Step[]> = {
     },
     {
       title: 'Gennemse og betal',
-      text: 'Se en opsummering af din sag. Konsultationen koster 298 kr., og beløbet trækkes kun, hvis lægen kan hjælpe dig videre.',
+      text: 'Se en opsummering af din sag. Når du indsender din sag, reserveres 298 kr. på dit betalingskort. Beløbet trækkes først, når lægerne har godkendt vurderingen. Kan vi ikke vurdere din sag, heller ikke efter supplerende billeder eller oplysninger, frigives reservationen, og du betaler ikke noget.',
     },
     {
       title: 'Få svar fra hudlægen',
@@ -70,7 +70,7 @@ const STEPS: Record<Language, Step[]> = {
     },
     {
       title: 'Review and pay',
-      text: 'See a summary of your case. A consultation costs 298 DKK, and you are only charged if the doctor can help you further.',
+      text: "See a summary of your case. When you submit your case, 298 DKK is reserved on your payment card. The amount is only charged once the doctors have approved the assessment. If we can't assess your case, even after extra photos or information, the reservation is released and you pay nothing.",
     },
     {
       title: "Get your dermatologist's answer",
@@ -312,10 +312,20 @@ export default function UserGuideSection({ lang, variant = 'home' }: UserGuideSe
               <ChevronRight size={20} />
             </button>
           </div>
-          <div className="flex min-h-[116px] flex-col items-center gap-1 px-[22px] text-center">
-            <span className="text-sm font-semibold text-signal">{stepLabel(current)}</span>
-            <h3 className="font-display text-[22px] font-bold leading-[1.2] tracking-[-0.015em]">{steps[current].title}</h3>
-            <p className="mt-1 text-[15px] leading-[1.55] text-on-ink-soft">{steps[current].text}</p>
+          {/* Every step's text sits in the same grid cell and only the current one is visible, so the block
+              always has the height of the longest step and the dots below never jump while swiping. */}
+          <div className="grid px-[22px] text-center">
+            {steps.map((step, index) => (
+              <div
+                key={step.title}
+                aria-hidden={index !== current}
+                className={`col-start-1 row-start-1 flex flex-col items-center gap-1 ${index === current ? '' : 'invisible'}`}
+              >
+                <span className="text-sm font-semibold text-signal">{stepLabel(index)}</span>
+                <h3 className="font-display text-[22px] font-bold leading-[1.2] tracking-[-0.015em]">{step.title}</h3>
+                <p className="mt-1 text-[15px] leading-[1.55] text-on-ink-soft">{step.text}</p>
+              </div>
+            ))}
           </div>
           <div className="flex items-center gap-0.5">
             {steps.map((step, index) => (

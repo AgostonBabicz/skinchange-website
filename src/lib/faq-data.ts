@@ -52,7 +52,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Hvad sker der, hvis I ikke kan stille en diagnose?',
-          answer: 'Betalingen trækkes, når du indsender din sag. Hvis billederne eller oplysningerne ikke er tilstrækkelige til, at vores læger kan lave en forsvarlig vurdering, beder vi dig først om at supplere med flere billeder eller oplysninger. Kan sagen stadig ikke vurderes, refunderer vi betalingen til den betalingsmetode, du brugte, og vi fortæller dig, hvor du i stedet kan blive undersøgt fysisk.'
+          answer: 'Beløbet reserveres på dit betalingskort, når du indsender din sag, og trækkes først, når lægerne har godkendt vurderingen. Hvis billederne eller oplysningerne ikke er tilstrækkelige til, at vores læger kan lave en forsvarlig vurdering, beder vi dig først om at supplere med flere billeder eller oplysninger. Kan sagen stadig ikke vurderes, frigives reservationen, så du ikke betaler noget, og vi fortæller dig, hvor du i stedet kan blive undersøgt fysisk.'
         },
         {
           question: 'Hvad kan en vurdering ud fra billeder ikke?',
@@ -98,7 +98,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'What happens if you cannot make a diagnosis?',
-          answer: 'Payment is taken when you submit your case. If the photos or the information are not enough for our dermatologists to make a sound assessment, we first ask you to add more photos or details. If the case still cannot be assessed, we refund the payment to the method you used, and we tell you where to be examined in person instead.'
+          answer: 'The amount is reserved on your payment card when you submit your case and only charged once the doctors have approved the assessment. If the photos or the information are not enough for our dermatologists to make a sound assessment, we first ask you to add more photos or details. If the case still cannot be assessed, the reservation is released so you pay nothing, and we tell you where to be examined in person instead.'
         },
         {
           question: 'What can a photo assessment not do?',
@@ -142,7 +142,11 @@ export const faqCategories: FaqCategory[] = [
       da: [
         {
           question: 'Hvad koster en online hudlægekonsultation?',
-          answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og relevante recepter. Du betaler med betalingskort i appen, når du indsender sagen — der er intet abonnement og ingen automatisk fornyelse. Et nyt, andet hudproblem koster en ny konsultation. Kan sagen ikke vurderes, refunderer vi betalingen.'
+          answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og relevante recepter. Du betaler med betalingskort i appen — der er intet abonnement og ingen automatisk fornyelse. Beløbet reserveres, når du indsender sagen, og trækkes først, når lægerne har godkendt vurderingen. Et nyt, andet hudproblem koster en ny konsultation.'
+        },
+        {
+          question: 'Hvornår betaler jeg?',
+          answer: 'Beløbet reserveres på dit betalingskort, når du indsender din sag, og trækkes først, når lægerne har godkendt vurderingen. Kan sagen ikke vurderes, frigives reservationen. Der er intet abonnement og ingen automatisk fornyelse.'
         },
         {
           question: 'Er SKIND dækket af sygesikringen?',
@@ -156,7 +160,11 @@ export const faqCategories: FaqCategory[] = [
       en: [
         {
           question: 'How much does an online dermatologist consultation cost?',
-          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the dermatologist\'s assessment, diagnosis, treatment plan and relevant prescriptions. You pay by card in the app when you submit the case — there is no subscription and no automatic renewal. A new, separate skin problem costs a new consultation. If the case cannot be assessed, we refund the payment.'
+          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the dermatologist\'s assessment, diagnosis, treatment plan and relevant prescriptions. You pay by card in the app — there is no subscription and no automatic renewal. The amount is reserved when you submit the case and only charged once the doctors have approved the assessment. A new, separate skin problem costs a new consultation.'
+        },
+        {
+          question: 'When do I pay?',
+          answer: "The amount is reserved on your payment card when you submit your case, and it is only charged once the doctors have approved the assessment. If the case can't be assessed, the reservation is released. There is no subscription and no automatic renewal."
         },
         {
           question: 'Is SKIND covered by health insurance?',

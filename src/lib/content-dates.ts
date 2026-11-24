@@ -23,19 +23,21 @@
 //   2026-11-20           CEO's row decisions: hero badge "Normalt svar inden 48 timer", download bullet, how-it-works title,
 //                        contact answer times, "Vores læger kan hjælpe", English hero line, second opinion and "Tilgængelig i
 //                        hele Europa" removed, price includes relevant prescriptions, terms §2 (who assesses, normally 48 h)
+//   2026-11-23           CEO's payment rule: reserved at submission, charged once the doctors approve, released if the case
+//                        cannot be assessed (user guide, FAQ "Hvornår betaler jeg?", price and no-diagnosis answers)
 export const contentDates: Record<string, string> = {
-  '': '2026-11-20',
+  '': '2026-11-23',
   '/about': '2026-09-30',
   '/download': '2026-11-20',
-  '/faq': '2026-11-14',
-  '/faq/how-it-works': '2026-11-20',
-  '/faq/pricing': '2026-11-20',
+  '/faq': '2026-11-23',
+  '/faq/how-it-works': '2026-11-23',
+  '/faq/pricing': '2026-11-23',
   '/faq/privacy-security': '2026-08-02',
   '/faq/app': '2026-08-02',
   '/faq/contact': '2026-08-02',
   '/faq/diseases': '2026-08-02',
   '/blog': '2026-11-14',
-  '/guide': '2026-11-14',
+  '/guide': '2026-11-23',
   '/contact': '2026-11-20',
   '/privacy-policy': '2026-05-27',
   '/terms-conditions': '2026-11-20',
