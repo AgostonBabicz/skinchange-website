@@ -44,7 +44,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Hvor hurtigt får jeg svar?',
-          answer: 'Du får normalt svar inden for 48 timer, efter du har indsendt din sag. De fleste sager bliver besvaret inden for 24 timer. Tager det længere, kontakter vi dig. Du får besked i appen, så snart lægen har gennemgået din sag.'
+          answer: "Du får normalt svar inden for 48 timer, efter du har indsendt din sag. Tager det længere, kontakter vi dig. Du får besked i appen, så snart lægen har gennemgået din sag."
         },
         {
           question: 'Hvilke hudproblemer kan I hjælpe med?',
@@ -52,7 +52,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'Hvad sker der, hvis I ikke kan stille en diagnose?',
-          answer: 'Beløbet reserveres på dit betalingskort, når du indsender din sag, og trækkes først, når lægerne har godkendt vurderingen. Hvis billederne eller oplysningerne ikke er tilstrækkelige til, at vores læger kan lave en forsvarlig vurdering, beder vi dig først om at supplere med flere billeder eller oplysninger. Kan sagen stadig ikke vurderes, frigives reservationen, så du ikke betaler noget, og vi fortæller dig, hvor du i stedet kan blive undersøgt fysisk.'
+          answer: "Når du indsender din sag, reserveres 298 kr. på dit betalingskort. Beløbet trækkes først, når lægerne har godkendt vurderingen. Hvis billederne eller oplysningerne ikke er tilstrækkelige til, at vores læger kan lave en forsvarlig vurdering, beder vi dig først om at supplere med flere billeder eller oplysninger. Kan sagen stadig ikke vurderes, frigives reservationen, så du ikke betaler noget, og vi fortæller dig, hvor du i stedet kan blive undersøgt fysisk."
         },
         {
           question: 'Hvad kan en vurdering ud fra billeder ikke?',
@@ -90,7 +90,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'How quickly do I get a response?',
-          answer: 'You will normally receive a response within 48 hours of submitting your case. Most cases are answered within 24 hours. If it takes longer, we will contact you. You get notified in the app as soon as the dermatologist has reviewed your case.'
+          answer: "You normally receive an answer within 48 hours of submitting your case. If it takes longer, we will contact you. You will be notified in the app as soon as the doctor has reviewed your case."
         },
         {
           question: 'What skin problems can you help with?',
@@ -98,7 +98,7 @@ export const faqCategories: FaqCategory[] = [
         },
         {
           question: 'What happens if you cannot make a diagnosis?',
-          answer: 'The amount is reserved on your payment card when you submit your case and only charged once the doctors have approved the assessment. If the photos or the information are not enough for our dermatologists to make a sound assessment, we first ask you to add more photos or details. If the case still cannot be assessed, the reservation is released so you pay nothing, and we tell you where to be examined in person instead.'
+          answer: "When you submit your case, 298 DKK is reserved on your payment card. The amount is only charged once the doctors have approved the assessment. If the photos or information aren't sufficient for our doctors to make a responsible assessment, we will first ask you to add more photos or information. If the case still can't be assessed, the reservation is released so you pay nothing, and we will tell you where you can be examined in person instead."
         },
         {
           question: 'What can a photo assessment not do?',
@@ -142,7 +142,7 @@ export const faqCategories: FaqCategory[] = [
       da: [
         {
           question: 'Hvad koster en online hudlægekonsultation?',
-          answer: 'En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og relevante recepter. Du betaler med betalingskort i appen — der er intet abonnement og ingen automatisk fornyelse. Beløbet reserveres, når du indsender sagen, og trækkes først, når lægerne har godkendt vurderingen. Et nyt, andet hudproblem koster en ny konsultation.'
+          answer: "En konsultation koster 298 DKK (€40). Prisen dækker én hudlidelse og inkluderer lægens vurdering, diagnose, behandlingsplan og evt. recept. Når du indsender sagen i appen, reserveres beløbet på dit betalingskort. Beløbet trækkes først, når lægerne har godkendt vurderingen. Der er intet abonnement og ingen automatisk fornyelse. Et nyt, andet hudproblem koster en ny konsultation. Kan sagen ikke vurderes, frigives reservationen, og du betaler ikke noget."
         },
         {
           question: 'Hvornår betaler jeg?',
@@ -159,20 +159,20 @@ export const faqCategories: FaqCategory[] = [
       ],
       en: [
         {
-          question: 'How much does an online dermatologist consultation cost?',
-          answer: 'A consultation costs 298 DKK (€40). The price covers one skin condition and includes the dermatologist\'s assessment, diagnosis, treatment plan and relevant prescriptions. You pay by card in the app — there is no subscription and no automatic renewal. The amount is reserved when you submit the case and only charged once the doctors have approved the assessment. A new, separate skin problem costs a new consultation.'
+          question: "How much does an online dermatology consultation cost?",
+          answer: "A consultation costs 298 DKK (€40). The price covers one skin condition and includes the doctor's assessment, diagnosis, treatment plan and a prescription if needed. When you submit your case in the app, the amount is reserved on your payment card. It is only charged once the doctors have approved the assessment. There is no subscription and no automatic renewal. A new, different skin problem requires a new consultation. If your case can't be assessed, the reservation is released and you pay nothing."
         },
         {
           question: 'When do I pay?',
           answer: "The amount is reserved on your payment card when you submit your case, and it is only charged once the doctors have approved the assessment. If the case can't be assessed, the reservation is released. There is no subscription and no automatic renewal."
         },
         {
-          question: 'Is SKIND covered by health insurance?',
-          answer: 'No, SKIND is a private healthcare service and is not covered by public health insurance. The price is 298 DKK (€40) per consultation, and you pay directly in the app. You receive a receipt in the app that you can use if your private health insurance covers online medical consultations — ask your insurer.'
+          question: "Is SKIND covered by the public health insurance?",
+          answer: "No, SKIND is a private health service and is not covered by the Danish public health insurance (sygesikringen). The price is 298 DKK (€40) per consultation, and you pay directly in the app. You receive a receipt in the app, which you can use if your private health insurance covers online medical consultations – check with your insurance company."
         },
         {
-          question: 'Can I get a refund if I change my mind?',
-          answer: 'Yes. We offer a full refund, no questions asked: email info@skinchange.ai within 30 days of submitting your case. You do not need to give a reason, and the money is returned to your original payment method within 14 days of us receiving the request. You also have the statutory 14-day right of withdrawal under the Danish Consumer Contracts Act. Because you ask us to begin the assessment immediately, that statutory right ends once the assessment has been fully performed — but our 30-day refund still applies.'
+          question: "Can I get my money back if I change my mind?",
+          answer: "Yes. We give a full refund, no questions asked: email info@skinchange.ai within 30 days of submitting your case. You don't need to give a reason, and the money will be back on your original payment method no later than 14 days after we have received your request. You also have a 14-day statutory right of withdrawal under the Danish Consumer Contracts Act. Because you ask us to start the assessment straight away, the statutory right lapses once the assessment has been fully completed – but our 30-day refund still applies."
         }
       ]
     }

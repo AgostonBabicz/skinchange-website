@@ -25,13 +25,15 @@
 //                        hele Europa" removed, price includes relevant prescriptions, terms §2 (who assesses, normally 48 h)
 //   2026-11-23           CEO's payment rule: reserved at submission, charged once the doctors approve, released if the case
 //                        cannot be assessed (user guide, FAQ "Hvornår betaler jeg?", price and no-diagnosis answers)
+//   2026-11-24           CEO's FAQ texts (Trello): price and no-diagnosis answers, English pricing questions, home FAQ schema
+//                        price and response time; "most cases within 24 hours" removed everywhere
 export const contentDates: Record<string, string> = {
-  '': '2026-11-23',
+  '': '2026-11-24',
   '/about': '2026-09-30',
   '/download': '2026-11-20',
   '/faq': '2026-11-23',
-  '/faq/how-it-works': '2026-11-23',
-  '/faq/pricing': '2026-11-23',
+  '/faq/how-it-works': '2026-11-24',
+  '/faq/pricing': '2026-11-24',
   '/faq/privacy-security': '2026-08-02',
   '/faq/app': '2026-08-02',
   '/faq/contact': '2026-08-02',

@@ -94,8 +94,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'Du modtager normalt en vurdering og behandlingsplan inden for 48 timer, efter du har indsendt og betalt din sag. De fleste sager besvares inden for 24 timer.'
-            : 'You normally receive an assessment and treatment plan within 48 hours of submitting and paying for your case. Most cases are answered within 24 hours.',
+            ? "Du får normalt en vurdering og behandlingsplan inden for 48 timer, efter du har indsendt din sag."
+            : "You normally receive an assessment and treatment plan within 48 hours of submitting your case.",
         }
       },
       {
@@ -114,8 +114,8 @@ export default function HomePage({ params: { lang } }: PageProps) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: isDa
-            ? 'En konsultation koster 298 kr. og dækker én hudlidelse. Prisen inkluderer vurdering, behandlingsplan og relevante recepter.'
-            : 'A consultation costs 298 DKK and covers one skin condition. The price includes the assessment, a treatment plan and relevant prescriptions.',
+            ? "En konsultation koster 298 DKK og dækker én hudlidelse. Prisen inkluderer lægens vurdering, diagnose, behandlingsplan og evt. recept. Beløbet trækkes først, når lægerne har godkendt vurderingen."
+            : "A consultation costs 298 DKK and covers one skin condition. The price includes the doctor's assessment, diagnosis, treatment plan and a prescription if needed. The amount is only charged once the doctors have approved the assessment.",
         }
       }
     ]
